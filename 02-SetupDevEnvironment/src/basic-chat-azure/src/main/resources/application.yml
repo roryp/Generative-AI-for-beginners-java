@@ -1,0 +1,32 @@
+# Azure OpenAI Configuration
+spring:
+  ai:
+    azure:
+      openai:
+        # API key from environment variable (can be set in .env file or GitHub Codespace secrets)
+        api-key: ${AZURE_AI_KEY}
+        # Endpoint URL from environment variable (can be set in .env file or GitHub Codespace secrets)
+        # Example: https://my-ai-hub.openai.azure.com/
+        endpoint: ${AZURE_AI_ENDPOINT}
+        chat:
+          options:
+            # This should match your model deployment name in Azure
+            # Can be overridden with AZURE_AI_MODEL_DEPLOYMENT environment variable
+            deployment-name: ${AZURE_AI_MODEL_DEPLOYMENT:gpt-4o-mini}
+            # Temperature controls creativity (0.0 = deterministic, 1.0 = creative)
+            temperature: 0.7
+            # Maximum tokens in the response
+            max-tokens: 500
+
+# Spring Boot Configuration
+logging:
+  level:
+    # Enable debug logging for Spring AI (uncomment for troubleshooting)
+    # "[org.springframework.ai]": DEBUG
+    # "[com.azure]": DEBUG
+    root: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+
+# Application settings
+spring.application.name: basic-chat-azure

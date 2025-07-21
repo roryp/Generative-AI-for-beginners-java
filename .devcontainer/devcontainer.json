@@ -1,0 +1,44 @@
+{
+  "name": "Generative AI Java Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "upgradePackages": false
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "installBicep": true,
+      "version": "latest"
+    },
+    "ghcr.io/azure/azure-dev/azd:0": {
+      "version": "stable"
+    },
+    "sshd": "latest"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-spring-initializr",
+        "vscjava.vscode-spring-boot-dashboard",
+        "github.copilot"
+      ],
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.compile.nullAnalysis.mode": "automatic",
+        "java.completion.enabled": true,
+        "java.format.enabled": true,
+        "java.saveActions.organizeImports": true,
+        "spring-boot.ls.java.home": "/usr/lib/jvm/msopenjdk-current"
+      }
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y maven",
+  "remoteUser": "vscode",
+  "containerEnv": {
+    "JAVA_HOME": "/usr/lib/jvm/msopenjdk-current",
+    "MAVEN_OPTS": "-Xmx2g"
+  },
+  "forwardPorts": [8080]
+}
