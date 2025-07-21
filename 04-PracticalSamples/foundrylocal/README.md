@@ -1,6 +1,6 @@
 # Foundry Local Command-Line Application
 
->**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.MD) that guides you through running the finished samples.
+>**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through running the finished samples.
 
 A simple Spring Boot command-line application that demonstrates how to connect to Foundry Local using the OpenAI Java SDK.
 

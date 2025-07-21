@@ -298,6 +298,6 @@ Here's the complete flow when you ask the AI "What's 5 + 3?":
 
 ## Next Steps
 
-For more examples, see [Chapter 04: Practical samples](../README.MD)
+For more examples, see [Chapter 04: Practical samples](../README.md)
 
 

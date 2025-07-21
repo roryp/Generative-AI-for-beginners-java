@@ -215,7 +215,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Next Steps
 
-[Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.MD)
+[Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.md)
 
 ## Troubleshooting
 

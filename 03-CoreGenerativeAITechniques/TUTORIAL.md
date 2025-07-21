@@ -321,7 +321,7 @@ List<ChatRequestMessage> messages = List.of(
 
 ## Next Steps
 
-[Chapter 04: Practical samples](../04-PracticalSamples/README.MD)
+[Chapter 04: Practical samples](../04-PracticalSamples/README.md)
 
 ## Troubleshooting
 

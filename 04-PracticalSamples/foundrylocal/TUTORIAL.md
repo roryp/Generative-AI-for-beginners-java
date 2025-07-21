@@ -262,7 +262,7 @@ Is there something specific you'd like help with today?
 
 ## Next Steps
 
-For more examples, see [Chapter 04: Practical samples](../README.MD)
+For more examples, see [Chapter 04: Practical samples](../README.md)
 
 ## Troubleshooting
 

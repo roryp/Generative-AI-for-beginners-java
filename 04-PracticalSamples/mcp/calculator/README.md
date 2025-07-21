@@ -1,6 +1,6 @@
 # Basic Calculator MCP Service
 
->**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.MD) that guides you through running the finished samples.
+>**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through running the finished samples.
 
 Welcome to your first hands-on experience with the **Model Context Protocol (MCP)**! In the previous chapters, you've learned about generative AI fundamentals and set up your development environment. Now it's time to build something practical.
 
@@ -33,7 +33,7 @@ Perfect for beginners learning MCP concepts and ready to build their first AI to
 
 - Java 21+
 - Maven 3.6+
-- **GitHub Token**: Required for the AI-powered client. If you haven't set this up yet, see [Chapter 2: Setting up your development environment](../../../02-SetupDevEnvironment/README.MD) for instructions.
+- **GitHub Token**: Required for the AI-powered client. If you haven't set this up yet, see [Chapter 2: Setting up your development environment](../../../02-SetupDevEnvironment/README.md) for instructions.
 
 ## Key Concepts
 

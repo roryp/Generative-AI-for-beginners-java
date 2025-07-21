@@ -1,6 +1,6 @@
 # Core Generative AI Techniques
 
->**Note**: This chapter includes a detailed [**Tutorial**](./TUTORIAL.MD) that guides you through running the finished samples.
+>**Note**: This chapter includes a detailed [**Tutorial**](./TUTORIAL.md) that guides you through running the finished samples.
 
 ## What You'll Learn
 In this chapter, we look at 4 core generative AI techniques through practical examples:
@@ -114,15 +114,15 @@ This example demonstrates:
 - Different categories of blocked content (violence, hate speech, misinformation)
 - Proper error handling for safety violations
 
-> **Learn More**: This is just an introduction to responsible AI concepts. For more information on ethics, bias mitigation, privacy considerations, and responsible AI frameworks, see [Chapter 5: Responsible Generative AI](../05-ResponsibleGenAI/README.MD).
+> **Learn More**: This is just an introduction to responsible AI concepts. For more information on ethics, bias mitigation, privacy considerations, and responsible AI frameworks, see [Chapter 5: Responsible Generative AI](../05-ResponsibleGenAI/README.md).
 
 ## Summary
 
 In this chapter, we explored LLM completions and chat flows, implemented function calling to enhance AI capabilities, created a Retrieval-Augmented Generation (RAG) system, and demonstrated responsible AI safety measures. 
 
-> **NOTE**: Dive deeper with the provided [**Tutorial**](./TUTORIAL.MD)
+> **NOTE**: Dive deeper with the provided [**Tutorial**](./TUTORIAL.md)
 
 
 ## Next Steps
 
-[Chapter 4: Practical Applications & Projects](../04-PracticalSamples/README.MD)
+[Chapter 4: Practical Applications & Projects](../04-PracticalSamples/README.md)

@@ -9,7 +9,7 @@
 3. Use the defaults – this will select the Development container created for this course
 4. Click **Create codespace**
 5. Wait ~2 minutes for the environment to be ready
-6. Jump straight to [Creating your GitHub Models Token](./02-SetupDevEnvironment/README.MD#step-2-create-a-github-personal-access-token)
+6. Jump straight to [Creating your GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Multi-Language Support
 
@@ -26,33 +26,33 @@
 - **Java AI Ecosystem**: Overview of Spring AI and OpenAI SDKs
 - **Model Context Protocol**: Introduction to MCP and its role in AI agent communication
 - **Practical Applications**: Real-world scenarios including chatbots and content generation
-- **[→ Start Chapter 1](./01-IntroToGenAI/README.MD)**
+- **[→ Start Chapter 1](./01-IntroToGenAI/README.md**
 
 ### **Chapter 2: Development Environment Setup**
 - **Multi-Provider Configuration**: Set up GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
 - **Spring Boot + Spring AI**: Best practices for enterprise AI application development
 - **GitHub Models**: Free AI model access for prototyping and learning (no credit card required)
 - **Development Tools**: Docker containers, VS Code, and GitHub Codespaces configuration
-- **[→ Start Chapter 2](./02-SetupDevEnvironment/README.MD)**
+- **[→ Start Chapter 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chapter 3: Core Generative AI Techniques**
 - **Prompt Engineering**: Techniques for optimal AI model responses
 - **Embeddings & Vector Operations**: Implement semantic search and similarity matching
 - **Retrieval-Augmented Generation (RAG)**: Combine AI with your own data sources
 - **Function Calling**: Extend AI capabilities with custom tools and plugins
-- **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.MD)**
+- **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapter 4: Practical Applications & Projects**
 - **Pet Story Generator** (`petstory/`): Creative content generation with GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Local AI model integration with OpenAI Java SDK
 - **MCP Calculator Service** (`mcp/calculator/`): Basic Model Context Protocol implementation with Spring AI
-- **[→ Start Chapter 4](./04-PracticalSamples/README.MD)**
+- **[→ Start Chapter 4](./04-PracticalSamples/README.md)**
 
 ### **Chapter 5: Responsible AI Development**
 - **GitHub Models Safety**: Test built-in content filtering and safety mechanisms
 - **Responsible AI Demo**: Hands-on example showing how AI safety filters work in practice
 - **Best Practices**: Essential guidelines for ethical AI development and deployment
-- **[→ Start Chapter 5](./05-ResponsibleGenAI/README.MD)**
+- **[→ Start Chapter 5](./05-ResponsibleGenAI/README.md)**
 
 ## Additional Resources
 

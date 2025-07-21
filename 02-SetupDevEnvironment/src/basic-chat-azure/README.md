@@ -203,7 +203,7 @@ logging:
 
 **Setup Complete!** Continue your learning journey:
 
-[Chapter 3: Core Generative AI Techniques](../../../03-CoreGenerativeAITechniques/README.MD)
+[Chapter 3: Core Generative AI Techniques](../../../03-CoreGenerativeAITechniques/README.md)
 
 ## Resources
 

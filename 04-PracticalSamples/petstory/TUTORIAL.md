@@ -433,4 +433,4 @@ String story = response.choices().get(0).message().content().orElse("");
 
 ## Next Steps
 
-For more examples, see [Chapter 04: Practical samples](../README.MD)
+For more examples, see [Chapter 04: Practical samples](../README.md)

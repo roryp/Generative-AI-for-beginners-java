@@ -1,6 +1,6 @@
 # Setting Up the Development Environment for Azure OpenAI
 
-> **Quick Start**: This guide is for Azure OpenAI setup. For immediate start with free models, use [GitHub Models with Codespaces](./README.MD#quick-start-cloud).
+> **Quick Start**: This guide is for Azure OpenAI setup. For immediate start with free models, use [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
 This guide will help you set up Azure AI Foundry models for your Java AI apps in this course.
 
@@ -112,7 +112,7 @@ You should see a response from the GPT-4o-mini model!
 
 > **VS Code Users**: You can also press `F5` in VS Code to run the application. The launch configuration is already set up to load your `.env` file automatically.
 
-> **Full example**: See the [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.MD) for detailed instructions and troubleshooting.
+> **Full example**: See the [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) for detailed instructions and troubleshooting.
 
 ## What's Next?
 
@@ -121,7 +121,7 @@ You should see a response from the GPT-4o-mini model!
 - Local .env file configuration
 - Java development environment ready
 
-**Continue to** [Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.MD) to start building AI applications!
+**Continue to** [Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.md) to start building AI applications!
 
 ## Resources
 

@@ -139,4 +139,4 @@ The Azure OpenAI client library for Java is an adaptation of OpenAI's REST APIs 
 
 ## Next Steps
 
-[Chapter 2: Setting Up the Development Environment](../02-SetupDevEnvironment/README.MD)
+[Chapter 2: Setting Up the Development Environment](../02-SetupDevEnvironment/README.md)
