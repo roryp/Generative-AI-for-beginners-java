@@ -96,7 +96,7 @@ public class HealthController {
         response.put("availableTools", tools);
         
         // Additional helpful information for clients
-        response.put("documentation", "See README.MD for usage examples");
+        response.put("documentation", "See README.md for usage examples");
         response.put("clientExamples", "Check src/test/java for client implementation examples");
         
         return ResponseEntity.ok(response);
