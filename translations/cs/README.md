@@ -1,0 +1,85 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
+  "translation_date": "2025-07-21T20:30:21+00:00",
+  "source_file": "README.md",
+  "language_code": "cs"
+}
+-->
+# Generativní AI pro začátečníky - Java edice
+[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+
+![Generativní AI pro začátečníky - Java edice](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.cs.png)
+
+> **NOTE: Rychlý start**: Celý kurz lze absolvovat online – není potřeba žádné lokální nastavení!
+1. Forkněte tento repozitář do svého GitHub účtu
+2. Klikněte na **Code** → záložka **Codespaces** → **...** → **New with options...**
+3. Použijte výchozí nastavení – tím se vybere vývojový kontejner vytvořený pro tento kurz
+4. Klikněte na **Create codespace**
+5. Počkejte ~2 minuty, než bude prostředí připraveno
+6. Přejděte přímo na [Vytvoření tokenu GitHub Models](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+
+## Podpora více jazyků
+
+### Podporováno prostřednictvím GitHub Action (Automatizované & vždy aktuální)
+
+[Francouzština](../fr/README.md) | [Španělština](../es/README.md) | [Němčina](../de/README.md) | [Ruština](../ru/README.md) | [Arabština](../ar/README.md) | [Perština (Fársí)](../fa/README.md) | [Urdu](../ur/README.md) | [Čínština (zjednodušená)](../zh/README.md) | [Čínština (tradiční, Macao)](../mo/README.md) | [Čínština (tradiční, Hongkong)](../hk/README.md) | [Čínština (tradiční, Tchaj-wan)](../tw/README.md) | [Japonština](../ja/README.md) | [Korejština](../ko/README.md) | [Hindština](../hi/README.md) | [Bengálština](../bn/README.md) | [Maráthština](../mr/README.md) | [Nepálština](../ne/README.md) | [Paňdžábština (Gurmukhi)](../pa/README.md) | [Portugalština (Portugalsko)](../pt/README.md) | [Portugalština (Brazílie)](../br/README.md) | [Italština](../it/README.md) | [Polština](../pl/README.md) | [Turečtina](../tr/README.md) | [Řečtina](../el/README.md) | [Thajština](../th/README.md) | [Švédština](../sv/README.md) | [Dánština](../da/README.md) | [Norština](../no/README.md) | [Finština](../fi/README.md) | [Nizozemština](../nl/README.md) | [Hebrejština](../he/README.md) | [Vietnamština](../vi/README.md) | [Indonéština](../id/README.md) | [Malajština](../ms/README.md) | [Tagalog (Filipíny)](../tl/README.md) | [Svahilština](../sw/README.md) | [Maďarština](../hu/README.md) | [Čeština](./README.md) | [Slovenština](../sk/README.md) | [Rumunština](../ro/README.md) | [Bulharština](../bg/README.md) | [Srbština (cyrilice)](../sr/README.md) | [Chorvatština](../hr/README.md) | [Slovinština](../sl/README.md) | [Ukrajinština](../uk/README.md) | [Barmština (Myanmar)](../my/README.md)
+
+## Struktura kurzu & učební plán
+
+**Časová náročnost**: Nastavení prostředí trvá 2 minuty, praktické tutoriály vyžadují 1–3 hodiny v závislosti na hloubce průzkumu.
+
+### **Kapitola 1: Úvod do generativní AI**
+- **Základní koncepty**: Porozumění velkým jazykovým modelům, tokenům, embeddingům a schopnostem AI
+- **Java AI ekosystém**: Přehled Spring AI a OpenAI SDK
+- **Protokol kontextu modelu**: Úvod do MCP a jeho role v komunikaci AI agentů
+- **Praktické aplikace**: Reálné scénáře včetně chatbotů a generování obsahu
+- **[→ Začít kapitolu 1](./01-IntroToGenAI/README.md)**
+
+### **Kapitola 2: Nastavení vývojového prostředí**
+- **Konfigurace více poskytovatelů**: Nastavení GitHub Models, Azure OpenAI a OpenAI Java SDK integrací
+- **Spring Boot + Spring AI**: Nejlepší postupy pro vývoj podnikových AI aplikací
+- **GitHub Models**: Bezplatný přístup k AI modelům pro prototypování a učení (není potřeba kreditní karta)
+- **Vývojové nástroje**: Konfigurace Docker kontejnerů, VS Code a GitHub Codespaces
+- **[→ Začít kapitolu 2](./02-SetupDevEnvironment/README.md)**
+
+### **Kapitola 3: Základní techniky generativní AI**
+- **Návrh promptů**: Techniky pro optimální odpovědi AI modelů
+- **Embeddingy & vektorové operace**: Implementace sémantického vyhledávání a porovnávání podobnosti
+- **Generování s podporou vyhledávání (RAG)**: Kombinace AI s vlastními datovými zdroji
+- **Volání funkcí**: Rozšíření schopností AI pomocí vlastních nástrojů a pluginů
+- **[→ Začít kapitolu 3](./03-CoreGenerativeAITechniques/README.md)**
+
+### **Kapitola 4: Praktické aplikace & projekty**
+- **Generátor příběhů o mazlíčcích** (`petstory/`): Kreativní generování obsahu s GitHub Models
+- **Foundry Local Demo** (`foundrylocal/`): Integrace lokálních AI modelů s OpenAI Java SDK
+- **MCP kalkulační služba** (`mcp/calculator/`): Základní implementace protokolu kontextu modelu se Spring AI
+- **[→ Začít kapitolu 4](./04-PracticalSamples/README.md)**
+
+### **Kapitola 5: Odpovědný vývoj AI**
+- **Bezpečnost GitHub Models**: Testování vestavěného filtrování obsahu a bezpečnostních mechanismů
+- **Demo odpovědné AI**: Praktický příklad ukazující, jak fungují bezpečnostní filtry AI
+- **Nejlepší postupy**: Zásadní pokyny pro etický vývoj a nasazení AI
+- **[→ Začít kapitolu 5](./05-ResponsibleGenAI/README.md)**
+
+## Další zdroje 
+
+- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
+- [Generativní AI pro začátečníky s .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generativní AI pro začátečníky s JavaScriptem](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generativní AI pro začátečníky](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML pro začátečníky](https://aka.ms/ml-beginners)
+- [Data Science pro začátečníky](https://aka.ms/datascience-beginners)
+- [AI pro začátečníky](https://aka.ms/ai-beginners)
+- [Kybernetická bezpečnost pro začátečníky](https://github.com/microsoft/Security-101)
+- [Webový vývoj pro začátečníky](https://aka.ms/webdev-beginners)
+- [IoT pro začátečníky](https://aka.ms/iot-beginners)
+- [XR vývoj pro začátečníky](https://github.com/microsoft/xr-development-for-beginners)
+- [Ovládnutí GitHub Copilot pro párové programování s AI](https://aka.ms/GitHubCopilotAI)
+- [Ovládnutí GitHub Copilot pro vývojáře C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Vyberte si vlastní dobrodružství s Copilotem](https://github.com/microsoft/CopilotAdventures)
+- [RAG Chat App s Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+
+**Prohlášení:**  
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
