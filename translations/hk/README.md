@@ -1,0 +1,85 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
+  "translation_date": "2025-07-21T15:51:23+00:00",
+  "source_file": "README.md",
+  "language_code": "hk"
+}
+-->
+# 初學者生成式人工智能 - Java 版
+[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+
+![初學者生成式人工智能 - Java 版](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.hk.png)
+
+> **NOTE: 快速入門**: 整個課程可在線完成 - 無需本地設置！
+1. 將此倉庫 Fork 到你的 GitHub 帳戶
+2. 點擊 **Code** → **Codespaces** 標籤 → **...** → **New with options...**
+3. 使用默認設置 – 這將選擇為本課程創建的開發容器
+4. 點擊 **Create codespace**
+5. 等待約 2 分鐘，環境準備完成
+6. 直接跳到 [創建你的 GitHub 模型令牌](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+
+## 多語言支持
+
+### 通過 GitHub Action 支持（自動更新且始終保持最新）
+
+[法文](../fr/README.md) | [西班牙文](../es/README.md) | [德文](../de/README.md) | [俄文](../ru/README.md) | [阿拉伯文](../ar/README.md) | [波斯文 (法爾西)](../fa/README.md) | [烏爾都文](../ur/README.md) | [中文 (簡體)](../zh/README.md) | [中文 (繁體，澳門)](../mo/README.md) | [中文 (繁體，香港)](./README.md) | [中文 (繁體，台灣)](../tw/README.md) | [日文](../ja/README.md) | [韓文](../ko/README.md) | [印地文](../hi/README.md) | [孟加拉文](../bn/README.md) | [馬拉地文](../mr/README.md) | [尼泊爾文](../ne/README.md) | [旁遮普文 (古木基)](../pa/README.md) | [葡萄牙文 (葡萄牙)](../pt/README.md) | [葡萄牙文 (巴西)](../br/README.md) | [意大利文](../it/README.md) | [波蘭文](../pl/README.md) | [土耳其文](../tr/README.md) | [希臘文](../el/README.md) | [泰文](../th/README.md) | [瑞典文](../sv/README.md) | [丹麥文](../da/README.md) | [挪威文](../no/README.md) | [芬蘭文](../fi/README.md) | [荷蘭文](../nl/README.md) | [希伯來文](../he/README.md) | [越南文](../vi/README.md) | [印尼文](../id/README.md) | [馬來文](../ms/README.md) | [塔加洛文 (菲律賓)](../tl/README.md) | [斯瓦希里文](../sw/README.md) | [匈牙利文](../hu/README.md) | [捷克文](../cs/README.md) | [斯洛伐克文](../sk/README.md) | [羅馬尼亞文](../ro/README.md) | [保加利亞文](../bg/README.md) | [塞爾維亞文 (西里爾字母)](../sr/README.md) | [克羅地亞文](../hr/README.md) | [斯洛文尼亞文](../sl/README.md) | [烏克蘭文](../uk/README.md) | [緬甸文 (緬甸)](../my/README.md)
+
+## 課程結構與學習路徑
+
+**時間投入**: 環境設置需 2 分鐘，動手教程根據探索深度需 1-3 小時。
+
+### **第一章：生成式人工智能簡介**
+- **核心概念**: 理解大型語言模型、tokens、嵌入和人工智能能力
+- **Java 人工智能生態系統**: Spring AI 和 OpenAI SDKs 概述
+- **模型上下文協議**: MCP 的介紹及其在人工智能代理通信中的作用
+- **實際應用**: 包括聊天機器人和內容生成的真實場景
+- **[→ 開始第一章](./01-IntroToGenAI/README.md)**
+
+### **第二章：開發環境設置**
+- **多提供商配置**: 設置 GitHub Models、Azure OpenAI 和 OpenAI Java SDK 集成
+- **Spring Boot + Spring AI**: 企業人工智能應用開發的最佳實踐
+- **GitHub Models**: 免費人工智能模型訪問，用於原型設計和學習（無需信用卡）
+- **開發工具**: Docker 容器、VS Code 和 GitHub Codespaces 配置
+- **[→ 開始第二章](./02-SetupDevEnvironment/README.md)**
+
+### **第三章：核心生成式人工智能技術**
+- **提示工程**: 獲得最佳人工智能模型響應的技術
+- **嵌入與向量操作**: 實現語義搜索和相似性匹配
+- **檢索增強生成 (RAG)**: 將人工智能與自己的數據源結合
+- **函數調用**: 使用自定義工具和插件擴展人工智能能力
+- **[→ 開始第三章](./03-CoreGenerativeAITechniques/README.md)**
+
+### **第四章：實際應用與項目**
+- **寵物故事生成器** (`petstory/`): 使用 GitHub Models 創造性內容生成
+- **Foundry 本地演示** (`foundrylocal/`): 使用 OpenAI Java SDK 的本地人工智能模型集成
+- **MCP 計算器服務** (`mcp/calculator/`): 使用 Spring AI 實現基本模型上下文協議
+- **[→ 開始第四章](./04-PracticalSamples/README.md)**
+
+### **第五章：負責任的人工智能開發**
+- **GitHub Models 安全性**: 測試內置內容過濾和安全機制
+- **負責任的人工智能演示**: 展示人工智能安全過濾器如何在實踐中工作
+- **最佳實踐**: 倫理人工智能開發和部署的基本指南
+- **[→ 開始第五章](./05-ResponsibleGenAI/README.md)**
+
+## 其他資源 
+
+- [初學者人工智能代理](https://github.com/microsoft/ai-agents-for-beginners)
+- [使用 .NET 的初學者生成式人工智能](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [使用 JavaScript 的初學者生成式人工智能](https://github.com/microsoft/generative-ai-with-javascript)
+- [初學者生成式人工智能](https://github.com/microsoft/generative-ai-for-beginners)
+- [初學者機器學習](https://aka.ms/ml-beginners)
+- [初學者數據科學](https://aka.ms/datascience-beginners)
+- [初學者人工智能](https://aka.ms/ai-beginners)
+- [初學者網絡安全](https://github.com/microsoft/Security-101)
+- [初學者網絡開發](https://aka.ms/webdev-beginners)
+- [初學者物聯網](https://aka.ms/iot-beginners)
+- [初學者 XR 開發](https://github.com/microsoft/xr-development-for-beginners)
+- [精通 GitHub Copilot 用於人工智能配對編程](https://aka.ms/GitHubCopilotAI)
+- [精通 GitHub Copilot 用於 C#/.NET 開發者](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [選擇你的 Copilot 冒險](https://github.com/microsoft/CopilotAdventures)
+- [使用 Azure AI 服務的 RAG 聊天應用](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+
+**免責聲明**：  
+本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。
