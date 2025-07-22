@@ -62,6 +62,10 @@ public class App {
             // .message().content() gets the actual text content of the response
             // .orElse() provides a fallback if no content is returned
             System.out.println("Response: " + response.choices().get(0).message().content().orElse("No response content"));
+
+            // remove messages from maven threads
+            System.exit(0);
+
         } catch (Exception e) {
             // Handle various types of errors that might occur
             System.err.println("Error occurred: " + e.getMessage());
