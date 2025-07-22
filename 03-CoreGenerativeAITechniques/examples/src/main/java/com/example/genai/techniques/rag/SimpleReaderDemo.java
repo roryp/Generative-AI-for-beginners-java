@@ -114,6 +114,9 @@ public class SimpleReaderDemo {
                 System.err.println("Error calling the API: " + e.getMessage());
                 e.printStackTrace();
             }
+
+            // Force proper cleanup to avoid thread lingering warnings
+            System.exit(0);
         }
     }
 

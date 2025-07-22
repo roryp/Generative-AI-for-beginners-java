@@ -59,6 +59,9 @@ public class LLMCompletionsApp {
             
             // Example 3: Interactive chat
             interactiveChat(client);
+
+            // Force proper cleanup to avoid thread lingering warnings
+            System.exit(0);
             
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
