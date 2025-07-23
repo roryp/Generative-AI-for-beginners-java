@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T16:19:03+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T11:54:14+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "de"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Was Sie lernen werden
 
 - Eine Java-Entwicklungsumgebung für KI-Anwendungen einrichten
-- Ihre bevorzugte Entwicklungsumgebung auswählen und konfigurieren (Cloud-basiert mit Codespaces, lokaler Dev-Container oder vollständige lokale Einrichtung)
+- Ihre bevorzugte Entwicklungsumgebung auswählen und konfigurieren (Cloud-basiert mit Codespaces, lokaler Dev-Container oder vollständige lokale Installation)
 - Ihre Einrichtung testen, indem Sie sich mit GitHub-Modellen verbinden
 
 ## Inhaltsverzeichnis
@@ -27,8 +27,8 @@ CO_OP_TRANSLATOR_METADATA:
   - [Option A: GitHub Codespaces (Empfohlen)](../../../02-SetupDevEnvironment)
   - [Option B: Lokaler Dev-Container](../../../02-SetupDevEnvironment)
   - [Option C: Nutzung Ihrer bestehenden lokalen Installation](../../../02-SetupDevEnvironment)
-- [Schritt 2: GitHub Personal Access Token erstellen](../../../02-SetupDevEnvironment)
-- [Schritt 3: Einrichtung testen](../../../02-SetupDevEnvironment)
+- [Schritt 2: Erstellen eines GitHub Personal Access Tokens](../../../02-SetupDevEnvironment)
+- [Schritt 3: Testen Ihrer Einrichtung](../../../02-SetupDevEnvironment)
 - [Fehlerbehebung](../../../02-SetupDevEnvironment)
 - [Zusammenfassung](../../../02-SetupDevEnvironment)
 - [Nächste Schritte](../../../02-SetupDevEnvironment)
@@ -58,7 +58,7 @@ Wir empfehlen die Verwendung von [**GitHub-Modelle**](https://github.com/marketp
 
 <a name="quick-start-cloud"></a>
 
-Wir haben einen vorkonfigurierten Entwicklungscontainer erstellt, um die Einrichtungszeit zu minimieren und sicherzustellen, dass Sie alle notwendigen Tools für diesen Generative KI mit Java-Kurs haben. Wählen Sie Ihren bevorzugten Entwicklungsansatz:
+Wir haben einen vorkonfigurierten Entwicklungscontainer erstellt, um die Einrichtungszeit zu minimieren und sicherzustellen, dass Sie alle notwendigen Tools für diesen Generative KI für Java-Kurs haben. Wählen Sie Ihren bevorzugten Entwicklungsansatz:
 
 ### Optionen für die Einrichtung der Umgebung:
 
@@ -69,7 +69,7 @@ Wir haben einen vorkonfigurierten Entwicklungscontainer erstellt, um die Einrich
 1. Forken Sie dieses Repository in Ihr GitHub-Konto
    > **Hinweis**: Wenn Sie die grundlegende Konfiguration bearbeiten möchten, werfen Sie einen Blick auf die [Dev-Container-Konfiguration](../../../.devcontainer/devcontainer.json)
 2. Klicken Sie auf **Code** → **Codespaces**-Tab → **...** → **Neu mit Optionen...**
-3. Verwenden Sie die Standardeinstellungen – dies wählt die **Dev-Container-Konfiguration**: **Generative AI Java Development Environment**, ein benutzerdefinierter Dev-Container, der für diesen Kurs erstellt wurde
+3. Verwenden Sie die Standardwerte – dies wählt die **Dev-Container-Konfiguration**: **Generative AI Java Development Environment**, ein benutzerdefinierter Dev-Container, der für diesen Kurs erstellt wurde
 4. Klicken Sie auf **Codespace erstellen**
 5. Warten Sie ~2 Minuten, bis die Umgebung bereit ist
 6. Fahren Sie mit [Schritt 2: GitHub-Token erstellen](../../../02-SetupDevEnvironment) fort
@@ -96,7 +96,7 @@ Wir haben einen vorkonfigurierten Entwicklungscontainer erstellt, um die Einrich
 2. Installieren Sie [Docker Desktop](https://www.docker.com/products/docker-desktop/) und [VS Code](https://code.visualstudio.com/)
 3. Installieren Sie die [Dev Containers-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) in VS Code
 4. Öffnen Sie den Repository-Ordner in VS Code
-5. Wenn Sie dazu aufgefordert werden, klicken Sie auf **Im Container erneut öffnen** (oder verwenden Sie `Strg+Umschalt+P` → "Dev Containers: Reopen in Container")
+5. Wenn Sie dazu aufgefordert werden, klicken Sie auf **Im Container erneut öffnen** (oder verwenden Sie `Strg+Umschalt+P` → "Dev Containers: Im Container erneut öffnen")
 6. Warten Sie, bis der Container erstellt und gestartet ist
 7. Fahren Sie mit [Schritt 2: GitHub-Token erstellen](../../../02-SetupDevEnvironment) fort
 
@@ -122,23 +122,23 @@ Schritte:
 
 <img src="./images/image-2.png" alt="Screenshot: Lokale Dev-Container-Instanz erstellt" width="50%">
 
-## Schritt 2: GitHub Personal Access Token erstellen
+## Schritt 2: Erstellen eines GitHub Personal Access Tokens
 
 1. Navigieren Sie zu [GitHub-Einstellungen](https://github.com/settings/profile) und wählen Sie **Einstellungen** aus Ihrem Profilmenü.
 2. Klicken Sie in der linken Seitenleiste auf **Entwicklereinstellungen** (normalerweise ganz unten).
 3. Unter **Personal access tokens** klicken Sie auf **Fine-grained tokens** (oder folgen Sie diesem direkten [Link](https://github.com/settings/personal-access-tokens)).
 4. Klicken Sie auf **Neuen Token generieren**.
 5. Geben Sie unter "Token-Name" einen beschreibenden Namen ein (z. B. `GenAI-Java-Course-Token`).
-6. Legen Sie ein Ablaufdatum fest (empfohlen: 7 Tage für Sicherheitsbest-Practices).
+6. Legen Sie ein Ablaufdatum fest (empfohlen: 7 Tage für Sicherheitsbest-Praktiken).
 7. Wählen Sie unter "Ressourcenbesitzer" Ihr Benutzerkonto aus.
 8. Wählen Sie unter "Repository-Zugriff" die Repositories aus, die Sie mit GitHub-Modellen verwenden möchten (oder "Alle Repositories", falls erforderlich).
-9. Unter "Repository-Berechtigungen" suchen Sie **Modelle** und setzen es auf **Lesen und Schreiben**.
+9. Unter "Repository-Berechtigungen" suchen Sie **Modelle** und setzen Sie es auf **Lesen und Schreiben**.
 10. Klicken Sie auf **Token generieren**.
 11. **Kopieren und speichern Sie Ihren Token jetzt** – Sie werden ihn später nicht mehr sehen!
 
-> **Sicherheitstipp**: Verwenden Sie den minimal erforderlichen Umfang und die kürzest mögliche Ablaufzeit für Ihre Zugriffstokens.
+> **Sicherheitstipp**: Verwenden Sie den minimal erforderlichen Umfang und die kürzeste praktische Ablaufzeit für Ihre Zugriffstokens.
 
-## Schritt 3: Einrichtung testen mit dem GitHub-Modelle-Beispiel
+## Schritt 3: Testen Ihrer Einrichtung mit dem GitHub Models Beispiel
 
 Sobald Ihre Entwicklungsumgebung bereit ist, testen wir die GitHub-Modelle-Integration mit unserer Beispielanwendung in [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
 
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Das Beispiel verstehen
 
-Zunächst wollen wir verstehen, was wir ausführen. Das Beispiel verwendet das OpenAI Java SDK, um sich mit GitHub-Modellen zu verbinden:
+Lassen Sie uns zunächst verstehen, was wir gerade ausgeführt haben. Das Beispiel unter `src/github-models` verwendet das OpenAI Java SDK, um sich mit GitHub-Modellen zu verbinden:
 
 **Was dieser Code macht:**
 - **Verbindet** sich mit GitHub-Modellen unter Verwendung Ihres Personal Access Tokens
@@ -239,12 +239,12 @@ Haben Sie Probleme? Hier sind häufige Probleme und Lösungen:
 
 - **Verbindungsprobleme?** 
   - Überprüfen Sie Ihre Internetverbindung
-  - Vergewissern Sie sich, dass GitHub von Ihrem Netzwerk aus zugänglich ist
-  - Stellen Sie sicher, dass keine Firewall den GitHub-Modelle-Endpunkt blockiert
+  - Stellen Sie sicher, dass GitHub von Ihrem Netzwerk aus zugänglich ist
+  - Vergewissern Sie sich, dass keine Firewall den GitHub-Modelle-Endpunkt blockiert
 
 - **Dev-Container startet nicht?** 
   - Stellen Sie sicher, dass Docker Desktop läuft (für lokale Entwicklung)
-  - Versuchen Sie, den Container neu zu erstellen: `Strg+Umschalt+P` → "Dev Containers: Rebuild Container"
+  - Versuchen Sie, den Container neu zu erstellen: `Strg+Umschalt+P` → "Dev Containers: Container neu erstellen"
 
 - **Kompilierungsfehler der Anwendung?**
   - Stellen Sie sicher, dass Sie sich im richtigen Verzeichnis befinden: `02-SetupDevEnvironment/src/github-models`

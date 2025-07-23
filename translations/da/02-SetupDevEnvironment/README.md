@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T19:27:58+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:21:45+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "da"
 }
 -->
-# Opsætning af udviklingsmiljø til Generativ AI for Java
+# Opsætning af Udviklingsmiljø til Generativ AI for Java
 
-> **Hurtig start**: Kod i skyen på 2 minutter - Gå til [GitHub Codespaces Opsætning](../../../02-SetupDevEnvironment) - ingen lokal installation nødvendig og bruger GitHub-modeller!
+> **Hurtig Start**: Kod i skyen på 2 minutter - Hop til [GitHub Codespaces Opsætning](../../../02-SetupDevEnvironment) - ingen lokal installation nødvendig og bruger GitHub-modeller!
 
-> **Interesseret i Azure OpenAI?** Se vores [Azure OpenAI Opsætningsguide](getting-started-azure-openai.md) med trin til at oprette en ny Azure OpenAI-ressource.
+> **Interesseret i Azure OpenAI?**, se vores [Azure OpenAI Opsætningsguide](getting-started-azure-openai.md) med trin til at oprette en ny Azure OpenAI-ressource.
 
 ## Hvad Du Vil Lære
 
@@ -37,7 +37,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Dette kapitel guider dig gennem opsætningen af et udviklingsmiljø. Vi bruger **GitHub-modeller** som vores primære eksempel, fordi det er gratis, nemt at opsætte med kun en GitHub-konto, kræver ikke kreditkort og giver adgang til flere modeller til eksperimentering.
 
-**Ingen lokal opsætning nødvendig!** Du kan begynde at kode med det samme ved at bruge GitHub Codespaces, som giver et fuldt udviklingsmiljø i din browser.
+**Ingen lokal opsætning nødvendig!** Du kan begynde at kode med det samme ved at bruge GitHub Codespaces, som giver et fuldt udviklingsmiljø direkte i din browser.
 
 <img src="./images/models.webp" alt="Skærmbillede: GitHub-modeller" width="50%">
 
@@ -52,7 +52,7 @@ Vi anbefaler at bruge [**GitHub-modeller**](https://github.com/marketplace?type=
 > - ~8.000 ord ind, ~4.000 ord ud pr. forespørgsel
 > - 5 samtidige forespørgsler
 > 
-> Til produktionsbrug, opgrader til Azure AI Foundry-modeller med din Azure-konto. Din kode behøver ikke ændres. Se [Azure AI Foundry-dokumentationen](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Til produktionsbrug kan du opgradere til Azure AI Foundry-modeller med din Azure-konto. Din kode behøver ikke ændres. Se [Azure AI Foundry-dokumentationen](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## Trin 1: Opsæt Dit Udviklingsmiljø
 
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Forstå Eksempelkoden
 
-Lad os først forstå, hvad vi skal køre. Eksemplet bruger OpenAI Java SDK til at forbinde til GitHub-modeller:
+Lad os først forstå, hvad vi lige har kørt. Eksemplet under `src/github-models` bruger OpenAI Java SDK til at forbinde til GitHub-modeller:
 
 **Hvad denne kode gør:**
 - **Forbinder** til GitHub-modeller ved hjælp af dit personlige adgangstoken
@@ -246,11 +246,11 @@ Har du problemer? Her er almindelige problemer og løsninger:
   - Sørg for, at Docker Desktop kører (til lokal udvikling)
   - Prøv at genopbygge containeren: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
-- **Applikationskompilationsfejl?**
+- **Applikationskompileringsfejl?**
   - Sørg for, at du er i den korrekte mappe: `02-SetupDevEnvironment/src/github-models`
   - Prøv at rense og genopbygge: `mvn clean compile`
 
 > **Brug for hjælp?**: Har du stadig problemer? Opret en issue i repositoryet, så hjælper vi dig.
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at opnå nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

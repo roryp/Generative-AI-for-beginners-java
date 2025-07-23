@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T16:16:14+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T11:52:16+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "fr"
 }
 -->
 # Configuration de l'environnement de développement pour l'IA générative en Java
 
-> **Démarrage rapide** : Codez dans le cloud en 2 minutes - Passez directement à [Configuration de GitHub Codespaces](../../../02-SetupDevEnvironment) - aucune installation locale requise et utilise les modèles GitHub !
+> **Démarrage rapide** : Codez dans le cloud en 2 minutes - Passez directement à [Configuration de GitHub Codespaces](../../../02-SetupDevEnvironment) - aucune installation locale requise et utilisez les modèles GitHub !
 
 > **Intéressé par Azure OpenAI ?** Consultez notre [Guide de configuration Azure OpenAI](getting-started-azure-openai.md) avec les étapes pour créer une nouvelle ressource Azure OpenAI.
 
@@ -67,24 +67,24 @@ Nous avons créé un conteneur de développement préconfiguré pour minimiser l
 **Commencez à coder en 2 minutes - aucune configuration locale requise !**
 
 1. Forkez ce dépôt sur votre compte GitHub
-   > **Note** : Si vous souhaitez modifier la configuration de base, consultez la [Configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
-2. Cliquez sur **Code** → onglet **Codespaces** → **...** → **New with options...**
-3. Utilisez les paramètres par défaut – cela sélectionnera la **Configuration du conteneur de développement** : **Environnement de développement Java pour l'IA générative**, un conteneur personnalisé créé pour ce cours
-4. Cliquez sur **Create codespace**
+   > **Note** : Si vous souhaitez modifier la configuration de base, consultez le [Fichier de configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
+2. Cliquez sur **Code** → Onglet **Codespaces** → **...** → **Nouveau avec options...**
+3. Utilisez les paramètres par défaut – cela sélectionnera la **Configuration du conteneur de développement** : **Environnement de développement Java pour l'IA générative** créé sur mesure pour ce cours
+4. Cliquez sur **Créer un codespace**
 5. Attendez ~2 minutes que l'environnement soit prêt
 6. Passez à [Étape 2 : Créez un jeton GitHub](../../../02-SetupDevEnvironment)
 
 <img src="./images/codespaces.png" alt="Capture d'écran : sous-menu Codespaces" width="50%">
 
-<img src="./images/image.png" alt="Capture d'écran : New with options" width="50%">
+<img src="./images/image.png" alt="Capture d'écran : Nouveau avec options" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Capture d'écran : options de création de codespace" width="50%">
+<img src="./images/codespaces-create.png" alt="Capture d'écran : Options de création de codespace" width="50%">
 
 > **Avantages de Codespaces** :
 > - Aucune installation locale requise
 > - Fonctionne sur n'importe quel appareil avec un navigateur
 > - Préconfiguré avec tous les outils et dépendances
-> - 60 heures gratuites par mois pour les comptes personnels
+> - Gratuit 60 heures par mois pour les comptes personnels
 > - Environnement cohérent pour tous les apprenants
 
 #### Option B : Conteneur de développement local
@@ -92,7 +92,7 @@ Nous avons créé un conteneur de développement préconfiguré pour minimiser l
 **Pour les développeurs qui préfèrent le développement local avec Docker**
 
 1. Forkez et clonez ce dépôt sur votre machine locale
-   > **Note** : Si vous souhaitez modifier la configuration de base, consultez la [Configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
+   > **Note** : Si vous souhaitez modifier la configuration de base, consultez le [Fichier de configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
 2. Installez [Docker Desktop](https://www.docker.com/products/docker-desktop/) et [VS Code](https://code.visualstudio.com/)
 3. Installez l'extension [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) dans VS Code
 4. Ouvrez le dossier du dépôt dans VS Code
@@ -100,9 +100,9 @@ Nous avons créé un conteneur de développement préconfiguré pour minimiser l
 6. Attendez que le conteneur soit construit et démarré
 7. Passez à [Étape 2 : Créez un jeton GitHub](../../../02-SetupDevEnvironment)
 
-<img src="./images/devcontainer.png" alt="Capture d'écran : configuration du conteneur de développement" width="50%">
+<img src="./images/devcontainer.png" alt="Capture d'écran : Configuration du conteneur de développement" width="50%">
 
-<img src="./images/image-3.png" alt="Capture d'écran : construction du conteneur de développement terminée" width="50%">
+<img src="./images/image-3.png" alt="Capture d'écran : Construction du conteneur de développement terminée" width="50%">
 
 #### Option C : Utilisez votre installation locale existante
 
@@ -118,22 +118,22 @@ Prérequis :
 2. Ouvrez le projet dans votre IDE
 3. Passez à [Étape 2 : Créez un jeton GitHub](../../../02-SetupDevEnvironment)
 
-> **Astuce** : Si vous avez une machine peu performante mais souhaitez utiliser VS Code localement, utilisez GitHub Codespaces ! Vous pouvez connecter votre VS Code local à un Codespace hébergé dans le cloud pour profiter des avantages des deux mondes.
+> **Astuce Pro** : Si vous avez une machine peu performante mais souhaitez utiliser VS Code localement, utilisez GitHub Codespaces ! Vous pouvez connecter votre VS Code local à un Codespace hébergé dans le cloud pour profiter des avantages des deux mondes.
 
 <img src="./images/image-2.png" alt="Capture d'écran : instance locale du conteneur de développement créée" width="50%">
 
 ## Étape 2 : Créez un jeton d'accès personnel GitHub
 
-1. Accédez à [Paramètres GitHub](https://github.com/settings/profile) et sélectionnez **Settings** dans le menu de votre profil.
-2. Dans la barre latérale gauche, cliquez sur **Developer settings** (généralement en bas).
-3. Sous **Personal access tokens**, cliquez sur **Fine-grained tokens** (ou suivez ce [lien direct](https://github.com/settings/personal-access-tokens)).
-4. Cliquez sur **Generate new token**.
-5. Sous "Token name", fournissez un nom descriptif (par ex., `GenAI-Java-Course-Token`).
+1. Accédez à [Paramètres GitHub](https://github.com/settings/profile) et sélectionnez **Paramètres** dans le menu de votre profil.
+2. Dans la barre latérale gauche, cliquez sur **Paramètres développeur** (généralement en bas).
+3. Sous **Jetons d'accès personnel**, cliquez sur **Jetons à portée fine** (ou suivez ce [lien direct](https://github.com/settings/personal-access-tokens)).
+4. Cliquez sur **Générer un nouveau jeton**.
+5. Sous "Nom du jeton", fournissez un nom descriptif (par ex., `GenAI-Java-Course-Token`).
 6. Définissez une date d'expiration (recommandé : 7 jours pour des pratiques de sécurité optimales).
-7. Sous "Resource owner", sélectionnez votre compte utilisateur.
-8. Sous "Repository access", sélectionnez les dépôts que vous souhaitez utiliser avec les modèles GitHub (ou "All repositories" si nécessaire).
-9. Sous "Repository permissions", trouvez **Models** et définissez-le sur **Read and write**.
-10. Cliquez sur **Generate token**.
+7. Sous "Propriétaire de la ressource", sélectionnez votre compte utilisateur.
+8. Sous "Accès au dépôt", sélectionnez les dépôts que vous souhaitez utiliser avec les modèles GitHub (ou "Tous les dépôts" si nécessaire).
+9. Sous "Permissions du dépôt", trouvez **Modèles** et définissez-le sur **Lecture et écriture**.
+10. Cliquez sur **Générer un jeton**.
 11. **Copiez et sauvegardez votre jeton maintenant** – vous ne pourrez plus le voir !
 
 > **Conseil de sécurité** : Utilisez le champ d'application minimum requis et la durée d'expiration la plus courte possible pour vos jetons d'accès.
@@ -171,9 +171,9 @@ Sending request to GitHub Models...
 Response: Hello World!
 ```
 
-### Comprendre le code exemple
+### Comprendre le code de l'exemple
 
-Tout d'abord, comprenons ce que nous allons exécuter. L'exemple utilise le SDK Java OpenAI pour se connecter aux modèles GitHub :
+Tout d'abord, comprenons ce que nous venons d'exécuter. L'exemple sous `src/github-models` utilise le SDK Java OpenAI pour se connecter aux modèles GitHub :
 
 **Ce que fait ce code :**
 - **Se connecte** aux modèles GitHub en utilisant votre jeton d'accès personnel
@@ -230,7 +230,7 @@ Vous rencontrez des problèmes ? Voici les problèmes courants et leurs solution
 - **Le jeton ne fonctionne pas ?** 
   - Assurez-vous d'avoir copié l'intégralité du jeton sans espaces supplémentaires
   - Vérifiez que le jeton est correctement défini comme variable d'environnement
-  - Vérifiez que votre jeton dispose des permissions correctes (Models : Read and write)
+  - Vérifiez que votre jeton dispose des permissions correctes (Modèles : Lecture et écriture)
 
 - **Maven introuvable ?** 
   - Si vous utilisez des conteneurs de développement/Codespaces, Maven devrait être préinstallé
@@ -240,7 +240,7 @@ Vous rencontrez des problèmes ? Voici les problèmes courants et leurs solution
 - **Problèmes de connexion ?** 
   - Vérifiez votre connexion Internet
   - Assurez-vous que GitHub est accessible depuis votre réseau
-  - Vérifiez que vous n'êtes pas derrière un pare-feu bloquant l'accès aux modèles GitHub
+  - Vérifiez que vous n'êtes pas derrière un pare-feu bloquant le point d'accès des modèles GitHub
 
 - **Le conteneur de développement ne démarre pas ?** 
   - Assurez-vous que Docker Desktop est en cours d'exécution (pour le développement local)

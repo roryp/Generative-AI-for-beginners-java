@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T19:31:51+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:28:21+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "id"
 }
@@ -94,7 +94,7 @@ Kami telah membuat kontainer pengembangan yang telah dikonfigurasi sebelumnya un
 1. Fork dan clone repositori ini ke mesin lokal Anda
    > **Catatan**: Jika Anda ingin mengedit konfigurasi dasar, silakan lihat [Konfigurasi Kontainer Pengembangan](../../../.devcontainer/devcontainer.json)
 2. Instal [Docker Desktop](https://www.docker.com/products/docker-desktop/) dan [VS Code](https://code.visualstudio.com/)
-3. Instal ekstensi [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) di VS Code
+3. Instal [ekstensi Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) di VS Code
 4. Buka folder repositori di VS Code
 5. Saat diminta, klik **Reopen in Container** (atau gunakan `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Tunggu hingga kontainer selesai dibangun dan mulai
@@ -118,7 +118,7 @@ Langkah-langkah:
 2. Buka proyek di IDE Anda
 3. Lanjutkan ke [Langkah 2: Membuat Token GitHub](../../../02-SetupDevEnvironment)
 
-> **Pro Tip**: Jika Anda memiliki mesin dengan spesifikasi rendah tetapi ingin menggunakan VS Code secara lokal, gunakan GitHub Codespaces! Anda dapat menghubungkan VS Code lokal Anda ke Codespace yang di-host di cloud untuk mendapatkan manfaat terbaik dari keduanya.
+> **Tips Pro**: Jika Anda memiliki mesin dengan spesifikasi rendah tetapi ingin menggunakan VS Code secara lokal, gunakan GitHub Codespaces! Anda dapat menghubungkan VS Code lokal Anda ke Codespace yang di-host di cloud untuk mendapatkan manfaat terbaik dari keduanya.
 
 <img src="./images/image-2.png" alt="Screenshot: instance kontainer pengembangan lokal yang dibuat" width="50%">
 
@@ -126,7 +126,7 @@ Langkah-langkah:
 
 1. Navigasikan ke [Pengaturan GitHub](https://github.com/settings/profile) dan pilih **Settings** dari menu profil Anda.
 2. Di sidebar kiri, klik **Developer settings** (biasanya di bagian bawah).
-3. Di bawah **Personal access tokens**, klik **Fine-grained tokens** (atau ikuti [tautan langsung ini](https://github.com/settings/personal-access-tokens)).
+3. Di bawah **Personal access tokens**, klik **Fine-grained tokens** (atau ikuti [tautan langsung](https://github.com/settings/personal-access-tokens)).
 4. Klik **Generate new token**.
 5. Di bawah "Token name", berikan nama deskriptif (misalnya, `GenAI-Java-Course-Token`).
 6. Tetapkan tanggal kedaluwarsa (disarankan: 7 hari untuk praktik keamanan terbaik).
@@ -136,7 +136,7 @@ Langkah-langkah:
 10. Klik **Generate token**.
 11. **Salin dan simpan token Anda sekarang** – Anda tidak akan melihatnya lagi!
 
-> **Tip Keamanan**: Gunakan cakupan minimum yang diperlukan dan waktu kedaluwarsa terpendek yang praktis untuk token akses Anda.
+> **Tips Keamanan**: Gunakan cakupan minimum yang diperlukan dan waktu kedaluwarsa terpendek yang praktis untuk token akses Anda.
 
 ## Langkah 3: Menguji Pengaturan Anda dengan Contoh Model GitHub
 
@@ -147,7 +147,7 @@ Setelah lingkungan pengembangan Anda siap, mari kita uji integrasi Model GitHub 
    ```bash
    cd 02-SetupDevEnvironment/src/github-models
    ```
-3. Atur token GitHub Anda sebagai variabel lingkungan:
+3. Tetapkan token GitHub Anda sebagai variabel lingkungan:
    ```bash
    # macOS/Linux
    export GITHUB_TOKEN=your_token_here
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Memahami Kode Contoh
 
-Pertama, mari kita pahami apa yang akan kita jalankan. Contoh ini menggunakan OpenAI Java SDK untuk terhubung ke Model GitHub:
+Pertama, mari kita pahami apa yang baru saja dijalankan. Contoh di bawah `src/github-models` menggunakan OpenAI Java SDK untuk terhubung ke Model GitHub:
 
 **Apa yang dilakukan kode ini:**
 - **Menghubungkan** ke Model GitHub menggunakan token akses pribadi Anda
@@ -215,13 +215,13 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 **Selamat!** Anda telah berhasil:
 
 - **Membuat Token Akses Pribadi GitHub** dengan izin yang sesuai untuk akses model AI
-- **Menyiapkan lingkungan pengembangan Java** menggunakan Codespaces, kontainer pengembangan, atau instalasi lokal
+- **Menyiapkan lingkungan pengembangan Java Anda** menggunakan Codespaces, kontainer pengembangan, atau instalasi lokal
 - **Terhubung ke Model GitHub** menggunakan OpenAI Java SDK untuk akses pengembangan AI gratis
 - **Menguji integrasi** dengan aplikasi contoh yang berfungsi yang berkomunikasi dengan model AI
 
 ## Langkah Selanjutnya
 
-[Bab 3: Teknik Inti Generative AI](../03-CoreGenerativeAITechniques/README.md)
+[Bab 3: Teknik Generative AI Inti](../03-CoreGenerativeAITechniques/README.md)
 
 ## Pemecahan Masalah
 
@@ -233,7 +233,7 @@ Mengalami masalah? Berikut adalah masalah umum dan solusinya:
   - Periksa bahwa token Anda memiliki izin yang benar (Models: Read and write)
 
 - **Maven tidak ditemukan?** 
-  - Jika menggunakan kontainer pengembangan/Codespaces, Maven seharusnya sudah terinstal
+  - Jika menggunakan kontainer pengembangan/Codespaces, Maven harus sudah terinstal
   - Untuk pengaturan lokal, pastikan Java 21+ dan Maven 3.9+ terinstal
   - Coba `mvn --version` untuk memverifikasi instalasi
 

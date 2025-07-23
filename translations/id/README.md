@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T19:04:21+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:27:51+00:00",
   "source_file": "README.md",
   "language_code": "id"
 }
@@ -12,10 +12,10 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative AI untuk Pemula - Edisi Java](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.id.png)
 
-> **NOTE: Panduan Cepat**: Seluruh kursus dapat dilakukan secara online - Tidak perlu pengaturan lokal!
+> **NOTE: Panduan Cepat**: Seluruh kursus dapat diselesaikan secara online - Tidak perlu pengaturan lokal!
 1. Fork repositori ini ke akun GitHub Anda
-2. Klik **Code** → tab **Codespaces** → **...** → **New with options...**
-3. Gunakan pengaturan default – ini akan memilih kontainer Development yang dibuat untuk kursus ini
+2. Klik **Code** → Tab **Codespaces** → **...** → **New with options...**
+3. Gunakan pengaturan default – ini akan memilih kontainer pengembangan yang dibuat untuk kursus ini
 4. Klik **Create codespace**
 5. Tunggu sekitar 2 menit hingga lingkungan siap
 6. Langsung ke [Membuat Token Model GitHub Anda](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
@@ -32,21 +32,21 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Bab 1: Pengantar Generative AI**
 - **Konsep Inti**: Memahami Large Language Models, token, embedding, dan kemampuan AI
-- **Ekosistem AI Java**: Gambaran umum Spring AI dan OpenAI SDK
+- **Ekosistem AI di Java**: Gambaran umum Spring AI dan OpenAI SDK
 - **Model Context Protocol**: Pengenalan MCP dan perannya dalam komunikasi agen AI
 - **Aplikasi Praktis**: Skenario dunia nyata termasuk chatbot dan pembuatan konten
 - **[→ Mulai Bab 1](./01-IntroToGenAI/README.md)**
 
 ### **Bab 2: Pengaturan Lingkungan Pengembangan**
 - **Konfigurasi Multi-Penyedia**: Mengatur integrasi GitHub Models, Azure OpenAI, dan OpenAI Java SDK
-- **Spring Boot + Spring AI**: Praktik terbaik untuk pengembangan aplikasi AI perusahaan
-- **GitHub Models**: Akses model AI gratis untuk prototipe dan pembelajaran (tidak memerlukan kartu kredit)
+- **Spring Boot + Spring AI**: Praktik terbaik untuk pengembangan aplikasi AI di perusahaan
+- **GitHub Models**: Akses model AI gratis untuk prototipe dan pembelajaran (tidak perlu kartu kredit)
 - **Alat Pengembangan**: Konfigurasi Docker containers, VS Code, dan GitHub Codespaces
 - **[→ Mulai Bab 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Bab 3: Teknik Inti Generative AI**
-- **Prompt Engineering**: Teknik untuk respons model AI yang optimal
-- **Embedding & Operasi Vektor**: Menerapkan pencarian semantik dan pencocokan kesamaan
+- **Prompt Engineering**: Teknik untuk mendapatkan respons model AI yang optimal
+- **Embeddings & Operasi Vektor**: Menerapkan pencarian semantik dan pencocokan kesamaan
 - **Retrieval-Augmented Generation (RAG)**: Menggabungkan AI dengan sumber data Anda sendiri
 - **Function Calling**: Memperluas kemampuan AI dengan alat dan plugin khusus
 - **[→ Mulai Bab 3](./03-CoreGenerativeAITechniques/README.md)**
@@ -59,7 +59,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Bab 5: Pengembangan AI yang Bertanggung Jawab**
 - **Keamanan GitHub Models**: Menguji penyaringan konten bawaan dan mekanisme keamanan
-- **Demo AI yang Bertanggung Jawab**: Contoh praktis yang menunjukkan cara kerja filter keamanan AI
+- **Demo AI yang Bertanggung Jawab**: Contoh langsung yang menunjukkan cara kerja filter keamanan AI
 - **Praktik Terbaik**: Pedoman penting untuk pengembangan dan penerapan AI yang etis
 - **[→ Mulai Bab 5](./05-ResponsibleGenAI/README.md)**
 
@@ -82,4 +82,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [Aplikasi Chat RAG dengan Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

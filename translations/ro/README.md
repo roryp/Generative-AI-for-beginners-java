@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T20:31:17+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:36:08+00:00",
   "source_file": "README.md",
   "language_code": "ro"
 }
@@ -45,7 +45,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Începe Capitolul 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capitolul 3: Tehnici de Bază în Generative AI**
-- **Ingineria Prompt-urilor**: Tehnici pentru răspunsuri optime ale modelelor AI
+- **Ingineria Prompt-urilor**: Tehnici pentru obținerea răspunsurilor optime de la modelele AI
 - **Embedding-uri & Operațiuni pe Vectori**: Implementarea căutării semantice și potrivirii similitudinii
 - **Generare Augmentată prin Recuperare (RAG)**: Combinarea AI cu sursele proprii de date
 - **Apelarea Funcțiilor**: Extinderea capacităților AI cu instrumente și plugin-uri personalizate
@@ -76,7 +76,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Web Dev pentru Începători](https://aka.ms/webdev-beginners)
 - [IoT pentru Începători](https://aka.ms/iot-beginners)
 - [XR Development pentru Începători](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot pentru Programare în Echipa AI](https://aka.ms/GitHubCopilotAI)
+- [Mastering GitHub Copilot pentru Programare AI în Echipe](https://aka.ms/GitHubCopilotAI)
 - [Mastering GitHub Copilot pentru Dezvoltatori C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App cu Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)

@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T19:30:01+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:24:45+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "nl"
 }
 -->
-# Het Instellen van de Ontwikkelomgeving voor Generatieve AI met Java
+# Ontwikkelomgeving instellen voor Generatieve AI met Java
 
 > **Snelle Start**: Codeer in de cloud in 2 minuten - Ga naar [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - geen lokale installatie nodig en maakt gebruik van GitHub-modellen!
 
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Wat Je Gaat Leren
 
-- Een Java-ontwikkelomgeving instellen voor AI-toepassingen
+- Een Java-ontwikkelomgeving opzetten voor AI-toepassingen
 - Je voorkeursontwikkelomgeving kiezen en configureren (cloud-first met Codespaces, lokale dev-container of volledige lokale setup)
 - Je setup testen door verbinding te maken met GitHub-modellen
 
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introductie
 
-In dit hoofdstuk begeleiden we je bij het instellen van een ontwikkelomgeving. We gebruiken **GitHub-modellen** als ons primaire voorbeeld omdat het gratis is, eenvoudig in te stellen met alleen een GitHub-account, geen creditcard vereist en toegang biedt tot meerdere modellen om mee te experimenteren.
+In dit hoofdstuk leer je hoe je een ontwikkelomgeving instelt. We gebruiken **GitHub-modellen** als ons primaire voorbeeld omdat het gratis is, eenvoudig op te zetten met alleen een GitHub-account, geen creditcard vereist en toegang biedt tot meerdere modellen om mee te experimenteren.
 
 **Geen lokale setup nodig!** Je kunt direct beginnen met coderen via GitHub Codespaces, dat een volledige ontwikkelomgeving in je browser biedt.
 
@@ -43,7 +43,7 @@ In dit hoofdstuk begeleiden we je bij het instellen van een ontwikkelomgeving. W
 
 We raden aan om [**GitHub-modellen**](https://github.com/marketplace?type=models) te gebruiken voor deze cursus omdat het:
 - **Gratis** is om te starten
-- **Eenvoudig** is in te stellen met alleen een GitHub-account
+- **Eenvoudig** is op te zetten met alleen een GitHub-account
 - **Geen creditcard** vereist
 - **Meerdere modellen** biedt om mee te experimenteren
 
@@ -58,7 +58,7 @@ We raden aan om [**GitHub-modellen**](https://github.com/marketplace?type=models
 
 <a name="quick-start-cloud"></a>
 
-We hebben een vooraf geconfigureerde ontwikkelcontainer gemaakt om de insteltijd te minimaliseren en ervoor te zorgen dat je alle benodigde tools hebt voor deze Generatieve AI-cursus met Java. Kies je voorkeursontwikkelbenadering:
+We hebben een vooraf geconfigureerde ontwikkelcontainer gemaakt om de installatietijd te minimaliseren en ervoor te zorgen dat je alle benodigde tools hebt voor deze Generatieve AI-cursus met Java. Kies je voorkeursontwikkelbenadering:
 
 ### Opties voor Omgevingsinstelling:
 
@@ -118,7 +118,7 @@ Stappen:
 2. Open het project in je IDE
 3. Ga verder naar [Stap 2: Maak GitHub Token](../../../02-SetupDevEnvironment)
 
-> **Pro Tip**: Als je een computer met lage specificaties hebt maar toch lokaal VS Code wilt gebruiken, gebruik dan GitHub Codespaces! Je kunt je lokale VS Code verbinden met een cloud-hosted Codespace voor het beste van beide werelden.
+> **Pro Tip**: Heb je een computer met lage specificaties maar wil je VS Code lokaal gebruiken? Gebruik GitHub Codespaces! Je kunt je lokale VS Code verbinden met een cloud-hosted Codespace voor het beste van beide werelden.
 
 <img src="./images/image-2.png" alt="Screenshot: lokaal devcontainer exemplaar gemaakt" width="50%">
 
@@ -128,8 +128,8 @@ Stappen:
 2. Klik in de linkerzijbalk op **Developer settings** (meestal onderaan).
 3. Onder **Personal access tokens**, klik op **Fine-grained tokens** (of volg deze directe [link](https://github.com/settings/personal-access-tokens)).
 4. Klik op **Genereer nieuw token**.
-5. Geef onder "Tokennaam" een beschrijvende naam op (bijv. `GenAI-Java-Course-Token`).
-6. Stel een vervaldatum in (aanbevolen: 7 dagen voor beveiligingspraktijken).
+5. Geef onder "Token name" een beschrijvende naam op (bijv. `GenAI-Java-Course-Token`).
+6. Stel een vervaldatum in (aanbevolen: 7 dagen voor beveiligingsbest practices).
 7. Onder "Resource owner", selecteer je gebruikersaccount.
 8. Onder "Repository access", selecteer de repositories die je wilt gebruiken met GitHub-modellen (of "Alle repositories" indien nodig).
 9. Onder "Repository permissions", zoek **Models** en stel deze in op **Lezen en schrijven**.
@@ -138,12 +138,12 @@ Stappen:
 
 > **Beveiligingstip**: Gebruik de minimaal vereiste scope en de kortst mogelijke vervaltijd voor je toegangstokens.
 
-## Stap 3: Test Je Setup met het GitHub Models Voorbeeld
+## Stap 3: Test Je Setup met het GitHub Modellen Voorbeeld
 
-Zodra je ontwikkelomgeving klaar is, testen we de GitHub Models-integratie met onze voorbeeldapplicatie in [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Zodra je ontwikkelomgeving klaar is, testen we de GitHub-modellenintegratie met onze voorbeeldapplicatie in [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
 
 1. Open de terminal in je ontwikkelomgeving.
-2. Navigeer naar het GitHub Models-voorbeeld:
+2. Navigeer naar het GitHub-modellenvoorbeeld:
    ```bash
    cd 02-SetupDevEnvironment/src/github-models
    ```
@@ -173,10 +173,10 @@ Response: Hello World!
 
 ### Begrijpen van de Voorbeeldcode
 
-Laten we eerst begrijpen wat we gaan uitvoeren. Het voorbeeld gebruikt de OpenAI Java SDK om verbinding te maken met GitHub-modellen:
+Laten we eerst begrijpen wat we zojuist hebben uitgevoerd. Het voorbeeld in `src/github-models` gebruikt de OpenAI Java SDK om verbinding te maken met GitHub-modellen:
 
 **Wat deze code doet:**
-- **Verbindt** met GitHub-modellen met behulp van je persoonlijke toegangstoken
+- **Maakt verbinding** met GitHub-modellen met behulp van je persoonlijke toegangstoken
 - **Stuurt** een eenvoudige "Say Hello World!"-boodschap naar het AI-model
 - **Ontvangt** en toont de reactie van de AI
 - **Valideert** dat je setup correct werkt
@@ -221,7 +221,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Volgende Stappen
 
-[Hoofdstuk 3: Kerntechnieken van Generatieve AI](../03-CoreGenerativeAITechniques/README.md)
+[Hoofdstuk 3: Kerntechnieken voor Generatieve AI](../03-CoreGenerativeAITechniques/README.md)
 
 ## Problemen Oplossen
 
@@ -240,7 +240,7 @@ Heb je problemen? Hier zijn veelvoorkomende problemen en oplossingen:
 - **Verbindingsproblemen?** 
   - Controleer je internetverbinding
   - Controleer of GitHub toegankelijk is vanaf je netwerk
-  - Zorg ervoor dat je niet achter een firewall zit die het GitHub Models-eindpunt blokkeert
+  - Zorg ervoor dat je niet achter een firewall zit die het GitHub-modellenendpoint blokkeert
 
 - **Dev-container start niet?** 
   - Zorg ervoor dat Docker Desktop actief is (voor lokale ontwikkeling)

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T19:03:54+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:26:42+00:00",
   "source_file": "README.md",
   "language_code": "vi"
 }
@@ -31,7 +31,7 @@ CO_OP_TRANSLATOR_METADATA:
 **Thời gian cam kết**: Cài đặt môi trường mất 2 phút, với các bài hướng dẫn thực hành yêu cầu 1-3 giờ mỗi bài tùy thuộc vào mức độ khám phá.
 
 ### **Chương 1: Giới thiệu về AI Tạo Sinh**
-- **Khái niệm cốt lõi**: Hiểu về Mô hình Ngôn ngữ Lớn, token, embedding và khả năng của AI
+- **Khái niệm cốt lõi**: Hiểu về Mô hình Ngôn ngữ Lớn, token, embedding, và khả năng của AI
 - **Hệ sinh thái AI Java**: Tổng quan về Spring AI và OpenAI SDKs
 - **Giao thức Ngữ cảnh Mô hình**: Giới thiệu về MCP và vai trò của nó trong giao tiếp của tác nhân AI
 - **Ứng dụng thực tiễn**: Các kịch bản thực tế bao gồm chatbot và tạo nội dung
@@ -46,7 +46,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Chương 3: Kỹ thuật AI Tạo Sinh Cốt lõi**
 - **Kỹ thuật Prompt**: Các kỹ thuật để có được phản hồi tối ưu từ mô hình AI
-- **Embedding & Các phép toán Vector**: Triển khai tìm kiếm ngữ nghĩa và so khớp tương đồng
+- **Embedding & Hoạt động Vector**: Triển khai tìm kiếm ngữ nghĩa và so khớp tương đồng
 - **Tạo Sinh Tăng cường Truy xuất (RAG)**: Kết hợp AI với các nguồn dữ liệu của bạn
 - **Gọi Hàm**: Mở rộng khả năng AI với các công cụ và plugin tùy chỉnh
 - **[→ Bắt đầu Chương 3](./03-CoreGenerativeAITechniques/README.md)**
@@ -58,8 +58,8 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Bắt đầu Chương 4](./04-PracticalSamples/README.md)**
 
 ### **Chương 5: Phát triển AI Có Trách nhiệm**
-- **An toàn của GitHub Models**: Kiểm tra bộ lọc nội dung và cơ chế an toàn tích hợp sẵn
-- **Demo AI Có Trách nhiệm**: Ví dụ thực hành cho thấy cách các bộ lọc an toàn AI hoạt động trong thực tế
+- **An toàn của GitHub Models**: Kiểm tra bộ lọc nội dung và cơ chế an toàn tích hợp
+- **Demo AI Có Trách nhiệm**: Ví dụ thực hành cho thấy cách bộ lọc an toàn AI hoạt động
 - **Thực hành tốt nhất**: Các hướng dẫn thiết yếu để phát triển và triển khai AI một cách đạo đức
 - **[→ Bắt đầu Chương 5](./05-ResponsibleGenAI/README.md)**
 
@@ -82,4 +82,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

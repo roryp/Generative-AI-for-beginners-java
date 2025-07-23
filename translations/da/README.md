@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T19:01:50+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:21:18+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -38,13 +38,13 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Kapitel 1](./01-IntroToGenAI/README.md)**
 
 ### **Kapitel 2: Opsætning af Udviklingsmiljø**
-- **Konfiguration af flere udbydere**: Opsæt GitHub Models, Azure OpenAI og OpenAI Java SDK integrationer
+- **Multi-Provider Konfiguration**: Opsæt GitHub Models, Azure OpenAI og OpenAI Java SDK integrationer
 - **Spring Boot + Spring AI**: Bedste praksis for udvikling af AI-applikationer til virksomheder
 - **GitHub Models**: Gratis adgang til AI-modeller til prototyper og læring (ingen kreditkort nødvendig)
 - **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces konfiguration
 - **[→ Start Kapitel 2](./02-SetupDevEnvironment/README.md)**
 
-### **Kapitel 3: Kerne Generativ AI Teknikker**
+### **Kapitel 3: Kerne Generative AI Teknikker**
 - **Prompt Engineering**: Teknikker til optimale AI-modelsvar
 - **Embeddings & Vektoroperationer**: Implementer semantisk søgning og lighedsmatching
 - **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
@@ -82,4 +82,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App med Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

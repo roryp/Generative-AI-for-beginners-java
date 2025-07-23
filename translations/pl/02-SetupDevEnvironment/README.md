@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T16:20:15+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:15:51+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "pl"
 }
 -->
-# Konfigurowanie środowiska programistycznego dla Generative AI w Javie
+# Konfigurowanie Środowiska Programistycznego dla Generatywnej Sztucznej Inteligencji w Javie
 
-> **Szybki start**: Kodowanie w chmurze w 2 minuty - Przejdź do [Konfiguracja GitHub Codespaces](../../../02-SetupDevEnvironment) - bez konieczności instalacji lokalnej, korzystając z modeli GitHub!
+> **Szybki Start**: Koduj w chmurze w 2 minuty - przejdź do [Konfiguracja GitHub Codespaces](../../../02-SetupDevEnvironment) - bez potrzeby instalacji lokalnej, korzystając z modeli GitHub!
 
-> **Zainteresowany Azure OpenAI?** Zobacz nasz [Przewodnik konfiguracji Azure OpenAI](getting-started-azure-openai.md) z krokami tworzenia nowego zasobu Azure OpenAI.
+> **Zainteresowany Azure OpenAI?** Zobacz nasz [Przewodnik po Azure OpenAI](getting-started-azure-openai.md) z krokami tworzenia nowego zasobu Azure OpenAI.
 
 ## Czego się nauczysz
 
@@ -24,66 +24,66 @@ CO_OP_TRANSLATOR_METADATA:
 - [Czego się nauczysz](../../../02-SetupDevEnvironment)
 - [Wprowadzenie](../../../02-SetupDevEnvironment)
 - [Krok 1: Konfiguracja środowiska programistycznego](../../../02-SetupDevEnvironment)
-  - [Opcja A: GitHub Codespaces (zalecane)](../../../02-SetupDevEnvironment)
+  - [Opcja A: GitHub Codespaces (Zalecane)](../../../02-SetupDevEnvironment)
   - [Opcja B: Lokalny kontener deweloperski](../../../02-SetupDevEnvironment)
   - [Opcja C: Użyj istniejącej instalacji lokalnej](../../../02-SetupDevEnvironment)
-- [Krok 2: Utwórz GitHub Personal Access Token](../../../02-SetupDevEnvironment)
-- [Krok 3: Testowanie konfiguracji](../../../02-SetupDevEnvironment)
+- [Krok 2: Utwórz osobisty token dostępu GitHub](../../../02-SetupDevEnvironment)
+- [Krok 3: Przetestuj konfigurację](../../../02-SetupDevEnvironment)
 - [Rozwiązywanie problemów](../../../02-SetupDevEnvironment)
 - [Podsumowanie](../../../02-SetupDevEnvironment)
 - [Kolejne kroki](../../../02-SetupDevEnvironment)
 
 ## Wprowadzenie
 
-Ten rozdział poprowadzi Cię przez proces konfiguracji środowiska programistycznego. Użyjemy **GitHub Models** jako głównego przykładu, ponieważ jest darmowy, łatwy w konfiguracji (wystarczy konto GitHub), nie wymaga karty kredytowej i zapewnia dostęp do wielu modeli do eksperymentowania.
+Ten rozdział poprowadzi Cię przez proces konfiguracji środowiska programistycznego. Użyjemy **GitHub Models** jako głównego przykładu, ponieważ jest darmowy, łatwy do skonfigurowania (wystarczy konto GitHub), nie wymaga karty kredytowej i zapewnia dostęp do wielu modeli do eksperymentowania.
 
-**Nie wymaga instalacji lokalnej!** Możesz zacząć kodować natychmiast, korzystając z GitHub Codespaces, które oferuje pełne środowisko programistyczne w przeglądarce.
+**Nie wymaga lokalnej konfiguracji!** Możesz zacząć kodować natychmiast, korzystając z GitHub Codespaces, które oferuje pełne środowisko programistyczne w przeglądarce.
 
 <img src="./images/models.webp" alt="Zrzut ekranu: GitHub Models" width="50%">
 
 Polecamy korzystanie z [**GitHub Models**](https://github.com/marketplace?type=models) w tym kursie, ponieważ:
 - Jest **darmowy** na początek
-- **Łatwy** w konfiguracji (wystarczy konto GitHub)
+- Jest **łatwy** do skonfigurowania (wystarczy konto GitHub)
 - **Nie wymaga karty kredytowej**
 - Oferuje **wiele modeli** do eksperymentowania
 
-> **Uwaga**: Modele GitHub używane w tym szkoleniu mają następujące limity:
+> **Uwaga**: Modele GitHub używane w tym szkoleniu mają następujące limity darmowe:
 > - 15 żądań na minutę (150 dziennie)
-> - ~8,000 słów wejściowych, ~4,000 słów wyjściowych na żądanie
+> - ~8 000 słów wejściowych, ~4 000 słów wyjściowych na żądanie
 > - 5 równoczesnych żądań
 > 
-> Do zastosowań produkcyjnych, przejdź na modele Azure AI Foundry, korzystając z konta Azure. Twój kod nie wymaga zmian. Zobacz [dokumentację Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Do użytku produkcyjnego można przejść na Azure AI Foundry Models z kontem Azure. Twój kod nie wymaga zmian. Zobacz [dokumentację Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## Krok 1: Konfiguracja środowiska programistycznego
 
 <a name="quick-start-cloud"></a>
 
-Przygotowaliśmy wstępnie skonfigurowany kontener deweloperski, aby zminimalizować czas konfiguracji i zapewnić wszystkie niezbędne narzędzia do tego kursu Generative AI w Javie. Wybierz preferowane podejście:
+Przygotowaliśmy wstępnie skonfigurowany kontener deweloperski, aby zminimalizować czas konfiguracji i zapewnić wszystkie niezbędne narzędzia do tego kursu Generatywnej AI w Javie. Wybierz preferowane podejście:
 
 ### Opcje konfiguracji środowiska:
 
-#### Opcja A: GitHub Codespaces (zalecane)
+#### Opcja A: GitHub Codespaces (Zalecane)
 
-**Zacznij kodować w 2 minuty - bez instalacji lokalnej!**
+**Zacznij kodować w 2 minuty - bez potrzeby lokalnej konfiguracji!**
 
-1. Zforkuj to repozytorium na swoje konto GitHub
+1. Forkuj to repozytorium na swoje konto GitHub
    > **Uwaga**: Jeśli chcesz edytować podstawową konfigurację, zapoznaj się z [Konfiguracją kontenera deweloperskiego](../../../.devcontainer/devcontainer.json)
 2. Kliknij **Code** → zakładka **Codespaces** → **...** → **New with options...**
-3. Użyj domyślnych ustawień – zostanie wybrana konfiguracja kontenera deweloperskiego: **Generative AI Java Development Environment**, specjalnie przygotowana na potrzeby tego kursu
+3. Użyj domyślnych ustawień – wybierz konfigurację kontenera deweloperskiego: **Generative AI Java Development Environment**, specjalnie przygotowaną na potrzeby tego kursu
 4. Kliknij **Create codespace**
 5. Poczekaj ~2 minuty na przygotowanie środowiska
-6. Przejdź do [Krok 2: Utwórz GitHub Token](../../../02-SetupDevEnvironment)
+6. Przejdź do [Krok 2: Utwórz token GitHub](../../../02-SetupDevEnvironment)
 
-<img src="./images/codespaces.png" alt="Zrzut ekranu: submenu Codespaces" width="50%">
+<img src="./images/codespaces.png" alt="Zrzut ekranu: menu Codespaces" width="50%">
 
 <img src="./images/image.png" alt="Zrzut ekranu: New with options" width="50%">
 
 <img src="./images/codespaces-create.png" alt="Zrzut ekranu: Opcje tworzenia Codespace" width="50%">
 
 > **Zalety Codespaces**:
-> - Nie wymaga instalacji lokalnej
-> - Działa na każdym urządzeniu z przeglądarką
-> - Wstępnie skonfigurowane ze wszystkimi narzędziami i zależnościami
+> - Brak potrzeby instalacji lokalnej
+> - Działa na dowolnym urządzeniu z przeglądarką
+> - Wstępnie skonfigurowane z wszystkimi narzędziami i zależnościami
 > - Darmowe 60 godzin miesięcznie dla kont osobistych
 > - Spójne środowisko dla wszystkich uczestników
 
@@ -91,14 +91,14 @@ Przygotowaliśmy wstępnie skonfigurowany kontener deweloperski, aby zminimalizo
 
 **Dla programistów preferujących lokalny rozwój z Dockerem**
 
-1. Zforkuj i sklonuj to repozytorium na swój komputer
+1. Forkuj i sklonuj to repozytorium na swój komputer
    > **Uwaga**: Jeśli chcesz edytować podstawową konfigurację, zapoznaj się z [Konfiguracją kontenera deweloperskiego](../../../.devcontainer/devcontainer.json)
 2. Zainstaluj [Docker Desktop](https://www.docker.com/products/docker-desktop/) i [VS Code](https://code.visualstudio.com/)
 3. Zainstaluj rozszerzenie [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) w VS Code
 4. Otwórz folder repozytorium w VS Code
-5. Po wyświetleniu komunikatu kliknij **Reopen in Container** (lub użyj `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
+5. Po wyświetleniu monitu kliknij **Reopen in Container** (lub użyj `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Poczekaj na zbudowanie i uruchomienie kontenera
-7. Przejdź do [Krok 2: Utwórz GitHub Token](../../../02-SetupDevEnvironment)
+7. Przejdź do [Krok 2: Utwórz token GitHub](../../../02-SetupDevEnvironment)
 
 <img src="./images/devcontainer.png" alt="Zrzut ekranu: konfiguracja kontenera deweloperskiego" width="50%">
 
@@ -116,34 +116,34 @@ Wymagania:
 Kroki:
 1. Sklonuj to repozytorium na swój komputer
 2. Otwórz projekt w swoim IDE
-3. Przejdź do [Krok 2: Utwórz GitHub Token](../../../02-SetupDevEnvironment)
+3. Przejdź do [Krok 2: Utwórz token GitHub](../../../02-SetupDevEnvironment)
 
-> **Porada**: Jeśli masz komputer o niskiej specyfikacji, ale chcesz używać VS Code lokalnie, skorzystaj z GitHub Codespaces! Możesz połączyć lokalny VS Code z chmurowym Codespace, aby uzyskać najlepsze rozwiązanie.
+> **Porada**: Jeśli masz komputer o niskiej specyfikacji, ale chcesz używać lokalnie VS Code, skorzystaj z GitHub Codespaces! Możesz połączyć lokalny VS Code z Codespace w chmurze, aby uzyskać najlepsze z obu światów.
 
 <img src="./images/image-2.png" alt="Zrzut ekranu: utworzona lokalna instancja kontenera deweloperskiego" width="50%">
 
-## Krok 2: Utwórz GitHub Personal Access Token
+## Krok 2: Utwórz osobisty token dostępu GitHub
 
 1. Przejdź do [Ustawień GitHub](https://github.com/settings/profile) i wybierz **Settings** z menu profilu.
 2. W lewym pasku bocznym kliknij **Developer settings** (zwykle na dole).
-3. W sekcji **Personal access tokens** kliknij **Fine-grained tokens** (lub skorzystaj z tego [linku](https://github.com/settings/personal-access-tokens)).
+3. W sekcji **Personal access tokens** kliknij **Fine-grained tokens** (lub użyj tego [linku](https://github.com/settings/personal-access-tokens)).
 4. Kliknij **Generate new token**.
 5. W polu "Token name" podaj opisową nazwę (np. `GenAI-Java-Course-Token`).
 6. Ustaw datę wygaśnięcia (zalecane: 7 dni dla bezpieczeństwa).
-7. W sekcji "Resource owner" wybierz swoje konto użytkownika.
+7. W polu "Resource owner" wybierz swoje konto użytkownika.
 8. W sekcji "Repository access" wybierz repozytoria, które chcesz używać z modelami GitHub (lub "All repositories", jeśli to konieczne).
 9. W sekcji "Repository permissions" znajdź **Models** i ustaw na **Read and write**.
 10. Kliknij **Generate token**.
-11. **Skopiuj i zapisz swój token teraz** – nie będziesz mógł go zobaczyć ponownie!
+11. **Skopiuj i zapisz token teraz** – nie będziesz mógł go zobaczyć ponownie!
 
 > **Porada dotycząca bezpieczeństwa**: Używaj minimalnego wymaganego zakresu i najkrótszego praktycznego czasu wygaśnięcia dla swoich tokenów dostępu.
 
-## Krok 3: Testowanie konfiguracji z przykładem GitHub Models
+## Krok 3: Przetestuj konfigurację z przykładem modeli GitHub
 
-Gdy Twoje środowisko programistyczne jest gotowe, przetestuj integrację z modelami GitHub za pomocą naszej przykładowej aplikacji w [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Gdy Twoje środowisko programistyczne jest gotowe, przetestuj integrację z modelami GitHub za pomocą przykładowej aplikacji w [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
 
 1. Otwórz terminal w swoim środowisku programistycznym.
-2. Przejdź do przykładu GitHub Models:
+2. Przejdź do przykładu modeli GitHub:
    ```bash
    cd 02-SetupDevEnvironment/src/github-models
    ```
@@ -171,15 +171,15 @@ Sending request to GitHub Models...
 Response: Hello World!
 ```
 
-### Zrozumienie kodu przykładowego
+### Zrozumienie przykładowego kodu
 
-Najpierw zrozummy, co uruchomimy. Przykład używa OpenAI Java SDK do połączenia z modelami GitHub:
+Najpierw zrozummy, co właśnie uruchomiliśmy. Przykład w `src/github-models` używa OpenAI Java SDK do połączenia z modelami GitHub:
 
 **Co robi ten kod:**
-- **Łączy się** z modelami GitHub za pomocą Twojego tokenu dostępu
+- **Łączy się** z modelami GitHub za pomocą osobistego tokena dostępu
 - **Wysyła** prostą wiadomość "Say Hello World!" do modelu AI
 - **Odbiera** i wyświetla odpowiedź AI
-- **Weryfikuje**, że konfiguracja działa poprawnie
+- **Weryfikuje**, czy konfiguracja działa poprawnie
 
 **Kluczowa zależność** (w `pom.xml`):
 ```xml
@@ -214,14 +214,14 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 **Gratulacje!** Pomyślnie:
 
-- **Utworzyłeś GitHub Personal Access Token** z odpowiednimi uprawnieniami do dostępu do modeli AI
+- **Utworzyłeś osobisty token dostępu GitHub** z odpowiednimi uprawnieniami do dostępu do modeli AI
 - **Skonfigurowałeś środowisko programistyczne w Javie** za pomocą Codespaces, kontenerów deweloperskich lub instalacji lokalnej
 - **Połączyłeś się z modelami GitHub** za pomocą OpenAI Java SDK, uzyskując darmowy dostęp do rozwoju AI
-- **Przetestowałeś integrację** za pomocą działającej aplikacji, która komunikuje się z modelami AI
+- **Przetestowałeś integrację** za pomocą działającej przykładowej aplikacji komunikującej się z modelami AI
 
 ## Kolejne kroki
 
-[Rozdział 3: Podstawowe techniki Generative AI](../03-CoreGenerativeAITechniques/README.md)
+[Rozdział 3: Podstawowe techniki generatywnej AI](../03-CoreGenerativeAITechniques/README.md)
 
 ## Rozwiązywanie problemów
 
@@ -229,21 +229,21 @@ Masz problemy? Oto typowe problemy i rozwiązania:
 
 - **Token nie działa?** 
   - Upewnij się, że skopiowałeś cały token bez dodatkowych spacji
-  - Zweryfikuj, że token jest poprawnie ustawiony jako zmienna środowiskowa
-  - Sprawdź, czy Twój token ma odpowiednie uprawnienia (Models: Read and write)
+  - Zweryfikuj, czy token został poprawnie ustawiony jako zmienna środowiskowa
+  - Sprawdź, czy token ma odpowiednie uprawnienia (Models: Read and write)
 
-- **Maven nie znaleziony?** 
+- **Maven nie znaleziono?** 
   - Jeśli używasz kontenerów deweloperskich/Codespaces, Maven powinien być wstępnie zainstalowany
-  - Dla konfiguracji lokalnej upewnij się, że Java 21+ i Maven 3.9+ są zainstalowane
+  - Dla lokalnej konfiguracji upewnij się, że Java 21+ i Maven 3.9+ są zainstalowane
   - Spróbuj `mvn --version`, aby zweryfikować instalację
 
 - **Problemy z połączeniem?** 
   - Sprawdź swoje połączenie internetowe
   - Zweryfikuj, czy GitHub jest dostępny z Twojej sieci
-  - Upewnij się, że nie jesteś za firewallem blokującym punkt końcowy modeli GitHub
+  - Upewnij się, że nie jesteś za zaporą blokującą punkt końcowy modeli GitHub
 
 - **Kontener deweloperski nie uruchamia się?** 
-  - Upewnij się, że Docker Desktop działa (dla rozwoju lokalnego)
+  - Upewnij się, że Docker Desktop działa (dla lokalnego rozwoju)
   - Spróbuj odbudować kontener: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Błędy kompilacji aplikacji?**
@@ -253,4 +253,4 @@ Masz problemy? Oto typowe problemy i rozwiązania:
 > **Potrzebujesz pomocy?**: Nadal masz problemy? Otwórz zgłoszenie w repozytorium, a pomożemy Ci.
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić poprawność tłumaczenia, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

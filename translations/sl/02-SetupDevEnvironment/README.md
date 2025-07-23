@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T21:00:41+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:41:07+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "sl"
 }
@@ -15,9 +15,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kaj se boste naučili
 
-- Nastaviti razvojno okolje za Javo za aplikacije umetne inteligence
-- Izbrati in konfigurirati svoje prednostno razvojno okolje (oblak s Codespaces, lokalni razvojni kontejner ali popolna lokalna nastavitev)
-- Preizkusiti svojo nastavitev s povezovanjem na GitHub modele
+- Nastaviti razvojno okolje za Javo za aplikacije z umetno inteligenco
+- Izbrati in konfigurirati svoje prednostno razvojno okolje (najprej oblak z Codespaces, lokalni razvojni kontejner ali popolna lokalna nastavitev)
+- Preizkusiti svojo nastavitev z vzpostavitvijo povezave z GitHub modeli
 
 ## Kazalo
 
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [Možnost A: GitHub Codespaces (priporočeno)](../../../02-SetupDevEnvironment)
   - [Možnost B: Lokalni razvojni kontejner](../../../02-SetupDevEnvironment)
   - [Možnost C: Uporaba obstoječe lokalne namestitve](../../../02-SetupDevEnvironment)
-- [2. korak: Ustvarite GitHub osebni dostopni žeton](../../../02-SetupDevEnvironment)
+- [2. korak: Ustvarite osebni dostopni žeton za GitHub](../../../02-SetupDevEnvironment)
 - [3. korak: Preizkusite svojo nastavitev](../../../02-SetupDevEnvironment)
 - [Odpravljanje težav](../../../02-SetupDevEnvironment)
 - [Povzetek](../../../02-SetupDevEnvironment)
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Uvod
 
-To poglavje vas bo vodilo skozi nastavitev razvojnega okolja. Uporabili bomo **GitHub modele** kot naš glavni primer, ker so brezplačni, enostavni za nastavitev z GitHub računom, ne zahtevajo kreditne kartice in omogočajo dostop do več modelov za eksperimentiranje.
+To poglavje vas bo vodilo skozi nastavitev razvojnega okolja. Kot glavni primer bomo uporabili **GitHub modele**, saj so brezplačni, enostavni za nastavitev z le GitHub računom, ne zahtevajo kreditne kartice in omogočajo dostop do več modelov za eksperimentiranje.
 
 **Brez lokalne nastavitve!** Kodiranje lahko začnete takoj z uporabo GitHub Codespaces, ki zagotavlja popolno razvojno okolje v vašem brskalniku.
 
@@ -43,22 +43,22 @@ To poglavje vas bo vodilo skozi nastavitev razvojnega okolja. Uporabili bomo **G
 
 Priporočamo uporabo [**GitHub modelov**](https://github.com/marketplace?type=models) za ta tečaj, ker so:
 - **Brezplačni** za začetek
-- **Enostavni** za nastavitev z GitHub računom
-- **Brez kreditne kartice** za uporabo
+- **Enostavni** za nastavitev z le GitHub računom
+- **Brez kreditne kartice** potrebne
 - **Več modelov** na voljo za eksperimentiranje
 
 > **Opomba**: GitHub modeli, uporabljeni v tem usposabljanju, imajo naslednje brezplačne omejitve:
 > - 15 zahtevkov na minuto (150 na dan)
-> - ~8.000 besed vhodnih, ~4.000 besed izhodnih na zahtevo
+> - ~8.000 besed vnos, ~4.000 besed iznos na zahtevo
 > - 5 sočasnih zahtevkov
 > 
-> Za uporabo v produkciji nadgradite na Azure AI Foundry modele z vašim Azure računom. Vaša koda se ne bo spremenila. Oglejte si [dokumentacijo Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Za produkcijsko uporabo nadgradite na Azure AI Foundry modele z vašim Azure računom. Vaša koda se ne bo spremenila. Oglejte si [dokumentacijo Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## 1. korak: Nastavitev razvojnega okolja
 
 <a name="quick-start-cloud"></a>
 
-Ustvarili smo predkonfiguriran razvojni kontejner, da zmanjšamo čas nastavitve in zagotovimo, da imate vsa potrebna orodja za ta tečaj Generativne umetne inteligence za Javo. Izberite svoj prednostni pristop k razvoju:
+Ustvarili smo vnaprej konfiguriran razvojni kontejner, da zmanjšamo čas nastavitve in zagotovimo, da imate vsa potrebna orodja za ta tečaj o generativni umetni inteligenci za Javo. Izberite svoj prednostni pristop k razvoju:
 
 ### Možnosti nastavitve okolja:
 
@@ -69,21 +69,21 @@ Ustvarili smo predkonfiguriran razvojni kontejner, da zmanjšamo čas nastavitve
 1. Forkajte to repozitorij v svoj GitHub račun
    > **Opomba**: Če želite urediti osnovno konfiguracijo, si oglejte [Konfiguracijo razvojnega kontejnerja](../../../.devcontainer/devcontainer.json)
 2. Kliknite **Code** → zavihek **Codespaces** → **...** → **New with options...**
-3. Uporabite privzete nastavitve – to bo izbralo **Konfiguracijo razvojnega kontejnerja**: **Razvojno okolje za generativno umetno inteligenco za Javo**, ustvarjeno za ta tečaj
+3. Uporabite privzete nastavitve – to bo izbralo **Konfiguracijo razvojnega kontejnerja**: **Generative AI Java Development Environment**, prilagojen razvojni kontejner, ustvarjen za ta tečaj
 4. Kliknite **Create codespace**
 5. Počakajte ~2 minuti, da je okolje pripravljeno
 6. Nadaljujte na [2. korak: Ustvarite GitHub žeton](../../../02-SetupDevEnvironment)
 
 <img src="./images/codespaces.png" alt="Posnetek zaslona: podmeni Codespaces" width="50%">
 
-<img src="./images/image.png" alt="Posnetek zaslona: Nova možnost z nastavitvami" width="50%">
+<img src="./images/image.png" alt="Posnetek zaslona: Nova z možnostmi" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Posnetek zaslona: Možnosti ustvarjanja Codespace" width="50%">
+<img src="./images/codespaces-create.png" alt="Posnetek zaslona: Možnosti za ustvarjanje Codespace" width="50%">
 
 > **Prednosti Codespaces**:
 > - Brez lokalne namestitve
 > - Deluje na katerikoli napravi z brskalnikom
-> - Predkonfigurirano z vsemi orodji in odvisnostmi
+> - Vnaprej konfigurirano z vsemi orodji in odvisnostmi
 > - Brezplačno 60 ur na mesec za osebne račune
 > - Dosledno okolje za vse udeležence
 
@@ -91,12 +91,12 @@ Ustvarili smo predkonfiguriran razvojni kontejner, da zmanjšamo čas nastavitve
 
 **Za razvijalce, ki imajo raje lokalni razvoj z Dockerjem**
 
-1. Forkajte in klonirajte ta repozitorij na svoj lokalni računalnik
+1. Forkajte in klonirajte ta repozitorij na svojo lokalno napravo
    > **Opomba**: Če želite urediti osnovno konfiguracijo, si oglejte [Konfiguracijo razvojnega kontejnerja](../../../.devcontainer/devcontainer.json)
 2. Namestite [Docker Desktop](https://www.docker.com/products/docker-desktop/) in [VS Code](https://code.visualstudio.com/)
 3. Namestite razširitev [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) v VS Code
 4. Odprite mapo repozitorija v VS Code
-5. Ko ste pozvani, kliknite **Reopen in Container** (ali uporabite `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
+5. Ko vas pozove, kliknite **Reopen in Container** (ali uporabite `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Počakajte, da se kontejner zgradi in zažene
 7. Nadaljujte na [2. korak: Ustvarite GitHub žeton](../../../02-SetupDevEnvironment)
 
@@ -114,15 +114,15 @@ Predpogoji:
 - [VS Code](https://code.visualstudio.com) ali vaš prednostni IDE
 
 Koraki:
-1. Klonirajte ta repozitorij na svoj lokalni računalnik
-2. Odprite projekt v svojem IDE-ju
+1. Klonirajte ta repozitorij na svojo lokalno napravo
+2. Odprite projekt v svojem IDE
 3. Nadaljujte na [2. korak: Ustvarite GitHub žeton](../../../02-SetupDevEnvironment)
 
-> **Nasvet za profesionalce**: Če imate računalnik z nizkimi specifikacijami, a želite uporabljati VS Code lokalno, uporabite GitHub Codespaces! Lokalni VS Code lahko povežete z oblačno gostovanim Codespace za najboljše iz obeh svetov.
+> **Nasvet za profesionalce**: Če imate napravo z nizkimi specifikacijami, a želite uporabljati VS Code lokalno, uporabite GitHub Codespaces! Lokalni VS Code lahko povežete z oblačno gostovanim Codespace za najboljše iz obeh svetov.
 
 <img src="./images/image-2.png" alt="Posnetek zaslona: Ustvarjen lokalni razvojni kontejner" width="50%">
 
-## 2. korak: Ustvarite GitHub osebni dostopni žeton
+## 2. korak: Ustvarite osebni dostopni žeton za GitHub
 
 1. Pojdite na [GitHub Nastavitve](https://github.com/settings/profile) in izberite **Settings** iz menija svojega profila.
 2. V levem stranskem meniju kliknite **Developer settings** (običajno na dnu).
@@ -164,21 +164,21 @@ Ko je vaše razvojno okolje pripravljeno, preizkusimo integracijo GitHub modelov
    mvn compile exec:java -Dexec.mainClass="com.example.githubmodels.App"
    ```
 
-Videti bi morali izhod, podoben temu:
+Videti bi morali izpis, podoben temu:
 ```text
 Using model: gpt-4.1-nano
 Sending request to GitHub Models...
 Response: Hello World!
 ```
 
-### Razumevanje primer kode
+### Razumevanje primerne kode
 
-Najprej razumimo, kaj bomo zagnali. Primer uporablja OpenAI Java SDK za povezavo z GitHub modeli:
+Najprej razložimo, kaj smo pravkar zagnali. Primer pod `src/github-models` uporablja OpenAI Java SDK za povezavo z GitHub modeli:
 
 **Kaj ta koda počne:**
-- **Poveže se** z GitHub modeli z uporabo vašega osebnega dostopnega žetona
-- **Pošlje** preprosto sporočilo "Say Hello World!" modelu AI
-- **Prejme** in prikaže odgovor AI
+- **Vzpostavi povezavo** z GitHub modeli z uporabo vašega osebnega dostopnega žetona
+- **Pošlje** preprosto sporočilo "Say Hello World!" modelu umetne inteligence
+- **Prejme** in prikaže odgovor umetne inteligence
 - **Preveri**, ali vaša nastavitev deluje pravilno
 
 **Ključna odvisnost** (v `pom.xml`):
@@ -214,10 +214,10 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 **Čestitamo!** Uspešno ste:
 
-- **Ustvarili GitHub osebni dostopni žeton** z ustreznimi dovoljenji za dostop do AI modelov
-- **Nastavili svoje razvojno okolje za Javo** z uporabo Codespaces, razvojnih kontejnerjev ali lokalne namestitve
-- **Povezali se z GitHub modeli** z uporabo OpenAI Java SDK za brezplačen dostop do AI razvoja
-- **Preizkusili integracijo** z delujočo primer aplikacijo, ki komunicira z AI modeli
+- **Ustvarili osebni dostopni žeton za GitHub** z ustreznimi dovoljenji za dostop do modelov umetne inteligence
+- **Nastavili razvojno okolje za Javo** z uporabo Codespaces, razvojnih kontejnerjev ali lokalne namestitve
+- **Vzpostavili povezavo z GitHub modeli** z uporabo OpenAI Java SDK za brezplačen dostop do razvoja umetne inteligence
+- **Preizkusili integracijo** z delujočo primer aplikacijo, ki komunicira z modeli umetne inteligence
 
 ## Naslednji koraki
 
@@ -240,7 +240,7 @@ Imate težave? Tukaj so pogoste težave in rešitve:
 - **Težave s povezavo?** 
   - Preverite svojo internetno povezavo
   - Preverite, ali je GitHub dostopen iz vašega omrežja
-  - Prepričajte se, da niste za požarnim zidom, ki blokira GitHub Models endpoint
+  - Prepričajte se, da niste za požarnim zidom, ki blokira dostop do GitHub modelov
 
 - **Razvojni kontejner se ne zažene?** 
   - Prepričajte se, da Docker Desktop deluje (za lokalni razvoj)
@@ -253,4 +253,4 @@ Imate težave? Tukaj so pogoste težave in rešitve:
 > **Potrebujete pomoč?**: Še vedno imate težave? Odprite težavo v repozitoriju in pomagali vam bomo.
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.

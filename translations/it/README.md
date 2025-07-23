@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T17:33:01+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:14:26+00:00",
   "source_file": "README.md",
   "language_code": "it"
 }
@@ -30,37 +30,37 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Impegno di Tempo**: La configurazione dell'ambiente richiede 2 minuti, mentre i tutorial pratici richiedono 1-3 ore ciascuno, a seconda della profondità di esplorazione.
 
-### **Capitolo 1: Introduzione al Generative AI**
-- **Concetti Fondamentali**: Comprendere i Large Language Models, i token, gli embeddings e le capacità dell'AI
+### **Capitolo 1: Introduzione alla Generative AI**
+- **Concetti Fondamentali**: Comprendere i modelli linguistici di grandi dimensioni, i token, gli embeddings e le capacità dell'AI
 - **Ecosistema AI in Java**: Panoramica su Spring AI e OpenAI SDKs
-- **Protocollo Model Context**: Introduzione al MCP e al suo ruolo nella comunicazione tra agenti AI
+- **Protocollo di Contesto del Modello**: Introduzione a MCP e al suo ruolo nella comunicazione degli agenti AI
 - **Applicazioni Pratiche**: Scenari reali, inclusi chatbot e generazione di contenuti
 - **[→ Inizia il Capitolo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capitolo 2: Configurazione dell'Ambiente di Sviluppo**
 - **Configurazione Multi-Provider**: Configura GitHub Models, Azure OpenAI e integrazioni OpenAI Java SDK
-- **Spring Boot + Spring AI**: Best practices per lo sviluppo di applicazioni AI aziendali
+- **Spring Boot + Spring AI**: Best practice per lo sviluppo di applicazioni AI aziendali
 - **GitHub Models**: Accesso gratuito ai modelli AI per prototipazione e apprendimento (senza carta di credito)
 - **Strumenti di Sviluppo**: Configurazione di container Docker, VS Code e GitHub Codespaces
 - **[→ Inizia il Capitolo 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capitolo 3: Tecniche Fondamentali di Generative AI**
-- **Prompt Engineering**: Tecniche per ottenere risposte ottimali dai modelli AI
-- **Embeddings e Operazioni sui Vettori**: Implementa ricerca semantica e matching di similarità
+- **Prompt Engineering**: Tecniche per risposte ottimali dai modelli AI
+- **Embeddings e Operazioni sui Vettori**: Implementa ricerca semantica e corrispondenza di similarità
 - **Generazione Augmentata da Recupero (RAG)**: Combina AI con le tue fonti di dati
-- **Function Calling**: Estendi le capacità dell'AI con strumenti e plugin personalizzati
+- **Chiamata di Funzioni**: Estendi le capacità dell'AI con strumenti e plugin personalizzati
 - **[→ Inizia il Capitolo 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capitolo 4: Applicazioni Pratiche e Progetti**
 - **Generatore di Storie per Animali Domestici** (`petstory/`): Generazione creativa di contenuti con GitHub Models
 - **Demo Locale Foundry** (`foundrylocal/`): Integrazione locale di modelli AI con OpenAI Java SDK
-- **Servizio Calcolatore MCP** (`mcp/calculator/`): Implementazione base del Model Context Protocol con Spring AI
+- **Servizio Calcolatore MCP** (`mcp/calculator/`): Implementazione base del Protocollo di Contesto del Modello con Spring AI
 - **[→ Inizia il Capitolo 4](./04-PracticalSamples/README.md)**
 
-### **Capitolo 5: Sviluppo Responsabile dell'AI**
-- **Sicurezza dei Modelli GitHub**: Testa i filtri di contenuto integrati e i meccanismi di sicurezza
-- **Demo AI Responsabile**: Esempio pratico che mostra come funzionano i filtri di sicurezza dell'AI
-- **Best Practices**: Linee guida essenziali per uno sviluppo e un deployment etico dell'AI
+### **Capitolo 5: Sviluppo Responsabile di AI**
+- **Sicurezza dei Modelli GitHub**: Testa i meccanismi di filtraggio dei contenuti e sicurezza integrati
+- **Demo AI Responsabile**: Esempio pratico che mostra come funzionano i filtri di sicurezza AI
+- **Best Practice**: Linee guida essenziali per uno sviluppo e un deployment etico dell'AI
 - **[→ Inizia il Capitolo 5](./05-ResponsibleGenAI/README.md)**
 
 ## Risorse Aggiuntive 
@@ -81,5 +81,5 @@ CO_OP_TRANSLATOR_METADATA:
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
-**Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+**Disclaimer (Avvertenza)**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di tenere presente che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
