@@ -167,7 +167,7 @@ Response: Hello World!
 
 ### Understanding the Example Code
 
-First, let's understand what we're about to run. The example uses the OpenAI Java SDK to connect to GitHub Models:
+First, let's understand what we just ran. The example under `src/github-models` uses the OpenAI Java SDK to connect to GitHub Models:
 
 **What this code does:**
 - **Connects** to GitHub Models using your personal access token
