@@ -60,7 +60,7 @@ public class StoryService {
                     .model(modelName)
                     .addSystemMessage(systemPrompt)
                     .addUserMessage(userPrompt)
-                    .maxCompletionTokens(500)
+                    .maxCompletionTokens(800)
                     .temperature(0.8)
                     .build();
 
