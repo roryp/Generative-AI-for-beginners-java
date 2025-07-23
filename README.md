@@ -26,7 +26,7 @@
 - **Java AI Ecosystem**: Overview of Spring AI and OpenAI SDKs
 - **Model Context Protocol**: Introduction to MCP and its role in AI agent communication
 - **Practical Applications**: Real-world scenarios including chatbots and content generation
-- **[→ Start Chapter 1](./01-IntroToGenAI/README.md**
+- **[→ Start Chapter 1](./01-IntroToGenAI/README.md)**
 
 ### **Chapter 2: Development Environment Setup**
 - **Multi-Provider Configuration**: Set up GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
