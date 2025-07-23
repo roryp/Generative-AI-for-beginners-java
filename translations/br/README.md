@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T17:32:35+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:13:08+00:00",
   "source_file": "README.md",
   "language_code": "br"
 }
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Estrutura do Curso e Caminho de Aprendizado
 
-**Compromisso de Tempo**: A configuração do ambiente leva 2 minutos, com tutoriais práticos exigindo de 1 a 3 horas cada, dependendo da profundidade da exploração.
+**Compromisso de Tempo**: A configuração do ambiente leva 2 minutos, com tutoriais práticos exigindo de 1 a 3 horas cada, dependendo da profundidade de exploração.
 
 ### **Capítulo 1: Introdução à IA Generativa**
 - **Conceitos Básicos**: Compreendendo Modelos de Linguagem de Grande Escala, tokens, embeddings e capacidades de IA
@@ -38,14 +38,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Comece o Capítulo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capítulo 2: Configuração do Ambiente de Desenvolvimento**
-- **Configuração Multi-Fornecedor**: Configure integrações com GitHub Models, Azure OpenAI e OpenAI Java SDK
+- **Configuração Multi-Fornecedor**: Configure GitHub Models, Azure OpenAI e integrações do OpenAI Java SDK
 - **Spring Boot + Spring AI**: Melhores práticas para desenvolvimento de aplicações empresariais de IA
 - **GitHub Models**: Acesso gratuito a modelos de IA para prototipagem e aprendizado (sem necessidade de cartão de crédito)
 - **Ferramentas de Desenvolvimento**: Configuração de containers Docker, VS Code e GitHub Codespaces
 - **[→ Comece o Capítulo 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capítulo 3: Técnicas Centrais de IA Generativa**
-- **Engenharia de Prompt**: Técnicas para respostas ideais de modelos de IA
+- **Engenharia de Prompts**: Técnicas para respostas ideais de modelos de IA
 - **Embeddings e Operações com Vetores**: Implementação de busca semântica e correspondência de similaridade
 - **Geração Aumentada por Recuperação (RAG)**: Combine IA com suas próprias fontes de dados
 - **Chamada de Funções**: Expanda as capacidades da IA com ferramentas e plugins personalizados
@@ -53,12 +53,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Capítulo 4: Aplicações Práticas e Projetos**
 - **Gerador de Histórias de Animais de Estimação** (`petstory/`): Geração criativa de conteúdo com GitHub Models
-- **Demo Local Foundry** (`foundrylocal/`): Integração local de modelos de IA com OpenAI Java SDK
+- **Demo Local Foundry** (`foundrylocal/`): Integração de modelo de IA local com OpenAI Java SDK
 - **Serviço de Calculadora MCP** (`mcp/calculator/`): Implementação básica do Protocolo de Contexto de Modelo com Spring AI
 - **[→ Comece o Capítulo 4](./04-PracticalSamples/README.md)**
 
-### **Capítulo 5: Desenvolvimento Responsável de IA**
-- **Segurança dos Modelos do GitHub**: Teste de filtros de conteúdo e mecanismos de segurança integrados
+### **Capítulo 5: Desenvolvimento de IA Responsável**
+- **Segurança dos Modelos do GitHub**: Teste de mecanismos de filtragem de conteúdo e segurança integrados
 - **Demo de IA Responsável**: Exemplo prático mostrando como os filtros de segurança de IA funcionam na prática
 - **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implantação ética de IA
 - **[→ Comece o Capítulo 5](./05-ResponsibleGenAI/README.md)**

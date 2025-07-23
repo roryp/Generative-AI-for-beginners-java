@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T17:57:55+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:13:51+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "br"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## O Que Você Vai Aprender
 
 - Configurar um ambiente de desenvolvimento Java para aplicações de IA
-- Escolher e configurar seu ambiente de desenvolvimento preferido (priorizando a nuvem com Codespaces, contêiner local ou configuração local completa)
+- Escolher e configurar seu ambiente de desenvolvimento preferido (priorizando a nuvem com Codespaces, contêiner local ou configuração totalmente local)
 - Testar sua configuração conectando-se aos Modelos do GitHub
 
 ## Índice
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Introdução](../../../02-SetupDevEnvironment)
 - [Passo 1: Configure Seu Ambiente de Desenvolvimento](../../../02-SetupDevEnvironment)
   - [Opção A: GitHub Codespaces (Recomendado)](../../../02-SetupDevEnvironment)
-  - [Opção B: Contêiner Local](../../../02-SetupDevEnvironment)
+  - [Opção B: Contêiner Local de Desenvolvimento](../../../02-SetupDevEnvironment)
   - [Opção C: Usar Sua Instalação Local Existente](../../../02-SetupDevEnvironment)
 - [Passo 2: Crie um Token de Acesso Pessoal do GitHub](../../../02-SetupDevEnvironment)
 - [Passo 3: Teste Sua Configuração](../../../02-SetupDevEnvironment)
@@ -52,7 +52,7 @@ Recomendamos usar [**Modelos do GitHub**](https://github.com/marketplace?type=mo
 > - ~8.000 palavras de entrada, ~4.000 palavras de saída por solicitação
 > - 5 solicitações simultâneas
 > 
-> Para uso em produção, faça upgrade para Modelos do Azure AI Foundry com sua conta do Azure. Seu código não precisa mudar. Veja a [documentação do Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Para uso em produção, atualize para Modelos do Azure AI Foundry com sua conta do Azure. Seu código não precisa mudar. Veja a [documentação do Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## Passo 1: Configure Seu Ambiente de Desenvolvimento
 
@@ -60,7 +60,7 @@ Recomendamos usar [**Modelos do GitHub**](https://github.com/marketplace?type=mo
 
 Criamos um contêiner de desenvolvimento pré-configurado para minimizar o tempo de configuração e garantir que você tenha todas as ferramentas necessárias para este curso de IA Generativa em Java. Escolha sua abordagem de desenvolvimento preferida:
 
-### Opções de Configuração do Ambiente:
+### Opções de Configuração de Ambiente:
 
 #### Opção A: GitHub Codespaces (Recomendado)
 
@@ -71,14 +71,14 @@ Criamos um contêiner de desenvolvimento pré-configurado para minimizar o tempo
 2. Clique em **Code** → aba **Codespaces** → **...** → **New with options...**
 3. Use os padrões – isso selecionará a **Configuração do Contêiner de Desenvolvimento**: **Ambiente de Desenvolvimento Java para IA Generativa** criado para este curso
 4. Clique em **Create codespace**
-5. Aguarde ~2 minutos para o ambiente estar pronto
-6. Prossiga para [Passo 2: Criar Token do GitHub](../../../02-SetupDevEnvironment)
+5. Aguarde ~2 minutos para o ambiente ficar pronto
+6. Prossiga para [Passo 2: Crie o Token do GitHub](../../../02-SetupDevEnvironment)
 
 <img src="./images/codespaces.png" alt="Captura de tela: submenu Codespaces" width="50%">
 
 <img src="./images/image.png" alt="Captura de tela: Novo com opções" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Captura de tela: Opções de criação de Codespace" width="50%">
+<img src="./images/codespaces-create.png" alt="Captura de tela: opções de criação de Codespace" width="50%">
 
 > **Benefícios do Codespaces**:
 > - Sem necessidade de instalação local
@@ -87,18 +87,18 @@ Criamos um contêiner de desenvolvimento pré-configurado para minimizar o tempo
 > - 60 horas gratuitas por mês para contas pessoais
 > - Ambiente consistente para todos os alunos
 
-#### Opção B: Contêiner Local
+#### Opção B: Contêiner Local de Desenvolvimento
 
 **Para desenvolvedores que preferem desenvolvimento local com Docker**
 
 1. Faça um fork e clone este repositório para sua máquina local
    > **Nota**: Se você quiser editar a configuração básica, veja a [Configuração do Contêiner de Desenvolvimento](../../../.devcontainer/devcontainer.json)
-2. Instale [Docker Desktop](https://www.docker.com/products/docker-desktop/) e [VS Code](https://code.visualstudio.com/)
+2. Instale o [Docker Desktop](https://www.docker.com/products/docker-desktop/) e o [VS Code](https://code.visualstudio.com/)
 3. Instale a extensão [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) no VS Code
 4. Abra a pasta do repositório no VS Code
 5. Quando solicitado, clique em **Reopen in Container** (ou use `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Aguarde o contêiner ser construído e iniciado
-7. Prossiga para [Passo 2: Criar Token do GitHub](../../../02-SetupDevEnvironment)
+7. Prossiga para [Passo 2: Crie o Token do GitHub](../../../02-SetupDevEnvironment)
 
 <img src="./images/devcontainer.png" alt="Captura de tela: configuração do contêiner de desenvolvimento" width="50%">
 
@@ -116,7 +116,7 @@ Pré-requisitos:
 Etapas:
 1. Clone este repositório para sua máquina local
 2. Abra o projeto no seu IDE
-3. Prossiga para [Passo 2: Criar Token do GitHub](../../../02-SetupDevEnvironment)
+3. Prossiga para [Passo 2: Crie o Token do GitHub](../../../02-SetupDevEnvironment)
 
 > **Dica Pro**: Se você tem uma máquina com especificações baixas, mas quer usar o VS Code localmente, utilize o GitHub Codespaces! Você pode conectar seu VS Code local a um Codespace hospedado na nuvem para ter o melhor dos dois mundos.
 
@@ -138,12 +138,12 @@ Etapas:
 
 > **Dica de Segurança**: Use o escopo mínimo necessário e o menor tempo de expiração prático para seus tokens de acesso.
 
-## Passo 3: Teste Sua Configuração com o Exemplo de Modelos do GitHub
+## Passo 3: Teste Sua Configuração com o Exemplo dos Modelos do GitHub
 
-Depois que seu ambiente de desenvolvimento estiver pronto, vamos testar a integração com os Modelos do GitHub usando nosso aplicativo de exemplo em [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Depois que seu ambiente de desenvolvimento estiver pronto, vamos testar a integração dos Modelos do GitHub com nosso aplicativo de exemplo em [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
 
 1. Abra o terminal no seu ambiente de desenvolvimento.
-2. Navegue até o exemplo de Modelos do GitHub:
+2. Navegue até o exemplo dos Modelos do GitHub:
    ```bash
    cd 02-SetupDevEnvironment/src/github-models
    ```
@@ -164,7 +164,7 @@ Depois que seu ambiente de desenvolvimento estiver pronto, vamos testar a integr
    mvn compile exec:java -Dexec.mainClass="com.example.githubmodels.App"
    ```
 
-Você deve ver uma saída semelhante a:
+Você deverá ver uma saída semelhante a:
 ```text
 Using model: gpt-4.1-nano
 Sending request to GitHub Models...
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Entendendo o Código de Exemplo
 
-Primeiro, vamos entender o que estamos prestes a executar. O exemplo utiliza o SDK Java do OpenAI para conectar-se aos Modelos do GitHub:
+Primeiro, vamos entender o que acabamos de executar. O exemplo em `src/github-models` usa o SDK Java do OpenAI para conectar-se aos Modelos do GitHub:
 
 **O que este código faz:**
 - **Conecta-se** aos Modelos do GitHub usando seu token de acesso pessoal
@@ -230,7 +230,7 @@ Está enfrentando problemas? Aqui estão problemas comuns e soluções:
 - **Token não funciona?** 
   - Certifique-se de copiar o token inteiro sem espaços extras
   - Verifique se o token está configurado corretamente como uma variável de ambiente
-  - Confirme que seu token possui as permissões corretas (Models: Read and write)
+  - Confirme que seu token tem as permissões corretas (Models: Read and write)
 
 - **Maven não encontrado?** 
   - Se estiver usando contêineres de desenvolvimento/Codespaces, o Maven deve estar pré-instalado

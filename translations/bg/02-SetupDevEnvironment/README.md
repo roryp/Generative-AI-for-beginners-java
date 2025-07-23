@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T20:58:51+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:37:44+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "bg"
 }
@@ -39,7 +39,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Не е необходима локална настройка!** Можете да започнете да кодирате веднага, използвайки GitHub Codespaces, който предоставя пълна среда за разработка директно в браузъра ви.
 
-<img src="./images/models.webp" alt="Снимка на екрана: GitHub Models" width="50%">
+<img src="./images/models.webp" alt="Снимка: GitHub Models" width="50%">
 
 Препоръчваме използването на [**GitHub Models**](https://github.com/marketplace?type=models) за този курс, защото:
 - **Безплатен** за започване
@@ -66,19 +66,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Започнете да кодирате за 2 минути - без нужда от локална настройка!**
 
-1. Форкнете това хранилище към вашия GitHub акаунт
-   > **Забележка**: Ако искате да редактирате основната конфигурация, моля, вижте [Конфигурация на dev контейнера](../../../.devcontainer/devcontainer.json)
+1. Направете fork на това хранилище към вашия GitHub акаунт
+   > **Забележка**: Ако искате да редактирате основната конфигурация, вижте [Конфигурация на dev контейнера](../../../.devcontainer/devcontainer.json)
 2. Кликнете **Code** → **Codespaces** таб → **...** → **New with options...**
 3. Използвайте настройките по подразбиране – това ще избере **Конфигурацията на dev контейнера**: **Generative AI Java Development Environment**, специално създаден за този курс
 4. Кликнете **Create codespace**
 5. Изчакайте ~2 минути, докато средата бъде готова
 6. Продължете към [Стъпка 2: Създайте GitHub Token](../../../02-SetupDevEnvironment)
 
-<img src="./images/codespaces.png" alt="Снимка на екрана: Codespaces подменю" width="50%">
+<img src="./images/codespaces.png" alt="Снимка: Codespaces подменю" width="50%">
 
-<img src="./images/image.png" alt="Снимка на екрана: New with options" width="50%">
+<img src="./images/image.png" alt="Снимка: New with options" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Снимка на екрана: Create codespace options" width="50%">
+<img src="./images/codespaces-create.png" alt="Снимка: Create codespace options" width="50%">
 
 
 > **Предимства на Codespaces**:
@@ -92,18 +92,18 @@ CO_OP_TRANSLATOR_METADATA:
 
 **За разработчици, които предпочитат локална разработка с Docker**
 
-1. Форкнете и клонирайте това хранилище на вашата локална машина
-   > **Забележка**: Ако искате да редактирате основната конфигурация, моля, вижте [Конфигурация на dev контейнера](../../../.devcontainer/devcontainer.json)
+1. Направете fork и клонирайте това хранилище на вашата локална машина
+   > **Забележка**: Ако искате да редактирате основната конфигурация, вижте [Конфигурация на dev контейнера](../../../.devcontainer/devcontainer.json)
 2. Инсталирайте [Docker Desktop](https://www.docker.com/products/docker-desktop/) и [VS Code](https://code.visualstudio.com/)
-3. Инсталирайте [Dev Containers разширението](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) в VS Code
+3. Инсталирайте [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) в VS Code
 4. Отворете папката на хранилището в VS Code
 5. Когато бъдете подканени, кликнете **Reopen in Container** (или използвайте `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Изчакайте контейнерът да се изгради и стартира
 7. Продължете към [Стъпка 2: Създайте GitHub Token](../../../02-SetupDevEnvironment)
 
-<img src="./images/devcontainer.png" alt="Снимка на екрана: Настройка на dev контейнер" width="50%">
+<img src="./images/devcontainer.png" alt="Снимка: Настройка на dev контейнер" width="50%">
 
-<img src="./images/image-3.png" alt="Снимка на екрана: Завършено изграждане на dev контейнер" width="50%">
+<img src="./images/image-3.png" alt="Снимка: Завършено изграждане на dev контейнер" width="50%">
 
 #### Опция C: Използвайте вашата съществуваща локална инсталация
 
@@ -119,9 +119,9 @@ CO_OP_TRANSLATOR_METADATA:
 2. Отворете проекта във вашия IDE
 3. Продължете към [Стъпка 2: Създайте GitHub Token](../../../02-SetupDevEnvironment)
 
-> **Съвет**: Ако имате машина с ниски спецификации, но искате VS Code локално, използвайте GitHub Codespaces! Можете да свържете вашия локален VS Code към облачно хостван Codespace за най-доброто от двата свята.
+> **Полезен съвет**: Ако имате машина с ниски спецификации, но искате VS Code локално, използвайте GitHub Codespaces! Можете да свържете вашия локален VS Code към облачно хостван Codespace за най-доброто от двата свята.
 
-<img src="./images/image-2.png" alt="Снимка на екрана: създаден локален dev контейнер" width="50%">
+<img src="./images/image-2.png" alt="Снимка: създаден локален dev контейнер" width="50%">
 
 
 ## Стъпка 2: Създайте GitHub Personal Access Token
@@ -138,11 +138,11 @@ CO_OP_TRANSLATOR_METADATA:
 10. Кликнете **Generate token**.
 11. **Копирайте и запазете вашия токен сега** – няма да го видите отново!
 
-> **Съвет за сигурност**: Използвайте минималния необходим обхват и най-краткия практически срок на валидност за вашите токени за достъп.
+> **Съвет за сигурност**: Използвайте минимално необходимия обхват и най-краткия практически срок на валидност за вашите токени за достъп.
 
 ## Стъпка 3: Тествайте вашата настройка с примера за модели на GitHub
 
-След като вашата среда за разработка е готова, нека тестваме интеграцията с GitHub Models с нашето примерно приложение в [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+След като вашата среда за разработка е готова, нека тестваме интеграцията с GitHub Models чрез нашето примерно приложение в [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
 
 1. Отворете терминала във вашата среда за разработка.
 2. Навигирайте до примера за модели на GitHub:
@@ -175,10 +175,10 @@ Response: Hello World!
 
 ### Разбиране на примерния код
 
-Първо, нека разберем какво ще стартираме. Примерът използва OpenAI Java SDK за свързване към GitHub Models:
+Първо, нека разберем какво току-що стартирахме. Примерът под `src/github-models` използва OpenAI Java SDK за свързване към GitHub Models:
 
 **Какво прави този код:**
-- **Свързва се** към GitHub Models, използвайки вашия токен за достъп
+- **Свързва се** към GitHub Models, използвайки вашия персонален токен за достъп
 - **Изпраща** просто съобщение "Say Hello World!" към AI модела
 - **Получава** и показва отговора на AI
 - **Проверява** дали вашата настройка работи правилно
@@ -217,7 +217,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 **Поздравления!** Успешно:
 
 - **Създадохте GitHub Personal Access Token** с правилни разрешения за достъп до AI модели
-- **Настроихте вашата Java среда за разработка** с Codespaces, dev контейнери или локална инсталация
+- **Настроихте вашата Java среда за разработка** чрез Codespaces, dev контейнери или локална инсталация
 - **Свързахте се с GitHub Models**, използвайки OpenAI Java SDK за безплатен достъп до AI разработка
 - **Тествахте интеграцията** с работещо примерно приложение, което комуникира с AI модели
 
@@ -255,4 +255,4 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 > **Нуждаете се от помощ?**: Все още имате проблеми? Отворете проблем в хранилището и ще ви помогнем.
 
 **Отказ от отговорност**:  
-Този документ е преведен с помощта на AI услуга за превод [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматизираните преводи може да съдържат грешки или неточности. Оригиналният документ на неговия роден език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Не носим отговорност за недоразумения или погрешни интерпретации, произтичащи от използването на този превод.
+Този документ е преведен с помощта на AI услуга за превод [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматизираните преводи може да съдържат грешки или неточности. Оригиналният документ на неговия роден език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Ние не носим отговорност за недоразумения или погрешни интерпретации, произтичащи от използването на този превод.

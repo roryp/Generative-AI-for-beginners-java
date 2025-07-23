@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T16:16:42+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:04:10+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "ja"
 }
 -->
-# Java向け生成AIの開発環境のセットアップ
+# Java向け生成AIの開発環境セットアップ
 
 > **クイックスタート**: クラウドで2分でコードを書く - [GitHub Codespacesのセットアップ](../../../02-SetupDevEnvironment)に進んでください - ローカルインストールは不要で、GitHubモデルを使用します！
 
@@ -41,15 +41,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 <img src="./images/models.webp" alt="スクリーンショット: GitHubモデル" width="50%">
 
-このコースでは[**GitHubモデル**](https://github.com/marketplace?type=models)を使用することを推奨します。理由は以下の通りです：
+このコースでは[**GitHubモデル**](https://github.com/marketplace?type=models)を使用することを推奨します。その理由は以下の通りです：
 - **無料**で始められる
 - **簡単**にGitHubアカウントだけでセットアップ可能
 - **クレジットカード不要**
-- **複数のモデル**を使って実験可能
+- **複数のモデル**で実験可能
 
 > **注意**: このトレーニングで使用するGitHubモデルには以下の無料制限があります：
 > - 1分あたり15リクエスト（1日150リクエスト）
-> - リクエストごとに約8,000語入力、約4,000語出力
+> - リクエストごとに約8,000語の入力、約4,000語の出力
 > - 同時リクエストは5件まで
 > 
 > 本番環境で使用する場合は、AzureアカウントでAzure AI Foundryモデルにアップグレードしてください。コードを変更する必要はありません。[Azure AI Foundryドキュメント](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models)をご覧ください。
@@ -58,7 +58,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 <a name="quick-start-cloud"></a>
 
-このJava向け生成AIコースのために、必要なツールをすべて備えた事前構成済みの開発コンテナを作成しました。以下の方法から好みの開発アプローチを選択してください：
+このJava向け生成AIコースのために、必要なツールをすべて備えた事前構成済みの開発コンテナを作成しました。以下の方法からお好みの開発アプローチを選択してください：
 
 ### 環境セットアップオプション：
 
@@ -91,13 +91,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Dockerを使用したローカル開発を好む開発者向け**
 
-1. このリポジトリをフォークしてローカルマシンにクローンします
+1. このリポジトリをローカルマシンにフォークしてクローンします
    > **注意**: 基本設定を編集したい場合は、[Devコンテナ設定](../../../.devcontainer/devcontainer.json)をご覧ください。
 2. [Docker Desktop](https://www.docker.com/products/docker-desktop/)と[VS Code](https://code.visualstudio.com/)をインストールします
 3. VS Codeに[Dev Containers拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)をインストールします
 4. リポジトリフォルダをVS Codeで開きます
 5. プロンプトが表示されたら、**Reopen in Container**をクリックします（または`Ctrl+Shift+P` → "Dev Containers: Reopen in Container"を使用）
-6. コンテナがビルドされて起動するのを待ちます
+6. コンテナがビルドされて開始されるのを待ちます
 7. [ステップ2: GitHubトークンを作成する](../../../02-SetupDevEnvironment)に進みます
 
 <img src="./images/devcontainer.png" alt="スクリーンショット: Devコンテナセットアップ" width="50%">
@@ -108,17 +108,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 **既存のJava環境を持つ開発者向け**
 
-前提条件:
+必要条件:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
 - [Maven 3.9+](https://maven.apache.org/download.cgi)
-- [VS Code](https://code.visualstudio.com)または好みのIDE
+- [VS Code](https://code.visualstudio.com)またはお好みのIDE
 
 手順:
 1. このリポジトリをローカルマシンにクローンします
-2. プロジェクトをIDEで開きます
+2. IDEでプロジェクトを開きます
 3. [ステップ2: GitHubトークンを作成する](../../../02-SetupDevEnvironment)に進みます
 
-> **プロのヒント**: スペックの低いマシンを使用しているがVS Codeをローカルで使用したい場合は、GitHub Codespacesを使用してください！ローカルVS CodeをクラウドホストされたCodespaceに接続することで、両方の利点を享受できます。
+> **プロのヒント**: スペックの低いマシンを使用している場合でも、ローカルでVS Codeを使用したい場合はGitHub Codespacesを使用してください！ローカルのVS CodeをクラウドホストされたCodespaceに接続することで、両方の利点を享受できます。
 
 <img src="./images/image-2.png" alt="スクリーンショット: ローカルDevコンテナインスタンス作成済み" width="50%">
 
@@ -134,7 +134,7 @@ CO_OP_TRANSLATOR_METADATA:
 8. 「Repository access」でGitHubモデルを使用するリポジトリを選択します（必要に応じて「All repositories」を選択）。
 9. 「Repository permissions」で**Models**を見つけて**Read and write**に設定します。
 10. **Generate token**をクリックします。
-11. **トークンを今すぐコピーして保存してください** - 後で再表示することはできません！
+11. **今すぐトークンをコピーして保存してください** - 後で再表示されません！
 
 > **セキュリティのヒント**: 必要最小限のスコープと最短の実用的な有効期限を使用してアクセストークンを管理してください。
 
@@ -173,11 +173,11 @@ Response: Hello World!
 
 ### 例のコードを理解する
 
-まず、実行する内容を理解しましょう。この例では、OpenAI Java SDKを使用してGitHubモデルに接続します：
+まず、実行した内容を理解しましょう。`src/github-models`にある例は、OpenAI Java SDKを使用してGitHubモデルに接続します：
 
 **このコードが行うこと:**
 - 個人アクセストークンを使用してGitHubモデルに**接続**
-- AIモデルに「Hello World!」メッセージを**送信**
+- AIモデルに「Say Hello World!」という簡単なメッセージを**送信**
 - AIの応答を**受信**して表示
 - セットアップが正しく動作していることを**検証**
 
@@ -214,7 +214,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 **おめでとうございます！** 以下を成功させました：
 
-- **GitHub個人アクセストークンを作成**し、AIモデルアクセスに必要な権限を付与
+- **GitHub個人アクセストークンを作成**し、AIモデルアクセスに必要な適切な権限を付与
 - **Java開発環境をセットアップ**（Codespaces、Devコンテナ、またはローカルインストールを使用）
 - **GitHubモデルに接続**し、OpenAI Java SDKを使用して無料のAI開発アクセスを取得
 - **統合をテスト**し、AIモデルと通信する動作する例のアプリケーションを実行
@@ -250,7 +250,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
   - 正しいディレクトリにいることを確認してください：`02-SetupDevEnvironment/src/github-models`
   - クリーンと再ビルドを試してください：`mvn clean compile`
 
-> **助けが必要ですか？**: まだ問題が解決しない場合は、リポジトリで問題を報告してください。サポートいたします。
+> **助けが必要ですか？**: まだ問題が解決しない場合は、リポジトリでIssueを開いてください。サポートします。
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な表現が含まれる可能性があることをご承知おきください。元の言語で記載された原文が公式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の使用に起因する誤解や誤認について、当方は一切の責任を負いません。

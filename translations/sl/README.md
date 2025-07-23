@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T20:33:12+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:40:39+00:00",
   "source_file": "README.md",
   "language_code": "sl"
 }
@@ -12,13 +12,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativna umetna inteligenca za začetnike - Java izdaja](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.sl.png)
 
-> **NOTE: Hiter začetek**: Celoten tečaj lahko opravite na spletu - lokalna nastavitev ni potrebna!
+> **NOTE: Hiter začetek**: Celoten tečaj je mogoče opraviti na spletu - lokalna nastavitev ni potrebna!
 1. Forkajte to repozitorij v svoj GitHub račun
 2. Kliknite **Code** → zavihek **Codespaces** → **...** → **New with options...**
-3. Uporabite privzete nastavitve – to bo izbralo razvojno okolje, ustvarjeno za ta tečaj
+3. Uporabite privzete nastavitve – to bo izbralo razvojni vsebnik, ustvarjen za ta tečaj
 4. Kliknite **Create codespace**
-5. Počakajte približno 2 minuti, da bo okolje pripravljeno
-6. Takoj začnite z [Ustvarjanjem vašega GitHub Models žetona](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Počakajte približno 2 minuti, da je okolje pripravljeno
+6. Takoj nadaljujte na [Ustvarjanje vašega GitHub Models žetona](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Podpora za več jezikov
 
@@ -34,36 +34,36 @@ CO_OP_TRANSLATOR_METADATA:
 - **Osnovni koncepti**: Razumevanje velikih jezikovnih modelov, tokenov, vektorskih predstavitev in zmogljivosti umetne inteligence
 - **Java AI ekosistem**: Pregled Spring AI in OpenAI SDK-jev
 - **Protokol konteksta modela**: Uvod v MCP in njegovo vlogo pri komunikaciji AI agentov
-- **Praktične aplikacije**: Resnični primeri, vključno s klepetalniki in generiranjem vsebin
-- **[→ Začnite s poglavjem 1](./01-IntroToGenAI/README.md)**
+- **Praktične aplikacije**: Resnični scenariji, vključno s klepetalniki in generiranjem vsebin
+- **[→ Začni poglavje 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavje 2: Nastavitev razvojnega okolja**
-- **Konfiguracija več ponudnikov**: Nastavitev GitHub Models, Azure OpenAI in OpenAI Java SDK integracij
+- **Konfiguracija več ponudnikov**: Nastavitev integracij za GitHub Models, Azure OpenAI in OpenAI Java SDK
 - **Spring Boot + Spring AI**: Najboljše prakse za razvoj AI aplikacij v podjetjih
 - **GitHub Models**: Brezplačen dostop do AI modelov za prototipiranje in učenje (brez kreditne kartice)
-- **Razvojna orodja**: Konfiguracija Docker kontejnerjev, VS Code in GitHub Codespaces
-- **[→ Začnite s poglavjem 2](./02-SetupDevEnvironment/README.md)**
+- **Razvojna orodja**: Konfiguracija Docker vsebnikov, VS Code in GitHub Codespaces
+- **[→ Začni poglavje 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Poglavje 3: Osnovne tehnike generativne umetne inteligence**
-- **Inženiring pozivov**: Tehnike za optimalne odzive AI modelov
+- **Inženiring pozivov**: Tehnike za optimalne odgovore AI modelov
 - **Vektorske predstavitve in operacije**: Implementacija semantičnega iskanja in ujemanja podobnosti
-- **Generacija, podprta z iskanjem (RAG)**: Kombinacija AI z vašimi lastnimi viri podatkov
+- **Generacija z obogatenim pridobivanjem (RAG)**: Združevanje AI z lastnimi viri podatkov
 - **Klicanje funkcij**: Razširitev zmogljivosti AI z orodji in vtičniki po meri
-- **[→ Začnite s poglavjem 3](./03-CoreGenerativeAITechniques/README.md)**
+- **[→ Začni poglavje 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavje 4: Praktične aplikacije in projekti**
-- **Generator zgodb o hišnih ljubljenčkih** (`petstory/`): Generiranje kreativnih vsebin z GitHub Models
-- **Foundry lokalna predstavitev** (`foundrylocal/`): Integracija lokalnih AI modelov z OpenAI Java SDK
+- **Generator zgodb o hišnih ljubljenčkih** (`petstory/`): Ustvarjanje kreativnih vsebin z GitHub Models
+- **Foundry lokalna predstavitev** (`foundrylocal/`): Lokalna integracija AI modelov z OpenAI Java SDK
 - **MCP kalkulatorska storitev** (`mcp/calculator/`): Osnovna implementacija protokola konteksta modela s Spring AI
-- **[→ Začnite s poglavjem 4](./04-PracticalSamples/README.md)**
+- **[→ Začni poglavje 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavje 5: Odgovoren razvoj umetne inteligence**
 - **Varnost GitHub Models**: Testiranje vgrajenega filtriranja vsebin in varnostnih mehanizmov
 - **Predstavitev odgovorne AI**: Praktičen primer, ki prikazuje delovanje varnostnih filtrov AI
 - **Najboljše prakse**: Ključne smernice za etični razvoj in uvajanje AI
-- **[→ Začnite s poglavjem 5](./05-ResponsibleGenAI/README.md)**
+- **[→ Začni poglavje 5](./05-ResponsibleGenAI/README.md)**
 
-## Dodatni viri 
+## Dodatni viri
 
 - [AI agenti za začetnike](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generativna umetna inteligenca za začetnike z uporabo .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -77,9 +77,9 @@ CO_OP_TRANSLATOR_METADATA:
 - [IoT za začetnike](https://aka.ms/iot-beginners)
 - [XR razvoj za začetnike](https://github.com/microsoft/xr-development-for-beginners)
 - [Obvladovanje GitHub Copilot za AI programiranje v paru](https://aka.ms/GitHubCopilotAI)
-- [Obvladovanje GitHub Copilot za C#/.NET razvijalce](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Izberite svojo Copilot pustolovščino](https://github.com/microsoft/CopilotAdventures)
+- [Obvladovanje GitHub Copilot za razvijalce C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Izberite svojo lastno Copilot pustolovščino](https://github.com/microsoft/CopilotAdventures)
 - [RAG klepetalna aplikacija z Azure AI storitvami](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

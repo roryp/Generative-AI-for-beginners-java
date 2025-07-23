@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T20:57:05+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:34:19+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "cs"
 }
@@ -37,28 +37,28 @@ CO_OP_TRANSLATOR_METADATA:
 
 Tato kapitola vás provede nastavením vývojového prostředí. Jako hlavní příklad použijeme **modely GitHubu**, protože jsou zdarma, snadno nastavitelné pouze s GitHub účtem, nevyžadují kreditní kartu a poskytují přístup k několika modelům pro experimentování.
 
-**Není potřeba žádné lokální nastavení!** Můžete začít programovat okamžitě pomocí GitHub Codespaces, které poskytuje plné vývojové prostředí přímo ve vašem prohlížeči.
+**Není potřeba žádné lokální nastavení!** Můžete začít programovat okamžitě pomocí GitHub Codespaces, které poskytují plné vývojové prostředí přímo ve vašem prohlížeči.
 
 <img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
 
 Doporučujeme používat [**modely GitHubu**](https://github.com/marketplace?type=models) pro tento kurz, protože:
 - Jsou **zdarma** pro začátek
-- **Snadno** nastavitelné pouze s GitHub účtem
-- **Nevyžadují kreditní kartu**
+- **Snadno** se nastaví pouze s GitHub účtem
+- **Nejsou potřeba** žádné kreditní karty
 - Nabízejí **více modelů** pro experimentování
 
-> **Poznámka**: Modely GitHubu používané v tomto školení mají následující bezplatné limity:
+> **Poznámka**: Modely GitHubu používané v tomto kurzu mají tyto bezplatné limity:
 > - 15 požadavků za minutu (150 za den)
-> - ~8 000 slov na vstupu, ~4 000 slov na výstupu na požadavek
+> - ~8 000 slov vstup, ~4 000 slov výstup na požadavek
 > - 5 souběžných požadavků
 > 
-> Pro produkční použití přejděte na Azure AI Foundry Models s vaším Azure účtem. Váš kód není třeba měnit. Viz [dokumentace Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Pro produkční použití přejděte na Azure AI Foundry Models s vaším Azure účtem. Kód není třeba měnit. Viz [dokumentace Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## Krok 1: Nastavení vývojového prostředí
 
 <a name="quick-start-cloud"></a>
 
-Vytvořili jsme předkonfigurovaný vývojový kontejner, abychom minimalizovali dobu nastavení a zajistili, že budete mít všechny potřebné nástroje pro tento kurz Generativní AI v Javě. Vyberte si preferovaný přístup k vývoji:
+Vytvořili jsme předkonfigurovaný vývojový kontejner, abychom minimalizovali čas na nastavení a zajistili, že budete mít všechny potřebné nástroje pro tento kurz Generativní AI v Javě. Vyberte si preferovaný přístup k nastavení:
 
 ### Možnosti nastavení prostředí:
 
@@ -83,7 +83,7 @@ Vytvořili jsme předkonfigurovaný vývojový kontejner, abychom minimalizovali
 > **Výhody Codespaces**:
 > - Není potřeba žádná lokální instalace
 > - Funguje na jakémkoli zařízení s prohlížečem
-> - Předkonfigurované se všemi nástroji a závislostmi
+> - Předkonfigurováno se všemi nástroji a závislostmi
 > - Zdarma 60 hodin měsíčně pro osobní účty
 > - Konzistentní prostředí pro všechny účastníky
 
@@ -96,7 +96,7 @@ Vytvořili jsme předkonfigurovaný vývojový kontejner, abychom minimalizovali
 2. Nainstalujte [Docker Desktop](https://www.docker.com/products/docker-desktop/) a [VS Code](https://code.visualstudio.com/)
 3. Nainstalujte rozšíření [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) ve VS Code
 4. Otevřete složku úložiště ve VS Code
-5. Když budete vyzváni, klikněte na **Reopen in Container** (nebo použijte `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
+5. Po zobrazení výzvy klikněte na **Reopen in Container** (nebo použijte `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Počkejte, než se kontejner sestaví a spustí
 7. Pokračujte na [Krok 2: Vytvoření GitHub tokenu](../../../02-SetupDevEnvironment)
 
@@ -134,7 +134,7 @@ Kroky:
 8. Pod "Repository access" vyberte repozitáře, které chcete používat s modely GitHubu (nebo "All repositories", pokud je to potřeba).
 9. Pod "Repository permissions" najděte **Models** a nastavte na **Read and write**.
 10. Klikněte na **Generate token**.
-11. **Zkopírujte a uložte svůj token nyní** – později jej už neuvidíte!
+11. **Zkopírujte a uložte svůj token nyní** – později jej již neuvidíte!
 
 > **Bezpečnostní tip**: Používejte minimální požadovaný rozsah a nejkratší praktickou dobu platnosti pro své přístupové tokeny.
 
@@ -143,7 +143,7 @@ Kroky:
 Jakmile je vaše vývojové prostředí připraveno, otestujeme integraci modelů GitHubu s naší ukázkovou aplikací v [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
 
 1. Otevřete terminál ve svém vývojovém prostředí.
-2. Přejděte do složky s příkladem modelů GitHubu:
+2. Přejděte do příkladu modelů GitHubu:
    ```bash
    cd 02-SetupDevEnvironment/src/github-models
    ```
@@ -164,7 +164,7 @@ Jakmile je vaše vývojové prostředí připraveno, otestujeme integraci model�
    mvn compile exec:java -Dexec.mainClass="com.example.githubmodels.App"
    ```
 
-Měli byste vidět výstup podobný tomuto:
+Měli byste vidět výstup podobný:
 ```text
 Using model: gpt-4.1-nano
 Sending request to GitHub Models...
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Pochopení ukázkového kódu
 
-Nejprve si vysvětlíme, co budeme spouštět. Příklad používá OpenAI Java SDK pro připojení k modelům GitHubu:
+Nejprve si vysvětleme, co jsme právě spustili. Příklad v `src/github-models` používá OpenAI Java SDK pro připojení k modelům GitHubu:
 
 **Co tento kód dělá:**
 - **Připojuje se** k modelům GitHubu pomocí vašeho osobního přístupového tokenu
@@ -214,8 +214,8 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 **Gratulujeme!** Úspěšně jste:
 
-- **Vytvořili osobní přístupový token GitHub** s odpovídajícími oprávněními pro přístup k modelům AI
-- **Nastavili své vývojové prostředí pro Javu** pomocí Codespaces, dev kontejnerů nebo lokální instalace
+- **Vytvořili osobní přístupový token GitHub** s potřebnými oprávněními pro přístup k modelům AI
+- **Nastavili vývojové prostředí pro Javu** pomocí Codespaces, dev kontejnerů nebo lokální instalace
 - **Připojili se k modelům GitHubu** pomocí OpenAI Java SDK pro bezplatný přístup k vývoji AI
 - **Otestovali integraci** s funkční ukázkovou aplikací, která komunikuje s modely AI
 
@@ -230,7 +230,7 @@ Máte problémy? Zde jsou běžné problémy a jejich řešení:
 - **Token nefunguje?** 
   - Ujistěte se, že jste zkopírovali celý token bez mezer navíc
   - Ověřte, že token je správně nastaven jako proměnná prostředí
-  - Zkontrolujte, zda váš token má správná oprávnění (Models: Read and write)
+  - Zkontrolujte, zda má váš token správná oprávnění (Models: Read and write)
 
 - **Maven nebyl nalezen?** 
   - Pokud používáte dev kontejnery/Codespaces, Maven by měl být předinstalován
@@ -252,5 +252,5 @@ Máte problémy? Zde jsou běžné problémy a jejich řešení:
 
 > **Potřebujete pomoc?**: Stále máte problémy? Otevřete issue v repozitáři a my vám pomůžeme.
 
-**Upozornění**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za jakékoli nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+**Prohlášení:**  
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

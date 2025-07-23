@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T20:29:56+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:32:35+00:00",
   "source_file": "README.md",
   "language_code": "hu"
 }
@@ -12,12 +12,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generatív AI kezdőknek - Java kiadás](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.hu.png)
 
-> **NOTE: Gyors kezdés**: Az egész kurzus online elvégezhető - Nincs szükség helyi telepítésre!
+> **NOTE: Gyors kezdés**: Az egész kurzus online elvégezhető - Nincs szükség helyi beállításra!
 1. Forkold ezt a repót a GitHub fiókodba
 2. Kattints a **Code** → **Codespaces** fülre → **...** → **New with options...**
 3. Használd az alapértelmezett beállításokat – ez kiválasztja a kurzushoz létrehozott fejlesztői konténert
 4. Kattints a **Create codespace** gombra
-5. Várj körülbelül 2 percet, amíg a környezet készen áll
+5. Várj ~2 percet, amíg a környezet készen áll
 6. Ugorj egyenesen a [GitHub Models Token létrehozásához](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Többnyelvű támogatás
@@ -37,16 +37,16 @@ CO_OP_TRANSLATOR_METADATA:
 - **Gyakorlati alkalmazások**: Valós példák, mint chatbotok és tartalomgenerálás
 - **[→ Kezdje az 1. fejezetet](./01-IntroToGenAI/README.md)**
 
-### **2. fejezet: Fejlesztési környezet beállítása**
+### **2. fejezet: Fejlesztői környezet beállítása**
 - **Több szolgáltató konfigurációja**: GitHub Models, Azure OpenAI és OpenAI Java SDK integrációk beállítása
 - **Spring Boot + Spring AI**: Legjobb gyakorlatok vállalati AI alkalmazásfejlesztéshez
-- **GitHub Models**: Ingyenes AI modellek hozzáférése prototípus készítéshez és tanuláshoz (nincs szükség hitelkártyára)
-- **Fejlesztési eszközök**: Docker konténerek, VS Code és GitHub Codespaces konfiguráció
+- **GitHub Models**: Ingyenes AI modell hozzáférés prototípus készítéshez és tanuláshoz (nincs szükség hitelkártyára)
+- **Fejlesztői eszközök**: Docker konténerek, VS Code és GitHub Codespaces konfiguráció
 - **[→ Kezdje a 2. fejezetet](./02-SetupDevEnvironment/README.md)**
 
-### **3. fejezet: Generatív AI alaptechnikák**
+### **3. fejezet: Alapvető generatív AI technikák**
 - **Prompt Engineering**: Technikák az AI modellek optimális válaszaihoz
-- **Beágyazások és vektorműveletek**: Szemantikus keresés és hasonlóság alapú összehasonlítás megvalósítása
+- **Beágyazások és vektorműveletek**: Szemantikai keresés és hasonlóság összehasonlítás megvalósítása
 - **Retrieval-Augmented Generation (RAG)**: AI kombinálása saját adatforrásokkal
 - **Funkcióhívás**: AI képességek bővítése egyedi eszközökkel és bővítményekkel
 - **[→ Kezdje a 3. fejezetet](./03-CoreGenerativeAITechniques/README.md)**
@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## További források 
 
-- [AI ügynökök kezdőknek](https://github.com/microsoft/ai-agents-for-beginners)
+- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generatív AI kezdőknek .NET használatával](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generatív AI kezdőknek JavaScript használatával](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generatív AI kezdőknek](https://github.com/microsoft/generative-ai-for-beginners)
@@ -78,8 +78,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [XR fejlesztés kezdőknek](https://github.com/microsoft/xr-development-for-beginners)
 - [GitHub Copilot elsajátítása AI páros programozáshoz](https://aka.ms/GitHubCopilotAI)
 - [GitHub Copilot elsajátítása C#/.NET fejlesztők számára](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Válassz saját Copilot kalandot](https://github.com/microsoft/CopilotAdventures)
+- [Válassza ki saját Copilot kalandját](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App az Azure AI szolgáltatásokkal](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+**Felelősségkizárás**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
