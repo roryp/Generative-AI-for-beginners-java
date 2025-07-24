@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2ee0f50497c11d1941347ac61fb017a9",
-  "translation_date": "2025-07-21T15:54:57+00:00",
+  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
+  "translation_date": "2025-07-23T12:15:25+00:00",
   "source_file": "README.md",
   "language_code": "pl"
 }
@@ -12,13 +12,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generatywna AI dla początkujących - Edycja Java](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.pl.png)
 
-> **NOTE: Szybki start**: Cały kurs można ukończyć online - bez potrzeby lokalnej konfiguracji!
-1. Sforkuj to repozytorium na swoje konto GitHub
-2. Kliknij **Code** → **Zakładka Codespaces** → **...** → **New with options...**
+> **NOTE: Szybki Start**: Cały kurs można ukończyć online - bez potrzeby lokalnej konfiguracji!
+1. Zforkuj to repozytorium na swoje konto GitHub
+2. Kliknij **Code** → zakładka **Codespaces** → **...** → **New with options...**
 3. Użyj domyślnych ustawień – zostanie wybrany kontener deweloperski stworzony dla tego kursu
 4. Kliknij **Create codespace**
 5. Poczekaj ~2 minuty, aż środowisko będzie gotowe
-6. Przejdź bezpośrednio do [Tworzenia tokenu GitHub Models](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Przejdź od razu do [Tworzenia tokena GitHub Models](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Obsługa wielu języków
 
@@ -47,13 +47,13 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Rozdział 3: Podstawowe techniki generatywnej AI**
 - **Inżynieria promptów**: Techniki optymalizacji odpowiedzi modeli AI
 - **Osadzenia i operacje na wektorach**: Implementacja wyszukiwania semantycznego i dopasowywania podobieństw
-- **Generacja wspomagana wyszukiwaniem (RAG)**: Łączenie AI z własnymi źródłami danych
+- **Generowanie wspomagane wyszukiwaniem (RAG)**: Łączenie AI z własnymi źródłami danych
 - **Wywoływanie funkcji**: Rozszerzanie możliwości AI za pomocą niestandardowych narzędzi i wtyczek
 - **[→ Rozpocznij Rozdział 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Rozdział 4: Praktyczne zastosowania i projekty**
 - **Generator opowieści o zwierzętach** (`petstory/`): Tworzenie kreatywnych treści z GitHub Models
-- **Demo Foundry Local** (`foundrylocal/`): Integracja lokalnych modeli AI z OpenAI Java SDK
+- **Demo lokalne Foundry** (`foundrylocal/`): Integracja lokalnych modeli AI z OpenAI Java SDK
 - **Usługa kalkulatora MCP** (`mcp/calculator/`): Podstawowa implementacja protokołu kontekstu modelu z Spring AI
 - **[→ Rozpocznij Rozdział 4](./04-PracticalSamples/README.md)**
 
@@ -66,8 +66,8 @@ CO_OP_TRANSLATOR_METADATA:
 ## Dodatkowe zasoby 
 
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generatywna AI dla początkujących z .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generatywna AI dla początkujących z JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generatywna AI dla początkujących z użyciem .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generatywna AI dla początkujących z użyciem JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generatywna AI dla początkujących](https://github.com/microsoft/generative-ai-for-beginners)
 - [ML dla początkujących](https://aka.ms/ml-beginners)
 - [Data Science dla początkujących](https://aka.ms/datascience-beginners)
@@ -82,4 +82,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [Aplikacja RAG Chat z usługami Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

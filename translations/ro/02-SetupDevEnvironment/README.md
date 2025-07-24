@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T20:58:18+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T12:36:37+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "ro"
 }
@@ -49,7 +49,7 @@ Recomandăm utilizarea [**Modelelor GitHub**](https://github.com/marketplace?typ
 
 > **Notă**: Modelele GitHub utilizate în acest curs au următoarele limite gratuite:
 > - 15 cereri pe minut (150 pe zi)
-> - ~8.000 cuvinte în, ~4.000 cuvinte în afara per cerere
+> - ~8.000 cuvinte în, ~4.000 cuvinte în afară per cerere
 > - 5 cereri simultane
 > 
 > Pentru utilizare în producție, treci la Modelele Azure AI Foundry cu contul tău Azure. Codul tău nu trebuie să se schimbe. Vezi [documentația Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
@@ -80,11 +80,10 @@ Am creat un container de dezvoltare preconfigurat pentru a minimiza timpul de co
 
 <img src="./images/codespaces-create.png" alt="Captură de ecran: Create codespace options" width="50%">
 
-
-> **Beneficiile Codespaces**:
-> - Nu este necesară instalarea locală
+> **Beneficii ale Codespaces**:
+> - Fără instalare locală necesară
 > - Funcționează pe orice dispozitiv cu un browser
-> - Pre-configurat cu toate instrumentele și dependențele
+> - Preconfigurat cu toate instrumentele și dependențele
 > - Gratuit 60 de ore pe lună pentru conturi personale
 > - Mediu consistent pentru toți cursanții
 
@@ -98,7 +97,7 @@ Am creat un container de dezvoltare preconfigurat pentru a minimiza timpul de co
 3. Instalează extensia [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) în VS Code
 4. Deschide folderul repository-ului în VS Code
 5. Când ți se cere, click pe **Reopen in Container** (sau folosește `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
-6. Așteaptă ca containerul să se construiască și să pornească
+6. Așteaptă ca containerul să fie construit și pornit
 7. Continuă cu [Pasul 2: Crearea Tokenului GitHub](../../../02-SetupDevEnvironment)
 
 <img src="./images/devcontainer.png" alt="Captură de ecran: Configurarea containerului de dezvoltare" width="50%">
@@ -119,10 +118,9 @@ Pași:
 2. Deschide proiectul în IDE-ul tău
 3. Continuă cu [Pasul 2: Crearea Tokenului GitHub](../../../02-SetupDevEnvironment)
 
-> **Pro Tip**: Dacă ai o mașină cu specificații reduse dar vrei VS Code local, folosește GitHub Codespaces! Poți conecta VS Code local la un Codespace găzduit în cloud pentru cele mai bune rezultate.
+> **Sfat Pro**: Dacă ai o mașină cu specificații reduse dar vrei VS Code local, folosește GitHub Codespaces! Poți conecta VS Code local la un Codespace găzduit în cloud pentru cele mai bune rezultate.
 
 <img src="./images/image-2.png" alt="Captură de ecran: Instanță locală de container de dezvoltare creată" width="50%">
-
 
 ## Pasul 2: Crearea unui Token Personal de Acces GitHub
 
@@ -138,7 +136,7 @@ Pași:
 10. Click pe **Generate token**.
 11. **Copiază și salvează tokenul acum** – nu îl vei mai vedea din nou!
 
-> **Sfat de Securitate**: Folosește cel mai mic scop necesar și cea mai scurtă durată practică de expirare pentru tokenurile de acces.
+> **Sfat de Securitate**: Folosește cel mai mic scop necesar și cel mai scurt timp practic de expirare pentru tokenurile de acces.
 
 ## Pasul 3: Testarea Configurării cu Exemplul Modelelor GitHub
 
@@ -175,10 +173,10 @@ Response: Hello World!
 
 ### Înțelegerea Codului Exemplu
 
-Mai întâi, să înțelegem ce urmează să rulăm. Exemplul folosește SDK-ul OpenAI Java pentru a se conecta la Modelele GitHub:
+Mai întâi, să înțelegem ce tocmai am rulat. Exemplul din `src/github-models` folosește SDK-ul OpenAI Java pentru a se conecta la Modelele GitHub:
 
 **Ce face acest cod:**
-- **Se conectează** la Modelele GitHub folosind tokenul personal de acces
+- **Se conectează** la Modelele GitHub folosind tokenul tău personal de acces
 - **Trimite** un mesaj simplu "Say Hello World!" către modelul AI
 - **Primește** și afișează răspunsul AI
 - **Validează** că configurarea ta funcționează corect
@@ -216,7 +214,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 **Felicitări!** Ai reușit să:
 
-- **Creezi un Token Personal de Acces GitHub** cu permisiuni adecvate pentru accesul la modele AI
+- **Creezi un Token Personal de Acces GitHub** cu permisiuni adecvate pentru accesul la modelele AI
 - **Configurezi mediul tău de dezvoltare Java** folosind Codespaces, containere de dezvoltare sau instalare locală
 - **Te conectezi la Modelele GitHub** folosind SDK-ul OpenAI Java pentru acces gratuit la dezvoltarea AI
 - **Testezi integrarea** cu o aplicație exemplu funcțională care comunică cu modelele AI
@@ -245,7 +243,7 @@ Ai probleme? Iată problemele comune și soluțiile:
   - Verifică dacă nu ești în spatele unui firewall care blochează endpoint-ul Modelelor GitHub
 
 - **Containerul de dezvoltare nu pornește?** 
-  - Asigură-te că Docker Desktop este pornit (pentru dezvoltarea locală)
+  - Asigură-te că Docker Desktop este pornit (pentru dezvoltare locală)
   - Încearcă să reconstruiești containerul: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Erori de compilare ale aplicației?**

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0b563ac59362fb83f0f49dcfc442dd97",
-  "translation_date": "2025-07-21T16:14:35+00:00",
+  "original_hash": "40abf4889418bff189039ac30ff44281",
+  "translation_date": "2025-07-23T11:59:53+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "zh"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## 学习内容
 
 - 设置用于 AI 应用的 Java 开发环境
-- 选择并配置您偏好的开发环境（优先推荐 Codespaces 云端环境、本地开发容器或完整的本地设置）
+- 选择并配置您首选的开发环境（优先推荐 Codespaces 云端开发、本地开发容器或完整的本地设置）
 - 通过连接到 GitHub 模型测试您的设置
 
 ## 目录
@@ -58,7 +58,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 <a name="quick-start-cloud"></a>
 
-我们创建了一个预配置的开发容器，以最大限度减少设置时间，并确保您拥有完成本课程所需的所有工具。选择您偏好的开发方式：
+我们创建了一个预配置的开发容器，以最大限度地减少设置时间，并确保您拥有完成本课程所需的所有工具。选择您首选的开发方式：
 
 ### 环境设置选项：
 
@@ -89,12 +89,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 #### 选项 B：本地开发容器
 
-**适合偏好使用 Docker 进行本地开发的开发者**
+**适合喜欢使用 Docker 进行本地开发的开发者**
 
 1. 将此仓库 Fork 并克隆到您的本地机器
    > **注意**：如果您想编辑基本配置，请查看 [开发容器配置](../../../.devcontainer/devcontainer.json)
 2. 安装 [Docker Desktop](https://www.docker.com/products/docker-desktop/) 和 [VS Code](https://code.visualstudio.com/)
-3. 在 VS Code 中安装 [Dev Containers 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+3. 在 VS Code 中安装 [开发容器扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 4. 在 VS Code 中打开仓库文件夹
 5. 当提示时，点击 **Reopen in Container**（或使用 `Ctrl+Shift+P` → "Dev Containers: Reopen in Container"）
 6. 等待容器构建并启动
@@ -111,14 +111,14 @@ CO_OP_TRANSLATOR_METADATA:
 前提条件：
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
 - [Maven 3.9+](https://maven.apache.org/download.cgi)
-- [VS Code](https://code.visualstudio.com) 或您偏好的 IDE
+- [VS Code](https://code.visualstudio.com) 或您首选的 IDE
 
 步骤：
 1. 将此仓库克隆到您的本地机器
 2. 在您的 IDE 中打开项目
 3. 继续 [步骤 2：创建 GitHub 令牌](../../../02-SetupDevEnvironment)
 
-> **专业提示**：如果您的机器配置较低但希望本地使用 VS Code，可以使用 GitHub Codespaces！您可以将本地 VS Code 连接到云托管的 Codespace，享受两者的优势。
+> **专业提示**：如果您的机器配置较低但希望本地使用 VS Code，请使用 GitHub Codespaces！您可以将本地 VS Code 连接到云托管的 Codespace，享受两者的最佳体验。
 
 <img src="./images/image-2.png" alt="截图：创建的本地开发容器实例" width="50%">
 
@@ -126,7 +126,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. 进入 [GitHub 设置](https://github.com/settings/profile)，从您的个人资料菜单中选择 **Settings**。
 2. 在左侧边栏中点击 **Developer settings**（通常在底部）。
-3. 在 **Personal access tokens** 下，点击 **Fine-grained tokens**（或直接访问 [链接](https://github.com/settings/personal-access-tokens)）。
+3. 在 **Personal access tokens** 下，点击 **Fine-grained tokens**（或直接访问此 [链接](https://github.com/settings/personal-access-tokens)）。
 4. 点击 **Generate new token**。
 5. 在“令牌名称”下提供一个描述性名称（例如 `GenAI-Java-Course-Token`）。
 6. 设置过期日期（推荐：7 天以符合安全最佳实践）。
@@ -134,13 +134,13 @@ CO_OP_TRANSLATOR_METADATA:
 8. 在“仓库访问”下选择您希望与 GitHub 模型一起使用的仓库（或选择“所有仓库”）。
 9. 在“仓库权限”下找到 **Models** 并设置为 **Read and write**。
 10. 点击 **Generate token**。
-11. **现在复制并保存您的令牌** - 您将无法再次看到它！
+11. **立即复制并保存您的令牌** - 您之后将无法再次看到它！
 
-> **安全提示**：为您的访问令牌使用最低必要范围和最短的实用过期时间。
+> **安全提示**：为您的访问令牌使用最低所需范围和最短的实际过期时间。
 
 ## 步骤 3：使用 GitHub 模型示例测试您的设置
 
-一旦您的开发环境准备就绪，让我们使用 [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models) 中的示例应用测试 GitHub 模型集成。
+一旦您的开发环境准备就绪，让我们使用示例应用测试 GitHub 模型集成，示例位于 [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models)。
 
 1. 在您的开发环境中打开终端。
 2. 导航到 GitHub 模型示例：
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### 理解示例代码
 
-首先，让我们了解即将运行的内容。该示例使用 OpenAI Java SDK 连接到 GitHub 模型：
+首先，让我们理解刚刚运行的内容。`src/github-models` 下的示例使用 OpenAI Java SDK 连接到 GitHub 模型：
 
 **此代码的功能：**
 - **连接**到 GitHub 模型，使用您的个人访问令牌
@@ -217,7 +217,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 - **创建了 GitHub 个人访问令牌**，并为 AI 模型访问设置了正确的权限
 - **设置了 Java 开发环境**，使用 Codespaces、开发容器或本地安装
 - **连接到 GitHub 模型**，使用 OpenAI Java SDK 免费访问 AI 开发
-- **测试了集成**，运行了一个与 AI 模型通信的示例应用程序
+- **测试了集成**，通过一个工作示例应用与 AI 模型通信
 
 ## 下一步
 
@@ -228,7 +228,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 遇到问题？以下是常见问题及解决方案：
 
 - **令牌无效？** 
-  - 确保您复制了完整的令牌，没有额外的空格
+  - 确保您完整复制了令牌，没有额外的空格
   - 验证令牌是否正确设置为环境变量
   - 检查令牌是否具有正确的权限（Models: Read and write）
 
@@ -253,4 +253,4 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 > **需要帮助？**：仍有问题？在仓库中打开一个 issue，我们会帮助您解决问题。
 
 **免责声明**：  
-本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们对因使用此翻译而产生的任何误解或误读不承担责任。
+本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。应以原始语言的文档作为权威来源。对于关键信息，建议使用专业人工翻译。因使用本翻译而引起的任何误解或误读，我们概不负责。
