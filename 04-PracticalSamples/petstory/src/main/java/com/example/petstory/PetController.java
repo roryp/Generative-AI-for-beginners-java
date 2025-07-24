@@ -97,9 +97,8 @@ public class PetController {
             return "";
         }
         // Remove potentially dangerous characters and limit length
-        return input.replaceAll("[<>\"'&]", "")
-                   .trim()
-                   .substring(0, Math.min(input.length(), 500));
+        String sanitized = input.replaceAll("[<>\"'&]", "").trim();
+        return sanitized.substring(0, Math.min(sanitized.length(), 1000));
     }
     
     /**
