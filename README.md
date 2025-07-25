@@ -19,7 +19,7 @@
 
 ## Course Structure & Learning Path
 
-**Time Commitment**: Environment setup takes 2 minutes, with the samples requiring 1-3 hours depending on exploration depth. The entire workshop can be completed online without local setup.
+**Time Commitment**: The entire workshop can be completed online without local setup. If you want to run the samples, the environment setup takes 2 minutes, with exploring the samples requiring 1-3 hours depending on exploration depth.
 
 ### **Chapter 1: Introduction to Generative AI**
 - **Core Concepts**: Understanding Large Language Models, tokens, embeddings, and AI capabilities
