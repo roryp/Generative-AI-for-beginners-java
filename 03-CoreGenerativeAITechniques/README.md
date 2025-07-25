@@ -1,6 +1,6 @@
 # Core Generative AI Techniques
 
->**Note**: This chapter includes a detailed [**Tutorial**](./TUTORIAL.md) that guides you through running the finished samples.
+>**Note**: This chapter includes a detailed [**Tutorial**](./TUTORIAL.md) that guides you through the samples.
 
 ## What You'll Learn
 In this chapter, we look at 4 core generative AI techniques through practical examples:

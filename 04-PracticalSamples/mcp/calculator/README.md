@@ -1,6 +1,6 @@
 # Basic Calculator MCP Service
 
->**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through running the finished samples.
+>**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through the samples.
 
 Welcome to your first hands-on experience with the **Model Context Protocol (MCP)**! In the previous chapters, you've learned about generative AI fundamentals and set up your development environment. Now it's time to build something practical.
 

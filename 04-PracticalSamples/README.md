@@ -1,6 +1,6 @@
 # Practical Applications & Projects
 
-> Note: Each example also includes a **TUTORIAL.md** that guides you through running the application.
+> Note: Each example also includes a **TUTORIAL.md** that guides you through running the samples.
 
 ## What You'll Learn
 In this section we'll demo three practical applications that showcase generative AI development patterns with Java:

@@ -1,6 +1,6 @@
 # Pet Story App
 
->**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through running the finished samples.
+>**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through the samples.
 
 A Spring Boot web application that generates AI-powered descriptions and stories for uploaded pet images using GitHub Models.
 
