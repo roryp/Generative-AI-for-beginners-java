@@ -1,128 +1,341 @@
-# Core Generative AI Techniques
-
->**Note**: This chapter includes a detailed [**Tutorial**](./TUTORIAL.md) that guides you through the samples.
-
-## What You'll Learn
-In this chapter, we look at 4 core generative AI techniques through practical examples:
-- LLM completions and chat flows
-- Function calling
-- Retrieval-Augmented Generation (RAG)
-- Responsible AI safety measures
+# Core Generative AI Techniques Tutorial
 
 ## Table of Contents
 
-- [What You'll Learn](#what-youll-learn)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-- [Examples Overview](#examples-overview)
-  - [1. LLM Completions and Chat Flows](#1-llm-completions-and-chat-flows)
-  - [2. Functions & Plugins with LLMs](#2-functions--plugins-with-llms)
-  - [3. Retrieval-Augmented Generation (RAG)](#3-retrieval-augmented-generation-rag)
-  - [4. Responsible AI Safety Demonstration](#4-responsible-ai-safety-demonstration)
-- [Summary](#summary)
+  - [Step 1: Set Your Environment Variable](#step-1-set-your-environment-variable)
+  - [Step 2: Navigate to the Examples Directory](#step-2-navigate-to-the-examples-directory)
+- [Tutorial 1: LLM Completions and Chat](#tutorial-1-llm-completions-and-chat)
+- [Tutorial 2: Function Calling](#tutorial-2-function-calling)
+- [Tutorial 3: RAG (Retrieval-Augmented Generation)](#tutorial-3-rag-retrieval-augmented-generation)
+- [Tutorial 4: Responsible AI](#tutorial-4-responsible-ai)
+- [Common Patterns Across Examples](#common-patterns-across-examples)
 - [Next Steps](#next-steps)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+
+
+## Overview
+
+This tutorial provides hands-on examples of core generative AI techniques using Java and GitHub Models. You will learn how to interact with Large Language Models (LLMs), implement function calling, use retrieval-augmented generation (RAG), and apply responsible AI practices.
 
 ## Prerequisites
 
-- Completed setup from [Chapter 2](../02-SetupDevEnvironment/)
+Before starting, make sure you have:
+- Java 21 or higher installed
+- Maven for dependency management
+- A GitHub account with a personal access token (PAT)
 
 ## Getting Started
 
-1. **Navigate to examples**: 
+### Step 1: Set Your Environment Variable
+
+First, you need to set your GitHub token as an environment variable. This token allows you to access GitHub Models for free.
+
+**Windows (Command Prompt):**
+```cmd
+set GITHUB_TOKEN=your_github_token_here
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:GITHUB_TOKEN="your_github_token_here"
+```
+
+**Linux/macOS:**
+```bash
+export GITHUB_TOKEN=your_github_token_here
+```
+
+### Step 2: Navigate to the Examples Directory
+
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
 ```
-2. **Set environment**: 
+
+## Tutorial 1: LLM Completions and Chat
+
+**File:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+
+### What This Example Teaches
+
+This example demonstrates the core mechanics of Large Language Model (LLM) interaction through the OpenAI API, including client initialization with GitHub Models, message structure patterns for system and user prompts, conversation state management through message history accumulation, and parameter tuning for controlling response length and creativity levels.
+
+### Key Code Concepts
+
+#### 1. Client Setup
+```java
+// Create the AI client
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(new StaticTokenCredential(pat))
+    .buildClient();
+```
+
+This creates a connection to GitHub Models using your token.
+
+#### 2. Simple Completion
+```java
+List<ChatRequestMessage> messages = List.of(
+    // System message sets AI behavior
+    new ChatRequestSystemMessage("You are a helpful Java expert."),
+    // User message contains the actual question
+    new ChatRequestUserMessage("Explain Java streams briefly.")
+);
+
+ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
+    .setModel("gpt-4o-mini")
+    .setMaxTokens(200)      // Limit response length
+    .setTemperature(0.7);   // Control creativity (0.0-1.0)
+```
+
+#### 3. Conversation Memory
+```java
+// Add AI's response to maintain conversation history
+messages.add(new ChatRequestAssistantMessage(aiResponse));
+messages.add(new ChatRequestUserMessage("Follow-up question"));
+```
+
+The AI remembers previous messages only if you include them in subsequent requests.
+
+### Run the Example
 ```bash
-export GITHUB_TOKEN=your_token_here
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
 ```
-3. **Compile and run examples**:
+
+### What Happens When You Run It
+
+1. **Simple Completion**: AI answers a Java question with system prompt guidance
+2. **Multi-turn Chat**: AI maintains context across multiple questions
+3. **Interactive Chat**: You can have a real conversation with the AI
+
+## Tutorial 2: Function Calling
+
+**File:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+
+### What This Example Teaches
+
+Function calling enables AI models to request execution of external tools and APIs through a structured protocol where the model analyzes natural language requests, determines required function calls with appropriate parameters using JSON Schema definitions, and processes returned results to generate contextual responses, while the actual function execution remains under developer control for security and reliability.
+
+### Key Code Concepts
+
+#### 1. Function Definition
+```java
+ChatCompletionsFunctionToolDefinitionFunction weatherFunction = 
+    new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
+weatherFunction.setDescription("Get current weather information for a city");
+
+// Define parameters using JSON Schema
+weatherFunction.setParameters(BinaryData.fromString("""
+    {
+        "type": "object",
+        "properties": {
+            "city": {
+                "type": "string",
+                "description": "The city name"
+            }
+        },
+        "required": ["city"]
+    }
+    """));
+```
+
+This tells the AI what functions are available and how to use them.
+
+#### 2. Function Execution Flow
+```java
+// 1. AI requests a function call
+if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
+    ChatCompletionsFunctionToolCall functionCall = ...;
+    
+    // 2. You execute the function
+    String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
+    
+    // 3. You give the result back to AI
+    messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
+    
+    // 4. AI provides final response with function result
+    ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
+}
+```
+
+#### 3. Function Implementation
+```java
+private static String simulateWeatherFunction(String arguments) {
+    // Parse arguments and call real weather API
+    // For demo, we return mock data
+    return """
+        {
+            "city": "Seattle",
+            "temperature": "22",
+            "condition": "partly cloudy"
+        }
+        """;
+}
+```
+
+### Run the Example
 ```bash
-   # Run completions example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
-   
-   # Run functions example  
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
-   
-   # Run RAG example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
-   
-   # Run responsible AI demo
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
-   ```
-
-## Examples Overview
-
-The examples are organized in the `examples/` folder with the following structure:
-
-```
-examples/
-├── src/main/java/com/example/genai/techniques/
-│   ├── completions/
-│   │   └── LLMCompletionsApp.java        # Basic completions 
-│   ├── functions/
-│   │   └── FunctionsApp.java             # Function calling examples
-│   ├── rag/
-│   │   └── SimpleReaderDemo.java         # Retrieval-Augmented Generation
-│   └── responsibleai/
-│       └── ResponsibleGithubModels.java  # Responsible AI safety demonstration
-├── document.txt                          # Sample document for RAG example
-└── pom.xml                               # Maven configuration
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
 ```
 
-### 1. LLM Completions and Chat Flows
-**File**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+### What Happens When You Run It
 
-Learn to build conversational AI with streaming responses and chat history management.
+1. **Weather Function**: AI requests weather data for Seattle, you provide it, AI formats a response
+2. **Calculator Function**: AI requests a calculation (15% of 240), you compute it, AI explains the result
 
-This example demonstrates:
-- Simple text completion with system prompts
-- Multi-turn conversations with history management
-- Interactive chat sessions
-- Parameter configuration (temperature, max tokens)
+## Tutorial 3: RAG (Retrieval-Augmented Generation)
 
-### 2. Functions & Plugins with LLMs
-**File**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+**File:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Extend AI capabilities by giving models access to custom functions and external APIs.
+### What This Example Teaches
 
-This example demonstrates:
-- Weather function integration
-- Calculator function implementation  
-- Multiple function calls in one conversation
-- Function definition with JSON schemas
+Retrieval-Augmented Generation (RAG) combines information retrieval with language generation by injecting external document context into AI prompts, enabling models to provide accurate answers based on specific knowledge sources rather than potentially outdated or inaccurate training data, while maintaining clear boundaries between user queries and authoritative information sources through strategic prompt engineering.
 
-### 3. Retrieval-Augmented Generation (RAG)
-**File**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+### Key Code Concepts
 
-Learn how to combine AI with your own documents and data sources for accurate, context-aware responses.
+#### 1. Document Loading
+```java
+// Load your knowledge source
+String doc = Files.readString(Paths.get("document.txt"));
+```
 
-This example demonstrates:
-- Document-based question answering with Azure OpenAI SDK
-- RAG pattern implementation with GitHub Models
+#### 2. Context Injection
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage(
+        "Use only the CONTEXT to answer. If not in context, say you cannot find it."
+    ),
+    new ChatRequestUserMessage(
+        "CONTEXT:\n\"\"\"\n" + doc + "\n\"\"\"\n\nQUESTION:\n" + question
+    )
+);
+```
 
-**Usage**: Ask questions about the content in `document.txt` and get AI responses based only on that context.
+The triple quotes help AI distinguish between context and question.
 
-### 4. Responsible AI Safety Demonstration
-**File**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+#### 3. Safe Response Handling
+```java
+if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
+    String answer = response.getChoices().get(0).getMessage().getContent();
+    System.out.println("Assistant: " + answer);
+} else {
+    System.err.println("Error: No response received from the API.");
+}
+```
 
-Get a preview of how AI safety measures work by testing GitHub Models' content filtering capabilities.
+Always validate API responses to prevent crashes.
 
-This example demonstrates:
-- Content filtering for potentially harmful prompts
-- Safety response handling in applications
-- Different categories of blocked content (violence, hate speech, misinformation)
-- Proper error handling for safety violations
+### Run the Example
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
+```
 
-> **Learn More**: This is just an introduction to responsible AI concepts. For more information on ethics, bias mitigation, privacy considerations, and responsible AI frameworks, see [Chapter 5: Responsible Generative AI](../05-ResponsibleGenAI/README.md).
+### What Happens When You Run It
 
-## Summary
+1. The program loads `document.txt` (contains info about GitHub Models)
+2. You ask a question about the document
+3. AI answers based only on the document content, not its general knowledge
 
-In this chapter, we explored LLM completions and chat flows, implemented function calling to enhance AI capabilities, created a Retrieval-Augmented Generation (RAG) system, and demonstrated responsible AI safety measures. 
+Try asking: "What is GitHub Models?" vs "What is the weather like?"
 
-> **NOTE**: Dive deeper with the provided [**Tutorial**](./TUTORIAL.md)
+## Tutorial 4: Responsible AI
 
+**File:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+
+### What This Example Teaches
+
+The Responsible AI example showcases the importance of implementing safety measures in AI applications. It demonstrates safety filters that detect harmful content categories including hate speech, harassment, self-harm, sexual content, and violence, demonstrating how production AI applications should gracefully handle content policy violations through proper exception handling, user feedback mechanisms, and fallback response strategies.
+
+### Key Code Concepts
+
+#### 1. Safety Testing Framework
+```java
+private void testPromptSafety(String prompt, String category) {
+    try {
+        // Attempt to get AI response
+        ChatCompletions response = client.getChatCompletions(modelId, options);
+        System.out.println("Response generated (content appears safe)");
+        
+    } catch (HttpResponseException e) {
+        if (e.getResponse().getStatusCode() == 400) {
+            System.out.println("[BLOCKED BY SAFETY FILTER]");
+            System.out.println("This is GOOD - safety system working!");
+        }
+    }
+}
+```
+
+#### 2. Safety Categories Tested
+- Violence/Harm instructions
+- Hate speech
+- Privacy violations
+- Medical misinformation
+- Illegal activities
+
+### Run the Example
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
+```
+
+### What Happens When You Run It
+
+The program tests various harmful prompts and shows how the AI safety system:
+1. **Blocks dangerous requests** with HTTP 400 errors
+2. **Allows safe content** to be generated normally
+3. **Protects users** from harmful AI outputs
+
+## Common Patterns Across Examples
+
+### Authentication Pattern
+All examples use this pattern to authenticate with GitHub Models:
+
+```java
+String pat = System.getenv("GITHUB_TOKEN");
+TokenCredential credential = new StaticTokenCredential(pat);
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(credential)
+    .buildClient();
+```
+
+### Error Handling Pattern
+```java
+try {
+    // AI operation
+} catch (HttpResponseException e) {
+    // Handle API errors (rate limits, safety filters)
+} catch (Exception e) {
+    // Handle general errors (network, parsing)
+}
+```
+
+### Message Structure Pattern
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage("Set AI behavior"),
+    new ChatRequestUserMessage("User's actual request")
+);
+```
 
 ## Next Steps
 
-[Chapter 4: Practical Applications & Projects](../04-PracticalSamples/README.md)
+[Chapter 04: Practical samples](../04-PracticalSamples/README.md)
+
+## Troubleshooting
+
+### Common Issues
+
+**"GITHUB_TOKEN not set"**
+- Make sure you set the environment variable
+- Verify your token has `models:read` scope
+
+**"No response from API"**
+- Check your internet connection
+- Verify your token is valid
+- Check if you've hit rate limits
+
+**Maven compilation errors**
+- Ensure you have Java 21 or higher
+- Run `mvn clean compile` to refresh dependencies

@@ -1,7 +1,5 @@
 # Practical Applications & Projects
 
-> Note: Each example also includes a **TUTORIAL.md** that guides you through running the samples.
-
 ## What You'll Learn
 In this section we'll demo three practical applications that showcase generative AI development patterns with Java:
 - Create a multi-modal Pet Story Generator combining client-side and server-side AI
