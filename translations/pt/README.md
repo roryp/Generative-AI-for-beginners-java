@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
-  "translation_date": "2025-07-23T12:12:02+00:00",
+  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
+  "translation_date": "2025-07-25T07:43:42+00:00",
   "source_file": "README.md",
   "language_code": "pt"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. Clique em **Code** → aba **Codespaces** → **...** → **New with options...**
 3. Use as configurações padrão – isso selecionará o container de desenvolvimento criado para este curso
 4. Clique em **Create codespace**
-5. Aguarde ~2 minutos para o ambiente estar pronto
+5. Aguarde cerca de 2 minutos para o ambiente estar pronto
 6. Vá diretamente para [Criar o seu Token de Modelos do GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Suporte Multilíngue
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Estrutura do Curso e Caminho de Aprendizagem
 
-**Compromisso de Tempo**: A configuração do ambiente leva 2 minutos, com tutoriais práticos exigindo de 1 a 3 horas cada, dependendo da profundidade de exploração.
+**Compromisso de Tempo**: A configuração do ambiente leva 2 minutos, e os exemplos requerem de 1 a 3 horas, dependendo da profundidade de exploração. Todo o workshop pode ser concluído online sem necessidade de configuração local.
 
 ### **Capítulo 1: Introdução à IA Generativa**
 - **Conceitos Fundamentais**: Compreender Modelos de Linguagem de Grande Escala, tokens, embeddings e capacidades de IA
@@ -38,7 +38,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Começar Capítulo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capítulo 2: Configuração do Ambiente de Desenvolvimento**
-- **Configuração Multi-Provedor**: Configure integrações com GitHub Models, Azure OpenAI e OpenAI Java SDK
+- **Configuração Multi-Fornecedor**: Configurar GitHub Models, Azure OpenAI e integrações do OpenAI Java SDK
 - **Spring Boot + Spring AI**: Melhores práticas para desenvolvimento de aplicações empresariais de IA
 - **GitHub Models**: Acesso gratuito a modelos de IA para prototipagem e aprendizado (sem necessidade de cartão de crédito)
 - **Ferramentas de Desenvolvimento**: Configuração de containers Docker, VS Code e GitHub Codespaces
@@ -46,19 +46,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Capítulo 3: Técnicas Fundamentais de IA Generativa**
 - **Engenharia de Prompts**: Técnicas para respostas ideais de modelos de IA
-- **Embeddings e Operações com Vetores**: Implementação de busca semântica e correspondência de similaridade
-- **Geração Aumentada por Recuperação (RAG)**: Combine IA com suas próprias fontes de dados
-- **Chamadas de Função**: Expanda as capacidades da IA com ferramentas e plugins personalizados
+- **Embeddings e Operações com Vetores**: Implementar busca semântica e correspondência de similaridade
+- **Geração Aumentada por Recuperação (RAG)**: Combinar IA com suas próprias fontes de dados
+- **Chamadas de Função**: Expandir capacidades de IA com ferramentas e plugins personalizados
 - **[→ Começar Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capítulo 4: Aplicações Práticas e Projetos**
 - **Gerador de Histórias de Animais de Estimação** (`petstory/`): Geração criativa de conteúdo com GitHub Models
-- **Demo Local Foundry** (`foundrylocal/`): Integração local de modelos de IA com OpenAI Java SDK
+- **Demo Local Foundry** (`foundrylocal/`): Integração de modelos de IA locais com OpenAI Java SDK
 - **Serviço de Calculadora MCP** (`mcp/calculator/`): Implementação básica do Protocolo de Contexto de Modelo com Spring AI
 - **[→ Começar Capítulo 4](./04-PracticalSamples/README.md)**
 
-### **Capítulo 5: Desenvolvimento de IA Responsável**
-- **Segurança dos GitHub Models**: Teste de filtragem de conteúdo integrada e mecanismos de segurança
+### **Capítulo 5: Desenvolvimento Responsável de IA**
+- **Segurança dos GitHub Models**: Testar filtros de conteúdo e mecanismos de segurança integrados
 - **Demo de IA Responsável**: Exemplo prático mostrando como os filtros de segurança de IA funcionam na prática
 - **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implementação ética de IA
 - **[→ Começar Capítulo 5](./05-ResponsibleGenAI/README.md)**
@@ -82,4 +82,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [App de Chat RAG com Serviços de IA do Azure](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

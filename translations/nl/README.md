@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
-  "translation_date": "2025-07-23T12:24:21+00:00",
+  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
+  "translation_date": "2025-07-25T07:50:01+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -14,11 +14,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **NOTE: Snelle Start**: De hele cursus kan online worden gevolgd - Geen lokale installatie nodig!
 1. Fork deze repository naar je GitHub-account
-2. Klik op **Code** → **Codespaces** tab → **...** → **Nieuw met opties...**
+2. Klik op **Code** → **Codespaces** tabblad → **...** → **Nieuw met opties...**
 3. Gebruik de standaardinstellingen – dit selecteert de ontwikkelcontainer die voor deze cursus is gemaakt
 4. Klik op **Codespace maken**
-5. Wacht ~2 minuten tot de omgeving gereed is
-6. Ga direct naar [Je GitHub Models Token aanmaken](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Wacht ~2 minuten tot de omgeving klaar is
+6. Ga direct naar [Je GitHub Models Token maken](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Ondersteuning voor Meerdere Talen
 
@@ -28,27 +28,27 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cursusstructuur & Leerpad
 
-**Tijdsinvestering**: Het instellen van de omgeving duurt 2 minuten, met praktische tutorials die 1-3 uur per stuk vereisen, afhankelijk van de diepte van verkenning.
+**Tijdsinvestering**: Het instellen van de omgeving duurt 2 minuten, en de voorbeelden vereisen 1-3 uur afhankelijk van de diepte van verkenning. De hele workshop kan online worden voltooid zonder lokale installatie.
 
 ### **Hoofdstuk 1: Introductie tot Generatieve AI**
 - **Kernconcepten**: Begrip van Large Language Models, tokens, embeddings en AI-mogelijkheden
-- **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDK's
+- **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDKs
 - **Model Context Protocol**: Introductie tot MCP en de rol ervan in AI-agentcommunicatie
-- **Praktische Toepassingen**: Real-world scenario's zoals chatbots en contentgeneratie
+- **Praktische Toepassingen**: Toepassingen in de echte wereld, zoals chatbots en contentgeneratie
 - **[→ Start Hoofdstuk 1](./01-IntroToGenAI/README.md)**
 
 ### **Hoofdstuk 2: Ontwikkelomgeving Instellen**
 - **Multi-Provider Configuratie**: Instellen van GitHub Models, Azure OpenAI en OpenAI Java SDK-integraties
-- **Spring Boot + Spring AI**: Best practices voor de ontwikkeling van AI-applicaties voor bedrijven
+- **Spring Boot + Spring AI**: Best practices voor AI-applicatieontwikkeling in ondernemingen
 - **GitHub Models**: Gratis toegang tot AI-modellen voor prototyping en leren (geen creditcard nodig)
 - **Ontwikkeltools**: Docker-containers, VS Code en GitHub Codespaces configuratie
 - **[→ Start Hoofdstuk 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Hoofdstuk 3: Kerntechnieken van Generatieve AI**
 - **Prompt Engineering**: Technieken voor optimale AI-modelreacties
-- **Embeddings & Vectorbewerkingen**: Implementeren van semantisch zoeken en overeenkomsten
+- **Embeddings & Vectorbewerkingen**: Implementeren van semantisch zoeken en gelijkenisvergelijking
 - **Retrieval-Augmented Generation (RAG)**: Combineer AI met je eigen gegevensbronnen
-- **Functieaanroepen**: Breid AI-mogelijkheden uit met aangepaste tools en plug-ins
+- **Functieaanroepen**: Breid AI-mogelijkheden uit met aangepaste tools en plugins
 - **[→ Start Hoofdstuk 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Hoofdstuk 4: Praktische Toepassingen & Projecten**
@@ -58,8 +58,8 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Hoofdstuk 4](./04-PracticalSamples/README.md)**
 
 ### **Hoofdstuk 5: Verantwoordelijke AI-ontwikkeling**
-- **GitHub Models Veiligheid**: Test ingebouwde contentfilters en veiligheidsmechanismen
-- **Verantwoordelijke AI Demo**: Praktisch voorbeeld dat laat zien hoe AI-veiligheidsfilters werken
+- **GitHub Models Veiligheid**: Test ingebouwde contentfiltering en veiligheidsmechanismen
+- **Verantwoordelijke AI Demo**: Hands-on voorbeeld dat laat zien hoe AI-veiligheidsfilters in de praktijk werken
 - **Best Practices**: Essentiële richtlijnen voor ethische AI-ontwikkeling en implementatie
 - **[→ Start Hoofdstuk 5](./05-ResponsibleGenAI/README.md)**
 
