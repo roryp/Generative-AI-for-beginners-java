@@ -1,139 +1,352 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
-  "translation_date": "2025-07-25T10:07:23+00:00",
+  "original_hash": "59454ab4ec36d89840df6fcfe7633cbd",
+  "translation_date": "2025-07-25T11:58:00+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "bg"
 }
 -->
-# Основни техники за генеративен AI
-
->**Note**: Тази глава включва подробен [**Урок**](./TUTORIAL.md), който ви води през примерите.
-
-## Какво ще научите
-В тази глава разглеждаме 4 основни техники за генеративен AI чрез практически примери:
-- Завършване на LLM и чат потоци
-- Извикване на функции
-- Генерация с допълнително извличане на информация (RAG)
-- Мерки за безопасност при отговорен AI
+# Основни техники за генериращ ИИ - Урок
 
 ## Съдържание
 
-- [Какво ще научите](../../../03-CoreGenerativeAITechniques)
-- [Предпоставки](../../../03-CoreGenerativeAITechniques)
+- [Предварителни изисквания](../../../03-CoreGenerativeAITechniques)
 - [Първи стъпки](../../../03-CoreGenerativeAITechniques)
-- [Преглед на примерите](../../../03-CoreGenerativeAITechniques)
-  - [1. Завършване на LLM и чат потоци](../../../03-CoreGenerativeAITechniques)
-  - [2. Функции и плъгини с LLM](../../../03-CoreGenerativeAITechniques)
-  - [3. Генерация с допълнително извличане на информация (RAG)](../../../03-CoreGenerativeAITechniques)
-  - [4. Демонстрация на безопасност при отговорен AI](../../../03-CoreGenerativeAITechniques)
-- [Резюме](../../../03-CoreGenerativeAITechniques)
+  - [Стъпка 1: Настройте променливата на средата](../../../03-CoreGenerativeAITechniques)
+  - [Стъпка 2: Навигирайте до директорията с примери](../../../03-CoreGenerativeAITechniques)
+- [Урок 1: Завършвания и чат с LLM](../../../03-CoreGenerativeAITechniques)
+- [Урок 2: Извикване на функции](../../../03-CoreGenerativeAITechniques)
+- [Урок 3: RAG (Генериране с подсилено извличане)](../../../03-CoreGenerativeAITechniques)
+- [Урок 4: Отговорен ИИ](../../../03-CoreGenerativeAITechniques)
+- [Общи модели в примерите](../../../03-CoreGenerativeAITechniques)
 - [Следващи стъпки](../../../03-CoreGenerativeAITechniques)
+- [Отстраняване на проблеми](../../../03-CoreGenerativeAITechniques)
+  - [Чести проблеми](../../../03-CoreGenerativeAITechniques)
 
-## Предпоставки
+## Преглед
 
-- Завършена настройка от [Глава 2](../../../02-SetupDevEnvironment)
+Този урок предоставя практически примери за основни техники на генериращия ИИ, използвайки Java и GitHub Models. Ще научите как да взаимодействате с големи езикови модели (LLMs), да внедрявате извикване на функции, да използвате генериране с подсилено извличане (RAG) и да прилагате практики за отговорен ИИ.
+
+## Предварителни изисквания
+
+Преди да започнете, уверете се, че имате:
+- Инсталиран Java 21 или по-нов
+- Maven за управление на зависимости
+- GitHub акаунт с персонален токен за достъп (PAT)
 
 ## Първи стъпки
 
-1. **Навигирайте до примерите**:  
+### Стъпка 1: Настройте променливата на средата
+
+Първо, трябва да зададете вашия GitHub токен като променлива на средата. Този токен ви позволява да използвате GitHub Models безплатно.
+
+**Windows (Command Prompt):**
+```cmd
+set GITHUB_TOKEN=your_github_token_here
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:GITHUB_TOKEN="your_github_token_here"
+```
+
+**Linux/macOS:**
+```bash
+export GITHUB_TOKEN=your_github_token_here
+```
+
+### Стъпка 2: Навигирайте до директорията с примери
+
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
-```  
-2. **Настройте средата**:  
-```bash
-export GITHUB_TOKEN=your_token_here
-```  
-3. **Компилирайте и стартирайте примерите**:  
-```bash
-   # Run completions example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
-   
-   # Run functions example  
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
-   
-   # Run RAG example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
-   
-   # Run responsible AI demo
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
-   ```  
-
-## Преглед на примерите
-
-Примерите са организирани в папката `examples/` със следната структура:
-
-```
-examples/
-├── src/main/java/com/example/genai/techniques/
-│   ├── completions/
-│   │   └── LLMCompletionsApp.java        # Basic completions 
-│   ├── functions/
-│   │   └── FunctionsApp.java             # Function calling examples
-│   ├── rag/
-│   │   └── SimpleReaderDemo.java         # Retrieval-Augmented Generation
-│   └── responsibleai/
-│       └── ResponsibleGithubModels.java  # Responsible AI safety demonstration
-├── document.txt                          # Sample document for RAG example
-└── pom.xml                               # Maven configuration
 ```
 
-### 1. Завършване на LLM и чат потоци
-**Файл**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+## Урок 1: Завършвания и чат с LLM
 
-Научете как да изградите разговорен AI със стрийминг отговори и управление на историята на чата.
+**Файл:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-Този пример демонстрира:
-- Просто текстово завършване със системни подсказки
-- Разговори с няколко хода и управление на историята
-- Интерактивни чат сесии
-- Конфигурация на параметри (температура, максимален брой токени)
+### Какво учи този пример
 
-### 2. Функции и плъгини с LLM
-**Файл**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+Този пример демонстрира основните механики на взаимодействие с големи езикови модели (LLM) чрез OpenAI API, включително инициализация на клиент с GitHub Models, модели на структурата на съобщенията за системни и потребителски подсказки, управление на състоянието на разговора чрез натрупване на историята на съобщенията и настройка на параметри за контролиране на дължината на отговорите и нивото на креативност.
 
-Разширете възможностите на AI, като предоставите на моделите достъп до персонализирани функции и външни API.
+### Основни концепции в кода
 
-Този пример демонстрира:
-- Интеграция на функция за прогноза за времето
-- Имплементация на калкулаторна функция  
-- Множество извиквания на функции в един разговор
-- Дефиниране на функции с JSON схеми
+#### 1. Настройка на клиента
+```java
+// Create the AI client
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(new StaticTokenCredential(pat))
+    .buildClient();
+```
 
-### 3. Генерация с допълнително извличане на информация (RAG)
-**Файл**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+Това създава връзка с GitHub Models, използвайки вашия токен.
 
-Научете как да комбинирате AI с ваши собствени документи и източници на данни за точни, контекстуално осведомени отговори.
+#### 2. Просто завършване
+```java
+List<ChatRequestMessage> messages = List.of(
+    // System message sets AI behavior
+    new ChatRequestSystemMessage("You are a helpful Java expert."),
+    // User message contains the actual question
+    new ChatRequestUserMessage("Explain Java streams briefly.")
+);
 
-Този пример демонстрира:
-- Отговаряне на въпроси, базирани на документи, с Azure OpenAI SDK
-- Имплементация на RAG модел с GitHub модели
+ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
+    .setModel("gpt-4o-mini")
+    .setMaxTokens(200)      // Limit response length
+    .setTemperature(0.7);   // Control creativity (0.0-1.0)
+```
 
-**Употреба**: Задавайте въпроси относно съдържанието в `document.txt` и получавайте AI отговори, базирани само на този контекст.
+#### 3. Памет на разговора
+```java
+// Add AI's response to maintain conversation history
+messages.add(new ChatRequestAssistantMessage(aiResponse));
+messages.add(new ChatRequestUserMessage("Follow-up question"));
+```
 
-### 4. Демонстрация на безопасност при отговорен AI
-**Файл**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+ИИ запомня предишни съобщения само ако ги включите в следващите заявки.
 
-Получете предварителен преглед на това как работят мерките за безопасност на AI, като тествате възможностите за филтриране на съдържание на GitHub модели.
+### Стартирайте примера
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
+```
 
-Този пример демонстрира:
-- Филтриране на съдържание за потенциално вредни подсказки
-- Управление на безопасни отговори в приложения
-- Различни категории блокирано съдържание (насилие, реч на омраза, дезинформация)
-- Правилно обработване на грешки при нарушения на безопасността
+### Какво се случва, когато го стартирате
 
-> **Научете повече**: Това е само въведение в концепциите за отговорен AI. За повече информация относно етика, намаляване на пристрастията, съображения за поверителност и рамки за отговорен AI, вижте [Глава 5: Отговорен генеративен AI](../05-ResponsibleGenAI/README.md).
+1. **Просто завършване**: ИИ отговаря на въпрос за Java с насоки от системната подсказка.
+2. **Многократен чат**: ИИ поддържа контекст през няколко въпроса.
+3. **Интерактивен чат**: Можете да проведете реален разговор с ИИ.
 
-## Резюме
+## Урок 2: Извикване на функции
 
-В тази глава разгледахме завършване на LLM и чат потоци, имплементирахме извикване на функции за разширяване на възможностите на AI, създадохме система за генерация с допълнително извличане на информация (RAG) и демонстрирахме мерки за безопасност при отговорен AI.
+**Файл:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-> **NOTE**: Разгледайте подробно предоставения [**Урок**](./TUTORIAL.md)
+### Какво учи този пример
+
+Извикването на функции позволява на ИИ моделите да заявяват изпълнение на външни инструменти и API чрез структуриран протокол, при който моделът анализира заявки на естествен език, определя необходимите извиквания на функции с подходящи параметри, използвайки JSON Schema дефиниции, и обработва върнатите резултати, за да генерира контекстуални отговори, докато реалното изпълнение на функциите остава под контрола на разработчика за сигурност и надеждност.
+
+### Основни концепции в кода
+
+#### 1. Дефиниция на функция
+```java
+ChatCompletionsFunctionToolDefinitionFunction weatherFunction = 
+    new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
+weatherFunction.setDescription("Get current weather information for a city");
+
+// Define parameters using JSON Schema
+weatherFunction.setParameters(BinaryData.fromString("""
+    {
+        "type": "object",
+        "properties": {
+            "city": {
+                "type": "string",
+                "description": "The city name"
+            }
+        },
+        "required": ["city"]
+    }
+    """));
+```
+
+Това казва на ИИ какви функции са налични и как да ги използва.
+
+#### 2. Поток на изпълнение на функции
+```java
+// 1. AI requests a function call
+if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
+    ChatCompletionsFunctionToolCall functionCall = ...;
+    
+    // 2. You execute the function
+    String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
+    
+    // 3. You give the result back to AI
+    messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
+    
+    // 4. AI provides final response with function result
+    ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
+}
+```
+
+#### 3. Имплементация на функции
+```java
+private static String simulateWeatherFunction(String arguments) {
+    // Parse arguments and call real weather API
+    // For demo, we return mock data
+    return """
+        {
+            "city": "Seattle",
+            "temperature": "22",
+            "condition": "partly cloudy"
+        }
+        """;
+}
+```
+
+### Стартирайте примера
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
+```
+
+### Какво се случва, когато го стартирате
+
+1. **Функция за времето**: ИИ заявява данни за времето в Сиатъл, вие ги предоставяте, ИИ форматира отговор.
+2. **Функция за калкулатор**: ИИ заявява изчисление (15% от 240), вие го изчислявате, ИИ обяснява резултата.
+
+## Урок 3: RAG (Генериране с подсилено извличане)
+
+**Файл:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+
+### Какво учи този пример
+
+Генерирането с подсилено извличане (RAG) комбинира извличане на информация с езиково генериране, като инжектира контекст от външни документи в подсказките на ИИ, позволявайки на моделите да предоставят точни отговори, базирани на специфични източници на знания, вместо на потенциално остарели или неточни данни от обучението, като същевременно поддържа ясни граници между потребителските въпроси и авторитетната информация чрез стратегическо инженерство на подсказките.
+
+### Основни концепции в кода
+
+#### 1. Зареждане на документи
+```java
+// Load your knowledge source
+String doc = Files.readString(Paths.get("document.txt"));
+```
+
+#### 2. Инжектиране на контекст
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage(
+        "Use only the CONTEXT to answer. If not in context, say you cannot find it."
+    ),
+    new ChatRequestUserMessage(
+        "CONTEXT:\n\"\"\"\n" + doc + "\n\"\"\"\n\nQUESTION:\n" + question
+    )
+);
+```
+
+Тройните кавички помагат на ИИ да различи контекста от въпроса.
+
+#### 3. Безопасно обработване на отговори
+```java
+if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
+    String answer = response.getChoices().get(0).getMessage().getContent();
+    System.out.println("Assistant: " + answer);
+} else {
+    System.err.println("Error: No response received from the API.");
+}
+```
+
+Винаги валидирайте отговорите от API, за да предотвратите сривове.
+
+### Стартирайте примера
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
+```
+
+### Какво се случва, когато го стартирате
+
+1. Програмата зарежда `document.txt` (съдържа информация за GitHub Models).
+2. Задавате въпрос за документа.
+3. ИИ отговаря само въз основа на съдържанието на документа, а не на общите си знания.
+
+Опитайте да попитате: "Какво представляват GitHub Models?" срещу "Какво е времето?"
+
+## Урок 4: Отговорен ИИ
+
+**Файл:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+
+### Какво учи този пример
+
+Примерът за отговорен ИИ показва важността на внедряването на мерки за безопасност в приложенията с ИИ. Демонстрира филтри за безопасност, които откриват вредни категории съдържание, включително реч на омраза, тормоз, самонараняване, сексуално съдържание и насилие, показвайки как производствените приложения с ИИ трябва да се справят с нарушения на политиката за съдържание чрез подходящо обработване на изключения, механизми за обратна връзка от потребителите и стратегии за резервни отговори.
+
+### Основни концепции в кода
+
+#### 1. Рамка за тестване на безопасност
+```java
+private void testPromptSafety(String prompt, String category) {
+    try {
+        // Attempt to get AI response
+        ChatCompletions response = client.getChatCompletions(modelId, options);
+        System.out.println("Response generated (content appears safe)");
+        
+    } catch (HttpResponseException e) {
+        if (e.getResponse().getStatusCode() == 400) {
+            System.out.println("[BLOCKED BY SAFETY FILTER]");
+            System.out.println("This is GOOD - safety system working!");
+        }
+    }
+}
+```
+
+#### 2. Тествани категории за безопасност
+- Инструкции за насилие/вреда
+- Реч на омраза
+- Нарушения на поверителността
+- Медицинска дезинформация
+- Незаконни дейности
+
+### Стартирайте примера
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
+```
+
+### Какво се случва, когато го стартирате
+
+Програмата тества различни вредни подсказки и показва как системата за безопасност на ИИ:
+1. **Блокира опасни заявки** с HTTP 400 грешки.
+2. **Позволява безопасно съдържание** да се генерира нормално.
+3. **Защитава потребителите** от вредни изходи на ИИ.
+
+## Общи модели в примерите
+
+### Модел за автентикация
+Всички примери използват този модел за автентикация с GitHub Models:
+
+```java
+String pat = System.getenv("GITHUB_TOKEN");
+TokenCredential credential = new StaticTokenCredential(pat);
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(credential)
+    .buildClient();
+```
+
+### Модел за обработка на грешки
+```java
+try {
+    // AI operation
+} catch (HttpResponseException e) {
+    // Handle API errors (rate limits, safety filters)
+} catch (Exception e) {
+    // Handle general errors (network, parsing)
+}
+```
+
+### Модел за структура на съобщенията
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage("Set AI behavior"),
+    new ChatRequestUserMessage("User's actual request")
+);
+```
 
 ## Следващи стъпки
 
-[Глава 4: Практически приложения и проекти](../04-PracticalSamples/README.md)
+[Глава 04: Практически примери](../04-PracticalSamples/README.md)
+
+## Отстраняване на проблеми
+
+### Чести проблеми
+
+**"GITHUB_TOKEN не е зададен"**
+- Уверете се, че сте задали променливата на средата.
+- Проверете дали вашият токен има обхват `models:read`.
+
+**"Няма отговор от API"**
+- Проверете интернет връзката си.
+- Уверете се, че вашият токен е валиден.
+- Проверете дали сте достигнали лимитите за заявки.
+
+**Грешки при компилация с Maven**
+- Уверете се, че имате Java 21 или по-нов.
+- Стартирайте `mvn clean compile`, за да обновите зависимостите.
 
 **Отказ от отговорност**:  
-Този документ е преведен с помощта на AI услуга за превод [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматичните преводи може да съдържат грешки или неточности. Оригиналният документ на неговия изходен език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален превод от човек. Ние не носим отговорност за каквито и да било недоразумения или погрешни интерпретации, произтичащи от използването на този превод.
+Този документ е преведен с помощта на AI услуга за превод [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматизираните преводи може да съдържат грешки или неточности. Оригиналният документ на неговия роден език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Не носим отговорност за недоразумения или погрешни интерпретации, произтичащи от използването на този превод.

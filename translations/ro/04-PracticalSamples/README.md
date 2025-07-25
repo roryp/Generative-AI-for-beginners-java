@@ -1,15 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "139c227ef39d24287257d1aff6fc6973",
-  "translation_date": "2025-07-25T10:05:36+00:00",
+  "original_hash": "df269f529a172a0197ef28460bf1da9f",
+  "translation_date": "2025-07-25T11:56:23+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "ro"
 }
 -->
 # Aplicații Practice & Proiecte
-
-> Notă: Fiecare exemplu include și un fișier **TUTORIAL.md** care te ghidează în rularea mostrelor.
 
 ## Ce Vei Învăța
 În această secțiune vom prezenta trei aplicații practice care ilustrează modele de dezvoltare AI generativă cu Java:
@@ -37,7 +35,7 @@ Acest capitol prezintă **proiecte exemplu** care demonstrează modele de dezvol
 
 ### Generator de Povești pentru Animale de Companie
 
-**[Generatorul de Povești pentru Animale de Companie](petstory/README.md)** este o aplicație web Spring Boot captivantă care demonstrează **procesarea AI multi-modală** pentru generarea de povești creative despre animale de companie. Acesta combină capabilități AI pe partea client și server, utilizând transformer.js pentru interacțiuni AI în browser și OpenAI SDK pentru procesare pe server.
+**[Generatorul de Povești pentru Animale de Companie](petstory/README.md)** este o aplicație web captivantă Spring Boot care demonstrează **procesarea AI multi-modală** pentru generarea de povești creative despre animale de companie. Acesta combină capabilități AI pe partea client și server, utilizând transformer.js pentru interacțiuni AI în browser și OpenAI SDK pentru procesare pe server.
 
 ### Serviciul MCP Calculator (Demo MCP pentru Începători)
 
@@ -63,5 +61,5 @@ Aceste proiecte sunt concepute pentru a construi pe baza conceptelor din capitol
 
 [Capitolul 5: AI Generativă Responsabilă](../05-ResponsibleGenAI/README.md)
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

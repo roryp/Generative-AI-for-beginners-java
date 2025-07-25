@@ -1,139 +1,352 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
-  "translation_date": "2025-07-25T08:57:21+00:00",
+  "original_hash": "59454ab4ec36d89840df6fcfe7633cbd",
+  "translation_date": "2025-07-25T10:52:23+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "mo"
 }
 -->
-# 核心生成式 AI 技術
-
->**注意**: 本章包含詳細的[**教學**](./TUTORIAL.md)，引導您完成範例操作。
-
-## 您將學到什麼
-在本章中，我們透過實際範例探討四種核心生成式 AI 技術：
-- LLM 完成與聊天流程
-- 函數調用
-- 檢索增強生成 (RAG)
-- 負責任的 AI 安全措施
+# 核心生成式 AI 技術教學
 
 ## 目錄
 
-- [您將學到什麼](../../../03-CoreGenerativeAITechniques)
 - [先決條件](../../../03-CoreGenerativeAITechniques)
-- [開始使用](../../../03-CoreGenerativeAITechniques)
-- [範例概述](../../../03-CoreGenerativeAITechniques)
-  - [1. LLM 完成與聊天流程](../../../03-CoreGenerativeAITechniques)
-  - [2. 使用 LLM 的函數與插件](../../../03-CoreGenerativeAITechniques)
-  - [3. 檢索增強生成 (RAG)](../../../03-CoreGenerativeAITechniques)
-  - [4. 負責任的 AI 安全示範](../../../03-CoreGenerativeAITechniques)
-- [摘要](../../../03-CoreGenerativeAITechniques)
+- [快速開始](../../../03-CoreGenerativeAITechniques)
+  - [步驟 1：設定環境變數](../../../03-CoreGenerativeAITechniques)
+  - [步驟 2：進入範例目錄](../../../03-CoreGenerativeAITechniques)
+- [教學 1：LLM 完成與聊天](../../../03-CoreGenerativeAITechniques)
+- [教學 2：函數調用](../../../03-CoreGenerativeAITechniques)
+- [教學 3：RAG（檢索增強生成）](../../../03-CoreGenerativeAITechniques)
+- [教學 4：負責任的 AI](../../../03-CoreGenerativeAITechniques)
+- [範例中的常見模式](../../../03-CoreGenerativeAITechniques)
 - [下一步](../../../03-CoreGenerativeAITechniques)
+- [疑難排解](../../../03-CoreGenerativeAITechniques)
+  - [常見問題](../../../03-CoreGenerativeAITechniques)
+
+## 概述
+
+本教學提供使用 Java 和 GitHub Models 的核心生成式 AI 技術的實作範例。您將學習如何與大型語言模型（LLM）互動、實現函數調用、使用檢索增強生成（RAG），以及應用負責任的 AI 實踐。
 
 ## 先決條件
 
-- 完成[第 2 章](../../../02-SetupDevEnvironment)的環境設置
+在開始之前，請確保您已經具備以下條件：
+- 安裝 Java 21 或更高版本
+- 使用 Maven 進行依賴管理
+- 擁有一個 GitHub 帳戶並取得個人訪問令牌（PAT）
 
-## 開始使用
+## 快速開始
 
-1. **進入範例目錄**：  
+### 步驟 1：設定環境變數
+
+首先，您需要將 GitHub 令牌設置為環境變數。此令牌允許您免費訪問 GitHub Models。
+
+**Windows（命令提示字元）：**
+```cmd
+set GITHUB_TOKEN=your_github_token_here
+```
+
+**Windows（PowerShell）：**
+```powershell
+$env:GITHUB_TOKEN="your_github_token_here"
+```
+
+**Linux/macOS：**
+```bash
+export GITHUB_TOKEN=your_github_token_here
+```
+
+### 步驟 2：進入範例目錄
+
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
-```  
-2. **設置環境**：  
-```bash
-export GITHUB_TOKEN=your_token_here
-```  
-3. **編譯並運行範例**：  
-```bash
-   # Run completions example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
-   
-   # Run functions example  
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
-   
-   # Run RAG example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
-   
-   # Run responsible AI demo
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
-   ```  
-
-## 範例概述
-
-範例存放於 `examples/` 資料夾中，結構如下：
-
 ```
-examples/
-├── src/main/java/com/example/genai/techniques/
-│   ├── completions/
-│   │   └── LLMCompletionsApp.java        # Basic completions 
-│   ├── functions/
-│   │   └── FunctionsApp.java             # Function calling examples
-│   ├── rag/
-│   │   └── SimpleReaderDemo.java         # Retrieval-Augmented Generation
-│   └── responsibleai/
-│       └── ResponsibleGithubModels.java  # Responsible AI safety demonstration
-├── document.txt                          # Sample document for RAG example
-└── pom.xml                               # Maven configuration
-```  
 
-### 1. LLM 完成與聊天流程
-**檔案**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+## 教學 1：LLM 完成與聊天
 
-學習如何構建具有串流回應和聊天歷史管理的對話式 AI。
+**檔案：** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-此範例展示：
-- 使用系統提示進行簡單文本完成
-- 管理多輪對話的聊天歷史
-- 互動式聊天會話
-- 參數配置（溫度、最大字元數）
+### 本範例教學內容
 
-### 2. 使用 LLM 的函數與插件
-**檔案**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+此範例展示了如何通過 OpenAI API 與大型語言模型（LLM）互動的核心機制，包括使用 GitHub Models 初始化客戶端、系統與用戶提示的訊息結構模式、通過累積訊息歷史管理對話狀態，以及調整參數以控制回應長度與創意水平。
 
-透過提供模型自定義函數和外部 API，擴展 AI 的能力。
+### 主要程式概念
 
-此範例展示：
-- 天氣函數整合
-- 計算器函數實現  
-- 一次對話中多個函數調用
-- 使用 JSON schema 定義函數
+#### 1. 客戶端設置
+```java
+// Create the AI client
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(new StaticTokenCredential(pat))
+    .buildClient();
+```
 
-### 3. 檢索增強生成 (RAG)
-**檔案**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+這段程式碼使用您的令牌連接到 GitHub Models。
 
-學習如何結合 AI 與您的文件和數據源，提供準確且具上下文的回應。
+#### 2. 簡單完成
+```java
+List<ChatRequestMessage> messages = List.of(
+    // System message sets AI behavior
+    new ChatRequestSystemMessage("You are a helpful Java expert."),
+    // User message contains the actual question
+    new ChatRequestUserMessage("Explain Java streams briefly.")
+);
 
-此範例展示：
-- 使用 Azure OpenAI SDK 進行基於文件的問答
-- 使用 GitHub 模型實現 RAG 模式
+ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
+    .setModel("gpt-4o-mini")
+    .setMaxTokens(200)      // Limit response length
+    .setTemperature(0.7);   // Control creativity (0.0-1.0)
+```
 
-**使用方式**: 提出關於 `document.txt` 內容的問題，並獲得基於該上下文的 AI 回應。
+#### 3. 對話記憶
+```java
+// Add AI's response to maintain conversation history
+messages.add(new ChatRequestAssistantMessage(aiResponse));
+messages.add(new ChatRequestUserMessage("Follow-up question"));
+```
 
-### 4. 負責任的 AI 安全示範
-**檔案**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+AI 只有在後續請求中包含先前訊息時，才會記住之前的對話。
 
-預覽 AI 安全措施的運作方式，測試 GitHub 模型的內容過濾功能。
+### 執行範例
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
+```
 
-此範例展示：
-- 對潛在有害提示進行內容過濾
-- 在應用中處理安全回應
-- 不同類型的被屏蔽內容（暴力、仇恨言論、錯誤資訊）
-- 安全違規的正確錯誤處理
+### 執行結果
 
-> **了解更多**: 這只是負責任 AI 概念的入門介紹。更多關於倫理、偏見緩解、隱私考量及負責任 AI 框架的資訊，請參閱[第 5 章：負責任的生成式 AI](../05-ResponsibleGenAI/README.md)。
+1. **簡單完成**：AI 在系統提示的指導下回答 Java 問題
+2. **多輪對話**：AI 在多次提問中保持上下文
+3. **互動聊天**：您可以與 AI 進行真實的對話
 
-## 摘要
+## 教學 2：函數調用
 
-在本章中，我們探討了 LLM 完成與聊天流程，實現了函數調用以增強 AI 能力，創建了檢索增強生成 (RAG) 系統，並展示了負責任的 AI 安全措施。
+**檔案：** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-> **注意**: 使用提供的[**教學**](./TUTORIAL.md)深入學習。
+### 本範例教學內容
+
+函數調用使 AI 模型能夠通過結構化協議請求執行外部工具和 API。模型分析自然語言請求，根據 JSON Schema 定義確定所需的函數調用及其參數，並處理返回結果以生成上下文回應，而實際的函數執行由開發者控制，以確保安全性與可靠性。
+
+### 主要程式概念
+
+#### 1. 函數定義
+```java
+ChatCompletionsFunctionToolDefinitionFunction weatherFunction = 
+    new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
+weatherFunction.setDescription("Get current weather information for a city");
+
+// Define parameters using JSON Schema
+weatherFunction.setParameters(BinaryData.fromString("""
+    {
+        "type": "object",
+        "properties": {
+            "city": {
+                "type": "string",
+                "description": "The city name"
+            }
+        },
+        "required": ["city"]
+    }
+    """));
+```
+
+這段程式碼告訴 AI 可用的函數及其使用方式。
+
+#### 2. 函數執行流程
+```java
+// 1. AI requests a function call
+if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
+    ChatCompletionsFunctionToolCall functionCall = ...;
+    
+    // 2. You execute the function
+    String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
+    
+    // 3. You give the result back to AI
+    messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
+    
+    // 4. AI provides final response with function result
+    ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
+}
+```
+
+#### 3. 函數實現
+```java
+private static String simulateWeatherFunction(String arguments) {
+    // Parse arguments and call real weather API
+    // For demo, we return mock data
+    return """
+        {
+            "city": "Seattle",
+            "temperature": "22",
+            "condition": "partly cloudy"
+        }
+        """;
+}
+```
+
+### 執行範例
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
+```
+
+### 執行結果
+
+1. **天氣函數**：AI 請求西雅圖的天氣數據，您提供後，AI 格式化回應
+2. **計算器函數**：AI 請求計算（240 的 15%），您計算後，AI 解釋結果
+
+## 教學 3：RAG（檢索增強生成）
+
+**檔案：** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+
+### 本範例教學內容
+
+檢索增強生成（RAG）結合了信息檢索與語言生成，通過將外部文件內容注入 AI 提示，使模型能基於特定知識來源提供準確答案，而非依賴可能過時或不準確的訓練數據。同時，通過策略性提示設計，清楚區分用戶查詢與權威信息來源。
+
+### 主要程式概念
+
+#### 1. 文件加載
+```java
+// Load your knowledge source
+String doc = Files.readString(Paths.get("document.txt"));
+```
+
+#### 2. 上下文注入
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage(
+        "Use only the CONTEXT to answer. If not in context, say you cannot find it."
+    ),
+    new ChatRequestUserMessage(
+        "CONTEXT:\n\"\"\"\n" + doc + "\n\"\"\"\n\nQUESTION:\n" + question
+    )
+);
+```
+
+三引號幫助 AI 區分上下文與問題。
+
+#### 3. 安全回應處理
+```java
+if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
+    String answer = response.getChoices().get(0).getMessage().getContent();
+    System.out.println("Assistant: " + answer);
+} else {
+    System.err.println("Error: No response received from the API.");
+}
+```
+
+始終驗證 API 回應以防止程式崩潰。
+
+### 執行範例
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
+```
+
+### 執行結果
+
+1. 程式加載 `document.txt`（包含 GitHub Models 的信息）
+2. 您詢問有關文件的問題
+3. AI 僅基於文件內容回答，而非其一般知識
+
+試試問：「什麼是 GitHub Models？」與「天氣如何？」的差異。
+
+## 教學 4：負責任的 AI
+
+**檔案：** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+
+### 本範例教學內容
+
+負責任的 AI 範例展示了在 AI 應用中實施安全措施的重要性。範例展示了檢測有害內容（如仇恨言論、騷擾、自殘、色情內容和暴力）的安全過濾器，並演示了如何通過適當的例外處理、用戶反饋機制和備選回應策略，優雅地處理內容政策違規情況。
+
+### 主要程式概念
+
+#### 1. 安全測試框架
+```java
+private void testPromptSafety(String prompt, String category) {
+    try {
+        // Attempt to get AI response
+        ChatCompletions response = client.getChatCompletions(modelId, options);
+        System.out.println("Response generated (content appears safe)");
+        
+    } catch (HttpResponseException e) {
+        if (e.getResponse().getStatusCode() == 400) {
+            System.out.println("[BLOCKED BY SAFETY FILTER]");
+            System.out.println("This is GOOD - safety system working!");
+        }
+    }
+}
+```
+
+#### 2. 測試的安全類別
+- 暴力/傷害指令
+- 仇恨言論
+- 隱私侵犯
+- 醫療錯誤信息
+- 非法活動
+
+### 執行範例
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
+```
+
+### 執行結果
+
+程式測試各種有害提示，展示 AI 安全系統如何：
+1. **阻止危險請求**，返回 HTTP 400 錯誤
+2. **允許安全內容**正常生成
+3. **保護用戶**免受有害 AI 輸出的影響
+
+## 範例中的常見模式
+
+### 驗證模式
+所有範例都使用此模式與 GitHub Models 驗證：
+
+```java
+String pat = System.getenv("GITHUB_TOKEN");
+TokenCredential credential = new StaticTokenCredential(pat);
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(credential)
+    .buildClient();
+```
+
+### 錯誤處理模式
+```java
+try {
+    // AI operation
+} catch (HttpResponseException e) {
+    // Handle API errors (rate limits, safety filters)
+} catch (Exception e) {
+    // Handle general errors (network, parsing)
+}
+```
+
+### 訊息結構模式
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage("Set AI behavior"),
+    new ChatRequestUserMessage("User's actual request")
+);
+```
 
 ## 下一步
 
-[第 4 章：實用應用與專案](../04-PracticalSamples/README.md)
+[第 4 章：實用範例](../04-PracticalSamples/README.md)
+
+## 疑難排解
+
+### 常見問題
+
+**「GITHUB_TOKEN 未設置」**
+- 確保您已設置環境變數
+- 驗證您的令牌是否具有 `models:read` 權限
+
+**「API 無回應」**
+- 檢查您的網路連接
+- 驗證您的令牌是否有效
+- 檢查是否達到速率限制
+
+**Maven 編譯錯誤**
+- 確保您使用的是 Java 21 或更高版本
+- 執行 `mvn clean compile` 以刷新依賴項
 
 **免責聲明**：  
 本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。

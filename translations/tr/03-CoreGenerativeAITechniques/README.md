@@ -1,139 +1,352 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
-  "translation_date": "2025-07-25T09:28:25+00:00",
+  "original_hash": "59454ab4ec36d89840df6fcfe7633cbd",
+  "translation_date": "2025-07-25T11:21:32+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "tr"
 }
 -->
-# Temel Üretken Yapay Zeka Teknikleri
-
->**Not**: Bu bölüm, örnekler üzerinden sizi yönlendiren ayrıntılı bir [**Eğitim**](./TUTORIAL.md) içerir.
-
-## Öğrenecekleriniz
-Bu bölümde, 4 temel üretken yapay zeka tekniğini pratik örneklerle inceleyeceğiz:
-- LLM tamamlama ve sohbet akışları
-- Fonksiyon çağrısı
-- Geri Çağırma Destekli Üretim (RAG)
-- Sorumlu yapay zeka güvenlik önlemleri
+# Çekirdek Üretken Yapay Zeka Teknikleri Eğitimi
 
 ## İçindekiler
 
-- [Öğrenecekleriniz](../../../03-CoreGenerativeAITechniques)
 - [Ön Koşullar](../../../03-CoreGenerativeAITechniques)
 - [Başlarken](../../../03-CoreGenerativeAITechniques)
-- [Örneklerin Genel Görünümü](../../../03-CoreGenerativeAITechniques)
-  - [1. LLM Tamamlama ve Sohbet Akışları](../../../03-CoreGenerativeAITechniques)
-  - [2. LLM'lerle Fonksiyonlar ve Eklentiler](../../../03-CoreGenerativeAITechniques)
-  - [3. Geri Çağırma Destekli Üretim (RAG)](../../../03-CoreGenerativeAITechniques)
-  - [4. Sorumlu Yapay Zeka Güvenliği Gösterimi](../../../03-CoreGenerativeAITechniques)
-- [Özet](../../../03-CoreGenerativeAITechniques)
+  - [Adım 1: Ortam Değişkeninizi Ayarlayın](../../../03-CoreGenerativeAITechniques)
+  - [Adım 2: Örnekler Dizinine Geçin](../../../03-CoreGenerativeAITechniques)
+- [Eğitim 1: LLM Tamamlama ve Sohbet](../../../03-CoreGenerativeAITechniques)
+- [Eğitim 2: Fonksiyon Çağırma](../../../03-CoreGenerativeAITechniques)
+- [Eğitim 3: RAG (Bilgi Getirme Destekli Üretim)](../../../03-CoreGenerativeAITechniques)
+- [Eğitim 4: Sorumlu Yapay Zeka](../../../03-CoreGenerativeAITechniques)
+- [Örneklerdeki Ortak Kalıplar](../../../03-CoreGenerativeAITechniques)
 - [Sonraki Adımlar](../../../03-CoreGenerativeAITechniques)
+- [Sorun Giderme](../../../03-CoreGenerativeAITechniques)
+  - [Yaygın Sorunlar](../../../03-CoreGenerativeAITechniques)
+
+## Genel Bakış
+
+Bu eğitim, Java ve GitHub Modelleri kullanarak temel üretken yapay zeka tekniklerini uygulamalı örneklerle sunar. Büyük Dil Modelleri (LLM) ile nasıl etkileşim kuracağınızı, fonksiyon çağırmayı nasıl uygulayacağınızı, bilgi getirme destekli üretimi (RAG) nasıl kullanacağınızı ve sorumlu yapay zeka uygulamalarını nasıl hayata geçireceğinizi öğreneceksiniz.
 
 ## Ön Koşullar
 
-- [Bölüm 2](../../../02-SetupDevEnvironment) içindeki kurulum tamamlanmış olmalıdır.
+Başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
+- Java 21 veya daha üstü yüklü
+- Bağımlılık yönetimi için Maven
+- Kişisel erişim belirteci (PAT) olan bir GitHub hesabı
 
 ## Başlarken
 
-1. **Örnekler klasörüne gidin**: 
+### Adım 1: Ortam Değişkeninizi Ayarlayın
+
+Öncelikle, GitHub belirtecinizi bir ortam değişkeni olarak ayarlamanız gerekir. Bu belirteç, GitHub Modellerine ücretsiz erişim sağlar.
+
+**Windows (Komut İstemi):**
+```cmd
+set GITHUB_TOKEN=your_github_token_here
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:GITHUB_TOKEN="your_github_token_here"
+```
+
+**Linux/macOS:**
+```bash
+export GITHUB_TOKEN=your_github_token_here
+```
+
+### Adım 2: Örnekler Dizinine Geçin
+
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
 ```
-2. **Ortamı ayarlayın**: 
+
+## Eğitim 1: LLM Tamamlama ve Sohbet
+
+**Dosya:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+
+### Bu Örnek Ne Öğretiyor?
+
+Bu örnek, GitHub Modelleri ile OpenAI API'si üzerinden Büyük Dil Modeli (LLM) etkileşiminin temel mekaniklerini gösterir. Sistem ve kullanıcı istemleri için mesaj yapısı kalıpları, mesaj geçmişi birikimiyle konuşma durumu yönetimi ve yanıt uzunluğu ile yaratıcılık seviyelerini kontrol etmek için parametre ayarlamaları gibi konuları kapsar.
+
+### Temel Kod Kavramları
+
+#### 1. İstemci Kurulumu
+```java
+// Create the AI client
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(new StaticTokenCredential(pat))
+    .buildClient();
+```
+
+Bu, belirtecinizi kullanarak GitHub Modellerine bir bağlantı oluşturur.
+
+#### 2. Basit Tamamlama
+```java
+List<ChatRequestMessage> messages = List.of(
+    // System message sets AI behavior
+    new ChatRequestSystemMessage("You are a helpful Java expert."),
+    // User message contains the actual question
+    new ChatRequestUserMessage("Explain Java streams briefly.")
+);
+
+ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
+    .setModel("gpt-4o-mini")
+    .setMaxTokens(200)      // Limit response length
+    .setTemperature(0.7);   // Control creativity (0.0-1.0)
+```
+
+#### 3. Konuşma Hafızası
+```java
+// Add AI's response to maintain conversation history
+messages.add(new ChatRequestAssistantMessage(aiResponse));
+messages.add(new ChatRequestUserMessage("Follow-up question"));
+```
+
+Yapay zeka, önceki mesajları yalnızca sonraki isteklerde dahil ederseniz hatırlar.
+
+### Örneği Çalıştırın
 ```bash
-export GITHUB_TOKEN=your_token_here
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
 ```
-3. **Örnekleri derleyin ve çalıştırın**:
+
+### Çalıştırdığınızda Ne Olur?
+
+1. **Basit Tamamlama**: Yapay zeka, bir Java sorusunu sistem istemi rehberliğiyle yanıtlar.
+2. **Çoklu Dönüşlü Sohbet**: Yapay zeka, birden fazla soru arasında bağlamı korur.
+3. **Etkileşimli Sohbet**: Yapay zeka ile gerçek bir konuşma yapabilirsiniz.
+
+## Eğitim 2: Fonksiyon Çağırma
+
+**Dosya:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+
+### Bu Örnek Ne Öğretiyor?
+
+Fonksiyon çağırma, yapay zeka modellerinin doğal dil isteklerini analiz ederek JSON Şeması tanımları kullanarak gerekli fonksiyon çağrılarını belirlediği ve dönen sonuçları bağlamsal yanıtlar oluşturmak için işlediği bir protokol aracılığıyla harici araçların ve API'lerin çalıştırılmasını talep etmesini sağlar. Gerçek fonksiyon yürütmesi, güvenlik ve güvenilirlik için geliştiricinin kontrolü altında kalır.
+
+### Temel Kod Kavramları
+
+#### 1. Fonksiyon Tanımı
+```java
+ChatCompletionsFunctionToolDefinitionFunction weatherFunction = 
+    new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
+weatherFunction.setDescription("Get current weather information for a city");
+
+// Define parameters using JSON Schema
+weatherFunction.setParameters(BinaryData.fromString("""
+    {
+        "type": "object",
+        "properties": {
+            "city": {
+                "type": "string",
+                "description": "The city name"
+            }
+        },
+        "required": ["city"]
+    }
+    """));
+```
+
+Bu, yapay zekaya hangi fonksiyonların mevcut olduğunu ve nasıl kullanılacağını söyler.
+
+#### 2. Fonksiyon Yürütme Akışı
+```java
+// 1. AI requests a function call
+if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
+    ChatCompletionsFunctionToolCall functionCall = ...;
+    
+    // 2. You execute the function
+    String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
+    
+    // 3. You give the result back to AI
+    messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
+    
+    // 4. AI provides final response with function result
+    ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
+}
+```
+
+#### 3. Fonksiyon Uygulaması
+```java
+private static String simulateWeatherFunction(String arguments) {
+    // Parse arguments and call real weather API
+    // For demo, we return mock data
+    return """
+        {
+            "city": "Seattle",
+            "temperature": "22",
+            "condition": "partly cloudy"
+        }
+        """;
+}
+```
+
+### Örneği Çalıştırın
 ```bash
-   # Run completions example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
-   
-   # Run functions example  
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
-   
-   # Run RAG example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
-   
-   # Run responsible AI demo
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
-   ```
-
-## Örneklerin Genel Görünümü
-
-Örnekler `examples/` klasöründe aşağıdaki yapı ile organize edilmiştir:
-
-```
-examples/
-├── src/main/java/com/example/genai/techniques/
-│   ├── completions/
-│   │   └── LLMCompletionsApp.java        # Basic completions 
-│   ├── functions/
-│   │   └── FunctionsApp.java             # Function calling examples
-│   ├── rag/
-│   │   └── SimpleReaderDemo.java         # Retrieval-Augmented Generation
-│   └── responsibleai/
-│       └── ResponsibleGithubModels.java  # Responsible AI safety demonstration
-├── document.txt                          # Sample document for RAG example
-└── pom.xml                               # Maven configuration
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
 ```
 
-### 1. LLM Tamamlama ve Sohbet Akışları
-**Dosya**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+### Çalıştırdığınızda Ne Olur?
 
-Akışkan yanıtlar ve sohbet geçmişi yönetimi ile konuşma tabanlı yapay zeka oluşturmayı öğrenin.
+1. **Hava Durumu Fonksiyonu**: Yapay zeka Seattle için hava durumu verisi ister, siz sağlarsınız, yapay zeka bir yanıt oluşturur.
+2. **Hesap Makinesi Fonksiyonu**: Yapay zeka bir hesaplama ister (%15'in 240'ı), siz hesaplar ve sonucu açıklarsınız.
 
-Bu örnek şunları gösterir:
-- Sistem istemleriyle basit metin tamamlama
-- Geçmiş yönetimi ile çok aşamalı konuşmalar
-- Etkileşimli sohbet oturumları
-- Parametre yapılandırması (sıcaklık, maksimum token)
+## Eğitim 3: RAG (Bilgi Getirme Destekli Üretim)
 
-### 2. LLM'lerle Fonksiyonlar ve Eklentiler
-**Dosya**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+**Dosya:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Modellere özel fonksiyonlar ve harici API'ler ekleyerek yapay zeka yeteneklerini genişletin.
+### Bu Örnek Ne Öğretiyor?
 
-Bu örnek şunları gösterir:
-- Hava durumu fonksiyonu entegrasyonu
-- Hesap makinesi fonksiyonu uygulaması  
-- Bir konuşmada birden fazla fonksiyon çağrısı
-- JSON şemaları ile fonksiyon tanımı
+Bilgi Getirme Destekli Üretim (RAG), yapay zeka istemlerine harici belge bağlamı ekleyerek bilgi getirme ile dil üretimini birleştirir. Bu, modellerin genel bilgi yerine belirli bilgi kaynaklarına dayalı doğru yanıtlar sağlamasını mümkün kılar ve stratejik istem mühendisliği yoluyla kullanıcı sorguları ile otoriter bilgi kaynakları arasında net sınırlar korur.
 
-### 3. Geri Çağırma Destekli Üretim (RAG)
-**Dosya**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+### Temel Kod Kavramları
 
-Doğru ve bağlama duyarlı yanıtlar için yapay zekayı kendi belgeleriniz ve veri kaynaklarınızla birleştirmeyi öğrenin.
+#### 1. Belge Yükleme
+```java
+// Load your knowledge source
+String doc = Files.readString(Paths.get("document.txt"));
+```
 
-Bu örnek şunları gösterir:
-- Azure OpenAI SDK ile belge tabanlı soru-cevap
-- GitHub Modelleri ile RAG desen uygulaması
+#### 2. Bağlam Enjeksiyonu
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage(
+        "Use only the CONTEXT to answer. If not in context, say you cannot find it."
+    ),
+    new ChatRequestUserMessage(
+        "CONTEXT:\n\"\"\"\n" + doc + "\n\"\"\"\n\nQUESTION:\n" + question
+    )
+);
+```
 
-**Kullanım**: `document.txt` içeriği hakkında sorular sorun ve yalnızca bu bağlama dayalı yapay zeka yanıtları alın.
+Üçlü tırnak işaretleri, yapay zekanın bağlam ile soruyu ayırt etmesine yardımcı olur.
 
-### 4. Sorumlu Yapay Zeka Güvenliği Gösterimi
-**Dosya**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+#### 3. Güvenli Yanıt İşleme
+```java
+if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
+    String answer = response.getChoices().get(0).getMessage().getContent();
+    System.out.println("Assistant: " + answer);
+} else {
+    System.err.println("Error: No response received from the API.");
+}
+```
 
-GitHub Modelleri'nin içerik filtreleme yeteneklerini test ederek yapay zeka güvenlik önlemlerinin nasıl çalıştığını önizleyin.
+API yanıtlarını doğrulayarak çökme riskini önleyin.
 
-Bu örnek şunları gösterir:
-- Potansiyel olarak zararlı istemler için içerik filtreleme
-- Uygulamalarda güvenlik yanıtı yönetimi
-- Engellenen içerik kategorileri (şiddet, nefret söylemi, yanlış bilgi)
-- Güvenlik ihlalleri için uygun hata yönetimi
+### Örneği Çalıştırın
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
+```
 
-> **Daha Fazla Bilgi Edinin**: Bu, sorumlu yapay zeka kavramlarına bir giriş niteliğindedir. Etik, önyargı azaltma, gizlilik hususları ve sorumlu yapay zeka çerçeveleri hakkında daha fazla bilgi için [Bölüm 5: Sorumlu Üretken Yapay Zeka](../05-ResponsibleGenAI/README.md) bölümüne bakın.
+### Çalıştırdığınızda Ne Olur?
 
-## Özet
+1. Program `document.txt` dosyasını yükler (GitHub Modelleri hakkında bilgi içerir).
+2. Belgeyle ilgili bir soru sorarsınız.
+3. Yapay zeka yalnızca belge içeriğine dayanarak yanıt verir, genel bilgisine dayanarak değil.
 
-Bu bölümde, LLM tamamlama ve sohbet akışlarını inceledik, yapay zeka yeteneklerini artırmak için fonksiyon çağrısını uyguladık, Geri Çağırma Destekli Üretim (RAG) sistemi oluşturduk ve sorumlu yapay zeka güvenlik önlemlerini gösterdik.
+Şunu deneyin: "GitHub Modelleri nedir?" ve "Hava durumu nasıl?" sorularını sorun.
 
-> **NOT**: Sağlanan [**Eğitim**](./TUTORIAL.md) ile daha derinlemesine inceleyin.
+## Eğitim 4: Sorumlu Yapay Zeka
+
+**Dosya:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+
+### Bu Örnek Ne Öğretiyor?
+
+Sorumlu Yapay Zeka örneği, yapay zeka uygulamalarında güvenlik önlemlerinin uygulanmasının önemini vurgular. Nefret söylemi, taciz, kendine zarar verme, cinsel içerik ve şiddet gibi zararlı içerik kategorilerini tespit eden güvenlik filtrelerini gösterir. Üretim yapay zeka uygulamalarının içerik politikası ihlallerini uygun istisna işleme, kullanıcı geri bildirim mekanizmaları ve alternatif yanıt stratejileriyle nasıl ele alması gerektiğini açıklar.
+
+### Temel Kod Kavramları
+
+#### 1. Güvenlik Test Çerçevesi
+```java
+private void testPromptSafety(String prompt, String category) {
+    try {
+        // Attempt to get AI response
+        ChatCompletions response = client.getChatCompletions(modelId, options);
+        System.out.println("Response generated (content appears safe)");
+        
+    } catch (HttpResponseException e) {
+        if (e.getResponse().getStatusCode() == 400) {
+            System.out.println("[BLOCKED BY SAFETY FILTER]");
+            System.out.println("This is GOOD - safety system working!");
+        }
+    }
+}
+```
+
+#### 2. Test Edilen Güvenlik Kategorileri
+- Şiddet/Zarar talimatları
+- Nefret söylemi
+- Gizlilik ihlalleri
+- Tıbbi yanlış bilgi
+- Yasadışı faaliyetler
+
+### Örneği Çalıştırın
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
+```
+
+### Çalıştırdığınızda Ne Olur?
+
+Program çeşitli zararlı istemleri test eder ve yapay zeka güvenlik sistemi şu şekilde çalışır:
+1. **Tehlikeli istekleri engeller** (HTTP 400 hatalarıyla).
+2. **Güvenli içeriklerin** normal şekilde üretilmesine izin verir.
+3. **Kullanıcıları korur** zararlı yapay zeka çıktılarından.
+
+## Örneklerdeki Ortak Kalıplar
+
+### Kimlik Doğrulama Kalıbı
+Tüm örnekler, GitHub Modelleri ile kimlik doğrulamak için bu kalıbı kullanır:
+
+```java
+String pat = System.getenv("GITHUB_TOKEN");
+TokenCredential credential = new StaticTokenCredential(pat);
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(credential)
+    .buildClient();
+```
+
+### Hata İşleme Kalıbı
+```java
+try {
+    // AI operation
+} catch (HttpResponseException e) {
+    // Handle API errors (rate limits, safety filters)
+} catch (Exception e) {
+    // Handle general errors (network, parsing)
+}
+```
+
+### Mesaj Yapısı Kalıbı
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage("Set AI behavior"),
+    new ChatRequestUserMessage("User's actual request")
+);
+```
 
 ## Sonraki Adımlar
 
-[Bölüm 4: Pratik Uygulamalar ve Projeler](../04-PracticalSamples/README.md)
+[04. Bölüm: Pratik Örnekler](../04-PracticalSamples/README.md)
+
+## Sorun Giderme
+
+### Yaygın Sorunlar
+
+**"GITHUB_TOKEN ayarlanmadı"**
+- Ortam değişkenini ayarladığınızdan emin olun.
+- Belirtecinizin `models:read` kapsamına sahip olduğunu doğrulayın.
+
+**"API'den yanıt yok"**
+- İnternet bağlantınızı kontrol edin.
+- Belirtecinizin geçerli olduğunu doğrulayın.
+- Kota sınırlarını aşıp aşmadığınızı kontrol edin.
+
+**Maven derleme hataları**
+- Java 21 veya daha üstü bir sürüm kullandığınızdan emin olun.
+- Bağımlılıkları yenilemek için `mvn clean compile` çalıştırın.
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı bir yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel bir insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul edilmez.

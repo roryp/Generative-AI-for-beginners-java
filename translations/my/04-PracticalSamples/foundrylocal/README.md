@@ -1,215 +1,300 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
-  "translation_date": "2025-07-25T10:16:53+00:00",
+  "original_hash": "2284c54d2a98090a37df0dbef1633ebf",
+  "translation_date": "2025-07-25T12:07:32+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "my"
 }
 -->
-# Foundry Local Command-Line Application
-
->**မှတ်ချက်**: ဒီအခန်းမှာ သင်ကိုနမူနာများဖြင့် လမ်းညွှန်ပေးမည့် [**လက်တွေ့လေ့ကျင့်မှု**](./TUTORIAL.md) ပါဝင်ပါတယ်။
-
-Spring Boot ကိုအခြေခံထားသော ရိုးရှင်းတဲ့ command-line application တစ်ခုဖြစ်ပြီး OpenAI Java SDK ကို အသုံးပြု၍ Foundry Local နှင့် ချိတ်ဆက်ပုံကို ပြသထားပါတယ်။
-
-## သင်လေ့လာနိုင်မည့်အရာများ
-
-- OpenAI Java SDK ကို အသုံးပြု၍ Foundry Local ကို Spring Boot application များနှင့် ပေါင်းစည်းပုံ
-- ဒေသတွင်း AI ဖွံ့ဖြိုးမှုနှင့် စမ်းသပ်မှုအတွက် အကောင်းဆုံး လုပ်ထုံးလုပ်နည်းများ
+# Foundry Local Spring Boot သင်ခန်းစာ
 
 ## အကြောင်းအရာများ
 
-- [သင်လေ့လာနိုင်မည့်အရာများ](../../../../04-PracticalSamples/foundrylocal)
 - [လိုအပ်ချက်များ](../../../../04-PracticalSamples/foundrylocal)
-  - [Foundry Local ကို ထည့်သွင်းခြင်း](../../../../04-PracticalSamples/foundrylocal)
-  - [အတည်ပြုခြင်း](../../../../04-PracticalSamples/foundrylocal)
-- [ဖွဲ့စည်းမှု](../../../../04-PracticalSamples/foundrylocal)
-- [အမြန်စတင်ရန်](../../../../04-PracticalSamples/foundrylocal)
-- [Application ၏ လုပ်ဆောင်မှု](../../../../04-PracticalSamples/foundrylocal)
-- [နမူနာ အထွက်](../../../../04-PracticalSamples/foundrylocal)
-- [Architecture](../../../../04-PracticalSamples/foundrylocal)
-- [Code အထူးအချက်များ](../../../../04-PracticalSamples/foundrylocal)
-  - [OpenAI Java SDK ပေါင်းစည်းမှု](../../../../04-PracticalSamples/foundrylocal)
-  - [Chat Completion API](../../../../04-PracticalSamples/foundrylocal)
-- [ပြဿနာရှာဖွေမှု](../../../../04-PracticalSamples/foundrylocal)
+- [ပရောဂျက်အကျဉ်း](../../../../04-PracticalSamples/foundrylocal)
+- [ကုဒ်ကိုနားလည်ခြင်း](../../../../04-PracticalSamples/foundrylocal)
+  - [1. အပလီကေးရှင်းဖိုင် (application.properties)](../../../../04-PracticalSamples/foundrylocal)
+  - [2. အဓိကအပလီကေးရှင်းကလပ် (Application.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [3. AI ဝန်ဆောင်မှုအလွှာ (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [4. ပရောဂျက်အခြေခံလိုအပ်ချက်များ (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
+- [ဘယ်လိုအလုပ်လုပ်တယ်ဆိုတာ](../../../../04-PracticalSamples/foundrylocal)
+- [Foundry Local ကိုတပ်ဆင်ခြင်း](../../../../04-PracticalSamples/foundrylocal)
+- [အပလီကေးရှင်းကို run လုပ်ခြင်း](../../../../04-PracticalSamples/foundrylocal)
+- [မျှော်မှန်းထားသောရလဒ်](../../../../04-PracticalSamples/foundrylocal)
+- [နောက်ထပ်အဆင့်များ](../../../../04-PracticalSamples/foundrylocal)
+- [ပြဿနာရှာဖွေဖြေရှင်းခြင်း](../../../../04-PracticalSamples/foundrylocal)
 
 ## လိုအပ်ချက်များ
 
-> **⚠️ မှတ်ချက်**: ဒီ application သည် **ပေးထားသော devcontainer တွင် မရောနှောနိုင်ပါ**၊ Foundry Local ကို host system တွင် ထည့်သွင်းပြီး လည်ပတ်နေဖို့ လိုအပ်ပါတယ်။
+ဒီသင်ခန်းစာကိုစတင်မတိုင်မီ သင့်မှာအောက်ပါအရာတွေရှိရမယ်-
 
-### Foundry Local ကို ထည့်သွင်းခြင်း
+- **Java 21 သို့မဟုတ် အထက်** ကို သင့်စနစ်မှာတပ်ဆင်ထားရမယ်
+- **Maven 3.6+** ကို ပရောဂျက်ကို build လုပ်ဖို့လိုအပ်တယ်
+- **Foundry Local** ကိုတပ်ဆင်ပြီး run လုပ်ထားရမယ်
 
-ဒီ application ကို လည်ပတ်မည်မပြုမီ Foundry Local ကို ထည့်သွင်းပြီး စတင်ရန် လိုအပ်ပါတယ်။ အောက်ပါအဆင့်များကို လိုက်နာပါ-
-
-1. **သင့်စနစ်သည် လိုအပ်ချက်များနှင့် ကိုက်ညီကြောင်း သေချာပါ**:
-   - **Operating System**: Windows 10 (x64), Windows 11 (x64/ARM), Windows Server 2025, သို့မဟုတ် macOS
-   - **Hardware**: 
-     - အနည်းဆုံး: 8GB RAM, 3GB အခမဲ့ disk အာကာသ
-     - အကြံပြု: 16GB RAM, 15GB အခမဲ့ disk အာကာသ
-   - **Network**: မော်ဒယ်ကို ပထမဆုံးဒေါင်းလုပ်ဆွဲရန် အင်တာနက် ချိတ်ဆက်မှု (အော့ဖ်လိုင်းအသုံးပြုမှုအတွက် မလိုအပ်ပါ)
-   - **Acceleration (ရွေးချယ်နိုင်သည်)**: NVIDIA GPU (2,000 စီးရီး သို့မဟုတ် အသစ်များ), AMD GPU (6,000 စီးရီး သို့မဟုတ် အသစ်များ), Qualcomm Snapdragon X Elite (8GB သို့မဟုတ် ပိုမိုသော memory), သို့မဟုတ် Apple silicon
-   - **Permissions**: သင့်စက်တွင် software ထည့်သွင်းရန် အုပ်ချုပ်ရေးအခွင့်အရေး
-
-2. **Foundry Local ကို ထည့်သွင်းပါ**:
-   
-   **Windows အတွက်:**
-   ```bash
-   winget install Microsoft.FoundryLocal
-   ```
-   
-   **macOS အတွက်:**
-   ```bash
-   brew tap microsoft/foundrylocal
-   brew install foundrylocal
-   ```
-   
-   အခြားနည်းလမ်းအဖြစ် [Foundry Local GitHub repository](https://github.com/microsoft/Foundry-Local) မှ installer ကို ဒေါင်းလုပ်ဆွဲနိုင်ပါသည်။
-
-3. **ပထမဆုံး မော်ဒယ်ကို စတင်ပါ**:
-
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
-
-   မော်ဒယ်ကို ဒေါင်းလုပ်ဆွဲရန် (သင့်အင်တာနက်အမြန်နှုန်းပေါ်မူတည်၍ မိနစ်အနည်းငယ်ကြာနိုင်သည်) ပြီးနောက် လည်ပတ်ပါမည်။ Foundry Local သည် သင့်စနစ်အတွက် အကောင်းဆုံး မော်ဒယ်ကို အလိုအလျောက် ရွေးချယ်ပေးပါသည် (NVIDIA GPU များအတွက် CUDA, CPU ဗားရှင်း များအတွက် အခြား).
-
-4. **Terminal တွင် မေးခွန်းတစ်ခု မေးပြီး မော်ဒယ်ကို စမ်းသပ်ပါ**:
-
-   ```bash
-   Why is the sky blue?
-   ```
-
-   မိုးကောင်းကင်အပြာရောင်ဖြစ်ရခြင်းအကြောင်း ရှင်းပြသည့် Phi မော်ဒယ်၏ တုံ့ပြန်မှုကို တွေ့ရမည်။
-
-### အတည်ပြုခြင်း
-
-အောက်ပါ command များဖြင့် အားလုံးမှန်ကန်ကြောင်း အတည်ပြုနိုင်ပါသည်:
+### **Foundry Local ကိုတပ်ဆင်ပါ:**
 
 ```bash
-# List all available models
-foundry model list
+# Windows
+winget install Microsoft.FoundryLocal
 
-# Check the service status via REST API
-curl http://localhost:5273/v1/models
+# macOS (after installing)
+foundry model run phi-3.5-mini
 ```
 
-သို့မဟုတ် `http://localhost:5273` ကို browser တွင် ဝင်ရောက်ကြည့်ရှုနိုင်ပါသည်။
+## ပရောဂျက်အကျဉ်း
 
-## ဖွဲ့စည်းမှု
+ဒီပရောဂျက်မှာ အဓိကအစိတ်အပိုင်း ၄ ခုပါဝင်ပါတယ်-
 
-ဒီ application ကို `application.properties` မှတစ်ဆင့် ဖွဲ့စည်းနိုင်ပါသည်-
+1. **Application.java** - Spring Boot အပလီကေးရှင်းရဲ့ အဓိက entry point
+2. **FoundryLocalService.java** - AI ဆက်သွယ်မှုကို စီမံခန့်ခွဲတဲ့ service layer
+3. **application.properties** - Foundry Local ဆက်သွယ်မှုအတွက် configuration
+4. **pom.xml** - Maven အခြေခံလိုအပ်ချက်နဲ့ ပရောဂျက် configuration
 
-- `foundry.local.base-url` - Foundry Local ၏ Base URL (ပုံမှန်: http://localhost:5273)
-- `foundry.local.model` - အသုံးပြုမည့် AI မော်ဒယ် (ပုံမှန်: Phi-3.5-mini-instruct-cuda-gpu)
+## ကုဒ်ကိုနားလည်ခြင်း
 
-> **မှတ်ချက်**: ဖွဲ့စည်းမှုအတွင်း မော်ဒယ်အမည်သည် Foundry Local မှ ဒေါင်းလုပ်ဆွဲထားသော မော်ဒယ်၏ အတိအကျဗားရှင်းနှင့် ကိုက်ညီရမည်။ `foundry model run phi-3.5-mini` ကို လည်ပတ်စဉ် Foundry Local သည် သင့်စနစ်အတွက် အကောင်းဆုံးဗားရှင်းကို အလိုအလျောက် ရွေးချယ်ပြီး ဒေါင်းလုပ်ဆွဲပါသည်။ `foundry model list` ကို အသုံးပြု၍ သင့်ဒေသတွင်း instance တွင် ရရှိနိုင်သော မော်ဒယ်အမည်ကို ကြည့်ရှုနိုင်ပါသည်။
+### 1. အပလီကေးရှင်းဖိုင် (application.properties)
 
-## အမြန်စတင်ရန်
+**ဖိုင်:** `src/main/resources/application.properties`
 
-### 1. Foundry Local application directory သို့ သွားပါ
-```bash
-cd Generative-AI-for-beginners-java/04-PracticalSamples/foundrylocal
+```properties
+foundry.local.base-url=http://localhost:5273
+foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu
 ```
 
-### 2. Application ကို လည်ပတ်ပါ
+**ဒါဘာလုပ်သလဲ:**
+- **base-url**: Foundry Local ရဲ့ run လုပ်နေတဲ့နေရာ (default port 5273)
+- **model**: Text generation အတွက် အသုံးပြုမယ့် AI မော်ဒယ်နာမည်
 
-```bash
-mvn spring-boot:run
+**အဓိကအချက်:** Spring Boot က ဒီ properties တွေကို အလိုအလျောက် load လုပ်ပြီး `@Value` annotation ကိုသုံးပြီး သင့်အပလီကေးရှင်းမှာ အသုံးပြုနိုင်အောင်လုပ်ပေးတယ်။
+
+### 2. အဓိကအပလီကေးရှင်းကလပ် (Application.java)
+
+**ဖိုင်:** `src/main/java/com/example/Application.java`
+
+```java
+@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication app = new SpringApplication(Application.class);
+        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.run(args);
+    }
 ```
 
-သို့မဟုတ် JAR ကို build လုပ်ပြီး လည်ပတ်ပါ:
+**ဒါဘာလုပ်သလဲ:**
+- `@SpringBootApplication` က Spring Boot ရဲ့ auto-configuration ကို enable လုပ်တယ်
+- `WebApplicationType.NONE` က command-line app ဖြစ်ပြီး web server မဟုတ်တာကို ပြောပြတယ်
+- Main method က Spring application ကိုစတင်တယ်
 
-```bash
-mvn clean package
-java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
+**Demo Runner:**
+```java
+@Bean
+public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
+    return args -> {
+        System.out.println("=== Foundry Local Demo ===");
+        
+        String testMessage = "Hello! Can you tell me what you are and what model you're running?";
+        System.out.println("Sending message: " + testMessage);
+        
+        String response = foundryLocalService.chat(testMessage);
+        System.out.println("Response from Foundry Local:");
+        System.out.println(response);
+    };
+}
 ```
 
-### Dependencies
+**ဒါဘာလုပ်သလဲ:**
+- `@Bean` က Spring ကစီမံခန့်ခွဲမယ့် component တစ်ခုကိုဖန်တီးတယ်
+- `CommandLineRunner` က Spring Boot စတင်ပြီးတာနောက် code ကို run လုပ်တယ်
+- `foundryLocalService` ကို Spring ကအလိုအလျောက် inject လုပ်တယ် (dependency injection)
+- AI ကို စမ်းသပ်မက်ဆေ့ချ်တစ်ခုပို့ပြီး ပြန်လာတဲ့အဖြေကိုပြတယ်
 
-ဒီ application သည် Foundry Local နှင့် ဆက်သွယ်ရန် OpenAI Java SDK ကို အသုံးပြုပါသည်။ အဓိကလိုအပ်ချက်မှာ-
+### 3. AI ဝန်ဆောင်မှုအလွှာ (FoundryLocalService.java)
+
+**ဖိုင်:** `src/main/java/com/example/FoundryLocalService.java`
+
+#### Configuration Injection:
+```java
+@Service
+public class FoundryLocalService {
+    
+    @Value("${foundry.local.base-url:http://localhost:5273}")
+    private String baseUrl;
+    
+    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu}")
+    private String model;
+```
+
+**ဒါဘာလုပ်သလဲ:**
+- `@Service` က ဒီ class က business logic ပေးတဲ့ class ဖြစ်တယ်ဆိုတာ Spring ကိုပြောတယ်
+- `@Value` က application.properties ထဲက configuration values တွေကို inject လုပ်တယ်
+- `:default-value` syntax က properties မရှိရင် fallback value ပေးတယ်
+
+#### Client Initialization:
+```java
+@PostConstruct
+public void init() {
+    this.openAIClient = OpenAIOkHttpClient.builder()
+            .baseUrl(baseUrl + "/v1")        // Foundry Local uses OpenAI-compatible API
+            .apiKey("unused")                 // Local server doesn't need real API key
+            .build();
+}
+```
+
+**ဒါဘာလုပ်သလဲ:**
+- `@PostConstruct` က Spring service ဖန်တီးပြီးတာနောက် ဒီ method ကို run လုပ်တယ်
+- Foundry Local instance ကို point လုပ်တဲ့ OpenAI client တစ်ခုဖန်တီးတယ်
+- `/v1` path က OpenAI API နဲ့သဟဇာတဖြစ်ဖို့လိုအပ်တယ်
+- API key က "unused" ဖြစ်တယ်၊ ဒါက local development မှာ authentication မလိုအပ်လို့ပါ
+
+#### Chat Method:
+```java
+public String chat(String message) {
+    try {
+        ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
+                .model(model)                    // Which AI model to use
+                .addUserMessage(message)         // Your question/prompt
+                .maxCompletionTokens(150)        // Limit response length
+                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .build();
+        
+        ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
+        
+        // Extract the AI's response from the API result
+        if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
+            return chatCompletion.choices().get(0).message().content().orElse("No response found");
+        }
+        
+        return "No response content found";
+    } catch (Exception e) {
+        throw new RuntimeException("Error calling chat completion: " + e.getMessage(), e);
+    }
+}
+```
+
+**ဒါဘာလုပ်သလဲ:**
+- **ChatCompletionCreateParams**: AI request ကို configure လုပ်တယ်
+  - `model`: အသုံးပြုမယ့် AI မော်ဒယ်ကိုသတ်မှတ်တယ်
+  - `addUserMessage`: သင့်မက်ဆေ့ချ်ကို conversation ထဲထည့်တယ်
+  - `maxCompletionTokens`: ပြန်လာမယ့်အဖြေကို အရှည်ကန့်သတ်တယ် (resource များသုံးစွဲမှုလျှော့ချတယ်)
+  - `temperature`: Randomness ကိုထိန်းချုပ်တယ် (0.0 = အတိအကျ, 1.0 = ဖန်တီးမှုများ)
+- **API Call**: Foundry Local ကို request ပို့တယ်
+- **Response Handling**: AI ရဲ့ text response ကို extract လုပ်တယ်
+- **Error Handling**: အမှားတွေကို အကူအညီပေးတဲ့ error messages နဲ့ wrap လုပ်တယ်
+
+### 4. ပရောဂျက်အခြေခံလိုအပ်ချက်များ (pom.xml)
+
+**အဓိကလိုအပ်ချက်များ:**
 
 ```xml
+<!-- Spring Boot - Application framework -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter</artifactId>
+    <version>${spring-boot.version}</version>
+</dependency>
+
+<!-- OpenAI Java SDK - For AI API calls -->
 <dependency>
     <groupId>com.openai</groupId>
     <artifactId>openai-java</artifactId>
     <version>2.12.0</version>
 </dependency>
+
+<!-- Jackson - JSON processing -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.17.0</version>
+</dependency>
 ```
 
-application သည် ပုံမှန် port တွင် လည်ပတ်နေသော Foundry Local နှင့် ချိတ်ဆက်ရန် ကြိုတင်ဖွဲ့စည်းထားပါသည်။
+**ဒါဘာလုပ်သလဲ:**
+- **spring-boot-starter**: Spring Boot ရဲ့ အဓိက functionality ပေးတယ်
+- **openai-java**: OpenAI Java SDK ကို API ဆက်သွယ်မှုအတွက်အသုံးပြုတယ်
+- **jackson-databind**: API calls အတွက် JSON serialization/deserialization ကို handle လုပ်တယ်
 
-## Application ၏ လုပ်ဆောင်မှု
+## ဘယ်လိုအလုပ်လုပ်တယ်ဆိုတာ
 
-Application ကို လည်ပတ်စဉ်-
+အပလီကေးရှင်းကို run လုပ်တဲ့အခါ အလုပ်လုပ်ပုံစနစ်ကဒီလိုပါ-
 
-1. **Command-line application** အနေဖြင့် စတင်ပါသည် (web server မပါဝင်ပါ)
-2. **စမ်းသပ်မက်ဆေ့ချ်တစ်ခု** ကို အလိုအလျောက် ပို့ပါသည်- "Hello! Can you tell me what you are and what model you're running?"
-3. **Foundry Local ၏ တုံ့ပြန်မှု** ကို console တွင် ပြသပါသည်
-4. **Demo ပြီးဆုံးပြီးနောက်** သန့်ရှင်းစွာ ပိတ်ပါသည်
+1. **Startup**: Spring Boot က `application.properties` ကိုဖတ်တယ်
+2. **Service Creation**: Spring က `FoundryLocalService` ကိုဖန်တီးပြီး configuration values တွေကို inject လုပ်တယ်
+3. **Client Setup**: `@PostConstruct` က OpenAI client ကို Foundry Local နဲ့ဆက်သွယ်ဖို့ initialize လုပ်တယ်
+4. **Demo Execution**: `CommandLineRunner` က startup ပြီးတာနောက် run လုပ်တယ်
+5. **AI Call**: Demo က `foundryLocalService.chat()` ကို စမ်းသပ်မက်ဆေ့ချ်နဲ့ခေါ်တယ်
+6. **API Request**: Service က OpenAI-compatible request တစ်ခုကို Foundry Local ကိုပို့တယ်
+7. **Response Processing**: Service က AI ရဲ့ response ကို extract လုပ်တယ်
+8. **Display**: Application က response ကိုပြပြီးထွက်သွားတယ်
 
-## နမူနာ အထွက်
+## Foundry Local ကိုတပ်ဆင်ခြင်း
+
+Foundry Local ကိုတပ်ဆင်ဖို့ အောက်ပါအဆင့်တွေကိုလိုက်နာပါ-
+
+1. **Foundry Local ကိုတပ်ဆင်ပါ** [လိုအပ်ချက်များ](../../../../04-PracticalSamples/foundrylocal) အပိုင်းမှာပေးထားတဲ့ညွှန်ကြားချက်တွေကိုလိုက်နာပါ။
+2. **အသုံးပြုမယ့် AI မော်ဒယ်ကိုဒေါင်းလုပ်ဆွဲပါ**၊ ဥပမာ `phi-3.5-mini` ကို အောက်ပါ command နဲ့:
+   ```bash
+   foundry model run phi-3.5-mini
+   ```
+3. **application.properties ဖိုင်ကို configure လုပ်ပါ** Foundry Local settings နဲ့ကိုက်ညီအောင်၊ အထူးသဖြင့် port သို့မဟုတ် မော်ဒယ်ကွဲလွဲမှုရှိရင်။
+
+## အပလီကေးရှင်းကို run လုပ်ခြင်း
+
+### အဆင့် 1: Foundry Local ကိုစတင်ပါ
+```bash
+foundry model run phi-3.5-mini
+```
+
+### အဆင့် 2: အပလီကေးရှင်းကို build လုပ်ပြီး run လုပ်ပါ
+```bash
+mvn clean package
+java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
+```
+
+## မျှော်မှန်းထားသောရလဒ်
 
 ```
 === Foundry Local Demo ===
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physical form or a specific hardware model like a smartphone or a computer. I exist purely in software, and I operate on Microsoft's infrastructure...
+Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
+as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
+in my interactions. I can assist with a wide variety of tasks including answering 
+questions, helping with analysis, creative writing, coding, and general conversation. 
+Is there something specific you'd like help with today?
 =========================
 ```
 
-## Architecture
+## နောက်ထပ်အဆင့်များ
 
-- **Application.java** - CommandLineRunner ဖြင့် Main Spring Boot application
-- **FoundryLocalService.java** - OpenAI Java SDK ကို အသုံးပြု၍ Foundry Local နှင့် ဆက်သွယ်သည့် Service
-- **OpenAI Java SDK** ကို အသုံးပြု၍ type-safe API ခေါ်ဆိုမှုများ
-- JSON serialization/deserialization ကို SDK မှ အလိုအလျောက် စီမံဆောင်ရွက်
-- Spring ၏ `@Value` နှင့် `@PostConstruct` annotation များကို အသုံးပြု၍ သန့်ရှင်းသော ဖွဲ့စည်းမှု
+နောက်ထပ်ဥပမာများအတွက် [Chapter 04: Practical samples](../README.md) ကိုကြည့်ပါ
 
-## Code အထူးအချက်များ
+## ပြဿနာရှာဖွေဖြေရှင်းခြင်း
 
-### OpenAI Java SDK ပေါင်းစည်းမှု
+### အများဆုံးတွေ့ရတဲ့ပြဿနာများ
 
-ဒီ application သည် Foundry Local အတွက် ဖွဲ့စည်းထားသော client တစ်ခုကို OpenAI Java SDK ဖြင့် ဖန်တီးသည်-
+**"Connection refused" သို့မဟုတ် "Service unavailable"**
+- Foundry Local run လုပ်နေမလုပ်နေစစ်ဆေးပါ: `foundry model list`
+- Service က port 5273 မှာရှိနေမရှိနေစစ်ဆေးပါ: `application.properties` ကိုကြည့်ပါ
+- Foundry Local ကိုပြန်စတင်ပါ: `foundry model run phi-3.5-mini`
 
-```java
-@PostConstruct
-public void init() {
-    this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl + "/v1")
-            .apiKey("unused") // Local server doesn't require real API key
-            .build();
-}
-```
+**"Model not found" errors**
+- ရနိုင်တဲ့မော်ဒယ်တွေကိုစစ်ဆေးပါ: `foundry model list`
+- application.properties ထဲမှာ မော်ဒယ်နာမည်ကိုတိတိကျကျ update လုပ်ပါ
+- မော်ဒယ်ကိုဒေါင်းလုပ်ဆွဲပါ: `foundry model run phi-3.5-mini`
 
-### Chat Completion API
+**Maven compilation errors**
+- Java 21 သို့မဟုတ် အထက်ရှိမရှိစစ်ဆေးပါ: `java -version`
+- Clean လုပ်ပြီးပြန် build လုပ်ပါ: `mvn clean compile`
+- Dependency downloads အတွက် အင်တာနက်ချိတ်ဆက်မှုစစ်ဆေးပါ
 
-Chat completion request များကို ရိုးရှင်းပြီး type-safe ဖြစ်စေသည်-
-
-```java
-ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-        .model(model)
-        .addUserMessage(message)
-        .maxCompletionTokens(150)
-        .temperature(0.7)
-        .build();
-
-ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
-```
-
-## ပြဿနာရှာဖွေမှု
-
-Connection error များကို တွေ့ပါက:
-1. Foundry Local သည် `http://localhost:5273` တွင် လည်ပတ်နေကြောင်း အတည်ပြုပါ
-2. `foundry model list` ဖြင့် Phi-3.5-mini မော်ဒယ်ဗားရှင်း ရရှိနိုင်ကြောင်း စစ်ဆေးပါ
-3. `application.properties` တွင် မော်ဒယ်အမည်သည် မော်ဒယ်စာရင်းတွင် ပြသထားသော အတိအကျအမည်နှင့် ကိုက်ညီကြောင်း သေချာပါ
-4. Firewall တစ်ခုခုက ချိတ်ဆက်မှုကို တားဆီးထားခြင်း မရှိကြောင်း စစ်ဆေးပါ
-
-အများဆုံးတွေ့ရသော ပြဿနာများ:
-- **မော်ဒယ်မတွေ့ရှိခြင်း**: `foundry model run phi-3.5-mini` ကို လည်ပတ်၍ မော်ဒယ်ကို ဒေါင်းလုပ်ဆွဲပြီး စတင်ပါ
-- **ဝန်ဆောင်မှုမလည်ပတ်ခြင်း**: Foundry Local ဝန်ဆောင်မှု ရပ်နားထားနိုင်သည်; မော်ဒယ် run command ဖြင့် ပြန်လည်စတင်ပါ
-- **မော်ဒယ်အမည်မှားခြင်း**: `foundry model list` ကို အသုံးပြု၍ ရရှိနိုင်သော မော်ဒယ်များကို ကြည့်ရှုပြီး သင့်ဖွဲ့စည်းမှုကို အပ်ဒိတ်လုပ်ပါ
+**Application စတင်ပြီး output မရှိ**
+- Foundry Local ကတုံ့ပြန်နေမနေစစ်ဆေးပါ: Browser မှာ `http://localhost:5273` ကိုဖွင့်ကြည့်ပါ
+- Application logs မှာ error messages ရှိမရှိစစ်ဆေးပါ
+- မော်ဒယ်ကအပြည့်အစုံ load လုပ်ပြီးအသင့်ဖြစ်နေမနေစစ်ဆေးပါ
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်မှုကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွဲအချော်များ သို့မဟုတ် အနားယူမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါရှိနိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူလဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

@@ -1,18 +1,16 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "139c227ef39d24287257d1aff6fc6973",
-  "translation_date": "2025-07-25T09:43:50+00:00",
+  "original_hash": "df269f529a172a0197ef28460bf1da9f",
+  "translation_date": "2025-07-25T11:36:34+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "nl"
 }
 -->
 # Praktische Toepassingen & Projecten
 
-> Opmerking: Elk voorbeeld bevat ook een **TUTORIAL.md** die je begeleidt bij het uitvoeren van de voorbeelden.
-
-## Wat Je Gaat Leren
-In dit gedeelte demonstreren we drie praktische toepassingen die generatieve AI-ontwikkelingspatronen met Java laten zien:
+## Wat Je Zult Leren
+In deze sectie demonstreren we drie praktische toepassingen die generatieve AI-ontwikkelingspatronen met Java laten zien:
 - Een multi-modale Huisdierverhaal Generator maken die client-side en server-side AI combineert
 - Lokale AI-modelintegratie implementeren met de Foundry Local Spring Boot demo
 - Een Model Context Protocol (MCP) service ontwikkelen met het Calculator voorbeeld
@@ -33,11 +31,11 @@ Dit hoofdstuk toont **voorbeeldprojecten** die generatieve AI-ontwikkelingspatro
 
 ### Foundry Local Spring Boot Demo
 
-De **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** laat zien hoe je kunt integreren met lokale AI-modellen met behulp van de **OpenAI Java SDK**. Het demonstreert de verbinding met het **Phi-3.5-mini** model dat draait op Foundry Local, waardoor je AI-toepassingen kunt uitvoeren zonder afhankelijk te zijn van clouddiensten.
+De **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** demonstreert hoe je kunt integreren met lokale AI-modellen met behulp van de **OpenAI Java SDK**. Het laat zien hoe je verbinding maakt met het **Phi-3.5-mini** model dat draait op Foundry Local, waardoor je AI-toepassingen kunt uitvoeren zonder afhankelijk te zijn van clouddiensten.
 
 ### Huisdierverhaal Generator
 
-De **[Huisdierverhaal Generator](petstory/README.md)** is een boeiende Spring Boot webapplicatie die **multi-modale AI-verwerking** demonstreert om creatieve verhalen over huisdieren te genereren. Het combineert client-side en server-side AI-mogelijkheden met transformer.js voor browsergebaseerde AI-interacties en de OpenAI SDK voor server-side verwerking.
+De **[Huisdierverhaal Generator](petstory/README.md)** is een boeiende Spring Boot webapplicatie die **multi-modale AI-verwerking** demonstreert om creatieve verhalen over huisdieren te genereren. Het combineert client-side en server-side AI-capaciteiten met transformer.js voor browsergebaseerde AI-interacties en de OpenAI SDK voor server-side verwerking.
 
 ### MCP Calculator Service (Beginner-vriendelijke MCP Demo)
 
@@ -57,11 +55,11 @@ Deze projecten zijn ontworpen om voort te bouwen op concepten uit eerdere hoofds
 
 - **Multi-modale AI-ervaringen gecreëerd** die client-side en server-side AI-verwerking combineren
 - **Lokale AI-modelintegratie geïmplementeerd** met moderne Java-frameworks en SDK's
-- **Model Context Protocol services ontwikkeld** die integratiepatronen demonstreren
+- **Model Context Protocol services ontwikkeld** die integratiepatronen voor tools demonstreren
 
 ## Volgende Stappen
 
 [Hoofdstuk 5: Verantwoordelijke Generatieve AI](../05-ResponsibleGenAI/README.md)
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
