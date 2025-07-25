@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
-  "translation_date": "2025-07-23T12:33:50+00:00",
+  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
+  "translation_date": "2025-07-25T07:54:16+00:00",
   "source_file": "README.md",
   "language_code": "cs"
 }
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Struktura kurzu a vzdělávací cesta
 
-**Časová náročnost**: Nastavení prostředí trvá 2 minuty, praktické tutoriály vyžadují 1–3 hodiny v závislosti na hloubce průzkumu.
+**Časová náročnost**: Nastavení prostředí zabere 2 minuty, ukázky vyžadují 1–3 hodiny v závislosti na hloubce průzkumu. Celý workshop lze dokončit online bez lokálního nastavení.
 
 ### **Kapitola 1: Úvod do generativní AI**
 - **Základní koncepty**: Porozumění velkým jazykovým modelům, tokenům, embeddingům a schopnostem AI
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Kapitola 4: Praktické aplikace a projekty**
 - **Generátor příběhů o mazlíčcích** (`petstory/`): Kreativní generování obsahu s GitHub Models
-- **Foundry Local Demo** (`foundrylocal/`): Integrace lokálních AI modelů s OpenAI Java SDK
+- **Foundry Local Demo** (`foundrylocal/`): Integrace lokálního AI modelu s OpenAI Java SDK
 - **MCP Kalkulačka** (`mcp/calculator/`): Základní implementace Model Context Protocol se Spring AI
 - **[→ Začít kapitolu 4](./04-PracticalSamples/README.md)**
 
@@ -82,4 +82,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App s Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Prohlášení:**  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

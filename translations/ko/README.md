@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
-  "translation_date": "2025-07-23T12:04:50+00:00",
+  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
+  "translation_date": "2025-07-25T07:40:19+00:00",
   "source_file": "README.md",
   "language_code": "ko"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![초보자를 위한 생성형 AI - Java 에디션](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.ko.png)
 
-> **NOTE: 빠른 시작**: 이 과정은 온라인에서만 진행 가능하며, 로컬 설정이 필요 없습니다!
+> **NOTE: 빠른 시작**: 이 과정은 온라인에서만 진행할 수 있으며, 로컬 설정이 필요하지 않습니다!
 1. 이 저장소를 본인의 GitHub 계정으로 포크하세요.
 2. **Code** → **Codespaces** 탭 → **...** → **New with options...**를 클릭하세요.
 3. 기본값을 사용하세요 – 이 과정에 맞게 생성된 개발 컨테이너가 선택됩니다.
@@ -28,13 +28,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 과정 구성 및 학습 경로
 
-**소요 시간**: 환경 설정은 2분, 실습 튜토리얼은 탐구 깊이에 따라 각 1~3시간 소요됩니다.
+**소요 시간**: 환경 설정은 2분이 소요되며, 샘플 학습은 탐구 깊이에 따라 1~3시간이 걸립니다. 전체 워크숍은 로컬 설정 없이 온라인에서 완료할 수 있습니다.
 
 ### **1장: 생성형 AI 소개**
 - **핵심 개념**: 대규모 언어 모델, 토큰, 임베딩, AI 기능 이해
 - **Java AI 생태계**: Spring AI 및 OpenAI SDK 개요
-- **모델 컨텍스트 프로토콜**: MCP와 AI 에이전트 간 통신에서의 역할 소개
-- **실용적 응용**: 챗봇 및 콘텐츠 생성과 같은 실제 사례
+- **모델 컨텍스트 프로토콜**: MCP와 AI 에이전트 간의 통신 역할 소개
+- **실용적인 응용**: 챗봇 및 콘텐츠 생성과 같은 실제 사례
 - **[→ 1장 시작하기](./01-IntroToGenAI/README.md)**
 
 ### **2장: 개발 환경 설정**
@@ -47,27 +47,27 @@ CO_OP_TRANSLATOR_METADATA:
 ### **3장: 생성형 AI 핵심 기술**
 - **프롬프트 엔지니어링**: 최적의 AI 모델 응답을 위한 기술
 - **임베딩 및 벡터 연산**: 의미론적 검색 및 유사성 매칭 구현
-- **검색-증강 생성 (RAG)**: AI와 자체 데이터 소스 결합
+- **검색 증강 생성 (RAG)**: AI와 자체 데이터 소스 결합
 - **함수 호출**: 사용자 정의 도구 및 플러그인으로 AI 기능 확장
 - **[→ 3장 시작하기](./03-CoreGenerativeAITechniques/README.md)**
 
-### **4장: 실용적 응용 및 프로젝트**
+### **4장: 실용적인 응용 및 프로젝트**
 - **펫 스토리 생성기** (`petstory/`): GitHub Models를 활용한 창의적 콘텐츠 생성
-- **Foundry 로컬 데모** (`foundrylocal/`): OpenAI Java SDK를 활용한 로컬 AI 모델 통합
+- **Foundry 로컬 데모** (`foundrylocal/`): OpenAI Java SDK를 사용한 로컬 AI 모델 통합
 - **MCP 계산기 서비스** (`mcp/calculator/`): Spring AI를 활용한 기본 모델 컨텍스트 프로토콜 구현
 - **[→ 4장 시작하기](./04-PracticalSamples/README.md)**
 
 ### **5장: 책임 있는 AI 개발**
 - **GitHub Models 안전성**: 내장된 콘텐츠 필터링 및 안전 메커니즘 테스트
-- **책임 있는 AI 데모**: AI 안전 필터 작동 방식을 보여주는 실습 예제
-- **모범 사례**: 윤리적 AI 개발 및 배포를 위한 필수 지침
+- **책임 있는 AI 데모**: AI 안전 필터가 실제로 작동하는 방식에 대한 실습 예제
+- **모범 사례**: 윤리적인 AI 개발 및 배포를 위한 필수 지침
 - **[→ 5장 시작하기](./05-ResponsibleGenAI/README.md)**
 
 ## 추가 자료
 
 - [초보자를 위한 AI 에이전트](https://github.com/microsoft/ai-agents-for-beginners)
-- [초보자를 위한 .NET 생성형 AI](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [초보자를 위한 JavaScript 생성형 AI](https://github.com/microsoft/generative-ai-with-javascript)
+- [초보자를 위한 생성형 AI (.NET 사용)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [초보자를 위한 생성형 AI (JavaScript 사용)](https://github.com/microsoft/generative-ai-with-javascript)
 - [초보자를 위한 생성형 AI](https://github.com/microsoft/generative-ai-for-beginners)
 - [초보자를 위한 머신러닝](https://aka.ms/ml-beginners)
 - [초보자를 위한 데이터 과학](https://aka.ms/datascience-beginners)
@@ -79,7 +79,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [AI 페어 프로그래밍을 위한 GitHub Copilot 마스터하기](https://aka.ms/GitHubCopilotAI)
 - [C#/.NET 개발자를 위한 GitHub Copilot 마스터하기](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [GitHub Copilot 모험 선택하기](https://github.com/microsoft/CopilotAdventures)
-- [Azure AI 서비스를 활용한 RAG 채팅 앱](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [Azure AI 서비스를 활용한 RAG 챗 앱](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서를 해당 언어로 작성된 상태에서 권위 있는 자료로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어 버전을 권위 있는 출처로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임을 지지 않습니다.

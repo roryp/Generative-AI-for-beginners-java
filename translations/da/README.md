@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
-  "translation_date": "2025-07-23T12:21:18+00:00",
+  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
+  "translation_date": "2025-07-25T07:48:26+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -15,20 +15,20 @@ CO_OP_TRANSLATOR_METADATA:
 > **NOTE: Hurtig Start**: Hele kurset kan gennemføres online - Ingen lokal opsætning nødvendig!
 1. Fork dette repository til din GitHub-konto
 2. Klik på **Code** → **Codespaces** fanen → **...** → **New with options...**
-3. Brug standardindstillingerne – dette vil vælge den udviklingscontainer, der er oprettet til dette kursus
+3. Brug standardindstillingerne – dette vælger den udviklingscontainer, der er oprettet til dette kursus
 4. Klik på **Create codespace**
-5. Vent ~2 minutter på, at miljøet er klar
+5. Vent ca. 2 minutter, indtil miljøet er klar
 6. Gå direkte til [Oprettelse af din GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Understøttelse af flere sprog
 
 ### Understøttet via GitHub Action (Automatisk & Altid Opdateret)
 
-[Fransk](../fr/README.md) | [Spansk](../es/README.md) | [Tysk](../de/README.md) | [Russisk](../ru/README.md) | [Arabisk](../ar/README.md) | [Persisk (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kinesisk (Forenklet)](../zh/README.md) | [Kinesisk (Traditionelt, Macau)](../mo/README.md) | [Kinesisk (Traditionelt, Hong Kong)](../hk/README.md) | [Kinesisk (Traditionelt, Taiwan)](../tw/README.md) | [Japansk](../ja/README.md) | [Koreansk](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugisisk (Portugal)](../pt/README.md) | [Portugisisk (Brasilien)](../br/README.md) | [Italiensk](../it/README.md) | [Polsk](../pl/README.md) | [Tyrkisk](../tr/README.md) | [Græsk](../el/README.md) | [Thai](../th/README.md) | [Svensk](../sv/README.md) | [Dansk](./README.md) | [Norsk](../no/README.md) | [Finsk](../fi/README.md) | [Hollandsk](../nl/README.md) | [Hebraisk](../he/README.md) | [Vietnamesisk](../vi/README.md) | [Indonesisk](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filippinsk)](../tl/README.md) | [Swahili](../sw/README.md) | [Ungarsk](../hu/README.md) | [Tjekkisk](../cs/README.md) | [Slovakisk](../sk/README.md) | [Rumænsk](../ro/README.md) | [Bulgarsk](../bg/README.md) | [Serbisk (Kyrillisk)](../sr/README.md) | [Kroatisk](../hr/README.md) | [Slovensk](../sl/README.md) | [Ukrainsk](../uk/README.md) | [Burmesisk (Myanmar)](../my/README.md)
+[Fransk](../fr/README.md) | [Spansk](../es/README.md) | [Tysk](../de/README.md) | [Russisk](../ru/README.md) | [Arabisk](../ar/README.md) | [Persisk (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kinesisk (Forenklet)](../zh/README.md) | [Kinesisk (Traditionel, Macau)](../mo/README.md) | [Kinesisk (Traditionel, Hong Kong)](../hk/README.md) | [Kinesisk (Traditionel, Taiwan)](../tw/README.md) | [Japansk](../ja/README.md) | [Koreansk](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalesisk](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugisisk (Portugal)](../pt/README.md) | [Portugisisk (Brasilien)](../br/README.md) | [Italiensk](../it/README.md) | [Polsk](../pl/README.md) | [Tyrkisk](../tr/README.md) | [Græsk](../el/README.md) | [Thai](../th/README.md) | [Svensk](../sv/README.md) | [Dansk](./README.md) | [Norsk](../no/README.md) | [Finsk](../fi/README.md) | [Hollandsk](../nl/README.md) | [Hebraisk](../he/README.md) | [Vietnamesisk](../vi/README.md) | [Indonesisk](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Ungarsk](../hu/README.md) | [Tjekkisk](../cs/README.md) | [Slovakisk](../sk/README.md) | [Rumænsk](../ro/README.md) | [Bulgarsk](../bg/README.md) | [Serbisk (Kyrillisk)](../sr/README.md) | [Kroatisk](../hr/README.md) | [Slovensk](../sl/README.md) | [Ukrainsk](../uk/README.md) | [Burmesisk (Myanmar)](../my/README.md)
 
 ## Kursusstruktur & Læringssti
 
-**Tidsforbrug**: Opsætning af miljø tager 2 minutter, og praktiske tutorials kræver 1-3 timer hver afhængigt af dybden af udforskningen.
+**Tidsforbrug**: Opsætning af miljø tager 2 minutter, og eksemplerne kræver 1-3 timer afhængigt af, hvor dybt du udforsker. Hele workshoppen kan gennemføres online uden lokal opsætning.
 
 ### **Kapitel 1: Introduktion til Generativ AI**
 - **Kernebegreber**: Forståelse af store sprogmodeller, tokens, embeddings og AI-funktioner
@@ -38,14 +38,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Kapitel 1](./01-IntroToGenAI/README.md)**
 
 ### **Kapitel 2: Opsætning af Udviklingsmiljø**
-- **Multi-Provider Konfiguration**: Opsæt GitHub Models, Azure OpenAI og OpenAI Java SDK integrationer
+- **Konfiguration af flere udbydere**: Opsætning af GitHub Models, Azure OpenAI og OpenAI Java SDK-integrationer
 - **Spring Boot + Spring AI**: Bedste praksis for udvikling af AI-applikationer til virksomheder
 - **GitHub Models**: Gratis adgang til AI-modeller til prototyper og læring (ingen kreditkort nødvendig)
-- **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces konfiguration
+- **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces-konfiguration
 - **[→ Start Kapitel 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Kapitel 3: Kerne Generative AI Teknikker**
-- **Prompt Engineering**: Teknikker til optimale AI-modelsvar
+- **Prompt Engineering**: Teknikker til at opnå optimale AI-modelsvar
 - **Embeddings & Vektoroperationer**: Implementer semantisk søgning og lighedsmatching
 - **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
 - **Function Calling**: Udvid AI-funktioner med brugerdefinerede værktøjer og plugins
@@ -54,11 +54,11 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapitel 4: Praktiske Anvendelser & Projekter**
 - **Pet Story Generator** (`petstory/`): Kreativ indholdsgenerering med GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Lokal AI-modelintegration med OpenAI Java SDK
-- **MCP Calculator Service** (`mcp/calculator/`): Grundlæggende Model Context Protocol implementering med Spring AI
+- **MCP Calculator Service** (`mcp/calculator/`): Grundlæggende implementering af Model Context Protocol med Spring AI
 - **[→ Start Kapitel 4](./04-PracticalSamples/README.md)**
 
-### **Kapitel 5: Ansvarlig AI Udvikling**
-- **GitHub Models Sikkerhed**: Test indbyggede indholdsfiltrerings- og sikkerhedsmekanismer
+### **Kapitel 5: Ansvarlig AI-udvikling**
+- **GitHub Models Sikkerhed**: Test indbyggede indholdsfiltre og sikkerhedsmekanismer
 - **Ansvarlig AI Demo**: Praktisk eksempel, der viser, hvordan AI-sikkerhedsfiltre fungerer i praksis
 - **Bedste Praksis**: Vigtige retningslinjer for etisk AI-udvikling og implementering
 - **[→ Start Kapitel 5](./05-ResponsibleGenAI/README.md)**
@@ -75,11 +75,11 @@ CO_OP_TRANSLATOR_METADATA:
 - [Cybersikkerhed for Begyndere](https://github.com/microsoft/Security-101)
 - [Webudvikling for Begyndere](https://aka.ms/webdev-beginners)
 - [IoT for Begyndere](https://aka.ms/iot-beginners)
-- [XR Udvikling for Begyndere](https://github.com/microsoft/xr-development-for-beginners)
+- [XR-udvikling for Begyndere](https://github.com/microsoft/xr-development-for-beginners)
 - [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App med Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

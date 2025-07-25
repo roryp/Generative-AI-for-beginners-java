@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
-  "translation_date": "2025-07-23T12:26:42+00:00",
+  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
+  "translation_date": "2025-07-25T07:51:09+00:00",
   "source_file": "README.md",
   "language_code": "vi"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![AI Tạo Sinh cho Người Mới Bắt Đầu - Phiên Bản Java](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.vi.png)
 
-> **NOTE: Bắt đầu nhanh**: Toàn bộ khóa học có thể thực hiện trực tuyến - Không cần cài đặt cục bộ!
+> **NOTE: Bắt đầu nhanh**: Toàn bộ khóa học có thể thực hiện trực tuyến - Không cần thiết lập cục bộ!
 1. Fork kho lưu trữ này vào tài khoản GitHub của bạn
 2. Nhấp vào **Code** → tab **Codespaces** → **...** → **New with options...**
 3. Sử dụng các thiết lập mặc định – điều này sẽ chọn container Phát triển được tạo cho khóa học này
@@ -28,16 +28,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cấu Trúc Khóa Học & Lộ Trình Học Tập
 
-**Thời gian cam kết**: Cài đặt môi trường mất 2 phút, với các bài hướng dẫn thực hành yêu cầu 1-3 giờ mỗi bài tùy thuộc vào mức độ khám phá.
+**Thời gian cam kết**: Thiết lập môi trường mất 2 phút, các ví dụ mẫu yêu cầu 1-3 giờ tùy thuộc vào mức độ khám phá. Toàn bộ hội thảo có thể hoàn thành trực tuyến mà không cần thiết lập cục bộ.
 
 ### **Chương 1: Giới thiệu về AI Tạo Sinh**
-- **Khái niệm cốt lõi**: Hiểu về Mô hình Ngôn ngữ Lớn, token, embedding, và khả năng của AI
+- **Khái niệm cốt lõi**: Hiểu về Mô hình Ngôn ngữ Lớn, token, embedding và khả năng AI
 - **Hệ sinh thái AI Java**: Tổng quan về Spring AI và OpenAI SDKs
-- **Giao thức Ngữ cảnh Mô hình**: Giới thiệu về MCP và vai trò của nó trong giao tiếp của tác nhân AI
+- **Giao thức Ngữ cảnh Mô hình**: Giới thiệu về MCP và vai trò của nó trong giao tiếp tác nhân AI
 - **Ứng dụng thực tiễn**: Các kịch bản thực tế bao gồm chatbot và tạo nội dung
 - **[→ Bắt đầu Chương 1](./01-IntroToGenAI/README.md)**
 
-### **Chương 2: Cài đặt Môi trường Phát triển**
+### **Chương 2: Thiết lập Môi trường Phát triển**
 - **Cấu hình Đa Nhà cung cấp**: Thiết lập GitHub Models, Azure OpenAI, và tích hợp OpenAI Java SDK
 - **Spring Boot + Spring AI**: Các thực hành tốt nhất cho phát triển ứng dụng AI doanh nghiệp
 - **GitHub Models**: Truy cập mô hình AI miễn phí để tạo mẫu và học tập (không cần thẻ tín dụng)
@@ -45,7 +45,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Bắt đầu Chương 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chương 3: Kỹ thuật AI Tạo Sinh Cốt lõi**
-- **Kỹ thuật Prompt**: Các kỹ thuật để có được phản hồi tối ưu từ mô hình AI
+- **Kỹ thuật Prompt**: Các kỹ thuật để có phản hồi tối ưu từ mô hình AI
 - **Embedding & Hoạt động Vector**: Triển khai tìm kiếm ngữ nghĩa và so khớp tương đồng
 - **Tạo Sinh Tăng cường Truy xuất (RAG)**: Kết hợp AI với các nguồn dữ liệu của bạn
 - **Gọi Hàm**: Mở rộng khả năng AI với các công cụ và plugin tùy chỉnh
@@ -58,9 +58,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Bắt đầu Chương 4](./04-PracticalSamples/README.md)**
 
 ### **Chương 5: Phát triển AI Có Trách nhiệm**
-- **An toàn của GitHub Models**: Kiểm tra bộ lọc nội dung và cơ chế an toàn tích hợp
+- **An toàn GitHub Models**: Kiểm tra bộ lọc nội dung và cơ chế an toàn tích hợp
 - **Demo AI Có Trách nhiệm**: Ví dụ thực hành cho thấy cách bộ lọc an toàn AI hoạt động
-- **Thực hành tốt nhất**: Các hướng dẫn thiết yếu để phát triển và triển khai AI một cách đạo đức
+- **Thực hành tốt nhất**: Các hướng dẫn thiết yếu để phát triển và triển khai AI có đạo đức
 - **[→ Bắt đầu Chương 5](./05-ResponsibleGenAI/README.md)**
 
 ## Tài Nguyên Bổ Sung 
