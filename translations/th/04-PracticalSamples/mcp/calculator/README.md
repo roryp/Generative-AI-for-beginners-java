@@ -1,137 +1,313 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
-  "translation_date": "2025-07-25T09:34:06+00:00",
+  "original_hash": "8c6c7e9008b114540677f7a65aa9ddad",
+  "translation_date": "2025-07-25T11:27:36+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "th"
 }
 -->
-# บริการเครื่องคิดเลข MCP
-
->**Note**: บทนี้มี [**Tutorial**](./TUTORIAL.md) ที่จะแนะนำคุณผ่านตัวอย่างต่างๆ
-
-ยินดีต้อนรับสู่ประสบการณ์การใช้งานจริงครั้งแรกของคุณกับ **Model Context Protocol (MCP)**! ในบทก่อนหน้านี้ คุณได้เรียนรู้เกี่ยวกับพื้นฐานของ AI เชิงสร้างสรรค์และตั้งค่าพื้นฐานสำหรับการพัฒนา ตอนนี้ถึงเวลาสร้างสิ่งที่ใช้งานได้จริงแล้ว
-
-บริการเครื่องคิดเลขนี้แสดงให้เห็นว่าโมเดล AI สามารถโต้ตอบกับเครื่องมือภายนอกได้อย่างปลอดภัยผ่าน MCP อย่างไร แทนที่จะพึ่งพาความสามารถทางคณิตศาสตร์ของโมเดล AI ซึ่งบางครั้งอาจไม่แม่นยำ เราจะแสดงวิธีสร้างระบบที่แข็งแกร่งซึ่ง AI สามารถเรียกใช้บริการเฉพาะทางเพื่อการคำนวณที่แม่นยำ
+# บทแนะนำการใช้งาน MCP Calculator สำหรับผู้เริ่มต้น
 
 ## สารบัญ
 
 - [สิ่งที่คุณจะได้เรียนรู้](../../../../../04-PracticalSamples/mcp/calculator)
 - [ข้อกำหนดเบื้องต้น](../../../../../04-PracticalSamples/mcp/calculator)
-- [แนวคิดสำคัญ](../../../../../04-PracticalSamples/mcp/calculator)
-- [เริ่มต้นอย่างรวดเร็ว](../../../../../04-PracticalSamples/mcp/calculator)
-- [การดำเนินการของเครื่องคิดเลขที่มีให้ใช้งาน](../../../../../04-PracticalSamples/mcp/calculator)
-- [ไคลเอนต์ทดสอบ](../../../../../04-PracticalSamples/mcp/calculator)
-  - [1. ไคลเอนต์ MCP โดยตรง (SDKClient)](../../../../../04-PracticalSamples/mcp/calculator)
-  - [2. ไคลเอนต์ที่ขับเคลื่อนด้วย AI (LangChain4jClient)](../../../../../04-PracticalSamples/mcp/calculator)
-- [MCP Inspector (Web UI)](../../../../../04-PracticalSamples/mcp/calculator)
-  - [คำแนะนำทีละขั้นตอน](../../../../../04-PracticalSamples/mcp/calculator)
+- [ทำความเข้าใจกับโครงสร้างโปรเจกต์](../../../../../04-PracticalSamples/mcp/calculator)
+- [อธิบายส่วนประกอบหลัก](../../../../../04-PracticalSamples/mcp/calculator)
+  - [1. แอปพลิเคชันหลัก](../../../../../04-PracticalSamples/mcp/calculator)
+  - [2. บริการเครื่องคิดเลข](../../../../../04-PracticalSamples/mcp/calculator)
+  - [3. ไคลเอนต์ MCP แบบตรง](../../../../../04-PracticalSamples/mcp/calculator)
+  - [4. ไคลเอนต์ที่ขับเคลื่อนด้วย AI](../../../../../04-PracticalSamples/mcp/calculator)
+- [การรันตัวอย่าง](../../../../../04-PracticalSamples/mcp/calculator)
+- [วิธีการทำงานร่วมกันทั้งหมด](../../../../../04-PracticalSamples/mcp/calculator)
+- [ขั้นตอนถัดไป](../../../../../04-PracticalSamples/mcp/calculator)
 
 ## สิ่งที่คุณจะได้เรียนรู้
 
-เมื่อทำตัวอย่างนี้ คุณจะเข้าใจ:
-- วิธีสร้างบริการที่รองรับ MCP โดยใช้ Spring Boot
-- ความแตกต่างระหว่างการสื่อสารผ่านโปรโตคอลโดยตรงและการโต้ตอบที่ขับเคลื่อนด้วย AI
-- วิธีที่โมเดล AI ตัดสินใจว่าจะใช้เครื่องมือภายนอกเมื่อใดและอย่างไร
-- แนวทางปฏิบัติที่ดีที่สุดสำหรับการสร้างแอปพลิเคชัน AI ที่รองรับเครื่องมือ
+บทแนะนำนี้อธิบายวิธีสร้างบริการเครื่องคิดเลขโดยใช้ Model Context Protocol (MCP) คุณจะได้เรียนรู้:
 
-เหมาะสำหรับผู้เริ่มต้นที่เรียนรู้แนวคิด MCP และพร้อมที่จะสร้างการผสานรวมเครื่องมือ AI ครั้งแรก!
+- วิธีสร้างบริการที่ AI สามารถใช้งานเป็นเครื่องมือได้
+- วิธีตั้งค่าการสื่อสารโดยตรงกับบริการ MCP
+- วิธีที่โมเดล AI สามารถเลือกใช้เครื่องมือได้โดยอัตโนมัติ
+- ความแตกต่างระหว่างการเรียกโปรโตคอลโดยตรงและการโต้ตอบที่ใช้ AI ช่วย
 
 ## ข้อกำหนดเบื้องต้น
 
-- Java 21+
-- Maven 3.6+
-- **GitHub Token**: จำเป็นสำหรับไคลเอนต์ที่ขับเคลื่อนด้วย AI หากคุณยังไม่ได้ตั้งค่า โปรดดู [บทที่ 2: การตั้งค่าสภาพแวดล้อมการพัฒนา](../../../02-SetupDevEnvironment/README.md) สำหรับคำแนะนำ
+ก่อนเริ่มต้น โปรดตรวจสอบว่าคุณมี:
+- ติดตั้ง Java 21 หรือเวอร์ชันที่สูงกว่า
+- Maven สำหรับการจัดการ dependencies
+- บัญชี GitHub พร้อม Personal Access Token (PAT)
+- ความเข้าใจพื้นฐานเกี่ยวกับ Java และ Spring Boot
 
-## แนวคิดสำคัญ
+## ทำความเข้าใจกับโครงสร้างโปรเจกต์
 
-**Model Context Protocol (MCP)** เป็นวิธีมาตรฐานสำหรับแอปพลิเคชัน AI ในการเชื่อมต่อกับเครื่องมือภายนอกอย่างปลอดภัย คิดว่าเป็น "สะพาน" ที่ช่วยให้โมเดล AI ใช้บริการภายนอก เช่น เครื่องคิดเลขของเรา แทนที่โมเดล AI จะพยายามคำนวณด้วยตัวเอง (ซึ่งอาจไม่แม่นยำ) มันสามารถเรียกใช้บริการเครื่องคิดเลขของเราเพื่อให้ได้ผลลัพธ์ที่ถูกต้อง MCP ช่วยให้การสื่อสารนี้เกิดขึ้นอย่างปลอดภัยและสม่ำเสมอ
+โปรเจกต์เครื่องคิดเลขนี้มีไฟล์สำคัญหลายไฟล์:
 
-**Server-Sent Events (SSE)** ช่วยให้การสื่อสารแบบเรียลไทม์ระหว่างเซิร์ฟเวอร์และไคลเอนต์ แตกต่างจากคำขอ HTTP แบบดั้งเดิมที่คุณต้องรอการตอบกลับ SSE ช่วยให้เซิร์ฟเวอร์ส่งการอัปเดตไปยังไคลเอนต์อย่างต่อเนื่อง เหมาะสำหรับแอปพลิเคชัน AI ที่การตอบกลับอาจถูกสตรีมหรือใช้เวลาประมวลผล
-
-**AI Tools & Function Calling** ช่วยให้โมเดล AI เลือกและใช้ฟังก์ชันภายนอกโดยอัตโนมัติ (เช่น การดำเนินการของเครื่องคิดเลข) ตามคำขอของผู้ใช้ เมื่อคุณถามว่า "15 + 27 เท่ากับเท่าไหร่?" โมเดล AI เข้าใจว่าคุณต้องการการบวก และเรียกใช้เครื่องมือ `add` ของเราพร้อมพารามิเตอร์ที่ถูกต้อง (15, 27) และส่งคืนผลลัพธ์ในรูปแบบภาษาธรรมชาติ AI ทำหน้าที่เป็นผู้ประสานงานอัจฉริยะที่รู้ว่าจะใช้เครื่องมือแต่ละตัวเมื่อใดและอย่างไร
-
-## เริ่มต้นอย่างรวดเร็ว
-
-### 1. ไปที่ไดเรกทอรีแอปพลิเคชันเครื่องคิดเลข
-```bash
-cd Generative-AI-for-beginners-java/04-PracticalSamples/mcp/calculator
+```
+calculator/
+├── src/main/java/com/microsoft/mcp/sample/server/
+│   ├── McpServerApplication.java          # Main Spring Boot app
+│   └── service/CalculatorService.java     # Calculator operations
+└── src/test/java/com/microsoft/mcp/sample/client/
+    ├── SDKClient.java                     # Direct MCP communication
+    ├── LangChain4jClient.java            # AI-powered client
+    └── Bot.java                          # Simple chat interface
 ```
 
-### 2. สร้างและรัน
-```bash
-mvn clean install -DskipTests
-java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
+## อธิบายส่วนประกอบหลัก
+
+### 1. แอปพลิเคชันหลัก
+
+**ไฟล์:** `McpServerApplication.java`
+
+นี่คือจุดเริ่มต้นของบริการเครื่องคิดเลขของเรา เป็นแอปพลิเคชัน Spring Boot มาตรฐานที่มีการเพิ่มพิเศษดังนี้:
+
+```java
+@SpringBootApplication
+public class McpServerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(McpServerApplication.class, args);
+    }
+    
+    @Bean
+    public ToolCallbackProvider calculatorTools(CalculatorService calculator) {
+        return MethodToolCallbackProvider.builder().toolObjects(calculator).build();
+    }
+}
 ```
 
-### 3. ทดสอบด้วยไคลเอนต์
-- **SDKClient**: การโต้ตอบโปรโตคอล MCP โดยตรง
-- **LangChain4jClient**: การโต้ตอบด้วยภาษาธรรมชาติที่ขับเคลื่อนด้วย AI (ต้องใช้ GitHub token)
+**สิ่งที่ไฟล์นี้ทำ:**
+- เริ่มต้น Spring Boot web server บนพอร์ต 8080
+- สร้าง `ToolCallbackProvider` เพื่อทำให้เมธอดของเครื่องคิดเลขพร้อมใช้งานเป็นเครื่องมือ MCP
+- การใช้ `@Bean` บอกให้ Spring จัดการไฟล์นี้เป็นคอมโพเนนต์ที่ส่วนอื่นสามารถใช้งานได้
 
-## การดำเนินการของเครื่องคิดเลขที่มีให้ใช้งาน
+### 2. บริการเครื่องคิดเลข
 
-- `add(a, b)`, `subtract(a, b)`, `multiply(a, b)`, `divide(a, b)`
-- `power(base, exponent)`, `squareRoot(number)`, `absolute(number)`
-- `modulus(a, b)`, `help()`
+**ไฟล์:** `CalculatorService.java`
 
-## ไคลเอนต์ทดสอบ
+นี่คือส่วนที่ทำงานคำนวณทั้งหมด แต่ละเมธอดถูกกำหนดด้วย `@Tool` เพื่อให้สามารถเรียกใช้งานผ่าน MCP ได้:
 
-### 1. ไคลเอนต์ MCP โดยตรง (SDKClient)
-ทดสอบการสื่อสารโปรโตคอล MCP แบบดิบ รันด้วย:
-```bash
-mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
+```java
+@Service
+public class CalculatorService {
+
+    @Tool(description = "Add two numbers together")
+    public String add(double a, double b) {
+        double result = a + b;
+        return formatResult(a, "+", b, result);
+    }
+
+    @Tool(description = "Subtract the second number from the first number")
+    public String subtract(double a, double b) {
+        double result = a - b;
+        return formatResult(a, "-", b, result);
+    }
+    
+    // More calculator operations...
+    
+    private String formatResult(double a, String operator, double b, double result) {
+        return String.format("%.2f %s %.2f = %.2f", a, operator, b, result);
+    }
+}
 ```
 
-### 2. ไคลเอนต์ที่ขับเคลื่อนด้วย AI (LangChain4jClient)
-แสดงการโต้ตอบด้วยภาษาธรรมชาติกับ GitHub Models ต้องใช้ GitHub token (ดู [ข้อกำหนดเบื้องต้น](../../../../../04-PracticalSamples/mcp/calculator))
+**คุณสมบัติสำคัญ:**
 
-**รัน:**
-```bash
-mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
+1. **`@Tool` Annotation**: บอก MCP ว่าเมธอดนี้สามารถเรียกใช้งานได้จากไคลเอนต์ภายนอก
+2. **คำอธิบายที่ชัดเจน**: แต่ละเครื่องมือมีคำอธิบายเพื่อช่วยให้โมเดล AI เข้าใจว่าเมื่อใดควรใช้งาน
+3. **รูปแบบการคืนค่าที่สม่ำเสมอ**: ทุกการดำเนินการจะคืนค่าเป็นข้อความที่อ่านง่าย เช่น "5.00 + 3.00 = 8.00"
+4. **การจัดการข้อผิดพลาด**: การหารด้วยศูนย์และรากที่สองของค่าลบจะคืนค่าข้อความแสดงข้อผิดพลาด
+
+**การดำเนินการที่มีให้ใช้งาน:**
+- `add(a, b)` - บวกตัวเลขสองตัว
+- `subtract(a, b)` - ลบตัวที่สองออกจากตัวแรก
+- `multiply(a, b)` - คูณตัวเลขสองตัว
+- `divide(a, b)` - หารตัวแรกด้วยตัวที่สอง (พร้อมตรวจสอบศูนย์)
+- `power(base, exponent)` - ยกกำลัง base ด้วย exponent
+- `squareRoot(number)` - คำนวณรากที่สอง (พร้อมตรวจสอบค่าลบ)
+- `modulus(a, b)` - หารเอาเศษ
+- `absolute(number)` - คืนค่าค่าสัมบูรณ์
+- `help()` - คืนค่าข้อมูลเกี่ยวกับการดำเนินการทั้งหมด
+
+### 3. ไคลเอนต์ MCP แบบตรง
+
+**ไฟล์:** `SDKClient.java`
+
+ไคลเอนต์นี้สื่อสารโดยตรงกับเซิร์ฟเวอร์ MCP โดยไม่ใช้ AI และเรียกใช้ฟังก์ชันเครื่องคิดเลขเฉพาะ:
+
+```java
+public class SDKClient {
+    
+    public static void main(String[] args) {
+        var transport = new WebFluxSseClientTransport(
+            WebClient.builder().baseUrl("http://localhost:8080")
+        );
+        new SDKClient(transport).run();
+    }
+    
+    public void run() {
+        var client = McpClient.sync(this.transport).build();
+        client.initialize();
+        
+        // List available tools
+        ListToolsResult toolsList = client.listTools();
+        System.out.println("Available Tools = " + toolsList);
+        
+        // Call specific calculator functions
+        CallToolResult resultAdd = client.callTool(
+            new CallToolRequest("add", Map.of("a", 5.0, "b", 3.0))
+        );
+        System.out.println("Add Result = " + resultAdd);
+        
+        CallToolResult resultSqrt = client.callTool(
+            new CallToolRequest("squareRoot", Map.of("number", 16.0))
+        );
+        System.out.println("Square Root Result = " + resultSqrt);
+        
+        client.closeGracefully();
+    }
+}
 ```
 
-## MCP Inspector (Web UI)
+**สิ่งที่ไฟล์นี้ทำ:**
+1. **เชื่อมต่อ** กับเซิร์ฟเวอร์เครื่องคิดเลขที่ `http://localhost:8080`
+2. **แสดงรายการ** เครื่องมือทั้งหมดที่มี (ฟังก์ชันเครื่องคิดเลขของเรา)
+3. **เรียกใช้** ฟังก์ชันเฉพาะพร้อมพารามิเตอร์ที่กำหนด
+4. **แสดงผลลัพธ์** โดยตรง
 
-MCP Inspector ให้บริการอินเทอร์เฟซเว็บแบบภาพเพื่อทดสอบบริการ MCP ของคุณโดยไม่ต้องเขียนโค้ด เหมาะสำหรับผู้เริ่มต้นที่ต้องการเข้าใจวิธีการทำงานของ MCP!
+**เมื่อใดควรใช้งาน:** เมื่อคุณทราบแน่ชัดว่าต้องการคำนวณอะไรและต้องการเรียกใช้งานโปรแกรมโดยตรง
 
-### คำแนะนำทีละขั้นตอน:
+### 4. ไคลเอนต์ที่ขับเคลื่อนด้วย AI
 
-1. **เริ่มเซิร์ฟเวอร์เครื่องคิดเลข** (หากยังไม่ได้รัน):
-   ```bash
-   java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
-   ```
+**ไฟล์:** `LangChain4jClient.java`
 
-2. **ติดตั้งและรัน MCP Inspector** ในเทอร์มินัลใหม่:
-   ```bash
-   npx @modelcontextprotocol/inspector
-   ```
+ไคลเอนต์นี้ใช้โมเดล AI (GPT-4o-mini) ที่สามารถตัดสินใจเลือกเครื่องมือเครื่องคิดเลขได้โดยอัตโนมัติ:
 
-3. **เปิดอินเทอร์เฟซเว็บ**:
-   - มองหาข้อความเช่น "Inspector running at http://localhost:6274"
-   - เปิด URL นั้นในเว็บเบราว์เซอร์ของคุณ
+```java
+public class LangChain4jClient {
+    
+    public static void main(String[] args) throws Exception {
+        // Set up the AI model (using GitHub Models)
+        ChatLanguageModel model = OpenAiOfficialChatModel.builder()
+                .isGitHubModels(true)
+                .apiKey(System.getenv("GITHUB_TOKEN"))
+                .modelName("gpt-4o-mini")
+                .build();
 
-4. **เชื่อมต่อกับบริการเครื่องคิดเลขของคุณ**:
-   - ในอินเทอร์เฟซเว็บ ตั้งค่าประเภทการส่งข้อมูลเป็น "SSE"
-   - ตั้งค่า URL เป็น: `http://localhost:8080/sse`
-   - คลิกปุ่ม "Connect"
+        // Connect to our calculator MCP server
+        McpTransport transport = new HttpMcpTransport.Builder()
+                .sseUrl("http://localhost:8080/sse")
+                .logRequests(true)  // Shows what the AI is doing
+                .logResponses(true)
+                .build();
 
-5. **สำรวจเครื่องมือที่มีให้ใช้งาน**:
-   - คลิก "List Tools" เพื่อดูการดำเนินการของเครื่องคิดเลขทั้งหมด
-   - คุณจะเห็นฟังก์ชัน เช่น `add`, `subtract`, `multiply` เป็นต้น
+        McpClient mcpClient = new DefaultMcpClient.Builder()
+                .transport(transport)
+                .build();
 
-6. **ทดสอบการดำเนินการของเครื่องคิดเลข**:
-   - เลือกเครื่องมือ (เช่น "add")
-   - ป้อนพารามิเตอร์ (เช่น `a: 15`, `b: 27`)
-   - คลิก "Run Tool"
-   - ดูผลลัพธ์ที่ส่งคืนโดยบริการ MCP ของคุณ!
+        // Give the AI access to our calculator tools
+        ToolProvider toolProvider = McpToolProvider.builder()
+                .mcpClients(List.of(mcpClient))
+                .build();
 
-วิธีการแบบภาพนี้ช่วยให้คุณเข้าใจว่าการสื่อสาร MCP ทำงานอย่างไร ก่อนที่จะสร้างไคลเอนต์ของคุณเอง
+        // Create an AI bot that can use our calculator
+        Bot bot = AiServices.builder(Bot.class)
+                .chatLanguageModel(model)
+                .toolProvider(toolProvider)
+                .build();
 
-![npx inspector](../../../../../translated_images/tool.214c70103694335c4cfdc2d624373dfce4b0162f6aea089ac1da9051fb563b7f.th.png)
+        // Now we can ask the AI to do calculations in natural language
+        String response = bot.chat("Calculate the sum of 24.5 and 17.3 using the calculator service");
+        System.out.println(response);
 
----
-**อ้างอิง:** [MCP Server Boot Starter Docs](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server-boot-starter-docs.html)
+        response = bot.chat("What's the square root of 144?");
+        System.out.println(response);
+    }
+}
+```
+
+**สิ่งที่ไฟล์นี้ทำ:**
+1. **สร้าง** การเชื่อมต่อกับโมเดล AI โดยใช้ GitHub token ของคุณ
+2. **เชื่อมต่อ** AI กับเซิร์ฟเวอร์ MCP เครื่องคิดเลขของเรา
+3. **ให้สิทธิ์** AI ในการเข้าถึงเครื่องมือเครื่องคิดเลขทั้งหมด
+4. **อนุญาต** คำขอในภาษาธรรมชาติ เช่น "คำนวณผลรวมของ 24.5 และ 17.3"
+
+**AI จะทำงานโดยอัตโนมัติ:**
+- เข้าใจว่าคุณต้องการบวกตัวเลข
+- เลือกเครื่องมือ `add`
+- เรียกใช้ `add(24.5, 17.3)`
+- คืนผลลัพธ์ในรูปแบบที่เป็นธรรมชาติ
+
+## การรันตัวอย่าง
+
+### ขั้นตอนที่ 1: เริ่มเซิร์ฟเวอร์เครื่องคิดเลข
+
+ก่อนอื่น ตั้งค่า GitHub token ของคุณ (จำเป็นสำหรับไคลเอนต์ AI):
+
+**Windows:**
+```cmd
+set GITHUB_TOKEN=your_github_token_here
+```
+
+**Linux/macOS:**
+```bash
+export GITHUB_TOKEN=your_github_token_here
+```
+
+เริ่มเซิร์ฟเวอร์:
+```bash
+cd 04-PracticalSamples/mcp/calculator
+mvn spring-boot:run
+```
+
+เซิร์ฟเวอร์จะเริ่มต้นที่ `http://localhost:8080` คุณควรเห็น:
+```
+Started McpServerApplication in X.XXX seconds
+```
+
+### ขั้นตอนที่ 2: ทดสอบด้วยไคลเอนต์แบบตรง
+
+เปิดเทอร์มินัลใหม่:
+```bash
+mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient"
+```
+
+คุณจะเห็นผลลัพธ์เช่น:
+```
+Available Tools = [add, subtract, multiply, divide, power, squareRoot, modulus, absolute, help]
+Add Result = 5.00 + 3.00 = 8.00
+Square Root Result = √16.00 = 4.00
+```
+
+### ขั้นตอนที่ 3: ทดสอบด้วยไคลเอนต์ AI
+
+```bash
+mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient"
+```
+
+คุณจะเห็น AI ใช้เครื่องมือโดยอัตโนมัติ:
+```
+The sum of 24.5 and 17.3 is 41.8.
+The square root of 144 is 12.
+```
+
+## วิธีการทำงานร่วมกันทั้งหมด
+
+นี่คือกระบวนการทั้งหมดเมื่อคุณถาม AI ว่า "5 + 3 เท่ากับเท่าไร?":
+
+1. **คุณ** ถาม AI ด้วยภาษาธรรมชาติ
+2. **AI** วิเคราะห์คำขอของคุณและเข้าใจว่าคุณต้องการบวก
+3. **AI** เรียกเซิร์ฟเวอร์ MCP: `add(5.0, 3.0)`
+4. **บริการเครื่องคิดเลข** ดำเนินการ: `5.0 + 3.0 = 8.0`
+5. **บริการเครื่องคิดเลข** คืนค่า: `"5.00 + 3.00 = 8.00"`
+6. **AI** รับผลลัพธ์และจัดรูปแบบคำตอบในภาษาธรรมชาติ
+7. **คุณ** ได้รับ: "ผลรวมของ 5 และ 3 คือ 8"
+
+## ขั้นตอนถัดไป
+
+สำหรับตัวอย่างเพิ่มเติม ดู [Chapter 04: Practical samples](../../README.md)
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามนุษย์ที่มีความเชี่ยวชาญ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้

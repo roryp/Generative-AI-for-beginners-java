@@ -1,137 +1,313 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
-  "translation_date": "2025-07-25T10:01:57+00:00",
+  "original_hash": "8c6c7e9008b114540677f7a65aa9ddad",
+  "translation_date": "2025-07-25T11:52:51+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "cs"
 }
 -->
-# Základní kalkulační služba MCP
-
->**Note**: Tato kapitola obsahuje [**Návod**](./TUTORIAL.md), který vás provede ukázkami.
-
-Vítejte u svého prvního praktického zážitku s **Model Context Protocol (MCP)**! V předchozích kapitolách jste se naučili základy generativní AI a nastavili si vývojové prostředí. Nyní je čas vytvořit něco praktického.
-
-Tato kalkulační služba demonstruje, jak mohou AI modely bezpečně komunikovat s externími nástroji pomocí MCP. Místo spoléhání na občas nespolehlivé matematické schopnosti AI modelu vám ukážeme, jak vytvořit robustní systém, kde AI může volat specializované služby pro přesné výpočty.
+# Návod na MCP kalkulačku pro začátečníky
 
 ## Obsah
 
 - [Co se naučíte](../../../../../04-PracticalSamples/mcp/calculator)
 - [Předpoklady](../../../../../04-PracticalSamples/mcp/calculator)
-- [Klíčové koncepty](../../../../../04-PracticalSamples/mcp/calculator)
-- [Rychlý start](../../../../../04-PracticalSamples/mcp/calculator)
-- [Dostupné kalkulační operace](../../../../../04-PracticalSamples/mcp/calculator)
-- [Testovací klienti](../../../../../04-PracticalSamples/mcp/calculator)
-  - [1. Přímý MCP klient (SDKClient)](../../../../../04-PracticalSamples/mcp/calculator)
-  - [2. Klient poháněný AI (LangChain4jClient)](../../../../../04-PracticalSamples/mcp/calculator)
-- [MCP Inspector (Webové rozhraní)](../../../../../04-PracticalSamples/mcp/calculator)
-  - [Podrobný návod](../../../../../04-PracticalSamples/mcp/calculator)
+- [Pochopení struktury projektu](../../../../../04-PracticalSamples/mcp/calculator)
+- [Vysvětlení hlavních komponent](../../../../../04-PracticalSamples/mcp/calculator)
+  - [1. Hlavní aplikace](../../../../../04-PracticalSamples/mcp/calculator)
+  - [2. Kalkulační služba](../../../../../04-PracticalSamples/mcp/calculator)
+  - [3. Přímý MCP klient](../../../../../04-PracticalSamples/mcp/calculator)
+  - [4. Klient s podporou AI](../../../../../04-PracticalSamples/mcp/calculator)
+- [Spuštění příkladů](../../../../../04-PracticalSamples/mcp/calculator)
+- [Jak to vše funguje dohromady](../../../../../04-PracticalSamples/mcp/calculator)
+- [Další kroky](../../../../../04-PracticalSamples/mcp/calculator)
 
 ## Co se naučíte
 
-Prostřednictvím tohoto příkladu pochopíte:
-- Jak vytvořit služby kompatibilní s MCP pomocí Spring Boot
-- Rozdíl mezi přímou komunikací protokolu a interakcí poháněnou AI
-- Jak AI modely rozhodují, kdy a jak používat externí nástroje
-- Nejlepší postupy pro vytváření AI aplikací s podporou nástrojů
+Tento návod vysvětluje, jak vytvořit kalkulační službu pomocí Model Context Protocol (MCP). Naučíte se:
 
-Ideální pro začátečníky, kteří se učí koncepty MCP a jsou připraveni vytvořit svou první integraci AI nástroje!
+- Jak vytvořit službu, kterou může AI používat jako nástroj
+- Jak nastavit přímou komunikaci s MCP službami
+- Jak mohou AI modely automaticky vybírat, které nástroje použít
+- Rozdíl mezi přímými voláními protokolu a interakcemi s podporou AI
 
 ## Předpoklady
 
-- Java 21+
-- Maven 3.6+
-- **GitHub Token**: Vyžadováno pro klienta poháněného AI. Pokud jste si jej ještě nenastavili, podívejte se na [Kapitolu 2: Nastavení vývojového prostředí](../../../02-SetupDevEnvironment/README.md) pro pokyny.
+Než začnete, ujistěte se, že máte:
+- Nainstalovaný Java 21 nebo novější
+- Maven pro správu závislostí
+- GitHub účet s osobním přístupovým tokenem (PAT)
+- Základní znalosti Javy a Spring Boot
 
-## Klíčové koncepty
+## Pochopení struktury projektu
 
-**Model Context Protocol (MCP)** je standardizovaný způsob, jak mohou AI aplikace bezpečně komunikovat s externími nástroji. Představte si to jako "most", který umožňuje AI modelům používat externí služby, jako je naše kalkulačka. Místo toho, aby se AI model pokoušel provádět matematické operace sám (což může být nespolehlivé), může zavolat naši kalkulační službu pro přesné výsledky. MCP zajišťuje, že tato komunikace probíhá bezpečně a konzistentně.
+Projekt kalkulačky obsahuje několik důležitých souborů:
 
-**Server-Sent Events (SSE)** umožňují komunikaci v reálném čase mezi serverem a klienty. Na rozdíl od tradičních HTTP požadavků, kde čekáte na odpověď, SSE umožňuje serveru neustále posílat aktualizace klientovi. To je ideální pro AI aplikace, kde odpovědi mohou být streamovány nebo vyžadovat čas na zpracování.
-
-**AI nástroje a volání funkcí** umožňují AI modelům automaticky vybírat a používat externí funkce (jako kalkulační operace) na základě požadavků uživatele. Když se zeptáte "Kolik je 15 + 27?", AI model pochopí, že chcete sčítání, automaticky zavolá nástroj `add` s příslušnými parametry (15, 27) a vrátí výsledek v přirozeném jazyce. AI funguje jako inteligentní koordinátor, který ví, kdy a jak použít každý nástroj.
-
-## Rychlý start
-
-### 1. Přejděte do adresáře aplikace kalkulačky
-```bash
-cd Generative-AI-for-beginners-java/04-PracticalSamples/mcp/calculator
+```
+calculator/
+├── src/main/java/com/microsoft/mcp/sample/server/
+│   ├── McpServerApplication.java          # Main Spring Boot app
+│   └── service/CalculatorService.java     # Calculator operations
+└── src/test/java/com/microsoft/mcp/sample/client/
+    ├── SDKClient.java                     # Direct MCP communication
+    ├── LangChain4jClient.java            # AI-powered client
+    └── Bot.java                          # Simple chat interface
 ```
 
-### 2. Sestavte a spusťte
-```bash
-mvn clean install -DskipTests
-java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
+## Vysvětlení hlavních komponent
+
+### 1. Hlavní aplikace
+
+**Soubor:** `McpServerApplication.java`
+
+Toto je vstupní bod naší kalkulační služby. Jedná se o standardní Spring Boot aplikaci s jedním speciálním doplňkem:
+
+```java
+@SpringBootApplication
+public class McpServerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(McpServerApplication.class, args);
+    }
+    
+    @Bean
+    public ToolCallbackProvider calculatorTools(CalculatorService calculator) {
+        return MethodToolCallbackProvider.builder().toolObjects(calculator).build();
+    }
+}
 ```
 
-### 3. Testujte s klienty
-- **SDKClient**: Přímá interakce MCP protokolu
-- **LangChain4jClient**: Interakce v přirozeném jazyce poháněná AI (vyžaduje GitHub token)
+**Co to dělá:**
+- Spustí Spring Boot webový server na portu 8080
+- Vytvoří `ToolCallbackProvider`, který zpřístupní naše kalkulační metody jako MCP nástroje
+- Anotace `@Bean` říká Springu, aby tento komponent spravoval a umožnil jeho použití v jiných částech
 
-## Dostupné kalkulační operace
+### 2. Kalkulační služba
 
-- `add(a, b)`, `subtract(a, b)`, `multiply(a, b)`, `divide(a, b)`
-- `power(base, exponent)`, `squareRoot(number)`, `absolute(number)`
-- `modulus(a, b)`, `help()`
+**Soubor:** `CalculatorService.java`
 
-## Testovací klienti
+Zde probíhají všechny matematické operace. Každá metoda je označena anotací `@Tool`, aby byla dostupná přes MCP:
 
-### 1. Přímý MCP klient (SDKClient)
-Testuje surovou komunikaci MCP protokolu. Spusťte:
-```bash
-mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
+```java
+@Service
+public class CalculatorService {
+
+    @Tool(description = "Add two numbers together")
+    public String add(double a, double b) {
+        double result = a + b;
+        return formatResult(a, "+", b, result);
+    }
+
+    @Tool(description = "Subtract the second number from the first number")
+    public String subtract(double a, double b) {
+        double result = a - b;
+        return formatResult(a, "-", b, result);
+    }
+    
+    // More calculator operations...
+    
+    private String formatResult(double a, String operator, double b, double result) {
+        return String.format("%.2f %s %.2f = %.2f", a, operator, b, result);
+    }
+}
 ```
 
-### 2. Klient poháněný AI (LangChain4jClient)
-Ukazuje interakci v přirozeném jazyce s GitHub modely. Vyžaduje GitHub token (viz [Předpoklady](../../../../../04-PracticalSamples/mcp/calculator)).
+**Klíčové vlastnosti:**
 
-**Spusťte:**
-```bash
-mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
+1. **Anotace `@Tool`**: Označuje, že tuto metodu mohou volat externí klienti
+2. **Jasné popisy**: Každý nástroj má popis, který pomáhá AI modelům pochopit, kdy jej použít
+3. **Konzistentní formát výstupu**: Všechny operace vrací čitelný text, např. "5.00 + 3.00 = 8.00"
+4. **Ošetření chyb**: Dělení nulou a záporné odmocniny vrací chybové zprávy
+
+**Dostupné operace:**
+- `add(a, b)` - Sčítá dvě čísla
+- `subtract(a, b)` - Odečítá druhé číslo od prvního
+- `multiply(a, b)` - Násobí dvě čísla
+- `divide(a, b)` - Dělí první číslo druhým (s kontrolou nuly)
+- `power(base, exponent)` - Umocňuje základ na exponent
+- `squareRoot(number)` - Počítá odmocninu (s kontrolou záporných čísel)
+- `modulus(a, b)` - Vrací zbytek po dělení
+- `absolute(number)` - Vrací absolutní hodnotu
+- `help()` - Vrací informace o všech operacích
+
+### 3. Přímý MCP klient
+
+**Soubor:** `SDKClient.java`
+
+Tento klient komunikuje přímo s MCP serverem bez použití AI. Ručně volá konkrétní kalkulační funkce:
+
+```java
+public class SDKClient {
+    
+    public static void main(String[] args) {
+        var transport = new WebFluxSseClientTransport(
+            WebClient.builder().baseUrl("http://localhost:8080")
+        );
+        new SDKClient(transport).run();
+    }
+    
+    public void run() {
+        var client = McpClient.sync(this.transport).build();
+        client.initialize();
+        
+        // List available tools
+        ListToolsResult toolsList = client.listTools();
+        System.out.println("Available Tools = " + toolsList);
+        
+        // Call specific calculator functions
+        CallToolResult resultAdd = client.callTool(
+            new CallToolRequest("add", Map.of("a", 5.0, "b", 3.0))
+        );
+        System.out.println("Add Result = " + resultAdd);
+        
+        CallToolResult resultSqrt = client.callTool(
+            new CallToolRequest("squareRoot", Map.of("number", 16.0))
+        );
+        System.out.println("Square Root Result = " + resultSqrt);
+        
+        client.closeGracefully();
+    }
+}
 ```
 
-## MCP Inspector (Webové rozhraní)
+**Co to dělá:**
+1. **Připojí se** k serveru kalkulačky na `http://localhost:8080`
+2. **Vypíše** všechny dostupné nástroje (naše kalkulační funkce)
+3. **Volá** konkrétní funkce s přesnými parametry
+4. **Vypíše** výsledky přímo
 
-MCP Inspector poskytuje vizuální webové rozhraní pro testování vaší MCP služby bez nutnosti psát kód. Ideální pro začátečníky, kteří chtějí pochopit, jak MCP funguje!
+**Kdy použít:** Když přesně víte, jaký výpočet chcete provést, a chcete jej volat programově.
 
-### Podrobný návod:
+### 4. Klient s podporou AI
 
-1. **Spusťte server kalkulačky** (pokud již neběží):
-   ```bash
-   java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
-   ```
+**Soubor:** `LangChain4jClient.java`
 
-2. **Nainstalujte a spusťte MCP Inspector** v novém terminálu:
-   ```bash
-   npx @modelcontextprotocol/inspector
-   ```
+Tento klient používá AI model (GPT-4o-mini), který automaticky rozhoduje, které nástroje kalkulačky použít:
 
-3. **Otevřete webové rozhraní**:
-   - Vyhledejte zprávu jako "Inspector running at http://localhost:6274"
-   - Otevřete tuto URL adresu ve svém webovém prohlížeči
+```java
+public class LangChain4jClient {
+    
+    public static void main(String[] args) throws Exception {
+        // Set up the AI model (using GitHub Models)
+        ChatLanguageModel model = OpenAiOfficialChatModel.builder()
+                .isGitHubModels(true)
+                .apiKey(System.getenv("GITHUB_TOKEN"))
+                .modelName("gpt-4o-mini")
+                .build();
 
-4. **Připojte se ke své kalkulační službě**:
-   - Ve webovém rozhraní nastavte typ přenosu na "SSE"
-   - Nastavte URL na: `http://localhost:8080/sse`
-   - Klikněte na tlačítko "Connect"
+        // Connect to our calculator MCP server
+        McpTransport transport = new HttpMcpTransport.Builder()
+                .sseUrl("http://localhost:8080/sse")
+                .logRequests(true)  // Shows what the AI is doing
+                .logResponses(true)
+                .build();
 
-5. **Prozkoumejte dostupné nástroje**:
-   - Klikněte na "List Tools" pro zobrazení všech kalkulačních operací
-   - Uvidíte funkce jako `add`, `subtract`, `multiply` atd.
+        McpClient mcpClient = new DefaultMcpClient.Builder()
+                .transport(transport)
+                .build();
 
-6. **Otestujte kalkulační operaci**:
-   - Vyberte nástroj (např. "add")
-   - Zadejte parametry (např. `a: 15`, `b: 27`)
-   - Klikněte na "Run Tool"
-   - Zobrazí se výsledek vrácený vaší MCP službou!
+        // Give the AI access to our calculator tools
+        ToolProvider toolProvider = McpToolProvider.builder()
+                .mcpClients(List.of(mcpClient))
+                .build();
 
-Tento vizuální přístup vám pomůže přesně pochopit, jak funguje komunikace MCP, než začnete vytvářet vlastní klienty.
+        // Create an AI bot that can use our calculator
+        Bot bot = AiServices.builder(Bot.class)
+                .chatLanguageModel(model)
+                .toolProvider(toolProvider)
+                .build();
 
-![npx inspector](../../../../../translated_images/tool.214c70103694335c4cfdc2d624373dfce4b0162f6aea089ac1da9051fb563b7f.cs.png)
+        // Now we can ask the AI to do calculations in natural language
+        String response = bot.chat("Calculate the sum of 24.5 and 17.3 using the calculator service");
+        System.out.println(response);
 
----
-**Reference:** [MCP Server Boot Starter Docs](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server-boot-starter-docs.html)
+        response = bot.chat("What's the square root of 144?");
+        System.out.println(response);
+    }
+}
+```
+
+**Co to dělá:**
+1. **Vytvoří** připojení k AI modelu pomocí vašeho GitHub tokenu
+2. **Připojí** AI k našemu MCP serveru kalkulačky
+3. **Zpřístupní** AI všechny naše kalkulační nástroje
+4. **Umožní** přirozené jazykové požadavky, např. "Spočítej součet 24.5 a 17.3"
+
+**AI automaticky:**
+- Pochopí, že chcete sčítat čísla
+- Vybere nástroj `add`
+- Zavolá `add(24.5, 17.3)`
+- Vrátí výsledek v přirozené odpovědi
+
+## Spuštění příkladů
+
+### Krok 1: Spusťte server kalkulačky
+
+Nejprve nastavte svůj GitHub token (potřebný pro AI klienta):
+
+**Windows:**
+```cmd
+set GITHUB_TOKEN=your_github_token_here
+```
+
+**Linux/macOS:**
+```bash
+export GITHUB_TOKEN=your_github_token_here
+```
+
+Spusťte server:
+```bash
+cd 04-PracticalSamples/mcp/calculator
+mvn spring-boot:run
+```
+
+Server se spustí na `http://localhost:8080`. Měli byste vidět:
+```
+Started McpServerApplication in X.XXX seconds
+```
+
+### Krok 2: Otestujte přímého klienta
+
+V novém terminálu:
+```bash
+mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient"
+```
+
+Uvidíte výstup jako:
+```
+Available Tools = [add, subtract, multiply, divide, power, squareRoot, modulus, absolute, help]
+Add Result = 5.00 + 3.00 = 8.00
+Square Root Result = √16.00 = 4.00
+```
+
+### Krok 3: Otestujte AI klienta
+
+```bash
+mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient"
+```
+
+Uvidíte, jak AI automaticky používá nástroje:
+```
+The sum of 24.5 and 17.3 is 41.8.
+The square root of 144 is 12.
+```
+
+## Jak to vše funguje dohromady
+
+Zde je kompletní proces, když se AI zeptáte "Kolik je 5 + 3?":
+
+1. **Vy** se zeptáte AI v přirozeném jazyce
+2. **AI** analyzuje váš požadavek a zjistí, že chcete sčítat
+3. **AI** zavolá MCP server: `add(5.0, 3.0)`
+4. **Kalkulační služba** provede: `5.0 + 3.0 = 8.0`
+5. **Kalkulační služba** vrátí: `"5.00 + 3.00 = 8.00"`
+6. **AI** obdrží výsledek a naformátuje přirozenou odpověď
+7. **Vy** dostanete: "Součet 5 a 3 je 8"
+
+## Další kroky
+
+Pro více příkladů si přečtěte [Kapitolu 04: Praktické ukázky](../../README.md)
 
 **Prohlášení:**  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby pro automatizovaný překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

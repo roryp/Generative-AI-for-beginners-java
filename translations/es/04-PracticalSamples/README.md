@@ -1,19 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "139c227ef39d24287257d1aff6fc6973",
-  "translation_date": "2025-07-25T08:42:23+00:00",
+  "original_hash": "df269f529a172a0197ef28460bf1da9f",
+  "translation_date": "2025-07-25T10:39:14+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "es"
 }
 -->
 # Aplicaciones Prácticas y Proyectos
 
-> Nota: Cada ejemplo también incluye un archivo **TUTORIAL.md** que te guía para ejecutar las muestras.
-
-## Lo Que Aprenderás
-En esta sección, mostraremos tres aplicaciones prácticas que destacan patrones de desarrollo de IA generativa con Java:
-- Crear un Generador de Historias de Mascotas multimodal que combina IA del lado del cliente y del servidor
+## Lo que Aprenderás
+En esta sección, presentaremos tres aplicaciones prácticas que muestran patrones de desarrollo de IA generativa con Java:
+- Crear un Generador de Historias de Mascotas multimodal que combina IA en el cliente y en el servidor
 - Implementar la integración de modelos de IA locales con el demo Foundry Local Spring Boot
 - Desarrollar un servicio de Protocolo de Contexto de Modelo (MCP) con el ejemplo de Calculadora
 
@@ -29,23 +27,23 @@ En esta sección, mostraremos tres aplicaciones prácticas que destacan patrones
 
 ## Introducción
 
-Este capítulo presenta **proyectos de ejemplo** que demuestran patrones de desarrollo de IA generativa con Java. Cada proyecto es completamente funcional y muestra tecnologías específicas de IA, patrones arquitectónicos y mejores prácticas que puedes adaptar a tus propias aplicaciones.
+Este capítulo presenta **proyectos de ejemplo** que demuestran patrones de desarrollo de IA generativa con Java. Cada proyecto es completamente funcional y muestra tecnologías específicas de IA, patrones arquitectónicos y mejores prácticas que puedes adaptar para tus propias aplicaciones.
 
 ### Demo Foundry Local Spring Boot
 
-El **[Demo Foundry Local Spring Boot](foundrylocal/README.md)** demuestra cómo integrarse con modelos de IA locales utilizando el **OpenAI Java SDK**. Muestra cómo conectarse al modelo **Phi-3.5-mini** ejecutándose en Foundry Local, permitiéndote ejecutar aplicaciones de IA sin depender de servicios en la nube.
+El **[Demo Foundry Local Spring Boot](foundrylocal/README.md)** demuestra cómo integrar modelos de IA locales utilizando el **OpenAI Java SDK**. Muestra la conexión con el modelo **Phi-3.5-mini** ejecutándose en Foundry Local, permitiéndote ejecutar aplicaciones de IA sin depender de servicios en la nube.
 
 ### Generador de Historias de Mascotas
 
-El **[Generador de Historias de Mascotas](petstory/README.md)** es una aplicación web de Spring Boot que demuestra el **procesamiento de IA multimodal** para generar historias creativas de mascotas. Combina capacidades de IA del lado del cliente y del servidor utilizando transformer.js para interacciones de IA en el navegador y el OpenAI SDK para el procesamiento del lado del servidor.
+El **[Generador de Historias de Mascotas](petstory/README.md)** es una aplicación web interactiva de Spring Boot que demuestra el **procesamiento de IA multimodal** para generar historias creativas de mascotas. Combina capacidades de IA en el cliente y en el servidor utilizando transformer.js para interacciones de IA en el navegador y el OpenAI SDK para el procesamiento en el servidor.
 
 ### Servicio MCP Calculadora (Demo MCP para Principiantes)
 
-El **[Servicio MCP Calculadora](mcp/calculator/README.md)** es una demostración sencilla del **Protocolo de Contexto de Modelo (MCP)** utilizando Spring AI. Proporciona una introducción amigable para principiantes a los conceptos de MCP, mostrando cómo crear un servidor MCP básico que interactúa con clientes MCP.
+El **[Servicio MCP Calculadora](mcp/calculator/README.md)** es una demostración sencilla del **Protocolo de Contexto de Modelo (MCP)** utilizando Spring AI. Proporciona una introducción accesible a los conceptos de MCP, mostrando cómo crear un servidor MCP básico que interactúa con clientes MCP.
 
 ## Progresión de Aprendizaje
 
-Estos proyectos están diseñados para construir conceptos basados en capítulos anteriores:
+Estos proyectos están diseñados para construir sobre conceptos de capítulos anteriores:
 
 1. **Comienza Simple**: Inicia con el Demo Foundry Local Spring Boot para entender la integración básica de IA con modelos locales
 2. **Añade Interactividad**: Avanza al Generador de Historias de Mascotas para procesamiento de IA multimodal e interacciones basadas en la web
@@ -55,7 +53,7 @@ Estos proyectos están diseñados para construir conceptos basados en capítulos
 
 **¡Felicidades!** Has logrado:
 
-- **Crear experiencias de IA multimodal** combinando procesamiento de IA del lado del cliente y del servidor
+- **Crear experiencias de IA multimodal** combinando procesamiento de IA en el cliente y en el servidor
 - **Implementar integración de modelos de IA locales** utilizando frameworks y SDKs modernos de Java
 - **Desarrollar servicios de Protocolo de Contexto de Modelo** que demuestran patrones de integración de herramientas
 

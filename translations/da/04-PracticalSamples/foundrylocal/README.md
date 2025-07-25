@@ -1,215 +1,300 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
-  "translation_date": "2025-07-25T09:37:36+00:00",
+  "original_hash": "2284c54d2a98090a37df0dbef1633ebf",
+  "translation_date": "2025-07-25T11:31:12+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "da"
 }
 -->
-# Foundry Lokal Kommandolinjeapplikation
-
->**Note**: Dette kapitel inkluderer en [**Tutorial**](./TUTORIAL.md), der guider dig gennem eksemplerne.
-
-En simpel Spring Boot-kommandolinjeapplikation, der demonstrerer, hvordan man forbinder til Foundry Lokal ved hjælp af OpenAI Java SDK.
-
-## Hvad Du Vil Lære
-
-- Hvordan man integrerer Foundry Lokal med Spring Boot-applikationer ved hjælp af OpenAI Java SDK
-- Bedste praksis for lokal AI-udvikling og test
+# Foundry Local Spring Boot Tutorial
 
 ## Indholdsfortegnelse
 
-- [Hvad Du Vil Lære](../../../../04-PracticalSamples/foundrylocal)
 - [Forudsætninger](../../../../04-PracticalSamples/foundrylocal)
-  - [Installation af Foundry Lokal](../../../../04-PracticalSamples/foundrylocal)
-  - [Verifikation](../../../../04-PracticalSamples/foundrylocal)
-- [Konfiguration](../../../../04-PracticalSamples/foundrylocal)
-- [Hurtig Start](../../../../04-PracticalSamples/foundrylocal)
-- [Hvad Applikationen Gør](../../../../04-PracticalSamples/foundrylocal)
-- [Eksempeloutput](../../../../04-PracticalSamples/foundrylocal)
-- [Arkitektur](../../../../04-PracticalSamples/foundrylocal)
-- [Kodehøjdepunkter](../../../../04-PracticalSamples/foundrylocal)
-  - [OpenAI Java SDK Integration](../../../../04-PracticalSamples/foundrylocal)
-  - [Chat Completion API](../../../../04-PracticalSamples/foundrylocal)
+- [Projektoversigt](../../../../04-PracticalSamples/foundrylocal)
+- [Forstå koden](../../../../04-PracticalSamples/foundrylocal)
+  - [1. Applikationskonfiguration (application.properties)](../../../../04-PracticalSamples/foundrylocal)
+  - [2. Hovedapplikationsklasse (Application.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [3. AI Service-lag (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [4. Projektafhængigheder (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
+- [Hvordan det hele fungerer sammen](../../../../04-PracticalSamples/foundrylocal)
+- [Opsætning af Foundry Local](../../../../04-PracticalSamples/foundrylocal)
+- [Kørsel af applikationen](../../../../04-PracticalSamples/foundrylocal)
+- [Forventet output](../../../../04-PracticalSamples/foundrylocal)
+- [Næste skridt](../../../../04-PracticalSamples/foundrylocal)
 - [Fejlfinding](../../../../04-PracticalSamples/foundrylocal)
 
 ## Forudsætninger
 
-> **⚠️ Note**: Denne applikation **kører ikke i den medfølgende devcontainer**, da den kræver, at Foundry Lokal er installeret og kører på værtsystemet.
+Før du starter denne tutorial, skal du sikre dig, at du har:
 
-### Installation af Foundry Lokal
+- **Java 21 eller nyere** installeret på dit system
+- **Maven 3.6+** til at bygge projektet
+- **Foundry Local** installeret og kørende
 
-Før du kører denne applikation, skal du installere og starte Foundry Lokal. Følg disse trin:
-
-1. **Sørg for, at dit system opfylder kravene**:
-   - **Operativsystem**: Windows 10 (x64), Windows 11 (x64/ARM), Windows Server 2025 eller macOS
-   - **Hardware**: 
-     - Minimum: 8GB RAM, 3GB ledig diskplads
-     - Anbefalet: 16GB RAM, 15GB ledig diskplads
-   - **Netværk**: Internetforbindelse til den første model-download (valgfrit for offline brug)
-   - **Acceleration (valgfrit)**: NVIDIA GPU (2.000-serien eller nyere), AMD GPU (6.000-serien eller nyere), Qualcomm Snapdragon X Elite (8GB eller mere hukommelse) eller Apple silicon
-   - **Tilladelser**: Administrative rettigheder til at installere software på din enhed
-
-2. **Installer Foundry Lokal**:
-   
-   **For Windows:**
-   ```bash
-   winget install Microsoft.FoundryLocal
-   ```
-   
-   **For macOS:**
-   ```bash
-   brew tap microsoft/foundrylocal
-   brew install foundrylocal
-   ```
-   
-   Alternativt kan du downloade installationsprogrammet fra [Foundry Lokals GitHub-repository](https://github.com/microsoft/Foundry-Local).
-
-3. **Start din første model**:
-
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
-
-   Modellen downloades (hvilket kan tage et par minutter, afhængigt af din internetforbindelse) og kører derefter. Foundry Lokal vælger automatisk den bedste modelvariant til dit system (CUDA for NVIDIA GPU'er, CPU-version ellers).
-
-4. **Test modellen** ved at stille et spørgsmål i den samme terminal:
-
-   ```bash
-   Why is the sky blue?
-   ```
-
-   Du bør se et svar fra Phi-modellen, der forklarer, hvorfor himlen ser blå ud.
-
-### Verifikation
-
-Du kan verificere, at alt fungerer korrekt med disse kommandoer:
+### **Installer Foundry Local:**
 
 ```bash
-# List all available models
-foundry model list
+# Windows
+winget install Microsoft.FoundryLocal
 
-# Check the service status via REST API
-curl http://localhost:5273/v1/models
+# macOS (after installing)
+foundry model run phi-3.5-mini
 ```
 
-Du kan også besøge `http://localhost:5273` i din browser for at se Foundry Lokals webgrænseflade.
+## Projektoversigt
 
-## Konfiguration
+Dette projekt består af fire hovedkomponenter:
 
-Applikationen kan konfigureres via `application.properties`:
+1. **Application.java** - Hovedindgangspunktet for Spring Boot-applikationen
+2. **FoundryLocalService.java** - Servicelag, der håndterer AI-kommunikation
+3. **application.properties** - Konfiguration for Foundry Local-forbindelse
+4. **pom.xml** - Maven-afhængigheder og projektkonfiguration
 
-- `foundry.local.base-url` - Base-URL for Foundry Lokal (standard: http://localhost:5273)
-- `foundry.local.model` - AI-model, der skal bruges (standard: Phi-3.5-mini-instruct-cuda-gpu)
+## Forstå koden
 
-> **Note**: Modelnavnet i konfigurationen skal matche den specifikke variant, som Foundry Lokal har downloadet til dit system. Når du kører `foundry model run phi-3.5-mini`, vælger Foundry Lokal automatisk og downloader den bedste variant (CUDA for NVIDIA GPU'er, CPU-version ellers). Brug `foundry model list` for at se det præcise modelnavn, der er tilgængeligt i din lokale instans.
+### 1. Applikationskonfiguration (application.properties)
 
-## Hurtig Start
+**Fil:** `src/main/resources/application.properties`
 
-### 1. Naviger til Foundry Lokals applikationsmappe
-```bash
-cd Generative-AI-for-beginners-java/04-PracticalSamples/foundrylocal
+```properties
+foundry.local.base-url=http://localhost:5273
+foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu
 ```
 
-### 2. Kør Applikationen
+**Hvad dette gør:**
+- **base-url**: Angiver, hvor Foundry Local kører (standardport 5273)
+- **model**: Navngiver den AI-model, der skal bruges til tekstgenerering
 
-```bash
-mvn spring-boot:run
+**Vigtigt koncept:** Spring Boot indlæser automatisk disse egenskaber og gør dem tilgængelige for din applikation ved hjælp af `@Value`-annotationen.
+
+### 2. Hovedapplikationsklasse (Application.java)
+
+**Fil:** `src/main/java/com/example/Application.java`
+
+```java
+@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication app = new SpringApplication(Application.class);
+        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.run(args);
+    }
 ```
 
-Eller byg og kør JAR-filen:
+**Hvad dette gør:**
+- `@SpringBootApplication` aktiverer Spring Boot auto-konfiguration
+- `WebApplicationType.NONE` fortæller Spring, at dette er en kommandolinjeapplikation, ikke en webserver
+- Main-metoden starter Spring-applikationen
 
-```bash
-mvn clean package
-java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
+**Demo Runner:**
+```java
+@Bean
+public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
+    return args -> {
+        System.out.println("=== Foundry Local Demo ===");
+        
+        String testMessage = "Hello! Can you tell me what you are and what model you're running?";
+        System.out.println("Sending message: " + testMessage);
+        
+        String response = foundryLocalService.chat(testMessage);
+        System.out.println("Response from Foundry Local:");
+        System.out.println(response);
+    };
+}
 ```
 
-### Afhængigheder
+**Hvad dette gør:**
+- `@Bean` opretter en komponent, som Spring administrerer
+- `CommandLineRunner` kører kode efter Spring Boot er startet
+- `foundryLocalService` injiceres automatisk af Spring (afhængighedsinjektion)
+- Sender en testbesked til AI'en og viser svaret
 
-Denne applikation bruger OpenAI Java SDK til at kommunikere med Foundry Lokal. Den vigtigste afhængighed er:
+### 3. AI Service-lag (FoundryLocalService.java)
+
+**Fil:** `src/main/java/com/example/FoundryLocalService.java`
+
+#### Konfigurationsinjektion:
+```java
+@Service
+public class FoundryLocalService {
+    
+    @Value("${foundry.local.base-url:http://localhost:5273}")
+    private String baseUrl;
+    
+    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu}")
+    private String model;
+```
+
+**Hvad dette gør:**
+- `@Service` fortæller Spring, at denne klasse leverer forretningslogik
+- `@Value` injicerer konfigurationsværdier fra application.properties
+- `:default-value`-syntaksen giver standardværdier, hvis egenskaber ikke er angivet
+
+#### Klientinitialisering:
+```java
+@PostConstruct
+public void init() {
+    this.openAIClient = OpenAIOkHttpClient.builder()
+            .baseUrl(baseUrl + "/v1")        // Foundry Local uses OpenAI-compatible API
+            .apiKey("unused")                 // Local server doesn't need real API key
+            .build();
+}
+```
+
+**Hvad dette gør:**
+- `@PostConstruct` kører denne metode, efter Spring har oprettet servicen
+- Opretter en OpenAI-klient, der peger på din lokale Foundry Local-instans
+- `/v1`-stien er nødvendig for OpenAI API-kompatibilitet
+- API-nøglen er "unused", da lokal udvikling ikke kræver autentificering
+
+#### Chat-metode:
+```java
+public String chat(String message) {
+    try {
+        ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
+                .model(model)                    // Which AI model to use
+                .addUserMessage(message)         // Your question/prompt
+                .maxCompletionTokens(150)        // Limit response length
+                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .build();
+        
+        ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
+        
+        // Extract the AI's response from the API result
+        if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
+            return chatCompletion.choices().get(0).message().content().orElse("No response found");
+        }
+        
+        return "No response content found";
+    } catch (Exception e) {
+        throw new RuntimeException("Error calling chat completion: " + e.getMessage(), e);
+    }
+}
+```
+
+**Hvad dette gør:**
+- **ChatCompletionCreateParams**: Konfigurerer AI-anmodningen
+  - `model`: Angiver, hvilken AI-model der skal bruges
+  - `addUserMessage`: Tilføjer din besked til samtalen
+  - `maxCompletionTokens`: Begrænser, hvor langt svaret kan være (spar ressourcer)
+  - `temperature`: Styrer tilfældighed (0.0 = deterministisk, 1.0 = kreativ)
+- **API-anrop**: Sender anmodningen til Foundry Local
+- **Responshåndtering**: Udtrækker AI'ens tekstsvar sikkert
+- **Fejlhåndtering**: Pakker undtagelser med nyttige fejlmeddelelser
+
+### 4. Projektafhængigheder (pom.xml)
+
+**Vigtige afhængigheder:**
 
 ```xml
+<!-- Spring Boot - Application framework -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter</artifactId>
+    <version>${spring-boot.version}</version>
+</dependency>
+
+<!-- OpenAI Java SDK - For AI API calls -->
 <dependency>
     <groupId>com.openai</groupId>
     <artifactId>openai-java</artifactId>
     <version>2.12.0</version>
 </dependency>
+
+<!-- Jackson - JSON processing -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.17.0</version>
+</dependency>
 ```
 
-Applikationen er forudkonfigureret til at forbinde til Foundry Lokal, der kører på standardporten.
+**Hvad disse gør:**
+- **spring-boot-starter**: Giver kernefunktionalitet til Spring Boot
+- **openai-java**: Officiel OpenAI Java SDK til API-kommunikation
+- **jackson-databind**: Håndterer JSON-serialisering/deserialisering til API-anmodninger
 
-## Hvad Applikationen Gør
+## Hvordan det hele fungerer sammen
 
-Når du kører applikationen:
+Her er den komplette proces, når du kører applikationen:
 
-1. **Starter op** som en kommandolinjeapplikation (ingen webserver)
-2. **Sender automatisk** en testbesked: "Hej! Kan du fortælle mig, hvad du er, og hvilken model du kører?"
-3. **Viser svaret** fra Foundry Lokal i konsollen
-4. **Afslutter korrekt** efter demoen
+1. **Opstart**: Spring Boot starter og læser `application.properties`
+2. **Serviceoprettelse**: Spring opretter `FoundryLocalService` og injicerer konfigurationsværdier
+3. **Klientopsætning**: `@PostConstruct` initialiserer OpenAI-klienten til at forbinde til Foundry Local
+4. **Demoeksekvering**: `CommandLineRunner` kører efter opstart
+5. **AI-anrop**: Demoen kalder `foundryLocalService.chat()` med en testbesked
+6. **API-anmodning**: Servicen bygger og sender en OpenAI-kompatibel anmodning til Foundry Local
+7. **Responsbehandling**: Servicen udtrækker og returnerer AI'ens svar
+8. **Visning**: Applikationen udskriver svaret og afslutter
 
-## Eksempeloutput
+## Opsætning af Foundry Local
+
+For at opsætte Foundry Local skal du følge disse trin:
+
+1. **Installer Foundry Local** ved at følge instruktionerne i [Forudsætninger](../../../../04-PracticalSamples/foundrylocal)-sektionen.
+2. **Download AI-modellen**, du vil bruge, f.eks. `phi-3.5-mini`, med følgende kommando:
+   ```bash
+   foundry model run phi-3.5-mini
+   ```
+3. **Konfigurer application.properties**-filen, så den matcher dine Foundry Local-indstillinger, især hvis du bruger en anden port eller model.
+
+## Kørsel af applikationen
+
+### Trin 1: Start Foundry Local
+```bash
+foundry model run phi-3.5-mini
+```
+
+### Trin 2: Byg og kør applikationen
+```bash
+mvn clean package
+java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
+```
+
+## Forventet output
 
 ```
 === Foundry Local Demo ===
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physical form or a specific hardware model like a smartphone or a computer. I exist purely in software, and I operate on Microsoft's infrastructure...
+Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
+as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
+in my interactions. I can assist with a wide variety of tasks including answering 
+questions, helping with analysis, creative writing, coding, and general conversation. 
+Is there something specific you'd like help with today?
 =========================
 ```
 
-## Arkitektur
+## Næste skridt
 
-- **Application.java** - Hoved-Spring Boot-applikation med CommandLineRunner
-- **FoundryLocalService.java** - Service, der bruger OpenAI Java SDK til at kommunikere med Foundry Lokal
-- Bruger **OpenAI Java SDK** til type-sikre API-kald
-- Automatisk JSON-serialisering/deserialisering håndteres af SDK'en
-- Ren konfiguration ved hjælp af Springs `@Value` og `@PostConstruct` annoteringer
-
-## Kodehøjdepunkter
-
-### OpenAI Java SDK Integration
-
-Applikationen bruger OpenAI Java SDK til at oprette en klient konfigureret til Foundry Lokal:
-
-```java
-@PostConstruct
-public void init() {
-    this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl + "/v1")
-            .apiKey("unused") // Local server doesn't require real API key
-            .build();
-}
-```
-
-### Chat Completion API
-
-At lave chat completion-forespørgsler er enkelt og type-sikkert:
-
-```java
-ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-        .model(model)
-        .addUserMessage(message)
-        .maxCompletionTokens(150)
-        .temperature(0.7)
-        .build();
-
-ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
-```
+For flere eksempler, se [Kapitel 04: Praktiske eksempler](../README.md)
 
 ## Fejlfinding
 
-Hvis du ser forbindelsesfejl:
-1. Verificer, at Foundry Lokal kører på `http://localhost:5273`
-2. Tjek, at en Phi-3.5-mini modelvariant er tilgængelig med `foundry model list`
-3. Sørg for, at modelnavnet i `application.properties` matcher det præcise modelnavn, der vises i listen
-4. Sørg for, at ingen firewall blokerer forbindelsen
+### Almindelige problemer
 
-Almindelige problemer:
-- **Model ikke fundet**: Kør `foundry model run phi-3.5-mini` for at downloade og starte modellen
-- **Service ikke kørende**: Foundry Lokals service kan være stoppet; genstart den med model run-kommandoen
-- **Forkert modelnavn**: Brug `foundry model list` for at se tilgængelige modeller og opdatere din konfiguration derefter
+**"Connection refused" eller "Service unavailable"**
+- Sørg for, at Foundry Local kører: `foundry model list`
+- Bekræft, at servicen er på port 5273: Tjek `application.properties`
+- Prøv at genstarte Foundry Local: `foundry model run phi-3.5-mini`
+
+**"Model not found"-fejl**
+- Tjek tilgængelige modeller: `foundry model list`
+- Opdater modelnavnet i `application.properties`, så det matcher præcist
+- Download modellen, hvis nødvendigt: `foundry model run phi-3.5-mini`
+
+**Maven-kompilationsfejl**
+- Sørg for Java 21 eller nyere: `java -version`
+- Rens og genopbyg: `mvn clean compile`
+- Tjek internetforbindelsen for afhængighedsdownloads
+
+**Applikationen starter, men der er ingen output**
+- Bekræft, at Foundry Local svarer: Åbn browseren til `http://localhost:5273`
+- Tjek applikationslogfiler for specifikke fejlmeddelelser
+- Sørg for, at modellen er fuldt indlæst og klar
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

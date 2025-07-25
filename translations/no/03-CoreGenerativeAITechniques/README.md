@@ -1,139 +1,352 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
-  "translation_date": "2025-07-25T09:38:59+00:00",
+  "original_hash": "59454ab4ec36d89840df6fcfe7633cbd",
+  "translation_date": "2025-07-25T11:32:21+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "no"
 }
 -->
-# Kjerne Generative AI-teknikker
-
->**Note**: Dette kapittelet inkluderer en detaljert [**Tutorial**](./TUTORIAL.md) som veileder deg gjennom eksemplene.
-
-## Hva du vil lære
-I dette kapittelet ser vi på 4 kjerne generative AI-teknikker gjennom praktiske eksempler:
-- LLM fullføringer og chatflyt
-- Funksjonskall
-- Retrieval-Augmented Generation (RAG)
-- Ansvarlige AI-sikkerhetstiltak
+# Kjerneveiledning for Generative AI-teknikker
 
 ## Innholdsfortegnelse
 
-- [Hva du vil lære](../../../03-CoreGenerativeAITechniques)
 - [Forutsetninger](../../../03-CoreGenerativeAITechniques)
 - [Komme i gang](../../../03-CoreGenerativeAITechniques)
-- [Oversikt over eksempler](../../../03-CoreGenerativeAITechniques)
-  - [1. LLM Fullføringer og Chatflyt](../../../03-CoreGenerativeAITechniques)
-  - [2. Funksjoner og Plugins med LLMs](../../../03-CoreGenerativeAITechniques)
-  - [3. Retrieval-Augmented Generation (RAG)](../../../03-CoreGenerativeAITechniques)
-  - [4. Demonstrasjon av Ansvarlig AI-sikkerhet](../../../03-CoreGenerativeAITechniques)
-- [Oppsummering](../../../03-CoreGenerativeAITechniques)
+  - [Trinn 1: Sett miljøvariabelen din](../../../03-CoreGenerativeAITechniques)
+  - [Trinn 2: Naviger til eksempelkatalogen](../../../03-CoreGenerativeAITechniques)
+- [Veiledning 1: LLM-fullføringer og chat](../../../03-CoreGenerativeAITechniques)
+- [Veiledning 2: Funksjonskall](../../../03-CoreGenerativeAITechniques)
+- [Veiledning 3: RAG (Retrieval-Augmented Generation)](../../../03-CoreGenerativeAITechniques)
+- [Veiledning 4: Ansvarlig AI](../../../03-CoreGenerativeAITechniques)
+- [Felles mønstre på tvers av eksempler](../../../03-CoreGenerativeAITechniques)
 - [Neste steg](../../../03-CoreGenerativeAITechniques)
+- [Feilsøking](../../../03-CoreGenerativeAITechniques)
+  - [Vanlige problemer](../../../03-CoreGenerativeAITechniques)
+
+## Oversikt
+
+Denne veiledningen gir praktiske eksempler på kjerne-teknikker innen generativ AI ved bruk av Java og GitHub Models. Du vil lære hvordan du interagerer med Large Language Models (LLMs), implementerer funksjonskall, bruker retrieval-augmented generation (RAG) og anvender ansvarlige AI-praksiser.
 
 ## Forutsetninger
 
-- Fullført oppsett fra [Kapittel 2](../../../02-SetupDevEnvironment)
+Før du starter, sørg for at du har:
+- Java 21 eller nyere installert
+- Maven for avhengighetsstyring
+- En GitHub-konto med en personlig tilgangstoken (PAT)
 
 ## Komme i gang
 
-1. **Naviger til eksempler**: 
+### Trinn 1: Sett miljøvariabelen din
+
+Først må du sette GitHub-tokenet ditt som en miljøvariabel. Dette tokenet gir deg tilgang til GitHub Models gratis.
+
+**Windows (Kommandolinje):**
+```cmd
+set GITHUB_TOKEN=your_github_token_here
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:GITHUB_TOKEN="your_github_token_here"
+```
+
+**Linux/macOS:**
+```bash
+export GITHUB_TOKEN=your_github_token_here
+```
+
+### Trinn 2: Naviger til eksempelkatalogen
+
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
 ```
-2. **Sett opp miljø**: 
+
+## Veiledning 1: LLM-fullføringer og chat
+
+**Fil:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+
+### Hva dette eksemplet lærer deg
+
+Dette eksemplet viser de grunnleggende mekanismene for interaksjon med Large Language Models (LLMs) via OpenAI API, inkludert klientinitialisering med GitHub Models, mønstre for meldingsstruktur for system- og brukerforespørsler, håndtering av samtalestatus gjennom akkumulering av meldingshistorikk, og justering av parametere for å kontrollere svarlengde og kreativitet.
+
+### Viktige kodekonsepter
+
+#### 1. Klientoppsett
+```java
+// Create the AI client
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(new StaticTokenCredential(pat))
+    .buildClient();
+```
+
+Dette oppretter en tilkobling til GitHub Models ved hjelp av tokenet ditt.
+
+#### 2. Enkel fullføring
+```java
+List<ChatRequestMessage> messages = List.of(
+    // System message sets AI behavior
+    new ChatRequestSystemMessage("You are a helpful Java expert."),
+    // User message contains the actual question
+    new ChatRequestUserMessage("Explain Java streams briefly.")
+);
+
+ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
+    .setModel("gpt-4o-mini")
+    .setMaxTokens(200)      // Limit response length
+    .setTemperature(0.7);   // Control creativity (0.0-1.0)
+```
+
+#### 3. Samtaleminne
+```java
+// Add AI's response to maintain conversation history
+messages.add(new ChatRequestAssistantMessage(aiResponse));
+messages.add(new ChatRequestUserMessage("Follow-up question"));
+```
+
+AI husker tidligere meldinger bare hvis du inkluderer dem i påfølgende forespørsler.
+
+### Kjør eksemplet
 ```bash
-export GITHUB_TOKEN=your_token_here
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
 ```
-3. **Kompiler og kjør eksempler**:
+
+### Hva som skjer når du kjører det
+
+1. **Enkel fullføring**: AI svarer på et Java-spørsmål med veiledning fra systemprompt
+2. **Flertrinns chat**: AI opprettholder kontekst på tvers av flere spørsmål
+3. **Interaktiv chat**: Du kan ha en ekte samtale med AI-en
+
+## Veiledning 2: Funksjonskall
+
+**Fil:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+
+### Hva dette eksemplet lærer deg
+
+Funksjonskall gjør det mulig for AI-modeller å be om utførelse av eksterne verktøy og API-er gjennom en strukturert protokoll der modellen analyserer forespørsler i naturlig språk, bestemmer nødvendige funksjonskall med riktige parametere ved hjelp av JSON Schema-definisjoner, og behandler returnerte resultater for å generere kontekstuelle svar, mens selve funksjonsutførelsen forblir under utviklerens kontroll for sikkerhet og pålitelighet.
+
+### Viktige kodekonsepter
+
+#### 1. Funksjonsdefinisjon
+```java
+ChatCompletionsFunctionToolDefinitionFunction weatherFunction = 
+    new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
+weatherFunction.setDescription("Get current weather information for a city");
+
+// Define parameters using JSON Schema
+weatherFunction.setParameters(BinaryData.fromString("""
+    {
+        "type": "object",
+        "properties": {
+            "city": {
+                "type": "string",
+                "description": "The city name"
+            }
+        },
+        "required": ["city"]
+    }
+    """));
+```
+
+Dette forteller AI hvilke funksjoner som er tilgjengelige og hvordan de skal brukes.
+
+#### 2. Flyt for funksjonsutførelse
+```java
+// 1. AI requests a function call
+if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
+    ChatCompletionsFunctionToolCall functionCall = ...;
+    
+    // 2. You execute the function
+    String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
+    
+    // 3. You give the result back to AI
+    messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
+    
+    // 4. AI provides final response with function result
+    ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
+}
+```
+
+#### 3. Funksjonsimplementasjon
+```java
+private static String simulateWeatherFunction(String arguments) {
+    // Parse arguments and call real weather API
+    // For demo, we return mock data
+    return """
+        {
+            "city": "Seattle",
+            "temperature": "22",
+            "condition": "partly cloudy"
+        }
+        """;
+}
+```
+
+### Kjør eksemplet
 ```bash
-   # Run completions example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
-   
-   # Run functions example  
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
-   
-   # Run RAG example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
-   
-   # Run responsible AI demo
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
-   ```
-
-## Oversikt over eksempler
-
-Eksemplene er organisert i `examples/`-mappen med følgende struktur:
-
-```
-examples/
-├── src/main/java/com/example/genai/techniques/
-│   ├── completions/
-│   │   └── LLMCompletionsApp.java        # Basic completions 
-│   ├── functions/
-│   │   └── FunctionsApp.java             # Function calling examples
-│   ├── rag/
-│   │   └── SimpleReaderDemo.java         # Retrieval-Augmented Generation
-│   └── responsibleai/
-│       └── ResponsibleGithubModels.java  # Responsible AI safety demonstration
-├── document.txt                          # Sample document for RAG example
-└── pom.xml                               # Maven configuration
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
 ```
 
-### 1. LLM Fullføringer og Chatflyt
-**Fil**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+### Hva som skjer når du kjører det
 
-Lær å bygge samtale-AI med strømmende svar og håndtering av samtalehistorikk.
+1. **Værfunksjon**: AI ber om værdata for Seattle, du gir det, AI formaterer et svar
+2. **Kalkulatorfunksjon**: AI ber om en beregning (15 % av 240), du utfører den, AI forklarer resultatet
 
-Dette eksemplet demonstrerer:
-- Enkel tekstfullføring med systemprompter
-- Flersamtaler med historikkhåndtering
-- Interaktive chatsesjoner
-- Parameterkonfigurasjon (temperatur, maks tokens)
+## Veiledning 3: RAG (Retrieval-Augmented Generation)
 
-### 2. Funksjoner og Plugins med LLMs
-**Fil**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+**Fil:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Utvid AI-funksjonalitet ved å gi modeller tilgang til egendefinerte funksjoner og eksterne API-er.
+### Hva dette eksemplet lærer deg
 
-Dette eksemplet demonstrerer:
-- Integrasjon av værfunksjon
-- Implementering av kalkulatorfunksjon  
-- Flere funksjonskall i én samtale
-- Funksjonsdefinisjon med JSON-skjemaer
+Retrieval-Augmented Generation (RAG) kombinerer informasjonsinnhenting med språkproduksjon ved å injisere ekstern dokumentkontekst i AI-prompter, slik at modeller kan gi nøyaktige svar basert på spesifikke kunnskapskilder i stedet for potensielt utdaterte eller unøyaktige treningsdata, samtidig som klare grenser opprettholdes mellom brukerforespørsler og autoritative informasjonskilder gjennom strategisk promptdesign.
 
-### 3. Retrieval-Augmented Generation (RAG)
-**Fil**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+### Viktige kodekonsepter
 
-Lær hvordan du kombinerer AI med dine egne dokumenter og datakilder for nøyaktige, kontekstbevisste svar.
+#### 1. Dokumentlasting
+```java
+// Load your knowledge source
+String doc = Files.readString(Paths.get("document.txt"));
+```
 
-Dette eksemplet demonstrerer:
-- Dokumentbasert spørsmål og svar med Azure OpenAI SDK
-- Implementering av RAG-mønster med GitHub-modeller
+#### 2. Kontekstinjeksjon
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage(
+        "Use only the CONTEXT to answer. If not in context, say you cannot find it."
+    ),
+    new ChatRequestUserMessage(
+        "CONTEXT:\n\"\"\"\n" + doc + "\n\"\"\"\n\nQUESTION:\n" + question
+    )
+);
+```
 
-**Bruk**: Still spørsmål om innholdet i `document.txt` og få AI-svar basert kun på den konteksten.
+De triple anførselstegnene hjelper AI med å skille mellom kontekst og spørsmål.
 
-### 4. Demonstrasjon av Ansvarlig AI-sikkerhet
-**Fil**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+#### 3. Sikker håndtering av svar
+```java
+if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
+    String answer = response.getChoices().get(0).getMessage().getContent();
+    System.out.println("Assistant: " + answer);
+} else {
+    System.err.println("Error: No response received from the API.");
+}
+```
 
-Få en forhåndsvisning av hvordan AI-sikkerhetstiltak fungerer ved å teste GitHub-modellers innholdsfiltreringskapabiliteter.
+Valider alltid API-svar for å unngå krasj.
 
-Dette eksemplet demonstrerer:
-- Innholdsfiltrering for potensielt skadelige forespørsler
-- Håndtering av sikkerhetssvar i applikasjoner
-- Ulike kategorier av blokkert innhold (vold, hatprat, feilinformasjon)
-- Riktig feilhåndtering for sikkerhetsbrudd
+### Kjør eksemplet
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
+```
 
-> **Lær mer**: Dette er bare en introduksjon til ansvarlige AI-konsepter. For mer informasjon om etikk, reduksjon av skjevheter, personvern og rammeverk for ansvarlig AI, se [Kapittel 5: Ansvarlig Generativ AI](../05-ResponsibleGenAI/README.md).
+### Hva som skjer når du kjører det
 
-## Oppsummering
+1. Programmet laster inn `document.txt` (inneholder info om GitHub Models)
+2. Du stiller et spørsmål om dokumentet
+3. AI svarer kun basert på dokumentinnholdet, ikke sin generelle kunnskap
 
-I dette kapittelet utforsket vi LLM fullføringer og chatflyt, implementerte funksjonskall for å forbedre AI-funksjonalitet, opprettet et Retrieval-Augmented Generation (RAG)-system, og demonstrerte ansvarlige AI-sikkerhetstiltak. 
+Prøv å spørre: "Hva er GitHub Models?" vs "Hvordan er været?"
 
-> **NOTE**: Utforsk videre med den medfølgende [**Tutorial**](./TUTORIAL.md)
+## Veiledning 4: Ansvarlig AI
+
+**Fil:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+
+### Hva dette eksemplet lærer deg
+
+Eksemplet på ansvarlig AI viser viktigheten av å implementere sikkerhetstiltak i AI-applikasjoner. Det demonstrerer sikkerhetsfiltre som oppdager skadelige innholdskategorier, inkludert hatprat, trakassering, selvskading, seksuelt innhold og vold, og viser hvordan produksjons-AI-applikasjoner bør håndtere brudd på innholdspolicyer på en god måte gjennom riktig unntakshåndtering, brukerfeedbackmekanismer og fallback-strategier.
+
+### Viktige kodekonsepter
+
+#### 1. Rammeverk for sikkerhetstesting
+```java
+private void testPromptSafety(String prompt, String category) {
+    try {
+        // Attempt to get AI response
+        ChatCompletions response = client.getChatCompletions(modelId, options);
+        System.out.println("Response generated (content appears safe)");
+        
+    } catch (HttpResponseException e) {
+        if (e.getResponse().getStatusCode() == 400) {
+            System.out.println("[BLOCKED BY SAFETY FILTER]");
+            System.out.println("This is GOOD - safety system working!");
+        }
+    }
+}
+```
+
+#### 2. Testede sikkerhetskategorier
+- Vold/skadeinstruksjoner
+- Hatprat
+- Brudd på personvern
+- Medisinsk feilinformasjon
+- Ulovlige aktiviteter
+
+### Kjør eksemplet
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
+```
+
+### Hva som skjer når du kjører det
+
+Programmet tester ulike skadelige forespørsler og viser hvordan AI-sikkerhetssystemet:
+1. **Blokkerer farlige forespørsler** med HTTP 400-feil
+2. **Tillater trygt innhold** å genereres normalt
+3. **Beskytter brukere** mot skadelige AI-utganger
+
+## Felles mønstre på tvers av eksempler
+
+### Autentiseringsmønster
+Alle eksempler bruker dette mønsteret for å autentisere med GitHub Models:
+
+```java
+String pat = System.getenv("GITHUB_TOKEN");
+TokenCredential credential = new StaticTokenCredential(pat);
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(credential)
+    .buildClient();
+```
+
+### Feilhåndteringsmønster
+```java
+try {
+    // AI operation
+} catch (HttpResponseException e) {
+    // Handle API errors (rate limits, safety filters)
+} catch (Exception e) {
+    // Handle general errors (network, parsing)
+}
+```
+
+### Meldingstrukturmønster
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage("Set AI behavior"),
+    new ChatRequestUserMessage("User's actual request")
+);
+```
 
 ## Neste steg
 
-[Kapittel 4: Praktiske applikasjoner og prosjekter](../04-PracticalSamples/README.md)
+[Kapittel 04: Praktiske eksempler](../04-PracticalSamples/README.md)
+
+## Feilsøking
+
+### Vanlige problemer
+
+**"GITHUB_TOKEN ikke satt"**
+- Sørg for at du har satt miljøvariabelen
+- Verifiser at tokenet ditt har `models:read`-tillatelse
+
+**"Ingen respons fra API"**
+- Sjekk internettforbindelsen din
+- Verifiser at tokenet ditt er gyldig
+- Sjekk om du har nådd grenseverdier
+
+**Maven-kompileringsfeil**
+- Sørg for at du har Java 21 eller nyere
+- Kjør `mvn clean compile` for å oppdatere avhengigheter
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

@@ -1,19 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "139c227ef39d24287257d1aff6fc6973",
-  "translation_date": "2025-07-25T09:22:32+00:00",
+  "original_hash": "df269f529a172a0197ef28460bf1da9f",
+  "translation_date": "2025-07-25T11:16:05+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "br"
 }
 -->
 # Aplicações Práticas & Projetos
 
-> Nota: Cada exemplo também inclui um **TUTORIAL.md** que orienta você na execução dos exemplos.
-
-## O Que Você Vai Aprender
+## O que Você Vai Aprender
 Nesta seção, apresentaremos três aplicações práticas que demonstram padrões de desenvolvimento de IA generativa com Java:
-- Criar um Gerador de Histórias de Animais de estimação multi-modal, combinando IA no cliente e no servidor
+- Criar um Gerador de Histórias de Animais de estimação multimodal, combinando IA no lado do cliente e no servidor
 - Implementar integração de modelos de IA locais com o demo Foundry Local Spring Boot
 - Desenvolver um serviço de Protocolo de Contexto de Modelo (MCP) com o exemplo da Calculadora
 
@@ -37,25 +35,25 @@ O **[Demo Foundry Local Spring Boot](foundrylocal/README.md)** demonstra como in
 
 ### Gerador de Histórias de Animais de Estimação
 
-O **[Gerador de Histórias de Animais de Estimação](petstory/README.md)** é uma aplicação web Spring Boot envolvente que demonstra **processamento de IA multi-modal** para gerar histórias criativas de animais de estimação. Ele combina capacidades de IA no cliente e no servidor usando transformer.js para interações baseadas no navegador e o OpenAI SDK para processamento no servidor.
+O **[Gerador de Histórias de Animais de Estimação](petstory/README.md)** é uma aplicação web Spring Boot envolvente que demonstra **processamento de IA multimodal** para gerar histórias criativas de animais de estimação. Ele combina capacidades de IA no lado do cliente e no servidor usando transformer.js para interações baseadas no navegador e o OpenAI SDK para processamento no servidor.
 
 ### Serviço MCP Calculadora (Demo MCP para Iniciantes)
 
-O **[Serviço MCP Calculadora](mcp/calculator/README.md)** é uma demonstração simples do **Protocolo de Contexto de Modelo (MCP)** usando Spring AI. Ele oferece uma introdução amigável aos conceitos de MCP, mostrando como criar um servidor MCP básico que interage com clientes MCP.
+O **[Serviço MCP Calculadora](mcp/calculator/README.md)** é uma demonstração simples do **Protocolo de Contexto de Modelo (MCP)** usando Spring AI. Ele oferece uma introdução acessível aos conceitos de MCP, mostrando como criar um servidor MCP básico que interage com clientes MCP.
 
 ## Progressão de Aprendizado
 
 Esses projetos foram projetados para construir conceitos com base nos capítulos anteriores:
 
 1. **Comece Simples**: Inicie com o Demo Foundry Local Spring Boot para entender a integração básica de IA com modelos locais
-2. **Adicione Interatividade**: Prossiga para o Gerador de Histórias de Animais de Estimação para IA multi-modal e interações baseadas na web
+2. **Adicione Interatividade**: Progrida para o Gerador de Histórias de Animais de Estimação para IA multimodal e interações baseadas na web
 3. **Aprenda os Fundamentos do MCP**: Experimente o Serviço MCP Calculadora para entender os fundamentos do Protocolo de Contexto de Modelo
 
 ## Resumo
 
 **Parabéns!** Você conseguiu:
 
-- **Criar experiências de IA multi-modal** combinando processamento de IA no cliente e no servidor
+- **Criar experiências de IA multimodal** combinando processamento de IA no lado do cliente e no servidor
 - **Implementar integração de modelos de IA locais** usando frameworks e SDKs modernos de Java
 - **Desenvolver serviços de Protocolo de Contexto de Modelo** demonstrando padrões de integração de ferramentas
 

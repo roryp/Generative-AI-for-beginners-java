@@ -1,139 +1,356 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
-  "translation_date": "2025-07-25T08:50:23+00:00",
+  "original_hash": "59454ab4ec36d89840df6fcfe7633cbd",
+  "translation_date": "2025-07-25T10:46:23+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "fa"
 }
 -->
-# تکنیک‌های اصلی هوش مصنوعی مولد
-
->**توجه**: این فصل شامل یک [**آموزش**](./TUTORIAL.md) است که شما را با نمونه‌ها به صورت گام‌به‌گام راهنمایی می‌کند.
-
-## آنچه خواهید آموخت
-در این فصل، ۴ تکنیک اصلی هوش مصنوعی مولد را از طریق مثال‌های عملی بررسی می‌کنیم:
-- تکمیل‌های LLM و جریان‌های گفتگو
-- فراخوانی توابع
-- تولید تقویت‌شده با بازیابی (RAG)
-- اقدامات ایمنی هوش مصنوعی مسئولانه
+# آموزش تکنیک‌های اصلی هوش مصنوعی مولد
 
 ## فهرست مطالب
 
-- [آنچه خواهید آموخت](../../../03-CoreGenerativeAITechniques)
 - [پیش‌نیازها](../../../03-CoreGenerativeAITechniques)
 - [شروع به کار](../../../03-CoreGenerativeAITechniques)
-- [بررسی اجمالی مثال‌ها](../../../03-CoreGenerativeAITechniques)
-  - [۱. تکمیل‌های LLM و جریان‌های گفتگو](../../../03-CoreGenerativeAITechniques)
-  - [۲. توابع و افزونه‌ها با LLMها](../../../03-CoreGenerativeAITechniques)
-  - [۳. تولید تقویت‌شده با بازیابی (RAG)](../../../03-CoreGenerativeAITechniques)
-  - [۴. نمایش ایمنی هوش مصنوعی مسئولانه](../../../03-CoreGenerativeAITechniques)
-- [خلاصه](../../../03-CoreGenerativeAITechniques)
+  - [مرحله ۱: تنظیم متغیر محیطی](../../../03-CoreGenerativeAITechniques)
+  - [مرحله ۲: رفتن به دایرکتوری مثال‌ها](../../../03-CoreGenerativeAITechniques)
+- [آموزش ۱: تکمیل‌ها و چت با LLM](../../../03-CoreGenerativeAITechniques)
+- [آموزش ۲: فراخوانی توابع](../../../03-CoreGenerativeAITechniques)
+- [آموزش ۳: RAG (تولید تقویت‌شده با بازیابی)](../../../03-CoreGenerativeAITechniques)
+- [آموزش ۴: هوش مصنوعی مسئولانه](../../../03-CoreGenerativeAITechniques)
+- [الگوهای مشترک در مثال‌ها](../../../03-CoreGenerativeAITechniques)
 - [گام‌های بعدی](../../../03-CoreGenerativeAITechniques)
+- [رفع اشکال](../../../03-CoreGenerativeAITechniques)
+  - [مشکلات رایج](../../../03-CoreGenerativeAITechniques)
+
+## مرور کلی
+
+این آموزش شامل مثال‌های عملی از تکنیک‌های اصلی هوش مصنوعی مولد با استفاده از جاوا و مدل‌های GitHub است. شما یاد خواهید گرفت که چگونه با مدل‌های زبانی بزرگ (LLM) تعامل داشته باشید، فراخوانی توابع را پیاده‌سازی کنید، از تولید تقویت‌شده با بازیابی (RAG) استفاده کنید و اصول هوش مصنوعی مسئولانه را اعمال کنید.
 
 ## پیش‌نیازها
 
-- تکمیل تنظیمات از [فصل ۲](../../../02-SetupDevEnvironment)
+قبل از شروع، مطمئن شوید که موارد زیر را دارید:
+- نصب جاوا ۲۱ یا بالاتر
+- ابزار Maven برای مدیریت وابستگی‌ها
+- یک حساب GitHub با یک توکن دسترسی شخصی (PAT)
 
 ## شروع به کار
 
-۱. **به پوشه مثال‌ها بروید**:  
+### مرحله ۱: تنظیم متغیر محیطی
+
+ابتدا باید توکن GitHub خود را به‌عنوان یک متغیر محیطی تنظیم کنید. این توکن به شما امکان می‌دهد به مدل‌های GitHub به‌صورت رایگان دسترسی داشته باشید.
+
+**ویندوز (Command Prompt):**
+```cmd
+set GITHUB_TOKEN=your_github_token_here
+```
+
+**ویندوز (PowerShell):**
+```powershell
+$env:GITHUB_TOKEN="your_github_token_here"
+```
+
+**لینوکس/macOS:**
+```bash
+export GITHUB_TOKEN=your_github_token_here
+```
+
+### مرحله ۲: رفتن به دایرکتوری مثال‌ها
+
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
-```  
-۲. **محیط را تنظیم کنید**:  
-```bash
-export GITHUB_TOKEN=your_token_here
-```  
-۳. **مثال‌ها را کامپایل و اجرا کنید**:  
-```bash
-   # Run completions example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
-   
-   # Run functions example  
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
-   
-   # Run RAG example
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
-   
-   # Run responsible AI demo
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
-   ```  
-
-## بررسی اجمالی مثال‌ها
-
-مثال‌ها در پوشه `examples/` با ساختار زیر سازمان‌دهی شده‌اند:
-
-```
-examples/
-├── src/main/java/com/example/genai/techniques/
-│   ├── completions/
-│   │   └── LLMCompletionsApp.java        # Basic completions 
-│   ├── functions/
-│   │   └── FunctionsApp.java             # Function calling examples
-│   ├── rag/
-│   │   └── SimpleReaderDemo.java         # Retrieval-Augmented Generation
-│   └── responsibleai/
-│       └── ResponsibleGithubModels.java  # Responsible AI safety demonstration
-├── document.txt                          # Sample document for RAG example
-└── pom.xml                               # Maven configuration
 ```
 
-### ۱. تکمیل‌های LLM و جریان‌های گفتگو
-**فایل**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
+## آموزش ۱: تکمیل‌ها و چت با LLM
 
-یاد بگیرید که چگونه هوش مصنوعی مکالمه‌ای با پاسخ‌های جریانی و مدیریت تاریخچه گفتگو بسازید.
+**فایل:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-این مثال نشان می‌دهد:
-- تکمیل متن ساده با دستورات سیستمی
-- مکالمات چندمرحله‌ای با مدیریت تاریخچه
-- جلسات چت تعاملی
-- پیکربندی پارامترها (دمای مدل، حداکثر تعداد توکن‌ها)
+### این مثال چه چیزی آموزش می‌دهد؟
 
-### ۲. توابع و افزونه‌ها با LLMها
-**فایل**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
+این مثال مکانیک‌های اصلی تعامل با مدل‌های زبانی بزرگ (LLM) از طریق API OpenAI را نشان می‌دهد، از جمله:
+- مقداردهی اولیه کلاینت با مدل‌های GitHub
+- الگوهای ساختار پیام برای درخواست‌های سیستم و کاربر
+- مدیریت وضعیت مکالمه از طریق انباشت تاریخچه پیام‌ها
+- تنظیم پارامترها برای کنترل طول پاسخ و سطح خلاقیت
 
-قابلیت‌های هوش مصنوعی را با ارائه دسترسی به توابع سفارشی و APIهای خارجی گسترش دهید.
+### مفاهیم کلیدی کد
 
-این مثال نشان می‌دهد:
-- ادغام تابع آب‌وهوا
-- پیاده‌سازی تابع ماشین‌حساب  
-- فراخوانی چندین تابع در یک مکالمه
-- تعریف توابع با استفاده از JSON Schema
+#### ۱. تنظیم کلاینت
+```java
+// Create the AI client
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(new StaticTokenCredential(pat))
+    .buildClient();
+```
 
-### ۳. تولید تقویت‌شده با بازیابی (RAG)
-**فایل**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+این کد اتصال به مدل‌های GitHub را با استفاده از توکن شما ایجاد می‌کند.
 
-یاد بگیرید که چگونه هوش مصنوعی را با اسناد و منابع داده خود ترکیب کنید تا پاسخ‌های دقیق و مبتنی بر زمینه ارائه دهید.
+#### ۲. تکمیل ساده
+```java
+List<ChatRequestMessage> messages = List.of(
+    // System message sets AI behavior
+    new ChatRequestSystemMessage("You are a helpful Java expert."),
+    // User message contains the actual question
+    new ChatRequestUserMessage("Explain Java streams briefly.")
+);
 
-این مثال نشان می‌دهد:
-- پاسخ به سوالات مبتنی بر اسناد با استفاده از Azure OpenAI SDK
-- پیاده‌سازی الگوی RAG با مدل‌های GitHub
+ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
+    .setModel("gpt-4o-mini")
+    .setMaxTokens(200)      // Limit response length
+    .setTemperature(0.7);   // Control creativity (0.0-1.0)
+```
 
-**کاربرد**: سوالاتی درباره محتوای فایل `document.txt` بپرسید و پاسخ‌های هوش مصنوعی را فقط بر اساس آن زمینه دریافت کنید.
+#### ۳. حافظه مکالمه
+```java
+// Add AI's response to maintain conversation history
+messages.add(new ChatRequestAssistantMessage(aiResponse));
+messages.add(new ChatRequestUserMessage("Follow-up question"));
+```
 
-### ۴. نمایش ایمنی هوش مصنوعی مسئولانه
-**فایل**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+مدل تنها در صورتی پیام‌های قبلی را به خاطر می‌آورد که آن‌ها را در درخواست‌های بعدی بگنجانید.
 
-پیش‌نمایشی از نحوه عملکرد اقدامات ایمنی هوش مصنوعی با آزمایش قابلیت‌های فیلتر محتوای مدل‌های GitHub دریافت کنید.
+### اجرای مثال
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
+```
 
-این مثال نشان می‌دهد:
-- فیلتر محتوا برای دستورات بالقوه مضر
-- مدیریت پاسخ‌های ایمنی در برنامه‌ها
-- دسته‌بندی‌های مختلف محتوای مسدودشده (خشونت، سخنان نفرت‌انگیز، اطلاعات نادرست)
-- مدیریت صحیح خطاها برای نقض‌های ایمنی
+### چه اتفاقی می‌افتد وقتی آن را اجرا می‌کنید؟
 
-> **بیشتر بدانید**: این فقط مقدمه‌ای بر مفاهیم هوش مصنوعی مسئولانه است. برای اطلاعات بیشتر درباره اخلاق، کاهش سوگیری، ملاحظات حریم خصوصی، و چارچوب‌های هوش مصنوعی مسئولانه، به [فصل ۵: هوش مصنوعی مولد مسئولانه](../05-ResponsibleGenAI/README.md) مراجعه کنید.
+1. **تکمیل ساده**: مدل به یک سؤال جاوا با راهنمایی درخواست سیستم پاسخ می‌دهد.
+2. **چت چندمرحله‌ای**: مدل زمینه را در چندین سؤال حفظ می‌کند.
+3. **چت تعاملی**: می‌توانید یک مکالمه واقعی با مدل داشته باشید.
 
-## خلاصه
+## آموزش ۲: فراخوانی توابع
 
-در این فصل، تکمیل‌های LLM و جریان‌های گفتگو را بررسی کردیم، فراخوانی توابع برای گسترش قابلیت‌های هوش مصنوعی را پیاده‌سازی کردیم، یک سیستم تولید تقویت‌شده با بازیابی (RAG) ایجاد کردیم، و اقدامات ایمنی هوش مصنوعی مسئولانه را نمایش دادیم.
+**فایل:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-> **توجه**: با [**آموزش**](./TUTORIAL.md) ارائه‌شده عمیق‌تر کاوش کنید.
+### این مثال چه چیزی آموزش می‌دهد؟
+
+فراخوانی توابع به مدل‌های هوش مصنوعی امکان می‌دهد درخواست اجرای ابزارها و APIهای خارجی را از طریق یک پروتکل ساختاریافته ارائه دهند. مدل درخواست‌های زبان طبیعی را تحلیل می‌کند، فراخوانی‌های توابع موردنیاز را با پارامترهای مناسب بر اساس تعریف JSON Schema تعیین می‌کند و نتایج بازگشتی را برای تولید پاسخ‌های متنی پردازش می‌کند، در حالی که اجرای واقعی توابع برای امنیت و قابلیت اطمینان تحت کنترل توسعه‌دهنده باقی می‌ماند.
+
+### مفاهیم کلیدی کد
+
+#### ۱. تعریف تابع
+```java
+ChatCompletionsFunctionToolDefinitionFunction weatherFunction = 
+    new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
+weatherFunction.setDescription("Get current weather information for a city");
+
+// Define parameters using JSON Schema
+weatherFunction.setParameters(BinaryData.fromString("""
+    {
+        "type": "object",
+        "properties": {
+            "city": {
+                "type": "string",
+                "description": "The city name"
+            }
+        },
+        "required": ["city"]
+    }
+    """));
+```
+
+این کد به مدل می‌گوید چه توابعی در دسترس هستند و چگونه از آن‌ها استفاده کند.
+
+#### ۲. جریان اجرای تابع
+```java
+// 1. AI requests a function call
+if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
+    ChatCompletionsFunctionToolCall functionCall = ...;
+    
+    // 2. You execute the function
+    String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
+    
+    // 3. You give the result back to AI
+    messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
+    
+    // 4. AI provides final response with function result
+    ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
+}
+```
+
+#### ۳. پیاده‌سازی تابع
+```java
+private static String simulateWeatherFunction(String arguments) {
+    // Parse arguments and call real weather API
+    // For demo, we return mock data
+    return """
+        {
+            "city": "Seattle",
+            "temperature": "22",
+            "condition": "partly cloudy"
+        }
+        """;
+}
+```
+
+### اجرای مثال
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
+```
+
+### چه اتفاقی می‌افتد وقتی آن را اجرا می‌کنید؟
+
+1. **تابع آب‌وهوا**: مدل درخواست داده‌های آب‌وهوای سیاتل را می‌دهد، شما آن را فراهم می‌کنید، مدل پاسخ را قالب‌بندی می‌کند.
+2. **تابع ماشین‌حساب**: مدل درخواست محاسبه (۱۵٪ از ۲۴۰) را می‌دهد، شما آن را محاسبه می‌کنید، مدل نتیجه را توضیح می‌دهد.
+
+## آموزش ۳: RAG (تولید تقویت‌شده با بازیابی)
+
+**فایل:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
+
+### این مثال چه چیزی آموزش می‌دهد؟
+
+تولید تقویت‌شده با بازیابی (RAG) ترکیبی از بازیابی اطلاعات و تولید زبان است. این روش با تزریق محتوای اسناد خارجی به درخواست‌های مدل، به مدل‌ها امکان می‌دهد پاسخ‌های دقیق بر اساس منابع دانش خاص ارائه دهند، در حالی که مرزهای واضحی بین پرسش‌های کاربر و منابع اطلاعات معتبر از طریق مهندسی استراتژیک درخواست‌ها حفظ می‌شود.
+
+### مفاهیم کلیدی کد
+
+#### ۱. بارگذاری اسناد
+```java
+// Load your knowledge source
+String doc = Files.readString(Paths.get("document.txt"));
+```
+
+#### ۲. تزریق زمینه
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage(
+        "Use only the CONTEXT to answer. If not in context, say you cannot find it."
+    ),
+    new ChatRequestUserMessage(
+        "CONTEXT:\n\"\"\"\n" + doc + "\n\"\"\"\n\nQUESTION:\n" + question
+    )
+);
+```
+
+علامت‌های نقل قول سه‌گانه به مدل کمک می‌کنند بین زمینه و سؤال تمایز قائل شود.
+
+#### ۳. مدیریت ایمن پاسخ‌ها
+```java
+if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
+    String answer = response.getChoices().get(0).getMessage().getContent();
+    System.out.println("Assistant: " + answer);
+} else {
+    System.err.println("Error: No response received from the API.");
+}
+```
+
+همیشه پاسخ‌های API را برای جلوگیری از خرابی اعتبارسنجی کنید.
+
+### اجرای مثال
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
+```
+
+### چه اتفاقی می‌افتد وقتی آن را اجرا می‌کنید؟
+
+1. برنامه فایل `document.txt` را بارگذاری می‌کند (حاوی اطلاعاتی درباره مدل‌های GitHub است).
+2. شما سؤالی درباره سند می‌پرسید.
+3. مدل فقط بر اساس محتوای سند پاسخ می‌دهد، نه دانش عمومی خود.
+
+سعی کنید بپرسید: "مدل‌های GitHub چیست؟" در مقابل "هوا چگونه است؟"
+
+## آموزش ۴: هوش مصنوعی مسئولانه
+
+**فایل:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+
+### این مثال چه چیزی آموزش می‌دهد؟
+
+این مثال اهمیت پیاده‌سازی اقدامات ایمنی در برنامه‌های هوش مصنوعی را نشان می‌دهد. این مثال فیلترهای ایمنی را نمایش می‌دهد که دسته‌های محتوای مضر از جمله سخنان نفرت‌انگیز، آزار و اذیت، خودآزاری، محتوای جنسی و خشونت را شناسایی می‌کنند. همچنین نشان می‌دهد که چگونه برنامه‌های هوش مصنوعی تولیدی باید نقض سیاست محتوا را از طریق مدیریت استثناها، مکانیزم‌های بازخورد کاربر و استراتژی‌های پاسخ جایگزین به‌طور مناسب مدیریت کنند.
+
+### مفاهیم کلیدی کد
+
+#### ۱. چارچوب تست ایمنی
+```java
+private void testPromptSafety(String prompt, String category) {
+    try {
+        // Attempt to get AI response
+        ChatCompletions response = client.getChatCompletions(modelId, options);
+        System.out.println("Response generated (content appears safe)");
+        
+    } catch (HttpResponseException e) {
+        if (e.getResponse().getStatusCode() == 400) {
+            System.out.println("[BLOCKED BY SAFETY FILTER]");
+            System.out.println("This is GOOD - safety system working!");
+        }
+    }
+}
+```
+
+#### ۲. دسته‌های ایمنی مورد آزمایش
+- دستورالعمل‌های خشونت/آسیب
+- سخنان نفرت‌انگیز
+- نقض حریم خصوصی
+- اطلاعات نادرست پزشکی
+- فعالیت‌های غیرقانونی
+
+### اجرای مثال
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
+```
+
+### چه اتفاقی می‌افتد وقتی آن را اجرا می‌کنید؟
+
+برنامه درخواست‌های مضر مختلف را آزمایش می‌کند و نشان می‌دهد که سیستم ایمنی هوش مصنوعی چگونه:
+1. **درخواست‌های خطرناک را مسدود می‌کند** با خطاهای HTTP 400
+2. **محتوای ایمن را به‌طور عادی تولید می‌کند**
+3. **کاربران را از خروجی‌های مضر هوش مصنوعی محافظت می‌کند**
+
+## الگوهای مشترک در مثال‌ها
+
+### الگوی احراز هویت
+تمام مثال‌ها از این الگو برای احراز هویت با مدل‌های GitHub استفاده می‌کنند:
+
+```java
+String pat = System.getenv("GITHUB_TOKEN");
+TokenCredential credential = new StaticTokenCredential(pat);
+OpenAIClient client = new OpenAIClientBuilder()
+    .endpoint("https://models.inference.ai.azure.com")
+    .credential(credential)
+    .buildClient();
+```
+
+### الگوی مدیریت خطا
+```java
+try {
+    // AI operation
+} catch (HttpResponseException e) {
+    // Handle API errors (rate limits, safety filters)
+} catch (Exception e) {
+    // Handle general errors (network, parsing)
+}
+```
+
+### الگوی ساختار پیام
+```java
+List<ChatRequestMessage> messages = List.of(
+    new ChatRequestSystemMessage("Set AI behavior"),
+    new ChatRequestUserMessage("User's actual request")
+);
+```
 
 ## گام‌های بعدی
 
-[فصل ۴: کاربردها و پروژه‌های عملی](../04-PracticalSamples/README.md)
+[فصل ۰۴: نمونه‌های عملی](../04-PracticalSamples/README.md)
+
+## رفع اشکال
+
+### مشکلات رایج
+
+**"GITHUB_TOKEN تنظیم نشده است"**
+- مطمئن شوید که متغیر محیطی را تنظیم کرده‌اید.
+- بررسی کنید که توکن شما دارای محدوده `models:read` باشد.
+
+**"هیچ پاسخی از API دریافت نشد"**
+- اتصال اینترنت خود را بررسی کنید.
+- مطمئن شوید که توکن شما معتبر است.
+- بررسی کنید که آیا به محدودیت‌های نرخ دسترسی رسیده‌اید.
+
+**خطاهای کامپایل Maven**
+- مطمئن شوید که جاوا ۲۱ یا بالاتر را نصب کرده‌اید.
+- دستور `mvn clean compile` را برای به‌روزرسانی وابستگی‌ها اجرا کنید.
 
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، توصیه می‌شود از ترجمه حرفه‌ای انسانی استفاده کنید. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.
