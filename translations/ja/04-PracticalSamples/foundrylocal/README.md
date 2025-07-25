@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T16:34:30+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:04:12+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "ja"
 }
 -->
 # Foundry Local コマンドラインアプリケーション
 
->**Note**: この章には、完成したサンプルを実行する手順を案内する[**チュートリアル**](./TUTORIAL.md)が含まれています。
+> **Note**: この章には、サンプルを通じて学べる[**チュートリアル**](./TUTORIAL.md)が含まれています。
 
 OpenAI Java SDK を使用して Foundry Local に接続する方法を示す、シンプルな Spring Boot コマンドラインアプリケーションです。
 
@@ -29,29 +29,29 @@ OpenAI Java SDK を使用して Foundry Local に接続する方法を示す、�
 - [アプリケーションの動作](../../../../04-PracticalSamples/foundrylocal)
 - [サンプル出力](../../../../04-PracticalSamples/foundrylocal)
 - [アーキテクチャ](../../../../04-PracticalSamples/foundrylocal)
-- [コードのハイライト](../../../../04-PracticalSamples/foundrylocal)
+- [コードの注目ポイント](../../../../04-PracticalSamples/foundrylocal)
   - [OpenAI Java SDK の統合](../../../../04-PracticalSamples/foundrylocal)
   - [Chat Completion API](../../../../04-PracticalSamples/foundrylocal)
 - [トラブルシューティング](../../../../04-PracticalSamples/foundrylocal)
 
 ## 前提条件
 
-> **⚠️ Note**: このアプリケーションは **提供されている devcontainer 内では動作しません**。ホストシステムに Foundry Local をインストールして実行する必要があります。
+> **⚠️ Note**: このアプリケーションは **提供されている devcontainer では動作しません**。ホストシステムに Foundry Local をインストールして実行する必要があります。
 
 ### Foundry Local のインストール
 
 このアプリケーションを実行する前に、Foundry Local をインストールして起動する必要があります。以下の手順に従ってください：
 
-1. **システム要件を確認する**:
+1. **システム要件を確認**:
    - **オペレーティングシステム**: Windows 10 (x64)、Windows 11 (x64/ARM)、Windows Server 2025、または macOS
    - **ハードウェア**: 
      - 最低要件: 8GB RAM、3GB の空きディスク容量
      - 推奨要件: 16GB RAM、15GB の空きディスク容量
-   - **ネットワーク**: 初回モデルダウンロード用のインターネット接続（オフライン使用の場合は不要）
+   - **ネットワーク**: 初回のモデルダウンロード用にインターネット接続が必要（オフライン使用の場合は不要）
    - **アクセラレーション（オプション）**: NVIDIA GPU (2000 シリーズ以降)、AMD GPU (6000 シリーズ以降)、Qualcomm Snapdragon X Elite (8GB 以上のメモリ)、または Apple シリコン
    - **権限**: デバイスにソフトウェアをインストールするための管理者権限
 
-2. **Foundry Local をインストールする**:
+2. **Foundry Local をインストール**:
    
    **Windows の場合:**
    ```bash
@@ -64,9 +64,9 @@ OpenAI Java SDK を使用して Foundry Local に接続する方法を示す、�
    brew install foundrylocal
    ```
    
-   または、[Foundry Local GitHub リポジトリ](https://github.com/microsoft/Foundry-Local)からインストーラーをダウンロードすることもできます。
+   または、[Foundry Local GitHub リポジトリ](https://github.com/microsoft/Foundry-Local)からインストーラーをダウンロードできます。
 
-3. **最初のモデルを起動する**:
+3. **最初のモデルを起動**:
 
    ```bash
    foundry model run phi-3.5-mini
@@ -74,7 +74,7 @@ OpenAI Java SDK を使用して Foundry Local に接続する方法を示す、�
 
    モデルがダウンロードされ（インターネット速度によって数分かかる場合があります）、その後実行されます。Foundry Local はシステムに最適なモデルバリアント（NVIDIA GPU 用の CUDA、または CPU バージョン）を自動的に選択します。
 
-4. **モデルをテストする**: 同じターミナルで質問を入力します：
+4. **モデルをテスト**: 同じターミナルで質問を入力します：
 
    ```bash
    Why is the sky blue?
@@ -94,7 +94,7 @@ foundry model list
 curl http://localhost:5273/v1/models
 ```
 
-また、ブラウザで `http://localhost:5273` にアクセスして Foundry Local のウェブインターフェースを確認することもできます。
+また、ブラウザで `http://localhost:5273` にアクセスすると Foundry Local の Web インターフェースが表示されます。
 
 ## 設定
 
@@ -118,7 +118,7 @@ cd Generative-AI-for-beginners-java/04-PracticalSamples/foundrylocal
 mvn spring-boot:run
 ```
 
-または JAR をビルドして実行：
+または、JAR をビルドして実行：
 
 ```bash
 mvn clean package
@@ -137,13 +137,13 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 </dependency>
 ```
 
-アプリケーションは、デフォルトポートで動作する Foundry Local に接続するように事前設定されています。
+アプリケーションは、デフォルトポートで動作する Foundry Local に接続するよう事前設定されています。
 
 ## アプリケーションの動作
 
 アプリケーションを実行すると：
 
-1. **コマンドラインアプリケーション**として起動します（ウェブサーバーはありません）
+1. **コマンドラインアプリケーション**として起動します（Web サーバーは使用しません）
 2. **テストメッセージ**を自動的に送信します: "Hello! Can you tell me what you are and what model you're running?"
 3. **Foundry Local からの応答**をコンソールに表示します
 4. **デモ終了後に正常終了**します
@@ -163,15 +163,15 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 - **Application.java** - CommandLineRunner を持つメインの Spring Boot アプリケーション
 - **FoundryLocalService.java** - OpenAI Java SDK を使用して Foundry Local と通信するサービス
-- **OpenAI Java SDK** を使用した型安全な API 呼び出し
+- **OpenAI Java SDK** を使用して型安全な API 呼び出しを実現
 - SDK による自動 JSON シリアル化/デシリアル化
 - Spring の `@Value` と `@PostConstruct` アノテーションを使用したクリーンな設定
 
-## コードのハイライト
+## コードの注目ポイント
 
 ### OpenAI Java SDK の統合
 
-アプリケーションは、Foundry Local 用に設定されたクライアントを作成するために OpenAI Java SDK を使用します：
+このアプリケーションは、Foundry Local 用に構成されたクライアントを作成するために OpenAI Java SDK を使用します：
 
 ```java
 @PostConstruct
@@ -207,9 +207,9 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 4. ファイアウォールが接続をブロックしていないことを確認してください
 
 よくある問題：
-- **モデルが見つからない**: `foundry model run phi-3.5-mini` を実行してモデルをダウンロードして起動してください
+- **モデルが見つからない**: `foundry model run phi-3.5-mini` を実行してモデルをダウンロードおよび起動してください
 - **サービスが動作していない**: Foundry Local サービスが停止している可能性があります。モデル実行コマンドで再起動してください
 - **モデル名が間違っている**: `foundry model list` を使用して利用可能なモデルを確認し、設定を更新してください
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は一切の責任を負いません。

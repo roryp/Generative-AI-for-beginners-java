@@ -1,35 +1,35 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T20:07:26+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:53:18+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "ms"
 }
 -->
 # Aplikasi Pet Story
 
->**Nota**: Bab ini merangkumi [**Tutorial**](./TUTORIAL.md) yang membimbing anda menjalankan sampel siap.
+>**Nota**: Bab ini merangkumi [**Tutorial**](./TUTORIAL.md) yang membimbing anda melalui sampel-sampel.
 
 Sebuah aplikasi web Spring Boot yang menghasilkan deskripsi dan cerita berasaskan AI untuk imej haiwan peliharaan yang dimuat naik menggunakan GitHub Models.
 
 ## Kandungan
 
 - [Teknologi Digunakan](../../../../04-PracticalSamples/petstory)
-- [Keperluan Awal](../../../../04-PracticalSamples/petstory)
+- [Keperluan Asas](../../../../04-PracticalSamples/petstory)
 - [Persediaan & Pemasangan](../../../../04-PracticalSamples/petstory)
-- [Cara Penggunaan](../../../../04-PracticalSamples/petstory)
+- [Penggunaan](../../../../04-PracticalSamples/petstory)
 
 ## Teknologi Digunakan
 
 - **Backend**: Spring Boot 3.5.3, Java 21
 - **Integrasi AI**: OpenAI Java SDK dengan GitHub Models
 - **Keselamatan**: Spring Security
-- **Frontend**: Template Thymeleaf dengan gaya Bootstrap
+- **Frontend**: Templat Thymeleaf dengan gaya Bootstrap
 - **Alat Binaan**: Maven
 - **Model AI**: GitHub Models
 
-## Keperluan Awal
+## Keperluan Asas
 
 - Java 21 atau lebih tinggi
 - Maven 3.9+
@@ -64,7 +64,7 @@ mvn clean compile
 mvn spring-boot:run
 ```
 
-## Cara Penggunaan
+## Penggunaan
 
 1. **Akses Aplikasi**: Pergi ke `http://localhost:8080`
 2. **Muat Naik Imej**: Klik "Choose File" dan pilih imej haiwan peliharaan

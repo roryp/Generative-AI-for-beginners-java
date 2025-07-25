@@ -1,22 +1,22 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T18:15:57+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:24:42+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "it"
 }
 -->
-# Applicazione a Riga di Comando di Foundry Local
+# Applicazione a Riga di Comando Locale Foundry
 
->**Nota**: Questo capitolo include un [**Tutorial**](./TUTORIAL.md) che ti guida nell'esecuzione degli esempi completati.
+>**Nota**: Questo capitolo include un [**Tutorial**](./TUTORIAL.md) che ti guida attraverso gli esempi.
 
-Una semplice applicazione a riga di comando Spring Boot che dimostra come connettersi a Foundry Local utilizzando l'SDK Java di OpenAI.
+Un'applicazione semplice a riga di comando basata su Spring Boot che dimostra come connettersi a Foundry Local utilizzando l'SDK Java di OpenAI.
 
 ## Cosa Imparerai
 
 - Come integrare Foundry Local con applicazioni Spring Boot utilizzando l'SDK Java di OpenAI
-- Best practice per lo sviluppo e il testing di AI in locale
+- Best practice per lo sviluppo e il test di AI in locale
 
 ## Indice
 
@@ -27,10 +27,10 @@ Una semplice applicazione a riga di comando Spring Boot che dimostra come connet
 - [Configurazione](../../../../04-PracticalSamples/foundrylocal)
 - [Avvio Rapido](../../../../04-PracticalSamples/foundrylocal)
 - [Cosa Fa l'Applicazione](../../../../04-PracticalSamples/foundrylocal)
-- [Esempio di Output](../../../../04-PracticalSamples/foundrylocal)
+- [Output di Esempio](../../../../04-PracticalSamples/foundrylocal)
 - [Architettura](../../../../04-PracticalSamples/foundrylocal)
 - [Punti Salienti del Codice](../../../../04-PracticalSamples/foundrylocal)
-  - [Integrazione con l'SDK Java di OpenAI](../../../../04-PracticalSamples/foundrylocal)
+  - [Integrazione SDK Java di OpenAI](../../../../04-PracticalSamples/foundrylocal)
   - [API di Completamento Chat](../../../../04-PracticalSamples/foundrylocal)
 - [Risoluzione dei Problemi](../../../../04-PracticalSamples/foundrylocal)
 
@@ -72,7 +72,7 @@ Prima di eseguire questa applicazione, è necessario installare e avviare Foundr
    foundry model run phi-3.5-mini
    ```
 
-   Il modello verrà scaricato (operazione che potrebbe richiedere alcuni minuti, a seconda della velocità della tua connessione) e quindi eseguito. Foundry Local seleziona automaticamente la variante del modello migliore per il tuo sistema (CUDA per GPU NVIDIA, versione CPU altrimenti).
+   Il modello viene scaricato (può richiedere alcuni minuti, a seconda della velocità di Internet) e poi eseguito. Foundry Local seleziona automaticamente la variante del modello migliore per il tuo sistema (CUDA per GPU NVIDIA, versione CPU altrimenti).
 
 4. **Testa il modello** ponendo una domanda nello stesso terminale:
 
@@ -144,11 +144,11 @@ L'applicazione è preconfigurata per connettersi a Foundry Local in esecuzione s
 Quando esegui l'applicazione:
 
 1. **Si avvia** come applicazione a riga di comando (senza server web)
-2. **Invia automaticamente** un messaggio di test: "Ciao! Puoi dirmi cosa sei e quale modello stai eseguendo?"
+2. **Invia automaticamente** un messaggio di test: "Ciao! Puoi dirmi cosa sei e quale modello stai utilizzando?"
 3. **Mostra la risposta** di Foundry Local nella console
 4. **Termina correttamente** dopo la demo
 
-## Esempio di Output
+## Output di Esempio
 
 ```
 === Foundry Local Demo ===
@@ -163,13 +163,13 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 - **Application.java** - Applicazione principale Spring Boot con CommandLineRunner
 - **FoundryLocalService.java** - Servizio che utilizza l'SDK Java di OpenAI per comunicare con Foundry Local
-- Utilizza **l'SDK Java di OpenAI** per chiamate API tipizzate
+- Utilizza **OpenAI Java SDK** per chiamate API tipizzate
 - Serializzazione/deserializzazione JSON automatica gestita dall'SDK
 - Configurazione pulita utilizzando le annotazioni `@Value` e `@PostConstruct` di Spring
 
 ## Punti Salienti del Codice
 
-### Integrazione con l'SDK Java di OpenAI
+### Integrazione SDK Java di OpenAI
 
 L'applicazione utilizza l'SDK Java di OpenAI per creare un client configurato per Foundry Local:
 
@@ -204,12 +204,12 @@ Se riscontri errori di connessione:
 1. Verifica che Foundry Local sia in esecuzione su `http://localhost:5273`
 2. Controlla che una variante del modello Phi-3.5-mini sia disponibile con `foundry model list`
 3. Assicurati che il nome del modello in `application.properties` corrisponda esattamente al nome del modello mostrato nell'elenco
-4. Verifica che nessun firewall stia bloccando la connessione
+4. Assicurati che nessun firewall stia bloccando la connessione
 
 Problemi comuni:
 - **Modello non trovato**: Esegui `foundry model run phi-3.5-mini` per scaricare e avviare il modello
-- **Servizio non in esecuzione**: Il servizio Foundry Local potrebbe essersi arrestato; riavvialo con il comando di esecuzione del modello
+- **Servizio non in esecuzione**: Il servizio Foundry Local potrebbe essersi fermato; riavvialo con il comando di esecuzione del modello
 - **Nome modello errato**: Usa `foundry model list` per vedere i modelli disponibili e aggiorna la configurazione di conseguenza
 
-**Disclaimer (Avvertenza)**:  
+**Disclaimer**:  
 Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

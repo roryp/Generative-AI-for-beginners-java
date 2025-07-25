@@ -1,18 +1,18 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "da1b6d87b8a73306b29f9a1bdd681221",
-  "translation_date": "2025-07-21T21:13:36+00:00",
+  "original_hash": "139c227ef39d24287257d1aff6fc6973",
+  "translation_date": "2025-07-25T09:58:49+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "hu"
 }
 -->
 # Gyakorlati Alkalmazások és Projektek
 
-> Megjegyzés: Minden példához tartozik egy **TUTORIAL.md**, amely lépésről lépésre bemutatja az alkalmazás futtatását.
+> Megjegyzés: Minden példához tartozik egy **TUTORIAL.md**, amely lépésről lépésre bemutatja, hogyan futtathatók a minták.
 
 ## Amit Megtanulsz
-Ebben a részben három gyakorlati alkalmazást mutatunk be, amelyek a generatív AI fejlesztési mintáit szemléltetik Java nyelven:
+Ebben a fejezetben három gyakorlati alkalmazást mutatunk be, amelyek a generatív AI fejlesztési mintáit szemléltetik Java nyelven:
 - Többmodális Kisállat Történet Generátor létrehozása, amely kliens- és szerveroldali AI-t kombinál
 - Helyi AI modell integráció megvalósítása a Foundry Local Spring Boot demóval
 - Model Context Protocol (MCP) szolgáltatás fejlesztése a Számológép példával
@@ -29,7 +29,7 @@ Ebben a részben három gyakorlati alkalmazást mutatunk be, amelyek a generatí
 
 ## Bevezetés
 
-Ez a fejezet **minta projekteket** mutat be, amelyek a generatív AI fejlesztési mintáit szemléltetik Java nyelven. Minden projekt teljesen működőképes, és bemutatja az AI technológiák, architekturális minták és legjobb gyakorlatok konkrét alkalmazását, amelyeket saját projektjeidben is felhasználhatsz.
+Ez a fejezet **minta projekteket** mutat be, amelyek a generatív AI fejlesztési mintáit szemléltetik Java nyelven. Minden projekt teljesen működőképes, és bemutatja azokat a konkrét AI technológiákat, architekturális mintákat és bevált gyakorlatokat, amelyeket saját alkalmazásaidhoz is adaptálhatsz.
 
 ### Foundry Local Spring Boot Demó
 
@@ -37,11 +37,11 @@ A **[Foundry Local Spring Boot Demó](foundrylocal/README.md)** bemutatja, hogya
 
 ### Kisállat Történet Generátor
 
-A **[Kisállat Történet Generátor](petstory/README.md)** egy szórakoztató Spring Boot webalkalmazás, amely a **többmodális AI feldolgozást** használja kreatív kisállat történetek generálására. Kombinálja a kliensoldali és szerveroldali AI képességeket a transformer.js segítségével böngészőalapú AI interakciókhoz, valamint az OpenAI SDK-t a szerveroldali feldolgozáshoz.
+A **[Kisállat Történet Generátor](petstory/README.md)** egy szórakoztató Spring Boot webalkalmazás, amely bemutatja a **többmodális AI feldolgozást** kreatív kisállat történetek generálásához. Kombinálja a kliensoldali és szerveroldali AI képességeket a transformer.js használatával böngészőalapú AI interakciókhoz, valamint az OpenAI SDK-t a szerveroldali feldolgozáshoz.
 
 ### MCP Számológép Szolgáltatás (Kezdőbarát MCP Demó)
 
-Az **[MCP Számológép Szolgáltatás](mcp/calculator/README.md)** egy egyszerű bemutató a **Model Context Protocol (MCP)** használatáról Spring AI segítségével. Ez egy kezdőbarát bevezetést nyújt az MCP alapfogalmaiba, bemutatva, hogyan lehet egy alapvető MCP szervert létrehozni, amely MCP kliensekkel kommunikál.
+Az **[MCP Számológép Szolgáltatás](mcp/calculator/README.md)** egy egyszerű bemutató a **Model Context Protocol (MCP)** használatáról a Spring AI segítségével. Ez egy kezdőbarát bevezetést nyújt az MCP fogalmakba, bemutatva, hogyan lehet egy alapvető MCP szervert létrehozni, amely MCP kliensekkel kommunikál.
 
 ## Tanulási Haladás
 
@@ -57,11 +57,11 @@ Ezek a projektek az előző fejezetekben tanult fogalmakra épülnek:
 
 - **Többmodális AI élményeket hoztál létre**, amelyek kliens- és szerveroldali AI feldolgozást kombinálnak
 - **Helyi AI modell integrációt valósítottál meg** modern Java keretrendszerek és SDK-k használatával
-- **Model Context Protocol szolgáltatásokat fejlesztettél**, amelyek eszközintegrációs mintákat mutatnak be
+- **Model Context Protocol szolgáltatásokat fejlesztettél**, amelyek eszközintegrációs mintákat szemléltetnek
 
 ## Következő Lépések
 
 [5. fejezet: Felelős Generatív AI](../05-ResponsibleGenAI/README.md)
 
 **Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

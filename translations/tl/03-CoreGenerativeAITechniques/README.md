@@ -1,22 +1,22 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T19:13:51+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T09:54:11+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "tl"
 }
 -->
 # Mga Pangunahing Teknik sa Generative AI
 
->**Note**: Kasama sa kabanatang ito ang detalyadong [**Tutorial**](./TUTORIAL.md) na gagabay sa iyo sa pagpapatakbo ng mga natapos na halimbawa.
+>**Note**: Kasama sa kabanatang ito ang detalyadong [**Tutorial**](./TUTORIAL.md) na gagabay sa iyo sa mga halimbawa.
 
 ## Ano ang Matututuhan Mo
 Sa kabanatang ito, tatalakayin natin ang 4 na pangunahing teknik sa generative AI gamit ang mga praktikal na halimbawa:
 - LLM completions at chat flows
 - Function calling
 - Retrieval-Augmented Generation (RAG)
-- Mga hakbang para sa ligtas at responsableng AI
+- Mga hakbang sa kaligtasan para sa Responsible AI
 
 ## Talaan ng Nilalaman
 
@@ -27,13 +27,13 @@ Sa kabanatang ito, tatalakayin natin ang 4 na pangunahing teknik sa generative A
   - [1. LLM Completions at Chat Flows](../../../03-CoreGenerativeAITechniques)
   - [2. Mga Function at Plugin gamit ang LLMs](../../../03-CoreGenerativeAITechniques)
   - [3. Retrieval-Augmented Generation (RAG)](../../../03-CoreGenerativeAITechniques)
-  - [4. Demonstrasyon ng Ligtas at Responsableng AI](../../../03-CoreGenerativeAITechniques)
+  - [4. Demonstrasyon ng Responsible AI Safety](../../../03-CoreGenerativeAITechniques)
 - [Buod](../../../03-CoreGenerativeAITechniques)
 - [Mga Susunod na Hakbang](../../../03-CoreGenerativeAITechniques)
 
 ## Mga Kinakailangan
 
-- Natapos na ang setup mula sa [Kabanata 2](../../../02-SetupDevEnvironment)
+- Kumpletong setup mula sa [Kabanata 2](../../../02-SetupDevEnvironment)
 
 ## Pagsisimula
 
@@ -62,7 +62,7 @@ export GITHUB_TOKEN=your_token_here
 
 ## Pangkalahatang-ideya ng mga Halimbawa
 
-Ang mga halimbawa ay nakaayos sa folder na `examples/` na may ganitong istruktura:
+Ang mga halimbawa ay nakaayos sa folder na `examples/` na may sumusunod na istruktura:
 
 ```
 examples/
@@ -82,12 +82,12 @@ examples/
 ### 1. LLM Completions at Chat Flows
 **File**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-Matutong bumuo ng conversational AI na may streaming responses at chat history management.
+Matutong bumuo ng conversational AI gamit ang streaming responses at chat history management.
 
 Ipinapakita ng halimbawang ito:
 - Simpleng text completion gamit ang system prompts
-- Multi-turn na pag-uusap na may history management
-- Interactive na chat sessions
+- Multi-turn na mga pag-uusap na may history management
+- Mga interactive na chat session
 - Pag-configure ng mga parameter (temperature, max tokens)
 
 ### 2. Mga Function at Plugin gamit ang LLMs
@@ -96,44 +96,44 @@ Ipinapakita ng halimbawang ito:
 Palawakin ang kakayahan ng AI sa pamamagitan ng pagbibigay ng access sa mga custom function at external APIs.
 
 Ipinapakita ng halimbawang ito:
-- Integrasyon ng weather function
-- Implementasyon ng calculator function  
+- Pagsasama ng weather function
+- Pagpapatupad ng calculator function  
 - Maramihang function calls sa isang pag-uusap
 - Pagde-define ng function gamit ang JSON schemas
 
 ### 3. Retrieval-Augmented Generation (RAG)
 **File**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Matutong pagsamahin ang AI sa sarili mong mga dokumento at data sources para sa mas tumpak at may kontekstong mga sagot.
+Matutong pagsamahin ang AI sa sarili mong mga dokumento at data sources para sa tumpak at context-aware na mga sagot.
 
 Ipinapakita ng halimbawang ito:
-- Pagsagot ng mga tanong batay sa dokumento gamit ang Azure OpenAI SDK
-- Implementasyon ng RAG pattern gamit ang GitHub Models
+- Pagtatanong batay sa dokumento gamit ang Azure OpenAI SDK
+- Pagpapatupad ng RAG pattern gamit ang GitHub Models
 
-**Paggamit**: Magtanong tungkol sa nilalaman ng `document.txt` at makakuha ng mga sagot mula sa AI na nakabatay lamang sa kontekstong iyon.
+**Paggamit**: Magtanong tungkol sa nilalaman ng `document.txt` at makakuha ng mga sagot mula sa AI batay lamang sa kontekstong iyon.
 
-### 4. Demonstrasyon ng Ligtas at Responsableng AI
+### 4. Demonstrasyon ng Responsible AI Safety
 **File**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
 Makakuha ng preview kung paano gumagana ang mga hakbang sa kaligtasan ng AI sa pamamagitan ng pagsubok sa content filtering capabilities ng GitHub Models.
 
 Ipinapakita ng halimbawang ito:
-- Pag-filter ng nilalaman para sa mga posibleng mapanganib na prompts
-- Paghawak ng mga safety response sa mga aplikasyon
-- Iba't ibang kategorya ng mga na-block na nilalaman (karahasan, hate speech, maling impormasyon)
+- Pag-filter ng nilalaman para sa mga potensyal na mapanganib na prompts
+- Paghawak ng safety responses sa mga aplikasyon
+- Iba't ibang kategorya ng mga naka-block na nilalaman (karahasan, hate speech, maling impormasyon)
 - Wastong error handling para sa mga paglabag sa kaligtasan
 
-> **Matuto Pa**: Panimula lamang ito sa mga konsepto ng responsableng AI. Para sa karagdagang impormasyon tungkol sa etika, bias mitigation, privacy considerations, at mga framework ng responsableng AI, tingnan ang [Kabanata 5: Responsableng Generative AI](../05-ResponsibleGenAI/README.md).
+> **Matuto Pa**: Panimula lamang ito sa mga konsepto ng responsible AI. Para sa higit pang impormasyon tungkol sa etika, bias mitigation, privacy considerations, at mga framework ng responsible AI, tingnan ang [Kabanata 5: Responsible Generative AI](../05-ResponsibleGenAI/README.md).
 
 ## Buod
 
-Sa kabanatang ito, tinalakay natin ang LLM completions at chat flows, ipinatupad ang function calling para mapahusay ang kakayahan ng AI, lumikha ng Retrieval-Augmented Generation (RAG) system, at nagpakita ng mga hakbang para sa ligtas at responsableng AI.
+Sa kabanatang ito, tinalakay natin ang LLM completions at chat flows, ipinatupad ang function calling para mapahusay ang kakayahan ng AI, lumikha ng Retrieval-Augmented Generation (RAG) system, at nagpakita ng mga hakbang sa kaligtasan para sa responsible AI. 
 
-> **NOTE**: Mas malalim na talakayin gamit ang ibinigay na [**Tutorial**](./TUTORIAL.md)
+> **NOTE**: Mas malalim na pag-aralan gamit ang ibinigay na [**Tutorial**](./TUTORIAL.md)
 
 ## Mga Susunod na Hakbang
 
 [Kabanata 4: Mga Praktikal na Aplikasyon at Proyekto](../04-PracticalSamples/README.md)
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.

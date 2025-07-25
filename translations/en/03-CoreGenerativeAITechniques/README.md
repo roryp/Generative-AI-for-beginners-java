@@ -1,22 +1,22 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T20:39:37+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T08:38:27+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "en"
 }
 -->
 # Core Generative AI Techniques
 
->**Note**: This chapter includes a detailed [**Tutorial**](./TUTORIAL.md) that guides you through running the finished samples.
+>**Note**: This chapter includes a detailed [**Tutorial**](./TUTORIAL.md) that guides you through the examples.
 
 ## What You'll Learn
-In this chapter, we explore 4 essential generative AI techniques through practical examples:
-- LLM completions and chat flows
+In this chapter, we explore 4 essential generative AI techniques through hands-on examples:
+- LLM completions and conversational flows
 - Function calling
 - Retrieval-Augmented Generation (RAG)
-- Responsible AI safety measures
+- Responsible AI safety practices
 
 ## Table of Contents
 
@@ -62,7 +62,7 @@ export GITHUB_TOKEN=your_token_here
 
 ## Examples Overview
 
-The examples are organized in the `examples/` folder with the following structure:
+The examples are located in the `examples/` folder with the following structure:
 
 ```
 examples/
@@ -88,12 +88,12 @@ This example covers:
 - Basic text completion using system prompts
 - Multi-turn conversations with history tracking
 - Interactive chat sessions
-- Configuring parameters like temperature and max tokens
+- Adjusting parameters (temperature, max tokens)
 
 ### 2. Functions & Plugins with LLMs
 **File**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-Enhance AI capabilities by enabling models to use custom functions and external APIs.
+Expand AI functionality by enabling models to use custom functions and external APIs.
 
 This example covers:
 - Integrating a weather function
@@ -104,7 +104,7 @@ This example covers:
 ### 3. Retrieval-Augmented Generation (RAG)
 **File**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Learn how to combine AI with your own documents and data sources for precise, context-aware responses.
+Learn how to combine AI with your own documents and data sources for precise, context-aware answers.
 
 This example covers:
 - Answering questions based on documents using the Azure OpenAI SDK
@@ -120,14 +120,14 @@ Explore how AI safety measures work by testing GitHub Models' content filtering 
 This example covers:
 - Filtering content for potentially harmful prompts
 - Handling safety responses in applications
-- Categories of blocked content (e.g., violence, hate speech, misinformation)
+- Categories of blocked content (violence, hate speech, misinformation)
 - Managing errors related to safety violations
 
-> **Learn More**: This is just an introduction to responsible AI concepts. For more details on ethics, bias mitigation, privacy considerations, and responsible AI frameworks, see [Chapter 5: Responsible Generative AI](../05-ResponsibleGenAI/README.md).
+> **Learn More**: This is just an introduction to responsible AI concepts. For more details on ethics, bias mitigation, privacy considerations, and responsible AI frameworks, refer to [Chapter 5: Responsible Generative AI](../05-ResponsibleGenAI/README.md).
 
 ## Summary
 
-In this chapter, we explored LLM completions and chat flows, implemented function calling to extend AI capabilities, created a Retrieval-Augmented Generation (RAG) system, and demonstrated responsible AI safety measures. 
+In this chapter, we explored LLM completions and conversational flows, implemented function calling to extend AI capabilities, built a Retrieval-Augmented Generation (RAG) system, and demonstrated responsible AI safety practices. 
 
 > **NOTE**: Dive deeper with the provided [**Tutorial**](./TUTORIAL.md)
 

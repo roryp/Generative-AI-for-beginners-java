@@ -1,22 +1,22 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T19:48:59+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:44:04+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "nl"
 }
 -->
 # Foundry Local Command-Line Applicatie
 
->**Opmerking**: Dit hoofdstuk bevat een [**Tutorial**](./TUTORIAL.md) die je begeleidt bij het uitvoeren van de voltooide voorbeelden.
+>**Opmerking**: Dit hoofdstuk bevat een [**Tutorial**](./TUTORIAL.md) die je door de voorbeelden begeleidt.
 
-Een eenvoudige Spring Boot command-line applicatie die laat zien hoe je verbinding maakt met Foundry Local met behulp van de OpenAI Java SDK.
+Een eenvoudige Spring Boot command-line applicatie die demonstreert hoe je verbinding maakt met Foundry Local met behulp van de OpenAI Java SDK.
 
 ## Wat Je Gaat Leren
 
-- Hoe je Foundry Local integreert met Spring Boot-applicaties met behulp van de OpenAI Java SDK
-- Best practices voor lokale AI-ontwikkeling en -testen
+- Hoe je Foundry Local integreert met Spring Boot applicaties via de OpenAI Java SDK
+- Best practices voor lokale AI-ontwikkeling en testen
 
 ## Inhoudsopgave
 
@@ -47,8 +47,8 @@ Voordat je deze applicatie uitvoert, moet je Foundry Local installeren en starte
    - **Hardware**: 
      - Minimum: 8GB RAM, 3GB vrije schijfruimte
      - Aanbevolen: 16GB RAM, 15GB vrije schijfruimte
-   - **Netwerk**: Internetverbinding voor de initiële modeldownload (optioneel voor offline gebruik)
-   - **Versnelling (optioneel)**: NVIDIA GPU (2000-serie of nieuwer), AMD GPU (6000-serie of nieuwer), Qualcomm Snapdragon X Elite (8GB of meer geheugen), of Apple silicon
+   - **Netwerk**: Internetverbinding voor het downloaden van het model (optioneel voor offline gebruik)
+   - **Versnelling (optioneel)**: NVIDIA GPU (2.000-serie of nieuwer), AMD GPU (6.000-serie of nieuwer), Qualcomm Snapdragon X Elite (8GB of meer geheugen), of Apple silicon
    - **Rechten**: Beheerdersrechten om software op je apparaat te installeren
 
 2. **Installeer Foundry Local**:
@@ -64,7 +64,7 @@ Voordat je deze applicatie uitvoert, moet je Foundry Local installeren en starte
    brew install foundrylocal
    ```
    
-   Je kunt de installer ook downloaden van de [Foundry Local GitHub-repository](https://github.com/microsoft/Foundry-Local).
+   Je kunt ook de installer downloaden van de [Foundry Local GitHub repository](https://github.com/microsoft/Foundry-Local).
 
 3. **Start je eerste model**:
 
@@ -72,7 +72,7 @@ Voordat je deze applicatie uitvoert, moet je Foundry Local installeren en starte
    foundry model run phi-3.5-mini
    ```
 
-   Het model wordt gedownload (dit kan enkele minuten duren, afhankelijk van je internetsnelheid) en vervolgens uitgevoerd. Foundry Local selecteert automatisch de beste modelvariant voor je systeem (CUDA voor NVIDIA GPU's, anders de CPU-versie).
+   Het model wordt gedownload (dit kan enkele minuten duren, afhankelijk van je internetsnelheid) en vervolgens uitgevoerd. Foundry Local selecteert automatisch de beste modelvariant voor je systeem (CUDA voor NVIDIA GPU's, CPU-versie anders).
 
 4. **Test het model** door een vraag te stellen in dezelfde terminal:
 
@@ -80,7 +80,7 @@ Voordat je deze applicatie uitvoert, moet je Foundry Local installeren en starte
    Why is the sky blue?
    ```
 
-   Je zou een antwoord van het Phi-model moeten zien dat uitlegt waarom de lucht blauw lijkt.
+   Je zou een antwoord moeten zien van het Phi-model dat uitlegt waarom de lucht blauw lijkt.
 
 ### Verificatie
 
@@ -94,16 +94,16 @@ foundry model list
 curl http://localhost:5273/v1/models
 ```
 
-Je kunt ook `http://localhost:5273` in je browser bezoeken om de webinterface van Foundry Local te bekijken.
+Je kunt ook `http://localhost:5273` bezoeken in je browser om de Foundry Local webinterface te bekijken.
 
 ## Configuratie
 
 De applicatie kan worden geconfigureerd via `application.properties`:
 
 - `foundry.local.base-url` - Basis-URL voor Foundry Local (standaard: http://localhost:5273)
-- `foundry.local.model` - AI-model dat gebruikt moet worden (standaard: Phi-3.5-mini-instruct-cuda-gpu)
+- `foundry.local.model` - AI-model dat gebruikt wordt (standaard: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Opmerking**: De modelnaam in de configuratie moet overeenkomen met de specifieke variant die Foundry Local voor je systeem heeft gedownload. Wanneer je `foundry model run phi-3.5-mini` uitvoert, selecteert en downloadt Foundry Local automatisch de beste variant (CUDA voor NVIDIA GPU's, anders de CPU-versie). Gebruik `foundry model list` om de exacte modelnaam te zien die beschikbaar is in je lokale instantie.
+> **Opmerking**: De modelnaam in de configuratie moet overeenkomen met de specifieke variant die Foundry Local heeft gedownload voor je systeem. Wanneer je `foundry model run phi-3.5-mini` uitvoert, selecteert Foundry Local automatisch de beste variant (CUDA voor NVIDIA GPU's, CPU-versie anders). Gebruik `foundry model list` om de exacte modelnaam te zien die beschikbaar is in je lokale instantie.
 
 ## Snelle Start
 
@@ -137,13 +137,13 @@ Deze applicatie gebruikt de OpenAI Java SDK om te communiceren met Foundry Local
 </dependency>
 ```
 
-De applicatie is vooraf geconfigureerd om verbinding te maken met Foundry Local die draait op de standaardpoort.
+De applicatie is vooraf geconfigureerd om verbinding te maken met Foundry Local die op de standaardpoort draait.
 
 ## Wat de Applicatie Doet
 
 Wanneer je de applicatie uitvoert:
 
-1. **Start** deze als een command-line applicatie (geen webserver)
+1. **Start** als een command-line applicatie (geen webserver)
 2. **Stuurt automatisch** een testbericht: "Hallo! Kun je me vertellen wat je bent en welk model je gebruikt?"
 3. **Toont het antwoord** van Foundry Local in de console
 4. **Sluit netjes af** na de demo
@@ -161,7 +161,7 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 ## Architectuur
 
-- **Application.java** - Hoofd Spring Boot-applicatie met CommandLineRunner
+- **Application.java** - Hoofd Spring Boot applicatie met CommandLineRunner
 - **FoundryLocalService.java** - Service die de OpenAI Java SDK gebruikt om te communiceren met Foundry Local
 - Gebruikt **OpenAI Java SDK** voor type-veilige API-aanroepen
 - Automatische JSON-serialisatie/deserialisatie afgehandeld door de SDK
@@ -185,7 +185,7 @@ public void init() {
 
 ### Chat Completion API
 
-Het maken van chat completion-aanvragen is eenvoudig en type-veilig:
+Het maken van chat completion verzoeken is eenvoudig en type-veilig:
 
 ```java
 ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
@@ -201,15 +201,15 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 ## Probleemoplossing
 
 Als je verbindingsfouten ziet:
-1. Controleer of Foundry Local draait op `http://localhost:5273`
+1. Controleer of Foundry Local actief is op `http://localhost:5273`
 2. Controleer of een Phi-3.5-mini modelvariant beschikbaar is met `foundry model list`
-3. Zorg ervoor dat de modelnaam in `application.properties` overeenkomt met de exacte modelnaam in de lijst
+3. Zorg ervoor dat de modelnaam in `application.properties` overeenkomt met de exacte modelnaam die in de lijst wordt weergegeven
 4. Controleer of er geen firewall is die de verbinding blokkeert
 
 Veelvoorkomende problemen:
 - **Model niet gevonden**: Voer `foundry model run phi-3.5-mini` uit om het model te downloaden en te starten
-- **Service niet actief**: De Foundry Local-service is mogelijk gestopt; start deze opnieuw met het model run-commando
+- **Service niet actief**: De Foundry Local service is mogelijk gestopt; start deze opnieuw met het model run commando
 - **Verkeerde modelnaam**: Gebruik `foundry model list` om beschikbare modellen te zien en werk je configuratie dienovereenkomstig bij
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

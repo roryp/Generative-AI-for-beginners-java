@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T18:15:35+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:22:45+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "br"
 }
 -->
-# Aplicativo de Linha de Comando do Foundry Local
+# Aplicativo de Linha de Comando Local Foundry
 
->**Nota**: Este capítulo inclui um [**Tutorial**](./TUTORIAL.md) que orienta você a executar os exemplos finalizados.
+>**Nota**: Este capítulo inclui um [**Tutorial**](./TUTORIAL.md) que orienta você pelos exemplos.
 
 Um aplicativo simples de linha de comando Spring Boot que demonstra como se conectar ao Foundry Local usando o OpenAI Java SDK.
 
@@ -30,13 +30,13 @@ Um aplicativo simples de linha de comando Spring Boot que demonstra como se cone
 - [Exemplo de Saída](../../../../04-PracticalSamples/foundrylocal)
 - [Arquitetura](../../../../04-PracticalSamples/foundrylocal)
 - [Destaques do Código](../../../../04-PracticalSamples/foundrylocal)
-  - [Integração com o OpenAI Java SDK](../../../../04-PracticalSamples/foundrylocal)
+  - [Integração com OpenAI Java SDK](../../../../04-PracticalSamples/foundrylocal)
   - [API de Conclusão de Chat](../../../../04-PracticalSamples/foundrylocal)
 - [Solução de Problemas](../../../../04-PracticalSamples/foundrylocal)
 
 ## Pré-requisitos
 
-> **⚠️ Nota**: Este aplicativo **não funciona no devcontainer fornecido**, pois requer que o Foundry Local esteja instalado e em execução no sistema host.
+> **⚠️ Nota**: Este aplicativo **não funciona no devcontainer fornecido** pois requer que o Foundry Local esteja instalado e em execução no sistema host.
 
 ### Instalando o Foundry Local
 
@@ -48,7 +48,7 @@ Antes de executar este aplicativo, você precisa instalar e iniciar o Foundry Lo
      - Mínimo: 8GB de RAM, 3GB de espaço livre em disco
      - Recomendado: 16GB de RAM, 15GB de espaço livre em disco
    - **Rede**: Conexão com a internet para o download inicial do modelo (opcional para uso offline)
-   - **Aceleração (opcional)**: GPU NVIDIA (série 2000 ou mais recente), GPU AMD (série 6000 ou mais recente), Qualcomm Snapdragon X Elite (8GB ou mais de memória) ou Apple Silicon
+   - **Aceleração (opcional)**: GPU NVIDIA (série 2.000 ou mais recente), GPU AMD (série 6.000 ou mais recente), Qualcomm Snapdragon X Elite (8GB ou mais de memória) ou Apple silicon
    - **Permissões**: Privilégios administrativos para instalar software no seu dispositivo
 
 2. **Instale o Foundry Local**:
@@ -72,7 +72,7 @@ Antes de executar este aplicativo, você precisa instalar e iniciar o Foundry Lo
    foundry model run phi-3.5-mini
    ```
 
-   O modelo será baixado (o que pode levar alguns minutos, dependendo da velocidade da sua internet) e, em seguida, será executado. O Foundry Local seleciona automaticamente a melhor variante do modelo para o seu sistema (CUDA para GPUs NVIDIA, versão para CPU caso contrário).
+   O modelo será baixado (o que pode levar alguns minutos, dependendo da velocidade da sua internet) e então será executado. O Foundry Local seleciona automaticamente a melhor variante do modelo para o seu sistema (CUDA para GPUs NVIDIA, versão para CPU caso contrário).
 
 4. **Teste o modelo** fazendo uma pergunta no mesmo terminal:
 
@@ -94,7 +94,7 @@ foundry model list
 curl http://localhost:5273/v1/models
 ```
 
-Você também pode acessar `http://localhost:5273` no seu navegador para ver a interface web do Foundry Local.
+Você também pode visitar `http://localhost:5273` no seu navegador para ver a interface web do Foundry Local.
 
 ## Configuração
 
@@ -137,7 +137,7 @@ Este aplicativo usa o OpenAI Java SDK para se comunicar com o Foundry Local. A d
 </dependency>
 ```
 
-O aplicativo está pré-configurado para se conectar ao Foundry Local em execução na porta padrão.
+O aplicativo está pré-configurado para se conectar ao Foundry Local executando na porta padrão.
 
 ## O Que o Aplicativo Faz
 
@@ -146,7 +146,7 @@ Quando você executa o aplicativo:
 1. **Inicia** como um aplicativo de linha de comando (sem servidor web)
 2. **Envia automaticamente** uma mensagem de teste: "Olá! Você pode me dizer o que você é e qual modelo está executando?"
 3. **Exibe a resposta** do Foundry Local no console
-4. **Encerra-se de forma limpa** após o demo
+4. **Finaliza** de forma limpa após o demo
 
 ## Exemplo de Saída
 
@@ -163,13 +163,13 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 - **Application.java** - Aplicativo principal Spring Boot com CommandLineRunner
 - **FoundryLocalService.java** - Serviço que usa o OpenAI Java SDK para se comunicar com o Foundry Local
-- Usa o **OpenAI Java SDK** para chamadas de API com segurança de tipos
+- Usa **OpenAI Java SDK** para chamadas de API com segurança de tipos
 - Serialização/deserialização automática de JSON gerenciada pelo SDK
 - Configuração limpa usando as anotações `@Value` e `@PostConstruct` do Spring
 
 ## Destaques do Código
 
-### Integração com o OpenAI Java SDK
+### Integração com OpenAI Java SDK
 
 O aplicativo usa o OpenAI Java SDK para criar um cliente configurado para o Foundry Local:
 
@@ -202,9 +202,9 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 
 Se você encontrar erros de conexão:
 1. Verifique se o Foundry Local está em execução em `http://localhost:5273`
-2. Confirme se uma variante do modelo Phi-3.5-mini está disponível com `foundry model list`
+2. Confirme que uma variante do modelo Phi-3.5-mini está disponível com `foundry model list`
 3. Certifique-se de que o nome do modelo em `application.properties` corresponde exatamente ao nome do modelo exibido na lista
-4. Verifique se nenhum firewall está bloqueando a conexão
+4. Certifique-se de que nenhum firewall está bloqueando a conexão
 
 Problemas comuns:
 - **Modelo não encontrado**: Execute `foundry model run phi-3.5-mini` para baixar e iniciar o modelo
@@ -212,4 +212,4 @@ Problemas comuns:
 - **Nome do modelo incorreto**: Use `foundry model list` para ver os modelos disponíveis e atualize sua configuração conforme necessário
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte oficial. Para informações críticas, recomenda-se a tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

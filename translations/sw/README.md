@@ -1,31 +1,35 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
-  "translation_date": "2025-07-25T07:53:13+00:00",
+  "original_hash": "a49b35508745c032a0033d914df7901b",
+  "translation_date": "2025-07-25T09:55:44+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
 -->
 # AI ya Kizazi kwa Kompyuta - Toleo la Java
+[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-> **NOTE: Mwanzo wa Haraka**: Kozi nzima inaweza kufanyika mtandaoni - Hakuna usanidi wa ndani unaohitajika!
-1. Nakili hifadhi hii kwenye akaunti yako ya GitHub
-2. Bofya **Code** → **Kichupo cha Codespaces** → **...** → **New with options...**
+![AI ya Kizazi kwa Kompyuta - Toleo la Java](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.sw.png)
+
+**Muda wa Kujitolea**: Warsha nzima inaweza kukamilishwa mtandaoni bila kuhitaji usanidi wa ndani. Ikiwa unataka kuendesha sampuli, usanidi wa mazingira unachukua dakika 2, na kuchunguza sampuli kunahitaji saa 1-3 kulingana na kina cha uchunguzi.
+
+> **Anza Haraka**
+
+1. Fork hifadhi hii kwenye akaunti yako ya GitHub
+2. Bonyeza **Code** → **Kichupo cha Codespaces** → **...** → **New with options...**
 3. Tumia chaguo-msingi – hii itachagua kontena la Maendeleo lililoundwa kwa ajili ya kozi hii
-4. Bofya **Create codespace**
+4. Bonyeza **Create codespace**
 5. Subiri ~dakika 2 kwa mazingira kuwa tayari
 6. Nenda moja kwa moja kwenye [Kuunda Token ya Models ya GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Usaidizi wa Lugha Nyingi
 
-### Inayoungwa mkono kupitia GitHub Action (Imefanywa Kiotomatiki & Daima Imeboreshwa)
+### Inayoungwa mkono kupitia GitHub Action (Imejiendesha & Inasasishwa Kila Wakati)
 
 [French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](./README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
 
 ## Muundo wa Kozi & Njia ya Kujifunza
-
-**Muda wa Kujitolea**: Usanidi wa mazingira unachukua dakika 2, na mifano inahitaji saa 1-3 kulingana na kina cha uchunguzi. Warsha nzima inaweza kukamilika mtandaoni bila usanidi wa ndani.
 
 ### **Sura ya 1: Utangulizi wa AI ya Kizazi**
 - **Mafunzo ya Msingi**: Kuelewa Miundo Mikubwa ya Lugha, tokeni, embeddings, na uwezo wa AI
@@ -35,22 +39,22 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Anza Sura ya 1](./01-IntroToGenAI/README.md)**
 
 ### **Sura ya 2: Usanidi wa Mazingira ya Maendeleo**
-- **Usanidi wa Watoa Huduma Wengi**: Sanidi GitHub Models, Azure OpenAI, na OpenAI Java SDK
+- **Usanidi wa Watoa Huduma Wengi**: Sanidi GitHub Models, Azure OpenAI, na ujumuishaji wa OpenAI Java SDK
 - **Spring Boot + Spring AI**: Mbinu bora za maendeleo ya programu za AI za biashara
-- **GitHub Models**: Ufikiaji wa bure wa modeli za AI kwa majaribio na kujifunza (hakuna kadi ya mkopo inayohitajika)
+- **GitHub Models**: Upatikanaji wa bure wa modeli za AI kwa majaribio na kujifunza (hakuna kadi ya mkopo inayohitajika)
 - **Zana za Maendeleo**: Kontena za Docker, VS Code, na usanidi wa GitHub Codespaces
 - **[→ Anza Sura ya 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Sura ya 3: Mbinu za Msingi za AI ya Kizazi**
 - **Uhandisi wa Maelekezo**: Mbinu za kupata majibu bora kutoka kwa modeli za AI
-- **Embeddings & Operesheni za Vector**: Tekeleza utafutaji wa semantiki na kulinganisha usawa
+- **Embeddings & Operesheni za Vector**: Tekeleza utafutaji wa semantiki na kulinganisha mfanano
 - **Kizazi Kilichoongezwa na Urejeshaji (RAG)**: Changanya AI na vyanzo vyako vya data
 - **Kuita Kazi**: Panua uwezo wa AI kwa zana na programu-jalizi maalum
 - **[→ Anza Sura ya 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Sura ya 4: Matumizi ya Kivitendo & Miradi**
-- **Kizazi cha Hadithi za Wanyama** (`petstory/`): Kizazi cha maudhui ya ubunifu kwa kutumia GitHub Models
-- **Demo ya Foundry ya Ndani** (`foundrylocal/`): Ushirikiano wa modeli za AI za ndani na OpenAI Java SDK
+- **Kizazi cha Hadithi za Wanyama Kipenzi** (`petstory/`): Kizazi cha maudhui ya ubunifu kwa kutumia GitHub Models
+- **Demo ya Foundry ya Ndani** (`foundrylocal/`): Ujumuishaji wa modeli za AI za ndani kwa kutumia OpenAI Java SDK
 - **Huduma ya Calculator ya MCP** (`mcp/calculator/`): Utekelezaji wa msingi wa Itifaki ya Muktadha wa Modeli kwa kutumia Spring AI
 - **[→ Anza Sura ya 4](./04-PracticalSamples/README.md)**
 
@@ -67,10 +71,10 @@ CO_OP_TRANSLATOR_METADATA:
 - [AI ya Kizazi kwa Kompyuta kwa kutumia JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [AI ya Kizazi kwa Kompyuta](https://github.com/microsoft/generative-ai-for-beginners)
 - [ML kwa Kompyuta](https://aka.ms/ml-beginners)
-- [Sayansi ya Takwimu kwa Kompyuta](https://aka.ms/datascience-beginners)
+- [Sayansi ya Data kwa Kompyuta](https://aka.ms/datascience-beginners)
 - [AI kwa Kompyuta](https://aka.ms/ai-beginners)
 - [Usalama wa Mtandao kwa Kompyuta](https://github.com/microsoft/Security-101)
-- [Maendeleo ya Wavuti kwa Kompyuta](https://aka.ms/webdev-beginners)
+- [Web Dev kwa Kompyuta](https://aka.ms/webdev-beginners)
 - [IoT kwa Kompyuta](https://aka.ms/iot-beginners)
 - [Maendeleo ya XR kwa Kompyuta](https://github.com/microsoft/xr-development-for-beginners)
 - [Kumiliki GitHub Copilot kwa Uprogramu wa Pamoja wa AI](https://aka.ms/GitHubCopilotAI)
@@ -79,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App na Huduma za Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asilia katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

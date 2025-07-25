@@ -1,26 +1,26 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T20:06:13+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:36:29+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "sv"
 }
 -->
-# Pet Story App
+# Husdjursberättelse App
 
->**Note**: Detta kapitel inkluderar en [**Tutorial**](./TUTORIAL.md) som guidar dig genom att köra de färdiga exemplen.
+>**Note**: Detta kapitel inkluderar en [**Tutorial**](./TUTORIAL.md) som vägleder dig genom exemplen.
 
-En Spring Boot-webbapplikation som skapar AI-drivna beskrivningar och berättelser för uppladdade bilder på husdjur med hjälp av GitHub Models.
+En webbaserad Spring Boot-applikation som skapar AI-drivna beskrivningar och berättelser för uppladdade bilder på husdjur med hjälp av GitHub Models.
 
 ## Innehållsförteckning
 
-- [Teknologisk Stack](../../../../04-PracticalSamples/petstory)
+- [Teknikstack](../../../../04-PracticalSamples/petstory)
 - [Förutsättningar](../../../../04-PracticalSamples/petstory)
 - [Installation & Konfiguration](../../../../04-PracticalSamples/petstory)
 - [Användning](../../../../04-PracticalSamples/petstory)
 
-## Teknologisk Stack
+## Teknikstack
 
 - **Backend**: Spring Boot 3.5.3, Java 21
 - **AI-integration**: OpenAI Java SDK med GitHub Models
@@ -37,7 +37,7 @@ En Spring Boot-webbapplikation som skapar AI-drivna beskrivningar och berättels
 
 ## Installation & Konfiguration
 
-### 1. Gå till katalogen för petstory-applikationen
+### 1. Gå till applikationskatalogen för petstory
 ```bash
 cd Generative-AI-for-beginners-java/04-PracticalSamples/petstory
 ```
@@ -72,4 +72,4 @@ mvn spring-boot:run
 4. **Skapa berättelse**: Klicka på "Skapa berättelse" för att generera berättelsen
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som kan uppstå vid användning av denna översättning.

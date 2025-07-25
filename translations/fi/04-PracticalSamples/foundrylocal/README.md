@@ -1,31 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T19:48:32+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:41:44+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "fi"
 }
 -->
 # Foundry Local - Paikallinen komentorivisovellus
 
->**Huom**: Tämä luku sisältää [**Opetusohjelman**](./TUTORIAL.md), joka opastaa sinut valmiiden esimerkkien suorittamisessa.
+>**Huom**: Tämä luku sisältää [**Opetusohjelman**](./TUTORIAL.md), joka opastaa sinut esimerkkien läpi.
 
-Yksinkertainen Spring Boot -komentorivisovellus, joka havainnollistaa, kuinka yhdistää Foundry Local -palveluun OpenAI Java SDK:n avulla.
+Yksinkertainen Spring Boot -komentorivisovellus, joka havainnollistaa, kuinka yhdistää Foundry Local OpenAI Java SDK:n avulla.
 
 ## Mitä opit
 
 - Kuinka integroida Foundry Local Spring Boot -sovelluksiin OpenAI Java SDK:n avulla
-- Parhaat käytännöt paikalliseen tekoälykehitykseen ja -testaukseen
+- Parhaat käytännöt paikalliseen tekoälyn kehittämiseen ja testaukseen
 
 ## Sisällysluettelo
 
 - [Mitä opit](../../../../04-PracticalSamples/foundrylocal)
-- [Esivaatimukset](../../../../04-PracticalSamples/foundrylocal)
+- [Edellytykset](../../../../04-PracticalSamples/foundrylocal)
   - [Foundry Localin asentaminen](../../../../04-PracticalSamples/foundrylocal)
   - [Varmistus](../../../../04-PracticalSamples/foundrylocal)
 - [Konfigurointi](../../../../04-PracticalSamples/foundrylocal)
-- [Pika-aloitus](../../../../04-PracticalSamples/foundrylocal)
+- [Pikakäynnistys](../../../../04-PracticalSamples/foundrylocal)
 - [Mitä sovellus tekee](../../../../04-PracticalSamples/foundrylocal)
 - [Esimerkkituloste](../../../../04-PracticalSamples/foundrylocal)
 - [Arkkitehtuuri](../../../../04-PracticalSamples/foundrylocal)
@@ -34,19 +34,19 @@ Yksinkertainen Spring Boot -komentorivisovellus, joka havainnollistaa, kuinka yh
   - [Chat Completion API](../../../../04-PracticalSamples/foundrylocal)
 - [Vianmääritys](../../../../04-PracticalSamples/foundrylocal)
 
-## Esivaatimukset
+## Edellytykset
 
 > **⚠️ Huom**: Tämä sovellus **ei toimi mukana toimitetussa devcontainerissa**, koska se vaatii Foundry Localin asennettuna ja käynnissä isäntäjärjestelmässä.
 
 ### Foundry Localin asentaminen
 
-Ennen kuin suoritat tämän sovelluksen, sinun on asennettava ja käynnistettävä Foundry Local. Noudata näitä ohjeita:
+Ennen kuin suoritat tämän sovelluksen, sinun täytyy asentaa ja käynnistää Foundry Local. Noudata näitä ohjeita:
 
 1. **Varmista, että järjestelmäsi täyttää vaatimukset**:
    - **Käyttöjärjestelmä**: Windows 10 (x64), Windows 11 (x64/ARM), Windows Server 2025 tai macOS
    - **Laitteisto**: 
      - Vähintään: 8GB RAM, 3GB vapaata levytilaa
-     - Suositus: 16GB RAM, 15GB vapaata levytilaa
+     - Suositeltu: 16GB RAM, 15GB vapaata levytilaa
    - **Verkko**: Internet-yhteys mallin alkuperäistä latausta varten (valinnainen offline-käyttöön)
    - **Kiihdytys (valinnainen)**: NVIDIA GPU (2000-sarja tai uudempi), AMD GPU (6000-sarja tai uudempi), Qualcomm Snapdragon X Elite (vähintään 8GB muistia) tai Apple silicon
    - **Oikeudet**: Järjestelmänvalvojan oikeudet ohjelmiston asentamiseen laitteellesi
@@ -64,7 +64,7 @@ Ennen kuin suoritat tämän sovelluksen, sinun on asennettava ja käynnistettäv
    brew install foundrylocal
    ```
    
-   Vaihtoehtoisesti voit ladata asennusohjelman [Foundry Localin GitHub-repositorysta](https://github.com/microsoft/Foundry-Local).
+   Vaihtoehtoisesti voit ladata asennusohjelman [Foundry Local GitHub -arkistosta](https://github.com/microsoft/Foundry-Local).
 
 3. **Käynnistä ensimmäinen malli**:
 
@@ -72,7 +72,7 @@ Ennen kuin suoritat tämän sovelluksen, sinun on asennettava ja käynnistettäv
    foundry model run phi-3.5-mini
    ```
 
-   Malli ladataan (tämä voi kestää muutaman minuutin internet-yhteyden nopeudesta riippuen) ja käynnistyy. Foundry Local valitsee automaattisesti järjestelmällesi parhaan mallivaihtoehdon (CUDA NVIDIA GPU:ille, CPU-versio muuten).
+   Malli ladataan (tämä voi kestää muutaman minuutin internet-yhteyden nopeudesta riippuen) ja käynnistyy. Foundry Local valitsee automaattisesti parhaan mallivaihtoehdon järjestelmällesi (CUDA NVIDIA GPU:ille, CPU-versio muuten).
 
 4. **Testaa mallia** kysymällä kysymys samassa terminaalissa:
 
@@ -94,18 +94,18 @@ foundry model list
 curl http://localhost:5273/v1/models
 ```
 
-Voit myös avata selaimessasi `http://localhost:5273` nähdäksesi Foundry Localin verkkokäyttöliittymän.
+Voit myös vierailla `http://localhost:5273` selaimessasi nähdäksesi Foundry Localin verkkokäyttöliittymän.
 
 ## Konfigurointi
 
-Sovellusta voidaan konfiguroida tiedoston `application.properties` avulla:
+Sovellus voidaan konfiguroida `application.properties`-tiedoston kautta:
 
 - `foundry.local.base-url` - Foundry Localin perus-URL (oletus: http://localhost:5273)
 - `foundry.local.model` - Käytettävä AI-malli (oletus: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Huom**: Konfiguraatiossa käytetyn mallin nimen tulee vastata tarkasti sitä mallivaihtoehtoa, jonka Foundry Local on ladannut järjestelmällesi. Kun suoritat `foundry model run phi-3.5-mini`, Foundry Local valitsee ja lataa automaattisesti parhaan vaihtoehdon (CUDA NVIDIA GPU:ille, CPU-versio muuten). Käytä komentoa `foundry model list` nähdäksesi tarkka mallin nimi, joka on saatavilla paikallisessa instanssissasi.
+> **Huom**: Konfiguraatiossa käytettävän mallin nimen tulee vastata tarkasti sitä mallivaihtoehtoa, jonka Foundry Local on ladannut järjestelmällesi. Kun suoritat `foundry model run phi-3.5-mini`, Foundry Local valitsee ja lataa automaattisesti parhaan vaihtoehdon (CUDA NVIDIA GPU:ille, CPU-versio muuten). Käytä `foundry model list` nähdäksesi tarkat mallinimet, jotka ovat saatavilla paikallisessa instanssissasi.
 
-## Pika-aloitus
+## Pikakäynnistys
 
 ### 1. Siirry Foundry Local -sovelluksen hakemistoon
 ```bash
@@ -144,7 +144,7 @@ Sovellus on esikonfiguroitu yhdistämään Foundry Localiin, joka toimii oletusp
 Kun suoritat sovelluksen:
 
 1. **Käynnistyy** komentorivisovelluksena (ei verkkopalvelinta)
-2. **Lähettää automaattisesti** testiviestin: "Hello! Can you tell me what you are and what model you're running?"
+2. **Lähettää automaattisesti** testiviestin: "Hei! Voitko kertoa, mitä olet ja mitä mallia käytät?"
 3. **Näyttää vastauksen** Foundry Localilta konsolissa
 4. **Sulkeutuu siististi** demon jälkeen
 
@@ -161,11 +161,11 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 ## Arkkitehtuuri
 
-- **Application.java** - Pääasiallinen Spring Boot -sovellus, jossa on CommandLineRunner
+- **Application.java** - Pääasiallinen Spring Boot -sovellus, jossa CommandLineRunner
 - **FoundryLocalService.java** - Palvelu, joka käyttää OpenAI Java SDK:ta kommunikoidakseen Foundry Localin kanssa
-- Käyttää **OpenAI Java SDK:ta** tyypitettyihin API-kutsuihin
-- Automaattinen JSON-serialisointi/deserialisointi SDK:n avulla
-- Selkeä konfigurointi Springin `@Value`- ja `@PostConstruct`-annotaatioiden avulla
+- Käyttää **OpenAI Java SDK:ta** tyypinmukaisiin API-kutsuihin
+- Automaattinen JSON-sarjoitus/desarjoitus SDK:n avulla
+- Siisti konfigurointi Springin `@Value`- ja `@PostConstruct`-annotaatioiden avulla
 
 ## Koodin kohokohdat
 
@@ -185,7 +185,7 @@ public void init() {
 
 ### Chat Completion API
 
-Chat Completion -pyyntöjen tekeminen on yksinkertaista ja tyypitettyä:
+Chat Completion -pyyntöjen tekeminen on yksinkertaista ja tyypinmukaista:
 
 ```java
 ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
@@ -200,16 +200,16 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 
 ## Vianmääritys
 
-Jos kohtaat yhteysvirheitä:
-1. Varmista, että Foundry Local on käynnissä osoitteessa `http://localhost:5273`
+Jos näet yhteysvirheitä:
+1. Varmista, että Foundry Local toimii osoitteessa `http://localhost:5273`
 2. Tarkista, että Phi-3.5-mini-mallivaihtoehto on saatavilla komennolla `foundry model list`
-3. Varmista, että `application.properties`-tiedoston mallin nimi vastaa tarkasti listassa näkyvää mallin nimeä
+3. Varmista, että mallin nimi `application.properties`-tiedostossa vastaa tarkasti listassa näkyvää mallinimeä
 4. Varmista, ettei palomuuri estä yhteyttä
 
-Yleisiä ongelmia:
+Yleiset ongelmat:
 - **Mallia ei löydy**: Suorita `foundry model run phi-3.5-mini` ladataksesi ja käynnistääksesi mallin
-- **Palvelu ei ole käynnissä**: Foundry Local -palvelu on saattanut pysähtyä; käynnistä se uudelleen mallin suorituskomennolla
-- **Väärä mallin nimi**: Käytä komentoa `foundry model list` nähdäksesi saatavilla olevat mallit ja päivitä konfiguraatiosi vastaavasti
+- **Palvelu ei käynnissä**: Foundry Local -palvelu on saattanut pysähtyä; käynnistä se uudelleen mallin suorituskomennolla
+- **Väärä mallin nimi**: Käytä `foundry model list` nähdäksesi saatavilla olevat mallit ja päivitä konfiguraatiosi vastaavasti
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

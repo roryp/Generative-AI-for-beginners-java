@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T20:40:04+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T09:58:24+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "hu"
 }
 -->
-# Generatív AI Alaptechnikák
+# Generatív AI Alapvető Technikák
 
->**Megjegyzés**: Ez a fejezet tartalmaz egy részletes [**Útmutatót**](./TUTORIAL.md), amely végigvezet a kész minták futtatásán.
+>**Megjegyzés**: Ez a fejezet tartalmaz egy részletes [**Útmutatót**](./TUTORIAL.md), amely végigvezet a példákon.
 
 ## Amit Megtanulsz
 Ebben a fejezetben 4 alapvető generatív AI technikát vizsgálunk meg gyakorlati példákon keresztül:
-- LLM kiegészítések és chat folyamatok
+- LLM kiegészítések és csevegési folyamatok
 - Funkcióhívások
 - Visszakeresés-alapú generálás (RAG)
 - Felelős AI biztonsági intézkedések
@@ -24,7 +24,7 @@ Ebben a fejezetben 4 alapvető generatív AI technikát vizsgálunk meg gyakorla
 - [Előfeltételek](../../../03-CoreGenerativeAITechniques)
 - [Első Lépések](../../../03-CoreGenerativeAITechniques)
 - [Példák Áttekintése](../../../03-CoreGenerativeAITechniques)
-  - [1. LLM Kiegészítések és Chat Folyamatok](../../../03-CoreGenerativeAITechniques)
+  - [1. LLM Kiegészítések és Csevegési Folyamatok](../../../03-CoreGenerativeAITechniques)
   - [2. Funkciók és Pluginok LLM-ekkel](../../../03-CoreGenerativeAITechniques)
   - [3. Visszakeresés-Alapú Generálás (RAG)](../../../03-CoreGenerativeAITechniques)
   - [4. Felelős AI Biztonsági Bemutató](../../../03-CoreGenerativeAITechniques)
@@ -33,7 +33,7 @@ Ebben a fejezetben 4 alapvető generatív AI technikát vizsgálunk meg gyakorla
 
 ## Előfeltételek
 
-- A [2. fejezetben](../../../02-SetupDevEnvironment) leírt beállítások elvégzése
+- A [2. fejezetben](../../../02-SetupDevEnvironment) ismertetett beállítások elvégzése
 
 ## Első Lépések
 
@@ -62,7 +62,7 @@ export GITHUB_TOKEN=your_token_here
 
 ## Példák Áttekintése
 
-A példák az `examples/` mappában találhatók az alábbi struktúrával:
+A példák az `examples/` mappában találhatók a következő struktúrával:
 
 ```
 examples/
@@ -79,15 +79,15 @@ examples/
 └── pom.xml                               # Maven configuration
 ```
 
-### 1. LLM Kiegészítések és Chat Folyamatok
+### 1. LLM Kiegészítések és Csevegési Folyamatok
 **Fájl**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-Tanuld meg, hogyan építs beszélgetési AI-t streaming válaszokkal és chat történetkezeléssel.
+Tanuld meg, hogyan építs beszélgető AI-t streaming válaszokkal és csevegési előzmények kezelésével.
 
 Ez a példa bemutatja:
-- Egyszerű szövegkiegészítést rendszerüzenetekkel
-- Többfordulós beszélgetéseket történetkezeléssel
-- Interaktív chat szekciókat
+- Egyszerű szövegkiegészítést rendszerszintű utasításokkal
+- Többfordulós beszélgetéseket előzménykezeléssel
+- Interaktív csevegési munkameneteket
 - Paraméterek konfigurálását (hőmérséklet, maximális tokenek)
 
 ### 2. Funkciók és Pluginok LLM-ekkel
@@ -96,44 +96,44 @@ Ez a példa bemutatja:
 Bővítsd az AI képességeit egyedi funkciók és külső API-k integrálásával.
 
 Ez a példa bemutatja:
-- Időjárás funkció integrációját
-- Számológép funkció implementációját  
+- Időjárás-funkció integrációját
+- Számológép-funkció megvalósítását  
 - Több funkcióhívást egy beszélgetésen belül
-- Funkciók definiálását JSON sémákkal
+- Funkciódefiníciókat JSON sémákkal
 
 ### 3. Visszakeresés-Alapú Generálás (RAG)
 **Fájl**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Tanuld meg, hogyan kombináld az AI-t saját dokumentumaiddal és adatforrásaiddal a pontos, kontextusfüggő válaszok érdekében.
+Tanuld meg, hogyan kombinálhatod az AI-t saját dokumentumaiddal és adatforrásaiddal a pontos, kontextusfüggő válaszok érdekében.
 
 Ez a példa bemutatja:
-- Dokumentum-alapú kérdés-válasz rendszert az Azure OpenAI SDK-val
-- RAG mintázat implementációját GitHub Modellekkel
+- Dokumentumalapú kérdés-válasz rendszert az Azure OpenAI SDK-val
+- RAG minta megvalósítását GitHub Modellek segítségével
 
-**Használat**: Tegyél fel kérdéseket a `document.txt` tartalmával kapcsolatban, és kapj AI válaszokat kizárólag annak kontextusára alapozva.
+**Használat**: Tegyél fel kérdéseket a `document.txt` tartalmával kapcsolatban, és kapj AI válaszokat kizárólag az adott kontextus alapján.
 
 ### 4. Felelős AI Biztonsági Bemutató
 **Fájl**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
-Kapj betekintést az AI biztonsági intézkedések működésébe a GitHub Modellek tartalomszűrési képességeinek tesztelésével.
+Nézd meg, hogyan működnek az AI biztonsági intézkedések a GitHub Modellek tartalomszűrési képességeinek tesztelésével.
 
 Ez a példa bemutatja:
-- Tartalomszűrést potenciálisan káros üzenetek esetén
+- Tartalomszűrést potenciálisan káros utasítások esetén
 - Biztonsági válaszok kezelését alkalmazásokban
 - Különböző blokkolt tartalomkategóriákat (erőszak, gyűlöletbeszéd, félretájékoztatás)
-- Megfelelő hibakezelést biztonsági szabálysértések esetén
+- Hibakezelést biztonsági szabálysértések esetén
 
-> **További Információ**: Ez csak egy bevezető a felelős AI koncepciókhoz. További információért az etikáról, elfogultság csökkentéséről, adatvédelemről és felelős AI keretrendszerekről lásd [5. fejezet: Felelős Generatív AI](../05-ResponsibleGenAI/README.md).
+> **Tudj meg többet**: Ez csak egy bevezetés a felelős AI koncepciókba. További információkért az etikáról, az elfogultság csökkentéséről, az adatvédelemről és a felelős AI keretrendszerekről lásd: [5. fejezet: Felelős Generatív AI](../05-ResponsibleGenAI/README.md).
 
 ## Összefoglalás
 
-Ebben a fejezetben megvizsgáltuk az LLM kiegészítéseket és chat folyamatokat, implementáltuk a funkcióhívásokat az AI képességek bővítésére, létrehoztunk egy Visszakeresés-Alapú Generálás (RAG) rendszert, és bemutattuk a felelős AI biztonsági intézkedéseket.
+Ebben a fejezetben megvizsgáltuk az LLM kiegészítéseket és csevegési folyamatokat, megvalósítottuk a funkcióhívásokat az AI képességeinek bővítésére, létrehoztunk egy Visszakeresés-Alapú Generálási (RAG) rendszert, és bemutattuk a felelős AI biztonsági intézkedéseket.
 
-> **MEGJEGYZÉS**: Mélyedj el a mellékelt [**Útmutatóban**](./TUTORIAL.md).
+> **MEGJEGYZÉS**: Merülj el mélyebben a mellékelt [**Útmutató**](./TUTORIAL.md) segítségével.
 
 ## Következő Lépések
 
 [4. fejezet: Gyakorlati Alkalmazások és Projektek](../04-PracticalSamples/README.md)
 
 **Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével került lefordításra. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T19:12:04+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T09:40:56+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "fi"
 }
 -->
 # Generatiivisen tekoälyn keskeiset tekniikat
 
->**Huom**: Tämä luku sisältää yksityiskohtaisen [**Opetusohjelman**](./TUTORIAL.md), joka opastaa sinut valmiiden esimerkkien suorittamisessa.
+>**Huomio**: Tämä luku sisältää yksityiskohtaisen [**Opetusohjelman**](./TUTORIAL.md), joka opastaa sinut esimerkkien läpi.
 
 ## Mitä opit
 Tässä luvussa tarkastelemme neljää keskeistä generatiivisen tekoälyn tekniikkaa käytännön esimerkkien avulla:
@@ -82,7 +82,7 @@ examples/
 ### 1. LLM-päätelmät ja keskusteluvirrat
 **Tiedosto**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-Opi rakentamaan keskustelevaa tekoälyä suoratoistovastausten ja keskusteluhistorian hallinnan avulla.
+Opettele rakentamaan keskustelevaa tekoälyä suoratoistovastausten ja keskusteluhistorian hallinnan avulla.
 
 Tämä esimerkki esittelee:
 - Yksinkertaisen tekstin täydentämisen järjestelmäkehotteilla
@@ -93,7 +93,7 @@ Tämä esimerkki esittelee:
 ### 2. Funktiot ja lisäosat LLM:ien kanssa
 **Tiedosto**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-Laajenna tekoälyn kykyjä antamalla malleille pääsy mukautettuihin funktioihin ja ulkoisiin API:hin.
+Laajenna tekoälyn kyvykkyyksiä antamalla malleille pääsy mukautettuihin funktioihin ja ulkoisiin API:hin.
 
 Tämä esimerkki esittelee:
 - Sääfunktion integrointi
@@ -104,10 +104,10 @@ Tämä esimerkki esittelee:
 ### 3. Retrieval-Augmented Generation (RAG)
 **Tiedosto**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Opi yhdistämään tekoäly omiin dokumentteihisi ja tietolähteisiisi tarkkojen, kontekstuaalisten vastausten saamiseksi.
+Opettele yhdistämään tekoäly omiin dokumentteihisi ja tietolähteisiisi tarkkojen, kontekstitietoisten vastausten saamiseksi.
 
 Tämä esimerkki esittelee:
-- Dokumenttipohjaisen kysymys-vastausjärjestelmän Azure OpenAI SDK:lla
+- Dokumenttipohjainen kysymys-vastaus Azure OpenAI SDK:lla
 - RAG-mallin toteutus GitHub-malleilla
 
 **Käyttö**: Kysy kysymyksiä `document.txt`-sisällöstä ja saa tekoälyn vastauksia vain kyseiseen kontekstiin perustuen.
@@ -127,13 +127,13 @@ Tämä esimerkki esittelee:
 
 ## Yhteenveto
 
-Tässä luvussa tutkittiin LLM-päätelmiä ja keskusteluvirtoja, toteutettiin funktiokutsuja tekoälyn kykyjen laajentamiseksi, luotiin Retrieval-Augmented Generation (RAG) -järjestelmä ja esiteltiin vastuullisen tekoälyn turvallisuustoimenpiteitä.
+Tässä luvussa tutkittiin LLM-päätelmiä ja keskusteluvirtoja, toteutettiin funktiokutsuja tekoälyn kyvykkyyksien laajentamiseksi, luotiin Retrieval-Augmented Generation (RAG) -järjestelmä ja esiteltiin vastuullisen tekoälyn turvallisuustoimenpiteitä.
 
-> **HUOM**: Syvenny aiheeseen tarjotun [**Opetusohjelman**](./TUTORIAL.md) avulla.
+> **HUOMIO**: Syvenny aiheeseen mukana tulevan [**Opetusohjelman**](./TUTORIAL.md) avulla.
 
 ## Seuraavat askeleet
 
 [Luku 4: Käytännön sovellukset ja projektit](../04-PracticalSamples/README.md)
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi katsoa ensisijaiseksi lähteeksi. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa mahdollisista väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T20:06:58+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:47:10+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "he"
 }
 -->
 # אפליקציית Pet Story
 
->**Note**: פרק זה כולל [**מדריך**](./TUTORIAL.md) שמנחה אותך כיצד להפעיל את הדוגמאות המוכנות.
+>**Note**: פרק זה כולל [**מדריך**](./TUTORIAL.md) שמנחה אותך דרך הדוגמאות.
 
-אפליקציית ווב מבוססת Spring Boot שיוצרת תיאורים וסיפורים מבוססי AI עבור תמונות של חיות מחמד שהועלו, באמצעות GitHub Models.
+אפליקציית ווב מבוססת Spring Boot שמייצרת תיאורים וסיפורים מבוססי AI עבור תמונות של חיות מחמד שהועלו, באמצעות GitHub Models.
 
 ## תוכן עניינים
 
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **אבטחה**: Spring Security  
 - **Frontend**: תבניות Thymeleaf עם עיצוב Bootstrap  
 - **כלי בנייה**: Maven  
-- **מודלים AI**: GitHub Models  
+- **מודלים של AI**: GitHub Models  
 
 ## דרישות מקדימות
 
@@ -40,7 +40,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### 1. נווט לתיקיית אפליקציית petstory  
 ```bash
 cd Generative-AI-for-beginners-java/04-PracticalSamples/petstory
-```
+```  
 
 ### 2. הגדר משתנה סביבה  
 ```bash
@@ -52,17 +52,17 @@ cd Generative-AI-for-beginners-java/04-PracticalSamples/petstory
    
    # Linux/macOS
    export GITHUB_TOKEN=your_github_token_here
-   ```
+   ```  
 
 ### 3. בנה את האפליקציה  
 ```bash
 mvn clean compile
-```
+```  
 
-### 4. הפעל את האפליקציה  
+### 4. הרץ את האפליקציה  
 ```bash
 mvn spring-boot:run
-```
+```  
 
 ## שימוש
 
@@ -72,4 +72,4 @@ mvn spring-boot:run
 4. **יצירת סיפור**: לחץ על "Generate Story" ליצירת הסיפור  
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי בני אדם. איננו נושאים באחריות לאי-הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.

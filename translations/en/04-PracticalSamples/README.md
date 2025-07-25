@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "da1b6d87b8a73306b29f9a1bdd681221",
-  "translation_date": "2025-07-21T21:13:10+00:00",
+  "original_hash": "139c227ef39d24287257d1aff6fc6973",
+  "translation_date": "2025-07-25T08:38:43+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "en"
 }
 -->
 # Practical Applications & Projects
 
-> Note: Each example also includes a **TUTORIAL.md** that guides you through running the application.
+> Note: Each example also includes a **TUTORIAL.md** that guides you through running the samples.
 
 ## What You'll Learn
 In this section, we'll explore three practical applications that highlight generative AI development patterns with Java:
@@ -37,7 +37,7 @@ The **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** showcases how t
 
 ### Pet Story Generator
 
-The **[Pet Story Generator](petstory/README.md)** is a fun Spring Boot web application that demonstrates **multi-modal AI processing** to create imaginative pet stories. It combines client-side and server-side AI capabilities using transformer.js for browser-based AI interactions and the OpenAI SDK for server-side processing.
+The **[Pet Story Generator](petstory/README.md)** is a fun Spring Boot web application that demonstrates **multi-modal AI processing** to create imaginative pet stories. It combines client-side AI using transformer.js for browser-based interactions and server-side AI processing with the OpenAI SDK.
 
 ### MCP Calculator Service (Beginner-Friendly MCP Demo)
 
@@ -45,15 +45,15 @@ The **[MCP Calculator Service](mcp/calculator/README.md)** is a straightforward 
 
 ## Learning Progression
 
-These projects are designed to build on concepts introduced in earlier chapters:
+These projects are structured to build on concepts introduced in earlier chapters:
 
 1. **Start Simple**: Begin with the Foundry Local Spring Boot Demo to learn basic AI integration with local models
-2. **Add Interactivity**: Move on to the Pet Story Generator for multi-modal AI and web-based interactions
+2. **Add Interactivity**: Move on to the Pet Story Generator to explore multi-modal AI and web-based interactions
 3. **Learn MCP Basics**: Experiment with the MCP Calculator Service to grasp the fundamentals of the Model Context Protocol
 
 ## Summary
 
-**Congratulations!** You have successfully:
+**Well done!** You have successfully:
 
 - **Created multi-modal AI experiences** that combine client-side and server-side AI processing
 - **Integrated local AI models** using modern Java frameworks and SDKs

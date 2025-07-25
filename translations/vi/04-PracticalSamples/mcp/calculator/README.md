@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7bf9a4a832911269a8bd0decb97ff36c",
-  "translation_date": "2025-07-21T19:59:48+00:00",
+  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
+  "translation_date": "2025-07-25T09:48:49+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "vi"
 }
 -->
 # Dịch vụ Máy tính Cơ bản MCP
 
->**Note**: Chương này bao gồm một [**Hướng dẫn**](./TUTORIAL.md) giúp bạn chạy các mẫu hoàn chỉnh.
+>**Note**: Chương này bao gồm một [**Hướng dẫn**](./TUTORIAL.md) giúp bạn thực hành với các ví dụ.
 
-Chào mừng bạn đến với trải nghiệm thực hành đầu tiên về **Giao thức Ngữ cảnh Mô hình (MCP)**! Trong các chương trước, bạn đã tìm hiểu về các nguyên lý cơ bản của AI tạo sinh và thiết lập môi trường phát triển. Bây giờ là lúc xây dựng một ứng dụng thực tế.
+Chào mừng bạn đến với trải nghiệm thực hành đầu tiên về **Giao thức Ngữ cảnh Mô hình (MCP)**! Trong các chương trước, bạn đã tìm hiểu về các nguyên tắc cơ bản của AI tạo sinh và thiết lập môi trường phát triển. Bây giờ là lúc để xây dựng một thứ gì đó thực tế.
 
-Dịch vụ máy tính này minh họa cách các mô hình AI có thể tương tác an toàn với các công cụ bên ngoài bằng MCP. Thay vì dựa vào khả năng tính toán đôi khi không chính xác của mô hình AI, chúng tôi sẽ hướng dẫn cách xây dựng một hệ thống mạnh mẽ, nơi AI có thể gọi các dịch vụ chuyên biệt để thực hiện các phép tính chính xác.
+Dịch vụ máy tính này minh họa cách các mô hình AI có thể tương tác an toàn với các công cụ bên ngoài bằng MCP. Thay vì dựa vào khả năng tính toán đôi khi không đáng tin cậy của mô hình AI, chúng tôi sẽ hướng dẫn cách xây dựng một hệ thống mạnh mẽ, nơi AI có thể gọi các dịch vụ chuyên biệt để thực hiện các phép tính chính xác.
 
 ## Mục lục
 
@@ -30,11 +30,11 @@ Dịch vụ máy tính này minh họa cách các mô hình AI có thể tương
 
 ## Những gì bạn sẽ học
 
-Khi làm việc qua ví dụ này, bạn sẽ hiểu:
+Khi thực hiện ví dụ này, bạn sẽ hiểu:
 - Cách tạo các dịch vụ tương thích MCP bằng Spring Boot
 - Sự khác biệt giữa giao tiếp giao thức trực tiếp và tương tác hỗ trợ AI
 - Cách các mô hình AI quyết định khi nào và cách sử dụng các công cụ bên ngoài
-- Các thực hành tốt nhất để xây dựng ứng dụng AI tích hợp công cụ
+- Các phương pháp tốt nhất để xây dựng ứng dụng AI tích hợp công cụ
 
 Hoàn hảo cho người mới bắt đầu học các khái niệm MCP và sẵn sàng xây dựng tích hợp công cụ AI đầu tiên!
 
@@ -46,7 +46,7 @@ Hoàn hảo cho người mới bắt đầu học các khái niệm MCP và sẵ
 
 ## Các khái niệm chính
 
-**Giao thức Ngữ cảnh Mô hình (MCP)** là một cách tiêu chuẩn hóa để các ứng dụng AI kết nối an toàn với các công cụ bên ngoài. Hãy nghĩ về nó như một "cây cầu" cho phép các mô hình AI sử dụng các dịch vụ bên ngoài như máy tính của chúng ta. Thay vì để mô hình AI tự thực hiện phép toán (có thể không chính xác), nó có thể gọi dịch vụ máy tính của chúng ta để nhận kết quả chính xác. MCP đảm bảo giao tiếp này diễn ra an toàn và nhất quán.
+**Giao thức Ngữ cảnh Mô hình (MCP)** là một cách tiêu chuẩn hóa để các ứng dụng AI kết nối an toàn với các công cụ bên ngoài. Hãy nghĩ về nó như một "cây cầu" cho phép các mô hình AI sử dụng các dịch vụ bên ngoài như máy tính của chúng ta. Thay vì để mô hình AI tự thực hiện phép toán (có thể không đáng tin cậy), nó có thể gọi dịch vụ máy tính của chúng ta để nhận kết quả chính xác. MCP đảm bảo giao tiếp này diễn ra an toàn và nhất quán.
 
 **Sự kiện do máy chủ gửi (SSE)** cho phép giao tiếp thời gian thực giữa máy chủ và ứng dụng khách. Không giống như các yêu cầu HTTP truyền thống, nơi bạn yêu cầu và chờ phản hồi, SSE cho phép máy chủ liên tục gửi cập nhật đến ứng dụng khách. Điều này rất phù hợp cho các ứng dụng AI, nơi phản hồi có thể được truyền trực tiếp hoặc mất thời gian để xử lý.
 
@@ -65,8 +65,8 @@ mvn clean install -DskipTests
 java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
 ```
 
-### 2. Kiểm tra với các ứng dụng
-- **SDKClient**: Giao tiếp giao thức MCP trực tiếp
+### 3. Kiểm tra với các ứng dụng
+- **SDKClient**: Tương tác giao thức MCP trực tiếp
 - **LangChain4jClient**: Tương tác ngôn ngữ tự nhiên hỗ trợ AI (cần GitHub token)
 
 ## Các phép toán máy tính có sẵn
@@ -108,7 +108,7 @@ MCP Inspector cung cấp một giao diện web trực quan để kiểm tra dị
    ```
 
 3. **Mở giao diện web**:
-   - Tìm thông báo như "Inspector running at http://localhost:6274"
+   - Tìm một thông báo như "Inspector running at http://localhost:6274"
    - Mở URL đó trong trình duyệt web của bạn
 
 4. **Kết nối với dịch vụ máy tính của bạn**:
@@ -134,4 +134,4 @@ Cách tiếp cận trực quan này giúp bạn hiểu chính xác cách giao ti
 **Tham khảo:** [Tài liệu MCP Server Boot Starter](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server-boot-starter-docs.html)
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

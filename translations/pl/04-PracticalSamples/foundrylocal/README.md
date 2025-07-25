@@ -1,22 +1,22 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T16:36:50+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:26:42+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "pl"
 }
 -->
 # Lokalna aplikacja wiersza poleceń Foundry
 
->**Uwaga**: Ten rozdział zawiera [**Samouczek**](./TUTORIAL.md), który przeprowadzi Cię przez uruchamianie gotowych przykładów.
+>**Uwaga**: Ten rozdział zawiera [**Samouczek**](./TUTORIAL.md), który przeprowadzi Cię przez przykłady.
 
 Prosta aplikacja wiersza poleceń Spring Boot, która demonstruje, jak połączyć się z Foundry Local za pomocą OpenAI Java SDK.
 
 ## Czego się nauczysz
 
-- Jak zintegrować Foundry Local z aplikacjami Spring Boot za pomocą OpenAI Java SDK
-- Najlepsze praktyki w lokalnym rozwoju i testowaniu AI
+- Jak zintegrować Foundry Local z aplikacjami Spring Boot przy użyciu OpenAI Java SDK
+- Najlepsze praktyki w zakresie lokalnego rozwoju i testowania AI
 
 ## Spis treści
 
@@ -30,13 +30,13 @@ Prosta aplikacja wiersza poleceń Spring Boot, która demonstruje, jak połączy
 - [Przykładowy wynik](../../../../04-PracticalSamples/foundrylocal)
 - [Architektura](../../../../04-PracticalSamples/foundrylocal)
 - [Najważniejsze fragmenty kodu](../../../../04-PracticalSamples/foundrylocal)
-  - [Integracja OpenAI Java SDK](../../../../04-PracticalSamples/foundrylocal)
+  - [Integracja z OpenAI Java SDK](../../../../04-PracticalSamples/foundrylocal)
   - [API uzupełniania czatu](../../../../04-PracticalSamples/foundrylocal)
 - [Rozwiązywanie problemów](../../../../04-PracticalSamples/foundrylocal)
 
 ## Wymagania wstępne
 
-> **⚠️ Uwaga**: Ta aplikacja **nie działa w dostarczonym devcontainerze**, ponieważ wymaga zainstalowanego i uruchomionego Foundry Local na systemie hosta.
+> **⚠️ Uwaga**: Ta aplikacja **nie działa w dostarczonym devcontainerze**, ponieważ wymaga zainstalowanego i działającego Foundry Local na systemie hosta.
 
 ### Instalacja Foundry Local
 
@@ -47,9 +47,9 @@ Przed uruchomieniem tej aplikacji musisz zainstalować i uruchomić Foundry Loca
    - **Sprzęt**: 
      - Minimalne: 8GB RAM, 3GB wolnego miejsca na dysku
      - Zalecane: 16GB RAM, 15GB wolnego miejsca na dysku
-   - **Sieć**: Połączenie z internetem do początkowego pobrania modelu (opcjonalne dla trybu offline)
+   - **Sieć**: Połączenie z internetem do początkowego pobrania modelu (opcjonalne do pracy offline)
    - **Przyspieszenie (opcjonalne)**: NVIDIA GPU (seria 2000 lub nowsza), AMD GPU (seria 6000 lub nowsza), Qualcomm Snapdragon X Elite (8GB lub więcej pamięci) lub Apple silicon
-   - **Uprawnienia**: Uprawnienia administracyjne do instalacji oprogramowania na urządzeniu
+   - **Uprawnienia**: Uprawnienia administratora do instalacji oprogramowania na urządzeniu
 
 2. **Zainstaluj Foundry Local**:
    
@@ -84,7 +84,7 @@ Przed uruchomieniem tej aplikacji musisz zainstalować i uruchomić Foundry Loca
 
 ### Weryfikacja
 
-Możesz zweryfikować poprawność działania za pomocą tych poleceń:
+Możesz zweryfikować, czy wszystko działa poprawnie, używając tych poleceń:
 
 ```bash
 # List all available models
@@ -103,7 +103,7 @@ Aplikację można skonfigurować za pomocą pliku `application.properties`:
 - `foundry.local.base-url` - Bazowy URL dla Foundry Local (domyślnie: http://localhost:5273)
 - `foundry.local.model` - Model AI do użycia (domyślnie: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Uwaga**: Nazwa modelu w konfiguracji powinna odpowiadać konkretnemu wariantowi, który Foundry Local pobrał dla Twojego systemu. Gdy uruchomisz `foundry model run phi-3.5-mini`, Foundry Local automatycznie wybiera i pobiera najlepszy wariant (CUDA dla GPU NVIDIA, wersja CPU w przeciwnym razie). Użyj `foundry model list`, aby zobaczyć dokładną nazwę modelu dostępną w Twojej lokalnej instancji.
+> **Uwaga**: Nazwa modelu w konfiguracji powinna odpowiadać konkretnemu wariantowi, który Foundry Local pobrał dla Twojego systemu. Gdy uruchamiasz `foundry model run phi-3.5-mini`, Foundry Local automatycznie wybiera i pobiera najlepszy wariant (CUDA dla GPU NVIDIA, wersja CPU w przeciwnym razie). Użyj `foundry model list`, aby zobaczyć dokładną nazwę modelu dostępną w Twojej lokalnej instancji.
 
 ## Szybki start
 
@@ -127,7 +127,7 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 
 ### Zależności
 
-Aplikacja korzysta z OpenAI Java SDK do komunikacji z Foundry Local. Kluczowa zależność to:
+Ta aplikacja używa OpenAI Java SDK do komunikacji z Foundry Local. Kluczowa zależność to:
 
 ```xml
 <dependency>
@@ -137,14 +137,14 @@ Aplikacja korzysta z OpenAI Java SDK do komunikacji z Foundry Local. Kluczowa za
 </dependency>
 ```
 
-Aplikacja jest wstępnie skonfigurowana do połączenia z Foundry Local działającym na domyślnym porcie.
+Aplikacja jest wstępnie skonfigurowana do łączenia się z Foundry Local działającym na domyślnym porcie.
 
 ## Co robi aplikacja
 
 Po uruchomieniu aplikacji:
 
 1. **Uruchamia się** jako aplikacja wiersza poleceń (bez serwera webowego)
-2. **Automatycznie wysyła** wiadomość testową: "Cześć! Czy możesz powiedzieć, czym jesteś i jaki model uruchamiasz?"
+2. **Automatycznie wysyła** wiadomość testową: "Hello! Can you tell me what you are and what model you're running?"
 3. **Wyświetla odpowiedź** od Foundry Local w konsoli
 4. **Zamyka się** po zakończeniu demonstracji
 
@@ -162,16 +162,16 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 ## Architektura
 
 - **Application.java** - Główna aplikacja Spring Boot z CommandLineRunner
-- **FoundryLocalService.java** - Usługa korzystająca z OpenAI Java SDK do komunikacji z Foundry Local
-- Korzysta z **OpenAI Java SDK** do bezpiecznych typowo wywołań API
+- **FoundryLocalService.java** - Usługa wykorzystująca OpenAI Java SDK do komunikacji z Foundry Local
+- Wykorzystuje **OpenAI Java SDK** do bezpiecznych typowo wywołań API
 - Automatyczna serializacja/deserializacja JSON obsługiwana przez SDK
-- Czysta konfiguracja za pomocą adnotacji Spring `@Value` i `@PostConstruct`
+- Czysta konfiguracja za pomocą adnotacji Springa `@Value` i `@PostConstruct`
 
 ## Najważniejsze fragmenty kodu
 
-### Integracja OpenAI Java SDK
+### Integracja z OpenAI Java SDK
 
-Aplikacja korzysta z OpenAI Java SDK do stworzenia klienta skonfigurowanego dla Foundry Local:
+Aplikacja używa OpenAI Java SDK do utworzenia klienta skonfigurowanego dla Foundry Local:
 
 ```java
 @PostConstruct
@@ -185,7 +185,7 @@ public void init() {
 
 ### API uzupełniania czatu
 
-Wysyłanie zapytań do API uzupełniania czatu jest proste i bezpieczne typowo:
+Wysyłanie żądań uzupełniania czatu jest proste i bezpieczne typowo:
 
 ```java
 ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
@@ -200,16 +200,16 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 
 ## Rozwiązywanie problemów
 
-Jeśli pojawią się błędy połączenia:
+Jeśli pojawiają się błędy połączenia:
 1. Sprawdź, czy Foundry Local działa na `http://localhost:5273`
-2. Upewnij się, że wariant modelu Phi-3.5-mini jest dostępny za pomocą `foundry model list`
+2. Upewnij się, że wariant modelu Phi-3.5-mini jest dostępny, używając `foundry model list`
 3. Upewnij się, że nazwa modelu w `application.properties` odpowiada dokładnej nazwie modelu pokazanej na liście
-4. Upewnij się, że żaden firewall nie blokuje połączenia
+4. Sprawdź, czy żaden firewall nie blokuje połączenia
 
 Typowe problemy:
 - **Model nie znaleziony**: Uruchom `foundry model run phi-3.5-mini`, aby pobrać i uruchomić model
-- **Usługa nie działa**: Usługa Foundry Local mogła się zatrzymać; uruchom ją ponownie za pomocą polecenia uruchomienia modelu
+- **Usługa nie działa**: Usługa Foundry Local mogła się zatrzymać; uruchom ją ponownie za pomocą polecenia uruchamiania modelu
 - **Nieprawidłowa nazwa modelu**: Użyj `foundry model list`, aby zobaczyć dostępne modele i zaktualizować konfigurację odpowiednio
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

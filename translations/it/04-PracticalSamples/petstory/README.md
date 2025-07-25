@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T18:32:00+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:25:27+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "it"
 }
 -->
 # App Storia degli Animali Domestici
 
->**Nota**: Questo capitolo include un [**Tutorial**](./TUTORIAL.md) che ti guida nell'esecuzione degli esempi completi.
+>**Nota**: Questo capitolo include un [**Tutorial**](./TUTORIAL.md) che ti guida attraverso gli esempi.
 
-Un'applicazione web Spring Boot che genera descrizioni e storie basate sull'intelligenza artificiale per immagini di animali domestici caricate, utilizzando i modelli di GitHub.
+Un'applicazione web Spring Boot che genera descrizioni e storie basate sull'intelligenza artificiale per immagini di animali domestici caricate, utilizzando GitHub Models.
 
 ## Indice
 
@@ -23,11 +23,11 @@ Un'applicazione web Spring Boot che genera descrizioni e storie basate sull'inte
 ## Stack Tecnologico
 
 - **Backend**: Spring Boot 3.5.3, Java 21
-- **Integrazione AI**: OpenAI Java SDK con modelli di GitHub
+- **Integrazione AI**: OpenAI Java SDK con GitHub Models
 - **Sicurezza**: Spring Security
 - **Frontend**: Template Thymeleaf con stile Bootstrap
 - **Strumento di Build**: Maven
-- **Modelli AI**: Modelli di GitHub
+- **Modelli AI**: GitHub Models
 
 ## Prerequisiti
 
@@ -59,7 +59,7 @@ cd Generative-AI-for-beginners-java/04-PracticalSamples/petstory
 mvn clean compile
 ```
 
-### 4. Esegui l'Applicazione
+### 4. Avvia l'Applicazione
 ```bash
 mvn spring-boot:run
 ```
@@ -71,5 +71,5 @@ mvn spring-boot:run
 3. **Analizza Immagine**: Clicca su "Analizza Immagine" per ottenere una descrizione AI
 4. **Genera Storia**: Clicca su "Genera Storia" per creare la storia
 
-**Disclaimer (Avvertenza)**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

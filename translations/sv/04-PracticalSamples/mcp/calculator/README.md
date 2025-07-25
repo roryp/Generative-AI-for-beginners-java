@@ -1,24 +1,24 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7bf9a4a832911269a8bd0decb97ff36c",
-  "translation_date": "2025-07-21T19:57:37+00:00",
+  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
+  "translation_date": "2025-07-25T09:36:05+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "sv"
 }
 -->
 # Grundläggande Kalkylator MCP-tjänst
 
->**Note**: Detta kapitel inkluderar en [**Tutorial**](./TUTORIAL.md) som guidar dig genom att köra de färdiga exemplen.
+>**Note**: Detta kapitel inkluderar en [**Tutorial**](./TUTORIAL.md) som guidar dig genom exemplen.
 
-Välkommen till din första praktiska erfarenhet med **Model Context Protocol (MCP)**! I de tidigare kapitlen har du lärt dig om grunderna i generativ AI och satt upp din utvecklingsmiljö. Nu är det dags att bygga något praktiskt.
+Välkommen till din första praktiska upplevelse med **Model Context Protocol (MCP)**! I de tidigare kapitlen har du lärt dig grunderna i generativ AI och satt upp din utvecklingsmiljö. Nu är det dags att bygga något praktiskt.
 
 Denna kalkylatortjänst visar hur AI-modeller säkert kan interagera med externa verktyg med hjälp av MCP. Istället för att förlita sig på AI-modellens ibland opålitliga matematiska förmågor, kommer vi att visa hur man bygger ett robust system där AI kan anropa specialiserade tjänster för exakta beräkningar.
 
 ## Innehållsförteckning
 
 - [Vad du kommer att lära dig](../../../../../04-PracticalSamples/mcp/calculator)
-- [Förkunskapskrav](../../../../../04-PracticalSamples/mcp/calculator)
+- [Förkunskaper](../../../../../04-PracticalSamples/mcp/calculator)
 - [Nyckelkoncept](../../../../../04-PracticalSamples/mcp/calculator)
 - [Snabbstart](../../../../../04-PracticalSamples/mcp/calculator)
 - [Tillgängliga kalkylatoroperationer](../../../../../04-PracticalSamples/mcp/calculator)
@@ -33,12 +33,12 @@ Denna kalkylatortjänst visar hur AI-modeller säkert kan interagera med externa
 Genom att arbeta med detta exempel kommer du att förstå:
 - Hur man skapar MCP-kompatibla tjänster med Spring Boot
 - Skillnaden mellan direkt protokollkommunikation och AI-driven interaktion
-- Hur AI-modeller avgör när och hur de ska använda externa verktyg
+- Hur AI-modeller avgör när och hur externa verktyg ska användas
 - Bästa praxis för att bygga AI-applikationer med verktygsintegration
 
-Perfekt för nybörjare som lär sig MCP-koncept och är redo att bygga sin första AI-verktygsintegration!
+Perfekt för nybörjare som vill lära sig MCP-koncept och är redo att bygga sin första AI-verktygsintegration!
 
-## Förkunskapskrav
+## Förkunskaper
 
 - Java 21+
 - Maven 3.6+
@@ -46,11 +46,11 @@ Perfekt för nybörjare som lär sig MCP-koncept och är redo att bygga sin för
 
 ## Nyckelkoncept
 
-**Model Context Protocol (MCP)** är ett standardiserat sätt för AI-applikationer att säkert ansluta till externa verktyg. Tänk på det som en "bro" som gör det möjligt för AI-modeller att använda externa tjänster som vår kalkylator. Istället för att AI-modellen försöker göra matematik själv (vilket kan vara opålitligt), kan den anropa vår kalkylatortjänst för att få exakta resultat. MCP säkerställer att denna kommunikation sker säkert och konsekvent.
+**Model Context Protocol (MCP)** är ett standardiserat sätt för AI-applikationer att säkert ansluta till externa verktyg. Tänk på det som en "bro" som låter AI-modeller använda externa tjänster som vår kalkylator. Istället för att AI-modellen försöker göra matematik själv (vilket kan vara opålitligt), kan den anropa vår kalkylatortjänst för att få exakta resultat. MCP säkerställer att denna kommunikation sker säkert och konsekvent.
 
-**Server-Sent Events (SSE)** möjliggör realtidskommunikation mellan servern och klienter. Till skillnad från traditionella HTTP-förfrågningar där du frågar och väntar på svar, tillåter SSE att servern kontinuerligt skickar uppdateringar till klienten. Detta är perfekt för AI-applikationer där svar kan strömmas eller ta tid att bearbeta.
+**Server-Sent Events (SSE)** möjliggör realtidskommunikation mellan servern och klienterna. Till skillnad från traditionella HTTP-förfrågningar där du frågar och väntar på ett svar, tillåter SSE att servern kontinuerligt skickar uppdateringar till klienten. Detta är perfekt för AI-applikationer där svar kan strömmas eller ta tid att bearbeta.
 
-**AI-verktyg och funktionsanrop** gör det möjligt för AI-modeller att automatiskt välja och använda externa funktioner (som kalkylatoroperationer) baserat på användarförfrågningar. När du frågar "Vad är 15 + 27?", förstår AI-modellen att du vill ha addition, anropar automatiskt vårt `add`-verktyg med rätt parametrar (15, 27) och returnerar resultatet i naturligt språk. AI fungerar som en intelligent koordinator som vet när och hur varje verktyg ska användas.
+**AI-verktyg och funktionsanrop** gör det möjligt för AI-modeller att automatiskt välja och använda externa funktioner (som kalkylatoroperationer) baserat på användarförfrågningar. När du frågar "Vad är 15 + 27?", förstår AI-modellen att du vill addera, anropar automatiskt vårt `add`-verktyg med rätt parametrar (15, 27) och returnerar resultatet i naturligt språk. AI fungerar som en intelligent koordinator som vet när och hur varje verktyg ska användas.
 
 ## Snabbstart
 
@@ -65,9 +65,9 @@ mvn clean install -DskipTests
 java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
 ```
 
-### 3. Testa med klienter
+### 2. Testa med klienter
 - **SDKClient**: Direkt MCP-protokollinteraktion
-- **LangChain4jClient**: AI-driven naturlig språkinteraktion (kräver GitHub-token)
+- **LangChain4jClient**: AI-driven interaktion med naturligt språk (kräver GitHub-token)
 
 ## Tillgängliga kalkylatoroperationer
 
@@ -84,7 +84,7 @@ mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDK
 ```
 
 ### 2. AI-driven klient (LangChain4jClient)
-Demonstrerar naturlig språkinteraktion med GitHub-modeller. Kräver GitHub-token (se [Förkunskapskrav](../../../../../04-PracticalSamples/mcp/calculator)).
+Demonstrerar interaktion med naturligt språk med GitHub-modeller. Kräver GitHub-token (se [Förkunskaper](../../../../../04-PracticalSamples/mcp/calculator)).
 
 **Kör:**
 ```bash
@@ -93,7 +93,7 @@ mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.Lan
 
 ## MCP Inspector (Webbgränssnitt)
 
-MCP Inspector erbjuder ett visuellt webbgränssnitt för att testa din MCP-tjänst utan att skriva kod. Perfekt för nybörjare att förstå hur MCP fungerar!
+MCP Inspector tillhandahåller ett visuellt webbgränssnitt för att testa din MCP-tjänst utan att skriva kod. Perfekt för nybörjare som vill förstå hur MCP fungerar!
 
 ### Steg-för-steg-instruktioner:
 
@@ -114,7 +114,7 @@ MCP Inspector erbjuder ett visuellt webbgränssnitt för att testa din MCP-tjän
 4. **Anslut till din kalkylatortjänst**:
    - I webbgränssnittet, ställ in transporttypen till "SSE"
    - Ställ in URL:en till: `http://localhost:8080/sse`
-   - Klicka på "Connect"-knappen
+   - Klicka på knappen "Connect"
 
 5. **Utforska tillgängliga verktyg**:
    - Klicka på "List Tools" för att se alla kalkylatoroperationer
@@ -134,4 +134,4 @@ Detta visuella tillvägagångssätt hjälper dig att förstå exakt hur MCP-komm
 **Referens:** [MCP Server Boot Starter Docs](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server-boot-starter-docs.html)
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

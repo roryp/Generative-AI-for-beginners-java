@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T18:16:23+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:29:03+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "tr"
 }
 -->
 # Foundry Yerel Komut Satırı Uygulaması
 
->**Not**: Bu bölüm, tamamlanmış örnekleri çalıştırma konusunda size rehberlik eden bir [**Eğitim**](./TUTORIAL.md) içerir.
+>**Not**: Bu bölüm, örnekler üzerinden sizi yönlendiren bir [**Eğitim**](./TUTORIAL.md) içerir.
 
 OpenAI Java SDK kullanarak Foundry Yerel'e bağlanmayı gösteren basit bir Spring Boot komut satırı uygulaması.
 
@@ -22,7 +22,7 @@ OpenAI Java SDK kullanarak Foundry Yerel'e bağlanmayı gösteren basit bir Spri
 
 - [Öğrenecekleriniz](../../../../04-PracticalSamples/foundrylocal)
 - [Ön Koşullar](../../../../04-PracticalSamples/foundrylocal)
-  - [Foundry Yerel'in Kurulumu](../../../../04-PracticalSamples/foundrylocal)
+  - [Foundry Yerel'i Kurma](../../../../04-PracticalSamples/foundrylocal)
   - [Doğrulama](../../../../04-PracticalSamples/foundrylocal)
 - [Yapılandırma](../../../../04-PracticalSamples/foundrylocal)
 - [Hızlı Başlangıç](../../../../04-PracticalSamples/foundrylocal)
@@ -38,7 +38,7 @@ OpenAI Java SDK kullanarak Foundry Yerel'e bağlanmayı gösteren basit bir Spri
 
 > **⚠️ Not**: Bu uygulama **sağlanan devcontainer içinde çalışmaz** çünkü Foundry Yerel'in ana sistemde kurulu ve çalışıyor olması gerekir.
 
-### Foundry Yerel'in Kurulumu
+### Foundry Yerel'i Kurma
 
 Bu uygulamayı çalıştırmadan önce Foundry Yerel'i kurmanız ve başlatmanız gerekir. Aşağıdaki adımları izleyin:
 
@@ -74,7 +74,7 @@ Bu uygulamayı çalıştırmadan önce Foundry Yerel'i kurmanız ve başlatmanı
 
    Model indirilir (internet hızınıza bağlı olarak birkaç dakika sürebilir) ve ardından çalışır. Foundry Yerel, sisteminiz için en iyi model varyantını otomatik olarak seçer (NVIDIA GPU'lar için CUDA, aksi takdirde CPU sürümü).
 
-4. **Modeli test edin**: Aynı terminalde bir soru sorarak:
+4. **Modeli test edin** ve aynı terminalde bir soru sorun:
 
    ```bash
    Why is the sky blue?
@@ -143,10 +143,10 @@ Uygulama, varsayılan portta çalışan Foundry Yerel'e bağlanacak şekilde ön
 
 Uygulamayı çalıştırdığınızda:
 
-1. **Başlatılır**: Komut satırı uygulaması olarak (web sunucusu yok)
-2. **Otomatik olarak bir test mesajı gönderir**: "Merhaba! Bana ne olduğunu ve hangi modeli çalıştırdığını söyleyebilir misin?"
+1. **Başlatılır** bir komut satırı uygulaması olarak (web sunucusu yok)
+2. **Otomatik olarak** bir test mesajı gönderir: "Merhaba! Bana ne olduğunu ve hangi modeli çalıştırdığını söyleyebilir misin?"
 3. **Foundry Yerel'den gelen yanıtı** konsolda gösterir
-4. **Temiz bir şekilde çıkar**: Demo tamamlandıktan sonra
+4. **Temiz bir şekilde çıkar** demo tamamlandıktan sonra
 
 ## Örnek Çıktı
 
@@ -163,7 +163,7 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 - **Application.java** - CommandLineRunner ile ana Spring Boot uygulaması
 - **FoundryLocalService.java** - Foundry Yerel ile iletişim kurmak için OpenAI Java SDK kullanan servis
-- **OpenAI Java SDK** kullanılarak tip güvenli API çağrıları
+- **OpenAI Java SDK** kullanılarak tür güvenli API çağrıları
 - SDK tarafından otomatik JSON serileştirme/deserileştirme
 - Spring'in `@Value` ve `@PostConstruct` anotasyonları kullanılarak temiz yapılandırma
 
@@ -185,7 +185,7 @@ public void init() {
 
 ### Chat Completion API
 
-Chat completion istekleri yapmak basit ve tip güvenlidir:
+Chat completion istekleri yapmak basit ve tür güvenlidir:
 
 ```java
 ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
@@ -208,7 +208,7 @@ Bağlantı hataları görürseniz:
 
 Yaygın sorunlar:
 - **Model bulunamadı**: `foundry model run phi-3.5-mini` komutunu çalıştırarak modeli indirin ve başlatın
-- **Hizmet çalışmıyor**: Foundry Yerel hizmeti durmuş olabilir; model çalıştırma komutuyla yeniden başlatın
+- **Hizmet çalışmıyor**: Foundry Yerel hizmeti durmuş olabilir; modeli çalıştırma komutuyla yeniden başlatın
 - **Yanlış model adı**: Mevcut modelleri görmek için `foundry model list` komutunu kullanın ve yapılandırmanızı buna göre güncelleyin
 
 **Feragatname**:  

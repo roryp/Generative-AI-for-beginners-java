@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T18:31:50+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:23:33+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "br"
 }
 -->
 # Aplicativo Pet Story
 
->**Nota**: Este capítulo inclui um [**Tutorial**](./TUTORIAL.md) que orienta você a executar os exemplos finalizados.
+>**Nota**: Este capítulo inclui um [**Tutorial**](./TUTORIAL.md) que orienta você pelos exemplos.
 
-Um aplicativo web Spring Boot que gera descrições e histórias impulsionadas por IA para imagens de pets enviadas, utilizando os Modelos do GitHub.
+Um aplicativo web Spring Boot que gera descrições e histórias baseadas em IA para imagens de pets enviadas, utilizando os Modelos do GitHub.
 
 ## Índice
 

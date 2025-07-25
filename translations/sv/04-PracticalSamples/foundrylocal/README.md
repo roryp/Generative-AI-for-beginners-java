@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T19:47:27+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:35:41+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "sv"
 }
 -->
 # Foundry Lokal Kommandoradsapplikation
 
->**Note**: Detta kapitel inkluderar en [**Tutorial**](./TUTORIAL.md) som guidar dig genom att köra de färdiga exemplen.
+>**Note**: Detta kapitel inkluderar en [**Tutorial**](./TUTORIAL.md) som guidar dig genom exemplen.
 
 En enkel Spring Boot-kommandoradsapplikation som demonstrerar hur man ansluter till Foundry Lokal med hjälp av OpenAI Java SDK.
 
 ## Vad Du Kommer Lära Dig
 
-- Hur man integrerar Foundry Lokal med Spring Boot-applikationer med OpenAI Java SDK
+- Hur man integrerar Foundry Lokal med Spring Boot-applikationer med hjälp av OpenAI Java SDK
 - Bästa praxis för lokal AI-utveckling och testning
 
 ## Innehållsförteckning
@@ -47,8 +47,8 @@ Innan du kör denna applikation måste du installera och starta Foundry Lokal. F
    - **Hårdvara**: 
      - Minimum: 8GB RAM, 3GB ledigt diskutrymme
      - Rekommenderat: 16GB RAM, 15GB ledigt diskutrymme
-   - **Nätverk**: Internetanslutning för initial nedladdning av modell (valfritt för offline-användning)
-   - **Acceleration (valfritt)**: NVIDIA GPU (2,000-serien eller nyare), AMD GPU (6,000-serien eller nyare), Qualcomm Snapdragon X Elite (8GB eller mer minne) eller Apple silicon
+   - **Nätverk**: Internetanslutning för initial nedladdning av modeller (valfritt för offline-användning)
+   - **Acceleration (valfritt)**: NVIDIA GPU (2000-serien eller nyare), AMD GPU (6000-serien eller nyare), Qualcomm Snapdragon X Elite (8GB eller mer minne) eller Apple silicon
    - **Behörigheter**: Administratörsrättigheter för att installera programvara på din enhet
 
 2. **Installera Foundry Lokal**:
@@ -72,7 +72,7 @@ Innan du kör denna applikation måste du installera och starta Foundry Lokal. F
    foundry model run phi-3.5-mini
    ```
 
-   Modellen laddas ner (vilket kan ta några minuter beroende på din internetanslutning) och körs sedan. Foundry Lokal väljer automatiskt den bästa modellvarianten för ditt system (CUDA för NVIDIA GPU:er, CPU-version annars).
+   Modellen laddas ner (vilket kan ta några minuter beroende på din internetanslutning) och startas sedan. Foundry Lokal väljer automatiskt den bästa modellvarianten för ditt system (CUDA för NVIDIA GPU:er, CPU-version annars).
 
 4. **Testa modellen** genom att ställa en fråga i samma terminal:
 
@@ -103,7 +103,7 @@ Applikationen kan konfigureras via `application.properties`:
 - `foundry.local.base-url` - Bas-URL för Foundry Lokal (standard: http://localhost:5273)
 - `foundry.local.model` - AI-modell att använda (standard: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Note**: Modellnamnet i konfigurationen bör matcha den specifika variant som Foundry Lokal laddade ner för ditt system. När du kör `foundry model run phi-3.5-mini` väljer och laddar Foundry Lokal automatiskt den bästa varianten (CUDA för NVIDIA GPU:er, CPU-version annars). Använd `foundry model list` för att se det exakta modellnamnet som är tillgängligt i din lokala instans.
+> **Note**: Modellnamnet i konfigurationen bör matcha den specifika variant som Foundry Lokal laddade ner för ditt system. När du kör `foundry model run phi-3.5-mini` väljer Foundry Lokal automatiskt och laddar ner den bästa varianten (CUDA för NVIDIA GPU:er, CPU-version annars). Använd `foundry model list` för att se det exakta modellnamnet som är tillgängligt i din lokala instans.
 
 ## Snabbstart
 
@@ -127,7 +127,7 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 
 ### Beroenden
 
-Denna applikation använder OpenAI Java SDK för att kommunicera med Foundry Lokal. Den viktigaste beroenden är:
+Denna applikation använder OpenAI Java SDK för att kommunicera med Foundry Lokal. Den viktigaste beroendet är:
 
 ```xml
 <dependency>
@@ -212,4 +212,4 @@ Vanliga problem:
 - **Fel modellnamn**: Använd `foundry model list` för att se tillgängliga modeller och uppdatera din konfiguration därefter
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller inexaktheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

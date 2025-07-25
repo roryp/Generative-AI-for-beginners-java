@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T17:41:30+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T09:28:25+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "tr"
 }
 -->
 # Temel Üretken Yapay Zeka Teknikleri
 
->**Not**: Bu bölüm, tamamlanmış örnekleri çalıştırmanıza rehberlik eden ayrıntılı bir [**Eğitim**](./TUTORIAL.md) içermektedir.
+>**Not**: Bu bölüm, örnekler üzerinden sizi yönlendiren ayrıntılı bir [**Eğitim**](./TUTORIAL.md) içerir.
 
 ## Öğrenecekleriniz
 Bu bölümde, 4 temel üretken yapay zeka tekniğini pratik örneklerle inceleyeceğiz:
 - LLM tamamlama ve sohbet akışları
-- Fonksiyon çağırma
-- Geri Getirme Destekli Üretim (RAG)
+- Fonksiyon çağrısı
+- Geri Çağırma Destekli Üretim (RAG)
 - Sorumlu yapay zeka güvenlik önlemleri
 
 ## İçindekiler
@@ -26,26 +26,26 @@ Bu bölümde, 4 temel üretken yapay zeka tekniğini pratik örneklerle inceleye
 - [Örneklerin Genel Görünümü](../../../03-CoreGenerativeAITechniques)
   - [1. LLM Tamamlama ve Sohbet Akışları](../../../03-CoreGenerativeAITechniques)
   - [2. LLM'lerle Fonksiyonlar ve Eklentiler](../../../03-CoreGenerativeAITechniques)
-  - [3. Geri Getirme Destekli Üretim (RAG)](../../../03-CoreGenerativeAITechniques)
+  - [3. Geri Çağırma Destekli Üretim (RAG)](../../../03-CoreGenerativeAITechniques)
   - [4. Sorumlu Yapay Zeka Güvenliği Gösterimi](../../../03-CoreGenerativeAITechniques)
 - [Özet](../../../03-CoreGenerativeAITechniques)
 - [Sonraki Adımlar](../../../03-CoreGenerativeAITechniques)
 
 ## Ön Koşullar
 
-- [Bölüm 2](../../../02-SetupDevEnvironment) içindeki kurulumun tamamlanmış olması
+- [Bölüm 2](../../../02-SetupDevEnvironment) içindeki kurulum tamamlanmış olmalıdır.
 
 ## Başlarken
 
-1. **Örnekler klasörüne gidin**:  
+1. **Örnekler klasörüne gidin**: 
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
-```  
-2. **Ortamı ayarlayın**:  
+```
+2. **Ortamı ayarlayın**: 
 ```bash
 export GITHUB_TOKEN=your_token_here
-```  
-3. **Örnekleri derleyin ve çalıştırın**:  
+```
+3. **Örnekleri derleyin ve çalıştırın**:
 ```bash
    # Run completions example
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
@@ -58,11 +58,11 @@ export GITHUB_TOKEN=your_token_here
    
    # Run responsible AI demo
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
-   ```  
+   ```
 
 ## Örneklerin Genel Görünümü
 
-Örnekler, `examples/` klasöründe aşağıdaki yapıya göre düzenlenmiştir:
+Örnekler `examples/` klasöründe aşağıdaki yapı ile organize edilmiştir:
 
 ```
 examples/
@@ -82,54 +82,54 @@ examples/
 ### 1. LLM Tamamlama ve Sohbet Akışları
 **Dosya**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-Akış yanıtları ve sohbet geçmişi yönetimi ile konuşma tabanlı yapay zeka oluşturmayı öğrenin.
+Akışkan yanıtlar ve sohbet geçmişi yönetimi ile konuşma tabanlı yapay zeka oluşturmayı öğrenin.
 
 Bu örnek şunları gösterir:
 - Sistem istemleriyle basit metin tamamlama
-- Geçmiş yönetimi ile çoklu dönüşlü sohbetler
+- Geçmiş yönetimi ile çok aşamalı konuşmalar
 - Etkileşimli sohbet oturumları
-- Parametre yapılandırması (sıcaklık, maksimum token sayısı)
+- Parametre yapılandırması (sıcaklık, maksimum token)
 
 ### 2. LLM'lerle Fonksiyonlar ve Eklentiler
 **Dosya**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-Modellere özel fonksiyonlar ve harici API'ler sağlanarak yapay zekanın yeteneklerini genişletin.
+Modellere özel fonksiyonlar ve harici API'ler ekleyerek yapay zeka yeteneklerini genişletin.
 
 Bu örnek şunları gösterir:
 - Hava durumu fonksiyonu entegrasyonu
 - Hesap makinesi fonksiyonu uygulaması  
 - Bir konuşmada birden fazla fonksiyon çağrısı
-- JSON şemalarıyla fonksiyon tanımı
+- JSON şemaları ile fonksiyon tanımı
 
-### 3. Geri Getirme Destekli Üretim (RAG)
+### 3. Geri Çağırma Destekli Üretim (RAG)
 **Dosya**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Yapay zekayı kendi belgeleriniz ve veri kaynaklarınızla birleştirerek doğru ve bağlama duyarlı yanıtlar almayı öğrenin.
+Doğru ve bağlama duyarlı yanıtlar için yapay zekayı kendi belgeleriniz ve veri kaynaklarınızla birleştirmeyi öğrenin.
 
 Bu örnek şunları gösterir:
 - Azure OpenAI SDK ile belge tabanlı soru-cevap
-- GitHub Modelleri ile RAG deseni uygulaması
+- GitHub Modelleri ile RAG desen uygulaması
 
-**Kullanım**: `document.txt` içeriği hakkında sorular sorun ve yalnızca o bağlama dayalı yapay zeka yanıtları alın.
+**Kullanım**: `document.txt` içeriği hakkında sorular sorun ve yalnızca bu bağlama dayalı yapay zeka yanıtları alın.
 
 ### 4. Sorumlu Yapay Zeka Güvenliği Gösterimi
 **Dosya**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
-GitHub Modellerinin içerik filtreleme yeteneklerini test ederek yapay zeka güvenlik önlemlerine bir önizleme yapın.
+GitHub Modelleri'nin içerik filtreleme yeteneklerini test ederek yapay zeka güvenlik önlemlerinin nasıl çalıştığını önizleyin.
 
 Bu örnek şunları gösterir:
 - Potansiyel olarak zararlı istemler için içerik filtreleme
-- Uygulamalarda güvenlik yanıtlarının ele alınması
+- Uygulamalarda güvenlik yanıtı yönetimi
 - Engellenen içerik kategorileri (şiddet, nefret söylemi, yanlış bilgi)
-- Güvenlik ihlalleri için doğru hata yönetimi
+- Güvenlik ihlalleri için uygun hata yönetimi
 
 > **Daha Fazla Bilgi Edinin**: Bu, sorumlu yapay zeka kavramlarına bir giriş niteliğindedir. Etik, önyargı azaltma, gizlilik hususları ve sorumlu yapay zeka çerçeveleri hakkında daha fazla bilgi için [Bölüm 5: Sorumlu Üretken Yapay Zeka](../05-ResponsibleGenAI/README.md) bölümüne bakın.
 
 ## Özet
 
-Bu bölümde, LLM tamamlama ve sohbet akışlarını inceledik, yapay zekanın yeteneklerini artırmak için fonksiyon çağırmayı uyguladık, bir Geri Getirme Destekli Üretim (RAG) sistemi oluşturduk ve sorumlu yapay zeka güvenlik önlemlerini gösterdik.
+Bu bölümde, LLM tamamlama ve sohbet akışlarını inceledik, yapay zeka yeteneklerini artırmak için fonksiyon çağrısını uyguladık, Geri Çağırma Destekli Üretim (RAG) sistemi oluşturduk ve sorumlu yapay zeka güvenlik önlemlerini gösterdik.
 
-> **NOT**: Sağlanan [**Eğitim**](./TUTORIAL.md) ile daha derine inin.
+> **NOT**: Sağlanan [**Eğitim**](./TUTORIAL.md) ile daha derinlemesine inceleyin.
 
 ## Sonraki Adımlar
 

@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T16:35:43+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T08:42:36+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "es"
 }
 -->
-# Aplicación de Línea de Comando Local de Foundry
+# Aplicación de Línea de Comandos de Foundry Local
 
->**Nota**: Este capítulo incluye un [**Tutorial**](./TUTORIAL.md) que te guía a través de la ejecución de los ejemplos terminados.
+>**Nota**: Este capítulo incluye un [**Tutorial**](./TUTORIAL.md) que te guía a través de los ejemplos.
 
-Una aplicación simple de línea de comando con Spring Boot que demuestra cómo conectarse a Foundry Local utilizando el OpenAI Java SDK.
+Una aplicación simple de línea de comandos con Spring Boot que demuestra cómo conectarse a Foundry Local utilizando el OpenAI Java SDK.
 
 ## Lo Que Aprenderás
 
-- Cómo integrar Foundry Local con aplicaciones Spring Boot utilizando el OpenAI Java SDK
+- Cómo integrar Foundry Local con aplicaciones Spring Boot usando el OpenAI Java SDK
 - Mejores prácticas para el desarrollo y pruebas de IA locales
 
 ## Tabla de Contenidos
@@ -107,7 +107,7 @@ La aplicación puede configurarse a través de `application.properties`:
 
 ## Inicio Rápido
 
-### 1. Navega al directorio de la aplicación local de Foundry
+### 1. Navega al directorio de la aplicación Foundry Local
 ```bash
 cd Generative-AI-for-beginners-java/04-PracticalSamples/foundrylocal
 ```
@@ -143,7 +143,7 @@ La aplicación está preconfigurada para conectarse a Foundry Local ejecutándos
 
 Cuando ejecutas la aplicación:
 
-1. **Se inicia** como una aplicación de línea de comando (sin servidor web)
+1. **Se inicia** como una aplicación de línea de comandos (sin servidor web)
 2. **Envía automáticamente** un mensaje de prueba: "¡Hola! ¿Puedes decirme qué eres y qué modelo estás ejecutando?"
 3. **Muestra la respuesta** de Foundry Local en la consola
 4. **Finaliza limpiamente** después de la demostración
@@ -165,7 +165,7 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 - **FoundryLocalService.java** - Servicio que utiliza el OpenAI Java SDK para comunicarse con Foundry Local
 - Utiliza **OpenAI Java SDK** para llamadas API con tipado seguro
 - Serialización/deserialización automática de JSON manejada por el SDK
-- Configuración limpia utilizando las anotaciones `@Value` y `@PostConstruct` de Spring
+- Configuración limpia usando las anotaciones `@Value` y `@PostConstruct` de Spring
 
 ## Aspectos Destacados del Código
 
@@ -212,4 +212,4 @@ Problemas comunes:
 - **Nombre de modelo incorrecto**: Usa `foundry model list` para ver los modelos disponibles y actualiza tu configuración en consecuencia
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

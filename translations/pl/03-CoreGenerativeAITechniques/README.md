@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T16:03:19+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T09:26:06+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "pl"
 }
 -->
-# Podstawowe techniki generatywnej AI
+# Podstawowe Techniki Generatywnej Sztucznej Inteligencji
 
->**Note**: Ten rozdział zawiera szczegółowy [**Samouczek**](./TUTORIAL.md), który przeprowadzi Cię przez uruchamianie gotowych przykładów.
+>**Note**: Ten rozdział zawiera szczegółowy [**Samouczek**](./TUTORIAL.md), który przeprowadzi Cię przez przykłady.
 
 ## Czego się nauczysz
-W tym rozdziale przyjrzymy się 4 podstawowym technikom generatywnej AI poprzez praktyczne przykłady:
-- Uzupełnienia LLM i przepływy rozmów
+W tym rozdziale omówimy 4 podstawowe techniki generatywnej sztucznej inteligencji na praktycznych przykładach:
+- Uzupełnianie LLM i przepływy rozmów
 - Wywoływanie funkcji
-- Generacja wspomagana wyszukiwaniem (RAG)
+- Generowanie wspomagane wyszukiwaniem (RAG)
 - Środki bezpieczeństwa odpowiedzialnej AI
 
 ## Spis treści
@@ -24,9 +24,9 @@ W tym rozdziale przyjrzymy się 4 podstawowym technikom generatywnej AI poprzez 
 - [Wymagania wstępne](../../../03-CoreGenerativeAITechniques)
 - [Pierwsze kroki](../../../03-CoreGenerativeAITechniques)
 - [Przegląd przykładów](../../../03-CoreGenerativeAITechniques)
-  - [1. Uzupełnienia LLM i przepływy rozmów](../../../03-CoreGenerativeAITechniques)
+  - [1. Uzupełnianie LLM i przepływy rozmów](../../../03-CoreGenerativeAITechniques)
   - [2. Funkcje i wtyczki z LLM](../../../03-CoreGenerativeAITechniques)
-  - [3. Generacja wspomagana wyszukiwaniem (RAG)](../../../03-CoreGenerativeAITechniques)
+  - [3. Generowanie wspomagane wyszukiwaniem (RAG)](../../../03-CoreGenerativeAITechniques)
   - [4. Demonstracja bezpieczeństwa odpowiedzialnej AI](../../../03-CoreGenerativeAITechniques)
 - [Podsumowanie](../../../03-CoreGenerativeAITechniques)
 - [Kolejne kroki](../../../03-CoreGenerativeAITechniques)
@@ -62,7 +62,7 @@ export GITHUB_TOKEN=your_token_here
 
 ## Przegląd przykładów
 
-Przykłady są zorganizowane w folderze `examples/` według następującej struktury:
+Przykłady są zorganizowane w folderze `examples/` w następującej strukturze:
 
 ```
 examples/
@@ -79,14 +79,14 @@ examples/
 └── pom.xml                               # Maven configuration
 ```
 
-### 1. Uzupełnienia LLM i przepływy rozmów
+### 1. Uzupełnianie LLM i przepływy rozmów
 **Plik**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-Dowiedz się, jak budować konwersacyjną AI z odpowiedziami strumieniowymi i zarządzaniem historią rozmów.
+Naucz się budować konwersacyjną AI z odpowiedziami strumieniowymi i zarządzaniem historią rozmów.
 
 Ten przykład pokazuje:
-- Proste uzupełnianie tekstu z systemowymi podpowiedziami
-- Wieloetapowe rozmowy z zarządzaniem historią
+- Proste uzupełnianie tekstu z użyciem systemowych podpowiedzi
+- Rozmowy wieloetapowe z zarządzaniem historią
 - Interaktywne sesje czatu
 - Konfigurację parametrów (temperatura, maksymalna liczba tokenów)
 
@@ -96,21 +96,21 @@ Ten przykład pokazuje:
 Rozszerz możliwości AI, dając modelom dostęp do niestandardowych funkcji i zewnętrznych API.
 
 Ten przykład pokazuje:
-- Integrację funkcji pogodowych
+- Integrację funkcji pogodowej
 - Implementację funkcji kalkulatora  
-- Wielokrotne wywołania funkcji w jednej rozmowie
+- Wiele wywołań funkcji w jednej rozmowie
 - Definicję funkcji z użyciem schematów JSON
 
-### 3. Generacja wspomagana wyszukiwaniem (RAG)
+### 3. Generowanie wspomagane wyszukiwaniem (RAG)
 **Plik**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Dowiedz się, jak połączyć AI z własnymi dokumentami i źródłami danych, aby uzyskać precyzyjne, kontekstowe odpowiedzi.
+Dowiedz się, jak łączyć AI z własnymi dokumentami i źródłami danych, aby uzyskać dokładne, kontekstowe odpowiedzi.
 
 Ten przykład pokazuje:
 - Odpowiadanie na pytania na podstawie dokumentów z użyciem Azure OpenAI SDK
 - Implementację wzorca RAG z modelami GitHub
 
-**Zastosowanie**: Zadawaj pytania dotyczące treści w `document.txt` i otrzymuj odpowiedzi AI oparte wyłącznie na tym kontekście.
+**Zastosowanie**: Zadawaj pytania dotyczące treści w `document.txt` i otrzymuj odpowiedzi AI wyłącznie na podstawie tego kontekstu.
 
 ### 4. Demonstracja bezpieczeństwa odpowiedzialnej AI
 **Plik**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
@@ -119,21 +119,21 @@ Zobacz, jak działają środki bezpieczeństwa AI, testując możliwości filtro
 
 Ten przykład pokazuje:
 - Filtrowanie treści dla potencjalnie szkodliwych podpowiedzi
-- Obsługę odpowiedzi związanych z bezpieczeństwem w aplikacjach
+- Obsługę odpowiedzi bezpieczeństwa w aplikacjach
 - Różne kategorie blokowanych treści (przemoc, mowa nienawiści, dezinformacja)
-- Poprawne obsługiwanie błędów związanych z naruszeniami bezpieczeństwa
+- Prawidłowe obsługiwanie błędów związanych z naruszeniami bezpieczeństwa
 
-> **Dowiedz się więcej**: To tylko wprowadzenie do koncepcji odpowiedzialnej AI. Aby uzyskać więcej informacji na temat etyki, ograniczania uprzedzeń, kwestii prywatności i ram odpowiedzialnej AI, zobacz [Rozdział 5: Odpowiedzialna generatywna AI](../05-ResponsibleGenAI/README.md).
+> **Dowiedz się więcej**: To tylko wprowadzenie do koncepcji odpowiedzialnej AI. Aby uzyskać więcej informacji na temat etyki, łagodzenia uprzedzeń, kwestii prywatności i ram odpowiedzialnej AI, zobacz [Rozdział 5: Odpowiedzialna Generatywna AI](../05-ResponsibleGenAI/README.md).
 
 ## Podsumowanie
 
-W tym rozdziale przyjrzeliśmy się uzupełnieniom LLM i przepływom rozmów, wdrożyliśmy wywoływanie funkcji w celu rozszerzenia możliwości AI, stworzyliśmy system Generacji Wspomaganej Wyszukiwaniem (RAG) oraz zademonstrowaliśmy środki bezpieczeństwa odpowiedzialnej AI.
+W tym rozdziale omówiliśmy uzupełnianie LLM i przepływy rozmów, wdrożyliśmy wywoływanie funkcji w celu rozszerzenia możliwości AI, stworzyliśmy system Generowania Wspomaganego Wyszukiwaniem (RAG) oraz zaprezentowaliśmy środki bezpieczeństwa odpowiedzialnej AI.
 
 > **NOTE**: Zgłębiaj temat dzięki dostarczonemu [**Samouczkowi**](./TUTORIAL.md)
 
 ## Kolejne kroki
 
-[Rozdział 4: Praktyczne zastosowania i projekty](../04-PracticalSamples/README.md)
+[Rozdział 4: Praktyczne Zastosowania i Projekty](../04-PracticalSamples/README.md)
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

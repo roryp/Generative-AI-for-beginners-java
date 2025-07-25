@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T16:02:16+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T09:20:20+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "pt"
 }
 -->
 # Técnicas Fundamentais de IA Generativa
 
->**Note**: Este capítulo inclui um [**Tutorial**](./TUTORIAL.md) detalhado que orienta sobre como executar os exemplos finalizados.
+>**Note**: Este capítulo inclui um [**Tutorial**](./TUTORIAL.md) detalhado que o orienta através dos exemplos.
 
 ## O Que Vai Aprender
 Neste capítulo, exploramos 4 técnicas fundamentais de IA generativa através de exemplos práticos:
@@ -33,7 +33,7 @@ Neste capítulo, exploramos 4 técnicas fundamentais de IA generativa através d
 
 ## Pré-requisitos
 
-- Configuração concluída a partir do [Capítulo 2](../../../02-SetupDevEnvironment)
+- Configuração concluída do [Capítulo 2](../../../02-SetupDevEnvironment)
 
 ## Introdução
 
@@ -96,15 +96,15 @@ Este exemplo demonstra:
 Expanda as capacidades da IA dando aos modelos acesso a funções personalizadas e APIs externas.
 
 Este exemplo demonstra:
-- Integração de função de previsão meteorológica
-- Implementação de função de calculadora  
+- Integração de uma função de previsão do tempo
+- Implementação de uma função de calculadora  
 - Chamadas múltiplas de funções numa única conversa
 - Definição de funções com esquemas JSON
 
 ### 3. Geração com Recuperação de Dados (RAG)
 **Ficheiro**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Aprenda a combinar IA com os seus próprios documentos e fontes de dados para respostas precisas e contextualizadas.
+Aprenda a combinar IA com os seus próprios documentos e fontes de dados para respostas precisas e contextuais.
 
 Este exemplo demonstra:
 - Respostas a perguntas baseadas em documentos com o Azure OpenAI SDK
@@ -115,7 +115,7 @@ Este exemplo demonstra:
 ### 4. Demonstração de Segurança em IA Responsável
 **Ficheiro**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
-Obtenha uma prévia de como funcionam as medidas de segurança em IA, testando as capacidades de filtragem de conteúdo dos Modelos do GitHub.
+Obtenha uma prévia de como funcionam as medidas de segurança em IA ao testar as capacidades de filtragem de conteúdo dos Modelos do GitHub.
 
 Este exemplo demonstra:
 - Filtragem de conteúdo para prompts potencialmente prejudiciais
@@ -127,7 +127,7 @@ Este exemplo demonstra:
 
 ## Resumo
 
-Neste capítulo, explorámos completações de LLM e fluxos de conversação, implementámos chamadas de funções para ampliar as capacidades da IA, criámos um sistema de Geração com Recuperação de Dados (RAG) e demonstrámos medidas de segurança em IA responsável.
+Neste capítulo, explorámos completações de LLM e fluxos de conversação, implementámos chamadas de funções para melhorar as capacidades da IA, criámos um sistema de Geração com Recuperação de Dados (RAG) e demonstrámos medidas de segurança em IA responsável.
 
 > **NOTE**: Explore mais com o [**Tutorial**](./TUTORIAL.md)
 
@@ -136,4 +136,4 @@ Neste capítulo, explorámos completações de LLM e fluxos de conversação, im
 [Capítulo 4: Aplicações Práticas e Projetos](../04-PracticalSamples/README.md)
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

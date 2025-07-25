@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T21:19:39+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T10:14:38+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "sl"
 }
 -->
-# Lokalna ukazna aplikacija Foundry
+# Lokalna ukazna vrstica Foundry
 
->**Opomba**: To poglavje vključuje [**Vadnico**](./TUTORIAL.md), ki vas vodi skozi zagon končnih primerov.
+>**Opomba**: To poglavje vključuje [**Vadnico**](./TUTORIAL.md), ki vas vodi skozi primere.
 
 Preprosta ukazna aplikacija Spring Boot, ki prikazuje, kako se povezati z Foundry Local z uporabo OpenAI Java SDK.
 
@@ -18,7 +18,7 @@ Preprosta ukazna aplikacija Spring Boot, ki prikazuje, kako se povezati z Foundr
 - Kako integrirati Foundry Local z aplikacijami Spring Boot z uporabo OpenAI Java SDK
 - Najboljše prakse za lokalni razvoj in testiranje umetne inteligence
 
-## Kazalo vsebine
+## Kazalo
 
 - [Kaj se boste naučili](../../../../04-PracticalSamples/foundrylocal)
 - [Predpogoji](../../../../04-PracticalSamples/foundrylocal)
@@ -27,11 +27,11 @@ Preprosta ukazna aplikacija Spring Boot, ki prikazuje, kako se povezati z Foundr
 - [Konfiguracija](../../../../04-PracticalSamples/foundrylocal)
 - [Hiter začetek](../../../../04-PracticalSamples/foundrylocal)
 - [Kaj aplikacija počne](../../../../04-PracticalSamples/foundrylocal)
-- [Primer izpisa](../../../../04-PracticalSamples/foundrylocal)
+- [Primer izhoda](../../../../04-PracticalSamples/foundrylocal)
 - [Arhitektura](../../../../04-PracticalSamples/foundrylocal)
 - [Poudarki kode](../../../../04-PracticalSamples/foundrylocal)
   - [Integracija OpenAI Java SDK](../../../../04-PracticalSamples/foundrylocal)
-  - [API za dokončanje pogovora](../../../../04-PracticalSamples/foundrylocal)
+  - [API za dokončanje pogovorov](../../../../04-PracticalSamples/foundrylocal)
 - [Odpravljanje težav](../../../../04-PracticalSamples/foundrylocal)
 
 ## Predpogoji
@@ -84,7 +84,7 @@ Pred zagonom te aplikacije morate namestiti in zagnati Foundry Local. Sledite te
 
 ### Preverjanje
 
-Preverite, ali vse deluje pravilno, z naslednjimi ukazi:
+Delovanje lahko preverite z naslednjimi ukazi:
 
 ```bash
 # List all available models
@@ -103,7 +103,7 @@ Aplikacijo lahko konfigurirate prek datoteke `application.properties`:
 - `foundry.local.base-url` - Osnovni URL za Foundry Local (privzeto: http://localhost:5273)
 - `foundry.local.model` - AI model, ki se uporablja (privzeto: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Opomba**: Ime modela v konfiguraciji mora ustrezati specifični različici, ki jo je Foundry Local prenesel za vaš sistem. Ko zaženete `foundry model run phi-3.5-mini`, Foundry Local samodejno izbere in prenese najboljšo različico (CUDA za NVIDIA GPU-je, sicer CPU različico). Uporabite `foundry model list`, da vidite natančno ime modela, ki je na voljo v vaši lokalni instanci.
+> **Opomba**: Ime modela v konfiguraciji mora ustrezati specifični različici, ki jo je Foundry Local prenesel za vaš sistem. Ko zaženete `foundry model run phi-3.5-mini`, Foundry Local samodejno izbere in prenese najboljšo različico (CUDA za NVIDIA GPU-je, sicer CPU različico). Uporabite `foundry model list`, da si ogledate natančno ime modela, ki je na voljo v vaši lokalni instanci.
 
 ## Hiter začetek
 
@@ -137,7 +137,7 @@ Ta aplikacija uporablja OpenAI Java SDK za komunikacijo z Foundry Local. Ključn
 </dependency>
 ```
 
-Aplikacija je vnaprej konfigurirana za povezavo z Foundry Local, ki deluje na privzetem portu.
+Aplikacija je predhodno konfigurirana za povezavo z Foundry Local, ki deluje na privzetem portu.
 
 ## Kaj aplikacija počne
 
@@ -146,9 +146,9 @@ Ko zaženete aplikacijo:
 1. **Zažene se** kot ukazna aplikacija (brez spletnega strežnika)
 2. **Samodejno pošlje** testno sporočilo: "Pozdravljeni! Mi lahko poveste, kaj ste in kateri model uporabljate?"
 3. **Prikaže odgovor** Foundry Local v konzoli
-4. **Čisto zaključi** po predstavitvi
+4. **Čisto se zapre** po predstavitvi
 
-## Primer izpisa
+## Primer izhoda
 
 ```
 === Foundry Local Demo ===
@@ -183,9 +183,9 @@ public void init() {
 }
 ```
 
-### API za dokončanje pogovora
+### API za dokončanje pogovorov
 
-Pošiljanje zahtev za dokončanje pogovora je preprosto in tip-varno:
+Pošiljanje zahtev za dokončanje pogovorov je preprosto in tip-varno:
 
 ```java
 ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
@@ -200,7 +200,7 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 
 ## Odpravljanje težav
 
-Če naletite na napake pri povezovanju:
+Če naletite na napake pri povezavi:
 1. Preverite, ali Foundry Local deluje na `http://localhost:5273`
 2. Preverite, ali je različica modela Phi-3.5-mini na voljo z ukazom `foundry model list`
 3. Prepričajte se, da ime modela v `application.properties` ustreza natančnemu imenu modela, prikazanemu na seznamu
@@ -209,7 +209,7 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 Pogoste težave:
 - **Model ni najden**: Zaženite `foundry model run phi-3.5-mini`, da prenesete in zaženete model
 - **Storitev ne deluje**: Storitev Foundry Local se je morda ustavila; ponovno jo zaženite z ukazom za zagon modela
-- **Napačno ime modela**: Uporabite `foundry model list`, da vidite razpoložljive modele in ustrezno posodobite svojo konfiguracijo
+- **Napačno ime modela**: Uporabite `foundry model list`, da si ogledate razpoložljive modele in ustrezno posodobite svojo konfiguracijo
 
 **Omejitev odgovornosti**:  
 Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

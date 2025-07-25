@@ -1,18 +1,18 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T20:40:59+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T10:05:18+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "ro"
 }
 -->
 # Tehnici de bază pentru AI generativ
 
->**Note**: Acest capitol include un [**Tutorial**](./TUTORIAL.md) detaliat care te ghidează prin rularea exemplelor finale.
+>**Note**: Acest capitol include un [**Tutorial**](./TUTORIAL.md) detaliat care te ghidează prin exemplele prezentate.
 
 ## Ce vei învăța
-În acest capitol, explorăm 4 tehnici de bază pentru AI generativ prin exemple practice:
+În acest capitol, vom explora 4 tehnici de bază pentru AI generativ prin exemple practice:
 - Completări LLM și fluxuri de conversație
 - Apelarea funcțiilor
 - Generare augmentată prin recuperare (RAG)
@@ -82,7 +82,7 @@ examples/
 ### 1. Completări LLM și fluxuri de conversație
 **Fișier**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-Învață să construiești AI conversațional cu răspunsuri în flux și gestionarea istoricului conversațiilor.
+Învață să construiești AI conversațional cu răspunsuri în streaming și gestionarea istoricului conversațiilor.
 
 Acest exemplu demonstrează:
 - Completări simple de text cu prompturi de sistem
@@ -104,7 +104,7 @@ Acest exemplu demonstrează:
 ### 3. Generare augmentată prin recuperare (RAG)
 **Fișier**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Învață cum să combini AI cu propriile documente și surse de date pentru răspunsuri precise și conștiente de context.
+Învață cum să combini AI cu documentele și sursele tale de date pentru răspunsuri precise și conștiente de context.
 
 Acest exemplu demonstrează:
 - Răspunsuri la întrebări bazate pe documente folosind Azure OpenAI SDK
@@ -123,7 +123,7 @@ Acest exemplu demonstrează:
 - Diferite categorii de conținut blocat (violență, discurs de ură, dezinformare)
 - Gestionarea corectă a erorilor pentru încălcările de siguranță
 
-> **Află mai multe**: Aceasta este doar o introducere în conceptele de AI responsabil. Pentru mai multe informații despre etică, reducerea prejudecăților, considerații de confidențialitate și cadre de AI responsabil, vezi [Capitolul 5: AI Generativ Responsabil](../05-ResponsibleGenAI/README.md).
+> **Află mai multe**: Aceasta este doar o introducere în conceptele de AI responsabil. Pentru mai multe informații despre etică, reducerea prejudecăților, considerații de confidențialitate și cadrele AI responsabile, vezi [Capitolul 5: AI Generativ Responsabil](../05-ResponsibleGenAI/README.md).
 
 ## Rezumat
 
@@ -136,4 +136,4 @@ Acest exemplu demonstrează:
 [Capitolul 4: Aplicații practice și proiecte](../04-PracticalSamples/README.md)
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
-  "translation_date": "2025-07-25T07:44:10+00:00",
+  "original_hash": "a49b35508745c032a0033d914df7901b",
+  "translation_date": "2025-07-25T09:21:48+00:00",
   "source_file": "README.md",
   "language_code": "br"
 }
@@ -12,56 +12,57 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![IA Generativa para Iniciantes - Edição Java](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.br.png)
 
-> **NOTA: Início Rápido**: Todo o curso pode ser feito online - Não é necessário configurar nada localmente!
-1. Faça um fork deste repositório para sua conta do GitHub
+**Compromisso de Tempo**: Todo o workshop pode ser concluído online sem necessidade de configuração local. Se você quiser executar os exemplos, a configuração do ambiente leva 2 minutos, e explorar os exemplos pode levar de 1 a 3 horas, dependendo da profundidade da exploração.
+
+> **Início Rápido**
+
+1. Faça um fork deste repositório na sua conta do GitHub
 2. Clique em **Code** → aba **Codespaces** → **...** → **New with options...**
 3. Use as configurações padrão – isso selecionará o container de desenvolvimento criado para este curso
 4. Clique em **Create codespace**
-5. Aguarde cerca de 2 minutos para o ambiente ficar pronto
-6. Vá direto para [Criar seu Token de Modelos do GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Aguarde cerca de 2 minutos para o ambiente estar pronto
+6. Vá direto para [Criando seu Token de Modelos do GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Suporte a Múltiplos Idiomas
 
 ### Suportado via GitHub Action (Automatizado e Sempre Atualizado)
 
-[Francês](../fr/README.md) | [Espanhol](../es/README.md) | [Alemão](../de/README.md) | [Russo](../ru/README.md) | [Árabe](../ar/README.md) | [Persa (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinês (Simplificado)](../zh/README.md) | [Chinês (Tradicional, Macau)](../mo/README.md) | [Chinês (Tradicional, Hong Kong)](../hk/README.md) | [Chinês (Tradicional, Taiwan)](../tw/README.md) | [Japonês](../ja/README.md) | [Coreano](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Português (Portugal)](../pt/README.md) | [Português (Brasil)](./README.md) | [Italiano](../it/README.md) | [Polonês](../pl/README.md) | [Turco](../tr/README.md) | [Grego](../el/README.md) | [Tailandês](../th/README.md) | [Sueco](../sv/README.md) | [Dinamarquês](../da/README.md) | [Norueguês](../no/README.md) | [Finlandês](../fi/README.md) | [Holandês](../nl/README.md) | [Hebraico](../he/README.md) | [Vietnamita](../vi/README.md) | [Indonésio](../id/README.md) | [Malaio](../ms/README.md) | [Tagalo (Filipino)](../tl/README.md) | [Suaíli](../sw/README.md) | [Húngaro](../hu/README.md) | [Tcheco](../cs/README.md) | [Eslovaco](../sk/README.md) | [Romeno](../ro/README.md) | [Búlgaro](../bg/README.md) | [Sérvio (Cirílico)](../sr/README.md) | [Croata](../hr/README.md) | [Esloveno](../sl/README.md) | [Ucraniano](../uk/README.md) | [Birmanês (Myanmar)](../my/README.md)
+[Francês](../fr/README.md) | [Espanhol](../es/README.md) | [Alemão](../de/README.md) | [Russo](../ru/README.md) | [Árabe](../ar/README.md) | [Persa (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinês (Simplificado)](../zh/README.md) | [Chinês (Tradicional, Macau)](../mo/README.md) | [Chinês (Tradicional, Hong Kong)](../hk/README.md) | [Chinês (Tradicional, Taiwan)](../tw/README.md) | [Japonês](../ja/README.md) | [Coreano](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Português (Portugal)](../pt/README.md) | [Português (Brasil)](./README.md) | [Italiano](../it/README.md) | [Polonês](../pl/README.md) | [Turco](../tr/README.md) | [Grego](../el/README.md) | [Tailandês](../th/README.md) | [Sueco](../sv/README.md) | [Dinamarquês](../da/README.md) | [Norueguês](../no/README.md) | [Finlandês](../fi/README.md) | [Holandês](../nl/README.md) | [Hebraico](../he/README.md) | [Vietnamita](../vi/README.md) | [Indonésio](../id/README.md) | [Malaio](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Suaíli](../sw/README.md) | [Húngaro](../hu/README.md) | [Tcheco](../cs/README.md) | [Eslovaco](../sk/README.md) | [Romeno](../ro/README.md) | [Búlgaro](../bg/README.md) | [Sérvio (Cirílico)](../sr/README.md) | [Croata](../hr/README.md) | [Esloveno](../sl/README.md) | [Ucraniano](../uk/README.md) | [Birmanês (Myanmar)](../my/README.md)
 
 ## Estrutura do Curso e Caminho de Aprendizado
 
-**Compromisso de Tempo**: A configuração do ambiente leva 2 minutos, e os exemplos requerem de 1 a 3 horas, dependendo da profundidade da exploração. Todo o workshop pode ser concluído online, sem necessidade de configuração local.
-
 ### **Capítulo 1: Introdução à IA Generativa**
-- **Conceitos Básicos**: Compreendendo Modelos de Linguagem de Grande Escala, tokens, embeddings e capacidades de IA
+- **Conceitos Fundamentais**: Compreendendo Modelos de Linguagem Grandes, tokens, embeddings e capacidades de IA
 - **Ecossistema de IA em Java**: Visão geral do Spring AI e SDKs OpenAI
 - **Protocolo de Contexto de Modelo**: Introdução ao MCP e seu papel na comunicação de agentes de IA
 - **Aplicações Práticas**: Cenários do mundo real, incluindo chatbots e geração de conteúdo
-- **[→ Comece o Capítulo 1](./01-IntroToGenAI/README.md)**
+- **[→ Começar o Capítulo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capítulo 2: Configuração do Ambiente de Desenvolvimento**
-- **Configuração Multi-Fornecedor**: Configure GitHub Models, Azure OpenAI e integrações do SDK OpenAI Java
+- **Configuração Multi-Provedor**: Configure integrações com GitHub Models, Azure OpenAI e OpenAI Java SDK
 - **Spring Boot + Spring AI**: Melhores práticas para desenvolvimento de aplicações empresariais de IA
 - **GitHub Models**: Acesso gratuito a modelos de IA para prototipagem e aprendizado (sem necessidade de cartão de crédito)
 - **Ferramentas de Desenvolvimento**: Configuração de containers Docker, VS Code e GitHub Codespaces
-- **[→ Comece o Capítulo 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Começar o Capítulo 2](./02-SetupDevEnvironment/README.md)**
 
-### **Capítulo 3: Técnicas Centrais de IA Generativa**
-- **Engenharia de Prompts**: Técnicas para respostas ideais de modelos de IA
+### **Capítulo 3: Técnicas Fundamentais de IA Generativa**
+- **Engenharia de Prompt**: Técnicas para respostas ideais de modelos de IA
 - **Embeddings e Operações com Vetores**: Implementação de busca semântica e correspondência de similaridade
 - **Geração Aumentada por Recuperação (RAG)**: Combine IA com suas próprias fontes de dados
-- **Chamada de Funções**: Expanda as capacidades da IA com ferramentas e plugins personalizados
-- **[→ Comece o Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**
+- **Chamadas de Função**: Expanda as capacidades da IA com ferramentas e plugins personalizados
+- **[→ Começar o Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capítulo 4: Aplicações Práticas e Projetos**
 - **Gerador de Histórias de Animais de Estimação** (`petstory/`): Geração criativa de conteúdo com GitHub Models
-- **Demo Local Foundry** (`foundrylocal/`): Integração de modelos de IA locais com o SDK OpenAI Java
+- **Demo Local Foundry** (`foundrylocal/`): Integração local de modelos de IA com OpenAI Java SDK
 - **Serviço de Calculadora MCP** (`mcp/calculator/`): Implementação básica do Protocolo de Contexto de Modelo com Spring AI
-- **[→ Comece o Capítulo 4](./04-PracticalSamples/README.md)**
+- **[→ Começar o Capítulo 4](./04-PracticalSamples/README.md)**
 
 ### **Capítulo 5: Desenvolvimento de IA Responsável**
 - **Segurança dos Modelos do GitHub**: Teste os mecanismos de filtragem de conteúdo e segurança integrados
 - **Demo de IA Responsável**: Exemplo prático mostrando como os filtros de segurança de IA funcionam na prática
 - **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implantação ética de IA
-- **[→ Comece o Capítulo 5](./05-ResponsibleGenAI/README.md)**
+- **[→ Começar o Capítulo 5](./05-ResponsibleGenAI/README.md)**
 
 ## Recursos Adicionais 
 

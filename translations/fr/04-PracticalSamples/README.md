@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "da1b6d87b8a73306b29f9a1bdd681221",
-  "translation_date": "2025-07-21T16:31:05+00:00",
+  "original_hash": "139c227ef39d24287257d1aff6fc6973",
+  "translation_date": "2025-07-25T08:40:25+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "fr"
 }
 -->
 # Applications Pratiques & Projets
 
-> Note : Chaque exemple inclut également un fichier **TUTORIAL.md** qui vous guide dans l'exécution de l'application.
+> Note : Chaque exemple inclut également un fichier **TUTORIAL.md** qui vous guide dans l'exécution des exemples.
 
 ## Ce que vous allez apprendre
 Dans cette section, nous présenterons trois applications pratiques illustrant des modèles de développement d'IA générative avec Java :
@@ -29,7 +29,7 @@ Dans cette section, nous présenterons trois applications pratiques illustrant d
 
 ## Introduction
 
-Ce chapitre présente des **projets exemples** qui illustrent des modèles de développement d'IA générative avec Java. Chaque projet est entièrement fonctionnel et met en avant des technologies spécifiques d'IA, des modèles architecturaux et des bonnes pratiques que vous pouvez adapter à vos propres applications.
+Ce chapitre présente des **projets d'exemple** qui illustrent des modèles de développement d'IA générative avec Java. Chaque projet est entièrement fonctionnel et met en avant des technologies IA spécifiques, des modèles architecturaux et des bonnes pratiques que vous pouvez adapter à vos propres applications.
 
 ### Démo Foundry Local Spring Boot
 
@@ -47,7 +47,7 @@ Le **[Service MCP Calculatrice](mcp/calculator/README.md)** est une démonstrati
 
 Ces projets sont conçus pour s'appuyer sur les concepts des chapitres précédents :
 
-1. **Commencez simplement** : Débutez avec la démo Foundry Local Spring Boot pour comprendre l'intégration de base des modèles IA locaux
+1. **Commencez simplement** : Débutez avec la démo Foundry Local Spring Boot pour comprendre l'intégration IA de base avec des modèles locaux
 2. **Ajoutez de l'interactivité** : Passez au Générateur d'histoires pour animaux de compagnie pour explorer l'IA multi-modal et les interactions web
 3. **Apprenez les bases du MCP** : Essayez le Service MCP Calculatrice pour comprendre les fondamentaux du Model Context Protocol
 
@@ -56,7 +56,7 @@ Ces projets sont conçus pour s'appuyer sur les concepts des chapitres précéde
 **Félicitations !** Vous avez réussi à :
 
 - **Créer des expériences IA multi-modales** combinant traitement IA côté client et côté serveur
-- **Implémenter une intégration de modèles IA locaux** en utilisant des frameworks et SDK modernes pour Java
+- **Implémenter une intégration de modèles IA locaux** en utilisant des frameworks et SDK Java modernes
 - **Développer des services Model Context Protocol** illustrant des modèles d'intégration d'outils
 
 ## Prochaines étapes
@@ -64,4 +64,4 @@ Ces projets sont conçus pour s'appuyer sur les concepts des chapitres précéde
 [Chapitre 5 : IA générative responsable](../05-ResponsibleGenAI/README.md)
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction professionnelle humaine. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

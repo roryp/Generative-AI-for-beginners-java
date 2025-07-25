@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T16:51:38+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T08:41:26+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "fr"
 }
 -->
 # Application Pet Story
 
->**Note** : Ce chapitre inclut un [**Tutoriel**](./TUTORIAL.md) qui vous guide à travers l'exécution des exemples finalisés.
+>**Remarque** : Ce chapitre inclut un [**Tutoriel**](./TUTORIAL.md) qui vous guide à travers les exemples.
 
-Une application web Spring Boot qui génère des descriptions et des histoires alimentées par l'IA pour les images d'animaux téléchargées en utilisant les modèles GitHub.
+Une application web Spring Boot qui génère des descriptions et des histoires alimentées par l'IA à partir d'images de vos animaux de compagnie téléchargées, en utilisant les modèles GitHub.
 
 ## Table des matières
 
@@ -25,15 +25,15 @@ Une application web Spring Boot qui génère des descriptions et des histoires a
 - **Backend** : Spring Boot 3.5.3, Java 21
 - **Intégration IA** : OpenAI Java SDK avec les modèles GitHub
 - **Sécurité** : Spring Security
-- **Frontend** : Modèles Thymeleaf avec style Bootstrap
-- **Outil de build** : Maven
+- **Frontend** : Templates Thymeleaf avec le style Bootstrap
+- **Outil de construction** : Maven
 - **Modèles IA** : Modèles GitHub
 
 ## Prérequis
 
-- Java 21 ou version supérieure
+- Java 21 ou version ultérieure
 - Maven 3.9+
-- Jeton d'accès personnel GitHub avec le scope `models:read`
+- Jeton d'accès personnel GitHub avec le champ `models:read`
 
 ## Configuration et installation
 
@@ -66,10 +66,10 @@ mvn spring-boot:run
 
 ## Utilisation
 
-1. **Accédez à l'application** : Rendez-vous sur `http://localhost:8080`
-2. **Téléchargez une image** : Cliquez sur "Choisir un fichier" et sélectionnez une image d'animal
-3. **Analysez l'image** : Cliquez sur "Analyser l'image" pour obtenir une description générée par l'IA
-4. **Générez une histoire** : Cliquez sur "Générer une histoire" pour créer l'histoire
+1. **Accéder à l'application** : Rendez-vous sur `http://localhost:8080`
+2. **Télécharger une image** : Cliquez sur "Choisir un fichier" et sélectionnez une image de votre animal
+3. **Analyser l'image** : Cliquez sur "Analyser l'image" pour obtenir une description générée par l'IA
+4. **Générer une histoire** : Cliquez sur "Générer une histoire" pour créer une histoire
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T16:01:22+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T08:40:09+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "fr"
 }
 -->
 # Techniques fondamentales de l'IA générative
 
->**Note** : Ce chapitre inclut un [**Tutoriel**](./TUTORIAL.md) détaillé qui vous guide dans l'exécution des exemples terminés.
+>**Note** : Ce chapitre inclut un [**Tutoriel**](./TUTORIAL.md) détaillé qui vous guide à travers les exemples.
 
 ## Ce que vous allez apprendre
 Dans ce chapitre, nous explorons 4 techniques fondamentales de l'IA générative à travers des exemples pratiques :
@@ -85,7 +85,7 @@ examples/
 Apprenez à créer une IA conversationnelle avec des réponses en streaming et une gestion de l'historique des conversations.
 
 Cet exemple montre :
-- Complétions de texte simples avec des invites système
+- Complétion de texte simple avec des invites système
 - Conversations multi-tours avec gestion de l'historique
 - Sessions de chat interactives
 - Configuration des paramètres (température, nombre maximal de tokens)
@@ -104,7 +104,7 @@ Cet exemple montre :
 ### 3. Génération augmentée par récupération (RAG)
 **Fichier** : `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Apprenez à combiner l'IA avec vos propres documents et sources de données pour des réponses précises et contextuelles.
+Apprenez à combiner l'IA avec vos propres documents et sources de données pour des réponses précises et adaptées au contexte.
 
 Cet exemple montre :
 - Réponses basées sur des documents avec le SDK Azure OpenAI
@@ -121,13 +121,13 @@ Cet exemple montre :
 - Filtrage de contenu pour des invites potentiellement nuisibles
 - Gestion des réponses de sécurité dans les applications
 - Différentes catégories de contenu bloqué (violence, discours haineux, désinformation)
-- Gestion appropriée des erreurs pour les violations de sécurité
+- Gestion appropriée des erreurs en cas de violations de sécurité
 
 > **En savoir plus** : Ceci est une introduction aux concepts d'IA responsable. Pour plus d'informations sur l'éthique, la réduction des biais, les considérations de confidentialité et les cadres d'IA responsable, consultez [Chapitre 5 : IA générative responsable](../05-ResponsibleGenAI/README.md).
 
 ## Résumé
 
-Dans ce chapitre, nous avons exploré les complétions LLM et les flux de conversation, mis en œuvre des appels de fonctions pour améliorer les capacités de l'IA, créé un système de génération augmentée par récupération (RAG) et démontré des mesures de sécurité pour une IA responsable.
+Dans ce chapitre, nous avons exploré les complétions LLM et les flux de conversation, implémenté des appels de fonctions pour améliorer les capacités de l'IA, créé un système de génération augmentée par récupération (RAG), et démontré des mesures de sécurité pour une IA responsable.
 
 > **NOTE** : Approfondissez avec le [**Tutoriel**](./TUTORIAL.md) fourni.
 
@@ -136,4 +136,4 @@ Dans ce chapitre, nous avons exploré les complétions LLM et les flux de conver
 [Chapitre 4 : Applications pratiques et projets](../04-PracticalSamples/README.md)
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction professionnelle humaine. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

@@ -1,18 +1,18 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T16:02:44+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T08:44:12+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "de"
 }
 -->
 # Kerntechniken der Generativen KI
 
->**Hinweis**: Dieses Kapitel enthält ein ausführliches [**Tutorial**](./TUTORIAL.md), das Sie durch die Ausführung der fertigen Beispiele führt.
+>**Hinweis**: Dieses Kapitel enthält ein ausführliches [**Tutorial**](./TUTORIAL.md), das Sie durch die Beispiele führt.
 
 ## Was Sie lernen werden
-In diesem Kapitel betrachten wir 4 zentrale Techniken der generativen KI anhand praktischer Beispiele:
+In diesem Kapitel betrachten wir 4 grundlegende Techniken der generativen KI anhand praktischer Beispiele:
 - LLM-Vervollständigungen und Chat-Flows
 - Funktionsaufrufe
 - Retrieval-Augmented Generation (RAG)
@@ -82,7 +82,7 @@ examples/
 ### 1. LLM-Vervollständigungen und Chat-Flows
 **Datei**: `examples/src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-Lernen Sie, wie man KI-gestützte Konversationen mit Streaming-Antworten und Chat-Verlauf-Management erstellt.
+Lernen Sie, wie man konversationelle KI mit Streaming-Antworten und Chat-Verlauf-Management erstellt.
 
 Dieses Beispiel zeigt:
 - Einfache Textvervollständigung mit System-Prompts
@@ -104,10 +104,10 @@ Dieses Beispiel zeigt:
 ### 3. Retrieval-Augmented Generation (RAG)
 **Datei**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Lernen Sie, wie Sie KI mit Ihren eigenen Dokumenten und Datenquellen kombinieren, um präzise und kontextbezogene Antworten zu erhalten.
+Lernen Sie, wie man KI mit eigenen Dokumenten und Datenquellen kombiniert, um präzise und kontextbezogene Antworten zu erhalten.
 
 Dieses Beispiel zeigt:
-- Dokumentenbasierte Frage-Antwort-Funktion mit Azure OpenAI SDK
+- Dokumentenbasierte Frage-Antwort mit Azure OpenAI SDK
 - Implementierung des RAG-Musters mit GitHub-Modellen
 
 **Anwendung**: Stellen Sie Fragen zu den Inhalten in `document.txt` und erhalten Sie KI-Antworten, die ausschließlich auf diesem Kontext basieren.
@@ -123,7 +123,7 @@ Dieses Beispiel zeigt:
 - Verschiedene Kategorien blockierter Inhalte (Gewalt, Hassrede, Fehlinformationen)
 - Fehlerbehandlung bei Sicherheitsverletzungen
 
-> **Mehr erfahren**: Dies ist nur eine Einführung in die Konzepte der verantwortungsvollen KI. Weitere Informationen zu Ethik, Vorurteilsvermeidung, Datenschutz und Rahmenwerken für verantwortungsvolle KI finden Sie in [Kapitel 5: Verantwortungsvolle Generative KI](../05-ResponsibleGenAI/README.md).
+> **Mehr erfahren**: Dies ist nur eine Einführung in die Konzepte der verantwortungsvollen KI. Weitere Informationen zu Ethik, Vorurteilsvermeidung, Datenschutz und Frameworks für verantwortungsvolle KI finden Sie in [Kapitel 5: Verantwortungsvolle Generative KI](../05-ResponsibleGenAI/README.md).
 
 ## Zusammenfassung
 

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7bf9a4a832911269a8bd0decb97ff36c",
-  "translation_date": "2025-07-21T18:24:39+00:00",
+  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
+  "translation_date": "2025-07-25T09:23:06+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "br"
 }
 -->
 # Serviço Básico de Calculadora MCP
 
->**Nota**: Este capítulo inclui um [**Tutorial**](./TUTORIAL.md) que orienta você a executar os exemplos finalizados.
+>**Nota**: Este capítulo inclui um [**Tutorial**](./TUTORIAL.md) que guia você pelos exemplos.
 
 Bem-vindo à sua primeira experiência prática com o **Model Context Protocol (MCP)**! Nos capítulos anteriores, você aprendeu os fundamentos da IA generativa e configurou seu ambiente de desenvolvimento. Agora é hora de construir algo prático.
 
@@ -48,7 +48,7 @@ Perfeito para iniciantes que estão aprendendo os conceitos do MCP e prontos par
 
 **Model Context Protocol (MCP)** é uma forma padronizada para que aplicações de IA se conectem de forma segura a ferramentas externas. Pense nele como uma "ponte" que permite que modelos de IA usem serviços externos, como nossa calculadora. Em vez de o modelo de IA tentar fazer cálculos por conta própria (o que pode ser pouco confiável), ele pode chamar nosso serviço de calculadora para obter resultados precisos. O MCP garante que essa comunicação aconteça de forma segura e consistente.
 
-**Server-Sent Events (SSE)** permite comunicação em tempo real entre o servidor e os clientes. Diferente de requisições HTTP tradicionais, onde você faz uma solicitação e espera uma resposta, o SSE permite que o servidor envie atualizações continuamente para o cliente. Isso é perfeito para aplicações de IA onde as respostas podem ser transmitidas ou levar tempo para serem processadas.
+**Server-Sent Events (SSE)** permite comunicação em tempo real entre o servidor e os clientes. Diferente de requisições HTTP tradicionais, onde você faz uma solicitação e espera uma resposta, o SSE permite que o servidor envie atualizações continuamente para o cliente. Isso é perfeito para aplicações de IA, onde as respostas podem ser transmitidas ou levar tempo para serem processadas.
 
 **Ferramentas de IA e Chamadas de Função** permitem que modelos de IA escolham e usem automaticamente funções externas (como operações da calculadora) com base nas solicitações do usuário. Quando você pergunta "Quanto é 15 + 27?", o modelo de IA entende que você quer uma soma, chama automaticamente nossa ferramenta `add` com os parâmetros corretos (15, 27) e retorna o resultado em linguagem natural. A IA atua como um coordenador inteligente que sabe quando e como usar cada ferramenta.
 
@@ -84,7 +84,7 @@ mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDK
 ```
 
 ### 2. Cliente com IA (LangChain4jClient)
-Demonstra interação em linguagem natural com modelos do GitHub. Requer token do GitHub (consulte [Pré-requisitos](../../../../../04-PracticalSamples/mcp/calculator)).
+Demonstra interação em linguagem natural com modelos do GitHub. Requer token do GitHub (veja [Pré-requisitos](../../../../../04-PracticalSamples/mcp/calculator)).
 
 **Execute:**
 ```bash
@@ -111,7 +111,7 @@ O MCP Inspector fornece uma interface web visual para testar seu serviço MCP se
    - Procure uma mensagem como "Inspector running at http://localhost:6274"
    - Abra essa URL no seu navegador
 
-4. **Conecte-se ao serviço da calculadora**:
+4. **Conecte-se ao seu serviço de calculadora**:
    - Na interface web, defina o tipo de transporte como "SSE"
    - Defina a URL como: `http://localhost:8080/sse`
    - Clique no botão "Connect"

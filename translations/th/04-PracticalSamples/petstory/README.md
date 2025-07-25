@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T20:06:04+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:34:29+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "th"
 }
 -->
 # แอป Pet Story
 
->**Note**: บทนี้มี [**Tutorial**](./TUTORIAL.md) ที่แนะนำวิธีการใช้งานตัวอย่างที่เสร็จสมบูรณ์
+>**Note**: บทนี้มี [**Tutorial**](./TUTORIAL.md) ที่จะแนะนำคุณผ่านตัวอย่างต่างๆ
 
-แอปพลิเคชันเว็บ Spring Boot ที่สร้างคำอธิบายและเรื่องราวโดยใช้ AI สำหรับภาพสัตว์เลี้ยงที่อัปโหลด โดยใช้ GitHub Models
+แอปพลิเคชันเว็บ Spring Boot ที่สร้างคำอธิบายและเรื่องราวที่ขับเคลื่อนด้วย AI สำหรับภาพสัตว์เลี้ยงที่อัปโหลด โดยใช้ GitHub Models
 
 ## สารบัญ
 
@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## เทคโนโลยีที่ใช้
 
 - **Backend**: Spring Boot 3.5.3, Java 21
-- **การรวม AI**: OpenAI Java SDK กับ GitHub Models
+- **การผสาน AI**: OpenAI Java SDK กับ GitHub Models
 - **ความปลอดภัย**: Spring Security
 - **Frontend**: เทมเพลต Thymeleaf พร้อมการออกแบบด้วย Bootstrap
 - **เครื่องมือ Build**: Maven
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - Java 21 หรือสูงกว่า
 - Maven 3.9+
-- GitHub Personal Access Token ที่มี `models:read` scope
+- GitHub Personal Access Token พร้อม `models:read` scope
 
 ## การตั้งค่าและการติดตั้ง
 
@@ -42,7 +42,7 @@ CO_OP_TRANSLATOR_METADATA:
 cd Generative-AI-for-beginners-java/04-PracticalSamples/petstory
 ```
 
-### 2. ตั้งค่าตัวแปร Environment
+### 2. ตั้งค่าตัวแปรสภาพแวดล้อม
    ```bash
    # Windows (Command Prompt)
    set GITHUB_TOKEN=your_github_token_here
@@ -72,4 +72,4 @@ mvn spring-boot:run
 4. **สร้างเรื่องราว**: คลิก "Generate Story" เพื่อสร้างเรื่องราว
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราจะไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้

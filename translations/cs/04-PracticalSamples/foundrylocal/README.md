@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T21:17:19+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T10:01:31+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "cs"
 }
 -->
-# Foundry Local Command-Line Aplikace
+# Lokální příkazová aplikace Foundry
 
->**Poznámka**: Tato kapitola obsahuje [**Návod**](./TUTORIAL.md), který vás provede spuštěním hotových ukázek.
+>**Poznámka**: Tato kapitola obsahuje [**Návod**](./TUTORIAL.md), který vás provede ukázkami.
 
-Jednoduchá příkazová aplikace Spring Boot, která ukazuje, jak se připojit k Foundry Local pomocí OpenAI Java SDK.
+Jednoduchá příkazová aplikace Spring Boot, která demonstruje, jak se připojit k Foundry Local pomocí OpenAI Java SDK.
 
 ## Co se naučíte
 
@@ -29,9 +29,9 @@ Jednoduchá příkazová aplikace Spring Boot, která ukazuje, jak se připojit 
 - [Co aplikace dělá](../../../../04-PracticalSamples/foundrylocal)
 - [Ukázkový výstup](../../../../04-PracticalSamples/foundrylocal)
 - [Architektura](../../../../04-PracticalSamples/foundrylocal)
-- [Klíčové části kódu](../../../../04-PracticalSamples/foundrylocal)
+- [Důležité části kódu](../../../../04-PracticalSamples/foundrylocal)
   - [Integrace OpenAI Java SDK](../../../../04-PracticalSamples/foundrylocal)
-  - [API pro dokončení chatu](../../../../04-PracticalSamples/foundrylocal)
+  - [API pro dokončování chatů](../../../../04-PracticalSamples/foundrylocal)
 - [Řešení problémů](../../../../04-PracticalSamples/foundrylocal)
 
 ## Předpoklady
@@ -40,14 +40,14 @@ Jednoduchá příkazová aplikace Spring Boot, která ukazuje, jak se připojit 
 
 ### Instalace Foundry Local
 
-Před spuštěním této aplikace je třeba nainstalovat a spustit Foundry Local. Postupujte podle těchto kroků:
+Před spuštěním této aplikace je nutné nainstalovat a spustit Foundry Local. Postupujte podle těchto kroků:
 
 1. **Ujistěte se, že váš systém splňuje požadavky**:
    - **Operační systém**: Windows 10 (x64), Windows 11 (x64/ARM), Windows Server 2025 nebo macOS
    - **Hardware**: 
      - Minimálně: 8 GB RAM, 3 GB volného místa na disku
      - Doporučeno: 16 GB RAM, 15 GB volného místa na disku
-   - **Síť**: Připojení k internetu pro počáteční stažení modelu (volitelné pro offline použití)
+   - **Síť**: Internetové připojení pro počáteční stažení modelu (volitelné pro offline použití)
    - **Akcelerace (volitelné)**: NVIDIA GPU (řada 2000 nebo novější), AMD GPU (řada 6000 nebo novější), Qualcomm Snapdragon X Elite (8 GB nebo více paměti) nebo Apple silicon
    - **Oprávnění**: Administrátorská práva pro instalaci softwaru na vašem zařízení
 
@@ -64,7 +64,7 @@ Před spuštěním této aplikace je třeba nainstalovat a spustit Foundry Local
    brew install foundrylocal
    ```
    
-   Alternativně si můžete stáhnout instalační program z [Foundry Local GitHub repozitáře](https://github.com/microsoft/Foundry-Local).
+   Alternativně můžete stáhnout instalační program z [Foundry Local GitHub repozitáře](https://github.com/microsoft/Foundry-Local).
 
 3. **Spusťte svůj první model**:
 
@@ -72,7 +72,7 @@ Před spuštěním této aplikace je třeba nainstalovat a spustit Foundry Local
    foundry model run phi-3.5-mini
    ```
 
-   Model se stáhne (což může trvat několik minut v závislosti na rychlosti vašeho internetu) a poté se spustí. Foundry Local automaticky vybere nejlepší variantu modelu pro váš systém (CUDA pro NVIDIA GPU, jinak verze pro CPU).
+   Model se stáhne (což může trvat několik minut v závislosti na rychlosti vašeho internetu) a poté se spustí. Foundry Local automaticky vybere nejlepší variantu modelu pro váš systém (CUDA pro NVIDIA GPU, verze pro CPU jinak).
 
 4. **Otestujte model** položením otázky ve stejném terminálu:
 
@@ -80,11 +80,11 @@ Před spuštěním této aplikace je třeba nainstalovat a spustit Foundry Local
    Why is the sky blue?
    ```
 
-   Měli byste vidět odpověď od modelu Phi vysvětlující, proč je obloha modrá.
+   Měli byste vidět odpověď od modelu Phi, která vysvětluje, proč je obloha modrá.
 
 ### Ověření
 
-Můžete ověřit, že vše funguje správně, pomocí těchto příkazů:
+Můžete ověřit, že vše funguje správně pomocí těchto příkazů:
 
 ```bash
 # List all available models
@@ -103,7 +103,7 @@ Aplikaci lze konfigurovat prostřednictvím `application.properties`:
 - `foundry.local.base-url` - Základní URL pro Foundry Local (výchozí: http://localhost:5273)
 - `foundry.local.model` - AI model, který se má použít (výchozí: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Poznámka**: Název modelu v konfiguraci by měl odpovídat konkrétní variantě, kterou Foundry Local stáhl pro váš systém. Když spustíte `foundry model run phi-3.5-mini`, Foundry Local automaticky vybere a stáhne nejlepší variantu (CUDA pro NVIDIA GPU, jinak verze pro CPU). Použijte `foundry model list`, abyste viděli přesný název modelu dostupného ve vaší lokální instanci.
+> **Poznámka**: Název modelu v konfiguraci by měl odpovídat konkrétní variantě, kterou Foundry Local stáhl pro váš systém. Když spustíte `foundry model run phi-3.5-mini`, Foundry Local automaticky vybere a stáhne nejlepší variantu (CUDA pro NVIDIA GPU, verze pro CPU jinak). Použijte `foundry model list`, abyste viděli přesný název modelu dostupného ve vaší lokální instanci.
 
 ## Rychlý start
 
@@ -141,12 +141,12 @@ Aplikace je předem nakonfigurována pro připojení k Foundry Local běžícím
 
 ## Co aplikace dělá
 
-Když spustíte aplikaci:
+Když aplikaci spustíte:
 
 1. **Spustí se** jako příkazová aplikace (bez webového serveru)
-2. **Automaticky odešle** testovací zprávu: "Hello! Can you tell me what you are and what model you're running?"
+2. **Automaticky odešle** testovací zprávu: "Ahoj! Můžeš mi říct, co jsi a jaký model používáš?"
 3. **Zobrazí odpověď** od Foundry Local v konzoli
-4. **Čistě ukončí** po dokončení ukázky
+4. **Čistě ukončí** po ukázce
 
 ## Ukázkový výstup
 
@@ -167,7 +167,7 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 - Automatická serializace/deserializace JSON zajištěná SDK
 - Čistá konfigurace pomocí Spring anotací `@Value` a `@PostConstruct`
 
-## Klíčové části kódu
+## Důležité části kódu
 
 ### Integrace OpenAI Java SDK
 
@@ -183,9 +183,9 @@ public void init() {
 }
 ```
 
-### API pro dokončení chatu
+### API pro dokončování chatů
 
-Vytváření požadavků na dokončení chatu je jednoduché a typově bezpečné:
+Vytváření požadavků na dokončování chatů je jednoduché a typově bezpečné:
 
 ```java
 ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
@@ -202,14 +202,14 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 
 Pokud se objeví chyby připojení:
 1. Ověřte, že Foundry Local běží na `http://localhost:5273`
-2. Zkontrolujte, zda je model Phi-3.5-mini dostupný pomocí `foundry model list`
-3. Ujistěte se, že název modelu v `application.properties` odpovídá přesnému názvu modelu zobrazenému v seznamu
+2. Zkontrolujte, zda je dostupná varianta modelu Phi-3.5-mini pomocí `foundry model list`
+3. Ujistěte se, že název modelu v `application.properties` odpovídá přesnému názvu modelu uvedenému v seznamu
 4. Ujistěte se, že žádný firewall neblokuje připojení
 
 Běžné problémy:
-- **Model nenalezen**: Spusťte `foundry model run phi-3.5-mini` pro stažení a spuštění modelu
-- **Služba neběží**: Služba Foundry Local mohla být zastavena; znovu ji spusťte příkazem pro spuštění modelu
-- **Špatný název modelu**: Použijte `foundry model list`, abyste viděli dostupné modely, a aktualizujte svou konfiguraci podle potřeby
+- **Model nebyl nalezen**: Spusťte `foundry model run phi-3.5-mini`, abyste stáhli a spustili model
+- **Služba neběží**: Služba Foundry Local mohla být zastavena; restartujte ji pomocí příkazu pro spuštění modelu
+- **Špatný název modelu**: Použijte `foundry model list`, abyste viděli dostupné modely a aktualizovali svou konfiguraci.
 
-**Prohlášení:**  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+**Upozornění**:  
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za jakékoli nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

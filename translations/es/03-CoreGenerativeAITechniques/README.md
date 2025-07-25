@@ -1,26 +1,26 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0a27b17f64f598a80b72d93b98b7ed04",
-  "translation_date": "2025-07-21T16:02:30+00:00",
+  "original_hash": "b8a372dfc3e3e7ad9261231a22fd79c0",
+  "translation_date": "2025-07-25T08:41:59+00:00",
   "source_file": "03-CoreGenerativeAITechniques/README.md",
   "language_code": "es"
 }
 -->
 # Técnicas Fundamentales de IA Generativa
 
->**Nota**: Este capítulo incluye un [**Tutorial**](./TUTORIAL.md) detallado que te guía para ejecutar los ejemplos terminados.
+>**Nota**: Este capítulo incluye un [**Tutorial**](./TUTORIAL.md) detallado que te guía a través de los ejemplos.
 
-## Lo Que Aprenderás
-En este capítulo, exploramos 4 técnicas fundamentales de IA generativa a través de ejemplos prácticos:
+## Qué Aprenderás
+En este capítulo, exploramos 4 técnicas fundamentales de IA generativa mediante ejemplos prácticos:
 - Completaciones de LLM y flujos de chat
 - Llamadas a funciones
 - Generación Aumentada por Recuperación (RAG)
-- Medidas de seguridad para IA responsable
+- Medidas de seguridad en IA responsable
 
 ## Tabla de Contenidos
 
-- [Lo Que Aprenderás](../../../03-CoreGenerativeAITechniques)
+- [Qué Aprenderás](../../../03-CoreGenerativeAITechniques)
 - [Requisitos Previos](../../../03-CoreGenerativeAITechniques)
 - [Primeros Pasos](../../../03-CoreGenerativeAITechniques)
 - [Resumen de Ejemplos](../../../03-CoreGenerativeAITechniques)
@@ -86,9 +86,9 @@ Aprende a construir IA conversacional con respuestas en streaming y gestión del
 
 Este ejemplo demuestra:
 - Completación de texto simple con indicaciones del sistema
-- Conversaciones de múltiples turnos con gestión de historial
+- Conversaciones de múltiples turnos con gestión del historial
 - Sesiones de chat interactivas
-- Configuración de parámetros (temperatura, máximo de tokens)
+- Configuración de parámetros (temperatura, tokens máximos)
 
 ### 2. Funciones y Plugins con LLMs
 **Archivo**: `examples/src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
@@ -97,39 +97,39 @@ Amplía las capacidades de la IA proporcionando acceso a funciones personalizada
 
 Este ejemplo demuestra:
 - Integración de una función de clima
-- Implementación de una función calculadora  
-- Múltiples llamadas a funciones en una conversación
+- Implementación de una función de calculadora  
+- Múltiples llamadas a funciones en una sola conversación
 - Definición de funciones con esquemas JSON
 
 ### 3. Generación Aumentada por Recuperación (RAG)
 **Archivo**: `examples/src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-Aprende a combinar IA con tus propios documentos y fuentes de datos para obtener respuestas precisas y basadas en contexto.
+Aprende a combinar IA con tus propios documentos y fuentes de datos para obtener respuestas precisas y con contexto.
 
 Este ejemplo demuestra:
 - Respuestas a preguntas basadas en documentos con Azure OpenAI SDK
-- Implementación del patrón RAG con modelos de GitHub
+- Implementación del patrón RAG con Modelos de GitHub
 
-**Uso**: Haz preguntas sobre el contenido de `document.txt` y obtén respuestas de IA basadas únicamente en ese contexto.
+**Uso**: Haz preguntas sobre el contenido en `document.txt` y obtén respuestas de la IA basadas únicamente en ese contexto.
 
 ### 4. Demostración de Seguridad en IA Responsable
 **Archivo**: `examples/src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
-Obtén una vista previa de cómo funcionan las medidas de seguridad de IA probando las capacidades de filtrado de contenido de los modelos de GitHub.
+Obtén una vista previa de cómo funcionan las medidas de seguridad en IA probando las capacidades de filtrado de contenido de los Modelos de GitHub.
 
 Este ejemplo demuestra:
 - Filtrado de contenido para indicaciones potencialmente dañinas
-- Manejo de respuestas de seguridad en aplicaciones
+- Manejo de respuestas seguras en aplicaciones
 - Diferentes categorías de contenido bloqueado (violencia, discurso de odio, desinformación)
 - Manejo adecuado de errores por violaciones de seguridad
 
-> **Más Información**: Esto es solo una introducción a los conceptos de IA responsable. Para más información sobre ética, mitigación de sesgos, consideraciones de privacidad y marcos de IA responsable, consulta [Capítulo 5: IA Generativa Responsable](../05-ResponsibleGenAI/README.md).
+> **Aprende Más**: Esto es solo una introducción a los conceptos de IA responsable. Para más información sobre ética, mitigación de sesgos, consideraciones de privacidad y marcos de IA responsable, consulta [Capítulo 5: IA Generativa Responsable](../05-ResponsibleGenAI/README.md).
 
 ## Resumen
 
 En este capítulo, exploramos las completaciones de LLM y flujos de chat, implementamos llamadas a funciones para mejorar las capacidades de la IA, creamos un sistema de Generación Aumentada por Recuperación (RAG) y demostramos medidas de seguridad en IA responsable.
 
-> **Nota**: Profundiza más con el [**Tutorial**](./TUTORIAL.md) proporcionado.
+> **NOTA**: Profundiza más con el [**Tutorial**](./TUTORIAL.md) proporcionado.
 
 ## Próximos Pasos
 
