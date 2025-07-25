@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7bf9a4a832911269a8bd0decb97ff36c",
-  "translation_date": "2025-07-21T16:45:10+00:00",
+  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
+  "translation_date": "2025-07-25T08:45:07+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "de"
 }
 -->
-# Grundlegender Rechner-MCP-Dienst
+# Basisrechner-MCP-Dienst
 
->**Hinweis**: Dieses Kapitel enthält ein [**Tutorial**](./TUTORIAL.md), das Sie durch das Ausführen der fertigen Beispiele führt.
+>**Hinweis**: Dieses Kapitel enthält ein [**Tutorial**](./TUTORIAL.md), das Sie durch die Beispiele führt.
 
 Willkommen zu Ihrer ersten praktischen Erfahrung mit dem **Model Context Protocol (MCP)**! In den vorherigen Kapiteln haben Sie die Grundlagen der generativen KI kennengelernt und Ihre Entwicklungsumgebung eingerichtet. Jetzt ist es an der Zeit, etwas Praktisches zu erstellen.
 
-Dieser Rechnerdienst demonstriert, wie KI-Modelle sicher mit externen Tools über MCP interagieren können. Anstatt sich auf die manchmal unzuverlässigen mathematischen Fähigkeiten des KI-Modells zu verlassen, zeigen wir Ihnen, wie Sie ein robustes System erstellen können, bei dem die KI spezialisierte Dienste für präzise Berechnungen aufruft.
+Dieser Rechnerdienst zeigt, wie KI-Modelle mithilfe von MCP sicher mit externen Tools interagieren können. Anstatt sich auf die manchmal unzuverlässigen mathematischen Fähigkeiten des KI-Modells zu verlassen, zeigen wir Ihnen, wie Sie ein robustes System aufbauen können, bei dem die KI spezialisierte Dienste für präzise Berechnungen aufruft.
 
 ## Inhaltsverzeichnis
 
@@ -33,24 +33,24 @@ Dieser Rechnerdienst demonstriert, wie KI-Modelle sicher mit externen Tools übe
 Durch die Arbeit an diesem Beispiel werden Sie verstehen:
 - Wie man MCP-kompatible Dienste mit Spring Boot erstellt
 - Den Unterschied zwischen direkter Protokollkommunikation und KI-gestützter Interaktion
-- Wie KI-Modelle entscheiden, wann und wie sie externe Tools nutzen
+- Wie KI-Modelle entscheiden, wann und wie externe Tools genutzt werden
 - Best Practices für den Aufbau von KI-Anwendungen mit Tool-Integration
 
-Perfekt für Anfänger, die MCP-Konzepte lernen und ihre erste KI-Tool-Integration erstellen möchten!
+Perfekt für Einsteiger, die MCP-Konzepte lernen und ihre erste KI-Tool-Integration erstellen möchten!
 
 ## Voraussetzungen
 
 - Java 21+
 - Maven 3.6+
-- **GitHub-Token**: Erforderlich für den KI-gestützten Client. Wenn Sie dies noch nicht eingerichtet haben, lesen Sie [Kapitel 2: Einrichten Ihrer Entwicklungsumgebung](../../../02-SetupDevEnvironment/README.md) für Anweisungen.
+- **GitHub-Token**: Erforderlich für den KI-gestützten Client. Falls Sie dies noch nicht eingerichtet haben, lesen Sie [Kapitel 2: Einrichten Ihrer Entwicklungsumgebung](../../../02-SetupDevEnvironment/README.md) für Anweisungen.
 
 ## Wichtige Konzepte
 
-**Model Context Protocol (MCP)** ist eine standardisierte Methode, mit der KI-Anwendungen sicher mit externen Tools verbunden werden können. Stellen Sie es sich als eine "Brücke" vor, die es KI-Modellen ermöglicht, externe Dienste wie unseren Rechner zu nutzen. Anstatt dass das KI-Modell selbst versucht, Mathematik zu betreiben (was unzuverlässig sein kann), kann es unseren Rechnerdienst aufrufen, um genaue Ergebnisse zu erhalten. MCP stellt sicher, dass diese Kommunikation sicher und konsistent erfolgt.
+**Model Context Protocol (MCP)** ist ein standardisierter Weg, wie KI-Anwendungen sicher mit externen Tools verbunden werden können. Stellen Sie es sich als eine "Brücke" vor, die es KI-Modellen ermöglicht, externe Dienste wie unseren Rechner zu nutzen. Anstatt dass das KI-Modell selbst versucht, Berechnungen durchzuführen (was unzuverlässig sein kann), kann es unseren Rechnerdienst aufrufen, um präzise Ergebnisse zu erhalten. MCP sorgt dafür, dass diese Kommunikation sicher und konsistent abläuft.
 
-**Server-Sent Events (SSE)** ermöglichen eine Echtzeitkommunikation zwischen Server und Clients. Im Gegensatz zu traditionellen HTTP-Anfragen, bei denen Sie eine Anfrage stellen und auf eine Antwort warten, kann der Server bei SSE kontinuierlich Updates an den Client senden. Dies ist ideal für KI-Anwendungen, bei denen Antworten gestreamt oder zeitaufwändig verarbeitet werden können.
+**Server-Sent Events (SSE)** ermöglichen eine Echtzeitkommunikation zwischen Server und Clients. Im Gegensatz zu traditionellen HTTP-Anfragen, bei denen Sie eine Anfrage stellen und auf eine Antwort warten, erlaubt SSE dem Server, kontinuierlich Updates an den Client zu senden. Dies ist ideal für KI-Anwendungen, bei denen Antworten gestreamt oder zeitaufwändig verarbeitet werden.
 
-**KI-Tools & Funktionsaufrufe** ermöglichen es KI-Modellen, automatisch externe Funktionen (wie Rechneroperationen) basierend auf Benutzeranfragen auszuwählen und zu nutzen. Wenn Sie beispielsweise fragen: "Was ist 15 + 27?", versteht das KI-Modell, dass Sie eine Addition wünschen, ruft automatisch unser `add`-Tool mit den richtigen Parametern (15, 27) auf und gibt das Ergebnis in natürlicher Sprache zurück. Die KI agiert als intelligenter Koordinator, der weiß, wann und wie jedes Tool verwendet werden soll.
+**KI-Tools & Funktionsaufrufe** ermöglichen es KI-Modellen, automatisch externe Funktionen (wie Rechneroperationen) basierend auf Benutzeranfragen auszuwählen und zu nutzen. Wenn Sie fragen: "Was ist 15 + 27?", erkennt das KI-Modell, dass Sie eine Addition möchten, ruft automatisch unser `add`-Tool mit den richtigen Parametern (15, 27) auf und gibt das Ergebnis in natürlicher Sprache zurück. Die KI fungiert als intelligenter Koordinator, der weiß, wann und wie jedes Tool verwendet werden soll.
 
 ## Schnellstart
 
@@ -59,7 +59,7 @@ Perfekt für Anfänger, die MCP-Konzepte lernen und ihre erste KI-Tool-Integrati
 cd Generative-AI-for-beginners-java/04-PracticalSamples/mcp/calculator
 ```
 
-### 2. Bauen & Ausführen
+### 2. Bauen & Starten
 ```bash
 mvn clean install -DskipTests
 java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
@@ -78,13 +78,13 @@ java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
 ## Test-Clients
 
 ### 1. Direkter MCP-Client (SDKClient)
-Testet die direkte Kommunikation über das MCP-Protokoll. Ausführen mit:
+Testet die rohe MCP-Protokollkommunikation. Ausführen mit:
 ```bash
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
 ```
 
 ### 2. KI-gestützter Client (LangChain4jClient)
-Demonstriert die Interaktion in natürlicher Sprache mit GitHub-Modellen. Erfordert einen GitHub-Token (siehe [Voraussetzungen](../../../../../04-PracticalSamples/mcp/calculator)).
+Demonstriert die Interaktion in natürlicher Sprache mit GitHub-Modellen. Erfordert GitHub-Token (siehe [Voraussetzungen](../../../../../04-PracticalSamples/mcp/calculator)).
 
 **Ausführen:**
 ```bash
@@ -93,11 +93,11 @@ mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.Lan
 
 ## MCP Inspector (Web-UI)
 
-Der MCP Inspector bietet eine visuelle Weboberfläche, um Ihren MCP-Dienst zu testen, ohne Code schreiben zu müssen. Perfekt für Anfänger, um zu verstehen, wie MCP funktioniert!
+Der MCP Inspector bietet eine visuelle Weboberfläche, um Ihren MCP-Dienst zu testen, ohne Code schreiben zu müssen. Perfekt für Einsteiger, um zu verstehen, wie MCP funktioniert!
 
 ### Schritt-für-Schritt-Anleitung:
 
-1. **Starten Sie den Rechner-Server** (falls noch nicht ausgeführt):
+1. **Starten Sie den Rechner-Server** (falls noch nicht gestartet):
    ```bash
    java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
    ```
@@ -116,15 +116,15 @@ Der MCP Inspector bietet eine visuelle Weboberfläche, um Ihren MCP-Dienst zu te
    - Setzen Sie die URL auf: `http://localhost:8080/sse`
    - Klicken Sie auf die Schaltfläche "Connect"
 
-5. **Verfügbare Tools erkunden**:
+5. **Erkunden Sie verfügbare Tools**:
    - Klicken Sie auf "List Tools", um alle Rechneroperationen anzuzeigen
    - Sie sehen Funktionen wie `add`, `subtract`, `multiply` usw.
 
-6. **Eine Rechneroperation testen**:
+6. **Testen Sie eine Rechneroperation**:
    - Wählen Sie ein Tool aus (z. B. "add")
    - Geben Sie Parameter ein (z. B. `a: 15`, `b: 27`)
    - Klicken Sie auf "Run Tool"
-   - Sehen Sie sich das Ergebnis an, das von Ihrem MCP-Dienst zurückgegeben wird!
+   - Sehen Sie das Ergebnis, das von Ihrem MCP-Dienst zurückgegeben wird!
 
 Dieser visuelle Ansatz hilft Ihnen, genau zu verstehen, wie die MCP-Kommunikation funktioniert, bevor Sie Ihre eigenen Clients erstellen.
 

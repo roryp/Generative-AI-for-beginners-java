@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T21:36:46+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T10:04:40+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "sk"
 }
 -->
 # Aplikácia Pet Story
 
->**Note**: Táto kapitola obsahuje [**Návod**](./TUTORIAL.md), ktorý vás prevedie spustením hotových ukážok.
+>**Poznámka**: Táto kapitola obsahuje [**Návod**](./TUTORIAL.md), ktorý vás prevedie ukážkami.
 
 Webová aplikácia Spring Boot, ktorá generuje AI popisy a príbehy pre nahrané obrázky domácich miláčikov pomocou GitHub Models.
 
@@ -23,10 +23,10 @@ Webová aplikácia Spring Boot, ktorá generuje AI popisy a príbehy pre nahran�
 ## Technologický Stack
 
 - **Backend**: Spring Boot 3.5.3, Java 21
-- **AI Integrácia**: OpenAI Java SDK s GitHub Models
+- **Integrácia AI**: OpenAI Java SDK s GitHub Models
 - **Bezpečnosť**: Spring Security
-- **Frontend**: Thymeleaf šablóny so štýlom Bootstrap
-- **Nástroj na Build**: Maven
+- **Frontend**: Šablóny Thymeleaf so štýlovaním Bootstrap
+- **Nástroj na zostavenie**: Maven
 - **AI Modely**: GitHub Models
 
 ## Predpoklady
@@ -42,7 +42,7 @@ Webová aplikácia Spring Boot, ktorá generuje AI popisy a príbehy pre nahran�
 cd Generative-AI-for-beginners-java/04-PracticalSamples/petstory
 ```
 
-### 2. Nastavte Environmentálnu Premennú
+### 2. Nastavte premennú prostredia
    ```bash
    # Windows (Command Prompt)
    set GITHUB_TOKEN=your_github_token_here
@@ -54,22 +54,22 @@ cd Generative-AI-for-beginners-java/04-PracticalSamples/petstory
    export GITHUB_TOKEN=your_github_token_here
    ```
 
-### 3. Zostavte Aplikáciu
+### 3. Zostavte aplikáciu
 ```bash
 mvn clean compile
 ```
 
-### 4. Spustite Aplikáciu
+### 4. Spustite aplikáciu
 ```bash
 mvn spring-boot:run
 ```
 
 ## Použitie
 
-1. **Prístup k Aplikácii**: Otvorte `http://localhost:8080`
-2. **Nahrajte Obrázok**: Kliknite na "Choose File" a vyberte obrázok domáceho miláčika
-3. **Analyzujte Obrázok**: Kliknite na "Analyze Image" pre získanie AI popisu
-4. **Vytvorte Príbeh**: Kliknite na "Generate Story" pre vytvorenie príbehu
+1. **Prístup k aplikácii**: Otvorte `http://localhost:8080`
+2. **Nahrajte obrázok**: Kliknite na "Vybrať súbor" a vyberte obrázok domáceho miláčika
+3. **Analyzujte obrázok**: Kliknite na "Analyzovať obrázok" pre získanie AI popisu
+4. **Vytvorte príbeh**: Kliknite na "Vytvoriť príbeh" pre generovanie príbehu
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

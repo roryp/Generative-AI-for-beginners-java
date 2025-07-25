@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T16:36:05+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T08:44:44+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "de"
 }
 -->
 # Foundry Local Befehlszeilenanwendung
 
->**Hinweis**: Dieses Kapitel enthält ein [**Tutorial**](./TUTORIAL.md), das Sie durch das Ausführen der fertigen Beispiele führt.
+>**Hinweis**: Dieses Kapitel enthält ein [**Tutorial**](./TUTORIAL.md), das Sie durch die Beispiele führt.
 
-Eine einfache Spring Boot-Befehlszeilenanwendung, die zeigt, wie man sich mit Foundry Local über das OpenAI Java SDK verbindet.
+Eine einfache Spring-Boot-Befehlszeilenanwendung, die zeigt, wie man Foundry Local mit dem OpenAI Java SDK verbindet.
 
 ## Was Sie lernen werden
 
-- Wie man Foundry Local mit Spring Boot-Anwendungen unter Verwendung des OpenAI Java SDK integriert
+- Wie man Foundry Local mit Spring-Boot-Anwendungen unter Verwendung des OpenAI Java SDK integriert
 - Best Practices für lokale KI-Entwicklung und -Tests
 
 ## Inhaltsverzeichnis
@@ -36,7 +36,7 @@ Eine einfache Spring Boot-Befehlszeilenanwendung, die zeigt, wie man sich mit Fo
 
 ## Voraussetzungen
 
-> **⚠️ Hinweis**: Diese Anwendung **funktioniert nicht im mitgelieferten Devcontainer**, da Foundry Local auf dem Hostsystem installiert und ausgeführt werden muss.
+> **⚠️ Hinweis**: Diese Anwendung **läuft nicht im mitgelieferten Devcontainer**, da sie erfordert, dass Foundry Local auf dem Hostsystem installiert und ausgeführt wird.
 
 ### Installation von Foundry Local
 
@@ -48,7 +48,7 @@ Bevor Sie diese Anwendung ausführen, müssen Sie Foundry Local installieren und
      - Minimum: 8 GB RAM, 3 GB freier Festplattenspeicher
      - Empfohlen: 16 GB RAM, 15 GB freier Festplattenspeicher
    - **Netzwerk**: Internetverbindung für den initialen Modell-Download (optional für Offline-Nutzung)
-   - **Beschleunigung (optional)**: NVIDIA GPU (2000er Serie oder neuer), AMD GPU (6000er Serie oder neuer), Qualcomm Snapdragon X Elite (8 GB oder mehr Speicher) oder Apple Silicon
+   - **Beschleunigung (optional)**: NVIDIA GPU (2000er-Serie oder neuer), AMD GPU (6000er-Serie oder neuer), Qualcomm Snapdragon X Elite (8 GB oder mehr Speicher) oder Apple Silicon
    - **Berechtigungen**: Administratorrechte, um Software auf Ihrem Gerät zu installieren
 
 2. **Installieren Sie Foundry Local**:
@@ -118,7 +118,7 @@ cd Generative-AI-for-beginners-java/04-PracticalSamples/foundrylocal
 mvn spring-boot:run
 ```
 
-Oder erstellen und starten Sie die JAR-Datei:
+Oder bauen und starten Sie die JAR-Datei:
 
 ```bash
 mvn clean package

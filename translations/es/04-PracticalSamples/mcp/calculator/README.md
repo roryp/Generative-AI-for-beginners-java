@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7bf9a4a832911269a8bd0decb97ff36c",
-  "translation_date": "2025-07-21T16:44:50+00:00",
+  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
+  "translation_date": "2025-07-25T08:42:57+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "es"
 }
 -->
-# Servicio Básico de Calculadora MCP
+# Servicio MCP de Calculadora Básica
 
->**Nota**: Este capítulo incluye un [**Tutorial**](./TUTORIAL.md) que te guía para ejecutar los ejemplos terminados.
+>**Nota**: Este capítulo incluye un [**Tutorial**](./TUTORIAL.md) que te guía a través de los ejemplos.
 
-¡Bienvenido a tu primera experiencia práctica con el **Protocolo de Contexto de Modelo (MCP)**! En los capítulos anteriores, aprendiste los fundamentos de la IA generativa y configuraste tu entorno de desarrollo. Ahora es momento de construir algo práctico.
+¡Bienvenido a tu primera experiencia práctica con el **Protocolo de Contexto de Modelo (MCP)**! En los capítulos anteriores, aprendiste sobre los fundamentos de la IA generativa y configuraste tu entorno de desarrollo. Ahora es momento de construir algo práctico.
 
-Este servicio de calculadora demuestra cómo los modelos de IA pueden interactuar de manera segura con herramientas externas utilizando MCP. En lugar de depender de las a veces poco confiables capacidades matemáticas del modelo de IA, te mostraremos cómo construir un sistema robusto donde la IA pueda llamar a servicios especializados para realizar cálculos precisos.
+Este servicio de calculadora demuestra cómo los modelos de IA pueden interactuar de manera segura con herramientas externas utilizando MCP. En lugar de depender de las capacidades matemáticas a veces poco confiables del modelo de IA, te mostraremos cómo construir un sistema robusto donde la IA pueda llamar a servicios especializados para realizar cálculos precisos.
 
 ## Tabla de Contenidos
 
@@ -30,7 +30,7 @@ Este servicio de calculadora demuestra cómo los modelos de IA pueden interactua
 
 ## Lo que Aprenderás
 
-Al trabajar con este ejemplo, comprenderás:
+Al trabajar con este ejemplo, entenderás:
 - Cómo crear servicios compatibles con MCP utilizando Spring Boot
 - La diferencia entre la comunicación directa por protocolo y la interacción potenciada por IA
 - Cómo los modelos de IA deciden cuándo y cómo usar herramientas externas
@@ -42,15 +42,15 @@ Al trabajar con este ejemplo, comprenderás:
 
 - Java 21+
 - Maven 3.6+
-- **Token de GitHub**: Requerido para el cliente potenciado por IA. Si aún no lo has configurado, consulta [Capítulo 2: Configuración de tu entorno de desarrollo](../../../02-SetupDevEnvironment/README.md) para obtener instrucciones.
+- **Token de GitHub**: Necesario para el cliente potenciado por IA. Si aún no lo has configurado, consulta [Capítulo 2: Configuración de tu entorno de desarrollo](../../../02-SetupDevEnvironment/README.md) para obtener instrucciones.
 
 ## Conceptos Clave
 
-**Protocolo de Contexto de Modelo (MCP)** es una forma estandarizada para que las aplicaciones de IA se conecten de manera segura a herramientas externas. Piénsalo como un "puente" que permite a los modelos de IA usar servicios externos como nuestra calculadora. En lugar de que el modelo de IA intente hacer cálculos por sí mismo (lo cual puede ser poco confiable), puede llamar a nuestro servicio de calculadora para obtener resultados precisos. MCP asegura que esta comunicación sea segura y consistente.
+**Protocolo de Contexto de Modelo (MCP)** es una forma estandarizada para que las aplicaciones de IA se conecten de manera segura a herramientas externas. Piensa en él como un "puente" que permite a los modelos de IA usar servicios externos como nuestra calculadora. En lugar de que el modelo de IA intente hacer cálculos por sí mismo (lo cual puede ser poco confiable), puede llamar a nuestro servicio de calculadora para obtener resultados precisos. MCP asegura que esta comunicación ocurra de manera segura y consistente.
 
-**Eventos Enviados por el Servidor (SSE)** habilitan la comunicación en tiempo real entre el servidor y los clientes. A diferencia de las solicitudes HTTP tradicionales donde preguntas y esperas una respuesta, SSE permite que el servidor envíe actualizaciones continuamente al cliente. Esto es perfecto para aplicaciones de IA donde las respuestas pueden ser transmitidas o tomar tiempo en procesarse.
+**Eventos Enviados por el Servidor (SSE)** habilitan la comunicación en tiempo real entre el servidor y los clientes. A diferencia de las solicitudes HTTP tradicionales donde preguntas y esperas una respuesta, SSE permite que el servidor envíe actualizaciones continuamente al cliente. Esto es perfecto para aplicaciones de IA donde las respuestas pueden ser transmitidas o tomar tiempo para procesarse.
 
-**Herramientas de IA y Llamadas a Funciones** permiten que los modelos de IA elijan y utilicen automáticamente funciones externas (como las operaciones de la calculadora) basándose en las solicitudes del usuario. Cuando preguntas "¿Cuánto es 15 + 27?", el modelo de IA entiende que quieres sumar, llama automáticamente a nuestra herramienta `add` con los parámetros correctos (15, 27) y devuelve el resultado en lenguaje natural. La IA actúa como un coordinador inteligente que sabe cuándo y cómo usar cada herramienta.
+**Herramientas de IA y Llamadas a Funciones** permiten que los modelos de IA elijan y usen automáticamente funciones externas (como operaciones de calculadora) basándose en las solicitudes del usuario. Cuando preguntas "¿Cuánto es 15 + 27?", el modelo de IA entiende que quieres sumar, llama automáticamente a nuestra herramienta `add` con los parámetros correctos (15, 27) y devuelve el resultado en lenguaje natural. La IA actúa como un coordinador inteligente que sabe cuándo y cómo usar cada herramienta.
 
 ## Inicio Rápido
 
@@ -78,7 +78,7 @@ java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
 ## Clientes de Prueba
 
 ### 1. Cliente MCP Directo (SDKClient)
-Prueba la comunicación directa con el protocolo MCP. Ejecuta con:
+Prueba la comunicación cruda del protocolo MCP. Ejecuta con:
 ```bash
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
 ```
@@ -97,7 +97,7 @@ El Inspector MCP proporciona una interfaz web visual para probar tu servicio MCP
 
 ### Instrucciones Paso a Paso:
 
-1. **Inicia el servidor de la calculadora** (si aún no está en ejecución):
+1. **Inicia el servidor de calculadora** (si no está ya en ejecución):
    ```bash
    java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
    ```
@@ -108,23 +108,23 @@ El Inspector MCP proporciona una interfaz web visual para probar tu servicio MCP
    ```
 
 3. **Abre la interfaz web**:
-   - Busca un mensaje como "Inspector running at http://localhost:6274"
+   - Busca un mensaje como "Inspector ejecutándose en http://localhost:6274"
    - Abre esa URL en tu navegador web
 
 4. **Conéctate a tu servicio de calculadora**:
    - En la interfaz web, configura el tipo de transporte como "SSE"
-   - Establece la URL en: `http://localhost:8080/sse`
-   - Haz clic en el botón "Connect"
+   - Configura la URL como: `http://localhost:8080/sse`
+   - Haz clic en el botón "Conectar"
 
 5. **Explora las herramientas disponibles**:
-   - Haz clic en "List Tools" para ver todas las operaciones de la calculadora
+   - Haz clic en "Listar Herramientas" para ver todas las operaciones de la calculadora
    - Verás funciones como `add`, `subtract`, `multiply`, etc.
 
 6. **Prueba una operación de la calculadora**:
    - Selecciona una herramienta (por ejemplo, "add")
    - Ingresa los parámetros (por ejemplo, `a: 15`, `b: 27`)
-   - Haz clic en "Run Tool"
-   - Observa el resultado devuelto por tu servicio MCP
+   - Haz clic en "Ejecutar Herramienta"
+   - Observa el resultado devuelto por tu servicio MCP.
 
 Este enfoque visual te ayuda a entender exactamente cómo funciona la comunicación MCP antes de construir tus propios clientes.
 
@@ -134,4 +134,4 @@ Este enfoque visual te ayuda a entender exactamente cómo funciona la comunicaci
 **Referencia:** [Documentación de MCP Server Boot Starter](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server-boot-starter-docs.html)
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

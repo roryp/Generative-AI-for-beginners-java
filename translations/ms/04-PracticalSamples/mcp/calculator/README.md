@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7bf9a4a832911269a8bd0decb97ff36c",
-  "translation_date": "2025-07-21T20:00:26+00:00",
+  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
+  "translation_date": "2025-07-25T09:52:53+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "ms"
 }
 -->
-# Perkhidmatan MCP Kalkulator Asas
+# Perkhidmatan Kalkulator MCP Asas
 
->**Nota**: Bab ini termasuk [**Tutorial**](./TUTORIAL.md) yang membimbing anda menjalankan sampel yang telah siap.
+>**Nota**: Bab ini termasuk [**Tutorial**](./TUTORIAL.md) yang membimbing anda melalui contoh-contoh.
 
 Selamat datang ke pengalaman praktikal pertama anda dengan **Model Context Protocol (MCP)**! Dalam bab-bab sebelumnya, anda telah mempelajari asas-asas AI generatif dan menyediakan persekitaran pembangunan anda. Kini tiba masanya untuk membina sesuatu yang praktikal.
 
-Perkhidmatan kalkulator ini menunjukkan bagaimana model AI boleh berinteraksi dengan alat luaran secara selamat menggunakan MCP. Daripada bergantung kepada keupayaan matematik model AI yang kadangkala tidak boleh dipercayai, kami akan menunjukkan cara membina sistem yang kukuh di mana AI boleh memanggil perkhidmatan khusus untuk pengiraan yang tepat.
+Perkhidmatan kalkulator ini menunjukkan bagaimana model AI boleh berinteraksi dengan alat luaran secara selamat menggunakan MCP. Daripada bergantung kepada keupayaan matematik model AI yang kadang-kadang tidak boleh dipercayai, kami akan menunjukkan cara membina sistem yang kukuh di mana AI boleh memanggil perkhidmatan khusus untuk pengiraan yang tepat.
 
 ## Kandungan
 
@@ -25,7 +25,7 @@ Perkhidmatan kalkulator ini menunjukkan bagaimana model AI boleh berinteraksi de
 - [Klien Ujian](../../../../../04-PracticalSamples/mcp/calculator)
   - [1. Klien MCP Langsung (SDKClient)](../../../../../04-PracticalSamples/mcp/calculator)
   - [2. Klien Berkuasa AI (LangChain4jClient)](../../../../../04-PracticalSamples/mcp/calculator)
-- [Pemeriksa MCP (Antara Muka Web)](../../../../../04-PracticalSamples/mcp/calculator)
+- [Pemeriksa MCP (UI Web)](../../../../../04-PracticalSamples/mcp/calculator)
   - [Arahan Langkah-demi-Langkah](../../../../../04-PracticalSamples/mcp/calculator)
 
 ## Apa yang Anda Akan Pelajari
@@ -46,11 +46,11 @@ Sesuai untuk pemula yang mempelajari konsep MCP dan bersedia membina integrasi a
 
 ## Konsep Utama
 
-**Model Context Protocol (MCP)** ialah cara standard untuk aplikasi AI berhubung dengan alat luaran secara selamat. Anggap ia sebagai "jambatan" yang membolehkan model AI menggunakan perkhidmatan luaran seperti kalkulator kami. Daripada model AI cuba melakukan pengiraan sendiri (yang boleh menjadi tidak tepat), ia boleh memanggil perkhidmatan kalkulator kami untuk mendapatkan hasil yang tepat. MCP memastikan komunikasi ini berlaku dengan selamat dan konsisten.
+**Model Context Protocol (MCP)** adalah cara standard untuk aplikasi AI berhubung dengan alat luaran secara selamat. Anggap ia sebagai "jambatan" yang membolehkan model AI menggunakan perkhidmatan luaran seperti kalkulator kami. Daripada model AI cuba melakukan matematik sendiri (yang boleh menjadi tidak boleh dipercayai), ia boleh memanggil perkhidmatan kalkulator kami untuk mendapatkan hasil yang tepat. MCP memastikan komunikasi ini berlaku dengan selamat dan konsisten.
 
-**Server-Sent Events (SSE)** membolehkan komunikasi masa nyata antara pelayan dan klien. Tidak seperti permintaan HTTP tradisional di mana anda bertanya dan menunggu respons, SSE membolehkan pelayan menghantar kemas kini secara berterusan kepada klien. Ini sangat sesuai untuk aplikasi AI di mana respons mungkin dihantar secara aliran atau mengambil masa untuk diproses.
+**Server-Sent Events (SSE)** membolehkan komunikasi masa nyata antara pelayan dan klien. Tidak seperti permintaan HTTP tradisional di mana anda bertanya dan menunggu respons, SSE membolehkan pelayan menghantar kemas kini secara berterusan kepada klien. Ini sangat sesuai untuk aplikasi AI di mana respons mungkin disiarkan atau mengambil masa untuk diproses.
 
-**Alat AI & Pemanggilan Fungsi** membolehkan model AI secara automatik memilih dan menggunakan fungsi luaran (seperti operasi kalkulator) berdasarkan permintaan pengguna. Apabila anda bertanya "Berapakah 15 + 27?", model AI memahami anda mahu penambahan, secara automatik memanggil alat `add` kami dengan parameter yang betul (15, 27), dan mengembalikan hasilnya dalam bahasa semula jadi. AI bertindak sebagai penyelaras pintar yang tahu bila dan bagaimana menggunakan setiap alat.
+**Alat AI & Pemanggilan Fungsi** membolehkan model AI secara automatik memilih dan menggunakan fungsi luaran (seperti operasi kalkulator) berdasarkan permintaan pengguna. Apabila anda bertanya "Berapa 15 + 27?", model AI memahami anda mahukan penambahan, secara automatik memanggil alat `add` kami dengan parameter yang betul (15, 27), dan mengembalikan hasilnya dalam bahasa semula jadi. AI bertindak sebagai penyelaras pintar yang tahu bila dan bagaimana menggunakan setiap alat.
 
 ## Permulaan Pantas
 
@@ -91,9 +91,9 @@ Menunjukkan interaksi bahasa semula jadi dengan Model GitHub. Memerlukan token G
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
 ```
 
-## Pemeriksa MCP (Antara Muka Web)
+## Pemeriksa MCP (UI Web)
 
-Pemeriksa MCP menyediakan antara muka web visual untuk menguji perkhidmatan MCP anda tanpa menulis kod. Sangat sesuai untuk pemula memahami cara MCP berfungsi!
+Pemeriksa MCP menyediakan antara muka web visual untuk menguji perkhidmatan MCP anda tanpa menulis kod. Sesuai untuk pemula memahami cara MCP berfungsi!
 
 ### Arahan Langkah-demi-Langkah:
 
@@ -112,13 +112,13 @@ Pemeriksa MCP menyediakan antara muka web visual untuk menguji perkhidmatan MCP 
    - Buka URL tersebut dalam pelayar web anda
 
 4. **Sambungkan ke perkhidmatan kalkulator anda**:
-   - Dalam antara muka web, tetapkan jenis pengangkutan kepada "SSE"
+   - Dalam antara muka web, tetapkan jenis transport kepada "SSE"
    - Tetapkan URL kepada: `http://localhost:8080/sse`
    - Klik butang "Connect"
 
 5. **Terokai alat yang tersedia**:
    - Klik "List Tools" untuk melihat semua operasi kalkulator
-   - Anda akan melihat fungsi seperti `add`, `subtract`, `multiply`, dan lain-lain.
+   - Anda akan melihat fungsi seperti `add`, `subtract`, `multiply`, dll.
 
 6. **Uji operasi kalkulator**:
    - Pilih alat (contohnya, "add")
@@ -134,4 +134,4 @@ Pendekatan visual ini membantu anda memahami dengan tepat bagaimana komunikasi M
 **Rujukan:** [Dokumentasi MCP Server Boot Starter](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server-boot-starter-docs.html)
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

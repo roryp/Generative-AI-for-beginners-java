@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T21:16:12+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T08:38:52+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "en"
 }
 -->
 # Foundry Local Command-Line Application
 
->**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through running the completed examples.
+>**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through the examples.
 
 A simple Spring Boot command-line application that demonstrates how to connect to Foundry Local using the OpenAI Java SDK.
 
@@ -36,7 +36,7 @@ A simple Spring Boot command-line application that demonstrates how to connect t
 
 ## Prerequisites
 
-> **⚠️ Note**: This application **does not run in the provided devcontainer** as it requires Foundry Local to be installed and running on the host system.
+> **⚠️ Note**: This application **does not run in the supplied devcontainer** as it requires Foundry Local to be installed and running on the host system.
 
 ### Installing Foundry Local
 
@@ -72,7 +72,7 @@ Before running this application, you need to install and start Foundry Local. Fo
    foundry model run phi-3.5-mini
    ```
 
-   The model will download (this may take a few minutes, depending on your internet speed) and then run. Foundry Local automatically selects the best model variant for your system (CUDA for NVIDIA GPUs, CPU version otherwise).
+   The model downloads (which can take a few minutes, depending on your internet speed) and then runs. Foundry Local automatically selects the best model variant for your system (CUDA for NVIDIA GPUs, CPU version otherwise).
 
 4. **Test the model** by asking a question in the same terminal:
 
@@ -107,7 +107,7 @@ The application can be configured through `application.properties`:
 
 ## Quick Start
 
-### 1. Navigate to the Foundry Local application directory
+### 1. Navigate to the foundry local application directory
 ```bash
 cd Generative-AI-for-beginners-java/04-PracticalSamples/foundrylocal
 ```

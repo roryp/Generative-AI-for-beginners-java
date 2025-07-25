@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T21:36:12+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T08:39:29+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "en"
 }
 -->
 # Pet Story App
 
->**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that guides you through running the finished samples.
+>**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that walks you through the examples.
 
 A Spring Boot web application that creates AI-generated descriptions and stories for uploaded pet images using GitHub Models.
 
@@ -68,7 +68,7 @@ mvn spring-boot:run
 
 1. **Access the Application**: Go to `http://localhost:8080`
 2. **Upload Image**: Click "Choose File" and select a pet image
-3. **Analyze Image**: Click "Analyze Image" to get an AI-generated description
+3. **Analyze Image**: Click "Analyze Image" to receive an AI-generated description
 4. **Generate Story**: Click "Generate Story" to create a story
 
 **Disclaimer**:  

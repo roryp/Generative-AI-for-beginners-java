@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7bf9a4a832911269a8bd0decb97ff36c",
-  "translation_date": "2025-07-21T16:45:55+00:00",
+  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
+  "translation_date": "2025-07-25T09:27:07+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "pl"
 }
 -->
 # Podstawowa Usługa Kalkulatora MCP
 
->**Note**: Ten rozdział zawiera [**Samouczek**](./TUTORIAL.md), który krok po kroku pokazuje, jak uruchomić gotowe przykłady.
+>**Note**: Ten rozdział zawiera [**Samouczek**](./TUTORIAL.md), który przeprowadzi Cię przez przykłady.
 
 Witaj w swoim pierwszym praktycznym doświadczeniu z **Model Context Protocol (MCP)**! W poprzednich rozdziałach nauczyłeś się podstaw generatywnej sztucznej inteligencji i skonfigurowałeś swoje środowisko programistyczne. Teraz nadszedł czas, aby stworzyć coś praktycznego.
 
@@ -25,16 +25,16 @@ Ta usługa kalkulatora pokazuje, jak modele AI mogą bezpiecznie współpracowa�
 - [Klienci testowi](../../../../../04-PracticalSamples/mcp/calculator)
   - [1. Bezpośredni klient MCP (SDKClient)](../../../../../04-PracticalSamples/mcp/calculator)
   - [2. Klient wspierany przez AI (LangChain4jClient)](../../../../../04-PracticalSamples/mcp/calculator)
-- [MCP Inspector (Interfejs Webowy)](../../../../../04-PracticalSamples/mcp/calculator)
+- [Inspektor MCP (Interfejs Webowy)](../../../../../04-PracticalSamples/mcp/calculator)
   - [Instrukcje krok po kroku](../../../../../04-PracticalSamples/mcp/calculator)
 
 ## Czego się nauczysz
 
-Pracując z tym przykładem, dowiesz się:
+Pracując nad tym przykładem, zrozumiesz:
 - Jak tworzyć usługi zgodne z MCP za pomocą Spring Boot
-- Różnicy między bezpośrednią komunikacją protokołową a interakcją wspieraną przez AI
+- Różnicę między bezpośrednią komunikacją protokołu a interakcją wspieraną przez AI
 - Jak modele AI decydują, kiedy i jak korzystać z zewnętrznych narzędzi
-- Najlepszych praktyk w budowaniu aplikacji AI z obsługą narzędzi
+- Najlepsze praktyki w budowaniu aplikacji AI wspieranych narzędziami
 
 Idealne dla początkujących, którzy uczą się koncepcji MCP i są gotowi zbudować swoją pierwszą integrację narzędzi AI!
 
@@ -50,7 +50,7 @@ Idealne dla początkujących, którzy uczą się koncepcji MCP i są gotowi zbud
 
 **Server-Sent Events (SSE)** umożliwia komunikację w czasie rzeczywistym między serwerem a klientami. W przeciwieństwie do tradycyjnych żądań HTTP, gdzie pytasz i czekasz na odpowiedź, SSE pozwala serwerowi na ciągłe wysyłanie aktualizacji do klienta. Jest to idealne rozwiązanie dla aplikacji AI, gdzie odpowiedzi mogą być przesyłane strumieniowo lub wymagać czasu na przetworzenie.
 
-**Narzędzia AI i wywoływanie funkcji** pozwalają modelom AI automatycznie wybierać i korzystać z zewnętrznych funkcji (takich jak operacje kalkulatora) na podstawie żądań użytkownika. Gdy zapytasz "Ile to 15 + 27?", model AI rozumie, że chcesz wykonać dodawanie, automatycznie wywołuje naszą funkcję `add` z odpowiednimi parametrami (15, 27) i zwraca wynik w naturalnym języku. AI działa jako inteligentny koordynator, który wie, kiedy i jak używać każdego narzędzia.
+**Narzędzia AI i wywoływanie funkcji** pozwalają modelom AI automatycznie wybierać i korzystać z zewnętrznych funkcji (takich jak operacje kalkulatora) na podstawie żądań użytkownika. Kiedy pytasz "Ile to 15 + 27?", model AI rozumie, że chcesz wykonać dodawanie, automatycznie wywołuje nasze narzędzie `add` z odpowiednimi parametrami (15, 27) i zwraca wynik w naturalnym języku. AI działa jako inteligentny koordynator, który wie, kiedy i jak używać każdego narzędzia.
 
 ## Szybki start
 
@@ -65,7 +65,7 @@ mvn clean install -DskipTests
 java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
 ```
 
-### 3. Testuj za pomocą klientów
+### 2. Przetestuj za pomocą klientów
 - **SDKClient**: Bezpośrednia interakcja z protokołem MCP
 - **LangChain4jClient**: Interakcja w naturalnym języku wspierana przez AI (wymaga tokena GitHub)
 
@@ -91,9 +91,9 @@ Pokazuje interakcję w naturalnym języku z modelami GitHub. Wymaga tokena GitHu
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
 ```
 
-## MCP Inspector (Interfejs Webowy)
+## Inspektor MCP (Interfejs Webowy)
 
-MCP Inspector oferuje wizualny interfejs webowy do testowania Twojej usługi MCP bez konieczności pisania kodu. Idealne dla początkujących, aby zrozumieć, jak działa MCP!
+Inspektor MCP zapewnia wizualny interfejs webowy do testowania Twojej usługi MCP bez pisania kodu. Idealne dla początkujących, aby zrozumieć, jak działa MCP!
 
 ### Instrukcje krok po kroku:
 
@@ -102,14 +102,14 @@ MCP Inspector oferuje wizualny interfejs webowy do testowania Twojej usługi MCP
    java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
    ```
 
-2. **Zainstaluj i uruchom MCP Inspector** w nowym terminalu:
+2. **Zainstaluj i uruchom Inspektora MCP** w nowym terminalu:
    ```bash
    npx @modelcontextprotocol/inspector
    ```
 
 3. **Otwórz interfejs webowy**:
    - Poszukaj komunikatu typu "Inspector running at http://localhost:6274"
-   - Otwórz ten adres URL w swojej przeglądarce
+   - Otwórz ten URL w swojej przeglądarce
 
 4. **Połącz się z usługą kalkulatora**:
    - W interfejsie webowym ustaw typ transportu na "SSE"
@@ -134,4 +134,4 @@ To wizualne podejście pomaga zrozumieć dokładnie, jak działa komunikacja MCP
 **Referencja:** [Dokumentacja MCP Server Boot Starter](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server-boot-starter-docs.html)
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T16:52:12+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T08:43:36+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "es"
 }
 -->
 # Aplicación Pet Story
 
->**Nota**: Este capítulo incluye un [**Tutorial**](./TUTORIAL.md) que te guía para ejecutar los ejemplos terminados.
+>**Nota**: Este capítulo incluye un [**Tutorial**](./TUTORIAL.md) que te guía a través de los ejemplos.
 
 Una aplicación web de Spring Boot que genera descripciones y historias impulsadas por IA para imágenes de mascotas cargadas utilizando GitHub Models.
 
@@ -68,7 +68,7 @@ mvn spring-boot:run
 
 1. **Accede a la Aplicación**: Navega a `http://localhost:8080`
 2. **Sube una Imagen**: Haz clic en "Choose File" y selecciona una imagen de mascota
-3. **Analiza la Imagen**: Haz clic en "Analyze Image" para obtener la descripción generada por IA
+3. **Analiza la Imagen**: Haz clic en "Analyze Image" para obtener una descripción generada por IA
 4. **Genera una Historia**: Haz clic en "Generate Story" para crear la historia
 
 **Descargo de responsabilidad**:  

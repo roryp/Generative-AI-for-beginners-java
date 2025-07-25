@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T21:37:27+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T10:13:24+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "hr"
 }
 -->
 # Aplikacija Pet Story
 
->**Note**: Ovo poglavlje uključuje [**Tutorial**](./TUTORIAL.md) koji vas vodi kroz pokretanje gotovih primjera.
+>**Note**: Ovo poglavlje uključuje [**Tutorial**](./TUTORIAL.md) koji vas vodi kroz primjere.
 
-Web aplikacija temeljena na Spring Bootu koja generira opise i priče za slike kućnih ljubimaca koristeći GitHub modele s podrškom za umjetnu inteligenciju.
+Web aplikacija temeljena na Spring Bootu koja generira opise i priče uz pomoć umjetne inteligencije za učitane slike kućnih ljubimaca koristeći GitHub modele.
 
 ## Sadržaj
 
@@ -23,17 +23,17 @@ Web aplikacija temeljena na Spring Bootu koja generira opise i priče za slike k
 ## Tehnološki Stack
 
 - **Backend**: Spring Boot 3.5.3, Java 21
-- **AI Integracija**: OpenAI Java SDK s GitHub modelima
+- **Integracija AI-a**: OpenAI Java SDK s GitHub modelima
 - **Sigurnost**: Spring Security
 - **Frontend**: Thymeleaf predlošci s Bootstrap stilizacijom
 - **Alat za izgradnju**: Maven
-- **AI Modeli**: GitHub modeli
+- **AI modeli**: GitHub modeli
 
 ## Preduvjeti
 
 - Java 21 ili novija verzija
 - Maven 3.9+
-- GitHub osobni pristupni token s `models:read` dozvolom
+- GitHub Personal Access Token s `models:read` dozvolom
 
 ## Postavljanje i Instalacija
 
@@ -67,8 +67,8 @@ mvn spring-boot:run
 ## Korištenje
 
 1. **Pristup aplikaciji**: Idite na `http://localhost:8080`
-2. **Prenesite sliku**: Kliknite "Choose File" i odaberite sliku kućnog ljubimca
-3. **Analizirajte sliku**: Kliknite "Analyze Image" za dobivanje AI opisa
+2. **Učitajte sliku**: Kliknite "Choose File" i odaberite sliku kućnog ljubimca
+3. **Analizirajte sliku**: Kliknite "Analyze Image" za dobivanje opisa uz pomoć AI-a
 4. **Generirajte priču**: Kliknite "Generate Story" za kreiranje priče
 
 **Odricanje od odgovornosti**:  

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T19:50:52+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:54:44+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "tl"
 }
 -->
 # Foundry Local Command-Line Application
 
->**Tandaan**: Kasama sa kabanatang ito ang isang [**Tutorial**](./TUTORIAL.md) na gagabay sa iyo sa pagpapatakbo ng mga natapos na halimbawa.
+>**Tandaan**: Ang kabanatang ito ay may kasamang [**Tutorial**](./TUTORIAL.md) na gagabay sa iyo sa mga halimbawa.
 
 Isang simpleng Spring Boot command-line application na nagpapakita kung paano kumonekta sa Foundry Local gamit ang OpenAI Java SDK.
 
@@ -23,14 +23,14 @@ Isang simpleng Spring Boot command-line application na nagpapakita kung paano ku
 - [Ano ang Matututuhan Mo](../../../../04-PracticalSamples/foundrylocal)
 - [Mga Kinakailangan](../../../../04-PracticalSamples/foundrylocal)
   - [Pag-install ng Foundry Local](../../../../04-PracticalSamples/foundrylocal)
-  - [Pagpapatunay](../../../../04-PracticalSamples/foundrylocal)
+  - [Pag-verify](../../../../04-PracticalSamples/foundrylocal)
 - [Konpigurasyon](../../../../04-PracticalSamples/foundrylocal)
 - [Mabilisang Simula](../../../../04-PracticalSamples/foundrylocal)
 - [Ano ang Ginagawa ng Application](../../../../04-PracticalSamples/foundrylocal)
 - [Halimbawang Output](../../../../04-PracticalSamples/foundrylocal)
 - [Arkitektura](../../../../04-PracticalSamples/foundrylocal)
 - [Mga Highlight ng Code](../../../../04-PracticalSamples/foundrylocal)
-  - [OpenAI Java SDK Integration](../../../../04-PracticalSamples/foundrylocal)
+  - [Integrasyon ng OpenAI Java SDK](../../../../04-PracticalSamples/foundrylocal)
   - [Chat Completion API](../../../../04-PracticalSamples/foundrylocal)
 - [Pag-aayos ng Problema](../../../../04-PracticalSamples/foundrylocal)
 
@@ -42,12 +42,12 @@ Isang simpleng Spring Boot command-line application na nagpapakita kung paano ku
 
 Bago patakbuhin ang application na ito, kailangan mong i-install at simulan ang Foundry Local. Sundin ang mga hakbang na ito:
 
-1. **Siguraduhing natutugunan ng iyong system ang mga kinakailangan**:
+1. **Siguraduhing ang iyong sistema ay tumutugon sa mga kinakailangan**:
    - **Operating System**: Windows 10 (x64), Windows 11 (x64/ARM), Windows Server 2025, o macOS
    - **Hardware**: 
      - Minimum: 8GB RAM, 3GB libreng disk space
      - Rekomendado: 16GB RAM, 15GB libreng disk space
-   - **Network**: Koneksyon sa internet para sa paunang pag-download ng modelo (opsyonal para sa offline na paggamit)
+   - **Network**: Koneksyon sa internet para sa unang pag-download ng modelo (opsyonal para sa offline na paggamit)
    - **Acceleration (opsyonal)**: NVIDIA GPU (2,000 series o mas bago), AMD GPU (6,000 series o mas bago), Qualcomm Snapdragon X Elite (8GB o higit pang memorya), o Apple silicon
    - **Mga Pahintulot**: Mga pribilehiyong pang-administratibo upang mag-install ng software sa iyong device
 
@@ -72,7 +72,7 @@ Bago patakbuhin ang application na ito, kailangan mong i-install at simulan ang 
    foundry model run phi-3.5-mini
    ```
 
-   Ang modelo ay ida-download (na maaaring tumagal ng ilang minuto, depende sa bilis ng iyong internet) at pagkatapos ay tatakbo. Awtomatikong pinipili ng Foundry Local ang pinakamahusay na variant ng modelo para sa iyong system (CUDA para sa NVIDIA GPUs, CPU version kung wala).
+   Ang modelo ay ida-download (na maaaring tumagal ng ilang minuto, depende sa bilis ng iyong internet) at pagkatapos ay tatakbo. Awtomatikong pinipili ng Foundry Local ang pinakamahusay na variant ng modelo para sa iyong sistema (CUDA para sa NVIDIA GPUs, CPU na bersyon kung wala).
 
 4. **Subukan ang modelo** sa pamamagitan ng pagtatanong sa parehong terminal:
 
@@ -80,11 +80,11 @@ Bago patakbuhin ang application na ito, kailangan mong i-install at simulan ang 
    Why is the sky blue?
    ```
 
-   Makakakita ka ng sagot mula sa Phi model na nagpapaliwanag kung bakit asul ang langit.
+   Makikita mo ang sagot mula sa Phi model na nagpapaliwanag kung bakit asul ang langit.
 
-### Pagpapatunay
+### Pag-verify
 
-Maaari mong tiyakin na maayos ang lahat gamit ang mga command na ito:
+Maaari mong i-verify kung maayos ang lahat gamit ang mga command na ito:
 
 ```bash
 # List all available models
@@ -98,12 +98,12 @@ Maaari mo ring bisitahin ang `http://localhost:5273` sa iyong browser upang maki
 
 ## Konpigurasyon
 
-Maaaring i-configure ang application sa pamamagitan ng `application.properties`:
+Ang application ay maaaring i-configure sa pamamagitan ng `application.properties`:
 
 - `foundry.local.base-url` - Base URL para sa Foundry Local (default: http://localhost:5273)
 - `foundry.local.model` - AI model na gagamitin (default: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Tandaan**: Ang pangalan ng modelo sa configuration ay dapat tumugma sa partikular na variant na na-download ng Foundry Local para sa iyong system. Kapag pinatakbo mo ang `foundry model run phi-3.5-mini`, awtomatikong pinipili at dina-download ng Foundry Local ang pinakamahusay na variant (CUDA para sa NVIDIA GPUs, CPU version kung wala). Gamitin ang `foundry model list` upang makita ang eksaktong pangalan ng modelo na magagamit sa iyong lokal na instance.
+> **Tandaan**: Ang pangalan ng modelo sa konpigurasyon ay dapat tumugma sa partikular na variant na na-download ng Foundry Local para sa iyong sistema. Kapag pinatakbo mo ang `foundry model run phi-3.5-mini`, awtomatikong pinipili at dina-download ng Foundry Local ang pinakamahusay na variant (CUDA para sa NVIDIA GPUs, CPU na bersyon kung wala). Gamitin ang `foundry model list` upang makita ang eksaktong pangalan ng modelo na magagamit sa iyong lokal na instance.
 
 ## Mabilisang Simula
 
@@ -127,7 +127,7 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 
 ### Mga Dependency
 
-Gumagamit ang application na ito ng OpenAI Java SDK upang makipag-ugnayan sa Foundry Local. Ang pangunahing dependency ay:
+Ang application na ito ay gumagamit ng OpenAI Java SDK upang makipag-ugnayan sa Foundry Local. Ang pangunahing dependency ay:
 
 ```xml
 <dependency>
@@ -146,7 +146,7 @@ Kapag pinatakbo mo ang application:
 1. **Nagsisimula** bilang isang command-line application (walang web server)
 2. **Awtomatikong nagpapadala** ng test message: "Hello! Can you tell me what you are and what model you're running?"
 3. **Ipinapakita ang sagot** mula sa Foundry Local sa console
-4. **Maayos na nagtatapos** pagkatapos ng demo
+4. **Maayos na nagsasara** pagkatapos ng demo
 
 ## Halimbawang Output
 
@@ -163,15 +163,15 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 - **Application.java** - Pangunahing Spring Boot application na may CommandLineRunner
 - **FoundryLocalService.java** - Serbisyo na gumagamit ng OpenAI Java SDK upang makipag-ugnayan sa Foundry Local
-- Gumagamit ng **OpenAI Java SDK** para sa type-safe na API calls
+- Gumagamit ng **OpenAI Java SDK** para sa type-safe na mga tawag sa API
 - Awtomatikong JSON serialization/deserialization na hinahawakan ng SDK
-- Malinis na configuration gamit ang Spring's `@Value` at `@PostConstruct` annotations
+- Malinis na konpigurasyon gamit ang `@Value` at `@PostConstruct` annotations ng Spring
 
 ## Mga Highlight ng Code
 
-### OpenAI Java SDK Integration
+### Integrasyon ng OpenAI Java SDK
 
-Gumagamit ang application ng OpenAI Java SDK upang lumikha ng client na naka-configure para sa Foundry Local:
+Ang application ay gumagamit ng OpenAI Java SDK upang lumikha ng client na naka-configure para sa Foundry Local:
 
 ```java
 @PostConstruct
@@ -185,7 +185,7 @@ public void init() {
 
 ### Chat Completion API
 
-Ang paggawa ng chat completion requests ay simple at type-safe:
+Ang paggawa ng mga kahilingan sa chat completion ay simple at type-safe:
 
 ```java
 ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
@@ -207,9 +207,9 @@ Kung makakita ka ng mga error sa koneksyon:
 4. Siguraduhing walang firewall na humaharang sa koneksyon
 
 Karaniwang mga isyu:
-- **Model hindi natagpuan**: Patakbuhin ang `foundry model run phi-3.5-mini` upang i-download at simulan ang modelo
-- **Serbisyo hindi tumatakbo**: Maaaring huminto ang Foundry Local service; i-restart ito gamit ang model run command
-- **Maling pangalan ng modelo**: Gamitin ang `foundry model list` upang makita ang mga magagamit na modelo at i-update ang iyong configuration nang naaayon
+- **Model not found**: Patakbuhin ang `foundry model run phi-3.5-mini` upang i-download at simulan ang modelo
+- **Service not running**: Maaaring huminto ang Foundry Local service; i-restart ito gamit ang model run command
+- **Maling pangalan ng modelo**: Gamitin ang `foundry model list` upang makita ang mga magagamit na modelo at i-update ang iyong konpigurasyon nang naaayon
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

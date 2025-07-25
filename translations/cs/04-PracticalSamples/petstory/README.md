@@ -1,33 +1,33 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T21:36:37+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T10:02:19+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "cs"
 }
 -->
 # Aplikace Pet Story
 
->**Poznámka**: Tato kapitola obsahuje [**Návod**](./TUTORIAL.md), který vás provede spuštěním hotových ukázek.
+>**Note**: Tato kapitola obsahuje [**Návod**](./TUTORIAL.md), který vás provede ukázkami.
 
-Webová aplikace Spring Boot, která generuje popisy a příběhy poháněné umělou inteligencí pro nahrané obrázky mazlíčků pomocí GitHub Models.
+Webová aplikace Spring Boot, která generuje popisy a příběhy poháněné AI pro nahrané obrázky domácích mazlíčků pomocí GitHub Models.
 
 ## Obsah
 
-- [Technologický Stack](../../../../04-PracticalSamples/petstory)
+- [Technologický stack](../../../../04-PracticalSamples/petstory)
 - [Předpoklady](../../../../04-PracticalSamples/petstory)
-- [Nastavení a Instalace](../../../../04-PracticalSamples/petstory)
+- [Nastavení a instalace](../../../../04-PracticalSamples/petstory)
 - [Použití](../../../../04-PracticalSamples/petstory)
 
-## Technologický Stack
+## Technologický stack
 
 - **Backend**: Spring Boot 3.5.3, Java 21
 - **Integrace AI**: OpenAI Java SDK s GitHub Models
 - **Zabezpečení**: Spring Security
 - **Frontend**: Šablony Thymeleaf s Bootstrap stylováním
 - **Nástroj pro sestavení**: Maven
-- **AI Modely**: GitHub Models
+- **AI modely**: GitHub Models
 
 ## Předpoklady
 
@@ -35,7 +35,7 @@ Webová aplikace Spring Boot, která generuje popisy a příběhy poháněné um
 - Maven 3.9+
 - GitHub Personal Access Token s oprávněním `models:read`
 
-## Nastavení a Instalace
+## Nastavení a instalace
 
 ### 1. Přejděte do adresáře aplikace petstory
 ```bash
@@ -66,10 +66,10 @@ mvn spring-boot:run
 
 ## Použití
 
-1. **Přístup k aplikaci**: Otevřete `http://localhost:8080`
-2. **Nahrání obrázku**: Klikněte na "Vybrat soubor" a zvolte obrázek mazlíčka
-3. **Analýza obrázku**: Klikněte na "Analyzovat obrázek" pro získání AI popisu
-4. **Generování příběhu**: Klikněte na "Vytvořit příběh" pro vytvoření příběhu
+1. **Přístup k aplikaci**: Přejděte na `http://localhost:8080`
+2. **Nahrání obrázku**: Klikněte na "Vybrat soubor" a vyberte obrázek domácího mazlíčka
+3. **Analýza obrázku**: Klikněte na "Analyzovat obrázek" pro získání popisu od AI
+4. **Generování příběhu**: Klikněte na "Generovat příběh" pro vytvoření příběhu
 
 **Prohlášení:**  
 Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

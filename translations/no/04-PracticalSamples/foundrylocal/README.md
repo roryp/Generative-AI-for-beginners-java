@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T19:48:10+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:39:30+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "no"
 }
 -->
 # Foundry Local Kommandolinjeapplikasjon
 
->**Merk**: Dette kapittelet inkluderer en [**Veiledning**](./TUTORIAL.md) som guider deg gjennom å kjøre de ferdige eksemplene.
+>**Merk**: Dette kapittelet inkluderer en [**Veiledning**](./TUTORIAL.md) som guider deg gjennom eksemplene.
 
 En enkel Spring Boot-kommandolinjeapplikasjon som demonstrerer hvordan man kobler til Foundry Local ved hjelp av OpenAI Java SDK.
 
@@ -36,7 +36,7 @@ En enkel Spring Boot-kommandolinjeapplikasjon som demonstrerer hvordan man koble
 
 ## Forutsetninger
 
-> **⚠️ Merk**: Denne applikasjonen **kjører ikke i den medfølgende devcontaineren** da den krever at Foundry Local er installert og kjører på verts-systemet.
+> **⚠️ Merk**: Denne applikasjonen **kjører ikke i den medfølgende devcontaineren** siden den krever at Foundry Local er installert og kjører på vertsdatamaskinen.
 
 ### Installere Foundry Local
 
@@ -47,8 +47,8 @@ Før du kjører denne applikasjonen, må du installere og starte Foundry Local. 
    - **Maskinvare**: 
      - Minimum: 8GB RAM, 3GB ledig diskplass
      - Anbefalt: 16GB RAM, 15GB ledig diskplass
-   - **Nettverk**: Internettforbindelse for første modellnedlasting (valgfritt for offline bruk)
-   - **Akselerasjon (valgfritt)**: NVIDIA GPU (2,000-serien eller nyere), AMD GPU (6,000-serien eller nyere), Qualcomm Snapdragon X Elite (8GB eller mer minne), eller Apple silicon
+   - **Nettverk**: Internettforbindelse for første nedlasting av modell (valgfritt for offline bruk)
+   - **Akselerasjon (valgfritt)**: NVIDIA GPU (2000-serien eller nyere), AMD GPU (6000-serien eller nyere), Qualcomm Snapdragon X Elite (8GB eller mer minne), eller Apple silicon
    - **Tillatelser**: Administrative rettigheter for å installere programvare på enheten din
 
 2. **Installer Foundry Local**:
@@ -72,7 +72,7 @@ Før du kjører denne applikasjonen, må du installere og starte Foundry Local. 
    foundry model run phi-3.5-mini
    ```
 
-   Modellen lastes ned (dette kan ta noen minutter, avhengig av internett-hastigheten din) og deretter kjøres. Foundry Local velger automatisk den beste modellvarianten for systemet ditt (CUDA for NVIDIA GPU-er, CPU-versjon ellers).
+   Modellen lastes ned (dette kan ta noen minutter, avhengig av internettforbindelsen din) og deretter kjøres. Foundry Local velger automatisk den beste modellvarianten for systemet ditt (CUDA for NVIDIA GPU-er, CPU-versjon ellers).
 
 4. **Test modellen** ved å stille et spørsmål i samme terminal:
 
@@ -94,7 +94,7 @@ foundry model list
 curl http://localhost:5273/v1/models
 ```
 
-Du kan også besøke `http://localhost:5273` i nettleseren din for å se Foundry Local-nettgrensesnittet.
+Du kan også besøke `http://localhost:5273` i nettleseren din for å se Foundry Local sitt webgrensesnitt.
 
 ## Konfigurasjon
 
@@ -103,7 +103,7 @@ Applikasjonen kan konfigureres gjennom `application.properties`:
 - `foundry.local.base-url` - Base-URL for Foundry Local (standard: http://localhost:5273)
 - `foundry.local.model` - AI-modellen som skal brukes (standard: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Merk**: Modellnavnet i konfigurasjonen bør samsvare med den spesifikke varianten som Foundry Local lastet ned for systemet ditt. Når du kjører `foundry model run phi-3.5-mini`, velger Foundry Local automatisk og laster ned den beste varianten (CUDA for NVIDIA GPU-er, CPU-versjon ellers). Bruk `foundry model list` for å se det nøyaktige modellnavnet som er tilgjengelig i din lokale instans.
+> **Merk**: Modellnavnet i konfigurasjonen må samsvare med den spesifikke varianten som Foundry Local lastet ned for systemet ditt. Når du kjører `foundry model run phi-3.5-mini`, velger og laster Foundry Local automatisk ned den beste varianten (CUDA for NVIDIA GPU-er, CPU-versjon ellers). Bruk `foundry model list` for å se det eksakte modellnavnet som er tilgjengelig i din lokale instans.
 
 ## Kom i Gang
 
@@ -127,7 +127,7 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 
 ### Avhengigheter
 
-Denne applikasjonen bruker OpenAI Java SDK for å kommunisere med Foundry Local. Den viktigste avhengigheten er:
+Denne applikasjonen bruker OpenAI Java SDK for å kommunisere med Foundry Local. Nøkkelavhengigheten er:
 
 ```xml
 <dependency>
@@ -137,14 +137,14 @@ Denne applikasjonen bruker OpenAI Java SDK for å kommunisere med Foundry Local.
 </dependency>
 ```
 
-Applikasjonen er forhåndskonfigurert til å koble til Foundry Local som kjører på standardporten.
+Applikasjonen er forhåndskonfigurert for å koble til Foundry Local som kjører på standardporten.
 
 ## Hva Applikasjonen Gjør
 
 Når du kjører applikasjonen:
 
 1. **Starter opp** som en kommandolinjeapplikasjon (ingen webserver)
-2. **Sender automatisk** en testmelding: "Hei! Kan du fortelle meg hva du er og hvilken modell du kjører?"
+2. **Sender automatisk** en testmelding: "Hello! Can you tell me what you are and what model you're running?"
 3. **Viser svaret** fra Foundry Local i konsollen
 4. **Avslutter ryddig** etter demonstrasjonen
 
@@ -165,7 +165,7 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 - **FoundryLocalService.java** - Tjeneste som bruker OpenAI Java SDK for å kommunisere med Foundry Local
 - Bruker **OpenAI Java SDK** for typesikre API-kall
 - Automatisk JSON-serialisering/deserialisering håndtert av SDK
-- Ren konfigurasjon ved bruk av Springs `@Value` og `@PostConstruct`-annotasjoner
+- Ryddig konfigurasjon ved bruk av Spring sine `@Value`- og `@PostConstruct`-annotasjoner
 
 ## Kodehøydepunkter
 
@@ -185,7 +185,7 @@ public void init() {
 
 ### Chat Completion API
 
-Å lage forespørsler for chat-komplettering er enkelt og typesikkert:
+Å lage forespørsler for chat fullføring er enkelt og typesikkert:
 
 ```java
 ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
@@ -202,14 +202,14 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 
 Hvis du ser tilkoblingsfeil:
 1. Verifiser at Foundry Local kjører på `http://localhost:5273`
-2. Sjekk at en Phi-3.5-mini modellvariant er tilgjengelig med `foundry model list`
-3. Sørg for at modellnavnet i `application.properties` samsvarer med det nøyaktige modellnavnet som vises i listen
+2. Sjekk at en Phi-3.5-mini-modellvariant er tilgjengelig med `foundry model list`
+3. Sørg for at modellnavnet i `application.properties` samsvarer med det eksakte modellnavnet som vises i listen
 4. Sørg for at ingen brannmur blokkerer tilkoblingen
 
 Vanlige problemer:
 - **Modell ikke funnet**: Kjør `foundry model run phi-3.5-mini` for å laste ned og starte modellen
-- **Tjenesten kjører ikke**: Foundry Local-tjenesten kan ha stoppet; start den på nytt med kommandoen for å kjøre modellen
+- **Tjeneste ikke kjører**: Foundry Local-tjenesten kan ha stoppet; start den på nytt med kommandoen for å kjøre modellen
 - **Feil modellnavn**: Bruk `foundry model list` for å se tilgjengelige modeller og oppdater konfigurasjonen din deretter
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

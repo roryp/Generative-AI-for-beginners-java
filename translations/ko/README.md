@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
-  "translation_date": "2025-07-25T07:40:19+00:00",
+  "original_hash": "a49b35508745c032a0033d914df7901b",
+  "translation_date": "2025-07-25T09:05:15+00:00",
   "source_file": "README.md",
   "language_code": "ko"
 }
@@ -12,13 +12,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![초보자를 위한 생성형 AI - Java 에디션](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.ko.png)
 
-> **NOTE: 빠른 시작**: 이 과정은 온라인에서만 진행할 수 있으며, 로컬 설정이 필요하지 않습니다!
-1. 이 저장소를 본인의 GitHub 계정으로 포크하세요.
+**소요 시간**: 이 워크숍은 로컬 설정 없이 온라인에서 완료할 수 있습니다. 샘플을 실행하려면 환경 설정에 2분이 소요되며, 탐색 깊이에 따라 샘플 탐색에 1~3시간이 걸릴 수 있습니다.
+
+> **빠른 시작**
+
+1. 이 저장소를 GitHub 계정으로 포크하세요.
 2. **Code** → **Codespaces** 탭 → **...** → **New with options...**를 클릭하세요.
 3. 기본값을 사용하세요 – 이 과정에 맞게 생성된 개발 컨테이너가 선택됩니다.
 4. **Create codespace**를 클릭하세요.
 5. 환경이 준비될 때까지 약 2분 정도 기다리세요.
-6. [GitHub Models Token 생성하기](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)로 바로 이동하세요.
+6. 바로 [GitHub Models Token 생성하기](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)로 이동하세요.
 
 ## 다국어 지원
 
@@ -28,12 +31,10 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 과정 구성 및 학습 경로
 
-**소요 시간**: 환경 설정은 2분이 소요되며, 샘플 학습은 탐구 깊이에 따라 1~3시간이 걸립니다. 전체 워크숍은 로컬 설정 없이 온라인에서 완료할 수 있습니다.
-
 ### **1장: 생성형 AI 소개**
 - **핵심 개념**: 대규모 언어 모델, 토큰, 임베딩, AI 기능 이해
 - **Java AI 생태계**: Spring AI 및 OpenAI SDK 개요
-- **모델 컨텍스트 프로토콜**: MCP와 AI 에이전트 간의 통신 역할 소개
+- **모델 컨텍스트 프로토콜**: MCP와 AI 에이전트 간 통신에서의 역할 소개
 - **실용적인 응용**: 챗봇 및 콘텐츠 생성과 같은 실제 사례
 - **[→ 1장 시작하기](./01-IntroToGenAI/README.md)**
 
@@ -59,15 +60,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **5장: 책임 있는 AI 개발**
 - **GitHub Models 안전성**: 내장된 콘텐츠 필터링 및 안전 메커니즘 테스트
-- **책임 있는 AI 데모**: AI 안전 필터가 실제로 작동하는 방식에 대한 실습 예제
+- **책임 있는 AI 데모**: AI 안전 필터 작동 방식을 보여주는 실습 예제
 - **모범 사례**: 윤리적인 AI 개발 및 배포를 위한 필수 지침
 - **[→ 5장 시작하기](./05-ResponsibleGenAI/README.md)**
 
 ## 추가 자료
 
 - [초보자를 위한 AI 에이전트](https://github.com/microsoft/ai-agents-for-beginners)
-- [초보자를 위한 생성형 AI (.NET 사용)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [초보자를 위한 생성형 AI (JavaScript 사용)](https://github.com/microsoft/generative-ai-with-javascript)
+- [초보자를 위한 .NET 기반 생성형 AI](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [초보자를 위한 JavaScript 기반 생성형 AI](https://github.com/microsoft/generative-ai-with-javascript)
 - [초보자를 위한 생성형 AI](https://github.com/microsoft/generative-ai-for-beginners)
 - [초보자를 위한 머신러닝](https://aka.ms/ml-beginners)
 - [초보자를 위한 데이터 과학](https://aka.ms/datascience-beginners)
@@ -82,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [Azure AI 서비스를 활용한 RAG 챗 앱](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어 버전을 권위 있는 출처로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임을 지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있으나, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어 버전을 권위 있는 자료로 간주해야 합니다. 중요한 정보에 대해서는 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임을 지지 않습니다.

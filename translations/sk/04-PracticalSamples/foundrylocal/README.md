@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T21:17:45+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T10:03:38+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "sk"
 }
 -->
-# Foundry Local Command-Line Aplikácia
+# Foundry Local Command-Line Application
 
->**Poznámka**: Táto kapitola obsahuje [**tutoriál**](./TUTORIAL.md), ktorý vás prevedie spustením hotových ukážok.
+>**Poznámka**: Táto kapitola obsahuje [**Návod**](./TUTORIAL.md), ktorý vás prevedie ukážkami.
 
-Jednoduchá command-line aplikácia postavená na Spring Boot, ktorá demonštruje, ako sa pripojiť k Foundry Local pomocou OpenAI Java SDK.
+Jednoduchá príkazová aplikácia Spring Boot, ktorá demonštruje, ako sa pripojiť k Foundry Local pomocou OpenAI Java SDK.
 
 ## Čo sa naučíte
 
-- Ako integrovať Foundry Local so Spring Boot aplikáciami pomocou OpenAI Java SDK
+- Ako integrovať Foundry Local do aplikácií Spring Boot pomocou OpenAI Java SDK
 - Najlepšie postupy pre lokálny vývoj a testovanie AI
 
 ## Obsah
@@ -29,14 +29,14 @@ Jednoduchá command-line aplikácia postavená na Spring Boot, ktorá demonštru
 - [Čo aplikácia robí](../../../../04-PracticalSamples/foundrylocal)
 - [Ukážkový výstup](../../../../04-PracticalSamples/foundrylocal)
 - [Architektúra](../../../../04-PracticalSamples/foundrylocal)
-- [Kľúčové časti kódu](../../../../04-PracticalSamples/foundrylocal)
+- [Dôležité časti kódu](../../../../04-PracticalSamples/foundrylocal)
   - [Integrácia OpenAI Java SDK](../../../../04-PracticalSamples/foundrylocal)
-  - [Chat Completion API](../../../../04-PracticalSamples/foundrylocal)
+  - [API na dokončenie chatu](../../../../04-PracticalSamples/foundrylocal)
 - [Riešenie problémov](../../../../04-PracticalSamples/foundrylocal)
 
 ## Predpoklady
 
-> **⚠️ Poznámka**: Táto aplikácia **nefunguje v dodanom devcontaineri**, pretože vyžaduje, aby Foundry Local bolo nainštalované a spustené na hostiteľskom systéme.
+> **⚠️ Poznámka**: Táto aplikácia **nefunguje v dodávanom devcontaineri**, pretože vyžaduje, aby bol Foundry Local nainštalovaný a spustený na hostiteľskom systéme.
 
 ### Inštalácia Foundry Local
 
@@ -48,7 +48,7 @@ Pred spustením tejto aplikácie je potrebné nainštalovať a spustiť Foundry 
      - Minimálne: 8GB RAM, 3GB voľného miesta na disku
      - Odporúčané: 16GB RAM, 15GB voľného miesta na disku
    - **Sieť**: Internetové pripojenie na počiatočné stiahnutie modelu (voliteľné pre offline použitie)
-   - **Akcelerácia (voliteľné)**: NVIDIA GPU (séria 2000 alebo novšia), AMD GPU (séria 6000 alebo novšia), Qualcomm Snapdragon X Elite (8GB alebo viac pamäte) alebo Apple silicon
+   - **Akcelerácia (voliteľná)**: NVIDIA GPU (séria 2000 alebo novšia), AMD GPU (séria 6000 alebo novšia), Qualcomm Snapdragon X Elite (8GB alebo viac pamäte) alebo Apple silicon
    - **Oprávnenia**: Administrátorské práva na inštaláciu softvéru na vašom zariadení
 
 2. **Nainštalujte Foundry Local**:
@@ -64,7 +64,7 @@ Pred spustením tejto aplikácie je potrebné nainštalovať a spustiť Foundry 
    brew install foundrylocal
    ```
    
-   Alternatívne môžete stiahnuť inštalátor z [Foundry Local GitHub repozitára](https://github.com/microsoft/Foundry-Local).
+   Alternatívne si môžete stiahnuť inštalátor z [Foundry Local GitHub repository](https://github.com/microsoft/Foundry-Local).
 
 3. **Spustite svoj prvý model**:
 
@@ -72,7 +72,7 @@ Pred spustením tejto aplikácie je potrebné nainštalovať a spustiť Foundry 
    foundry model run phi-3.5-mini
    ```
 
-   Model sa stiahne (čo môže trvať niekoľko minút v závislosti od rýchlosti internetu) a následne sa spustí. Foundry Local automaticky vyberie najvhodnejší variant modelu pre váš systém (CUDA pre NVIDIA GPU, inak CPU verzia).
+   Model sa stiahne (čo môže trvať niekoľko minút v závislosti od rýchlosti internetu) a potom sa spustí. Foundry Local automaticky vyberie najlepšiu variantu modelu pre váš systém (CUDA pre NVIDIA GPU, verzia pre CPU inak).
 
 4. **Otestujte model** položením otázky v rovnakom termináli:
 
@@ -84,7 +84,7 @@ Pred spustením tejto aplikácie je potrebné nainštalovať a spustiť Foundry 
 
 ### Overenie
 
-Môžete overiť, či všetko funguje správne, pomocou týchto príkazov:
+Môžete overiť, či všetko funguje správne pomocou týchto príkazov:
 
 ```bash
 # List all available models
@@ -98,12 +98,12 @@ Môžete tiež navštíviť `http://localhost:5273` vo vašom prehliadači a zob
 
 ## Konfigurácia
 
-Aplikácia sa konfiguruje prostredníctvom `application.properties`:
+Aplikáciu je možné konfigurovať prostredníctvom `application.properties`:
 
-- `foundry.local.base-url` - Základná URL adresa pre Foundry Local (predvolené: http://localhost:5273)
+- `foundry.local.base-url` - Základná URL pre Foundry Local (predvolené: http://localhost:5273)
 - `foundry.local.model` - AI model, ktorý sa má použiť (predvolené: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Poznámka**: Názov modelu v konfigurácii by mal zodpovedať konkrétnemu variantu, ktorý Foundry Local stiahol pre váš systém. Keď spustíte `foundry model run phi-3.5-mini`, Foundry Local automaticky vyberie a stiahne najlepší variant (CUDA pre NVIDIA GPU, inak CPU verzia). Použite `foundry model list` na zobrazenie presného názvu modelu dostupného vo vašej lokálnej inštancii.
+> **Poznámka**: Názov modelu v konfigurácii by mal zodpovedať konkrétnej variante, ktorú Foundry Local stiahol pre váš systém. Keď spustíte `foundry model run phi-3.5-mini`, Foundry Local automaticky vyberie a stiahne najlepšiu variantu (CUDA pre NVIDIA GPU, verzia pre CPU inak). Použite `foundry model list`, aby ste videli presný názov modelu dostupného vo vašej lokálnej inštancii.
 
 ## Rýchly štart
 
@@ -143,8 +143,8 @@ Aplikácia je predkonfigurovaná na pripojenie k Foundry Local bežiacemu na pre
 
 Keď spustíte aplikáciu:
 
-1. **Spustí sa** ako command-line aplikácia (bez webového servera)
-2. **Automaticky odošle** testovaciu správu: "Hello! Can you tell me what you are and what model you're running?"
+1. **Spustí sa** ako príkazová aplikácia (bez webového servera)
+2. **Automaticky odošle** testovaciu správu: "Ahoj! Môžeš mi povedať, čo si a aký model používaš?"
 3. **Zobrazí odpoveď** od Foundry Local v konzole
 4. **Čisto ukončí** po ukážke
 
@@ -161,13 +161,13 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 ## Architektúra
 
-- **Application.java** - Hlavná Spring Boot aplikácia s CommandLineRunner
+- **Application.java** - Hlavná aplikácia Spring Boot s CommandLineRunner
 - **FoundryLocalService.java** - Služba, ktorá používa OpenAI Java SDK na komunikáciu s Foundry Local
 - Používa **OpenAI Java SDK** na typovo bezpečné API volania
-- Automatická JSON serializácia/deserializácia spracovaná SDK
+- Automatická serializácia/deserializácia JSON spracovaná SDK
 - Čistá konfigurácia pomocou Spring anotácií `@Value` a `@PostConstruct`
 
-## Kľúčové časti kódu
+## Dôležité časti kódu
 
 ### Integrácia OpenAI Java SDK
 
@@ -183,7 +183,7 @@ public void init() {
 }
 ```
 
-### Chat Completion API
+### API na dokončenie chatu
 
 Vytváranie požiadaviek na dokončenie chatu je jednoduché a typovo bezpečné:
 
@@ -202,14 +202,14 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 
 Ak sa zobrazia chyby pripojenia:
 1. Overte, že Foundry Local beží na `http://localhost:5273`
-2. Skontrolujte, či je dostupný variant modelu Phi-3.5-mini pomocou `foundry model list`
+2. Skontrolujte, či je dostupná varianta modelu Phi-3.5-mini pomocou `foundry model list`
 3. Uistite sa, že názov modelu v `application.properties` zodpovedá presnému názvu modelu uvedenému v zozname
-4. Skontrolujte, či firewall neblokuje pripojenie
+4. Uistite sa, že žiadny firewall neblokuje pripojenie
 
 Bežné problémy:
-- **Model nebol nájdený**: Spustite `foundry model run phi-3.5-mini` na stiahnutie a spustenie modelu
-- **Služba nebeží**: Služba Foundry Local mohla prestať fungovať; reštartujte ju príkazom na spustenie modelu
-- **Nesprávny názov modelu**: Použite `foundry model list` na zobrazenie dostupných modelov a aktualizujte svoju konfiguráciu podľa toho
+- **Model nebol nájdený**: Spustite `foundry model run phi-3.5-mini`, aby ste stiahli a spustili model
+- **Služba nebeží**: Služba Foundry Local mohla byť zastavená; reštartujte ju príkazom na spustenie modelu
+- **Nesprávny názov modelu**: Použite `foundry model list`, aby ste videli dostupné modely a aktualizovali svoju konfiguráciu podľa potreby
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

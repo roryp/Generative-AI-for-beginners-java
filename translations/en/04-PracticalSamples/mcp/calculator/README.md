@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7bf9a4a832911269a8bd0decb97ff36c",
-  "translation_date": "2025-07-21T21:26:17+00:00",
+  "original_hash": "5bd7a347d6ed1d706443f9129dd29dd9",
+  "translation_date": "2025-07-25T08:39:12+00:00",
   "source_file": "04-PracticalSamples/mcp/calculator/README.md",
   "language_code": "en"
 }
 -->
 # Basic Calculator MCP Service
 
->**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that walks you through running the completed examples.
+>**Note**: This chapter includes a [**Tutorial**](./TUTORIAL.md) that walks you through the examples.
 
-Welcome to your first hands-on experience with the **Model Context Protocol (MCP)**! In the previous chapters, you learned the basics of generative AI and set up your development environment. Now it's time to create something practical.
+Welcome to your first hands-on experience with the **Model Context Protocol (MCP)**! In earlier chapters, you learned the basics of generative AI and set up your development environment. Now, it's time to create something practical.
 
-This calculator service demonstrates how AI models can securely interact with external tools using MCP. Instead of relying on the AI model's sometimes unreliable math skills, we'll show you how to build a reliable system where AI can call specialized services for accurate calculations.
+This calculator service demonstrates how AI models can securely interact with external tools using MCP. Instead of relying on the AI model's sometimes unreliable math skills, we'll show you how to build a reliable system where AI can call specialized services for precise calculations.
 
 ## Table of Contents
 
@@ -36,7 +36,7 @@ By working through this example, you'll gain an understanding of:
 - How AI models decide when and how to use external tools
 - Best practices for building AI applications with tool integrations
 
-This is perfect for beginners who are learning MCP concepts and are ready to build their first AI tool integration!
+This is ideal for beginners who want to learn MCP concepts and are ready to build their first AI tool integration!
 
 ## Prerequisites
 
@@ -46,9 +46,9 @@ This is perfect for beginners who are learning MCP concepts and are ready to bui
 
 ## Key Concepts
 
-**Model Context Protocol (MCP)** is a standardized way for AI applications to securely connect to external tools. Think of it as a "bridge" that allows AI models to use external services like our calculator. Instead of the AI model attempting to perform calculations itself (which can be unreliable), it can call our calculator service to get accurate results. MCP ensures this communication happens safely and consistently.
+**Model Context Protocol (MCP)** is a standardized method for AI applications to securely connect to external tools. Think of it as a "bridge" that allows AI models to use external services like our calculator. Instead of the AI model attempting to perform calculations itself (which can be unreliable), it can call our calculator service for accurate results. MCP ensures this communication happens safely and consistently.
 
-**Server-Sent Events (SSE)** enables real-time communication between the server and clients. Unlike traditional HTTP requests where you send a request and wait for a response, SSE allows the server to continuously send updates to the client. This is ideal for AI applications where responses might be streamed or take time to process.
+**Server-Sent Events (SSE)** enable real-time communication between the server and clients. Unlike traditional HTTP requests where you send a request and wait for a response, SSE allows the server to continuously send updates to the client. This is ideal for AI applications where responses might be streamed or take time to process.
 
 **AI Tools & Function Calling** allow AI models to automatically select and use external functions (like calculator operations) based on user requests. For example, if you ask "What's 15 + 27?", the AI model understands you want addition, automatically calls the `add` tool with the correct parameters (15, 27), and returns the result in natural language. The AI acts as an intelligent coordinator that knows when and how to use each tool.
 
@@ -65,7 +65,7 @@ mvn clean install -DskipTests
 java -jar target/calculator-server-0.0.1-SNAPSHOT.jar
 ```
 
-### 2. Test with Clients
+### 3. Test with Clients
 - **SDKClient**: Direct MCP protocol interaction
 - **LangChain4jClient**: AI-powered natural language interaction (requires GitHub token)
 

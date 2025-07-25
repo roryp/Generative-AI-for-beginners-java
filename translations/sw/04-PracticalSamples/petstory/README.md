@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T21:36:20+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:57:46+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "sw"
 }
 -->
-# Programu ya Hadithi za Wanyama Kipenzi
+# Pet Story App
 
->**Note**: Sura hii inajumuisha [**Mafunzo**](./TUTORIAL.md) yanayokuongoza jinsi ya kuendesha mifano iliyokamilika.
+>**Note**: Sura hii inajumuisha [**Mafunzo**](./TUTORIAL.md) yanayokuongoza kupitia mifano.
 
-Programu ya wavuti ya Spring Boot inayotengeneza maelezo na hadithi zinazoendeshwa na AI kwa kutumia picha za wanyama kipenzi zilizopakiwa, kwa kutumia GitHub Models.
+Programu ya wavuti ya Spring Boot inayotengeneza maelezo na hadithi zinazoendeshwa na AI kwa picha za wanyama waliopakiwa kwa kutumia GitHub Models.
 
 ## Jedwali la Maudhui
 
@@ -25,8 +25,8 @@ Programu ya wavuti ya Spring Boot inayotengeneza maelezo na hadithi zinazoendesh
 - **Backend**: Spring Boot 3.5.3, Java 21
 - **Ujumuishaji wa AI**: OpenAI Java SDK na GitHub Models
 - **Usalama**: Spring Security
-- **Frontend**: Violezo vya Thymeleaf na muundo wa Bootstrap
-- **Zana ya Kujenga**: Maven
+- **Frontend**: Violezo vya Thymeleaf na mitindo ya Bootstrap
+- **Zana ya Ujenzi**: Maven
 - **Mifano ya AI**: GitHub Models
 
 ## Mahitaji ya Awali
@@ -66,10 +66,10 @@ mvn spring-boot:run
 
 ## Matumizi
 
-1. **Fikia Programu**: Tembelea `http://localhost:8080`
-2. **Pakia Picha**: Bonyeza "Choose File" na uchague picha ya mnyama kipenzi
+1. **Fikia Programu**: Nenda kwenye `http://localhost:8080`
+2. **Pakia Picha**: Bonyeza "Choose File" na uchague picha ya mnyama
 3. **Changanua Picha**: Bonyeza "Analyze Image" ili kupata maelezo ya AI
 4. **Tengeneza Hadithi**: Bonyeza "Generate Story" ili kuunda hadithi
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutokuelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

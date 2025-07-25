@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T20:07:35+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:55:33+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "tl"
 }
 -->
 # Pet Story App
 
->**Note**: Ang kabanatang ito ay may kasamang [**Tutorial**](./TUTORIAL.md) na magtuturo sa iyo kung paano patakbuhin ang mga natapos na halimbawa.
+>**Note**: Ang kabanatang ito ay may kasamang [**Tutorial**](./TUTORIAL.md) na magtuturo sa iyo gamit ang mga halimbawa.
 
 Isang Spring Boot web application na gumagawa ng mga AI-powered na deskripsyon at kwento para sa mga in-upload na larawan ng alagang hayop gamit ang GitHub Models.
 

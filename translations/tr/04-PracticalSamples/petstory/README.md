@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T18:32:10+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T09:29:55+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "tr"
 }
 -->
-# Evcil Hayvan Hikaye Uygulaması
+# Pet Story Uygulaması
 
->**Not**: Bu bölüm, bitmiş örnekleri çalıştırmanız için size rehberlik eden bir [**Eğitim**](./TUTORIAL.md) içermektedir.
+>**Not**: Bu bölüm, örnekler üzerinden sizi yönlendiren bir [**Eğitim**](./TUTORIAL.md) içerir.
 
-Yüklenen evcil hayvan resimleri için GitHub Modelleri kullanarak yapay zeka destekli açıklamalar ve hikayeler üreten bir Spring Boot web uygulaması.
+GitHub Modelleri kullanarak yüklenen evcil hayvan resimleri için yapay zeka destekli açıklamalar ve hikayeler oluşturan bir Spring Boot web uygulaması.
 
 ## İçindekiler
 
@@ -25,7 +25,7 @@ Yüklenen evcil hayvan resimleri için GitHub Modelleri kullanarak yapay zeka de
 - **Backend**: Spring Boot 3.5.3, Java 21
 - **Yapay Zeka Entegrasyonu**: OpenAI Java SDK ile GitHub Modelleri
 - **Güvenlik**: Spring Security
-- **Frontend**: Bootstrap tasarımıyla Thymeleaf şablonları
+- **Frontend**: Thymeleaf şablonları ve Bootstrap tasarımı
 - **Yapı Aracı**: Maven
 - **Yapay Zeka Modelleri**: GitHub Modelleri
 
@@ -33,7 +33,7 @@ Yüklenen evcil hayvan resimleri için GitHub Modelleri kullanarak yapay zeka de
 
 - Java 21 veya üstü
 - Maven 3.9+
-- `models:read` yetkisine sahip bir GitHub Kişisel Erişim Jetonu
+- `models:read` yetkisine sahip GitHub Kişisel Erişim Token'ı
 
 ## Kurulum ve Yükleme
 
@@ -42,7 +42,7 @@ Yüklenen evcil hayvan resimleri için GitHub Modelleri kullanarak yapay zeka de
 cd Generative-AI-for-beginners-java/04-PracticalSamples/petstory
 ```
 
-### 2. Ortam Değişkeni Ayarlayın
+### 2. Ortam Değişkenini Ayarlayın
    ```bash
    # Windows (Command Prompt)
    set GITHUB_TOKEN=your_github_token_here
@@ -67,9 +67,9 @@ mvn spring-boot:run
 ## Kullanım
 
 1. **Uygulamaya Erişin**: `http://localhost:8080` adresine gidin
-2. **Resim Yükleyin**: "Dosya Seç"e tıklayın ve bir evcil hayvan resmi seçin
-3. **Resmi Analiz Edin**: Yapay zeka açıklaması almak için "Resmi Analiz Et"e tıklayın
-4. **Hikaye Oluşturun**: Hikaye oluşturmak için "Hikaye Oluştur" butonuna tıklayın
+2. **Resim Yükleyin**: "Choose File" butonuna tıklayın ve bir evcil hayvan resmi seçin
+3. **Resmi Analiz Edin**: Yapay zeka açıklaması almak için "Analyze Image" butonuna tıklayın
+4. **Hikaye Oluşturun**: Hikaye oluşturmak için "Generate Story" butonuna tıklayın
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

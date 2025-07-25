@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69dffd84127360d3f9446b89de471abe",
-  "translation_date": "2025-07-21T16:51:14+00:00",
+  "original_hash": "c1ac1fbe111c9882e869f1453b915a17",
+  "translation_date": "2025-07-25T08:56:41+00:00",
   "source_file": "04-PracticalSamples/petstory/README.md",
   "language_code": "zh"
 }
 -->
 # 宠物故事应用
 
->**注意**: 本章包含一个[**教程**](./TUTORIAL.md)，指导您运行完成的示例。
+>**注意**: 本章包含一个[**教程**](./TUTORIAL.md)，指导您完成示例操作。
 
-一个基于 Spring Boot 的网络应用程序，使用 GitHub 模型生成上传宠物图片的 AI 描述和故事。
+一个基于 Spring Boot 的 Web 应用程序，使用 GitHub 模型为上传的宠物图片生成 AI 驱动的描述和故事。
 
 ## 目录
 
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **后端**: Spring Boot 3.5.3, Java 21
 - **AI 集成**: OpenAI Java SDK 与 GitHub 模型
 - **安全性**: Spring Security
-- **前端**: 使用 Thymeleaf 模板和 Bootstrap 样式
+- **前端**: Thymeleaf 模板结合 Bootstrap 样式
 - **构建工具**: Maven
 - **AI 模型**: GitHub 模型
 
@@ -66,10 +66,10 @@ mvn spring-boot:run
 
 ## 使用方法
 
-1. **访问应用程序**: 打开浏览器，进入 `http://localhost:8080`
+1. **访问应用程序**: 打开浏览器，访问 `http://localhost:8080`
 2. **上传图片**: 点击“选择文件”，选择一张宠物图片
 3. **分析图片**: 点击“分析图片”以获取 AI 描述
 4. **生成故事**: 点击“生成故事”以创建故事
 
 **免责声明**：  
-本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。
+本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保准确性，但请注意，自动翻译可能包含错误或不准确之处。应以原始语言的文档作为权威来源。对于关键信息，建议使用专业人工翻译。对于因使用本翻译而引起的任何误解或误读，我们概不负责。

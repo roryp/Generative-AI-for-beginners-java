@@ -1,54 +1,54 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a66dad62cdb2e141f05086feaf1a4a39",
-  "translation_date": "2025-07-21T21:16:57+00:00",
+  "original_hash": "d064108b2142d32246ccbd8a42e76b4d",
+  "translation_date": "2025-07-25T09:59:09+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "hu"
 }
 -->
-# Foundry Local parancssoros alkalmazás
+# Foundry Helyi Parancssori Alkalmazás
 
->**Megjegyzés**: Ez a fejezet tartalmaz egy [**Útmutatót**](./TUTORIAL.md), amely végigvezet a kész minták futtatásán.
+>**Megjegyzés**: Ez a fejezet tartalmaz egy [**Útmutatót**](./TUTORIAL.md), amely végigvezet a mintákon.
 
-Egy egyszerű Spring Boot parancssoros alkalmazás, amely bemutatja, hogyan lehet csatlakozni a Foundry Localhoz az OpenAI Java SDK segítségével.
+Egy egyszerű Spring Boot parancssori alkalmazás, amely bemutatja, hogyan lehet csatlakozni a Foundry Localhoz az OpenAI Java SDK használatával.
 
-## Amit megtanulsz
+## Amit Megtanulsz
 
-- Hogyan integrálhatod a Foundry Local-t Spring Boot alkalmazásokkal az OpenAI Java SDK használatával
+- Hogyan integrálhatod a Foundry Local-t Spring Boot alkalmazásokkal az OpenAI Java SDK segítségével
 - Legjobb gyakorlatok helyi AI fejlesztéshez és teszteléshez
 
 ## Tartalomjegyzék
 
-- [Amit megtanulsz](../../../../04-PracticalSamples/foundrylocal)
+- [Amit Megtanulsz](../../../../04-PracticalSamples/foundrylocal)
 - [Előfeltételek](../../../../04-PracticalSamples/foundrylocal)
   - [Foundry Local telepítése](../../../../04-PracticalSamples/foundrylocal)
   - [Ellenőrzés](../../../../04-PracticalSamples/foundrylocal)
 - [Konfiguráció](../../../../04-PracticalSamples/foundrylocal)
-- [Gyors kezdés](../../../../04-PracticalSamples/foundrylocal)
-- [Mit csinál az alkalmazás](../../../../04-PracticalSamples/foundrylocal)
-- [Minta kimenet](../../../../04-PracticalSamples/foundrylocal)
+- [Gyors Kezdés](../../../../04-PracticalSamples/foundrylocal)
+- [Mit Csinál az Alkalmazás](../../../../04-PracticalSamples/foundrylocal)
+- [Minta Kimenet](../../../../04-PracticalSamples/foundrylocal)
 - [Architektúra](../../../../04-PracticalSamples/foundrylocal)
 - [Kódrészletek](../../../../04-PracticalSamples/foundrylocal)
-  - [OpenAI Java SDK integráció](../../../../04-PracticalSamples/foundrylocal)
+  - [OpenAI Java SDK Integráció](../../../../04-PracticalSamples/foundrylocal)
   - [Chat Completion API](../../../../04-PracticalSamples/foundrylocal)
 - [Hibaelhárítás](../../../../04-PracticalSamples/foundrylocal)
 
 ## Előfeltételek
 
-> **⚠️ Megjegyzés**: Ez az alkalmazás **nem fut a mellékelt devcontainerben**, mivel a Foundry Local telepítését és futtatását igényli a gazdagépen.
+> **⚠️ Megjegyzés**: Ez az alkalmazás **nem fut a mellékelt devcontainerben**, mivel szükséges, hogy a Foundry Local telepítve és futtatva legyen a gazdagépen.
 
 ### Foundry Local telepítése
 
 Az alkalmazás futtatása előtt telepítened és el kell indítanod a Foundry Local-t. Kövesd az alábbi lépéseket:
 
 1. **Győződj meg arról, hogy a rendszered megfelel a követelményeknek**:
-   - **Operációs rendszer**: Windows 10 (x64), Windows 11 (x64/ARM), Windows Server 2025 vagy macOS
+   - **Operációs Rendszer**: Windows 10 (x64), Windows 11 (x64/ARM), Windows Server 2025 vagy macOS
    - **Hardver**: 
      - Minimum: 8GB RAM, 3GB szabad lemezterület
      - Ajánlott: 16GB RAM, 15GB szabad lemezterület
    - **Hálózat**: Internetkapcsolat a kezdeti modell letöltéséhez (offline használathoz opcionális)
-   - **Gyorsítás (opcionális)**: NVIDIA GPU (2,000 sorozat vagy újabb), AMD GPU (6,000 sorozat vagy újabb), Qualcomm Snapdragon X Elite (8GB vagy több memória), vagy Apple silicon
+   - **Gyorsítás (opcionális)**: NVIDIA GPU (2000-es sorozat vagy újabb), AMD GPU (6000-es sorozat vagy újabb), Qualcomm Snapdragon X Elite (8GB vagy több memória), vagy Apple silicon
    - **Jogosultságok**: Adminisztrátori jogosultságok a szoftver telepítéséhez az eszközön
 
 2. **Telepítsd a Foundry Local-t**:
@@ -72,7 +72,7 @@ Az alkalmazás futtatása előtt telepítened és el kell indítanod a Foundry L
    foundry model run phi-3.5-mini
    ```
 
-   A modell letöltése (ami néhány percet vehet igénybe az internetsebességtől függően) után elindul. A Foundry Local automatikusan kiválasztja a rendszeredhez legjobban illeszkedő modellváltozatot (CUDA NVIDIA GPU-khoz, CPU verzió más esetekben).
+   A modell letöltése (ami néhány percet vehet igénybe az internetsebességtől függően) után elindul. A Foundry Local automatikusan kiválasztja a rendszeredhez legjobban illeszkedő modellváltozatot (CUDA NVIDIA GPU-khoz, CPU verzió egyéb esetekben).
 
 4. **Teszteld a modellt** úgy, hogy kérdést teszel fel ugyanabban a terminálban:
 
@@ -103,16 +103,16 @@ Az alkalmazás az `application.properties` fájlon keresztül konfigurálható:
 - `foundry.local.base-url` - A Foundry Local alap URL-je (alapértelmezett: http://localhost:5273)
 - `foundry.local.model` - Használandó AI modell (alapértelmezett: Phi-3.5-mini-instruct-cuda-gpu)
 
-> **Megjegyzés**: A konfigurációban megadott modellnévnek meg kell egyeznie azzal a konkrét változattal, amelyet a Foundry Local letöltött a rendszeredhez. Amikor futtatod a `foundry model run phi-3.5-mini` parancsot, a Foundry Local automatikusan kiválasztja és letölti a legjobb változatot (CUDA NVIDIA GPU-khoz, CPU verzió más esetekben). Használd a `foundry model list` parancsot, hogy lásd a pontos modellnevet, amely elérhető a helyi példányodban.
+> **Megjegyzés**: A konfigurációban megadott modellnévnek meg kell egyeznie azzal a konkrét változattal, amelyet a Foundry Local letöltött a rendszeredhez. Amikor futtatod a `foundry model run phi-3.5-mini` parancsot, a Foundry Local automatikusan kiválasztja és letölti a legjobb változatot (CUDA NVIDIA GPU-khoz, CPU verzió egyéb esetekben). Használd a `foundry model list` parancsot, hogy lásd a pontos modellnevet, amely elérhető a helyi példányban.
 
-## Gyors kezdés
+## Gyors Kezdés
 
 ### 1. Navigálj a Foundry Local alkalmazás könyvtárába
 ```bash
 cd Generative-AI-for-beginners-java/04-PracticalSamples/foundrylocal
 ```
 
-### 2. Futtasd az alkalmazást
+### 2. Futtasd az Alkalmazást
 
 ```bash
 mvn spring-boot:run
@@ -139,16 +139,16 @@ Ez az alkalmazás az OpenAI Java SDK-t használja a Foundry Local-lal való komm
 
 Az alkalmazás előre konfigurálva van, hogy csatlakozzon a Foundry Local-hoz az alapértelmezett porton.
 
-## Mit csinál az alkalmazás
+## Mit Csinál az Alkalmazás
 
 Amikor futtatod az alkalmazást:
 
-1. **Elindul** parancssoros alkalmazásként (webszerver nélkül)
+1. **Elindul** parancssori alkalmazásként (webszerver nélkül)
 2. **Automatikusan küld** egy tesztüzenetet: "Hello! Meg tudnád mondani, hogy mi vagy és milyen modellt futtatsz?"
 3. **Megjeleníti a választ** a Foundry Local-tól a konzolon
-4. **Tisztán kilép** a demó után
+4. **Tisztán kilép** a bemutató után
 
-## Minta kimenet
+## Minta Kimenet
 
 ```
 === Foundry Local Demo ===
@@ -169,7 +169,7 @@ Hello! I'm Phi, an AI language model created by Microsoft. I don't have a physic
 
 ## Kódrészletek
 
-### OpenAI Java SDK integráció
+### OpenAI Java SDK Integráció
 
 Az alkalmazás az OpenAI Java SDK-t használja egy kliens létrehozásához, amely a Foundry Local-hoz van konfigurálva:
 
@@ -200,10 +200,10 @@ ChatCompletion chatCompletion = openAIClient.chat().completions().create(params)
 
 ## Hibaelhárítás
 
-Ha kapcsolat hibákat tapasztalsz:
+Ha csatlakozási hibákat tapasztalsz:
 1. Ellenőrizd, hogy a Foundry Local fut-e a `http://localhost:5273` címen
-2. Ellenőrizd, hogy elérhető-e egy Phi-3.5-mini modellváltozat a `foundry model list` parancs segítségével
-3. Győződj meg arról, hogy az `application.properties` fájlban megadott modellnév pontosan megegyezik a listában szereplő modellel
+2. Ellenőrizd, hogy elérhető-e egy Phi-3.5-mini modellváltozat a `foundry model list` paranccsal
+3. Győződj meg arról, hogy az `application.properties` fájlban megadott modellnév pontosan megegyezik a listában szereplő modellnévvel
 4. Ellenőrizd, hogy nincs-e tűzfal, amely blokkolja a kapcsolatot
 
 Gyakori problémák:
