@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
-  "translation_date": "2025-07-23T12:19:10+00:00",
+  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
+  "translation_date": "2025-07-25T07:47:15+00:00",
   "source_file": "README.md",
   "language_code": "th"
 }
@@ -17,8 +17,8 @@ CO_OP_TRANSLATOR_METADATA:
 2. คลิก **Code** → **Codespaces** tab → **...** → **New with options...**
 3. ใช้ค่าตั้งต้น – ระบบจะเลือก Development container ที่สร้างขึ้นสำหรับหลักสูตรนี้
 4. คลิก **Create codespace**
-5. รอประมาณ ~2 นาทีเพื่อให้สภาพแวดล้อมพร้อมใช้งาน
-6. เริ่มต้นที่ [การสร้าง GitHub Models Token ของคุณ](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. รอประมาณ ~2 นาทีเพื่อให้ environment พร้อมใช้งาน
+6. ไปที่ [การสร้าง GitHub Models Token ของคุณ](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## รองรับหลายภาษา
 
@@ -28,24 +28,24 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## โครงสร้างหลักสูตร & เส้นทางการเรียนรู้
 
-**ระยะเวลา**: การตั้งค่าสภาพแวดล้อมใช้เวลา 2 นาที พร้อมบทเรียนแบบลงมือทำที่ใช้เวลา 1-3 ชั่วโมงต่อบท ขึ้นอยู่กับความลึกของการสำรวจ
+**เวลาในการเรียนรู้**: การตั้งค่า environment ใช้เวลา 2 นาที และตัวอย่างใช้เวลา 1-3 ชั่วโมง ขึ้นอยู่กับความลึกของการสำรวจ หลักสูตรทั้งหมดสามารถทำออนไลน์ได้โดยไม่ต้องตั้งค่าบนเครื่อง
 
 ### **บทที่ 1: แนะนำ Generative AI**
 - **แนวคิดหลัก**: ทำความเข้าใจ Large Language Models, tokens, embeddings และความสามารถของ AI
-- **ระบบนิเวศ AI ใน Java**: ภาพรวมของ Spring AI และ OpenAI SDKs
-- **Model Context Protocol**: แนะนำ MCP และบทบาทของมันในการสื่อสารของ AI agent
-- **การใช้งานจริง**: ตัวอย่างในโลกจริง เช่น chatbot และการสร้างเนื้อหา
+- **Java AI Ecosystem**: ภาพรวมของ Spring AI และ OpenAI SDKs
+- **Model Context Protocol**: แนะนำ MCP และบทบาทของมันใน AI agent communication
+- **การใช้งานจริง**: ตัวอย่างในโลกจริง เช่น chatbots และการสร้างเนื้อหา
 - **[→ เริ่มบทที่ 1](./01-IntroToGenAI/README.md)**
 
-### **บทที่ 2: การตั้งค่าสภาพแวดล้อมการพัฒนา**
-- **การตั้งค่าหลายผู้ให้บริการ**: ตั้งค่า GitHub Models, Azure OpenAI และ OpenAI Java SDK
+### **บทที่ 2: การตั้งค่า Environment สำหรับการพัฒนา**
+- **การตั้งค่าหลายผู้ให้บริการ**: ตั้งค่า GitHub Models, Azure OpenAI และ OpenAI Java SDK integrations
 - **Spring Boot + Spring AI**: แนวทางปฏิบัติที่ดีที่สุดสำหรับการพัฒนาแอปพลิเคชัน AI ในองค์กร
-- **GitHub Models**: เข้าถึงโมเดล AI ฟรีสำหรับการสร้างต้นแบบและการเรียนรู้ (ไม่ต้องใช้บัตรเครดิต)
+- **GitHub Models**: เข้าถึงโมเดล AI ฟรีสำหรับการทดลองและการเรียนรู้ (ไม่ต้องใช้บัตรเครดิต)
 - **เครื่องมือพัฒนา**: การตั้งค่า Docker containers, VS Code และ GitHub Codespaces
 - **[→ เริ่มบทที่ 2](./02-SetupDevEnvironment/README.md)**
 
 ### **บทที่ 3: เทคนิค Generative AI หลัก**
-- **Prompt Engineering**: เทคนิคสำหรับการตอบสนองของโมเดล AI ที่เหมาะสมที่สุด
+- **Prompt Engineering**: เทคนิคสำหรับการตอบสนองของโมเดล AI ที่ดีที่สุด
 - **Embeddings & Vector Operations**: การใช้งาน semantic search และ similarity matching
 - **Retrieval-Augmented Generation (RAG)**: ผสาน AI กับแหล่งข้อมูลของคุณเอง
 - **Function Calling**: ขยายความสามารถของ AI ด้วยเครื่องมือและปลั๊กอินที่กำหนดเอง
@@ -82,4 +82,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราจะไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามนุษย์ที่เป็นมืออาชีพ เราจะไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "79df2d245c12d6b8ad57148fd049f106",
-  "translation_date": "2025-07-23T12:23:23+00:00",
+  "original_hash": "0f080f1f2a635610b5f6eff5a58a9590",
+  "translation_date": "2025-07-25T07:49:29+00:00",
   "source_file": "README.md",
   "language_code": "fi"
 }
@@ -12,8 +12,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generatiivinen AI aloittelijoille - Java-versio](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.fi.png)
 
-> **NOTE: Pika-aloitus**: Koko kurssi voidaan suorittaa verkossa – ei vaadi paikallista asennusta!
-1. Haarauta tämä arkisto GitHub-tilillesi
+> **NOTE: Pika-aloitus**: Koko kurssi voidaan suorittaa verkossa – Ei paikallista asennusta vaadita!
+1. Haarauta tämä repositorio GitHub-tilillesi
 2. Klikkaa **Code** → **Codespaces**-välilehti → **...** → **New with options...**
 3. Käytä oletusasetuksia – tämä valitsee kurssille luodun kehityskontin
 4. Klikkaa **Create codespace**
@@ -28,39 +28,39 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kurssin rakenne ja oppimispolku
 
-**Aikavaatimukset**: Ympäristön asennus kestää 2 minuuttia, ja käytännön harjoitukset vaativat 1–3 tuntia riippuen syventymisen tasosta.
+**Aikavaatimukset**: Ympäristön asennus kestää 2 minuuttia, ja esimerkit vaativat 1–3 tuntia riippuen tutkimuksen syvyydestä. Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta.
 
-### **Luku 1: Johdatus generatiiviseen AI:hin**
-- **Keskeiset käsitteet**: Suurten kielimallien, tokenien, upotusten ja AI:n kyvykkyyksien ymmärtäminen
-- **Java AI -ekosysteemi**: Katsaus Spring AI:hin ja OpenAI SDK:ihin
-- **Model Context Protocol**: Johdatus MCP:hen ja sen rooliin AI-agenttien viestinnässä
+### **Luku 1: Johdatus generatiiviseen tekoälyyn**
+- **Keskeiset käsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyn kyvykkyyksien ymmärtäminen
+- **Java AI -ekosysteemi**: Katsaus Spring AI- ja OpenAI-SDK:ihin
+- **Model Context Protocol**: Johdatus MCP:hen ja sen rooliin tekoälyagenttien viestinnässä
 - **Käytännön sovellukset**: Todelliset esimerkit, kuten chatbotit ja sisällön luominen
 - **[→ Aloita luku 1](./01-IntroToGenAI/README.md)**
 
 ### **Luku 2: Kehitysympäristön asennus**
 - **Monen palveluntarjoajan konfigurointi**: GitHub Models-, Azure OpenAI- ja OpenAI Java SDK -integraatioiden asennus
-- **Spring Boot + Spring AI**: Parhaat käytännöt yritystason AI-sovellusten kehittämiseen
-- **GitHub Models**: Ilmainen AI-mallien käyttö prototyyppien ja oppimisen tueksi (ei luottokorttia vaadita)
+- **Spring Boot + Spring AI**: Parhaat käytännöt yritystason tekoälysovellusten kehittämiseen
+- **GitHub Models**: Ilmainen tekoälymallien käyttö prototyyppien ja oppimisen tueksi (ei luottokorttia vaadita)
 - **Kehitystyökalut**: Docker-kontit, VS Code ja GitHub Codespaces -konfigurointi
 - **[→ Aloita luku 2](./02-SetupDevEnvironment/README.md)**
 
-### **Luku 3: Generatiivisen AI:n ydintekniikat**
-- **Prompt Engineering**: Tekniikat optimaalisten AI-mallivastausten saamiseksi
-- **Upotukset ja vektorilaskenta**: Semanttisen haun ja samankaltaisuuden tunnistamisen toteutus
-- **Retrieval-Augmented Generation (RAG)**: AI:n yhdistäminen omiin tietolähteisiin
-- **Funktioiden kutsuminen**: AI:n kyvykkyyksien laajentaminen mukautetuilla työkaluilla ja laajennuksilla
+### **Luku 3: Generatiivisen tekoälyn ydintekniikat**
+- **Prompt Engineering**: Tekniikat optimaalisten tekoälymallivastausten saamiseksi
+- **Upotukset ja vektorilaskenta**: Semanttisen haun ja samankaltaisuuden tunnistuksen toteutus
+- **Retrieval-Augmented Generation (RAG)**: Tekoälyn yhdistäminen omiin tietolähteisiin
+- **Toimintojen kutsuminen**: Tekoälyn laajentaminen mukautetuilla työkaluilla ja lisäosilla
 - **[→ Aloita luku 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Luku 4: Käytännön sovellukset ja projektit**
-- **Lemmikkitarinageneraattori** (`petstory/`): Luova sisällön tuottaminen GitHub Models -mallien avulla
-- **Foundry Local Demo** (`foundrylocal/`): Paikallinen AI-mallien integrointi OpenAI Java SDK:lla
+- **Lemmikkitarinageneraattori** (`petstory/`): Luova sisällön luominen GitHub Models -malleilla
+- **Foundry Local Demo** (`foundrylocal/`): Paikallisen tekoälymallin integrointi OpenAI Java SDK:lla
 - **MCP-laskinpalvelu** (`mcp/calculator/`): Perustason Model Context Protocol -toteutus Spring AI:lla
 - **[→ Aloita luku 4](./04-PracticalSamples/README.md)**
 
-### **Luku 5: Vastuullinen AI-kehitys**
+### **Luku 5: Vastuullinen tekoälyn kehitys**
 - **GitHub Models -turvallisuus**: Sisäänrakennettujen sisällönsuodatus- ja turvallisuusmekanismien testaaminen
-- **Vastuullinen AI-demo**: Käytännön esimerkki AI-turvasuodattimien toiminnasta
-- **Parhaat käytännöt**: Keskeiset ohjeet eettiseen AI-kehitykseen ja käyttöönottoon
+- **Vastuullisen tekoälyn demo**: Käytännön esimerkki tekoälyn turvallisuussuodattimien toiminnasta
+- **Parhaat käytännöt**: Keskeiset ohjeet eettiseen tekoälyn kehittämiseen ja käyttöönottoon
 - **[→ Aloita luku 5](./05-ResponsibleGenAI/README.md)**
 
 ## Lisäresurssit 
