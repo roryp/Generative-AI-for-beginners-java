@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a49b35508745c032a0033d914df7901b",
-  "translation_date": "2025-07-25T10:11:38+00:00",
+  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
+  "translation_date": "2025-07-26T17:41:07+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 > **Brzi početak**
 
 1. Forkajte ovaj repozitorij na svoj GitHub račun
-2. Kliknite **Code** → **Codespaces** kartica → **...** → **New with options...**
+2. Kliknite **Code** → kartica **Codespaces** → **...** → **New with options...**
 3. Koristite zadane postavke – ovo će odabrati razvojni kontejner kreiran za ovaj tečaj
 4. Kliknite **Create codespace**
 5. Pričekajte ~2 minute da okruženje bude spremno
@@ -48,7 +48,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Poglavlje 3: Osnovne tehnike generativne umjetne inteligencije**
 - **Inženjering upita**: Tehnike za optimalne odgovore AI modela
 - **Ugrađivanja i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
-- **Generacija uz pomoć pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
+- **Generacija uz podršku pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
 - **Pozivanje funkcija**: Proširenje AI sposobnosti prilagođenim alatima i dodacima
 - **[→ Započnite Poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
 
@@ -61,10 +61,10 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Poglavlje 5: Razvoj odgovorne umjetne inteligencije**
 - **Sigurnost GitHub Modelsa**: Testiranje ugrađenog filtriranja sadržaja i sigurnosnih mehanizama
 - **Demonstracija odgovorne AI**: Praktični primjer koji pokazuje kako sigurnosni filtri AI-a funkcioniraju u praksi
-- **Najbolje prakse**: Osnovne smjernice za etički razvoj i implementaciju AI-a
+- **Najbolje prakse**: Ključne smjernice za etički razvoj i implementaciju AI-a
 - **[→ Započnite Poglavlje 5](./05-ResponsibleGenAI/README.md)**
 
-## Dodatni resursi 
+## Dodatni resursi
 
 - [AI agenti za početnike](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generativna umjetna inteligencija za početnike koristeći .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -79,8 +79,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [XR razvoj za početnike](https://github.com/microsoft/xr-development-for-beginners)
 - [Ovladavanje GitHub Copilotom za AI programiranje u paru](https://aka.ms/GitHubCopilotAI)
 - [Ovladavanje GitHub Copilotom za C#/.NET programere](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Odaberite svoju vlastitu Copilot avanturu](https://github.com/microsoft/CopilotAdventures)
+- [Odaberite vlastitu Copilot avanturu](https://github.com/microsoft/CopilotAdventures)
 - [RAG aplikacija za chat s Azure AI uslugama](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

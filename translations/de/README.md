@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a49b35508745c032a0033d914df7901b",
-  "translation_date": "2025-07-25T08:43:44+00:00",
+  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
+  "translation_date": "2025-07-26T17:25:03+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -64,7 +64,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Best Practices**: Wesentliche Richtlinien für die ethische Entwicklung und Bereitstellung von KI
 - **[→ Kapitel 5 starten](./05-ResponsibleGenAI/README.md)**
 
-## Zusätzliche Ressourcen 
+## Zusätzliche Ressourcen
 
 - [KI-Agenten für Anfänger](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative KI für Anfänger mit .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)

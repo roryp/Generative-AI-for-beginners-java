@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a49b35508745c032a0033d914df7901b",
-  "translation_date": "2025-07-25T09:57:56+00:00",
+  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
+  "translation_date": "2025-07-26T17:38:30+00:00",
   "source_file": "README.md",
   "language_code": "hu"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generatív AI kezdőknek - Java kiadás](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.hu.png)
 
-**Időráfordítás**: Az egész workshop online elvégezhető helyi telepítés nélkül. Ha futtatni szeretnéd a példákat, a környezet beállítása 2 percet vesz igénybe, a példák felfedezése pedig 1-3 órát igényelhet a vizsgálat mélységétől függően.
+**Időráfordítás**: Az egész workshop online elvégezhető helyi környezet beállítása nélkül. Ha futtatni szeretnéd a példákat, a környezet beállítása 2 percet vesz igénybe, a példák felfedezése pedig 1-3 órát igényelhet a mélységtől függően.
 
 > **Gyors kezdés**
 
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### GitHub Action által támogatott (Automatikus és mindig naprakész)
 
-[Francia](../fr/README.md) | [Spanyol](../es/README.md) | [Német](../de/README.md) | [Orosz](../ru/README.md) | [Arab](../ar/README.md) | [Perzsa (Fárszi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kínai (Egyszerűsített)](../zh/README.md) | [Kínai (Hagyományos, Makaó)](../mo/README.md) | [Kínai (Hagyományos, Hongkong)](../hk/README.md) | [Kínai (Hagyományos, Tajvan)](../tw/README.md) | [Japán](../ja/README.md) | [Koreai](../ko/README.md) | [Hindi](../hi/README.md) | [Bengáli](../bn/README.md) | [Maráthi](../mr/README.md) | [Nepáli](../ne/README.md) | [Pandzsábi (Gurmukhi)](../pa/README.md) | [Portugál (Portugália)](../pt/README.md) | [Portugál (Brazília)](../br/README.md) | [Olasz](../it/README.md) | [Lengyel](../pl/README.md) | [Török](../tr/README.md) | [Görög](../el/README.md) | [Thai](../th/README.md) | [Svéd](../sv/README.md) | [Dán](../da/README.md) | [Norvég](../no/README.md) | [Finn](../fi/README.md) | [Holland](../nl/README.md) | [Héber](../he/README.md) | [Vietnámi](../vi/README.md) | [Indonéz](../id/README.md) | [Maláj](../ms/README.md) | [Tagalog (Filippínó)](../tl/README.md) | [Szuahéli](../sw/README.md) | [Magyar](./README.md) | [Cseh](../cs/README.md) | [Szlovák](../sk/README.md) | [Román](../ro/README.md) | [Bolgár](../bg/README.md) | [Szerb (Cirill)](../sr/README.md) | [Horvát](../hr/README.md) | [Szlovén](../sl/README.md) | [Ukrán](../uk/README.md) | [Burmai (Mianmar)](../my/README.md)
+[Francia](../fr/README.md) | [Spanyol](../es/README.md) | [Német](../de/README.md) | [Orosz](../ru/README.md) | [Arab](../ar/README.md) | [Perzsa (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kínai (Egyszerűsített)](../zh/README.md) | [Kínai (Hagyományos, Makaó)](../mo/README.md) | [Kínai (Hagyományos, Hongkong)](../hk/README.md) | [Kínai (Hagyományos, Tajvan)](../tw/README.md) | [Japán](../ja/README.md) | [Koreai](../ko/README.md) | [Hindi](../hi/README.md) | [Bengáli](../bn/README.md) | [Maráthi](../mr/README.md) | [Nepáli](../ne/README.md) | [Pandzsábi (Gurmukhi)](../pa/README.md) | [Portugál (Portugália)](../pt/README.md) | [Portugál (Brazília)](../br/README.md) | [Olasz](../it/README.md) | [Lengyel](../pl/README.md) | [Török](../tr/README.md) | [Görög](../el/README.md) | [Thai](../th/README.md) | [Svéd](../sv/README.md) | [Dán](../da/README.md) | [Norvég](../no/README.md) | [Finn](../fi/README.md) | [Holland](../nl/README.md) | [Héber](../he/README.md) | [Vietnámi](../vi/README.md) | [Indonéz](../id/README.md) | [Maláj](../ms/README.md) | [Tagalog (Filippínó)](../tl/README.md) | [Szuahéli](../sw/README.md) | [Magyar](./README.md) | [Cseh](../cs/README.md) | [Szlovák](../sk/README.md) | [Román](../ro/README.md) | [Bolgár](../bg/README.md) | [Szerb (Cirill)](../sr/README.md) | [Horvát](../hr/README.md) | [Szlovén](../sl/README.md) | [Ukrán](../uk/README.md) | [Burmai (Mianmar)](../my/README.md)
 
 ## Tanfolyam felépítése és tanulási útvonal
 
@@ -45,9 +45,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **Fejlesztői eszközök**: Docker konténerek, VS Code és GitHub Codespaces konfiguráció
 - **[→ Kezdés a 2. fejezettel](./02-SetupDevEnvironment/README.md)**
 
-### **3. fejezet: Generatív AI alaptechnikák**
+### **3. fejezet: Alapvető generatív AI technikák**
 - **Prompt Engineering**: Technikák az AI modellek optimális válaszaihoz
-- **Beágyazások és vektorműveletek**: Szemantikus keresés és hasonlóság alapú összehasonlítás megvalósítása
+- **Beágyazások és vektorműveletek**: Szemantikus keresés és hasonlóság alapú egyezés megvalósítása
 - **Retrieval-Augmented Generation (RAG)**: AI kombinálása saját adatforrásokkal
 - **Funkcióhívás**: AI képességek bővítése egyedi eszközökkel és bővítményekkel
 - **[→ Kezdés a 3. fejezettel](./03-CoreGenerativeAITechniques/README.md)**
@@ -61,12 +61,12 @@ CO_OP_TRANSLATOR_METADATA:
 ### **5. fejezet: Felelős AI fejlesztés**
 - **GitHub Models biztonság**: Beépített tartalomszűrés és biztonsági mechanizmusok tesztelése
 - **Felelős AI demó**: Gyakorlati példa, amely bemutatja, hogyan működnek az AI biztonsági szűrők
-- **Legjobb gyakorlatok**: Alapvető irányelvek az etikus AI fejlesztéshez és telepítéshez
+- **Legjobb gyakorlatok**: Alapvető irányelvek az etikus AI fejlesztéshez és bevezetéshez
 - **[→ Kezdés az 5. fejezettel](./05-ResponsibleGenAI/README.md)**
 
-## További források 
+## További források
 
-- [AI ügynökök kezdőknek](https://github.com/microsoft/ai-agents-for-beginners)
+- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generatív AI kezdőknek .NET használatával](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generatív AI kezdőknek JavaScript használatával](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generatív AI kezdőknek](https://github.com/microsoft/generative-ai-for-beginners)
@@ -77,10 +77,10 @@ CO_OP_TRANSLATOR_METADATA:
 - [Webfejlesztés kezdőknek](https://aka.ms/webdev-beginners)
 - [IoT kezdőknek](https://aka.ms/iot-beginners)
 - [XR fejlesztés kezdőknek](https://github.com/microsoft/xr-development-for-beginners)
-- [GitHub Copilot mesterfokon AI páros programozáshoz](https://aka.ms/GitHubCopilotAI)
-- [GitHub Copilot mesterfokon C#/.NET fejlesztőknek](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [GitHub Copilot elsajátítása AI páros programozáshoz](https://aka.ms/GitHubCopilotAI)
+- [GitHub Copilot elsajátítása C#/.NET fejlesztők számára](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Válaszd ki saját Copilot kalandodat](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App Azure AI szolgáltatásokkal](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [RAG Chat App az Azure AI szolgáltatásokkal](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Felelősség kizárása**:  
 Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

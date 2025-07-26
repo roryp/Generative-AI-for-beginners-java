@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a49b35508745c032a0033d914df7901b",
-  "translation_date": "2025-07-25T08:49:54+00:00",
+  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
+  "translation_date": "2025-07-26T17:26:12+00:00",
   "source_file": "README.md",
   "language_code": "fa"
 }
@@ -17,12 +17,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **شروع سریع**
 
-1. این مخزن را به حساب GitHub خود فورک کنید.
-2. روی **Code** → تب **Codespaces** → **...** → **New with options...** کلیک کنید.
-3. از تنظیمات پیش‌فرض استفاده کنید – این تنظیمات کانتینر توسعه‌ای که برای این دوره ایجاد شده است را انتخاب می‌کند.
-4. روی **Create codespace** کلیک کنید.
-5. حدود ۲ دقیقه صبر کنید تا محیط آماده شود.
-6. مستقیماً به [ایجاد توکن مدل‌های GitHub خود](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token) بروید.
+1. این مخزن را به حساب GitHub خود فورک کنید  
+2. روی **Code** → تب **Codespaces** → **...** → **New with options...** کلیک کنید  
+3. از تنظیمات پیش‌فرض استفاده کنید – این تنظیمات کانتینر توسعه‌ای را که برای این دوره ایجاد شده است انتخاب می‌کند  
+4. روی **Create codespace** کلیک کنید  
+5. حدود ۲ دقیقه صبر کنید تا محیط آماده شود  
+6. مستقیماً به [ایجاد توکن مدل‌های GitHub خود](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token) بروید  
 
 ## پشتیبانی چندزبانه
 
@@ -33,55 +33,55 @@ CO_OP_TRANSLATOR_METADATA:
 ## ساختار دوره و مسیر یادگیری
 
 ### **فصل ۱: مقدمه‌ای بر هوش مصنوعی مولد**
-- **مفاهیم اصلی**: آشنایی با مدل‌های زبانی بزرگ، توکن‌ها، جاسازی‌ها و قابلیت‌های هوش مصنوعی
-- **اکوسیستم هوش مصنوعی جاوا**: مرور Spring AI و OpenAI SDKs
-- **پروتکل زمینه مدل**: معرفی MCP و نقش آن در ارتباط عامل‌های هوش مصنوعی
-- **کاربردهای عملی**: سناریوهای واقعی شامل چت‌بات‌ها و تولید محتوا
-- **[→ شروع فصل ۱](./01-IntroToGenAI/README.md)**
+- **مفاهیم اصلی**: آشنایی با مدل‌های زبانی بزرگ، توکن‌ها، جاسازی‌ها و قابلیت‌های هوش مصنوعی  
+- **اکوسیستم هوش مصنوعی جاوا**: مرور Spring AI و OpenAI SDKs  
+- **پروتکل زمینه مدل**: معرفی MCP و نقش آن در ارتباط عامل‌های هوش مصنوعی  
+- **کاربردهای عملی**: سناریوهای واقعی شامل چت‌بات‌ها و تولید محتوا  
+- **[→ شروع فصل ۱](./01-IntroToGenAI/README.md)**  
 
 ### **فصل ۲: تنظیم محیط توسعه**
-- **پیکربندی چند ارائه‌دهنده**: تنظیم مدل‌های GitHub، Azure OpenAI و OpenAI Java SDK
-- **Spring Boot + Spring AI**: بهترین روش‌ها برای توسعه برنامه‌های هوش مصنوعی سازمانی
-- **مدل‌های GitHub**: دسترسی رایگان به مدل‌های هوش مصنوعی برای نمونه‌سازی و یادگیری (بدون نیاز به کارت اعتباری)
-- **ابزارهای توسعه**: پیکربندی کانتینرهای Docker، VS Code و GitHub Codespaces
-- **[→ شروع فصل ۲](./02-SetupDevEnvironment/README.md)**
+- **پیکربندی چند ارائه‌دهنده**: تنظیم ادغام‌های GitHub Models، Azure OpenAI و OpenAI Java SDK  
+- **Spring Boot + Spring AI**: بهترین روش‌ها برای توسعه برنامه‌های هوش مصنوعی سازمانی  
+- **مدل‌های GitHub**: دسترسی رایگان به مدل‌های هوش مصنوعی برای نمونه‌سازی و یادگیری (بدون نیاز به کارت اعتباری)  
+- **ابزارهای توسعه**: پیکربندی کانتینرهای Docker، VS Code و GitHub Codespaces  
+- **[→ شروع فصل ۲](./02-SetupDevEnvironment/README.md)**  
 
 ### **فصل ۳: تکنیک‌های اصلی هوش مصنوعی مولد**
-- **مهندسی درخواست**: تکنیک‌هایی برای دریافت پاسخ‌های بهینه از مدل‌های هوش مصنوعی
-- **جاسازی‌ها و عملیات برداری**: پیاده‌سازی جستجوی معنایی و تطبیق شباهت
-- **تولید بازیابی-محور (RAG)**: ترکیب هوش مصنوعی با منابع داده خود
-- **فراخوانی توابع**: گسترش قابلیت‌های هوش مصنوعی با ابزارها و افزونه‌های سفارشی
-- **[→ شروع فصل ۳](./03-CoreGenerativeAITechniques/README.md)**
+- **مهندسی درخواست**: تکنیک‌هایی برای پاسخ‌های بهینه مدل‌های هوش مصنوعی  
+- **جاسازی‌ها و عملیات برداری**: پیاده‌سازی جستجوی معنایی و تطبیق شباهت  
+- **تولید تقویت‌شده با بازیابی (RAG)**: ترکیب هوش مصنوعی با منابع داده خود  
+- **فراخوانی توابع**: گسترش قابلیت‌های هوش مصنوعی با ابزارها و افزونه‌های سفارشی  
+- **[→ شروع فصل ۳](./03-CoreGenerativeAITechniques/README.md)**  
 
 ### **فصل ۴: کاربردها و پروژه‌های عملی**
-- **تولید داستان حیوانات خانگی** (`petstory/`): تولید محتوای خلاقانه با مدل‌های GitHub
-- **دموی محلی Foundry** (`foundrylocal/`): یکپارچه‌سازی مدل‌های هوش مصنوعی محلی با OpenAI Java SDK
-- **خدمات محاسبه MCP** (`mcp/calculator/`): پیاده‌سازی اولیه پروتکل زمینه مدل با Spring AI
-- **[→ شروع فصل ۴](./04-PracticalSamples/README.md)**
+- **تولید داستان حیوانات خانگی** (`petstory/`): تولید محتوای خلاقانه با مدل‌های GitHub  
+- **دموی محلی Foundry** (`foundrylocal/`): ادغام مدل‌های هوش مصنوعی محلی با OpenAI Java SDK  
+- **سرویس ماشین‌حساب MCP** (`mcp/calculator/`): پیاده‌سازی اولیه پروتکل زمینه مدل با Spring AI  
+- **[→ شروع فصل ۴](./04-PracticalSamples/README.md)**  
 
 ### **فصل ۵: توسعه مسئولانه هوش مصنوعی**
-- **ایمنی مدل‌های GitHub**: آزمایش فیلترهای محتوای داخلی و مکانیزم‌های ایمنی
-- **دموی هوش مصنوعی مسئولانه**: مثال عملی که نشان می‌دهد فیلترهای ایمنی هوش مصنوعی چگونه کار می‌کنند
-- **بهترین روش‌ها**: دستورالعمل‌های ضروری برای توسعه و استقرار اخلاقی هوش مصنوعی
-- **[→ شروع فصل ۵](./05-ResponsibleGenAI/README.md)**
+- **ایمنی مدل‌های GitHub**: آزمایش فیلترهای محتوای داخلی و مکانیزم‌های ایمنی  
+- **دموی هوش مصنوعی مسئولانه**: مثال عملی که نشان می‌دهد فیلترهای ایمنی هوش مصنوعی چگونه کار می‌کنند  
+- **بهترین روش‌ها**: دستورالعمل‌های ضروری برای توسعه و استقرار اخلاقی هوش مصنوعی  
+- **[→ شروع فصل ۵](./05-ResponsibleGenAI/README.md)**  
 
 ## منابع اضافی
 
-- [عامل‌های هوش مصنوعی برای مبتدیان](https://github.com/microsoft/ai-agents-for-beginners)
-- [هوش مصنوعی مولد برای مبتدیان با استفاده از .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [هوش مصنوعی مولد برای مبتدیان با استفاده از جاوااسکریپت](https://github.com/microsoft/generative-ai-with-javascript)
-- [هوش مصنوعی مولد برای مبتدیان](https://github.com/microsoft/generative-ai-for-beginners)
-- [یادگیری ماشین برای مبتدیان](https://aka.ms/ml-beginners)
-- [علم داده برای مبتدیان](https://aka.ms/datascience-beginners)
-- [هوش مصنوعی برای مبتدیان](https://aka.ms/ai-beginners)
-- [امنیت سایبری برای مبتدیان](https://github.com/microsoft/Security-101)
-- [توسعه وب برای مبتدیان](https://aka.ms/webdev-beginners)
-- [اینترنت اشیا برای مبتدیان](https://aka.ms/iot-beginners)
-- [توسعه XR برای مبتدیان](https://github.com/microsoft/xr-development-for-beginners)
-- [تسلط بر GitHub Copilot برای برنامه‌نویسی جفتی هوش مصنوعی](https://aka.ms/GitHubCopilotAI)
-- [تسلط بر GitHub Copilot برای توسعه‌دهندگان C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [ماجراجویی خود را با Copilot انتخاب کنید](https://github.com/microsoft/CopilotAdventures)
-- [برنامه چت RAG با خدمات Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [عامل‌های هوش مصنوعی برای مبتدیان](https://github.com/microsoft/ai-agents-for-beginners)  
+- [هوش مصنوعی مولد برای مبتدیان با استفاده از .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
+- [هوش مصنوعی مولد برای مبتدیان با استفاده از جاوااسکریپت](https://github.com/microsoft/generative-ai-with-javascript)  
+- [هوش مصنوعی مولد برای مبتدیان](https://github.com/microsoft/generative-ai-for-beginners)  
+- [یادگیری ماشین برای مبتدیان](https://aka.ms/ml-beginners)  
+- [علم داده برای مبتدیان](https://aka.ms/datascience-beginners)  
+- [هوش مصنوعی برای مبتدیان](https://aka.ms/ai-beginners)  
+- [امنیت سایبری برای مبتدیان](https://github.com/microsoft/Security-101)  
+- [توسعه وب برای مبتدیان](https://aka.ms/webdev-beginners)  
+- [اینترنت اشیا برای مبتدیان](https://aka.ms/iot-beginners)  
+- [توسعه XR برای مبتدیان](https://github.com/microsoft/xr-development-for-beginners)  
+- [تسلط بر GitHub Copilot برای برنامه‌نویسی جفتی هوش مصنوعی](https://aka.ms/GitHubCopilotAI)  
+- [تسلط بر GitHub Copilot برای توسعه‌دهندگان C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
+- [ماجراجویی خود را با Copilot انتخاب کنید](https://github.com/microsoft/CopilotAdventures)  
+- [برنامه چت RAG با خدمات هوش مصنوعی Azure](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **سلب مسئولیت**:  
 این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، توصیه می‌شود از ترجمه حرفه‌ای انسانی استفاده کنید. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.
