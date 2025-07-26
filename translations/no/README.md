@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a49b35508745c032a0033d914df7901b",
-  "translation_date": "2025-07-25T09:38:33+00:00",
+  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
+  "translation_date": "2025-07-26T17:35:19+00:00",
   "source_file": "README.md",
   "language_code": "no"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Tidsforpliktelse**: Hele workshoppen kan fullføres online uten lokal oppsett. Hvis du ønsker å kjøre eksemplene, tar miljøoppsettet 2 minutter, og utforskning av eksemplene krever 1-3 timer avhengig av hvor dypt du går.
 
-> **Hurtigstart**
+> **Hurtigstart** 
 
 1. Fork dette repositoriet til din GitHub-konto
 2. Klikk **Code** → **Codespaces**-fanen → **...** → **New with options...**
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kursstruktur & Læringssti
 
 ### **Kapittel 1: Introduksjon til Generativ AI**
-- **Kjernebegreper**: Forstå store språkmodeller, tokens, embeddings og AI-funksjoner
+- **Kjernebegreper**: Forståelse av store språkmodeller, tokens, embeddings og AI-funksjoner
 - **Java AI-økosystem**: Oversikt over Spring AI og OpenAI SDK-er
 - **Model Context Protocol**: Introduksjon til MCP og dens rolle i AI-agentkommunikasjon
 - **Praktiske anvendelser**: Virkelige eksempler som chatbots og innholdsgenerering
@@ -49,7 +49,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Prompt Engineering**: Teknikker for optimale AI-modellsvar
 - **Embeddings & Vektoroperasjoner**: Implementer semantisk søk og likhetsmatching
 - **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
-- **Funksjonskalling**: Utvid AI-funksjoner med tilpassede verktøy og plugins
+- **Funksjonskall**: Utvid AI-funksjoner med tilpassede verktøy og plugins
 - **[→ Start Kapittel 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kapittel 4: Praktiske Anvendelser & Prosjekter**
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App med Azure AI-tjenester](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

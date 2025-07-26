@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a49b35508745c032a0033d914df7901b",
-  "translation_date": "2025-07-25T10:13:33+00:00",
+  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
+  "translation_date": "2025-07-26T17:41:29+00:00",
   "source_file": "README.md",
   "language_code": "sl"
 }
@@ -14,11 +14,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Časovna zaveza**: Celotno delavnico lahko dokončate na spletu brez lokalne nastavitve. Če želite zagnati primere, nastavitev okolja traja 2 minuti, raziskovanje primerov pa zahteva 1-3 ure, odvisno od globine raziskovanja.
 
-> **Hiter začetek**
+> **Hiter začetek** 
 
 1. Forkajte to repozitorij na svoj GitHub račun
 2. Kliknite **Code** → zavihek **Codespaces** → **...** → **New with options...**
-3. Uporabite privzete nastavitve – to bo izbralo razvojni vsebnik, ustvarjen za ta tečaj
+3. Uporabite privzete nastavitve – to bo izbralo razvojni kontejner, ustvarjen za ta tečaj
 4. Kliknite **Create codespace**
 5. Počakajte približno 2 minuti, da je okolje pripravljeno
 6. Takoj nadaljujte na [Ustvarjanje vašega GitHub Models žetona](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
@@ -36,35 +36,35 @@ CO_OP_TRANSLATOR_METADATA:
 - **Java AI ekosistem**: Pregled Spring AI in OpenAI SDK-jev
 - **Protokol konteksta modela**: Uvod v MCP in njegovo vlogo v komunikaciji AI agentov
 - **Praktične aplikacije**: Resnični scenariji, vključno s klepetalniki in generiranjem vsebin
-- **[→ Začnite poglavje 1](./01-IntroToGenAI/README.md)**
+- **[→ Začni poglavje 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavje 2: Nastavitev razvojnega okolja**
 - **Konfiguracija več ponudnikov**: Nastavitev GitHub Models, Azure OpenAI in OpenAI Java SDK integracij
 - **Spring Boot + Spring AI**: Najboljše prakse za razvoj AI aplikacij v podjetjih
 - **GitHub Models**: Brezplačen dostop do AI modelov za prototipiranje in učenje (brez kreditne kartice)
-- **Razvojna orodja**: Konfiguracija Docker vsebnikov, VS Code in GitHub Codespaces
-- **[→ Začnite poglavje 2](./02-SetupDevEnvironment/README.md)**
+- **Razvojna orodja**: Konfiguracija Docker kontejnerjev, VS Code in GitHub Codespaces
+- **[→ Začni poglavje 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Poglavje 3: Osnovne tehnike generativne umetne inteligence**
 - **Inženiring pozivov**: Tehnike za optimalne odgovore AI modelov
 - **Vektorske predstavitve in operacije**: Implementacija semantičnega iskanja in ujemanja podobnosti
-- **Generacija z obogatitvijo pridobivanja (RAG)**: Združevanje AI z lastnimi viri podatkov
+- **Generacija z obogatenim pridobivanjem (RAG)**: Kombinacija AI z vašimi lastnimi viri podatkov
 - **Klicanje funkcij**: Razširitev zmogljivosti AI z orodji in vtičniki po meri
-- **[→ Začnite poglavje 3](./03-CoreGenerativeAITechniques/README.md)**
+- **[→ Začni poglavje 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavje 4: Praktične aplikacije in projekti**
 - **Generator zgodb o hišnih ljubljenčkih** (`petstory/`): Ustvarjanje kreativnih vsebin z GitHub Models
 - **Foundry lokalna predstavitev** (`foundrylocal/`): Lokalna integracija AI modelov z OpenAI Java SDK
 - **MCP kalkulatorska storitev** (`mcp/calculator/`): Osnovna implementacija protokola konteksta modela s Spring AI
-- **[→ Začnite poglavje 4](./04-PracticalSamples/README.md)**
+- **[→ Začni poglavje 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavje 5: Odgovoren razvoj umetne inteligence**
 - **Varnost GitHub Models**: Testiranje vgrajenega filtriranja vsebin in varnostnih mehanizmov
 - **Predstavitev odgovorne AI**: Praktičen primer, ki prikazuje delovanje varnostnih filtrov AI
 - **Najboljše prakse**: Ključne smernice za etični razvoj in uvajanje AI
-- **[→ Začnite poglavje 5](./05-ResponsibleGenAI/README.md)**
+- **[→ Začni poglavje 5](./05-ResponsibleGenAI/README.md)**
 
-## Dodatni viri
+## Dodatni viri 
 
 - [AI agenti za začetnike](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generativna umetna inteligenca za začetnike z uporabo .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)

@@ -1,27 +1,27 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a49b35508745c032a0033d914df7901b",
-  "translation_date": "2025-07-25T09:40:25+00:00",
+  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
+  "translation_date": "2025-07-26T17:35:38+00:00",
   "source_file": "README.md",
   "language_code": "fi"
 }
 -->
-# Generatiivinen AI aloittelijoille - Java-versio
+# Generatiivinen tekoäly aloittelijoille - Java-versio
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generatiivinen AI aloittelijoille - Java-versio](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.fi.png)
+![Generatiivinen tekoäly aloittelijoille - Java-versio](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.fi.png)
 
-**Aikavaatimukset**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Jos haluat suorittaa esimerkit, ympäristön asennus vie 2 minuuttia, ja esimerkkien tutkimiseen kuluu 1–3 tuntia riippuen tutkimisen syvyydestä.
+**Aikataulu**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Jos haluat ajaa esimerkkejä, ympäristön asennus vie 2 minuuttia, ja esimerkkien tutkiminen kestää 1–3 tuntia riippuen tutkimisen syvyydestä.
 
-> **Pika-aloitus**
+> **Pika-aloitus** 
 
-1. Haaroita tämä arkisto GitHub-tilillesi
+1. Haarauta tämä arkisto GitHub-tilillesi
 2. Klikkaa **Code** → **Codespaces**-välilehti → **...** → **New with options...**
 3. Käytä oletusasetuksia – tämä valitsee tämän kurssin kehityskontin
 4. Klikkaa **Create codespace**
 5. Odota noin 2 minuuttia, että ympäristö on valmis
-6. Siirry suoraan kohtaan [GitHub Models -tokenin luominen](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Siirry suoraan kohtaan [Luo GitHub Models -token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Monikielinen tuki
 
@@ -32,8 +32,8 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kurssin rakenne ja oppimispolku
 
 ### **Luku 1: Johdatus generatiiviseen tekoälyyn**
-- **Peruskäsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyominaisuuksien ymmärtäminen
-- **Java AI -ekosysteemi**: Katsaus Spring AI- ja OpenAI-SDK:ihin
+- **Keskeiset käsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyominaisuuksien ymmärtäminen
+- **Java AI -ekosysteemi**: Katsaus Spring AI- ja OpenAI SDK:ihin
 - **Model Context Protocol**: Johdatus MCP:hen ja sen rooliin tekoälyagenttien viestinnässä
 - **Käytännön sovellukset**: Reaaliaikaisia esimerkkejä, kuten chatbotit ja sisällöntuotanto
 - **[→ Aloita luku 1](./01-IntroToGenAI/README.md)**
@@ -41,24 +41,24 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Luku 2: Kehitysympäristön asennus**
 - **Monitoimittajakonfiguraatio**: GitHub Models-, Azure OpenAI- ja OpenAI Java SDK -integraatioiden asennus
 - **Spring Boot + Spring AI**: Parhaat käytännöt yritystason tekoälysovellusten kehittämiseen
-- **GitHub Models**: Ilmainen pääsy tekoälymalleihin prototyyppien ja oppimisen tueksi (ei luottokorttia vaadita)
+- **GitHub Models**: Ilmainen tekoälymallien käyttö prototyyppien ja oppimisen tueksi (ei luottokorttia vaadita)
 - **Kehitystyökalut**: Docker-kontit, VS Code ja GitHub Codespaces -konfiguraatio
 - **[→ Aloita luku 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Luku 3: Generatiivisen tekoälyn ydintekniikat**
-- **Prompt Engineering**: Tekniikat optimaalisten tekoälyvastausten saamiseksi
-- **Upotukset ja vektorilaskenta**: Semanttisen haun ja samankaltaisuuden tunnistuksen toteutus
-- **Retrieval-Augmented Generation (RAG)**: Tekoälyn yhdistäminen omiin tietolähteisiin
-- **Toimintokutsut**: Tekoälyn laajentaminen mukautetuilla työkaluilla ja laajennuksilla
+- **Prompt Engineering**: Tekniikoita optimaalisten tekoälymallivastausten saamiseksi
+- **Upotukset ja vektorilaskenta**: Semanttisen haun ja samankaltaisuusvertailun toteutus
+- **Retrieval-Augmented Generation (RAG)**: Yhdistä tekoäly omiin tietolähteisiisi
+- **Funktiokutsut**: Laajenna tekoälyn kykyjä mukautetuilla työkaluilla ja lisäosilla
 - **[→ Aloita luku 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Luku 4: Käytännön sovellukset ja projektit**
-- **Lemmikkitarinageneraattori** (`petstory/`): Luovan sisällön tuottaminen GitHub Models -malleilla
+- **Lemmikkitarinageneraattori** (`petstory/`): Luova sisällöntuotanto GitHub Models -mallien avulla
 - **Foundry Local Demo** (`foundrylocal/`): Paikallisen tekoälymallin integrointi OpenAI Java SDK:lla
 - **MCP-laskinpalvelu** (`mcp/calculator/`): Perustason Model Context Protocol -toteutus Spring AI:lla
 - **[→ Aloita luku 4](./04-PracticalSamples/README.md)**
 
-### **Luku 5: Vastuullinen tekoälyn kehitys**
+### **Luku 5: Vastuullinen tekoälykehitys**
 - **GitHub Models -turvallisuus**: Sisäänrakennettujen sisällönsuodatus- ja turvallisuusmekanismien testaaminen
 - **Vastuullisen tekoälyn demo**: Käytännön esimerkki tekoälyn turvallisuussuodattimien toiminnasta
 - **Parhaat käytännöt**: Keskeiset ohjeet eettiseen tekoälyn kehittämiseen ja käyttöönottoon
@@ -67,20 +67,20 @@ CO_OP_TRANSLATOR_METADATA:
 ## Lisäresurssit 
 
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generatiivinen AI aloittelijoille .NET:llä](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generatiivinen AI aloittelijoille JavaScriptillä](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generatiivinen AI aloittelijoille](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML aloittelijoille](https://aka.ms/ml-beginners)
-- [Data Science aloittelijoille](https://aka.ms/datascience-beginners)
-- [AI aloittelijoille](https://aka.ms/ai-beginners)
-- [Kyberturvallisuus aloittelijoille](https://github.com/microsoft/Security-101)
-- [Web-kehitys aloittelijoille](https://aka.ms/webdev-beginners)
-- [IoT aloittelijoille](https://aka.ms/iot-beginners)
-- [XR-kehitys aloittelijoille](https://github.com/microsoft/xr-development-for-beginners)
-- [GitHub Copilotin hallinta tekoälypariohjelmointiin](https://aka.ms/GitHubCopilotAI)
-- [GitHub Copilotin hallinta C#/.NET-kehittäjille](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Valitse oma Copilot-seikkailusi](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat -sovellus Azure AI -palveluilla](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML for Beginners](https://aka.ms/ml-beginners)
+- [Data Science for Beginners](https://aka.ms/datascience-beginners)
+- [AI for Beginners](https://aka.ms/ai-beginners)
+- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
+- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
+- [IoT for Beginners](https://aka.ms/iot-beginners)
+- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
+- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
+- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
+- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Vastuuvapauslauseke**:  
 Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

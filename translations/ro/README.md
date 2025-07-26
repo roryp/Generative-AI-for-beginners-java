@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a49b35508745c032a0033d914df7901b",
-  "translation_date": "2025-07-25T10:04:51+00:00",
+  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
+  "translation_date": "2025-07-26T17:39:41+00:00",
   "source_file": "README.md",
   "language_code": "ro"
 }
@@ -12,34 +12,34 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative AI pentru Începători - Ediția Java](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.ro.png)
 
-**Timp necesar**: Atelierul poate fi finalizat online fără configurare locală. Dacă dorești să rulezi exemplele, configurarea mediului durează 2 minute, iar explorarea exemplelor necesită între 1-3 ore, în funcție de profunzimea explorării.
+**Timp necesar**: Întregul atelier poate fi finalizat online fără configurare locală. Dacă dorești să rulezi exemplele, configurarea mediului durează 2 minute, iar explorarea exemplelor necesită între 1-3 ore, în funcție de profunzimea explorării.
 
-> **Start Rapid**
+> **Start Rapid** 
 
-1. Clonează acest depozit în contul tău de GitHub
-2. Click pe **Code** → fila **Codespaces** → **...** → **New with options...**
+1. Clonează acest depozit în contul tău GitHub
+2. Apasă pe **Code** → fila **Codespaces** → **...** → **New with options...**
 3. Folosește setările implicite – acestea vor selecta containerul de dezvoltare creat pentru acest curs
-4. Click pe **Create codespace**
+4. Apasă pe **Create codespace**
 5. Așteaptă ~2 minute pentru ca mediul să fie gata
 6. Treci direct la [Crearea Token-ului pentru Modelele GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Suport Multi-Limbă
 
-### Suportat prin GitHub Action (Automat & Mereu Actualizat)
+### Suportat prin GitHub Action (Automat & Întotdeauna Actualizat)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](./README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+[Franceză](../fr/README.md) | [Spaniolă](../es/README.md) | [Germană](../de/README.md) | [Rusă](../ru/README.md) | [Arabă](../ar/README.md) | [Persană (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chineză (Simplificată)](../zh/README.md) | [Chineză (Tradițională, Macau)](../mo/README.md) | [Chineză (Tradițională, Hong Kong)](../hk/README.md) | [Chineză (Tradițională, Taiwan)](../tw/README.md) | [Japoneză](../ja/README.md) | [Coreeană](../ko/README.md) | [Hindi](../hi/README.md) | [Bengaleză](../bn/README.md) | [Marathi](../mr/README.md) | [Nepaleză](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugheză (Portugalia)](../pt/README.md) | [Portugheză (Brazilia)](../br/README.md) | [Italiană](../it/README.md) | [Poloneză](../pl/README.md) | [Turcă](../tr/README.md) | [Greacă](../el/README.md) | [Thailandeză](../th/README.md) | [Suedeză](../sv/README.md) | [Daneză](../da/README.md) | [Norvegiană](../no/README.md) | [Finlandeză](../fi/README.md) | [Olandeză](../nl/README.md) | [Ebraică](../he/README.md) | [Vietnameză](../vi/README.md) | [Indoneziană](../id/README.md) | [Malayeză](../ms/README.md) | [Tagalog (Filipineză)](../tl/README.md) | [Swahili](../sw/README.md) | [Maghiară](../hu/README.md) | [Cehă](../cs/README.md) | [Slovacă](../sk/README.md) | [Română](./README.md) | [Bulgară](../bg/README.md) | [Sârbă (Chirilică)](../sr/README.md) | [Croată](../hr/README.md) | [Slovenă](../sl/README.md) | [Ucraineană](../uk/README.md) | [Birmaneză (Myanmar)](../my/README.md)
 
 ## Structura Cursului & Parcursul de Învățare
 
 ### **Capitolul 1: Introducere în Generative AI**
 - **Concepte de bază**: Înțelegerea modelelor lingvistice mari, token-urilor, embedding-urilor și capacităților AI
-- **Ecosistemul AI în Java**: Prezentare generală a Spring AI și SDK-urilor OpenAI
+- **Ecosistemul Java AI**: Prezentare generală a Spring AI și SDK-urilor OpenAI
 - **Protocolul Contextului Modelului**: Introducere în MCP și rolul său în comunicarea agenților AI
-- **Aplicații practice**: Scenarii reale, inclusiv chatbot-uri și generarea de conținut
+- **Aplicații practice**: Scenarii reale, inclusiv chatboți și generarea de conținut
 - **[→ Începe Capitolul 1](./01-IntroToGenAI/README.md)**
 
 ### **Capitolul 2: Configurarea Mediului de Dezvoltare**
-- **Configurare Multi-Furnizor**: Configurarea integrărilor GitHub Models, Azure OpenAI și OpenAI Java SDK
+- **Configurare Multi-Furnizor**: Integrarea GitHub Models, Azure OpenAI și OpenAI Java SDK
 - **Spring Boot + Spring AI**: Cele mai bune practici pentru dezvoltarea aplicațiilor AI în mediul enterprise
 - **Modelele GitHub**: Acces gratuit la modele AI pentru prototipare și învățare (fără card de credit necesar)
 - **Instrumente de Dezvoltare**: Configurarea containerelor Docker, VS Code și GitHub Codespaces
@@ -47,14 +47,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Capitolul 3: Tehnici de Bază în Generative AI**
 - **Ingineria Prompt-urilor**: Tehnici pentru răspunsuri optime ale modelelor AI
-- **Embedding-uri & Operații Vectoriale**: Implementarea căutării semantice și potrivirii similitudinii
+- **Embedding-uri & Operațiuni pe Vectori**: Implementarea căutării semantice și potrivirii similitudinii
 - **Generare Augmentată prin Recuperare (RAG)**: Combinarea AI cu sursele proprii de date
 - **Apelarea Funcțiilor**: Extinderea capacităților AI cu instrumente și plugin-uri personalizate
 - **[→ Începe Capitolul 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capitolul 4: Aplicații Practice & Proiecte**
 - **Generator de Povești pentru Animale de Companie** (`petstory/`): Generarea creativă de conținut cu Modelele GitHub
-- **Demo Local Foundry** (`foundrylocal/`): Integrarea locală a modelelor AI cu OpenAI Java SDK
+- **Demo Local Foundry** (`foundrylocal/`): Integrarea modelelor AI locale cu OpenAI Java SDK
 - **Serviciu Calculator MCP** (`mcp/calculator/`): Implementare de bază a Protocolului Contextului Modelului cu Spring AI
 - **[→ Începe Capitolul 4](./04-PracticalSamples/README.md)**
 
@@ -64,7 +64,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Cele mai bune practici**: Ghiduri esențiale pentru dezvoltarea și implementarea etică a AI
 - **[→ Începe Capitolul 5](./05-ResponsibleGenAI/README.md)**
 
-## Resurse Adiționale 
+## Resurse Suplimentare 
 
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI pentru Începători folosind .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -73,13 +73,13 @@ CO_OP_TRANSLATOR_METADATA:
 - [ML pentru Începători](https://aka.ms/ml-beginners)
 - [Data Science pentru Începători](https://aka.ms/datascience-beginners)
 - [AI pentru Începători](https://aka.ms/ai-beginners)
-- [Cybersecurity pentru Începători](https://github.com/microsoft/Security-101)
-- [Web Dev pentru Începători](https://aka.ms/webdev-beginners)
+- [Securitate Cibernetică pentru Începători](https://github.com/microsoft/Security-101)
+- [Dezvoltare Web pentru Începători](https://aka.ms/webdev-beginners)
 - [IoT pentru Începători](https://aka.ms/iot-beginners)
-- [XR Development pentru Începători](https://github.com/microsoft/xr-development-for-beginners)
-- [Stăpânirea GitHub Copilot pentru Programare în Pereche AI](https://aka.ms/GitHubCopilotAI)
+- [Dezvoltare XR pentru Începători](https://github.com/microsoft/xr-development-for-beginners)
+- [Stăpânirea GitHub Copilot pentru Programare în Echipa AI](https://aka.ms/GitHubCopilotAI)
 - [Stăpânirea GitHub Copilot pentru Dezvoltatori C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Alege-ți Propria Aventură Copilot](https://github.com/microsoft/CopilotAdventures)
+- [Alege-ți Propria Aventură cu Copilot](https://github.com/microsoft/CopilotAdventures)
 - [Aplicație Chat RAG cu Servicii Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Declinare de responsabilitate**:  
