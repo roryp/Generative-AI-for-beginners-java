@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T16:12:55+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:31:19+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "de"
 }
@@ -20,7 +20,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - [Einleitung](../../../05-ResponsibleGenAI)
 - [Integrierte Sicherheit von GitHub Models](../../../05-ResponsibleGenAI)
-- [Praktisches Beispiel: Demo zur verantwortungsvollen KI-Sicherheit](../../../05-ResponsibleGenAI)
+- [Praktisches Beispiel: Demo zur KI-Sicherheit](../../../05-ResponsibleGenAI)
   - [Was die Demo zeigt](../../../05-ResponsibleGenAI)
   - [Einrichtungsanweisungen](../../../05-ResponsibleGenAI)
   - [Ausführen der Demo](../../../05-ResponsibleGenAI)
@@ -37,14 +37,14 @@ Dieses letzte Kapitel konzentriert sich auf die entscheidenden Aspekte beim Aufb
 
 ## Integrierte Sicherheit von GitHub Models
 
-GitHub Models bietet von Haus aus grundlegende Inhaltsfilterung. Es ist wie ein freundlicher Türsteher in Ihrem KI-Club – nicht der ausgeklügeltste, aber für grundlegende Szenarien ausreichend.
+GitHub Models bietet grundlegende Inhaltsfilterung direkt ab Werk. Es ist wie ein freundlicher Türsteher in Ihrem KI-Club – nicht der ausgeklügeltste, aber für grundlegende Szenarien ausreichend.
 
 **Was GitHub Models schützt:**
 - **Schädliche Inhalte**: Blockiert offensichtliche gewalttätige, sexuelle oder gefährliche Inhalte
 - **Grundlegende Hassrede**: Filtert klare diskriminierende Sprache
 - **Einfache Jailbreaks**: Widersteht grundlegenden Versuchen, Sicherheitsvorkehrungen zu umgehen
 
-## Praktisches Beispiel: Demo zur verantwortungsvollen KI-Sicherheit
+## Praktisches Beispiel: Demo zur KI-Sicherheit
 
 Dieses Kapitel enthält eine praktische Demonstration, wie GitHub Models verantwortungsvolle KI-Sicherheitsmaßnahmen implementiert, indem Eingabeaufforderungen getestet werden, die potenziell gegen Sicherheitsrichtlinien verstoßen könnten.
 
@@ -58,7 +58,7 @@ Die Klasse `ResponsibleGithubModels` folgt diesem Ablauf:
 5. Anzeigen der Ergebnisse, welche Inhalte blockiert bzw. zugelassen wurden
 6. Testen sicherer Inhalte zum Vergleich
 
-![Demo zur verantwortungsvollen KI-Sicherheit](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.de.png)
+![Demo zur KI-Sicherheit](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.de.png)
 
 ### Einrichtungsanweisungen
 
@@ -128,8 +128,8 @@ Beim Aufbau von KI-Anwendungen sollten Sie diese wesentlichen Praktiken befolgen
    - Erstellen Sie benutzerdefinierte Validierungsregeln für Ihren Anwendungsfall
 
 3. **Schulen Sie Nutzer im verantwortungsvollen Umgang mit KI**
-   - Stellen Sie klare Richtlinien für die akzeptable Nutzung bereit
-   - Erklären Sie, warum bestimmte Inhalte möglicherweise blockiert werden
+   - Stellen Sie klare Richtlinien für akzeptable Nutzung bereit
+   - Erklären Sie, warum bestimmte Inhalte blockiert werden könnten
 
 4. **Überwachen und protokollieren Sie Sicherheitsvorfälle zur Verbesserung**
    - Verfolgen Sie Muster blockierter Inhalte
@@ -162,11 +162,11 @@ Sie haben den Kurs "Generative KI für Anfänger – Java Edition" abgeschlossen
 
 Herzlichen Glückwunsch zum Abschluss des Kurses "Generative KI für Anfänger"! Sie verfügen nun über das Wissen und die Werkzeuge, um verantwortungsvolle und effektive generative KI-Anwendungen mit Java zu entwickeln.
 
-![Kursabschluss](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.de.png)
+![Kursabschluss](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.de.png)
 
 **Was Sie erreicht haben:**
 - Einrichtung Ihrer Entwicklungsumgebung
-- Erlernen grundlegender generativer KI-Techniken
+- Erlernen grundlegender Techniken der generativen KI
 - Entwicklung praktischer KI-Anwendungen
 - Verständnis der Prinzipien verantwortungsvoller KI
 

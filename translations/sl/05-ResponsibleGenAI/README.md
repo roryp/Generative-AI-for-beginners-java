@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T20:53:29+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T09:05:34+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "sl"
 }
@@ -33,13 +33,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Uvod
 
-To zadnje poglavje se osredotoča na ključne vidike gradnje odgovornih in etičnih aplikacij generativne umetne inteligence. Naučili se boste, kako uvesti varnostne ukrepe, obravnavati filtriranje vsebine in uporabiti najboljše prakse za razvoj odgovorne umetne inteligence z uporabo orodij in ogrodij, obravnavanih v prejšnjih poglavjih. Razumevanje teh načel je bistveno za gradnjo sistemov umetne inteligence, ki niso le tehnično impresivni, temveč tudi varni, etični in zaupanja vredni.
+To zadnje poglavje se osredotoča na ključne vidike gradnje odgovornih in etičnih aplikacij generativne umetne inteligence. Naučili se boste, kako uvesti varnostne ukrepe, obravnavati filtriranje vsebine in uporabiti najboljše prakse za razvoj odgovorne umetne inteligence z orodji in okviri, obravnavanimi v prejšnjih poglavjih. Razumevanje teh načel je bistveno za gradnjo sistemov umetne inteligence, ki niso le tehnično impresivni, temveč tudi varni, etični in zaupanja vredni.
 
 ## Vgrajena varnost GitHub Modelov
 
 GitHub Modeli imajo osnovno filtriranje vsebine že vgrajeno. To je kot prijazen vratar v vašem klubu umetne inteligence – ni najbolj sofisticiran, a opravi delo v osnovnih scenarijih.
 
-**Kaj GitHub Modeli ščitijo:**
+**Kaj GitHub Modeli ščitijo pred:**
 - **Škodljiva vsebina**: Blokira očitno nasilno, seksualno ali nevarno vsebino
 - **Osnovni sovražni govor**: Filtrira jasno diskriminatorni jezik
 - **Preprosti poskusi izogibanja zaščiti**: Ustavi osnovne poskuse zaobiti varnostne ukrepe
@@ -58,11 +58,11 @@ Razred `ResponsibleGithubModels` sledi temu poteku:
 5. Prikaz rezultatov, ki kažejo, katera vsebina je bila blokirana in katera dovoljena
 6. Testiranje varne vsebine za primerjavo
 
-![Demonstracija varnosti odgovorne umetne inteligence](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.sl.png)
+![Demonstracija varnosti odgovorne umetne inteligence](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.sl.png)
 
 ### Navodila za nastavitev
 
-1. **Nastavite svoj osebni dostopni žeton GitHub:**
+1. **Nastavite svoj GitHub osebni dostopni žeton:**
    
    Na Windows (Command Prompt):
    ```cmd
@@ -95,7 +95,7 @@ Razred `ResponsibleGithubModels` sledi temu poteku:
 
 Demonstracija bo testirala različne vrste potencialno škodljivih pozivov in prikazala:
 - **Varno vsebino**, ki dobi normalen odziv
-- **Škodljivo vsebino**, ki jo varnostni filtri blokirajo
+- **Škodljivo vsebino**, ki jo blokirajo varnostni filtri
 - **Morebitne napake**, ki se pojavijo med obdelavo
 
 Vzorec izhodnega formata:
@@ -121,11 +121,11 @@ Pri gradnji aplikacij umetne inteligence upoštevajte te ključne prakse:
 
 1. **Vedno ustrezno obravnavajte odzive varnostnih filtrov**
    - Uvedite pravilno obravnavo napak za blokirano vsebino
-   - Uporabnikom zagotovite smiselne povratne informacije, ko je vsebina filtrirana
+   - Zagotovite uporabnikom smiselne povratne informacije, ko je vsebina filtrirana
 
-2. **Uvedite dodatno validacijo vsebine, kjer je to primerno**
-   - Dodajte varnostne preverke, specifične za vašo domeno
-   - Ustvarite prilagojena pravila validacije za vaš primer uporabe
+2. **Uvedite dodatno preverjanje vsebine, kjer je to primerno**
+   - Dodajte varnostne preglede, specifične za vašo domeno
+   - Ustvarite prilagojena pravila za preverjanje glede na vaš primer uporabe
 
 3. **Izobražujte uporabnike o odgovorni uporabi umetne inteligence**
    - Zagotovite jasne smernice o sprejemljivi uporabi
@@ -162,7 +162,7 @@ Zaključili ste tečaj Generativna umetna inteligenca za začetnike - Java izdaj
 
 Čestitke ob zaključku tečaja Generativna umetna inteligenca za začetnike! Zdaj imate znanje in orodja za gradnjo odgovornih in učinkovitih aplikacij generativne umetne inteligence z uporabo Jave.
 
-![Zaključek tečaja](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.sl.png)
+![Zaključek tečaja](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.sl.png)
 
 **Kaj ste dosegli:**
 - Nastavili razvojno okolje

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:37:04+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:55:40+00:00",
   "source_file": "README.md",
   "language_code": "id"
 }
@@ -10,9 +10,9 @@ CO_OP_TRANSLATOR_METADATA:
 # Generative AI untuk Pemula - Edisi Java
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generative AI untuk Pemula - Edisi Java](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.id.png)
+![Generative AI untuk Pemula - Edisi Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.id.png)
 
-**Komitmen Waktu**: Seluruh workshop dapat diselesaikan secara online tanpa pengaturan lokal. Jika Anda ingin menjalankan contoh, pengaturan lingkungan memerlukan waktu 2 menit, dengan eksplorasi contoh membutuhkan 1-3 jam tergantung pada tingkat eksplorasi.
+**Komitmen Waktu**: Seluruh workshop dapat diselesaikan secara online tanpa pengaturan lokal. Jika Anda ingin menjalankan contoh, pengaturan lingkungan memerlukan waktu 2 menit, dengan eksplorasi contoh memakan waktu 1-3 jam tergantung pada tingkat eksplorasi.
 
 > **Mulai Cepat**
 
@@ -32,9 +32,9 @@ CO_OP_TRANSLATOR_METADATA:
 ## Struktur Kursus & Jalur Pembelajaran
 
 ### **Bab 1: Pengantar Generative AI**
-- **Konsep Inti**: Memahami Large Language Models, token, embeddings, dan kemampuan AI
-- **Ekosistem AI Java**: Gambaran umum tentang Spring AI dan OpenAI SDKs
-- **Model Context Protocol**: Pengantar MCP dan perannya dalam komunikasi agen AI
+- **Konsep Inti**: Memahami Model Bahasa Besar, token, embedding, dan kemampuan AI
+- **Ekosistem AI Java**: Gambaran umum tentang Spring AI dan OpenAI SDK
+- **Protokol Konteks Model**: Pengantar MCP dan perannya dalam komunikasi agen AI
 - **Aplikasi Praktis**: Skenario dunia nyata termasuk chatbot dan pembuatan konten
 - **[→ Mulai Bab 1](./01-IntroToGenAI/README.md)**
 
@@ -42,12 +42,12 @@ CO_OP_TRANSLATOR_METADATA:
 - **Konfigurasi Multi-Penyedia**: Mengatur integrasi GitHub Models, Azure OpenAI, dan OpenAI Java SDK
 - **Spring Boot + Spring AI**: Praktik terbaik untuk pengembangan aplikasi AI perusahaan
 - **GitHub Models**: Akses model AI gratis untuk prototipe dan pembelajaran (tanpa kartu kredit)
-- **Alat Pengembangan**: Konfigurasi Docker containers, VS Code, dan GitHub Codespaces
+- **Alat Pengembangan**: Konfigurasi Docker container, VS Code, dan GitHub Codespaces
 - **[→ Mulai Bab 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Bab 3: Teknik Inti Generative AI**
 - **Prompt Engineering**: Teknik untuk respons model AI yang optimal
-- **Embeddings & Operasi Vektor**: Menerapkan pencarian semantik dan pencocokan kesamaan
+- **Embedding & Operasi Vektor**: Menerapkan pencarian semantik dan pencocokan kesamaan
 - **Retrieval-Augmented Generation (RAG)**: Menggabungkan AI dengan sumber data Anda sendiri
 - **Function Calling**: Memperluas kemampuan AI dengan alat dan plugin khusus
 - **[→ Mulai Bab 3](./03-CoreGenerativeAITechniques/README.md)**
@@ -55,11 +55,11 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Bab 4: Aplikasi Praktis & Proyek**
 - **Pet Story Generator** (`petstory/`): Pembuatan konten kreatif dengan GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Integrasi model AI lokal dengan OpenAI Java SDK
-- **MCP Calculator Service** (`mcp/calculator/`): Implementasi dasar Model Context Protocol dengan Spring AI
+- **MCP Calculator Service** (`mcp/calculator/`): Implementasi dasar Protokol Konteks Model dengan Spring AI
 - **[→ Mulai Bab 4](./04-PracticalSamples/README.md)**
 
 ### **Bab 5: Pengembangan AI yang Bertanggung Jawab**
-- **Keamanan GitHub Models**: Menguji penyaringan konten bawaan dan mekanisme keamanan
+- **Keamanan GitHub Models**: Uji penyaringan konten bawaan dan mekanisme keamanan
 - **Demo AI yang Bertanggung Jawab**: Contoh langsung yang menunjukkan cara kerja filter keamanan AI
 - **Praktik Terbaik**: Pedoman penting untuk pengembangan dan penerapan AI yang etis
 - **[→ Mulai Bab 5](./05-ResponsibleGenAI/README.md)**
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Data Science untuk Pemula](https://aka.ms/datascience-beginners)
 - [AI untuk Pemula](https://aka.ms/ai-beginners)
 - [Keamanan Siber untuk Pemula](https://github.com/microsoft/Security-101)
-- [Pengembangan Web untuk Pemula](https://aka.ms/webdev-beginners)
+- [Web Dev untuk Pemula](https://aka.ms/webdev-beginners)
 - [IoT untuk Pemula](https://aka.ms/iot-beginners)
 - [Pengembangan XR untuk Pemula](https://github.com/microsoft/xr-development-for-beginners)
 - [Menguasai GitHub Copilot untuk Pemrograman Berpasangan AI](https://aka.ms/GitHubCopilotAI)
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [Aplikasi Chat RAG dengan Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

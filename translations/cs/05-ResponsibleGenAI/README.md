@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T20:50:40+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T09:00:06+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "cs"
 }
@@ -11,15 +11,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Co se naučíte
 
-- Porozumět etickým aspektům a osvědčeným postupům při vývoji AI
+- Pochopit etické aspekty a osvědčené postupy při vývoji AI
 - Implementovat filtrování obsahu a bezpečnostní opatření ve vašich aplikacích
-- Testovat a zpracovávat bezpečnostní reakce AI pomocí vestavěných ochran modelů GitHub
+- Testovat a zpracovávat bezpečnostní reakce AI pomocí vestavěných ochran GitHub Models
 - Aplikovat principy odpovědné AI k vytvoření bezpečných a etických AI systémů
 
 ## Obsah
 
 - [Úvod](../../../05-ResponsibleGenAI)
-- [Vestavěná bezpečnost modelů GitHub](../../../05-ResponsibleGenAI)
+- [Vestavěná bezpečnost GitHub Models](../../../05-ResponsibleGenAI)
 - [Praktický příklad: Demo bezpečnosti odpovědné AI](../../../05-ResponsibleGenAI)
   - [Co demo ukazuje](../../../05-ResponsibleGenAI)
   - [Pokyny k nastavení](../../../05-ResponsibleGenAI)
@@ -33,38 +33,38 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Úvod
 
-Tato závěrečná kapitola se zaměřuje na klíčové aspekty budování odpovědných a etických generativních AI aplikací. Naučíte se, jak implementovat bezpečnostní opatření, zpracovávat filtrování obsahu a aplikovat osvědčené postupy pro vývoj odpovědné AI pomocí nástrojů a rámců, které byly pokryty v předchozích kapitolách. Porozumění těmto principům je zásadní pro vytváření AI systémů, které jsou nejen technicky působivé, ale také bezpečné, etické a důvěryhodné.
+Tato závěrečná kapitola se zaměřuje na klíčové aspekty budování odpovědných a etických generativních AI aplikací. Naučíte se, jak implementovat bezpečnostní opatření, zpracovávat filtrování obsahu a aplikovat osvědčené postupy pro vývoj odpovědné AI pomocí nástrojů a rámců, které byly pokryty v předchozích kapitolách. Pochopení těchto principů je zásadní pro vytváření AI systémů, které nejsou jen technicky působivé, ale také bezpečné, etické a důvěryhodné.
 
-## Vestavěná bezpečnost modelů GitHub
+## Vestavěná bezpečnost GitHub Models
 
-Modely GitHub mají základní filtrování obsahu již vestavěné. Je to jako mít přátelského vyhazovače ve vašem AI klubu – není to nejsofistikovanější, ale pro základní scénáře to stačí.
+GitHub Models má základní filtrování obsahu již vestavěné. Je to jako mít přátelského vyhazovače ve vašem AI klubu – není to nejsofistikovanější, ale pro základní scénáře to stačí.
 
-**Co modely GitHub chrání:**
-- **Škodlivý obsah**: Blokuje zjevný násilný, sexuální nebo nebezpečný obsah
+**Co GitHub Models chrání:**
+- **Škodlivý obsah**: Blokuje zjevně násilný, sexuální nebo nebezpečný obsah
 - **Základní nenávistné projevy**: Filtruje jasně diskriminační jazyk
 - **Jednoduché pokusy o obejití**: Odolává základním pokusům o obejití bezpečnostních opatření
 
 ## Praktický příklad: Demo bezpečnosti odpovědné AI
 
-Tato kapitola obsahuje praktickou ukázku toho, jak modely GitHub implementují bezpečnostní opatření odpovědné AI testováním promptů, které by mohly potenciálně porušit bezpečnostní pokyny.
+Tato kapitola obsahuje praktickou ukázku toho, jak GitHub Models implementuje bezpečnostní opatření odpovědné AI testováním promptů, které by mohly potenciálně porušit bezpečnostní pokyny.
 
 ### Co demo ukazuje
 
-Třída `ResponsibleGithubModels` následuje tento postup:
-1. Inicializace klienta modelů GitHub s autentizací
+Třída `ResponsibleGithubModels` postupuje podle tohoto schématu:
+1. Inicializace klienta GitHub Models s autentizací
 2. Testování škodlivých promptů (násilí, nenávistné projevy, dezinformace, nelegální obsah)
-3. Odeslání každého promptu do API modelů GitHub
-4. Zpracování odpovědí: buď generovaný obsah, nebo blokování bezpečnostním filtrem
-5. Zobrazení výsledků, které ukazují, který obsah byl blokován vs. povolen
-6. Testování bezpečného obsahu pro porovnání
+3. Odeslání každého promptu do API GitHub Models
+4. Zpracování odpovědí: buď generovaný obsah, nebo blokace filtrem
+5. Zobrazení výsledků, které ukazují, který obsah byl blokován a který povolen
+6. Testování bezpečného obsahu pro srovnání
 
-![Demo bezpečnosti odpovědné AI](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.cs.png)
+![Demo bezpečnosti odpovědné AI](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.cs.png)
 
 ### Pokyny k nastavení
 
-1. **Nastavte svůj osobní přístupový token GitHub:**
+1. **Nastavte svůj GitHub Personal Access Token:**
    
-   Na Windows (Command Prompt):
+   Na Windows (Příkazový řádek):
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
@@ -117,7 +117,7 @@ Status: Response generated (content appears safe)
 
 ## Osvědčené postupy pro vývoj odpovědné AI
 
-Při budování AI aplikací dodržujte tyto základní postupy:
+Při vytváření AI aplikací dodržujte tyto základní postupy:
 
 1. **Vždy správně zpracovávejte odpovědi bezpečnostních filtrů**
    - Implementujte správné zpracování chyb pro blokovaný obsah
@@ -128,14 +128,14 @@ Při budování AI aplikací dodržujte tyto základní postupy:
    - Vytvořte vlastní validační pravidla pro váš konkrétní případ použití
 
 3. **Vzdělávejte uživatele o odpovědném používání AI**
-   - Poskytněte jasné pokyny o přijatelném použití
+   - Poskytněte jasné pokyny k přijatelnému použití
    - Vysvětlete, proč může být určitý obsah blokován
 
 4. **Monitorujte a zaznamenávejte bezpečnostní incidenty pro zlepšení**
    - Sledujte vzory blokovaného obsahu
    - Neustále zlepšujte svá bezpečnostní opatření
 
-5. **Respektujte obsahové politiky platformy**
+5. **Respektujte obsahové zásady platformy**
    - Sledujte aktuální pokyny platformy
    - Dodržujte podmínky služby a etické zásady
 
@@ -149,30 +149,30 @@ Tento příklad používá záměrně problematické prompty pouze pro vzděláv
 
 - **Implementovali bezpečnostní opatření AI**, včetně filtrování obsahu a zpracování bezpečnostních reakcí
 - **Aplikovali principy odpovědné AI**, abyste vytvořili etické a důvěryhodné AI systémy
-- **Otestovali bezpečnostní mechanismy** pomocí vestavěných ochranných funkcí modelů GitHub
+- **Otestovali bezpečnostní mechanismy** pomocí vestavěných ochranných funkcí GitHub Models
 - **Naučili se osvědčené postupy** pro vývoj a nasazení odpovědné AI
 
 **Zdroje pro odpovědnou AI:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Zjistěte více o přístupu Microsoftu k bezpečnosti, ochraně soukromí a dodržování předpisů
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Zjistěte více o přístupu Microsoftu k bezpečnosti, ochraně soukromí a shodě
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Prozkoumejte principy a postupy Microsoftu pro vývoj odpovědné AI
 
 Dokončili jste kurz Generativní AI pro začátečníky - Java Edition a nyní jste připraveni vytvářet bezpečné a efektivní AI aplikace!
 
 ## Dokončení kurzu
 
-Gratulujeme k dokončení kurzu Generativní AI pro začátečníky! Nyní máte znalosti a nástroje k vytváření odpovědných a efektivních generativních AI aplikací pomocí Javy.
+Gratulujeme k dokončení kurzu Generativní AI pro začátečníky! Nyní máte znalosti a nástroje k vytváření odpovědných a efektivních generativních AI aplikací s Javou.
 
-![Dokončení kurzu](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.cs.png)
+![Dokončení kurzu](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.cs.png)
 
 **Co jste dosáhli:**
 - Nastavili jste své vývojové prostředí
 - Naučili jste se základní techniky generativní AI
 - Vytvořili jste praktické AI aplikace
-- Porozuměli jste principům odpovědné AI
+- Pochopili jste principy odpovědné AI
 
 ## Další kroky
 
-Pokračujte ve své cestě za poznáním AI s těmito dalšími zdroji:
+Pokračujte ve svém vzdělávání v oblasti AI s těmito dalšími zdroji:
 
 **Další vzdělávací kurzy:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)

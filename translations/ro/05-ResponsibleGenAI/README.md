@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T20:51:38+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T09:01:49+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "ro"
 }
@@ -20,10 +20,10 @@ CO_OP_TRANSLATOR_METADATA:
 
 - [Introducere](../../../05-ResponsibleGenAI)
 - [Siguranța Integrată a Modelor GitHub](../../../05-ResponsibleGenAI)
-- [Exemplu Practic: Demo de Siguranță AI Responsabilă](../../../05-ResponsibleGenAI)
-  - [Ce Arată Demo-ul](../../../05-ResponsibleGenAI)
+- [Exemplu Practic: Demonstrație de Siguranță AI Responsabilă](../../../05-ResponsibleGenAI)
+  - [Ce Arată Demonstrația](../../../05-ResponsibleGenAI)
   - [Instrucțiuni de Configurare](../../../05-ResponsibleGenAI)
-  - [Rularea Demo-ului](../../../05-ResponsibleGenAI)
+  - [Rularea Demonstrației](../../../05-ResponsibleGenAI)
   - [Rezultatul Așteptat](../../../05-ResponsibleGenAI)
 - [Cele Mai Bune Practici pentru Dezvoltarea AI Responsabilă](../../../05-ResponsibleGenAI)
 - [Notă Importantă](../../../05-ResponsibleGenAI)
@@ -40,15 +40,15 @@ Acest ultim capitol se concentrează pe aspectele critice ale construirii aplica
 Modelele GitHub vin cu filtrarea de bază a conținutului integrată. Este ca un portar prietenos la clubul tău AI - nu cel mai sofisticat, dar suficient pentru scenarii de bază.
 
 **Ce Protejează Modelele GitHub:**
-- **Conținut Nociv**: Blochează conținut evident violent, sexual sau periculos
+- **Conținut Nociv**: Blochează conținutul evident violent, sexual sau periculos
 - **Discurs de Ură de Bază**: Filtrează limbajul clar discriminatoriu
 - **Jailbreak-uri Simple**: Rezistă încercărilor de bază de a ocoli măsurile de siguranță
 
-## Exemplu Practic: Demo de Siguranță AI Responsabilă
+## Exemplu Practic: Demonstrație de Siguranță AI Responsabilă
 
 Acest capitol include o demonstrație practică a modului în care Modelele GitHub implementează măsuri de siguranță AI responsabilă prin testarea prompturilor care ar putea încălca liniile directoare de siguranță.
 
-### Ce Arată Demo-ul
+### Ce Arată Demonstrația
 
 Clasa `ResponsibleGithubModels` urmează acest flux:
 1. Inițializează clientul Modele GitHub cu autentificare
@@ -58,7 +58,7 @@ Clasa `ResponsibleGithubModels` urmează acest flux:
 5. Afișează rezultatele care arată ce conținut a fost blocat vs. permis
 6. Testează conținut sigur pentru comparație
 
-![Demo de Siguranță AI Responsabilă](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.ro.png)
+![Demonstrație de Siguranță AI Responsabilă](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.ro.png)
 
 ### Instrucțiuni de Configurare
 
@@ -79,21 +79,21 @@ Clasa `ResponsibleGithubModels` urmează acest flux:
    export GITHUB_TOKEN=your_github_token_here
    ```   
 
-### Rularea Demo-ului
+### Rularea Demonstrației
 
 1. **Navighează la directorul de exemple:**
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
 
-2. **Compilează și rulează demo-ul:**
+2. **Compilează și rulează demonstrația:**
    ```bash
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
 ### Rezultatul Așteptat
 
-Demo-ul va testa diverse tipuri de prompturi potențial nocive și va arăta:
+Demonstrația va testa diverse tipuri de prompturi potențial nocive și va arăta:
 - **Conținut sigur** care primește un răspuns normal
 - **Conținut nociv** care este blocat de filtrele de siguranță
 - **Orice erori** care apar în timpul procesării
@@ -121,7 +121,7 @@ Când construiești aplicații AI, urmează aceste practici esențiale:
 
 1. **Gestionează întotdeauna răspunsurile potențiale ale filtrelor de siguranță cu grație**
    - Implementează gestionarea adecvată a erorilor pentru conținutul blocat
-   - Oferă utilizatorilor feedback semnificativ atunci când conținutul este filtrat
+   - Oferă feedback semnificativ utilizatorilor atunci când conținutul este filtrat
 
 2. **Implementează validarea suplimentară a conținutului acolo unde este cazul**
    - Adaugă verificări de siguranță specifice domeniului
@@ -149,7 +149,7 @@ Acest exemplu folosește prompturi intenționat problematice doar în scopuri ed
 
 - **Să implementezi măsuri de siguranță AI**, inclusiv filtrarea conținutului și gestionarea răspunsurilor de siguranță
 - **Să aplici principii AI responsabile** pentru a construi sisteme AI etice și de încredere
-- **Să testezi mecanismele de siguranță** folosind capabilitățile de protecție integrate ale Modelelor GitHub
+- **Să testezi mecanismele de siguranță** folosind capacitățile de protecție integrate ale Modelelor GitHub
 - **Să înveți cele mai bune practici** pentru dezvoltarea și implementarea AI responsabilă
 
 **Resurse AI Responsabile:**
@@ -162,7 +162,7 @@ Ai finalizat cursul Generative AI for Beginners - Java Edition și ești acum pr
 
 Felicitări pentru finalizarea cursului Generative AI for Beginners! Acum ai cunoștințele și instrumentele necesare pentru a construi aplicații AI generative responsabile și eficiente cu Java.
 
-![Finalizarea Cursului](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.ro.png)
+![Finalizarea Cursului](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.ro.png)
 
 **Ce ai realizat:**
 - Ai configurat mediul de dezvoltare
@@ -192,4 +192,4 @@ Continuă călătoria ta de învățare AI cu aceste resurse suplimentare:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

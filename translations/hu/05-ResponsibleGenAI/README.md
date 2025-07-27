@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T20:50:06+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:59:09+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "hu"
 }
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Legjobb Gyakorlatok a Felelős MI Fejlesztéséhez](../../../05-ResponsibleGenAI)  
 - [Fontos Megjegyzés](../../../05-ResponsibleGenAI)  
 - [Összefoglalás](../../../05-ResponsibleGenAI)  
-- [Tanfolyam Teljesítése](../../../05-ResponsibleGenAI)  
+- [Tanfolyam Befejezése](../../../05-ResponsibleGenAI)  
 - [Következő Lépések](../../../05-ResponsibleGenAI)  
 
 ## Bevezetés
@@ -37,9 +37,9 @@ Ez a záró fejezet a felelős és etikus generatív MI alkalmazások építés�
 
 ## GitHub Models Beépített Biztonság
 
-A GitHub Models alapértelmezett tartalomszűréssel érkezik. Olyan, mint egy barátságos kidobó az MI klubodban – nem a legkifinomultabb, de alapvető helyzetekben jól működik.  
+A GitHub Models alapértelmezett tartalomszűréssel érkezik. Olyan, mint egy barátságos kidobó az MI klubodban – nem a legkifinomultabb, de alapvető helyzetekben elvégzi a munkát.  
 
-**Amit a GitHub Models Véd:**
+**Amit a GitHub Models Védelme Nyújt:**  
 - **Káros Tartalom**: Blokkolja a nyilvánvalóan erőszakos, szexuális vagy veszélyes tartalmakat  
 - **Alapvető Gyűlöletbeszéd**: Szűri az egyértelműen diszkriminatív nyelvezetet  
 - **Egyszerű Kijátszások**: Ellenáll az alapvető próbálkozásoknak a biztonsági korlátok megkerülésére  
@@ -51,14 +51,14 @@ Ez a fejezet egy gyakorlati bemutatót tartalmaz arról, hogyan valósítja meg 
 ### Mit Mutat a Bemutató
 
 A `ResponsibleGithubModels` osztály a következő folyamatot követi:  
-1. Inicializálja a GitHub Models kliensét hitelesítéssel  
+1. Inicializálja a GitHub Models klienst hitelesítéssel  
 2. Teszteli a káros parancsokat (erőszak, gyűlöletbeszéd, félretájékoztatás, illegális tartalom)  
 3. Minden parancsot elküld a GitHub Models API-nak  
-4. Kezeli a válaszokat: generált tartalom vagy a biztonsági szűrő által blokkolt tartalom  
+4. Kezeli a válaszokat: generált tartalom vagy a biztonsági szűrő blokkolása  
 5. Megjeleníti az eredményeket, amelyek mutatják, hogy mely tartalmakat blokkolták, és melyeket engedélyezték  
 6. Összehasonlításképpen teszteli a biztonságos tartalmakat  
 
-![Felelős MI Biztonsági Bemutató](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.hu.png)  
+![Felelős MI Biztonsági Bemutató](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.hu.png)  
 
 ### Telepítési Útmutató
 
@@ -133,36 +133,36 @@ Amikor MI alkalmazásokat építesz, kövesd ezeket az alapvető gyakorlatokat:
 
 4. **Figyeld és naplózd a biztonsági incidenseket a fejlesztés érdekében**  
    - Kövesd nyomon a blokkolt tartalmak mintáit  
-   - Folyamatosan javítsd a biztonsági intézkedéseidet  
+   - Folyamatosan fejleszd a biztonsági intézkedéseidet  
 
 5. **Tartsd tiszteletben a platform tartalmi irányelveit**  
-   - Maradj naprakész a platform irányelveivel  
+   - Maradj naprakész a platform irányelveivel kapcsolatban  
    - Kövesd a szolgáltatási feltételeket és etikai irányelveket  
 
 ## Fontos Megjegyzés
 
-Ez a példa kizárólag oktatási célból használ szándékosan problémás parancsokat. A cél a biztonsági intézkedések bemutatása, nem azok megkerülése. Mindig felelősségteljesen és etikusan használd az MI eszközöket.  
+Ez a példa kizárólag oktatási célból használ szándékosan problémás parancsokat. A cél a biztonsági intézkedések bemutatása, nem azok megkerülése. Mindig használd az MI eszközöket felelősségteljesen és etikusan.  
 
 ## Összefoglalás
 
 **Gratulálunk!** Sikeresen:  
 
-- **Megvalósítottad az MI biztonsági intézkedéseket**, beleértve a tartalomszűrést és a biztonsági válaszok kezelését  
+- **Megvalósítottál MI biztonsági intézkedéseket**, beleértve a tartalomszűrést és a biztonsági válaszok kezelését  
 - **Alkalmaztad a felelős MI elveit**, hogy etikus és megbízható MI rendszereket építs  
 - **Tesztelted a biztonsági mechanizmusokat** a GitHub Models beépített védelmi képességeivel  
-- **Megtanultad a legjobb gyakorlatokat** a felelős MI fejlesztéséhez és bevezetéséhez  
+- **Megtanultad a legjobb gyakorlatokat** a felelős MI fejlesztéséhez és telepítéséhez  
 
 **Felelős MI Források:**  
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Tudj meg többet a Microsoft biztonsági, adatvédelmi és megfelelőségi megközelítéséről  
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Ismerd meg a Microsoft megközelítését a biztonság, adatvédelem és megfelelőség terén  
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Fedezd fel a Microsoft elveit és gyakorlatait a felelős MI fejlesztéséhez  
 
 Befejezted a Generatív MI Kezdőknek - Java Kiadás tanfolyamot, és most már készen állsz biztonságos, hatékony MI alkalmazások építésére!  
 
-## Tanfolyam Teljesítése
+## Tanfolyam Befejezése
 
-Gratulálunk a Generatív MI Kezdőknek tanfolyam elvégzéséhez! Most már rendelkezel a tudással és eszközökkel, hogy felelős és hatékony generatív MI alkalmazásokat építs Java-val.  
+Gratulálunk a Generatív MI Kezdőknek tanfolyam elvégzéséhez! Most már rendelkezel a tudással és eszközökkel, hogy felelős és hatékony generatív MI alkalmazásokat építs Java nyelven.  
 
-![Tanfolyam Teljesítése](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.hu.png)  
+![Tanfolyam Befejezése](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.hu.png)  
 
 **Amit elértél:**  
 - Beállítottad a fejlesztési környezetedet  

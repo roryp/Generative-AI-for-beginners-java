@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T19:21:53+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:51:15+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "da"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - Forstå etiske overvejelser og bedste praksis for AI-udvikling
 - Implementere indholdsfiltrering og sikkerhedsforanstaltninger i dine applikationer
-- Teste og håndtere AI-sikkerhedsreaktioner ved hjælp af GitHub Models' indbyggede beskyttelser
+- Teste og håndtere AI-sikkerhedsreaktioner ved hjælp af GitHub Models' indbyggede beskyttelse
 - Anvende principper for ansvarlig AI til at bygge sikre og etiske AI-systemer
 
 ## Indholdsfortegnelse
@@ -37,28 +37,28 @@ Dette sidste kapitel fokuserer på de kritiske aspekter ved at bygge ansvarlige 
 
 ## GitHub Models Indbygget Sikkerhed
 
-GitHub Models har grundlæggende indholdsfiltrering som standard. Det er som at have en venlig dørmand i din AI-klub – ikke den mest avancerede, men tilstrækkelig til basale scenarier.
+GitHub Models har grundlæggende indholdsfiltrering som standard. Det er som at have en venlig dørmand ved din AI-klub - ikke den mest sofistikerede, men effektiv til grundlæggende scenarier.
 
 **Hvad GitHub Models Beskytter Mod:**
 - **Skadeligt Indhold**: Blokerer åbenlyst voldeligt, seksuelt eller farligt indhold
 - **Grundlæggende Hadetale**: Filtrerer tydeligt diskriminerende sprog
-- **Enkle Jailbreaks**: Modstår basale forsøg på at omgå sikkerhedsforanstaltninger
+- **Enkle Jailbreaks**: Modstår grundlæggende forsøg på at omgå sikkerhedsforanstaltninger
 
 ## Praktisk Eksempel: Ansvarlig AI Sikkerhedsdemonstration
 
-Dette kapitel inkluderer en praktisk demonstration af, hvordan GitHub Models implementerer ansvarlige AI-sikkerhedsforanstaltninger ved at teste forespørgsler, der potentielt kan overtræde sikkerhedsretningslinjer.
+Dette kapitel inkluderer en praktisk demonstration af, hvordan GitHub Models implementerer ansvarlige AI-sikkerhedsforanstaltninger ved at teste forespørgsler, der potentielt kan overtræde sikkerhedsguidelines.
 
 ### Hvad Demonstrationen Viser
 
 `ResponsibleGithubModels`-klassen følger denne proces:
-1. Initialiser GitHub Models-klienten med autentificering
+1. Initialiser GitHub Models-klienten med autentifikation
 2. Test skadelige forespørgsler (vold, hadetale, misinformation, ulovligt indhold)
 3. Send hver forespørgsel til GitHub Models API
-4. Håndter svar: enten genereret indhold eller blokering af sikkerhedsfilter
-5. Vis resultater, der viser, hvilket indhold der blev blokeret vs. tilladt
+4. Håndter svar: enten genereret indhold eller blokering via sikkerhedsfilter
+5. Vis resultater, der viser, hvilket indhold blev blokeret vs. tilladt
 6. Test sikkert indhold til sammenligning
 
-![Ansvarlig AI Sikkerhedsdemonstration](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.da.png)
+![Ansvarlig AI Sikkerhedsdemonstration](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.da.png)
 
 ### Opsætningsinstruktioner
 
@@ -95,7 +95,7 @@ Dette kapitel inkluderer en praktisk demonstration af, hvordan GitHub Models imp
 
 Demonstrationen vil teste forskellige typer af potentielt skadelige forespørgsler og vise:
 - **Sikkert indhold**, der får et normalt svar
-- **Skadeligt indhold**, der bliver blokeret af sikkerhedsfiltrene
+- **Skadeligt indhold**, der bliver blokeret af sikkerhedsfiltre
 - **Eventuelle fejl**, der opstår under behandlingen
 
 Eksempel på outputformat:
@@ -121,15 +121,15 @@ Når du bygger AI-applikationer, skal du følge disse essentielle praksisser:
 
 1. **Håndter altid potentielle sikkerhedsfilterreaktioner på en hensigtsmæssig måde**
    - Implementér korrekt fejlbehandling for blokeret indhold
-   - Giv brugerne meningsfuld feedback, når indhold bliver filtreret
+   - Giv meningsfuld feedback til brugere, når indhold bliver filtreret
 
-2. **Implementér din egen yderligere indholdsvalidering, hvor det er passende**
+2. **Implementér dine egne yderligere indholdsvalideringer, hvor det er relevant**
    - Tilføj domænespecifikke sikkerhedstjek
-   - Opret brugerdefinerede valideringsregler til din brugssituation
+   - Opret brugerdefinerede valideringsregler for din brugssag
 
 3. **Uddan brugere om ansvarlig AI-brug**
    - Giv klare retningslinjer for acceptabel brug
-   - Forklar, hvorfor bestemt indhold kan blive blokeret
+   - Forklar, hvorfor visse typer indhold kan blive blokeret
 
 4. **Overvåg og log sikkerhedshændelser for forbedring**
    - Spor mønstre i blokeret indhold
@@ -137,11 +137,11 @@ Når du bygger AI-applikationer, skal du følge disse essentielle praksisser:
 
 5. **Respekter platformens indholdspolitikker**
    - Hold dig opdateret med platformens retningslinjer
-   - Følg servicevilkår og etiske retningslinjer
+   - Følg vilkår for brug og etiske retningslinjer
 
 ## Vigtig Bemærkning
 
-Dette eksempel bruger bevidst problematiske forespørgsler udelukkende til uddannelsesformål. Målet er at demonstrere sikkerhedsforanstaltninger, ikke at omgå dem. Brug altid AI-værktøjer ansvarligt og etisk.
+Dette eksempel bruger bevidst problematiske forespørgsler udelukkende til uddannelsesmæssige formål. Målet er at demonstrere sikkerhedsforanstaltninger, ikke at omgå dem. Brug altid AI-værktøjer ansvarligt og etisk.
 
 ## Opsummering
 
@@ -153,7 +153,7 @@ Dette eksempel bruger bevidst problematiske forespørgsler udelukkende til uddan
 - **Lært bedste praksis** for ansvarlig AI-udvikling og implementering
 
 **Ressourcer om Ansvarlig AI:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Læs om Microsofts tilgang til sikkerhed, privatliv og overholdelse
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Lær om Microsofts tilgang til sikkerhed, privatliv og overholdelse
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Udforsk Microsofts principper og praksis for ansvarlig AI-udvikling
 
 Du har gennemført kurset Generativ AI for Begyndere - Java Edition og er nu klar til at bygge sikre og effektive AI-applikationer!
@@ -162,13 +162,13 @@ Du har gennemført kurset Generativ AI for Begyndere - Java Edition og er nu kla
 
 Tillykke med at have gennemført kurset Generativ AI for Begyndere! Du har nu viden og værktøjer til at bygge ansvarlige og effektive generative AI-applikationer med Java.
 
-![Kursusafslutning](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.da.png)
+![Kursusafslutning](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.da.png)
 
 **Hvad du har opnået:**
 - Opsat dit udviklingsmiljø
 - Lært kerneprincipper for generativ AI
 - Bygget praktiske AI-applikationer
-- Forstået principper for ansvarlig AI
+- Forstået principperne for ansvarlig AI
 
 ## Næste Skridt
 
@@ -192,4 +192,4 @@ Fortsæt din AI-læringsrejse med disse ekstra ressourcer:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

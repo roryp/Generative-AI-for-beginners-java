@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:26:12+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:33:20+00:00",
   "source_file": "README.md",
   "language_code": "fa"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.fa.png)
+![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.fa.png)
 
 **مدت زمان مورد نیاز**: کل کارگاه را می‌توان به صورت آنلاین و بدون نیاز به تنظیمات محلی تکمیل کرد. اگر قصد اجرای نمونه‌ها را دارید، تنظیم محیط حدود ۲ دقیقه زمان می‌برد و بررسی نمونه‌ها بسته به عمق کاوش ۱ تا ۳ ساعت زمان نیاز دارد.
 
@@ -40,7 +40,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ شروع فصل ۱](./01-IntroToGenAI/README.md)**  
 
 ### **فصل ۲: تنظیم محیط توسعه**
-- **پیکربندی چند ارائه‌دهنده**: تنظیم ادغام‌های GitHub Models، Azure OpenAI و OpenAI Java SDK  
+- **پیکربندی چند ارائه‌دهنده**: تنظیم مدل‌های GitHub، Azure OpenAI و OpenAI Java SDK  
 - **Spring Boot + Spring AI**: بهترین روش‌ها برای توسعه برنامه‌های هوش مصنوعی سازمانی  
 - **مدل‌های GitHub**: دسترسی رایگان به مدل‌های هوش مصنوعی برای نمونه‌سازی و یادگیری (بدون نیاز به کارت اعتباری)  
 - **ابزارهای توسعه**: پیکربندی کانتینرهای Docker، VS Code و GitHub Codespaces  
@@ -49,13 +49,13 @@ CO_OP_TRANSLATOR_METADATA:
 ### **فصل ۳: تکنیک‌های اصلی هوش مصنوعی مولد**
 - **مهندسی درخواست**: تکنیک‌هایی برای پاسخ‌های بهینه مدل‌های هوش مصنوعی  
 - **جاسازی‌ها و عملیات برداری**: پیاده‌سازی جستجوی معنایی و تطبیق شباهت  
-- **تولید تقویت‌شده با بازیابی (RAG)**: ترکیب هوش مصنوعی با منابع داده خود  
+- **تولید بازیابی-محور (RAG)**: ترکیب هوش مصنوعی با منابع داده خود  
 - **فراخوانی توابع**: گسترش قابلیت‌های هوش مصنوعی با ابزارها و افزونه‌های سفارشی  
 - **[→ شروع فصل ۳](./03-CoreGenerativeAITechniques/README.md)**  
 
 ### **فصل ۴: کاربردها و پروژه‌های عملی**
 - **تولید داستان حیوانات خانگی** (`petstory/`): تولید محتوای خلاقانه با مدل‌های GitHub  
-- **دموی محلی Foundry** (`foundrylocal/`): ادغام مدل‌های هوش مصنوعی محلی با OpenAI Java SDK  
+- **دموی محلی Foundry** (`foundrylocal/`): یکپارچه‌سازی مدل‌های هوش مصنوعی محلی با OpenAI Java SDK  
 - **سرویس ماشین‌حساب MCP** (`mcp/calculator/`): پیاده‌سازی اولیه پروتکل زمینه مدل با Spring AI  
 - **[→ شروع فصل ۴](./04-PracticalSamples/README.md)**  
 
@@ -81,7 +81,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [تسلط بر GitHub Copilot برای برنامه‌نویسی جفتی هوش مصنوعی](https://aka.ms/GitHubCopilotAI)  
 - [تسلط بر GitHub Copilot برای توسعه‌دهندگان C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
 - [ماجراجویی خود را با Copilot انتخاب کنید](https://github.com/microsoft/CopilotAdventures)  
-- [برنامه چت RAG با خدمات هوش مصنوعی Azure](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
+- [برنامه چت RAG با خدمات Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، توصیه می‌شود از ترجمه حرفه‌ای انسانی استفاده کنید. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، توصیه می‌شود از ترجمه انسانی حرفه‌ای استفاده کنید. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.

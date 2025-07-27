@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T19:23:11+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:53:27+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "nl"
 }
@@ -33,11 +33,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introductie
 
-Dit laatste hoofdstuk richt zich op de cruciale aspecten van het bouwen van verantwoordelijke en ethische generatieve AI-toepassingen. Je leert hoe je veiligheidsmaatregelen implementeert, contentfiltering toepast en best practices voor verantwoordelijke AI-ontwikkeling gebruikt met de tools en frameworks die in eerdere hoofdstukken zijn behandeld. Het begrijpen van deze principes is essentieel om AI-systemen te bouwen die niet alleen technisch indrukwekkend zijn, maar ook veilig, ethisch en betrouwbaar.
+Dit laatste hoofdstuk richt zich op de cruciale aspecten van het bouwen van verantwoordelijke en ethische generatieve AI-toepassingen. Je leert hoe je veiligheidsmaatregelen implementeert, contentfiltering beheert en best practices toepast voor verantwoordelijke AI-ontwikkeling met behulp van de tools en frameworks die in eerdere hoofdstukken zijn behandeld. Het begrijpen van deze principes is essentieel om AI-systemen te bouwen die niet alleen technisch indrukwekkend zijn, maar ook veilig, ethisch en betrouwbaar.  
 
 ## Ingebouwde Veiligheid van GitHub Models
 
-GitHub Models wordt standaard geleverd met basiscontentfiltering. Het is alsof je een vriendelijke portier hebt bij je AI-club - niet de meest geavanceerde, maar voldoende voor eenvoudige scenario's.
+GitHub Models wordt standaard geleverd met basiscontentfiltering. Het is alsof je een vriendelijke uitsmijter hebt bij je AI-club - niet de meest geavanceerde, maar voldoende voor eenvoudige scenario's.  
 
 **Waartegen GitHub Models Beschermt:**  
 - **Schadelijke Inhoud**: Blokkeert duidelijke gewelddadige, seksuele of gevaarlijke inhoud  
@@ -46,7 +46,7 @@ GitHub Models wordt standaard geleverd met basiscontentfiltering. Het is alsof j
 
 ## Praktisch Voorbeeld: Verantwoordelijke AI Veiligheidsdemo
 
-Dit hoofdstuk bevat een praktische demonstratie van hoe GitHub Models verantwoordelijkheidsmaatregelen implementeert door prompts te testen die mogelijk veiligheidsrichtlijnen schenden.
+Dit hoofdstuk bevat een praktische demonstratie van hoe GitHub Models verantwoordelijkheidsmaatregelen implementeert door prompts te testen die mogelijk veiligheidsrichtlijnen schenden.  
 
 ### Wat de Demo Laat Zien
 
@@ -54,11 +54,11 @@ De `ResponsibleGithubModels`-klasse volgt deze stappen:
 1. Initialiseer de GitHub Models-client met authenticatie  
 2. Test schadelijke prompts (geweld, haatspraak, desinformatie, illegale inhoud)  
 3. Stuur elke prompt naar de GitHub Models API  
-4. Verwerk reacties: gegenereerde inhoud of geblokkeerde inhoud door de veiligheidsfilter  
+4. Verwerk reacties: gegenereerde inhoud of geblokkeerde inhoud door de veiligheidsfilters  
 5. Toon resultaten die laten zien welke inhoud werd geblokkeerd versus toegestaan  
 6. Test veilige inhoud ter vergelijking  
 
-![Verantwoordelijke AI Veiligheidsdemo](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.nl.png)
+![Verantwoordelijke AI Veiligheidsdemo](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.nl.png)  
 
 ### Installatie-instructies
 
@@ -120,12 +120,12 @@ Status: Response generated (content appears safe)
 Bij het bouwen van AI-toepassingen, volg deze essentiële praktijken:  
 
 1. **Ga altijd zorgvuldig om met mogelijke reacties van veiligheidsfilters**  
-   - Implementeer goede foutafhandeling voor geblokkeerde inhoud  
+   - Implementeer correcte foutafhandeling voor geblokkeerde inhoud  
    - Geef gebruikers zinvolle feedback wanneer inhoud wordt gefilterd  
 
-2. **Implementeer waar nodig je eigen aanvullende contentvalidatie**  
+2. **Implementeer waar nodig aanvullende contentvalidatie**  
    - Voeg domeinspecifieke veiligheidscontroles toe  
-   - Maak aangepaste validatieregels voor jouw gebruikssituatie  
+   - Maak aangepaste validatieregels voor jouw specifieke toepassing  
 
 3. **Onderwijs gebruikers over verantwoord AI-gebruik**  
    - Geef duidelijke richtlijnen over acceptabel gebruik  
@@ -141,7 +141,7 @@ Bij het bouwen van AI-toepassingen, volg deze essentiële praktijken:
 
 ## Belangrijke Opmerking
 
-Dit voorbeeld gebruikt opzettelijk problematische prompts uitsluitend voor educatieve doeleinden. Het doel is om veiligheidsmaatregelen te demonstreren, niet om deze te omzeilen. Gebruik AI-tools altijd op een verantwoorde en ethische manier.
+Dit voorbeeld gebruikt opzettelijk problematische prompts uitsluitend voor educatieve doeleinden. Het doel is om veiligheidsmaatregelen te demonstreren, niet om deze te omzeilen. Gebruik AI-tools altijd op een verantwoorde en ethische manier.  
 
 ## Samenvatting
 
@@ -152,17 +152,17 @@ Dit voorbeeld gebruikt opzettelijk problematische prompts uitsluitend voor educa
 - **Veiligheidsmechanismen getest** met behulp van de ingebouwde beschermingsmogelijkheden van GitHub Models  
 - **Best practices geleerd** voor verantwoordelijke AI-ontwikkeling en implementatie  
 
-**Hulpmiddelen voor Verantwoordelijke AI:**  
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Leer meer over Microsoft's aanpak van beveiliging, privacy en naleving  
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Ontdek Microsoft's principes en praktijken voor verantwoordelijke AI-ontwikkeling  
+**Bronnen voor Verantwoordelijke AI:**  
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Leer meer over de aanpak van Microsoft op het gebied van beveiliging, privacy en naleving  
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Ontdek de principes en praktijken van Microsoft voor verantwoordelijke AI-ontwikkeling  
 
-Je hebt de cursus Generatieve AI voor Beginners - Java Editie voltooid en bent nu uitgerust om veilige en effectieve AI-toepassingen te bouwen!
+Je hebt de cursus Generatieve AI voor Beginners - Java Editie voltooid en bent nu uitgerust om veilige en effectieve AI-toepassingen te bouwen!  
 
 ## Cursus Voltooiing
 
-Gefeliciteerd met het voltooien van de cursus Generatieve AI voor Beginners! Je hebt nu de kennis en tools om verantwoordelijke en effectieve generatieve AI-toepassingen te bouwen met Java.
+Gefeliciteerd met het voltooien van de cursus Generatieve AI voor Beginners! Je hebt nu de kennis en tools om verantwoordelijke en effectieve generatieve AI-toepassingen te bouwen met Java.  
 
-![Cursus Voltooiing](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.nl.png)
+![Cursus Voltooiing](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.nl.png)  
 
 **Wat je hebt bereikt:**  
 - Je ontwikkelomgeving opgezet  
@@ -192,4 +192,4 @@ Zet je AI-leertraject voort met deze aanvullende bronnen:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T16:12:11+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:44:31+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "pt"
 }
@@ -13,13 +13,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 - Compreender considerações éticas e melhores práticas para o desenvolvimento de IA
 - Implementar filtragem de conteúdo e medidas de segurança nas tuas aplicações
-- Testar e lidar com respostas de segurança de IA utilizando as proteções integradas dos modelos GitHub
+- Testar e lidar com respostas de segurança de IA utilizando as proteções integradas dos modelos do GitHub
 - Aplicar princípios de IA responsável para construir sistemas de IA seguros e éticos
 
 ## Índice
 
 - [Introdução](../../../05-ResponsibleGenAI)
-- [Segurança Integrada dos Modelos GitHub](../../../05-ResponsibleGenAI)
+- [Segurança Integrada dos Modelos do GitHub](../../../05-ResponsibleGenAI)
 - [Exemplo Prático: Demonstração de Segurança de IA Responsável](../../../05-ResponsibleGenAI)
   - [O que a Demonstração Mostra](../../../05-ResponsibleGenAI)
   - [Instruções de Configuração](../../../05-ResponsibleGenAI)
@@ -33,32 +33,32 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introdução
 
-Este capítulo final foca-se nos aspetos críticos de construir aplicações de IA generativa responsáveis e éticas. Vais aprender a implementar medidas de segurança, lidar com filtragem de conteúdo e aplicar melhores práticas para o desenvolvimento de IA responsável utilizando as ferramentas e frameworks abordadas nos capítulos anteriores. Compreender estes princípios é essencial para criar sistemas de IA que sejam não apenas tecnicamente impressionantes, mas também seguros, éticos e confiáveis.
+Este capítulo final foca-se nos aspetos críticos de construir aplicações de IA generativa responsáveis e éticas. Vais aprender a implementar medidas de segurança, lidar com filtragem de conteúdo e aplicar melhores práticas para o desenvolvimento de IA responsável utilizando as ferramentas e frameworks abordados nos capítulos anteriores. Compreender estes princípios é essencial para criar sistemas de IA que sejam não apenas tecnicamente impressionantes, mas também seguros, éticos e confiáveis.
 
-## Segurança Integrada dos Modelos GitHub
+## Segurança Integrada dos Modelos do GitHub
 
-Os Modelos GitHub incluem filtragem básica de conteúdo integrada. É como ter um porteiro amigável no teu clube de IA - não é o mais sofisticado, mas cumpre o seu papel em cenários básicos.
+Os modelos do GitHub incluem filtragem básica de conteúdo integrada. É como ter um porteiro amigável no teu clube de IA - não é o mais sofisticado, mas cumpre o seu papel em cenários básicos.
 
-**O que os Modelos GitHub Protegem:**
+**O que os Modelos do GitHub Protegem:**
 - **Conteúdo prejudicial**: Bloqueia conteúdo óbvio violento, sexual ou perigoso
 - **Discurso de ódio básico**: Filtra linguagem claramente discriminatória
-- **Tentativas simples de contornar restrições**: Resiste a esforços básicos para ultrapassar as barreiras de segurança
+- **Tentativas simples de contornar restrições**: Resiste a tentativas básicas de ultrapassar as barreiras de segurança
 
 ## Exemplo Prático: Demonstração de Segurança de IA Responsável
 
-Este capítulo inclui uma demonstração prática de como os Modelos GitHub implementam medidas de segurança de IA responsável, testando prompts que podem potencialmente violar as diretrizes de segurança.
+Este capítulo inclui uma demonstração prática de como os modelos do GitHub implementam medidas de segurança de IA responsável, testando prompts que podem potencialmente violar as diretrizes de segurança.
 
 ### O que a Demonstração Mostra
 
 A classe `ResponsibleGithubModels` segue este fluxo:
-1. Inicializar o cliente dos Modelos GitHub com autenticação
-2. Testar prompts prejudiciais (violência, discurso de ódio, desinformação, conteúdo ilegal)
-3. Enviar cada prompt para a API dos Modelos GitHub
-4. Lidar com as respostas: conteúdo gerado ou bloqueios do filtro de segurança
-5. Mostrar resultados indicando qual conteúdo foi bloqueado ou permitido
-6. Testar conteúdo seguro para comparação
+1. Inicializa o cliente dos modelos do GitHub com autenticação
+2. Testa prompts prejudiciais (violência, discurso de ódio, desinformação, conteúdo ilegal)
+3. Envia cada prompt para a API dos modelos do GitHub
+4. Lida com as respostas: conteúdo gerado ou bloqueios do filtro de segurança
+5. Exibe os resultados mostrando qual conteúdo foi bloqueado versus permitido
+6. Testa conteúdo seguro para comparação
 
-![Demonstração de Segurança de IA Responsável](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.pt.png)
+![Demonstração de Segurança de IA Responsável](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.pt.png)
 
 ### Instruções de Configuração
 
@@ -96,7 +96,7 @@ A classe `ResponsibleGithubModels` segue este fluxo:
 A demonstração irá testar vários tipos de prompts potencialmente prejudiciais e mostrar:
 - **Conteúdo seguro** que recebe uma resposta normal
 - **Conteúdo prejudicial** que é bloqueado pelos filtros de segurança
-- **Erros** que possam ocorrer durante o processamento
+- **Erros** que ocorrem durante o processamento
 
 Formato de saída de exemplo:
 ```
@@ -119,12 +119,12 @@ Status: Response generated (content appears safe)
 
 Ao construir aplicações de IA, segue estas práticas essenciais:
 
-1. **Lida sempre de forma adequada com respostas de filtros de segurança**
+1. **Lida sempre de forma adequada com respostas dos filtros de segurança**
    - Implementa tratamento de erros para conteúdo bloqueado
    - Fornece feedback significativo aos utilizadores quando o conteúdo é filtrado
 
 2. **Implementa validação adicional de conteúdo onde for apropriado**
-   - Adiciona verificações de segurança específicas ao domínio
+   - Adiciona verificações de segurança específicas para o domínio
    - Cria regras de validação personalizadas para o teu caso de uso
 
 3. **Educa os utilizadores sobre o uso responsável da IA**
@@ -147,9 +147,9 @@ Este exemplo utiliza prompts intencionalmente problemáticos apenas para fins ed
 
 **Parabéns!** Conseguiste:
 
-- **Implementar medidas de segurança de IA**, incluindo filtragem de conteúdo e gestão de respostas de segurança
+- **Implementar medidas de segurança de IA**, incluindo filtragem de conteúdo e tratamento de respostas de segurança
 - **Aplicar princípios de IA responsável** para construir sistemas de IA éticos e confiáveis
-- **Testar mecanismos de segurança** utilizando as capacidades de proteção integradas dos Modelos GitHub
+- **Testar mecanismos de segurança** utilizando as capacidades de proteção integradas dos modelos do GitHub
 - **Aprender melhores práticas** para o desenvolvimento e implementação de IA responsável
 
 **Recursos de IA Responsável:**
@@ -162,7 +162,7 @@ Concluíste o curso de IA Generativa para Iniciantes - Edição Java e estás ag
 
 Parabéns por concluir o curso de IA Generativa para Iniciantes! Agora tens o conhecimento e as ferramentas para construir aplicações de IA generativa responsáveis e eficazes com Java.
 
-![Conclusão do Curso](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.pt.png)
+![Conclusão do Curso](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.pt.png)
 
 **O que alcançaste:**
 - Configuraste o teu ambiente de desenvolvimento
@@ -172,9 +172,9 @@ Parabéns por concluir o curso de IA Generativa para Iniciantes! Agora tens o co
 
 ## Próximos Passos
 
-Continua a tua jornada de aprendizagem em IA com estes recursos adicionais:
+Continua a tua jornada de aprendizagem de IA com estes recursos adicionais:
 
-**Cursos Adicionais de Aprendizagem:**
+**Cursos de Aprendizagem Adicional:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)

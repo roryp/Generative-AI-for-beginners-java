@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:32:10+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:45:34+00:00",
   "source_file": "README.md",
   "language_code": "it"
 }
@@ -10,9 +10,9 @@ CO_OP_TRANSLATOR_METADATA:
 # Generative AI per Principianti - Edizione Java
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generative AI per Principianti - Edizione Java](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.it.png)
+![Generative AI per Principianti - Edizione Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.it.png)
 
-**Impegno di Tempo**: L'intero workshop può essere completato online senza configurazione locale. Se desideri eseguire gli esempi, la configurazione dell'ambiente richiede 2 minuti, mentre l'esplorazione degli esempi richiede da 1 a 3 ore a seconda della profondità di esplorazione.
+**Tempo Richiesto**: L'intero workshop può essere completato online senza configurazione locale. Se desideri eseguire gli esempi, l'impostazione dell'ambiente richiede 2 minuti, mentre l'esplorazione degli esempi richiede da 1 a 3 ore a seconda della profondità di esplorazione.
 
 > **Avvio Rapido**
 
@@ -20,47 +20,47 @@ CO_OP_TRANSLATOR_METADATA:
 2. Clicca su **Code** → scheda **Codespaces** → **...** → **New with options...**
 3. Usa le impostazioni predefinite – questo selezionerà il container di sviluppo creato per questo corso
 4. Clicca su **Create codespace**
-5. Attendi circa 2 minuti affinché l'ambiente sia pronto
-6. Vai direttamente a [Creare il tuo Token Modelli GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Aspetta circa 2 minuti affinché l'ambiente sia pronto
+6. Vai direttamente a [Creare il tuo Token GitHub Models](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Supporto Multilingue
 
 ### Supportato tramite GitHub Action (Automatizzato e Sempre Aggiornato)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](./README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+[Francese](../fr/README.md) | [Spagnolo](../es/README.md) | [Tedesco](../de/README.md) | [Russo](../ru/README.md) | [Arabo](../ar/README.md) | [Persiano (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Cinese (Semplificato)](../zh/README.md) | [Cinese (Tradizionale, Macao)](../mo/README.md) | [Cinese (Tradizionale, Hong Kong)](../hk/README.md) | [Cinese (Tradizionale, Taiwan)](../tw/README.md) | [Giapponese](../ja/README.md) | [Coreano](../ko/README.md) | [Hindi](../hi/README.md) | [Bengalese](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalese](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portoghese (Portogallo)](../pt/README.md) | [Portoghese (Brasile)](../br/README.md) | [Italiano](./README.md) | [Polacco](../pl/README.md) | [Turco](../tr/README.md) | [Greco](../el/README.md) | [Thailandese](../th/README.md) | [Svedese](../sv/README.md) | [Danese](../da/README.md) | [Norvegese](../no/README.md) | [Finlandese](../fi/README.md) | [Olandese](../nl/README.md) | [Ebraico](../he/README.md) | [Vietnamita](../vi/README.md) | [Indonesiano](../id/README.md) | [Malese](../ms/README.md) | [Tagalog (Filippino)](../tl/README.md) | [Swahili](../sw/README.md) | [Ungherese](../hu/README.md) | [Ceco](../cs/README.md) | [Slovacco](../sk/README.md) | [Rumeno](../ro/README.md) | [Bulgaro](../bg/README.md) | [Serbo (Cirillico)](../sr/README.md) | [Croato](../hr/README.md) | [Sloveno](../sl/README.md) | [Ucraino](../uk/README.md) | [Birmano (Myanmar)](../my/README.md)
 
 ## Struttura del Corso e Percorso di Apprendimento
 
-### **Capitolo 1: Introduzione alla Generative AI**
-- **Concetti Fondamentali**: Comprendere i modelli linguistici di grandi dimensioni, i token, gli embeddings e le capacità dell'AI
-- **Ecosistema AI in Java**: Panoramica su Spring AI e SDK OpenAI
-- **Protocollo di Contesto del Modello**: Introduzione al MCP e al suo ruolo nella comunicazione degli agenti AI
-- **Applicazioni Pratiche**: Scenari reali, inclusi chatbot e generazione di contenuti
+### **Capitolo 1: Introduzione al Generative AI**
+- **Concetti Fondamentali**: Comprendere i Large Language Models, i token, gli embeddings e le capacità dell'AI
+- **Ecosistema AI in Java**: Panoramica su Spring AI e OpenAI SDKs
+- **Model Context Protocol**: Introduzione a MCP e al suo ruolo nella comunicazione degli agenti AI
+- **Applicazioni Pratiche**: Scenari reali tra cui chatbot e generazione di contenuti
 - **[→ Inizia il Capitolo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capitolo 2: Configurazione dell'Ambiente di Sviluppo**
-- **Configurazione Multi-Provider**: Configura Modelli GitHub, Azure OpenAI e integrazioni SDK OpenAI per Java
+- **Configurazione Multi-Provider**: Configura GitHub Models, Azure OpenAI e le integrazioni con OpenAI Java SDK
 - **Spring Boot + Spring AI**: Best practice per lo sviluppo di applicazioni AI aziendali
-- **Modelli GitHub**: Accesso gratuito ai modelli AI per prototipazione e apprendimento (senza carta di credito)
+- **GitHub Models**: Accesso gratuito ai modelli AI per prototipazione e apprendimento (senza necessità di carta di credito)
 - **Strumenti di Sviluppo**: Configurazione di container Docker, VS Code e GitHub Codespaces
 - **[→ Inizia il Capitolo 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capitolo 3: Tecniche Fondamentali di Generative AI**
-- **Prompt Engineering**: Tecniche per risposte ottimali dei modelli AI
-- **Embeddings e Operazioni su Vettori**: Implementa ricerca semantica e confronto di similarità
-- **Generazione Augmentata da Recupero (RAG)**: Combina AI con le tue fonti di dati
-- **Chiamata di Funzioni**: Estendi le capacità dell'AI con strumenti e plugin personalizzati
+- **Prompt Engineering**: Tecniche per risposte ottimali dai modelli AI
+- **Embeddings e Operazioni sui Vettori**: Implementa ricerca semantica e confronto di similarità
+- **Retrieval-Augmented Generation (RAG)**: Combina AI con le tue fonti di dati
+- **Function Calling**: Estendi le capacità dell'AI con strumenti e plugin personalizzati
 - **[→ Inizia il Capitolo 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capitolo 4: Applicazioni Pratiche e Progetti**
-- **Generatore di Storie per Animali Domestici** (`petstory/`): Generazione creativa di contenuti con Modelli GitHub
-- **Demo Locale Foundry** (`foundrylocal/`): Integrazione locale di modelli AI con SDK OpenAI per Java
-- **Servizio Calcolatore MCP** (`mcp/calculator/`): Implementazione base del Protocollo di Contesto del Modello con Spring AI
+- **Generatore di Storie per Animali Domestici** (`petstory/`): Generazione creativa di contenuti con GitHub Models
+- **Demo Locale Foundry** (`foundrylocal/`): Integrazione di modelli AI locali con OpenAI Java SDK
+- **Servizio Calcolatrice MCP** (`mcp/calculator/`): Implementazione base del Model Context Protocol con Spring AI
 - **[→ Inizia il Capitolo 4](./04-PracticalSamples/README.md)**
 
-### **Capitolo 5: Sviluppo Responsabile dell'AI**
-- **Sicurezza dei Modelli GitHub**: Testa i filtri di contenuto integrati e i meccanismi di sicurezza
-- **Demo AI Responsabile**: Esempio pratico che mostra come funzionano i filtri di sicurezza dell'AI
+### **Capitolo 5: Sviluppo AI Responsabile**
+- **Sicurezza di GitHub Models**: Testa i filtri di contenuto integrati e i meccanismi di sicurezza
+- **Demo AI Responsabile**: Esempio pratico che mostra come funzionano i filtri di sicurezza AI
 - **Best Practice**: Linee guida essenziali per uno sviluppo e una distribuzione etica dell'AI
 - **[→ Inizia il Capitolo 5](./05-ResponsibleGenAI/README.md)**
 
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Disclaimer (Avvertenza)**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un esperto umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

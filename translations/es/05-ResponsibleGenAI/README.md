@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T16:12:34+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:30:40+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "es"
 }
@@ -58,7 +58,7 @@ La clase `ResponsibleGithubModels` sigue este flujo:
 5. Mostrar resultados indicando qué contenido fue bloqueado frente al permitido
 6. Probar contenido seguro para comparación
 
-![Demostración de Seguridad en IA Responsable](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.es.png)
+![Demostración de Seguridad en IA Responsable](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.es.png)
 
 ### Instrucciones de Configuración
 
@@ -141,7 +141,7 @@ Al construir aplicaciones de IA, sigue estas prácticas esenciales:
 
 ## Nota Importante
 
-Este ejemplo utiliza indicaciones problemáticas de manera intencional solo con fines educativos. El objetivo es demostrar medidas de seguridad, no eludirlas. Siempre utiliza herramientas de IA de manera responsable y ética.
+Este ejemplo utiliza indicaciones problemáticas intencionalmente solo con fines educativos. El objetivo es demostrar medidas de seguridad, no eludirlas. Usa siempre las herramientas de IA de manera responsable y ética.
 
 ## Resumen
 
@@ -156,13 +156,13 @@ Este ejemplo utiliza indicaciones problemáticas de manera intencional solo con 
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Aprende sobre el enfoque de Microsoft en seguridad, privacidad y cumplimiento
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Explora los principios y prácticas de Microsoft para el desarrollo de IA responsable
 
-Has completado el curso de IA Generativa para Principiantes - Edición Java y ahora estás preparado para construir aplicaciones de IA seguras y efectivas.
+Has completado el curso Generative AI for Beginners - Java Edition y ahora estás preparado para construir aplicaciones de IA seguras y efectivas.
 
 ## Finalización del Curso
 
-¡Felicidades por completar el curso de IA Generativa para Principiantes! Ahora tienes el conocimiento y las herramientas para construir aplicaciones de IA generativa responsables y efectivas con Java.
+¡Felicidades por completar el curso Generative AI for Beginners! Ahora tienes el conocimiento y las herramientas para construir aplicaciones de IA generativa responsables y efectivas con Java.
 
-![Finalización del Curso](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.es.png)
+![Finalización del Curso](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.es.png)
 
 **Lo que has logrado:**
 - Configurar tu entorno de desarrollo

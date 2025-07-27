@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:25:03+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:31:00+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -10,7 +10,7 @@ CO_OP_TRANSLATOR_METADATA:
 # Generative KI für Anfänger - Java Edition
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generative KI für Anfänger - Java Edition](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.de.png)
+![Generative KI für Anfänger - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.de.png)
 
 **Zeitaufwand**: Der gesamte Workshop kann online abgeschlossen werden, ohne lokale Einrichtung. Wenn Sie die Beispiele ausführen möchten, dauert die Einrichtung der Umgebung 2 Minuten, und das Erkunden der Beispiele erfordert je nach Tiefe der Erkundung 1-3 Stunden.
 

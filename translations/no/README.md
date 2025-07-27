@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:35:19+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:51:37+00:00",
   "source_file": "README.md",
   "language_code": "no"
 }
@@ -10,7 +10,7 @@ CO_OP_TRANSLATOR_METADATA:
 # Generativ AI for Nybegynnere - Java Edition
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generativ AI for Nybegynnere - Java Edition](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.no.png)
+![Generativ AI for Nybegynnere - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.no.png)
 
 **Tidsforpliktelse**: Hele workshoppen kan fullføres online uten lokal oppsett. Hvis du ønsker å kjøre eksemplene, tar miljøoppsettet 2 minutter, og utforskning av eksemplene krever 1-3 timer avhengig av hvor dypt du går.
 
@@ -21,13 +21,13 @@ CO_OP_TRANSLATOR_METADATA:
 3. Bruk standardinnstillingene – dette vil velge utviklingscontaineren som er laget for dette kurset
 4. Klikk **Create codespace**
 5. Vent ~2 minutter til miljøet er klart
-6. Gå direkte til [Opprette din GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Gå direkte til [Oppretting av din GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Støtte for flere språk
 
 ### Støttet via GitHub Action (Automatisk & Alltid Oppdatert)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](./README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+[Fransk](../fr/README.md) | [Spansk](../es/README.md) | [Tysk](../de/README.md) | [Russisk](../ru/README.md) | [Arabisk](../ar/README.md) | [Persisk (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kinesisk (Forenklet)](../zh/README.md) | [Kinesisk (Tradisjonell, Macau)](../mo/README.md) | [Kinesisk (Tradisjonell, Hong Kong)](../hk/README.md) | [Kinesisk (Tradisjonell, Taiwan)](../tw/README.md) | [Japansk](../ja/README.md) | [Koreansk](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugisisk (Portugal)](../pt/README.md) | [Portugisisk (Brasil)](../br/README.md) | [Italiensk](../it/README.md) | [Polsk](../pl/README.md) | [Tyrkisk](../tr/README.md) | [Gresk](../el/README.md) | [Thai](../th/README.md) | [Svensk](../sv/README.md) | [Dansk](../da/README.md) | [Norsk](./README.md) | [Finsk](../fi/README.md) | [Nederlandsk](../nl/README.md) | [Hebraisk](../he/README.md) | [Vietnamesisk](../vi/README.md) | [Indonesisk](../id/README.md) | [Malayisk](../ms/README.md) | [Tagalog (Filippinsk)](../tl/README.md) | [Swahili](../sw/README.md) | [Ungarsk](../hu/README.md) | [Tsjekkisk](../cs/README.md) | [Slovakisk](../sk/README.md) | [Rumensk](../ro/README.md) | [Bulgarsk](../bg/README.md) | [Serbisk (Kyrillisk)](../sr/README.md) | [Kroatisk](../hr/README.md) | [Slovensk](../sl/README.md) | [Ukrainsk](../uk/README.md) | [Burmesisk (Myanmar)](../my/README.md)
 
 ## Kursstruktur & Læringssti
 
@@ -49,7 +49,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Prompt Engineering**: Teknikker for optimale AI-modellsvar
 - **Embeddings & Vektoroperasjoner**: Implementer semantisk søk og likhetsmatching
 - **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
-- **Funksjonskall**: Utvid AI-funksjoner med tilpassede verktøy og plugins
+- **Funksjonskalling**: Utvid AI-funksjoner med tilpassede verktøy og plugins
 - **[→ Start Kapittel 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kapittel 4: Praktiske Anvendelser & Prosjekter**
@@ -60,7 +60,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Kapittel 5: Ansvarlig AI-utvikling**
 - **GitHub Models Sikkerhet**: Test innebygde innholdsfiltre og sikkerhetsmekanismer
-- **Ansvarlig AI-demo**: Praktisk eksempel som viser hvordan AI-sikkerhetsfiltre fungerer
+- **Ansvarlig AI-demo**: Praktisk eksempel som viser hvordan AI-sikkerhetsfiltre fungerer i praksis
 - **Beste praksis**: Essensielle retningslinjer for etisk AI-utvikling og implementering
 - **[→ Start Kapittel 5](./05-ResponsibleGenAI/README.md)**
 
