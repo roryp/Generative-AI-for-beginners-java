@@ -12,7 +12,7 @@
 3. Use the defaults – this will select the Development container created for this course
 4. Click **Create codespace**
 5. Wait ~2 minutes for the environment to be ready
-6. Jump straight to [Creating your GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Jump straight to [The first example](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Multi-Language Support
 
