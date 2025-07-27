@@ -134,12 +134,12 @@ Steps:
 
 ## Step 3: Test Your Setup with the GitHub Models Example
 
-Once your development environment is ready, let's test the GitHub Models integration with our example application in [`02-SetupDevEnvironment/src/github-models`](./src/github-models/).
+Once your development environment is ready, let's test the GitHub Models integration with our example application in [`02-SetupDevEnvironment/examples/github-models`](./examples/github-models/).
 
 1. Open the terminal in your development environment.
 2. Navigate to the GitHub Models example:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Set your GitHub token as an environment variable:
    ```bash
@@ -167,7 +167,7 @@ Response: Hello World!
 
 ### Understanding the Example Code
 
-First, let's understand what we just ran. The example under `src/github-models` uses the OpenAI Java SDK to connect to GitHub Models:
+First, let's understand what we just ran. The example under `examples/github-models` uses the OpenAI Java SDK to connect to GitHub Models:
 
 **What this code does:**
 - **Connects** to GitHub Models using your personal access token
@@ -241,7 +241,7 @@ Having issues? Here are common problems and solutions:
   - Try rebuilding the container: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Application compilation errors?**
-  - Ensure you're in the correct directory: `02-SetupDevEnvironment/src/github-models`
+  - Ensure you're in the correct directory: `02-SetupDevEnvironment/examples/github-models`
   - Try cleaning and rebuilding: `mvn clean compile`
 
 > **Need help?**: Still having issues? Open an issue in the repository and we'll help you out.

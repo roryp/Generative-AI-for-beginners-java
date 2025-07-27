@@ -78,7 +78,7 @@ Once your Codespace is ready, set up your Azure OpenAI credentials:
 
 1. **Navigate to the example project from the repository root:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Create your .env file:**
@@ -112,7 +112,7 @@ You should see a response from the GPT-4o-mini model!
 
 > **VS Code Users**: You can also press `F5` in VS Code to run the application. The launch configuration is already set up to load your `.env` file automatically.
 
-> **Full example**: See the [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) for detailed instructions and troubleshooting.
+> **Full example**: See the [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) for detailed instructions and troubleshooting.
 
 ## What's Next?
 
