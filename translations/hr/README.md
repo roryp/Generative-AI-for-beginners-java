@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T09:04:04+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T19:02:51+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativna umjetna inteligencija za početnike - Java izdanje](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.hr.png)
 
-**Vrijeme potrebno**: Cijela radionica može se završiti online bez lokalne postavke. Ako želite pokrenuti primjere, postavljanje okruženja traje 2 minute, dok istraživanje primjera zahtijeva 1-3 sata, ovisno o dubini istraživanja.
+**Vrijeme potrebno**: Cijela radionica može se završiti online bez lokalne postavke. Postavljanje okruženja traje 2 minute, dok istraživanje primjera zahtijeva 1-3 sata, ovisno o dubini istraživanja.
 
 > **Brzi početak**
 
@@ -21,48 +21,48 @@ CO_OP_TRANSLATOR_METADATA:
 3. Koristite zadane postavke – ovo će odabrati razvojni kontejner kreiran za ovaj tečaj
 4. Kliknite **Create codespace**
 5. Pričekajte ~2 minute da okruženje bude spremno
-6. Odmah krenite na [Kreiranje vašeg GitHub Models Tokena](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Odmah prijeđite na [Kreiranje vašeg GitHub Models tokena](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Podrška za više jezika
 
 ### Podržano putem GitHub Action (Automatizirano i uvijek ažurirano)
 
-[Francuski](../fr/README.md) | [Španjolski](../es/README.md) | [Njemački](../de/README.md) | [Ruski](../ru/README.md) | [Arapski](../ar/README.md) | [Perzijski (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kineski (pojednostavljeni)](../zh/README.md) | [Kineski (tradicionalni, Macau)](../mo/README.md) | [Kineski (tradicionalni, Hong Kong)](../hk/README.md) | [Kineski (tradicionalni, Tajvan)](../tw/README.md) | [Japanski](../ja/README.md) | [Korejski](../ko/README.md) | [Hindski](../hi/README.md) | [Bengalski](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalski](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugalski (Portugal)](../pt/README.md) | [Portugalski (Brazil)](../br/README.md) | [Talijanski](../it/README.md) | [Poljski](../pl/README.md) | [Turski](../tr/README.md) | [Grčki](../el/README.md) | [Tajlandski](../th/README.md) | [Švedski](../sv/README.md) | [Danski](../da/README.md) | [Norveški](../no/README.md) | [Finski](../fi/README.md) | [Nizozemski](../nl/README.md) | [Hebrejski](../he/README.md) | [Vijetnamski](../vi/README.md) | [Indonezijski](../id/README.md) | [Malajski](../ms/README.md) | [Tagalog (Filipinski)](../tl/README.md) | [Svahili](../sw/README.md) | [Mađarski](../hu/README.md) | [Češki](../cs/README.md) | [Slovački](../sk/README.md) | [Rumunjski](../ro/README.md) | [Bugarski](../bg/README.md) | [Srpski (ćirilica)](../sr/README.md) | [Hrvatski](./README.md) | [Slovenski](../sl/README.md) | [Ukrajinski](../uk/README.md) | [Burmanski (Mjanmar)](../my/README.md)
+[Francuski](../fr/README.md) | [Španjolski](../es/README.md) | [Njemački](../de/README.md) | [Ruski](../ru/README.md) | [Arapski](../ar/README.md) | [Perzijski (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kineski (pojednostavljeni)](../zh/README.md) | [Kineski (tradicionalni, Makao)](../mo/README.md) | [Kineski (tradicionalni, Hong Kong)](../hk/README.md) | [Kineski (tradicionalni, Tajvan)](../tw/README.md) | [Japanski](../ja/README.md) | [Korejski](../ko/README.md) | [Hindski](../hi/README.md) | [Bengalski](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalski](../ne/README.md) | [Pandžapski (Gurmukhi)](../pa/README.md) | [Portugalski (Portugal)](../pt/README.md) | [Portugalski (Brazil)](../br/README.md) | [Talijanski](../it/README.md) | [Poljski](../pl/README.md) | [Turski](../tr/README.md) | [Grčki](../el/README.md) | [Tajlandski](../th/README.md) | [Švedski](../sv/README.md) | [Danski](../da/README.md) | [Norveški](../no/README.md) | [Finski](../fi/README.md) | [Nizozemski](../nl/README.md) | [Hebrejski](../he/README.md) | [Vijetnamski](../vi/README.md) | [Indonezijski](../id/README.md) | [Malajski](../ms/README.md) | [Tagalog (Filipinski)](../tl/README.md) | [Svahili](../sw/README.md) | [Mađarski](../hu/README.md) | [Češki](../cs/README.md) | [Slovački](../sk/README.md) | [Rumunjski](../ro/README.md) | [Bugarski](../bg/README.md) | [Srpski (ćirilica)](../sr/README.md) | [Hrvatski](./README.md) | [Slovenski](../sl/README.md) | [Ukrajinski](../uk/README.md) | [Burmanski (Mjanmar)](../my/README.md)
 
 ## Struktura tečaja i put učenja
 
 ### **Poglavlje 1: Uvod u generativnu umjetnu inteligenciju**
-- **Osnovni koncepti**: Razumijevanje velikih jezičnih modela, tokena, ugrađivanja i AI sposobnosti
+- **Osnovni koncepti**: Razumijevanje velikih jezičnih modela, tokena, ugradnji i AI mogućnosti
 - **Java AI ekosustav**: Pregled Spring AI i OpenAI SDK-ova
 - **Protokol konteksta modela**: Uvod u MCP i njegovu ulogu u komunikaciji AI agenata
-- **Praktične primjene**: Scenariji iz stvarnog svijeta, uključujući chatbotove i generiranje sadržaja
-- **[→ Započnite Poglavlje 1](./01-IntroToGenAI/README.md)**
+- **Praktične primjene**: Primjeri iz stvarnog svijeta, uključujući chatbotove i generiranje sadržaja
+- **[→ Započni poglavlje 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavlje 2: Postavljanje razvojnog okruženja**
-- **Konfiguracija za više pružatelja usluga**: Postavite GitHub Models, Azure OpenAI i OpenAI Java SDK integracije
-- **Spring Boot + Spring AI**: Najbolje prakse za razvoj AI aplikacija za poduzeća
+- **Konfiguracija za više pružatelja usluga**: Postavljanje GitHub Models, Azure OpenAI i OpenAI Java SDK integracija
+- **Spring Boot + Spring AI**: Najbolje prakse za razvoj AI aplikacija u poduzećima
 - **GitHub Models**: Besplatan pristup AI modelima za prototipiranje i učenje (nije potrebna kreditna kartica)
 - **Razvojni alati**: Konfiguracija Docker kontejnera, VS Code-a i GitHub Codespaces-a
-- **[→ Započnite Poglavlje 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Započni poglavlje 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Poglavlje 3: Osnovne tehnike generativne umjetne inteligencije**
 - **Inženjering upita**: Tehnike za optimalne odgovore AI modela
-- **Ugrađivanja i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
-- **Generacija uz podršku pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
-- **Pozivanje funkcija**: Proširenje AI sposobnosti prilagođenim alatima i dodacima
-- **[→ Započnite Poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
+- **Ugradnje i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
+- **Generiranje uz podršku pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
+- **Pozivanje funkcija**: Proširenje AI mogućnosti prilagođenim alatima i dodacima
+- **[→ Započni poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavlje 4: Praktične primjene i projekti**
 - **Generator priča o kućnim ljubimcima** (`petstory/`): Kreativno generiranje sadržaja s GitHub Models
-- **Foundry lokalna demonstracija** (`foundrylocal/`): Lokalna integracija AI modela s OpenAI Java SDK-om
+- **Foundry lokalna demonstracija** (`foundrylocal/`): Integracija lokalnih AI modela s OpenAI Java SDK-om
 - **MCP kalkulator usluga** (`mcp/calculator/`): Osnovna implementacija protokola konteksta modela sa Spring AI
-- **[→ Započnite Poglavlje 4](./04-PracticalSamples/README.md)**
+- **[→ Započni poglavlje 4](./04-PracticalSamples/README.md)**
 
-### **Poglavlje 5: Razvoj odgovorne umjetne inteligencije**
-- **Sigurnost GitHub Modelsa**: Testiranje ugrađenog filtriranja sadržaja i sigurnosnih mehanizama
-- **Demonstracija odgovorne AI**: Praktični primjer koji pokazuje kako sigurnosni filteri AI-a funkcioniraju
+### **Poglavlje 5: Odgovoran razvoj umjetne inteligencije**
+- **Sigurnost GitHub Modelsa**: Testiranje ugrađenih mehanizama za filtriranje sadržaja i sigurnost
+- **Demonstracija odgovorne AI**: Praktičan primjer koji pokazuje kako sigurnosni filtri AI-a funkcioniraju u praksi
 - **Najbolje prakse**: Ključne smjernice za etički razvoj i implementaciju AI-a
-- **[→ Započnite Poglavlje 5](./05-ResponsibleGenAI/README.md)**
+- **[→ Započni poglavlje 5](./05-ResponsibleGenAI/README.md)**
 
 ## Dodatni resursi
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Generativna umjetna inteligencija za početnike koristeći JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generativna umjetna inteligencija za početnike](https://github.com/microsoft/generative-ai-for-beginners)
 - [Strojno učenje za početnike](https://aka.ms/ml-beginners)
-- [Data Science za početnike](https://aka.ms/datascience-beginners)
+- [Znanost o podacima za početnike](https://aka.ms/datascience-beginners)
 - [Umjetna inteligencija za početnike](https://aka.ms/ai-beginners)
 - [Kibernetička sigurnost za početnike](https://github.com/microsoft/Security-101)
 - [Web razvoj za početnike](https://aka.ms/webdev-beginners)
@@ -79,8 +79,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [XR razvoj za početnike](https://github.com/microsoft/xr-development-for-beginners)
 - [Ovladavanje GitHub Copilotom za AI programiranje u paru](https://aka.ms/GitHubCopilotAI)
 - [Ovladavanje GitHub Copilotom za C#/.NET programere](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Odaberite vlastitu Copilot avanturu](https://github.com/microsoft/CopilotAdventures)
-- [RAG aplikacija za chat s Azure AI uslugama](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [Odaberi svoju avanturu s Copilotom](https://github.com/microsoft/CopilotAdventures)
+- [RAG chat aplikacija s Azure AI uslugama](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

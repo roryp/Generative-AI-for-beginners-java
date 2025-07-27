@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:53:52+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:57:59+00:00",
   "source_file": "README.md",
   "language_code": "he"
 }
 -->
-# בינה מלאכותית גנרטיבית למתחילים - מהדורת Java
+# בינה מלאכותית גנרטיבית למתחילים - גרסת Java
 
-**זמן נדרש**: ניתן להשלים את הסדנה כולה באופן מקוון ללא צורך בהתקנה מקומית. אם תרצו להריץ את הדוגמאות, הגדרת הסביבה לוקחת כ-2 דקות, והחקירה של הדוגמאות עשויה להימשך בין שעה לשלוש שעות, בהתאם לעומק החקירה.
+**זמן נדרש**: ניתן להשלים את הסדנה כולה באופן מקוון ללא צורך בהתקנה מקומית. הגדרת הסביבה אורכת כ-2 דקות, והחקירה של הדוגמאות עשויה להימשך בין שעה לשלוש שעות, בהתאם לעומק החקירה.
 
 > **התחלה מהירה**
 
@@ -31,18 +31,18 @@ CO_OP_TRANSLATOR_METADATA:
 ### **פרק 1: מבוא לבינה מלאכותית גנרטיבית**
 - **מושגים מרכזיים**: הבנת מודלים שפתיים גדולים, טוקנים, הטמעות ויכולות AI  
 - **מערכת AI ב-Java**: סקירה של Spring AI ו-SDKs של OpenAI  
-- **פרוטוקול הקשר של מודלים**: מבוא ל-MCP ותפקידו בתקשורת סוכני AI  
+- **פרוטוקול הקשר מודלים**: מבוא ל-MCP ותפקידו בתקשורת סוכני AI  
 - **יישומים מעשיים**: תרחישים בעולם האמיתי כמו צ'אטבוטים ויצירת תוכן  
 - **[→ התחלת פרק 1](./01-IntroToGenAI/README.md)**  
 
 ### **פרק 2: הגדרת סביבת פיתוח**
-- **תצורה רב-ספקית**: הגדרת מודלים של GitHub, Azure OpenAI ו-SDK של OpenAI ל-Java  
+- **תצורה רב-ספקית**: הגדרת מודלים של GitHub, Azure OpenAI ואינטגרציות SDK של OpenAI ב-Java  
 - **Spring Boot + Spring AI**: שיטות עבודה מומלצות לפיתוח יישומי AI ארגוניים  
 - **מודלים של GitHub**: גישה חינמית למודלים של AI לצורך אבטיפוס ולמידה (ללא צורך בכרטיס אשראי)  
-- **כלי פיתוח**: תצורת מיכלי Docker, VS Code ו-GitHub Codespaces  
+- **כלי פיתוח**: מיכלי Docker, VS Code ותצורת GitHub Codespaces  
 - **[→ התחלת פרק 2](./02-SetupDevEnvironment/README.md)**  
 
-### **פרק 3: טכניקות ליבה בבינה מלאכותית גנרטיבית**
+### **פרק 3: טכניקות ליבה של בינה מלאכותית גנרטיבית**
 - **הנדסת הנחיות**: טכניקות לתגובות מיטביות ממודלי AI  
 - **הטמעות ופעולות וקטוריות**: יישום חיפוש סמנטי והתאמת דמיון  
 - **יצירה מוגברת על ידי אחזור (RAG)**: שילוב AI עם מקורות נתונים משלכם  
@@ -51,8 +51,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **פרק 4: יישומים מעשיים ופרויקטים**
 - **מחולל סיפורי חיות מחמד** (`petstory/`): יצירת תוכן יצירתי עם מודלים של GitHub  
-- **דמו מקומי של Foundry** (`foundrylocal/`): שילוב מודלים של AI מקומיים עם SDK של OpenAI ל-Java  
-- **שירות מחשבון MCP** (`mcp/calculator/`): יישום בסיסי של פרוטוקול הקשר של מודלים עם Spring AI  
+- **דמו מקומי של Foundry** (`foundrylocal/`): אינטגרציה של מודלים מקומיים עם SDK של OpenAI ב-Java  
+- **שירות מחשבון MCP** (`mcp/calculator/`): יישום בסיסי של פרוטוקול הקשר מודלים עם Spring AI  
 - **[→ התחלת פרק 4](./04-PracticalSamples/README.md)**  
 
 ### **פרק 5: פיתוח AI אחראי**
@@ -68,7 +68,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [בינה מלאכותית גנרטיבית למתחילים באמצעות JavaScript](https://github.com/microsoft/generative-ai-with-javascript)  
 - [בינה מלאכותית גנרטיבית למתחילים](https://github.com/microsoft/generative-ai-for-beginners)  
 - [למידת מכונה למתחילים](https://aka.ms/ml-beginners)  
-- [מדעי הנתונים למתחילים](https://aka.ms/datascience-beginners)  
+- [מדע נתונים למתחילים](https://aka.ms/datascience-beginners)  
 - [AI למתחילים](https://aka.ms/ai-beginners)  
 - [סייבר למתחילים](https://github.com/microsoft/Security-101)  
 - [פיתוח אתרים למתחילים](https://aka.ms/webdev-beginners)  
@@ -76,8 +76,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [פיתוח XR למתחילים](https://github.com/microsoft/xr-development-for-beginners)  
 - [שליטה ב-GitHub Copilot לתכנות זוגי עם AI](https://aka.ms/GitHubCopilotAI)  
 - [שליטה ב-GitHub Copilot למפתחי C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
-- [בחרו את הרפתקת Copilot שלכם](https://github.com/microsoft/CopilotAdventures)  
+- [הרפתקאות Copilot לבחירתכם](https://github.com/microsoft/CopilotAdventures)  
 - [אפליקציית צ'אט RAG עם שירותי Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). בעוד שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.

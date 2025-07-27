@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:53:08+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:57:40+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generatieve AI voor Beginners - Java Editie](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.nl.png)
 
-**Tijdsinvestering**: De hele workshop kan online worden voltooid zonder lokale installatie. Als je de voorbeelden wilt uitvoeren, duurt het instellen van de omgeving 2 minuten, en het verkennen van de voorbeelden 1-3 uur, afhankelijk van de diepte van je verkenning.
+**Tijdsinvestering**: De hele workshop kan online worden voltooid zonder lokale installatie. Het instellen van de omgeving duurt 2 minuten, en het verkennen van de voorbeelden neemt 1-3 uur in beslag, afhankelijk van de diepte van de verkenning.
 
 > **Snelle Start**
 
@@ -20,7 +20,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. Klik op **Code** → tabblad **Codespaces** → **...** → **Nieuw met opties...**
 3. Gebruik de standaardinstellingen – dit selecteert de ontwikkelcontainer die voor deze cursus is gemaakt
 4. Klik op **Codespace maken**
-5. Wacht ~2 minuten tot de omgeving klaar is
+5. Wacht ~2 minuten tot de omgeving gereed is
 6. Ga direct naar [Je GitHub Models Token maken](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Ondersteuning voor Meerdere Talen
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Kernconcepten**: Begrip van Large Language Models, tokens, embeddings en AI-mogelijkheden
 - **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDK's
 - **Model Context Protocol**: Introductie tot MCP en de rol ervan in AI-agentcommunicatie
-- **Praktische Toepassingen**: Toepassingen in de echte wereld, zoals chatbots en contentgeneratie
+- **Praktische Toepassingen**: Real-world scenario's zoals chatbots en contentgeneratie
 - **[→ Start Hoofdstuk 1](./01-IntroToGenAI/README.md)**
 
 ### **Hoofdstuk 2: Ontwikkelomgeving Instellen**
@@ -48,8 +48,8 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Hoofdstuk 3: Kerntechnieken van Generatieve AI**
 - **Prompt Engineering**: Technieken voor optimale AI-modelreacties
 - **Embeddings & Vectorbewerkingen**: Implementeren van semantisch zoeken en overeenkomsten
-- **Retrieval-Augmented Generation (RAG)**: AI combineren met je eigen gegevensbronnen
-- **Functieaanroepen**: AI uitbreiden met aangepaste tools en plugins
+- **Retrieval-Augmented Generation (RAG)**: Combineer AI met je eigen gegevensbronnen
+- **Functieaanroepen**: Breid AI-mogelijkheden uit met aangepaste tools en plug-ins
 - **[→ Start Hoofdstuk 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Hoofdstuk 4: Praktische Toepassingen & Projecten**
@@ -59,8 +59,8 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Hoofdstuk 4](./04-PracticalSamples/README.md)**
 
 ### **Hoofdstuk 5: Verantwoordelijke AI-ontwikkeling**
-- **GitHub Models Veiligheid**: Test ingebouwde contentfiltering en veiligheidsmechanismen
-- **Verantwoordelijke AI Demo**: Praktisch voorbeeld van hoe AI-veiligheidsfilters werken
+- **GitHub Models Veiligheid**: Test ingebouwde contentfilters en veiligheidsmechanismen
+- **Verantwoordelijke AI Demo**: Hands-on voorbeeld dat laat zien hoe AI-veiligheidsfilters in de praktijk werken
 - **Best Practices**: Essentiële richtlijnen voor ethische AI-ontwikkeling en implementatie
 - **[→ Start Hoofdstuk 5](./05-ResponsibleGenAI/README.md)**
 

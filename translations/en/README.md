@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:29:01+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:45:24+00:00",
   "source_file": "README.md",
   "language_code": "en"
 }
 -->
 # Generative AI for Beginners - Java Edition
 
-**Time Commitment**: You can complete the entire workshop online without needing a local setup. If you want to run the examples, setting up the environment takes about 2 minutes, and exploring the samples can take 1-3 hours depending on how deeply you dive into them.
+**Time Commitment**: This workshop can be completed entirely online without requiring a local setup. Setting up the environment takes about 2 minutes, and exploring the samples can take 1-3 hours depending on how deeply you dive into them.
 
 > **Quick Start**
 
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
 3. Use the default settings – this will select the Development container created for this course.
 4. Click **Create codespace**.
 5. Wait approximately 2 minutes for the environment to be ready.
-6. Go directly to [Creating your GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token).
+6. Proceed directly to [Creating your GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token).
 
 ## Multi-Language Support
 
@@ -30,9 +30,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Chapter 1: Introduction to Generative AI**
 - **Core Concepts**: Learn about Large Language Models, tokens, embeddings, and AI capabilities.
-- **Java AI Ecosystem**: Explore Spring AI and OpenAI SDKs.
+- **Java AI Ecosystem**: Overview of Spring AI and OpenAI SDKs.
 - **Model Context Protocol**: Understand MCP and its importance in AI agent communication.
-- **Practical Applications**: Discover real-world use cases like chatbots and content generation.
+- **Practical Applications**: Explore real-world use cases like chatbots and content generation.
 - **[→ Start Chapter 1](./01-IntroToGenAI/README.md)**
 
 ### **Chapter 2: Development Environment Setup**
@@ -50,7 +50,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapter 4: Practical Applications & Projects**
-- **Pet Story Generator** (`petstory/`): Create engaging content using GitHub Models.
+- **Pet Story Generator** (`petstory/`): Generate creative content using GitHub Models.
 - **Foundry Local Demo** (`foundrylocal/`): Integrate local AI models with OpenAI Java SDK.
 - **MCP Calculator Service** (`mcp/calculator/`): Implement a basic Model Context Protocol with Spring AI.
 - **[→ Start Chapter 4](./04-PracticalSamples/README.md)**
@@ -80,4 +80,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

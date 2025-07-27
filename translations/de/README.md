@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:31:00+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:46:29+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative KI für Anfänger - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.de.png)
 
-**Zeitaufwand**: Der gesamte Workshop kann online abgeschlossen werden, ohne lokale Einrichtung. Wenn Sie die Beispiele ausführen möchten, dauert die Einrichtung der Umgebung 2 Minuten, und das Erkunden der Beispiele erfordert je nach Tiefe der Erkundung 1-3 Stunden.
+**Zeitaufwand**: Der gesamte Workshop kann online abgeschlossen werden, ohne lokale Einrichtung. Die Einrichtung der Umgebung dauert 2 Minuten, das Erkunden der Beispiele erfordert je nach Tiefe der Erkundung 1-3 Stunden.
 
 > **Schnellstart**
 
@@ -41,7 +41,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapitel 2: Einrichtung der Entwicklungsumgebung**
 - **Multi-Provider-Konfiguration**: Einrichtung von GitHub Models, Azure OpenAI und OpenAI Java SDK-Integrationen
 - **Spring Boot + Spring AI**: Best Practices für die Entwicklung von Unternehmens-KI-Anwendungen
-- **GitHub Models**: Kostenloser Zugriff auf KI-Modelle für Prototyping und Lernen (keine Kreditkarte erforderlich)
+- **GitHub Models**: Kostenloser Zugang zu KI-Modellen für Prototyping und Lernen (keine Kreditkarte erforderlich)
 - **Entwicklungswerkzeuge**: Docker-Container, VS Code und GitHub Codespaces-Konfiguration
 - **[→ Kapitel 2 starten](./02-SetupDevEnvironment/README.md)**
 
@@ -59,9 +59,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Kapitel 4 starten](./04-PracticalSamples/README.md)**
 
 ### **Kapitel 5: Verantwortungsvolle KI-Entwicklung**
-- **GitHub Models Sicherheit**: Testen von integrierten Inhaltsfiltern und Sicherheitsmechanismen
+- **GitHub Models Sicherheit**: Testen von eingebauten Inhaltsfiltern und Sicherheitsmechanismen
 - **Responsible AI Demo**: Praktisches Beispiel, das zeigt, wie KI-Sicherheitsfilter in der Praxis funktionieren
-- **Best Practices**: Wesentliche Richtlinien für die ethische Entwicklung und Bereitstellung von KI
+- **Best Practices**: Wesentliche Richtlinien für ethische KI-Entwicklung und -Bereitstellung
 - **[→ Kapitel 5 starten](./05-ResponsibleGenAI/README.md)**
 
 ## Zusätzliche Ressourcen
