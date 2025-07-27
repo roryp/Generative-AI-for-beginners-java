@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T21:03:08+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:21:57+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "sw"
 }
 -->
 # Kuweka Mazingira ya Maendeleo kwa Azure OpenAI
 
-> **Kuanza Haraka**: Mwongozo huu ni kwa ajili ya usanidi wa Azure OpenAI. Kwa kuanza mara moja na mifano ya bure, tumia [GitHub Models with Codespaces](./README.md#quick-start-cloud).
+> **Mwongozo wa Haraka**: Mwongozo huu ni kwa ajili ya usanidi wa Azure OpenAI. Kwa kuanza mara moja na mifano ya bure, tumia [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
 Mwongozo huu utakusaidia kuweka mifano ya Azure AI Foundry kwa programu zako za Java AI katika kozi hii.
 
@@ -86,7 +86,7 @@ Baada ya Codespace yako kuwa tayari, weka hati zako za Azure OpenAI:
 
 1. **Nenda kwenye mradi wa mfano kutoka mzizi wa hifadhi:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Unda faili yako ya .env:**
@@ -120,14 +120,14 @@ Unapaswa kuona majibu kutoka kwa modeli ya GPT-4o-mini!
 
 > **Watumiaji wa VS Code**: Unaweza pia kubonyeza `F5` katika VS Code kuendesha programu. Usanidi wa uzinduzi tayari umewekwa ili kupakia faili yako ya `.env` moja kwa moja.
 
-> **Mfano kamili**: Tazama [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) kwa maelekezo ya kina na utatuzi wa matatizo.
+> **Mfano kamili**: Tazama [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) kwa maelekezo ya kina na utatuzi wa matatizo.
 
 ## Nini Kinachofuata?
 
 **Usanidi Umekamilika!** Sasa una:
 - Azure OpenAI na gpt-4o-mini imepelekwa
 - Usanidi wa faili ya .env ya ndani
-- Mazingira ya maendeleo ya Java yako tayari
+- Mazingira ya maendeleo ya Java tayari
 
 **Endelea na** [Sura ya 3: Mbinu za Msingi za Generative AI](../03-CoreGenerativeAITechniques/README.md) kuanza kujenga programu za AI!
 
@@ -144,4 +144,4 @@ Unapaswa kuona majibu kutoka kwa modeli ya GPT-4o-mini!
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asilia katika lugha yake ya awali inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kibinadamu ya kitaalamu. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

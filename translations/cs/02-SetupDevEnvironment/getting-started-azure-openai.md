@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T21:03:54+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:23:55+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "cs"
 }
 -->
 # Nastavení vývojového prostředí pro Azure OpenAI
 
-> **Rychlý start**: Tento průvodce je určen pro nastavení Azure OpenAI. Pro okamžitý start s bezplatnými modely použijte [GitHub Models with Codespaces](./README.md#quick-start-cloud).
+> **Rychlý start**: Tento průvodce je určen pro nastavení Azure OpenAI. Pro okamžitý začátek s bezplatnými modely použijte [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
 Tento průvodce vám pomůže nastavit modely Azure AI Foundry pro vaše Java AI aplikace v tomto kurzu.
 
@@ -41,7 +41,7 @@ Tento průvodce vám pomůže nastavit modely Azure AI Foundry pro vaše Java AI
 2. Klikněte na **+ Create** → **New hub** (nebo přejděte na **Management** → **All hubs** → **+ New hub**)
 3. Nakonfigurujte svůj hub:
    - **Hub name**: např. "MyAIHub"
-   - **Subscription**: Vyberte své předplatné Azure
+   - **Subscription**: Vyberte své Azure předplatné
    - **Resource group**: Vytvořte novou nebo vyberte existující
    - **Location**: Vyberte nejbližší lokalitu
    - **Storage account**: Použijte výchozí nebo nakonfigurujte vlastní
@@ -61,19 +61,19 @@ Tento průvodce vám pomůže nastavit modely Azure AI Foundry pro vaše Java AI
    - **Model version**: Použijte nejnovější
    - **Deployment type**: Standard
 4. Klikněte na **Deploy**
-5. Po nasazení přejděte na kartu **Deployments** a zkopírujte tyto hodnoty:
+5. Po nasazení přejděte na záložku **Deployments** a zkopírujte tyto hodnoty:
    - **Deployment name** (např. "gpt-4o-mini")
    - **Target URI** (např. `https://your-hub-name.openai.azure.com/`) 
-      > **Důležité**: Zkopírujte pouze základní URL (např. `https://myhub.openai.azure.com/`), ne celou cestu k endpointu.
+      > **Důležité**: Zkopírujte pouze základní URL (např. `https://myhub.openai.azure.com/`) nikoli celou cestu k endpointu.
    - **Key** (z části Keys and Endpoint)
 
-> **Stále máte potíže?** Navštivte oficiální [dokumentaci Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
+> **Stále máte potíže?** Navštivte oficiální [Dokumentaci Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
 
 ## Krok 2: Vytvoření Codespace
 
-1. Forkněte toto úložiště do svého GitHub účtu
+1. Forkněte tento repozitář do svého GitHub účtu
    > **Poznámka**: Pokud chcete upravit základní konfiguraci, podívejte se na [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
-2. Ve svém forkovaném úložišti klikněte na **Code** → záložka **Codespaces**
+2. Ve svém forkovaném repozitáři klikněte na **Code** → záložka **Codespaces**
 3. Klikněte na **...** → **New with options...**
 ![vytvoření codespace s možnostmi](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.cs.png)
 4. Vyberte **Dev container configuration**: 
@@ -84,9 +84,9 @@ Tento průvodce vám pomůže nastavit modely Azure AI Foundry pro vaše Java AI
 
 Jakmile je váš Codespace připraven, nastavte přihlašovací údaje Azure OpenAI:
 
-1. **Přejděte k ukázkovému projektu z kořenového adresáře úložiště:**
+1. **Přejděte na ukázkový projekt z kořenového adresáře repozitáře:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Vytvořte soubor .env:**
@@ -106,7 +106,7 @@ Jakmile je váš Codespace připraven, nastavte přihlašovací údaje Azure Ope
    > **Bezpečnostní poznámka**: 
    > - Nikdy nekomitujte svůj soubor `.env` do verzovacího systému
    > - Soubor `.env` je již zahrnut v `.gitignore`
-   > - Uchovávejte své API klíče v bezpečí a pravidelně je rotujte
+   > - Udržujte své API klíče v bezpečí a pravidelně je rotujte
 
 ## Krok 4: Testování nastavení
 
@@ -118,9 +118,9 @@ mvn clean spring-boot:run
 
 Měli byste vidět odpověď od modelu GPT-4o-mini!
 
-> **Uživatelé VS Code**: Můžete také stisknout `F5` ve VS Code pro spuštění aplikace. Konfigurace spuštění je již nastavena tak, aby automaticky načetla váš soubor `.env`.
+> **Uživatelé VS Code**: Můžete také stisknout `F5` ve VS Code pro spuštění aplikace. Konfigurace spuštění je již nastavena tak, aby automaticky načítala váš soubor `.env`.
 
-> **Kompletní příklad**: Podívejte se na [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) pro podrobné instrukce a řešení problémů.
+> **Kompletní příklad**: Podívejte se na [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) pro podrobné instrukce a řešení problémů.
 
 ## Co dál?
 
@@ -143,5 +143,5 @@ Měli byste vidět odpověď od modelu GPT-4o-mini!
 - [Získat Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
-**Upozornění**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nezodpovídáme za jakékoli nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+**Prohlášení:**  
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

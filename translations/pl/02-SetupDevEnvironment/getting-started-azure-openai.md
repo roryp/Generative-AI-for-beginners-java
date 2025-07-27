@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T16:24:49+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:08:23+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "pl"
 }
 -->
 # Konfigurowanie środowiska deweloperskiego dla Azure OpenAI
 
-> **Szybki Start**: Ten przewodnik dotyczy konfiguracji Azure OpenAI. Aby szybko rozpocząć pracę z darmowymi modelami, skorzystaj z [GitHub Models with Codespaces](./README.md#quick-start-cloud).
+> **Szybki start**: Ten przewodnik dotyczy konfiguracji Azure OpenAI. Aby szybko rozpocząć pracę z darmowymi modelami, skorzystaj z [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
 Ten przewodnik pomoże Ci skonfigurować modele Azure AI Foundry dla aplikacji Java AI w tym kursie.
 
@@ -20,7 +20,7 @@ Ten przewodnik pomoże Ci skonfigurować modele Azure AI Foundry dla aplikacji J
   - [Utwórz Hub i Projekt](../../../02-SetupDevEnvironment)
   - [Wdróż model GPT-4o-mini](../../../02-SetupDevEnvironment)
 - [Krok 2: Utwórz Codespace](../../../02-SetupDevEnvironment)
-- [Krok 3: Skonfiguruj swoje środowisko](../../../02-SetupDevEnvironment)
+- [Krok 3: Skonfiguruj środowisko](../../../02-SetupDevEnvironment)
 - [Krok 4: Przetestuj konfigurację](../../../02-SetupDevEnvironment)
 - [Co dalej?](../../../02-SetupDevEnvironment)
 - [Zasoby](../../../02-SetupDevEnvironment)
@@ -54,7 +54,7 @@ Ten przewodnik pomoże Ci skonfigurować modele Azure AI Foundry dla aplikacji J
 ### Wdróż model GPT-4o-mini
 
 1. W swoim projekcie przejdź do **Model catalog** i wyszukaj **gpt-4o-mini**
-   - *Alternatywnie: Przejdź do **Deployments** → **+ Create deployment***
+   - *Alternatywa: Przejdź do **Deployments** → **+ Create deployment***
 2. Kliknij **Deploy** na karcie modelu gpt-4o-mini
 3. Skonfiguruj wdrożenie:
    - **Deployment name**: "gpt-4o-mini"
@@ -63,7 +63,7 @@ Ten przewodnik pomoże Ci skonfigurować modele Azure AI Foundry dla aplikacji J
 4. Kliknij **Deploy**
 5. Po wdrożeniu przejdź do zakładki **Deployments** i skopiuj następujące wartości:
    - **Deployment name** (np. "gpt-4o-mini")
-   - **Target URI** (np. `https://your-hub-name.openai.azure.com/`) 
+   - **Target URI** (np. `https://your-hub-name.openai.azure.com/`)  
       > **Ważne**: Skopiuj tylko podstawowy URL (np. `https://myhub.openai.azure.com/`), a nie pełną ścieżkę endpointu.
    - **Key** (z sekcji Keys and Endpoint)
 
@@ -80,13 +80,13 @@ Ten przewodnik pomoże Ci skonfigurować modele Azure AI Foundry dla aplikacji J
    - **Generative AI Java Development Environment**
 5. Kliknij **Create codespace**
 
-## Krok 3: Skonfiguruj swoje środowisko
+## Krok 3: Skonfiguruj środowisko
 
 Gdy Twój Codespace będzie gotowy, skonfiguruj poświadczenia Azure OpenAI:
 
 1. **Przejdź do przykładowego projektu z katalogu głównego repozytorium:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Utwórz plik `.env`:**
@@ -106,7 +106,7 @@ Gdy Twój Codespace będzie gotowy, skonfiguruj poświadczenia Azure OpenAI:
    > **Uwaga dotycząca bezpieczeństwa**: 
    > - Nigdy nie commituj pliku `.env` do systemu kontroli wersji
    > - Plik `.env` jest już uwzględniony w `.gitignore`
-   > - Zabezpiecz swoje klucze API i regularnie je rotuj
+   > - Chroń swoje klucze API i regularnie je rotuj
 
 ## Krok 4: Przetestuj konfigurację
 
@@ -120,7 +120,7 @@ Powinieneś zobaczyć odpowiedź od modelu GPT-4o-mini!
 
 > **Użytkownicy VS Code**: Możesz również nacisnąć `F5` w VS Code, aby uruchomić aplikację. Konfiguracja uruchamiania jest już ustawiona tak, aby automatycznie ładować plik `.env`.
 
-> **Pełny przykład**: Zobacz [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) dla szczegółowych instrukcji i rozwiązywania problemów.
+> **Pełny przykład**: Zobacz [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) dla szczegółowych instrukcji i rozwiązywania problemów.
 
 ## Co dalej?
 

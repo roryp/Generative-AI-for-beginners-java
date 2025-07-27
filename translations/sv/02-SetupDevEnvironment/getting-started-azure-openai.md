@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T19:34:23+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:12:22+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "sv"
 }
 -->
 # Ställa in utvecklingsmiljön för Azure OpenAI
 
-> **Snabbstart**: Den här guiden är för att sätta upp Azure OpenAI. För att komma igång direkt med gratismodeller, använd [GitHub Models med Codespaces](./README.md#quick-start-cloud).
+> **Snabbstart**: Den här guiden är för att konfigurera Azure OpenAI. För att komma igång direkt med gratis modeller, använd [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
 Den här guiden hjälper dig att konfigurera Azure AI Foundry-modeller för dina Java AI-appar i den här kursen.
 
@@ -29,7 +29,7 @@ Den här guiden hjälper dig att konfigurera Azure AI Foundry-modeller för dina
 ## Snabb översikt över installationen
 
 1. Skapa Azure AI Foundry-resurser (Hubb, Projekt, Modell)
-2. Skapa en Codespace med Java-utvecklingscontainer
+2. Skapa en Codespace med en Java-utvecklingscontainer
 3. Konfigurera din .env-fil med Azure OpenAI-uppgifter
 4. Testa din installation med exempelprojektet
 
@@ -86,7 +86,7 @@ När din Codespace är redo, ställ in dina Azure OpenAI-uppgifter:
 
 1. **Navigera till exempelprojektet från repository-roten:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Skapa din .env-fil:**
@@ -120,7 +120,7 @@ Du bör se ett svar från GPT-4o-mini-modellen!
 
 > **VS Code-användare**: Du kan också trycka på `F5` i VS Code för att köra applikationen. Startkonfigurationen är redan inställd för att automatiskt ladda din `.env`-fil.
 
-> **Fullständigt exempel**: Se [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) för detaljerade instruktioner och felsökning.
+> **Fullständigt exempel**: Se [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) för detaljerade instruktioner och felsökning.
 
 ## Vad händer härnäst?
 
@@ -144,4 +144,4 @@ Du bör se ett svar från GPT-4o-mini-modellen!
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller inexaktheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi tar inget ansvar för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T16:22:03+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T12:56:26+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "hk"
 }
 -->
-# 為 Azure OpenAI 設置開發環境
+# 設置 Azure OpenAI 的開發環境
 
-> **快速開始**：本指南適用於 Azure OpenAI 的設置。如果想立即使用免費模型，請參考 [GitHub Models with Codespaces](./README.md#quick-start-cloud)。
+> **快速開始**：本指南適用於 Azure OpenAI 的設置。如果想快速使用免費模型，請參考 [GitHub Models with Codespaces](./README.md#quick-start-cloud)。
 
 本指南將幫助你為本課程中的 Java AI 應用設置 Azure AI Foundry 模型。
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
    - **Hub 名稱**：例如 "MyAIHub"
    - **訂閱**：選擇你的 Azure 訂閱
    - **資源組**：創建新的或選擇現有的
-   - **位置**：選擇離你最近的地點
+   - **位置**：選擇離你最近的
    - **存儲帳戶**：使用默認或自定義配置
    - **密鑰保管庫**：使用默認或自定義配置
    - 點擊 **Next** → **Review + create** → **Create**
@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. **從倉庫根目錄導航到示例項目：**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **創建你的 .env 文件：**
@@ -106,7 +106,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **安全提示**： 
    > - 切勿將 `.env` 文件提交到版本控制
    > - `.env` 文件已包含在 `.gitignore` 中
-   > - 保持 API 密鑰的安全，並定期更換
+   > - 確保你的 API 密鑰安全，並定期更換
 
 ## 步驟 4：測試你的設置
 
@@ -120,12 +120,12 @@ mvn clean spring-boot:run
 
 > **VS Code 用戶**：你也可以在 VS Code 中按 `F5` 運行應用程序。啟動配置已設置為自動加載你的 `.env` 文件。
 
-> **完整示例**：請參考 [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) 獲取詳細說明和故障排除。
+> **完整示例**：請參考 [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) 獲取詳細說明和故障排除。
 
 ## 接下來是什麼？
 
 **設置完成！** 你現在已經：
-- 部署了 Azure OpenAI 的 gpt-4o-mini
+- 部署了 gpt-4o-mini 模型的 Azure OpenAI
 - 配置了本地 `.env` 文件
 - 準備好了 Java 開發環境
 
@@ -144,4 +144,4 @@ mvn clean spring-boot:run
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **免責聲明**：  
-本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原文文件作為權威來源。如涉及關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋概不負責。

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T18:04:00+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:09:15+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "tr"
 }
@@ -30,7 +30,7 @@ Bu kılavuz, bu kursta Java yapay zeka uygulamalarınız için Azure AI Foundry 
 
 1. Azure AI Foundry kaynaklarını oluşturun (Hub, Proje, Model)
 2. Java geliştirme konteyneri ile bir Codespace oluşturun
-3. Azure OpenAI kimlik bilgilerinizi içeren .env dosyanızı yapılandırın
+3. Azure OpenAI kimlik bilgileriyle `.env` dosyanızı yapılandırın
 4. Örnek proje ile kurulumunuzu test edin
 
 ## Adım 1: Azure AI Foundry Kaynaklarını Oluşturun
@@ -64,10 +64,10 @@ Bu kılavuz, bu kursta Java yapay zeka uygulamalarınız için Azure AI Foundry 
 5. Dağıtım tamamlandıktan sonra, **Deployments** sekmesine gidin ve şu değerleri kopyalayın:
    - **Dağıtım adı** (örneğin, "gpt-4o-mini")
    - **Hedef URI** (örneğin, `https://your-hub-name.openai.azure.com/`) 
-      > **Önemli**: Sadece temel URL'yi kopyalayın (örneğin, `https://myhub.openai.azure.com/`), tam uç nokta yolunu değil.
+      > **Önemli**: Yalnızca temel URL'yi kopyalayın (örneğin, `https://myhub.openai.azure.com/`), tam uç nokta yolunu değil.
    - **Anahtar** (Keys and Endpoint bölümünden)
 
-> **Hala sorun mu yaşıyorsunuz?** Resmi [Azure AI Foundry Belgeleri](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project) adresini ziyaret edin.
+> **Hâlâ sorun mu yaşıyorsunuz?** Resmi [Azure AI Foundry Belgeleri](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project) adresini ziyaret edin.
 
 ## Adım 2: Codespace'inizi Oluşturun
 
@@ -86,7 +86,7 @@ Codespace'iniz hazır olduğunda, Azure OpenAI kimlik bilgilerinizi ayarlayın:
 
 1. **Depo kökünden örnek projeye gidin:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **.env dosyanızı oluşturun:**
@@ -120,13 +120,13 @@ GPT-4o-mini modelinden bir yanıt görmelisiniz!
 
 > **VS Code Kullanıcıları**: Uygulamayı çalıştırmak için `F5` tuşuna da basabilirsiniz. Başlatma yapılandırması `.env` dosyanızı otomatik olarak yükleyecek şekilde ayarlanmıştır.
 
-> **Tam örnek**: Ayrıntılı talimatlar ve sorun giderme için [Uçtan Uca Azure OpenAI Örneği](./src/basic-chat-azure/README.md) bölümüne bakın.
+> **Tam örnek**: Ayrıntılı talimatlar ve sorun giderme için [Uçtan Uca Azure OpenAI Örneği](./examples/basic-chat-azure/README.md) bölümüne bakın.
 
 ## Sırada Ne Var?
 
 **Kurulum Tamamlandı!** Artık şunlara sahipsiniz:
 - gpt-4o-mini modeliyle Azure OpenAI dağıtımı
-- Yerel .env dosyası yapılandırması
+- Yerel `.env` dosyası yapılandırması
 - Java geliştirme ortamı hazır
 
 **Devam edin** [Bölüm 3: Temel Üretken Yapay Zeka Teknikleri](../03-CoreGenerativeAITechniques/README.md) ile yapay zeka uygulamaları oluşturmaya başlayın!
@@ -144,4 +144,4 @@ GPT-4o-mini modelinden bir yanıt görmelisiniz!
 - [Geliştirme Konteyneri Yapılandırması](../../../.devcontainer/devcontainer.json)
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki versiyonu yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul edilmez.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

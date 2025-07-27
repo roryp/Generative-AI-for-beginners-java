@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T12:03:06+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T12:56:48+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "tw"
 }
 -->
 # 為 Java 的生成式 AI 設置開發環境
 
-> **快速開始**：2 分鐘內在雲端編碼 - 跳至 [GitHub Codespaces 設置](../../../02-SetupDevEnvironment) - 無需本地安裝，使用 GitHub 模型！
+> **快速開始**：2 分鐘內在雲端編寫代碼 - 跳至 [GitHub Codespaces 設置](../../../02-SetupDevEnvironment) - 無需本地安裝，並使用 GitHub 模型！
 
-> **對 Azure OpenAI 感興趣嗎？** 請參閱我們的 [Azure OpenAI 設置指南](getting-started-azure-openai.md)，了解如何創建新的 Azure OpenAI 資源。
+> **對 Azure OpenAI 感興趣嗎？** 請參閱我們的 [Azure OpenAI 設置指南](getting-started-azure-openai.md)，了解如何創建新的 Azure OpenAI 資源的步驟。
 
 ## 您將學到什麼
 
 - 為 AI 應用設置 Java 開發環境
 - 選擇並配置您偏好的開發環境（以 Codespaces 為主的雲端優先、本地開發容器或完整的本地設置）
-- 測試您的設置，連接到 GitHub 模型
+- 通過連接到 GitHub 模型測試您的設置
 
 ## 目錄
 
@@ -37,7 +37,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 本章將指導您設置開發環境。我們將使用 **GitHub 模型** 作為主要示例，因為它免費、只需 GitHub 帳戶即可輕鬆設置、不需要信用卡，並提供多個模型供實驗。
 
-**無需本地設置！** 您可以立即使用 GitHub Codespaces 開始編碼，這是一個在瀏覽器中運行的完整開發環境。
+**無需本地設置！** 您可以立即使用 GitHub Codespaces 開始編碼，這提供了在瀏覽器中的完整開發環境。
 
 <img src="./images/models.webp" alt="截圖：GitHub 模型" width="50%">
 
@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 > - 每次請求約 8,000 字輸入，約 4,000 字輸出
 > - 5 個並發請求
 > 
-> 若需生產環境使用，可升級至 Azure AI Foundry 模型，使用您的 Azure 帳戶。您的代碼無需更改。請參閱 [Azure AI Foundry 文檔](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models)。
+> 用於生產環境時，可升級到 Azure AI Foundry 模型，使用您的 Azure 帳戶。您的代碼無需更改。請參閱 [Azure AI Foundry 文檔](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models)。
 
 ## 步驟 1：設置您的開發環境
 
@@ -66,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **2 分鐘內開始編碼 - 無需本地設置！**
 
-1. 將此倉庫 Fork 到您的 GitHub 帳戶  
+1. 將此存儲庫 Fork 到您的 GitHub 帳戶  
    > **注意**：如果您想編輯基本配置，請查看 [開發容器配置](../../../.devcontainer/devcontainer.json)
 2. 點擊 **Code** → **Codespaces** 標籤 → **...** → **New with options...**
 3. 使用默認設置 - 這將選擇 **開發容器配置**：為本課程創建的 **生成式 AI Java 開發環境** 自定義開發容器
@@ -83,7 +83,7 @@ CO_OP_TRANSLATOR_METADATA:
 > **使用 Codespaces 的好處**：
 > - 無需本地安裝
 > - 適用於任何帶瀏覽器的設備
-> - 預配置所有工具和依賴項
+> - 預配置了所有工具和依賴項
 > - 個人帳戶每月免費 60 小時
 > - 為所有學員提供一致的環境
 
@@ -91,11 +91,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 **適合偏好使用 Docker 進行本地開發的開發者**
 
-1. 將此倉庫 Fork 並克隆到您的本地機器  
+1. 將此存儲庫 Fork 並克隆到您的本地機器  
    > **注意**：如果您想編輯基本配置，請查看 [開發容器配置](../../../.devcontainer/devcontainer.json)
 2. 安裝 [Docker Desktop](https://www.docker.com/products/docker-desktop/) 和 [VS Code](https://code.visualstudio.com/)
 3. 在 VS Code 中安裝 [Dev Containers 擴展](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-4. 在 VS Code 中打開倉庫文件夾
+4. 在 VS Code 中打開存儲庫文件夾
 5. 當提示時，點擊 **Reopen in Container**（或使用 `Ctrl+Shift+P` → "Dev Containers: Reopen in Container"）
 6. 等待容器構建並啟動
 7. 繼續進行 [步驟 2：創建 GitHub 令牌](../../../02-SetupDevEnvironment)
@@ -114,7 +114,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [VS Code](https://code.visualstudio.com) 或您偏好的 IDE
 
 步驟：
-1. 將此倉庫克隆到您的本地機器
+1. 將此存儲庫克隆到您的本地機器
 2. 在您的 IDE 中打開該項目
 3. 繼續進行 [步驟 2：創建 GitHub 令牌](../../../02-SetupDevEnvironment)
 
@@ -124,14 +124,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 步驟 2：創建 GitHub 個人訪問令牌
 
-1. 前往 [GitHub 設置](https://github.com/settings/profile)，從您的個人資料菜單中選擇 **Settings**。
+1. 前往 [GitHub 設置](https://github.com/settings/profile)，並從您的個人資料菜單中選擇 **Settings**。
 2. 在左側邊欄中，點擊 **Developer settings**（通常在底部）。
 3. 在 **Personal access tokens** 下，點擊 **Fine-grained tokens**（或直接訪問此 [鏈接](https://github.com/settings/personal-access-tokens)）。
 4. 點擊 **Generate new token**。
 5. 在“Token name”下，提供一個描述性名稱（例如 `GenAI-Java-Course-Token`）。
 6. 設置過期日期（建議：7 天，符合安全最佳實踐）。
 7. 在“Resource owner”下，選擇您的用戶帳戶。
-8. 在“Repository access”下，選擇您希望與 GitHub 模型一起使用的倉庫（或選擇“所有倉庫”）。
+8. 在“Repository access”下，選擇您希望與 GitHub 模型一起使用的存儲庫（如果需要，選擇“所有存儲庫”）。
 9. 在“Repository permissions”下，找到 **Models** 並設置為 **Read and write**。
 10. 點擊 **Generate token**。
 11. **立即複製並保存您的令牌** - 您之後將無法再次查看！
@@ -140,12 +140,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 步驟 3：使用 GitHub 模型示例測試您的設置
 
-當您的開發環境準備就緒後，讓我們使用 [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models) 中的示例應用測試 GitHub 模型集成。
+當您的開發環境準備就緒後，讓我們使用 [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models) 中的示例應用測試 GitHub 模型集成。
 
 1. 在您的開發環境中打開終端。
 2. 導航到 GitHub 模型示例：
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. 將您的 GitHub 令牌設置為環境變量：
    ```bash
@@ -173,13 +173,13 @@ Response: Hello World!
 
 ### 理解示例代碼
 
-首先，讓我們了解剛剛運行的內容。`src/github-models` 下的示例使用 OpenAI Java SDK 連接到 GitHub 模型：
+首先，讓我們了解剛剛運行的內容。`examples/github-models` 下的示例使用 OpenAI Java SDK 連接到 GitHub 模型：
 
 **此代碼的功能：**
 - 使用您的個人訪問令牌 **連接** 到 GitHub 模型
-- 向 AI 模型 **發送** 一條簡單的 "Say Hello World!" 消息
-- **接收** 並顯示 AI 的回應
-- **驗證** 您的設置是否正常工作
+- 向 AI 模型 **發送** 一條簡單的“Say Hello World!”消息
+- **接收**並顯示 AI 的回應
+- **驗證**您的設置是否正常工作
 
 **關鍵依賴項**（在 `pom.xml` 中）：
 ```xml
@@ -215,9 +215,9 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 **恭喜！** 您已成功完成以下操作：
 
 - **創建了 GitHub 個人訪問令牌**，並為 AI 模型訪問設置了適當的權限
-- **設置了 Java 開發環境**，使用 Codespaces、開發容器或本地安裝
+- **設置了您的 Java 開發環境**，使用 Codespaces、開發容器或本地安裝
 - **使用 OpenAI Java SDK 連接到 GitHub 模型**，免費獲取 AI 開發訪問
-- **通過運行示例應用測試了集成**，該應用與 AI 模型進行通信
+- **通過一個工作示例應用測試了集成**，該應用與 AI 模型進行了通信
 
 ## 下一步
 
@@ -228,29 +228,29 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 遇到問題？以下是常見問題及解決方案：
 
 - **令牌無法使用？**  
-  - 確保您完整複製了令牌，且沒有多餘的空格  
-  - 驗證令牌是否正確設置為環境變量  
-  - 檢查令牌是否具有正確的權限（Models: Read and write）
+  - 確保您複製了完整的令牌，且沒有多餘的空格
+  - 驗證令牌是否正確設置為環境變量
+  - 檢查您的令牌是否具有正確的權限（Models: Read and write）
 
 - **找不到 Maven？**  
-  - 如果使用開發容器/Codespaces，Maven 應已預安裝  
-  - 對於本地設置，確保已安裝 Java 21+ 和 Maven 3.9+  
+  - 如果使用開發容器/Codespaces，Maven 應已預安裝
+  - 對於本地設置，確保已安裝 Java 21+ 和 Maven 3.9+
   - 嘗試運行 `mvn --version` 驗證安裝
 
 - **連接問題？**  
-  - 檢查您的網絡連接  
-  - 驗證 GitHub 是否可從您的網絡訪問  
-  - 確保防火牆未阻止 GitHub 模型端點
+  - 檢查您的網絡連接
+  - 驗證 GitHub 是否可從您的網絡訪問
+  - 確保您未處於阻止 GitHub 模型端點的防火牆後
 
 - **開發容器無法啟動？**  
-  - 確保 Docker Desktop 正在運行（對於本地開發）  
+  - 確保 Docker Desktop 正在運行（對於本地開發）
   - 嘗試重建容器：`Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **應用程序編譯錯誤？**  
-  - 確保您位於正確的目錄：`02-SetupDevEnvironment/src/github-models`  
+  - 確保您位於正確的目錄：`02-SetupDevEnvironment/examples/github-models`
   - 嘗試清理並重建：`mvn clean compile`
 
-> **需要幫助？**：仍有問題？在倉庫中打開一個 issue，我們將為您提供幫助。
+> **需要幫助？**：仍有問題？在存儲庫中打開一個 issue，我們將為您提供幫助。
 
 **免責聲明**：  
-本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原始語言的文件作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤讀概不負責。
+本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。

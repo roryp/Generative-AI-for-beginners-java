@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T21:05:34+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:28:06+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "sr"
 }
 -->
-# Постављање развојног окружења за Azure OpenAI
+# Подешавање Развојног Окружења за Azure OpenAI
 
 > **Брзи почетак**: Овај водич је за подешавање Azure OpenAI. За тренутни почетак са бесплатним моделима, користите [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
@@ -39,7 +39,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. Идите на [Azure AI Foundry Portal](https://ai.azure.com/) и пријавите се
 2. Кликните на **+ Create** → **New hub** (или идите на **Management** → **All hubs** → **+ New hub**)
-3. Конфигуришите свој hub:
+3. Конфигуришите свој Hub:
    - **Hub name**: нпр. "MyAIHub"
    - **Subscription**: Изаберите своју Azure претплату
    - **Resource group**: Креирајте нову или изаберите постојећу
@@ -47,7 +47,7 @@ CO_OP_TRANSLATOR_METADATA:
    - **Storage account**: Користите подразумевану или конфигуришите прилагођену
    - **Key vault**: Користите подразумевану или конфигуришите прилагођену
    - Кликните на **Next** → **Review + create** → **Create**
-4. Када је креирано, кликните на **+ New project** (или **Create project** из прегледа хаба)
+4. Када је креирано, кликните на **+ New project** (или **Create project** из прегледа Hub-а)
    - **Project name**: нпр. "GenAIJava"
    - Кликните на **Create**
 
@@ -64,7 +64,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. Када је деплојтовано, идите на картицу **Deployments** и копирајте следеће вредности:
    - **Deployment name** (нпр. "gpt-4o-mini")
    - **Target URI** (нпр. `https://your-hub-name.openai.azure.com/`) 
-      > **Важно**: Копирајте само основни URL (нпр. `https://myhub.openai.azure.com/`) а не целу путању до ендпоинта.
+      > **Важно**: Копирајте само основни URL (нпр. `https://myhub.openai.azure.com/`), а не целу путању до ендпоинта.
    - **Key** (из секције Keys and Endpoint)
 
 > **Имате проблема?** Посетите званичну [Azure AI Foundry документацију](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
@@ -75,7 +75,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **Напомена**: Ако желите да измените основну конфигурацију, погледајте [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. У свом fork-ованом репозиторијуму, кликните на **Code** → картица **Codespaces**
 3. Кликните на **...** → **New with options...**
-![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.sr.png)
+![креирање Codespace-а са опцијама](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.sr.png)
 4. Изаберите **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Кликните на **Create codespace**
@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. **Идите до пример пројекта из корена репозиторијума:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Креирајте своју .env датотеку:**
@@ -110,7 +110,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Корак 4: Тестирајте своје подешавање
 
-Покрените пример апликације да бисте тестирали своју Azure OpenAI везу:
+Покрените пример апликације да тестирате своју Azure OpenAI везу:
 
 ```bash
 mvn clean spring-boot:run
@@ -120,12 +120,12 @@ mvn clean spring-boot:run
 
 > **Корисници VS Code-а**: Такође можете притиснути `F5` у VS Code-у да покренете апликацију. Конфигурација за покретање је већ подешена да аутоматски учита вашу `.env` датотеку.
 
-> **Цео пример**: Погледајте [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) за детаљна упутства и решавање проблема.
+> **Цео пример**: Погледајте [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) за детаљна упутства и решавање проблема.
 
 ## Шта даље?
 
 **Подешавање је завршено!** Сада имате:
-- Azure OpenAI са gpt-4o-mini моделом деплојтованим
+- Azure OpenAI са gpt-4o-mini деплојтованим
 - Локалну конфигурацију `.env` датотеке
 - Java развојно окружење спремно
 

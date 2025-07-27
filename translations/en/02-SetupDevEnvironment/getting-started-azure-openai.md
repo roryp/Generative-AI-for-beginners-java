@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T21:02:53+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T12:47:35+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "en"
 }
 -->
 # Setting Up the Development Environment for Azure OpenAI
 
-> **Quick Start**: This guide is for Azure OpenAI setup. For immediate start with free models, use [GitHub Models with Codespaces](./README.md#quick-start-cloud).
+> **Quick Start**: This guide is for Azure OpenAI setup. For an immediate start with free models, use [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
 This guide will help you set up Azure AI Foundry models for your Java AI applications in this course.
 
@@ -42,12 +42,12 @@ This guide will help you set up Azure AI Foundry models for your Java AI applica
 3. Configure your hub:
    - **Hub name**: e.g., "MyAIHub"
    - **Subscription**: Select your Azure subscription
-   - **Resource group**: Create new or select existing
-   - **Location**: Choose the closest to you
-   - **Storage account**: Use default or configure custom
-   - **Key vault**: Use default or configure custom
+   - **Resource group**: Create a new one or select an existing one
+   - **Location**: Choose the closest location to you
+   - **Storage account**: Use the default or configure a custom one
+   - **Key vault**: Use the default or configure a custom one
    - Click **Next** → **Review + create** → **Create**
-4. Once created, click **+ New project** (or **Create project** from the hub overview).
+4. Once created, click **+ New project** (or **Create project** from the hub overview):
    - **Project name**: e.g., "GenAIJava"
    - Click **Create**
 
@@ -56,23 +56,23 @@ This guide will help you set up Azure AI Foundry models for your Java AI applica
 1. In your project, go to **Model catalog** and search for **gpt-4o-mini**.
    - *Alternative: Go to **Deployments** → **+ Create deployment***
 2. Click **Deploy** on the gpt-4o-mini model card.
-3. Configure deployment:
+3. Configure the deployment:
    - **Deployment name**: "gpt-4o-mini"
-   - **Model version**: Use the latest
+   - **Model version**: Use the latest version
    - **Deployment type**: Standard
 4. Click **Deploy**.
 5. Once deployed, go to the **Deployments** tab and copy these values:
    - **Deployment name** (e.g., "gpt-4o-mini")
    - **Target URI** (e.g., `https://your-hub-name.openai.azure.com/`)  
-      > **Important**: Copy only the base URL (e.g., `https://myhub.openai.azure.com/`) not the full endpoint path.
+      > **Important**: Copy only the base URL (e.g., `https://myhub.openai.azure.com/`) and not the full endpoint path.
    - **Key** (from the Keys and Endpoint section)
 
 > **Still having trouble?** Visit the official [Azure AI Foundry Documentation](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project).
 
 ## Step 2: Create Your Codespace
 
-1. Fork this repository to your GitHub account.  
-   > **Note**: If you want to edit the basic configuration, please check the [Dev Container Configuration](../../../.devcontainer/devcontainer.json).
+1. Fork this repository to your GitHub account.
+   > **Note**: If you want to edit the basic configuration, check out the [Dev Container Configuration](../../../.devcontainer/devcontainer.json).
 2. In your forked repository, click **Code** → **Codespaces** tab.
 3. Click **...** → **New with options...**  
 ![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.en.png)
@@ -86,7 +86,7 @@ Once your Codespace is ready, set up your Azure OpenAI credentials:
 
 1. **Navigate to the example project from the repository root:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Create your `.env` file:**
@@ -120,7 +120,7 @@ You should see a response from the GPT-4o-mini model!
 
 > **VS Code Users**: You can also press `F5` in VS Code to run the application. The launch configuration is already set up to load your `.env` file automatically.
 
-> **Full example**: See the [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) for detailed instructions and troubleshooting.
+> **Full example**: See the [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) for detailed instructions and troubleshooting.
 
 ## What's Next?
 

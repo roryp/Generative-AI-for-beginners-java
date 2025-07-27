@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T12:21:45+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T13:12:45+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "da"
 }
 -->
-# Opsætning af Udviklingsmiljø til Generativ AI for Java
+# Opsætning af udviklingsmiljø for Generativ AI til Java
 
-> **Hurtig Start**: Kod i skyen på 2 minutter - Hop til [GitHub Codespaces Opsætning](../../../02-SetupDevEnvironment) - ingen lokal installation nødvendig og bruger GitHub-modeller!
+> **Hurtig start**: Kod i skyen på 2 minutter - Gå til [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - ingen lokal installation nødvendig og bruger GitHub-modeller!
 
 > **Interesseret i Azure OpenAI?**, se vores [Azure OpenAI Opsætningsguide](getting-started-azure-openai.md) med trin til at oprette en ny Azure OpenAI-ressource.
 
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Introduktion](../../../02-SetupDevEnvironment)
 - [Trin 1: Opsæt Dit Udviklingsmiljø](../../../02-SetupDevEnvironment)
   - [Mulighed A: GitHub Codespaces (Anbefalet)](../../../02-SetupDevEnvironment)
-  - [Mulighed B: Lokal Dev-Container](../../../02-SetupDevEnvironment)
+  - [Mulighed B: Lokal Dev Container](../../../02-SetupDevEnvironment)
   - [Mulighed C: Brug Din Eksisterende Lokale Installation](../../../02-SetupDevEnvironment)
 - [Trin 2: Opret GitHub Personal Access Token](../../../02-SetupDevEnvironment)
 - [Trin 3: Test Din Opsætning](../../../02-SetupDevEnvironment)
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introduktion
 
-Dette kapitel guider dig gennem opsætningen af et udviklingsmiljø. Vi bruger **GitHub-modeller** som vores primære eksempel, fordi det er gratis, nemt at opsætte med kun en GitHub-konto, kræver ikke kreditkort og giver adgang til flere modeller til eksperimentering.
+Dette kapitel vil guide dig gennem opsætningen af et udviklingsmiljø. Vi bruger **GitHub-modeller** som vores primære eksempel, fordi det er gratis, nemt at opsætte med blot en GitHub-konto, kræver ikke et kreditkort og giver adgang til flere modeller til eksperimentering.
 
 **Ingen lokal opsætning nødvendig!** Du kan begynde at kode med det samme ved at bruge GitHub Codespaces, som giver et fuldt udviklingsmiljø direkte i din browser.
 
@@ -43,8 +43,8 @@ Dette kapitel guider dig gennem opsætningen af et udviklingsmiljø. Vi bruger *
 
 Vi anbefaler at bruge [**GitHub-modeller**](https://github.com/marketplace?type=models) til dette kursus, fordi det er:
 - **Gratis** at komme i gang
-- **Nemt** at opsætte med kun en GitHub-konto
-- **Ingen kreditkort** nødvendigt
+- **Nem** at opsætte med blot en GitHub-konto
+- **Ingen kreditkort** nødvendig
 - **Flere modeller** tilgængelige til eksperimentering
 
 > **Bemærk**: GitHub-modellerne, der bruges i denne træning, har følgende gratis begrænsninger:
@@ -52,13 +52,13 @@ Vi anbefaler at bruge [**GitHub-modeller**](https://github.com/marketplace?type=
 > - ~8.000 ord ind, ~4.000 ord ud pr. forespørgsel
 > - 5 samtidige forespørgsler
 > 
-> Til produktionsbrug kan du opgradere til Azure AI Foundry-modeller med din Azure-konto. Din kode behøver ikke ændres. Se [Azure AI Foundry-dokumentationen](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Til produktionsbrug, opgrader til Azure AI Foundry-modeller med din Azure-konto. Din kode behøver ikke ændres. Se [Azure AI Foundry-dokumentationen](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## Trin 1: Opsæt Dit Udviklingsmiljø
 
 <a name="quick-start-cloud"></a>
 
-Vi har oprettet en forudkonfigureret udviklingscontainer for at minimere opsætningstiden og sikre, at du har alle nødvendige værktøjer til dette Generativ AI for Java-kursus. Vælg din foretrukne udviklingsmetode:
+Vi har oprettet en forudkonfigureret udviklingscontainer for at minimere opsætningstiden og sikre, at du har alle nødvendige værktøjer til dette Generativ AI til Java-kursus. Vælg din foretrukne udviklingsmetode:
 
 ### Miljøopsætningsmuligheder:
 
@@ -66,19 +66,19 @@ Vi har oprettet en forudkonfigureret udviklingscontainer for at minimere opsætn
 
 **Begynd at kode på 2 minutter - ingen lokal opsætning nødvendig!**
 
-1. Fork dette repository til din GitHub-konto
+1. Fork denne repository til din GitHub-konto
    > **Bemærk**: Hvis du vil redigere den grundlæggende konfiguration, kan du kigge på [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Klik på **Code** → **Codespaces** fanen → **...** → **New with options...**
-3. Brug standardindstillingerne – dette vælger **Dev container configuration**: **Generative AI Java Development Environment**, en brugerdefineret devcontainer oprettet til dette kursus
+3. Brug standardindstillingerne – dette vil vælge **Dev container configuration**: **Generative AI Java Development Environment** specialtilpasset devcontainer oprettet til dette kursus
 4. Klik på **Create codespace**
-5. Vent ~2 minutter på, at miljøet er klar
+5 Vent ~2 minutter på, at miljøet er klar
 6. Fortsæt til [Trin 2: Opret GitHub Token](../../../02-SetupDevEnvironment)
 
 <img src="./images/codespaces.png" alt="Skærmbillede: Codespaces undermenu" width="50%">
 
 <img src="./images/image.png" alt="Skærmbillede: New with options" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Skærmbillede: Opret codespace muligheder" width="50%">
+<img src="./images/codespaces-create.png" alt="Skærmbillede: Create codespace options" width="50%">
 
 > **Fordele ved Codespaces**:
 > - Ingen lokal installation nødvendig
@@ -87,16 +87,16 @@ Vi har oprettet en forudkonfigureret udviklingscontainer for at minimere opsætn
 > - Gratis 60 timer pr. måned for personlige konti
 > - Konsistent miljø for alle deltagere
 
-#### Mulighed B: Lokal Dev-Container
+#### Mulighed B: Lokal Dev Container
 
 **For udviklere, der foretrækker lokal udvikling med Docker**
 
-1. Fork og klon dette repository til din lokale maskine
+1. Fork og klon denne repository til din lokale maskine
    > **Bemærk**: Hvis du vil redigere den grundlæggende konfiguration, kan du kigge på [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Installer [Docker Desktop](https://www.docker.com/products/docker-desktop/) og [VS Code](https://code.visualstudio.com/)
 3. Installer [Dev Containers-udvidelsen](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) i VS Code
 4. Åbn repository-mappen i VS Code
-5. Når du bliver spurgt, klik på **Reopen in Container** (eller brug `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
+5. Når du bliver bedt om det, klik på **Reopen in Container** (eller brug `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Vent på, at containeren bygges og starter
 7. Fortsæt til [Trin 2: Opret GitHub Token](../../../02-SetupDevEnvironment)
 
@@ -114,38 +114,38 @@ Forudsætninger:
 - [VS Code](https://code.visualstudio.com) eller din foretrukne IDE
 
 Trin:
-1. Klon dette repository til din lokale maskine
+1. Klon denne repository til din lokale maskine
 2. Åbn projektet i din IDE
 3. Fortsæt til [Trin 2: Opret GitHub Token](../../../02-SetupDevEnvironment)
 
-> **Pro Tip**: Hvis du har en lav-spec maskine, men ønsker VS Code lokalt, brug GitHub Codespaces! Du kan forbinde din lokale VS Code til en cloud-hostet Codespace for det bedste fra begge verdener.
+> **Pro Tip**: Hvis du har en lav-spec maskine, men vil have VS Code lokalt, brug GitHub Codespaces! Du kan forbinde din lokale VS Code til en cloud-hostet Codespace for det bedste fra begge verdener.
 
 <img src="./images/image-2.png" alt="Skærmbillede: oprettet lokal devcontainer instans" width="50%">
 
 ## Trin 2: Opret GitHub Personal Access Token
 
-1. Gå til [GitHub Indstillinger](https://github.com/settings/profile) og vælg **Settings** fra din profilmenu.
-2. I venstre sidebjælke, klik på **Developer settings** (normalt nederst).
+1. Naviger til [GitHub Settings](https://github.com/settings/profile) og vælg **Settings** fra din profilmenu.
+2. I venstre sidebar, klik på **Developer settings** (normalt nederst).
 3. Under **Personal access tokens**, klik på **Fine-grained tokens** (eller følg dette direkte [link](https://github.com/settings/personal-access-tokens)).
 4. Klik på **Generate new token**.
-5. Under "Token name", angiv et beskrivende navn (f.eks. `GenAI-Java-Course-Token`).
-6. Sæt en udløbsdato (anbefalet: 7 dage for bedste sikkerhedspraksis).
+5. Under "Token name", giv et beskrivende navn (f.eks. `GenAI-Java-Course-Token`).
+6. Angiv en udløbsdato (anbefalet: 7 dage for bedste sikkerhedspraksis).
 7. Under "Resource owner", vælg din brugerkonto.
-8. Under "Repository access", vælg de repositories, du vil bruge med GitHub-modeller (eller "All repositories", hvis nødvendigt).
+8. Under "Repository access", vælg de repositories, du vil bruge med GitHub-modeller (eller "All repositories" hvis nødvendigt).
 9. Under "Repository permissions", find **Models** og sæt det til **Read and write**.
 10. Klik på **Generate token**.
 11. **Kopiér og gem dit token nu** – du vil ikke kunne se det igen!
 
-> **Sikkerhedstip**: Brug det minimum nødvendige omfang og den kortest mulige udløbstid for dine adgangstokens.
+> **Sikkerhedstip**: Brug den mindst nødvendige adgang og kortest praktiske udløbstid for dine adgangstokens.
 
-## Trin 3: Test Din Opsætning med GitHub Models Eksempel
+## Trin 3: Test Din Opsætning med Eksemplet GitHub-modeller
 
-Når dit udviklingsmiljø er klar, lad os teste GitHub Models integrationen med vores eksempelapplikation i [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Når dit udviklingsmiljø er klar, lad os teste GitHub-modeller integrationen med vores eksempelapplikation i [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Åbn terminalen i dit udviklingsmiljø.
-2. Naviger til GitHub Models eksemplet:
+2. Naviger til GitHub-modeller eksemplet:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Sæt dit GitHub-token som en miljøvariabel:
    ```bash
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Forstå Eksempelkoden
 
-Lad os først forstå, hvad vi lige har kørt. Eksemplet under `src/github-models` bruger OpenAI Java SDK til at forbinde til GitHub-modeller:
+Lad os først forstå, hvad vi lige har kørt. Eksemplet under `examples/github-models` bruger OpenAI Java SDK til at forbinde til GitHub-modeller:
 
 **Hvad denne kode gør:**
 - **Forbinder** til GitHub-modeller ved hjælp af dit personlige adgangstoken
@@ -214,14 +214,14 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 **Tillykke!** Du har med succes:
 
-- **Oprettet et GitHub Personal Access Token** med de rette tilladelser til AI-modeladgang
+- **Oprettet et GitHub Personal Access Token** med korrekte tilladelser til AI-modeladgang
 - **Opsat dit Java-udviklingsmiljø** ved hjælp af Codespaces, dev-containere eller lokal installation
 - **Forbundet til GitHub-modeller** ved hjælp af OpenAI Java SDK for gratis AI-udviklingsadgang
 - **Testet integrationen** med en fungerende eksempelapplikation, der kommunikerer med AI-modeller
 
 ## Næste Skridt
 
-[Kapitel 3: Grundlæggende Generative AI-teknikker](../03-CoreGenerativeAITechniques/README.md)
+[Kapitel 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.md)
 
 ## Fejlfinding
 
@@ -240,17 +240,17 @@ Har du problemer? Her er almindelige problemer og løsninger:
 - **Forbindelsesproblemer?** 
   - Tjek din internetforbindelse
   - Bekræft, at GitHub er tilgængelig fra dit netværk
-  - Sørg for, at du ikke er bag en firewall, der blokerer GitHub Models endpoint
+  - Sørg for, at du ikke er bag en firewall, der blokerer GitHub-modeller endpoint
 
 - **Dev-container starter ikke?** 
-  - Sørg for, at Docker Desktop kører (til lokal udvikling)
+  - Sørg for, at Docker Desktop kører (for lokal udvikling)
   - Prøv at genopbygge containeren: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
-- **Applikationskompileringsfejl?**
-  - Sørg for, at du er i den korrekte mappe: `02-SetupDevEnvironment/src/github-models`
+- **Applikationskompilationsfejl?**
+  - Sørg for, at du er i den korrekte mappe: `02-SetupDevEnvironment/examples/github-models`
   - Prøv at rense og genopbygge: `mvn clean compile`
 
-> **Brug for hjælp?**: Har du stadig problemer? Opret en issue i repositoryet, så hjælper vi dig.
+> **Brug for hjælp?**: Har du stadig problemer? Åbn en issue i repositoryen, og vi hjælper dig.
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at opnå nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

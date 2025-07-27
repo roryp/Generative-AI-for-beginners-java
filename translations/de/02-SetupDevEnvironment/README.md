@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T11:54:14+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T12:49:32+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "de"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **Schnellstart**: Programmieren in der Cloud in 2 Minuten – Springe zu [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) – keine lokale Installation erforderlich und nutzt GitHub-Modelle!
 
-> **Interessiert an Azure OpenAI?** Siehe unseren [Azure OpenAI Setup Guide](getting-started-azure-openai.md) mit Schritten zur Erstellung einer neuen Azure OpenAI-Ressource.
+> **Interessiert an Azure OpenAI?** Sieh dir unseren [Azure OpenAI Setup Guide](getting-started-azure-openai.md) an, um eine neue Azure OpenAI-Ressource zu erstellen.
 
 ## Was Sie lernen werden
 
@@ -23,12 +23,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 - [Was Sie lernen werden](../../../02-SetupDevEnvironment)
 - [Einleitung](../../../02-SetupDevEnvironment)
-- [Schritt 1: Einrichten Ihrer Entwicklungsumgebung](../../../02-SetupDevEnvironment)
+- [Schritt 1: Einrichten der Entwicklungsumgebung](../../../02-SetupDevEnvironment)
   - [Option A: GitHub Codespaces (Empfohlen)](../../../02-SetupDevEnvironment)
   - [Option B: Lokaler Dev-Container](../../../02-SetupDevEnvironment)
-  - [Option C: Nutzung Ihrer bestehenden lokalen Installation](../../../02-SetupDevEnvironment)
-- [Schritt 2: Erstellen eines GitHub Personal Access Tokens](../../../02-SetupDevEnvironment)
-- [Schritt 3: Testen Ihrer Einrichtung](../../../02-SetupDevEnvironment)
+  - [Option C: Bestehende lokale Installation verwenden](../../../02-SetupDevEnvironment)
+- [Schritt 2: GitHub Personal Access Token erstellen](../../../02-SetupDevEnvironment)
+- [Schritt 3: Einrichtung testen](../../../02-SetupDevEnvironment)
 - [Fehlerbehebung](../../../02-SetupDevEnvironment)
 - [Zusammenfassung](../../../02-SetupDevEnvironment)
 - [Nächste Schritte](../../../02-SetupDevEnvironment)
@@ -41,9 +41,9 @@ Dieses Kapitel führt Sie durch die Einrichtung einer Entwicklungsumgebung. Wir 
 
 <img src="./images/models.webp" alt="Screenshot: GitHub-Modelle" width="50%">
 
-Wir empfehlen die Verwendung von [**GitHub-Modelle**](https://github.com/marketplace?type=models) für diesen Kurs, da es:
+Wir empfehlen die Verwendung von [**GitHub-Modellen**](https://github.com/marketplace?type=models) für diesen Kurs, da es:
 - **Kostenlos** ist, um loszulegen
-- **Einfach** mit nur einem GitHub-Konto eingerichtet werden kann
+- **Einfach** einzurichten ist, nur ein GitHub-Konto erforderlich
 - **Keine Kreditkarte** benötigt
 - **Mehrere Modelle** für Experimente bietet
 
@@ -54,7 +54,7 @@ Wir empfehlen die Verwendung von [**GitHub-Modelle**](https://github.com/marketp
 > 
 > Für den produktiven Einsatz können Sie auf Azure AI Foundry-Modelle mit Ihrem Azure-Konto upgraden. Ihr Code muss nicht geändert werden. Siehe die [Azure AI Foundry-Dokumentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
-## Schritt 1: Einrichten Ihrer Entwicklungsumgebung
+## Schritt 1: Einrichten der Entwicklungsumgebung
 
 <a name="quick-start-cloud"></a>
 
@@ -69,12 +69,12 @@ Wir haben einen vorkonfigurierten Entwicklungscontainer erstellt, um die Einrich
 1. Forken Sie dieses Repository in Ihr GitHub-Konto
    > **Hinweis**: Wenn Sie die grundlegende Konfiguration bearbeiten möchten, werfen Sie einen Blick auf die [Dev-Container-Konfiguration](../../../.devcontainer/devcontainer.json)
 2. Klicken Sie auf **Code** → **Codespaces**-Tab → **...** → **Neu mit Optionen...**
-3. Verwenden Sie die Standardwerte – dies wählt die **Dev-Container-Konfiguration**: **Generative AI Java Development Environment**, ein benutzerdefinierter Dev-Container, der für diesen Kurs erstellt wurde
+3. Verwenden Sie die Standardwerte – dies wählt die **Dev-Container-Konfiguration**: **Generative AI Java Development Environment**, die speziell für diesen Kurs erstellt wurde
 4. Klicken Sie auf **Codespace erstellen**
 5. Warten Sie ~2 Minuten, bis die Umgebung bereit ist
 6. Fahren Sie mit [Schritt 2: GitHub-Token erstellen](../../../02-SetupDevEnvironment) fort
 
-<img src="./images/codespaces.png" alt="Screenshot: Codespaces-Untermenü" width="50%">
+<img src="./images/codespaces.png" alt="Screenshot: Codespaces-Menü" width="50%">
 
 <img src="./images/image.png" alt="Screenshot: Neu mit Optionen" width="50%">
 
@@ -104,9 +104,9 @@ Wir haben einen vorkonfigurierten Entwicklungscontainer erstellt, um die Einrich
 
 <img src="./images/image-3.png" alt="Screenshot: Dev-Container-Erstellung abgeschlossen" width="50%">
 
-#### Option C: Nutzung Ihrer bestehenden lokalen Installation
+#### Option C: Bestehende lokale Installation verwenden
 
-**Für Entwickler mit bestehenden Java-Umgebungen**
+**Für Entwickler mit vorhandenen Java-Umgebungen**
 
 Voraussetzungen:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
@@ -118,34 +118,34 @@ Schritte:
 2. Öffnen Sie das Projekt in Ihrer IDE
 3. Fahren Sie mit [Schritt 2: GitHub-Token erstellen](../../../02-SetupDevEnvironment) fort
 
-> **Profi-Tipp**: Wenn Sie einen leistungsschwachen Rechner haben, aber VS Code lokal nutzen möchten, verwenden Sie GitHub Codespaces! Sie können Ihren lokalen VS Code mit einem cloudbasierten Codespace verbinden und so das Beste aus beiden Welten nutzen.
+> **Profi-Tipp**: Wenn Sie einen leistungsschwachen Rechner haben, aber VS Code lokal nutzen möchten, verwenden Sie GitHub Codespaces! Sie können Ihr lokales VS Code mit einem cloudbasierten Codespace verbinden und so das Beste aus beiden Welten nutzen.
 
 <img src="./images/image-2.png" alt="Screenshot: Lokale Dev-Container-Instanz erstellt" width="50%">
 
-## Schritt 2: Erstellen eines GitHub Personal Access Tokens
+## Schritt 2: GitHub Personal Access Token erstellen
 
-1. Navigieren Sie zu [GitHub-Einstellungen](https://github.com/settings/profile) und wählen Sie **Einstellungen** aus Ihrem Profilmenü.
+1. Gehen Sie zu [GitHub-Einstellungen](https://github.com/settings/profile) und wählen Sie **Einstellungen** aus Ihrem Profilmenü.
 2. Klicken Sie in der linken Seitenleiste auf **Entwicklereinstellungen** (normalerweise ganz unten).
 3. Unter **Personal access tokens** klicken Sie auf **Fine-grained tokens** (oder folgen Sie diesem direkten [Link](https://github.com/settings/personal-access-tokens)).
 4. Klicken Sie auf **Neuen Token generieren**.
 5. Geben Sie unter "Token-Name" einen beschreibenden Namen ein (z. B. `GenAI-Java-Course-Token`).
-6. Legen Sie ein Ablaufdatum fest (empfohlen: 7 Tage für Sicherheitsbest-Praktiken).
+6. Legen Sie ein Ablaufdatum fest (empfohlen: 7 Tage für optimale Sicherheit).
 7. Wählen Sie unter "Ressourcenbesitzer" Ihr Benutzerkonto aus.
 8. Wählen Sie unter "Repository-Zugriff" die Repositories aus, die Sie mit GitHub-Modellen verwenden möchten (oder "Alle Repositories", falls erforderlich).
 9. Unter "Repository-Berechtigungen" suchen Sie **Modelle** und setzen Sie es auf **Lesen und Schreiben**.
 10. Klicken Sie auf **Token generieren**.
 11. **Kopieren und speichern Sie Ihren Token jetzt** – Sie werden ihn später nicht mehr sehen!
 
-> **Sicherheitstipp**: Verwenden Sie den minimal erforderlichen Umfang und die kürzeste praktische Ablaufzeit für Ihre Zugriffstokens.
+> **Sicherheitstipp**: Verwenden Sie den minimal erforderlichen Umfang und die kürzest mögliche Ablaufzeit für Ihre Zugriffstokens.
 
-## Schritt 3: Testen Ihrer Einrichtung mit dem GitHub Models Beispiel
+## Schritt 3: Einrichtung mit dem GitHub-Modelle-Beispiel testen
 
-Sobald Ihre Entwicklungsumgebung bereit ist, testen wir die GitHub-Modelle-Integration mit unserer Beispielanwendung in [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Sobald Ihre Entwicklungsumgebung bereit ist, testen wir die GitHub-Modelle-Integration mit unserer Beispielanwendung in [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Öffnen Sie das Terminal in Ihrer Entwicklungsumgebung.
 2. Navigieren Sie zum GitHub-Modelle-Beispiel:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Setzen Sie Ihren GitHub-Token als Umgebungsvariable:
    ```bash
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Das Beispiel verstehen
 
-Lassen Sie uns zunächst verstehen, was wir gerade ausgeführt haben. Das Beispiel unter `src/github-models` verwendet das OpenAI Java SDK, um sich mit GitHub-Modellen zu verbinden:
+Lassen Sie uns zunächst verstehen, was wir gerade ausgeführt haben. Das Beispiel unter `examples/github-models` verwendet das OpenAI Java SDK, um sich mit GitHub-Modellen zu verbinden:
 
 **Was dieser Code macht:**
 - **Verbindet** sich mit GitHub-Modellen unter Verwendung Ihres Personal Access Tokens
@@ -239,15 +239,15 @@ Haben Sie Probleme? Hier sind häufige Probleme und Lösungen:
 
 - **Verbindungsprobleme?** 
   - Überprüfen Sie Ihre Internetverbindung
-  - Stellen Sie sicher, dass GitHub von Ihrem Netzwerk aus zugänglich ist
-  - Vergewissern Sie sich, dass keine Firewall den GitHub-Modelle-Endpunkt blockiert
+  - Vergewissern Sie sich, dass GitHub von Ihrem Netzwerk aus zugänglich ist
+  - Stellen Sie sicher, dass keine Firewall den GitHub-Modelle-Endpunkt blockiert
 
 - **Dev-Container startet nicht?** 
   - Stellen Sie sicher, dass Docker Desktop läuft (für lokale Entwicklung)
   - Versuchen Sie, den Container neu zu erstellen: `Strg+Umschalt+P` → "Dev Containers: Container neu erstellen"
 
 - **Kompilierungsfehler der Anwendung?**
-  - Stellen Sie sicher, dass Sie sich im richtigen Verzeichnis befinden: `02-SetupDevEnvironment/src/github-models`
+  - Stellen Sie sicher, dass Sie sich im richtigen Verzeichnis befinden: `02-SetupDevEnvironment/examples/github-models`
   - Versuchen Sie, das Projekt zu bereinigen und neu zu erstellen: `mvn clean compile`
 
 > **Brauchen Sie Hilfe?**: Haben Sie weiterhin Probleme? Öffnen Sie ein Issue im Repository, und wir helfen Ihnen weiter.

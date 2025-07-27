@@ -1,27 +1,27 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T12:31:47+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T13:21:19+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "sw"
 }
 -->
-# Kuweka Mazingira ya Maendeleo kwa AI ya Kizazi kwa Java
+# Kuweka Mazingira ya Maendeleo kwa Generative AI kwa Java
 
 > **Anza Haraka**: Andika msimbo mtandaoni kwa dakika 2 - Ruka hadi [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - hakuna usakinishaji wa ndani unaohitajika na hutumia mifano ya GitHub!
 
 > **Unavutiwa na Azure OpenAI?**, angalia [Mwongozo wetu wa Usanidi wa Azure OpenAI](getting-started-azure-openai.md) kwa hatua za kuunda rasilimali mpya ya Azure OpenAI.
 
-## Utakachojifunza
+## Utajifunza Nini
 
 - Jinsi ya kuweka mazingira ya maendeleo ya Java kwa programu za AI
-- Chagua na usanidi mazingira yako ya maendeleo unayopendelea (kipaumbele kwa Codespaces, kontena la ndani, au usanidi kamili wa ndani)
+- Chagua na usanidi mazingira yako ya maendeleo unayopendelea (kipaumbele kwa wingu na Codespaces, kontena la ndani la maendeleo, au usanidi kamili wa ndani)
 - Jaribu usanidi wako kwa kuunganisha na Mifano ya GitHub
 
 ## Jedwali la Yaliyomo
 
-- [Utakachojifunza](../../../02-SetupDevEnvironment)
+- [Utajifunza Nini](../../../02-SetupDevEnvironment)
 - [Utangulizi](../../../02-SetupDevEnvironment)
 - [Hatua ya 1: Weka Mazingira Yako ya Maendeleo](../../../02-SetupDevEnvironment)
   - [Chaguo A: GitHub Codespaces (Inapendekezwa)](../../../02-SetupDevEnvironment)
@@ -35,9 +35,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Utangulizi
 
-Sura hii itakuongoza jinsi ya kuweka mazingira ya maendeleo. Tutatumia **Mifano ya GitHub** kama mfano wetu wa msingi kwa sababu ni bure, rahisi kusanidi kwa akaunti ya GitHub, haihitaji kadi ya mkopo, na inatoa ufikiaji wa mifano mingi kwa majaribio.
+Sura hii itakuongoza jinsi ya kuweka mazingira ya maendeleo. Tutatumia **Mifano ya GitHub** kama mfano wetu wa msingi kwa sababu ni bure, rahisi kusanidi kwa akaunti ya GitHub pekee, haihitaji kadi ya mkopo, na inatoa ufikiaji wa mifano mingi kwa majaribio.
 
-**Hakuna usanidi wa ndani unaohitajika!** Unaweza kuanza kuandika msimbo mara moja ukitumia GitHub Codespaces, ambayo hutoa mazingira kamili ya maendeleo kwenye kivinjari chako.
+**Hakuna usanidi wa ndani unaohitajika!** Unaweza kuanza kuandika msimbo mara moja ukitumia GitHub Codespaces, ambayo inatoa mazingira kamili ya maendeleo kwenye kivinjari chako.
 
 <img src="./images/models.webp" alt="Picha ya skrini: Mifano ya GitHub" width="50%">
 
@@ -50,7 +50,7 @@ Tunapendekeza kutumia [**Mifano ya GitHub**](https://github.com/marketplace?type
 > **Kumbuka**: Mifano ya GitHub inayotumika katika mafunzo haya ina mipaka ya bure ifuatayo:
 > - Maombi 15 kwa dakika (150 kwa siku)
 > - ~Maneno 8,000 ndani, ~maneno 4,000 nje kwa ombi
-> - Maombi 5 yanayoendelea
+> - Maombi 5 yanayofanyika kwa wakati mmoja
 > 
 > Kwa matumizi ya uzalishaji, boresha hadi Azure AI Foundry Models kwa akaunti yako ya Azure. Msimbo wako hauhitaji kubadilishwa. Angalia [hati za Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
@@ -58,7 +58,7 @@ Tunapendekeza kutumia [**Mifano ya GitHub**](https://github.com/marketplace?type
 
 <a name="quick-start-cloud"></a>
 
-Tumeunda kontena la maendeleo lililosanidiwa awali ili kupunguza muda wa usanidi na kuhakikisha una zana zote muhimu kwa kozi hii ya AI ya Kizazi kwa Java. Chagua mbinu yako ya maendeleo unayopendelea:
+Tumeunda kontena la maendeleo lililowekwa tayari ili kupunguza muda wa usanidi na kuhakikisha una zana zote muhimu kwa kozi hii ya Generative AI kwa Java. Chagua mbinu yako ya maendeleo unayopendelea:
 
 ### Chaguo za Usanidi wa Mazingira:
 
@@ -69,7 +69,7 @@ Tumeunda kontena la maendeleo lililosanidiwa awali ili kupunguza muda wa usanidi
 1. Fork hifadhi hii kwenye akaunti yako ya GitHub  
    > **Kumbuka**: Ikiwa unataka kuhariri usanidi wa msingi tafadhali angalia [Usanidi wa Kontena la Maendeleo](../../../.devcontainer/devcontainer.json)
 2. Bonyeza **Code** → **Kichupo cha Codespaces** → **...** → **New with options...**
-3. Tumia chaguomsingi – hii itachagua **Usanidi wa kontena la maendeleo**: **Mazingira ya Maendeleo ya Java ya AI ya Kizazi** kontena maalum la maendeleo lililoundwa kwa kozi hii
+3. Tumia chaguo-msingi – hii itachagua **Usanidi wa kontena la maendeleo**: **Mazingira ya Maendeleo ya Generative AI Java** kontena maalum la maendeleo lililoundwa kwa kozi hii
 4. Bonyeza **Create codespace**
 5. Subiri ~dakika 2 kwa mazingira kuwa tayari
 6. Endelea hadi [Hatua ya 2: Unda Token ya GitHub](../../../02-SetupDevEnvironment)
@@ -83,7 +83,7 @@ Tumeunda kontena la maendeleo lililosanidiwa awali ili kupunguza muda wa usanidi
 > **Faida za Codespaces**:
 > - Hakuna usakinishaji wa ndani unaohitajika
 > - Inafanya kazi kwenye kifaa chochote chenye kivinjari
-> - Imetayarishwa awali na zana zote na utegemezi
+> - Imewekwa tayari na zana zote na utegemezi
 > - Saa 60 za bure kwa mwezi kwa akaunti za kibinafsi
 > - Mazingira thabiti kwa wanafunzi wote
 
@@ -118,7 +118,7 @@ Hatua:
 2. Fungua mradi kwenye IDE yako
 3. Endelea hadi [Hatua ya 2: Unda Token ya GitHub](../../../02-SetupDevEnvironment)
 
-> **Kidokezo cha Kitaalam**: Ikiwa una mashine yenye uwezo mdogo lakini unataka VS Code ndani, tumia GitHub Codespaces! Unaweza kuunganisha VS Code yako ya ndani na Codespace inayohifadhiwa mtandaoni kwa manufaa ya pande zote mbili.
+> **Kidokezo cha Mtaalamu**: Ikiwa una mashine yenye uwezo mdogo lakini unataka VS Code ndani, tumia GitHub Codespaces! Unaweza kuunganisha VS Code yako ya ndani na Codespace inayohifadhiwa kwenye wingu kwa manufaa ya pande zote mbili.
 
 <img src="./images/image-2.png" alt="Picha ya skrini: mfano wa kontena la maendeleo la ndani lililoundwa" width="50%">
 
@@ -140,12 +140,12 @@ Hatua:
 
 ## Hatua ya 3: Jaribu Usanidi Wako na Mfano wa Mifano ya GitHub
 
-Mazingira yako ya maendeleo yakiwa tayari, hebu tujaribu ujumuishaji wa Mifano ya GitHub na programu yetu ya mfano katika [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Mazingira yako ya maendeleo yakiwa tayari, hebu tujaribu ujumuishaji wa Mifano ya GitHub na programu yetu ya mfano katika [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Fungua terminal kwenye mazingira yako ya maendeleo.
 2. Nenda kwenye mfano wa Mifano ya GitHub:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Weka token yako ya GitHub kama kigezo cha mazingira:
    ```bash
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Kuelewa Msimbo wa Mfano
 
-Kwanza, hebu tuelewe tulichokimbia. Mfano chini ya `src/github-models` unatumia OpenAI Java SDK kuunganishwa na Mifano ya GitHub:
+Kwanza, hebu tuelewe tulichokimbia. Mfano chini ya `examples/github-models` unatumia OpenAI Java SDK kuunganishwa na Mifano ya GitHub:
 
 **Kile msimbo huu unafanya:**
 - **Unaunganisha** na Mifano ya GitHub ukitumia token yako ya kibinafsi
@@ -214,14 +214,14 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 **Hongera!** Umefanikiwa:
 
-- **Kuunda Token ya Kibinafsi ya GitHub** yenye ruhusa sahihi za ufikiaji wa mfano wa AI
+- **Kuunda Token ya Kibinafsi ya GitHub** yenye ruhusa sahihi za ufikiaji wa mifano ya AI
 - **Kuweka mazingira yako ya maendeleo ya Java** ukitumia Codespaces, kontena za maendeleo, au usanidi wa ndani
-- **Kuunganisha na Mifano ya GitHub** ukitumia OpenAI Java SDK kwa ufikiaji wa maendeleo ya AI bila malipo
+- **Kuunganishwa na Mifano ya GitHub** ukitumia OpenAI Java SDK kwa ufikiaji wa bure wa maendeleo ya AI
 - **Kujaribu ujumuishaji** na programu ya mfano inayofanya mawasiliano na mifano ya AI
 
 ## Hatua Zifuatazo
 
-[Surah ya 3: Mbinu za Msingi za AI ya Kizazi](../03-CoreGenerativeAITechniques/README.md)
+[Surah ya 3: Mbinu za Msingi za Generative AI](../03-CoreGenerativeAITechniques/README.md)
 
 ## Utatuzi wa Shida
 
@@ -233,7 +233,7 @@ Unakutana na matatizo? Hapa kuna matatizo ya kawaida na suluhisho:
   - Hakikisha token yako ina ruhusa sahihi (Models: Read and write)
 
 - **Maven haipatikani?** 
-  - Ikiwa unatumia kontena za maendeleo/Codespaces, Maven inapaswa kuwa imewekwa awali
+  - Ikiwa unatumia kontena za maendeleo/Codespaces, Maven inapaswa kuwa imewekwa tayari
   - Kwa usanidi wa ndani, hakikisha Java 21+ na Maven 3.9+ zimesakinishwa
   - Jaribu `mvn --version` kuthibitisha usakinishaji
 
@@ -247,10 +247,10 @@ Unakutana na matatizo? Hapa kuna matatizo ya kawaida na suluhisho:
   - Jaribu kujenga upya kontena: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Makosa ya uundaji wa programu?**
-  - Hakikisha uko kwenye saraka sahihi: `02-SetupDevEnvironment/src/github-models`
+  - Hakikisha uko kwenye saraka sahihi: `02-SetupDevEnvironment/examples/github-models`
   - Jaribu kusafisha na kujenga upya: `mvn clean compile`
 
 > **Unahitaji msaada?**: Bado unakutana na matatizo? Fungua suala kwenye hifadhi na tutakusaidia.
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kibinadamu ya kitaalamu. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

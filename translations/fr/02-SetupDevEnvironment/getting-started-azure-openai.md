@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T16:22:25+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T12:48:20+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "fr"
 }
 -->
 # Configuration de l'environnement de développement pour Azure OpenAI
 
-> **Démarrage rapide** : Ce guide est destiné à la configuration d'Azure OpenAI. Pour commencer immédiatement avec des modèles gratuits, utilisez [GitHub Models avec Codespaces](./README.md#quick-start-cloud).
+> **Démarrage rapide** : Ce guide est destiné à la configuration d'Azure OpenAI. Pour un démarrage immédiat avec des modèles gratuits, utilisez [GitHub Models avec Codespaces](./README.md#quick-start-cloud).
 
 Ce guide vous aidera à configurer les modèles Azure AI Foundry pour vos applications Java AI dans ce cours.
 
@@ -42,7 +42,7 @@ Ce guide vous aidera à configurer les modèles Azure AI Foundry pour vos applic
 3. Configurez votre hub :
    - **Nom du hub** : par exemple, "MonHubAI"
    - **Abonnement** : Sélectionnez votre abonnement Azure
-   - **Groupe de ressources** : Créez-en un nouveau ou sélectionnez un existant
+   - **Groupe de ressources** : Créez-en un nouveau ou sélectionnez-en un existant
    - **Emplacement** : Choisissez le plus proche de vous
    - **Compte de stockage** : Utilisez le compte par défaut ou configurez-en un personnalisé
    - **Key vault** : Utilisez le coffre par défaut ou configurez-en un personnalisé
@@ -71,8 +71,8 @@ Ce guide vous aidera à configurer les modèles Azure AI Foundry pour vos applic
 
 ## Étape 2 : Créer votre Codespace
 
-1. Forkez ce dépôt sur votre compte GitHub
-   > **Note** : Si vous souhaitez modifier la configuration de base, consultez la [Configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
+1. Forkez ce dépôt dans votre compte GitHub
+   > **Remarque** : Si vous souhaitez modifier la configuration de base, consultez la [Configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
 2. Dans votre dépôt forké, cliquez sur **Code** → Onglet **Codespaces**
 3. Cliquez sur **...** → **Nouveau avec options...**
 ![création d'un codespace avec options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.fr.png)
@@ -86,7 +86,7 @@ Une fois votre Codespace prêt, configurez vos identifiants Azure OpenAI :
 
 1. **Accédez au projet exemple depuis la racine du dépôt :**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Créez votre fichier .env :**
@@ -104,7 +104,7 @@ Une fois votre Codespace prêt, configurez vos identifiants Azure OpenAI :
    ```
 
    > **Note de sécurité** : 
-   > - Ne jamais ajouter votre fichier `.env` au contrôle de version
+   > - Ne jamais inclure votre fichier `.env` dans le contrôle de version
    > - Le fichier `.env` est déjà inclus dans `.gitignore`
    > - Gardez vos clés API sécurisées et changez-les régulièrement
 
@@ -120,7 +120,7 @@ Vous devriez voir une réponse du modèle GPT-4o-mini !
 
 > **Utilisateurs de VS Code** : Vous pouvez également appuyer sur `F5` dans VS Code pour exécuter l'application. La configuration de lancement est déjà configurée pour charger automatiquement votre fichier `.env`.
 
-> **Exemple complet** : Consultez l'[Exemple Azure OpenAI de bout en bout](./src/basic-chat-azure/README.md) pour des instructions détaillées et des solutions aux problèmes.
+> **Exemple complet** : Consultez l'[Exemple Azure OpenAI de bout en bout](./examples/basic-chat-azure/README.md) pour des instructions détaillées et des solutions aux problèmes.
 
 ## Et après ?
 
@@ -144,4 +144,4 @@ Vous devriez voir une réponse du modèle GPT-4o-mini !
 - [Configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

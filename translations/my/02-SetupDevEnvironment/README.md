@@ -1,78 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T12:42:18+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T13:30:06+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "my"
 }
 -->
-# Java အတွက် Generative AI Development Environment ကို Set Up လုပ်ခြင်း
+# Java အတွက် Generative AI ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်ကို သတ်မှတ်ခြင်း
 
-> **Quick Start**: Cloud မှာ 2 မိနစ်အတွင်း Code ရေးရန် - [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) ကိုသွားပါ - local installation မလိုအပ်ပါဘူး၊ GitHub models ကိုအသုံးပြုပါ!
+> **အမြန်စတင်ရန်**: Cloud မှာ ၂ မိနစ်အတွင်း Code ရေးပါ - [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) ကိုသွားပါ - ဒါကိုယ်ပိုင်စက်မှာတပ်ဆင်စရာမလိုဘဲ GitHub models ကိုအသုံးပြုနိုင်ပါတယ်!
 
-> **Azure OpenAI ကိုစိတ်ဝင်စားပါသလား?** [Azure OpenAI Setup Guide](getting-started-azure-openai.md) ကိုကြည့်ပါ၊ Azure OpenAI resource အသစ်တစ်ခုကိုဖန်တီးရန်အဆင့်များပါဝင်သည်။
+> **Azure OpenAI ကိုစိတ်ဝင်စားပါသလား?** [Azure OpenAI Setup Guide](getting-started-azure-openai.md) ကိုကြည့်ပါ၊ Azure OpenAI resource အသစ်တစ်ခုဖန်တီးရန်အဆင့်များပါဝင်သည်။
 
 ## သင်လေ့လာနိုင်မည့်အရာများ
 
-- AI application များအတွက် Java development environment ကို set up လုပ်ခြင်း
-- သင့်အကြိုက်ဆုံး development environment ကိုရွေးချယ်ပြီး configure လုပ်ခြင်း (Codespaces ဖြင့် cloud-first, local dev container, သို့မဟုတ် full local setup)
-- GitHub Models ကိုချိတ်ဆက်ပြီး setup ကိုစမ်းသပ်ခြင်း
+- AI အက်ပလီကေးရှင်းများအတွက် Java ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်ကို သတ်မှတ်ခြင်း
+- သင့်နှစ်သက်ရာဖွံ့ဖြိုးရေးပတ်ဝန်းကျင် (Codespaces ဖြင့် cloud-first, local dev container, သို့မဟုတ် အပြည့်အစုံ local setup) ကိုရွေးချယ်ပြီး configure ပြုလုပ်ခြင်း
+- GitHub Models နှင့် ချိတ်ဆက်ပြီး သင့် setup ကို စမ်းသပ်ခြင်း
 
 ## အကြောင်းအရာများ
 
 - [သင်လေ့လာနိုင်မည့်အရာများ](../../../02-SetupDevEnvironment)
-- [Introduction](../../../02-SetupDevEnvironment)
-- [အဆင့် ၁: Development Environment ကို Set Up လုပ်ပါ](../../../02-SetupDevEnvironment)
-  - [Option A: GitHub Codespaces (အကြံပြုထားသည်)](../../../02-SetupDevEnvironment)
-  - [Option B: Local Dev Container](../../../02-SetupDevEnvironment)
-  - [Option C: သင့်ရဲ့ Local Installation ကိုအသုံးပြုပါ](../../../02-SetupDevEnvironment)
+- [နိဒါန်း](../../../02-SetupDevEnvironment)
+- [အဆင့် ၁: သင့်ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်ကို သတ်မှတ်ပါ](../../../02-SetupDevEnvironment)
+  - [ရွေးချယ်မှု A: GitHub Codespaces (အကြံပြုသည်)](../../../02-SetupDevEnvironment)
+  - [ရွေးချယ်မှု B: Local Dev Container](../../../02-SetupDevEnvironment)
+  - [ရွေးချယ်မှု C: သင့်ရှိပြီးသား Local Installation ကို အသုံးပြုပါ](../../../02-SetupDevEnvironment)
 - [အဆင့် ၂: GitHub Personal Access Token ဖန်တီးပါ](../../../02-SetupDevEnvironment)
-- [အဆင့် ၃: Setup ကို GitHub Models Example ဖြင့်စမ်းသပ်ပါ](../../../02-SetupDevEnvironment)
-- [Troubleshooting](../../../02-SetupDevEnvironment)
-- [Summary](../../../02-SetupDevEnvironment)
-- [Next Steps](../../../02-SetupDevEnvironment)
+- [အဆင့် ၃: သင့် Setup ကို စမ်းသပ်ပါ](../../../02-SetupDevEnvironment)
+- [ပြဿနာရှာဖွေခြင်း](../../../02-SetupDevEnvironment)
+- [အကျဉ်းချုပ်](../../../02-SetupDevEnvironment)
+- [နောက်ထပ်အဆင့်များ](../../../02-SetupDevEnvironment)
 
-## Introduction
+## နိဒါန်း
 
-ဤအခန်းတွင် development environment ကို set up လုပ်ရန်လမ်းညွှန်ပေးပါမည်။ **GitHub Models** ကိုအဓိကဥပမာအဖြစ်အသုံးပြုမည်ဖြစ်ပြီး၊ GitHub account တစ်ခုသာလိုအပ်ပြီး၊ credit card မလိုအပ်ဘဲ၊ အလွယ်တကူ setup လုပ်နိုင်ပြီး၊ မျိုးစုံသော models များကိုစမ်းသပ်နိုင်ရန် access ပေးပါသည်။
+ဤအခန်းတွင် ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်ကို သတ်မှတ်ရန် လမ်းညွှန်ပေးပါမည်။ **GitHub Models** ကို ကျွန်ုပ်တို့၏ အဓိကဥပမာအဖြစ် အသုံးပြုမည်ဖြစ်ပြီး၊ ဒါဟာ အခမဲ့၊ GitHub အကောင့်တစ်ခုသာလိုအပ်ပြီး၊ အလွယ်တကူ setup ပြုလုပ်နိုင်ပြီး၊ credit card မလိုအပ်ဘဲ၊ စမ်းသပ်ဖို့ မော်ဒယ်အမျိုးမျိုးကို အသုံးပြုနိုင်စေသည်။
 
-**Local setup မလိုအပ်ပါ!** GitHub Codespaces ကိုအသုံးပြု၍ browser မှာတင်အပြည့်အစုံ development environment ကိုစတင်နိုင်ပါသည်။
+**Local setup မလိုအပ်ပါ!** GitHub Codespaces ကို အသုံးပြု၍ သင့် browser မှတစ်ဆင့် အပြည့်အစုံဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်ကို ချက်ချင်းစတင်နိုင်ပါသည်။
 
 <img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
 
-ဤသင်တန်းအတွက် [**GitHub Models**](https://github.com/marketplace?type=models) ကိုအသုံးပြုရန်အကြံပြုပါသည်၊ အကြောင်းကတော့:
-- **အခမဲ့** စတင်နိုင်သည်
-- **အလွယ်တကူ** GitHub account တစ်ခုသာလိုအပ်သည်
-- **Credit card မလိုအပ်ပါ** 
-- **မျိုးစုံသော models** စမ်းသပ်နိုင်သည်
+ဤသင်တန်းအတွက် [**GitHub Models**](https://github.com/marketplace?type=models) ကို အသုံးပြုရန် အကြံပြုပါသည်၊ အကြောင်းမှာ:
+- စတင်ရန် **အခမဲ့**
+- GitHub အကောင့်တစ်ခုသာလိုအပ်ပြီး **အလွယ်တကူ** setup ပြုလုပ်နိုင်သည်
+- **Credit card မလိုအပ်ပါ**
+- စမ်းသပ်ဖို့ **မော်ဒယ်အမျိုးမျိုး** ရရှိနိုင်သည်
 
-> **Note**: ဤသင်တန်းတွင်အသုံးပြုသော GitHub Models တွင်အခမဲ့အကန့်အသတ်များရှိသည်:
-> - မိနစ် ၁၅ request (နေ့စဉ် ၁၅၀)
-> - ~8,000 စကားလုံး input, ~4,000 စကားလုံး output per request
-> - 5 concurrent requests
+> **မှတ်ချက်**: ဤသင်တန်းတွင် အသုံးပြုသည့် GitHub Models တွင် အခမဲ့ကန့်သတ်ချက်များရှိသည်:
+> - မိနစ် ၁၅ မျှော်မှန်းချက် (တစ်နေ့ ၁၅၀)
+> - တစ်ကြိမ်တစ်ခါ ~၈,၀၀၀ စကားလုံးထည့်နိုင်ပြီး၊ ~၄,၀၀၀ စကားလုံးထွက်နိုင်သည်
+> - တစ်ချိန်တည်းမှာ ၅ ကြိမ်တိုင်
 > 
-> Production အတွက် Azure AI Foundry Models ကို upgrade လုပ်ပါ။ သင့် code ကိုမပြောင်းလဲရပါ။ [Azure AI Foundry documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models) ကိုကြည့်ပါ။
+> ထုတ်လုပ်မှုအတွက် Azure AI Foundry Models သို့ အဆင့်မြှင့်တင်ပါ။ သင့် code ကို ပြောင်းလဲရန် မလိုအပ်ပါ။ [Azure AI Foundry documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models) ကိုကြည့်ပါ။
 
-## အဆင့် ၁: Development Environment ကို Set Up လုပ်ပါ
+## အဆင့် ၁: သင့်ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်ကို သတ်မှတ်ပါ
 
 <a name="quick-start-cloud"></a>
 
-Generative AI for Java သင်တန်းအတွက်လိုအပ်သော tools များကိုအနည်းဆုံး setup အချိန်ဖြင့်ရရှိစေရန် preconfigured development container တစ်ခုကိုဖန်တီးထားပါသည်။ သင့်အကြိုက်ဆုံး development approach ကိုရွေးချယ်ပါ:
+Generative AI for Java သင်တန်းအတွက် လိုအပ်သော tools များအားလုံးပါဝင်သည့် preconfigured development container ကို ကျွန်ုပ်တို့ဖန်တီးထားပြီး၊ setup အချိန်ကို လျှော့ချရန်အတွက် ရွေးချယ်ပါ:
 
-### Environment Setup Options:
+### ပတ်ဝန်းကျင် Setup ရွေးချယ်မှုများ:
 
-#### Option A: GitHub Codespaces (အကြံပြုထားသည်)
+#### ရွေးချယ်မှု A: GitHub Codespaces (အကြံပြုသည်)
 
-**2 မိနစ်အတွင်း coding စတင်ပါ - local setup မလိုအပ်ပါ!**
+**၂ မိနစ်အတွင်း coding စတင်ပါ - local setup မလိုအပ်ပါ!**
 
-1. ဤ repository ကို GitHub account သို့ fork လုပ်ပါ
-   > **Note**: Basic config ကိုပြင်လိုပါက [Dev Container Configuration](../../../.devcontainer/devcontainer.json) ကိုကြည့်ပါ
+1. ဤ repository ကို သင့် GitHub အကောင့်သို့ fork လုပ်ပါ
+   > **မှတ်ချက်**: Basic config ကို ပြင်ဆင်လိုပါက [Dev Container Configuration](../../../.devcontainer/devcontainer.json) ကိုကြည့်ပါ
 2. **Code** → **Codespaces** tab → **...** → **New with options...** ကိုနှိပ်ပါ
-3. Defaults ကိုအသုံးပြုပါ – ဤသည် **Dev container configuration** ကိုရွေးချယ်ပါမည်: **Generative AI Java Development Environment** သင်တန်းအတွက်ဖန်တီးထားသော custom devcontainer
+3. Defaults ကို အသုံးပြုပါ – ဤသည် **Generative AI Java Development Environment** custom devcontainer ကို ရွေးချယ်ပေးမည်
 4. **Create codespace** ကိုနှိပ်ပါ
-5. Environment ပြင်ဆင်ရန် ~2 မိနစ်စောင့်ပါ
-6. [အဆင့် ၂: GitHub Token ဖန်တီးပါ](../../../02-SetupDevEnvironment) သို့ဆက်လက်လုပ်ဆောင်ပါ
+5. ပတ်ဝန်းကျင်အဆင်သင့်ဖြစ်ရန် ~၂ မိနစ်စောင့်ပါ
+6. [အဆင့် ၂: GitHub Token ဖန်တီးပါ](../../../02-SetupDevEnvironment) သို့ ဆက်လက်လုပ်ဆောင်ပါ
 
 <img src="./images/codespaces.png" alt="Screenshot: Codespaces submenu" width="50%">
 
@@ -80,74 +80,76 @@ Generative AI for Java သင်တန်းအတွက်လိုအပ်သ
 
 <img src="./images/codespaces-create.png" alt="Screenshot: Create codespace options" width="50%">
 
+
 > **Codespaces ၏ အကျိုးကျေးဇူးများ**:
 > - Local installation မလိုအပ်ပါ
-> - Browser ရှိ device များအားလုံးတွင်အလုပ်လုပ်သည်
-> - Tools နှင့် dependencies အားလုံးကို pre-configured
-> - Personal accounts အတွက် 60 နာရီအခမဲ့
-> - သင်တန်းသားအားလုံးအတွက် consistent environment
+> - Browser ပါသည့် device မည်သည့်အမျိုးအစားမဆို အလုပ်လုပ်နိုင်သည်
+> - Tools နှင့် dependencies အားလုံးကို ကြိုတင် configure ပြုလုပ်ထားသည်
+> - Personal accounts အတွက် တစ်လ ၆၀ နာရီအခမဲ့
+> - သင်တန်းသားအားလုံးအတွက် တူညီသောပတ်ဝန်းကျင်
 
-#### Option B: Local Dev Container
+#### ရွေးချယ်မှု B: Local Dev Container
 
-**Docker ဖြင့် local development ကိုနှစ်သက်သော developer များအတွက်**
+**Docker ဖြင့် local development ကို နှစ်သက်သော developer များအတွက်**
 
-1. ဤ repository ကို local machine သို့ fork နှင့် clone လုပ်ပါ
-   > **Note**: Basic config ကိုပြင်လိုပါက [Dev Container Configuration](../../../.devcontainer/devcontainer.json) ကိုကြည့်ပါ
+1. ဤ repository ကို သင့် local machine သို့ fork နှင့် clone လုပ်ပါ
+   > **မှတ်ချက်**: Basic config ကို ပြင်ဆင်လိုပါက [Dev Container Configuration](../../../.devcontainer/devcontainer.json) ကိုကြည့်ပါ
 2. [Docker Desktop](https://www.docker.com/products/docker-desktop/) နှင့် [VS Code](https://code.visualstudio.com/) ကို install လုပ်ပါ
 3. VS Code တွင် [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) ကို install လုပ်ပါ
 4. Repository folder ကို VS Code တွင်ဖွင့်ပါ
-5. Prompt ဖြစ်လာသောအခါ **Reopen in Container** ကိုနှိပ်ပါ (သို့မဟုတ် `Ctrl+Shift+P` → "Dev Containers: Reopen in Container" ကိုအသုံးပြုပါ)
-6. Container ကို build နှင့် start လုပ်ရန်စောင့်ပါ
-7. [အဆင့် ၂: GitHub Token ဖန်တီးပါ](../../../02-SetupDevEnvironment) သို့ဆက်လက်လုပ်ဆောင်ပါ
+5. Prompt ပြသပါက **Reopen in Container** ကိုနှိပ်ပါ (သို့မဟုတ် `Ctrl+Shift+P` → "Dev Containers: Reopen in Container" ကို အသုံးပြုပါ)
+6. Container build နှင့် start ပြုလုပ်ရန် စောင့်ပါ
+7. [အဆင့် ၂: GitHub Token ဖန်တီးပါ](../../../02-SetupDevEnvironment) သို့ ဆက်လက်လုပ်ဆောင်ပါ
 
 <img src="./images/devcontainer.png" alt="Screenshot: Dev container setup" width="50%">
 
 <img src="./images/image-3.png" alt="Screenshot: Dev container build complete" width="50%">
 
-#### Option C: သင့်ရဲ့ Local Installation ကိုအသုံးပြုပါ
+#### ရွေးချယ်မှု C: သင့်ရှိပြီးသား Local Installation ကို အသုံးပြုပါ
 
 **Java environment ရှိပြီးသား developer များအတွက်**
 
 လိုအပ်ချက်များ:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
 - [Maven 3.9+](https://maven.apache.org/download.cgi)
-- [VS Code](https://code.visualstudio.com) သို့မဟုတ် သင့်အကြိုက်ဆုံး IDE
+- [VS Code](https://code.visualstudio.com) သို့မဟုတ် သင့်နှစ်သက်ရာ IDE
 
 အဆင့်များ:
-1. Repository ကို local machine သို့ clone လုပ်ပါ
-2. Project ကို IDE တွင်ဖွင့်ပါ
-3. [အဆင့် ၂: GitHub Token ဖန်တီးပါ](../../../02-SetupDevEnvironment) သို့ဆက်လက်လုပ်ဆောင်ပါ
+1. ဤ repository ကို သင့် local machine သို့ clone လုပ်ပါ
+2. Project ကို သင့် IDE တွင်ဖွင့်ပါ
+3. [အဆင့် ၂: GitHub Token ဖန်တီးပါ](../../../02-SetupDevEnvironment) သို့ ဆက်လက်လုပ်ဆောင်ပါ
 
-> **Pro Tip**: Low-spec machine ရှိပြီး local VS Code ကိုအသုံးပြုလိုပါက GitHub Codespaces ကိုအသုံးပြုပါ! Cloud-hosted Codespace ကို local VS Code နှင့်ချိတ်ဆက်နိုင်သည်။
+> **Pro Tip**: သင့်စက် specs နည်းပါးပြီး local VS Code ကို အသုံးပြုလိုပါက GitHub Codespaces ကို အသုံးပြုပါ! Cloud-hosted Codespace ကို သင့် local VS Code နှင့် ချိတ်ဆက်နိုင်သည်။
 
 <img src="./images/image-2.png" alt="Screenshot: created local devcontainer instance" width="50%">
 
+
 ## အဆင့် ၂: GitHub Personal Access Token ဖန်တီးပါ
 
-1. [GitHub Settings](https://github.com/settings/profile) သို့သွားပြီး profile menu မှ **Settings** ကိုရွေးချယ်ပါ။
+1. [GitHub Settings](https://github.com/settings/profile) သို့သွားပြီး သင့် profile menu မှ **Settings** ကိုရွေးပါ။
 2. ဘယ်ဘက် sidebar တွင် **Developer settings** ကိုနှိပ်ပါ (အောက်ဆုံးတွင်ရှိသည်)။
-3. **Personal access tokens** အောက်တွင် **Fine-grained tokens** ကိုနှိပ်ပါ (သို့မဟုတ်ဤ [link](https://github.com/settings/personal-access-tokens) ကိုလိုက်ပါ)။
+3. **Personal access tokens** အောက်တွင် **Fine-grained tokens** ကိုနှိပ်ပါ (သို့မဟုတ် ဤ [link](https://github.com/settings/personal-access-tokens) ကိုလိုက်ပါ)။
 4. **Generate new token** ကိုနှိပ်ပါ။
-5. "Token name" အောက်တွင်ဖော်ပြချက်အမည် (ဥပမာ `GenAI-Java-Course-Token`) ထည့်ပါ။
-6. Expiration date ကိုသတ်မှတ်ပါ (လုံခြုံရေးအတွက် 7 ရက်အကြံပြုသည်)။
-7. "Resource owner" အောက်တွင် သင့် user account ကိုရွေးချယ်ပါ။
-8. "Repository access" အောက်တွင် GitHub Models အသုံးပြုလိုသော repositories ကိုရွေးချယ်ပါ (သို့မဟုတ် "All repositories" လိုအပ်ပါက)။
+5. "Token name" အောက်တွင် ဖော်ပြချက်အမည် (ဥပမာ `GenAI-Java-Course-Token`) ထည့်ပါ။
+6. Expiration date ကို သတ်မှတ်ပါ (လုံခြုံရေးအတွက် ၇ ရက်ကို အကြံပြုပါ)။
+7. "Resource owner" အောက်တွင် သင့် user account ကိုရွေးပါ။
+8. "Repository access" အောက်တွင် သင့်အသုံးပြုလိုသည့် repositories (သို့မဟုတ် "All repositories") ကိုရွေးပါ။
 9. "Repository permissions" အောက်တွင် **Models** ကိုရှာပြီး **Read and write** သို့ပြောင်းပါ။
 10. **Generate token** ကိုနှိပ်ပါ။
-11. **Token ကိုယခုကူးပြီး save လုပ်ပါ** – နောက်တစ်ကြိမ်မမြင်နိုင်ပါ။
+11. **ယခုသင့် token ကို copy နှင့် save လုပ်ပါ** – နောက်တစ်ကြိမ်မမြင်နိုင်တော့ပါ!
 
-> **Security Tip**: Access tokens အတွက်လိုအပ်သော scope အနည်းဆုံးနှင့် practical expiration time အတိုဆုံးကိုအသုံးပြုပါ။
+> **လုံခြုံရေးအကြံပြုချက်**: သင့် access tokens အတွက် လိုအပ်သော scope အနည်းဆုံးနှင့် အတိုဆုံးသက်တမ်းကို အသုံးပြုပါ။
 
-## အဆင့် ၃: Setup ကို GitHub Models Example ဖြင့်စမ်းသပ်ပါ
+## အဆင့် ၃: GitHub Models Example ဖြင့် သင့် Setup ကို စမ်းသပ်ပါ
 
-Development environment ပြင်ဆင်ပြီးပါက GitHub Models integration ကို `02-SetupDevEnvironment/src/github-models` တွင်ရှိသောဥပမာ application ဖြင့်စမ်းသပ်ပါ။
+သင့်ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်အဆင်သင့်ဖြစ်ပြီးနောက်၊ [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models) တွင်ရှိသော ဥပမာအက်ပလီကေးရှင်းဖြင့် GitHub Models integration ကို စမ်းသပ်ပါ။
 
-1. Development environment တွင် terminal ကိုဖွင့်ပါ။
+1. သင့်ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်တွင် terminal ကိုဖွင့်ပါ။
 2. GitHub Models example သို့သွားပါ:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
-3. GitHub token ကို environment variable အဖြစ် set လုပ်ပါ:
+3. သင့် GitHub token ကို environment variable အဖြစ် သတ်မှတ်ပါ:
    ```bash
    # macOS/Linux
    export GITHUB_TOKEN=your_token_here
@@ -159,29 +161,29 @@ Development environment ပြင်ဆင်ပြီးပါက GitHub Models
    $env:GITHUB_TOKEN="your_token_here"
    ```
 
-4. Application ကို run လုပ်ပါ:
+4. အက်ပလီကေးရှင်းကို run လုပ်ပါ:
    ```bash
    mvn compile exec:java -Dexec.mainClass="com.example.githubmodels.App"
    ```
 
-Output အနေနှင့်:
+သင့် output သည် အောက်ပါအတိုင်းဖြစ်ရမည်:
 ```text
 Using model: gpt-4.1-nano
 Sending request to GitHub Models...
 Response: Hello World!
 ```
 
-### ဥပမာ Code ကိုနားလည်ခြင်း
+### ဤဥပမာ Code ကို နားလည်ခြင်း
 
-ပထမဦးဆုံး၊ သင်ရောစမ်းသပ်ပြီးသောအရာကိုနားလည်ပါ။ `src/github-models` အောက်ရှိဥပမာသည် OpenAI Java SDK ကိုအသုံးပြု၍ GitHub Models နှင့်ချိတ်ဆက်သည်။
+ပထမဦးစွာ၊ သင် run လုပ်ခဲ့သည့်အရာကို နားလည်ပါ။ `examples/github-models` အောက်ရှိ ဤဥပမာသည် OpenAI Java SDK ကို အသုံးပြု၍ GitHub Models နှင့် ချိတ်ဆက်သည်။
 
-**ဤ code ၏လုပ်ဆောင်မှုများ:**
-- **GitHub Models** နှင့် personal access token ကိုအသုံးပြု၍ချိတ်ဆက်သည်
-- AI model သို့ "Say Hello World!" message တစ်ခုကို **ပို့သည်**
-- AI ၏ response ကို **လက်ခံပြီးပြသသည်**
-- Setup မှန်ကန်မှုကို **အတည်ပြုသည်**
+**ဤ code ၏လုပ်ဆောင်ချက်များ:**
+- **GitHub Models** နှင့် သင့် personal access token ဖြင့် ချိတ်ဆက်သည်
+- AI မော်ဒယ်သို့ "Say Hello World!" စာကို **ပို့သည်**
+- AI ၏တုံ့ပြန်မှုကို **လက်ခံပြီး ပြသသည်**
+- သင့် setup မှန်ကန်စွာ အလုပ်လုပ်နေကြောင်း **အတည်ပြုသည်**
 
-**Key Dependency** (`pom.xml`):
+**အဓိကလိုအပ်ချက်** (`pom.xml` တွင်):
 ```xml
 <dependency>
     <groupId>com.openai</groupId>
@@ -210,47 +212,47 @@ ChatCompletion response = client.chat().completions().create(params);
 System.out.println("Response: " + response.choices().get(0).message().content().orElse("No response content"));
 ```
 
-## Summary
+## အကျဉ်းချုပ်
 
 **ဂုဏ်ယူပါတယ်!** သင်အောင်မြင်စွာ:
 
-- **GitHub Personal Access Token** ကို AI model access အတွက်လိုအပ်သော permissions ဖြင့်ဖန်တီးပြီး
-- **Java development environment** ကို Codespaces, dev containers, သို့မဟုတ် local installation ဖြင့် set up လုပ်ပြီး
-- **GitHub Models** ကို OpenAI Java SDK ဖြင့်ချိတ်ဆက်ပြီး free AI development access ရရှိပြီး
-- **Integration ကိုစမ်းသပ်ပြီး** AI models နှင့်ဆက်သွယ်သော working example application ရရှိခဲ့သည်
+- **GitHub Personal Access Token** ကို AI model access အတွက် လိုအပ်သော permissions ဖြင့် ဖန်တီးပြီး
+- **Java ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်** ကို Codespaces, dev containers, သို့မဟုတ် local installation ဖြင့် သတ်မှတ်ပြီး
+- **GitHub Models** နှင့် OpenAI Java SDK ကို အသုံးပြု၍ AI ဖွံ့ဖြိုးရေးအတွက် ချိတ်ဆက်ပြီး
+- **Integration ကို စမ်းသပ်ပြီး** AI မော်ဒယ်များနှင့် ဆက်သွယ်နိုင်သော အက်ပလီကေးရှင်းကို အောင်မြင်စွာ run လုပ်နိုင်ခဲ့ပါသည်
 
-## Next Steps
+## နောက်ထပ်အဆင့်များ
 
 [Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.md)
 
-## Troubleshooting
+## ပြဿနာရှာဖွေခြင်း
 
-ပြဿနာရှိပါသလား? အများဆုံးဖြစ်နိုင်သောပြဿနာများနှင့်ဖြေရှင်းနည်းများ:
+ပြဿနာရှိပါသလား? အောက်ပါအကြောင်းအရာများကို စစ်ဆေးပါ:
 
-- **Token အလုပ်မလုပ်ပါသလား?** 
-  - Token အပြည့်အစုံကို extra spaces မပါဘဲ copy လုပ်ထားပါ
-  - Token ကို environment variable အဖြစ်မှန်ကန်စွာ set လုပ်ထားပါ
-  - Token ၏ permissions မှန်ကန်မှု (Models: Read and write) ကိုစစ်ဆေးပါ
+- **Token အလုပ်မလုပ်ပါက** 
+  - Token အပြည့်အစုံကို space မပါဘဲ copy လုပ်ထားကြောင်း သေချာပါ
+  - Token ကို environment variable အဖြစ် မှန်ကန်စွာ သတ်မှတ်ထားကြောင်း စစ်ဆေးပါ
+  - Token ၏ permissions (Models: Read and write) မှန်ကန်ကြောင်း စစ်ဆေးပါ
 
-- **Maven မတွေ့ပါသလား?** 
-  - Dev containers/Codespaces အသုံးပြုပါက Maven pre-installed ဖြစ်သင့်သည်
-  - Local setup အတွက် Java 21+ နှင့် Maven 3.9+ install လုပ်ထားပါ
-  - `mvn --version` ဖြင့် installation ကိုစစ်ဆေးပါ
+- **Maven မတွေ့ပါက** 
+  - Dev containers/Codespaces ကို အသုံးပြုပါက Maven သည် ကြိုတင်တပ်ဆင်ထားသည်
+  - Local setup အတွက် Java 21+ နှင့် Maven 3.9+ တပ်ဆင်ထားကြောင်း သေချာပါ
+  - `mvn --version` ဖြင့် installation ကို စစ်ဆေးပါ
 
-- **Connection ပြဿနာများ?** 
-  - သင့် internet connection ကိုစစ်ဆေးပါ
-  - GitHub သို့ network မှ access ရှိမှုကိုစစ်ဆေးပါ
-  - GitHub Models endpoint ကို block လုပ်သော firewall မရှိကြောင်းသေချာပါ
+- **Connection ပြဿနာများ** 
+  - သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပါ
+  - GitHub သို့ ချိတ်ဆက်နိုင်ကြောင်း သေချာပါ
+  - GitHub Models endpoint ကို ပိတ်ထားသော firewall မရှိကြောင်း စစ်ဆေးပါ
 
-- **Dev container မစတင်နိုင်ပါသလား?** 
-  - Docker Desktop ကို run လုပ်ထားပါ (local development အတွက်)
-  - Container ကိုပြန်လည် build လုပ်ပါ: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
+- **Dev container မစတင်ပါက** 
+  - Docker Desktop ကို run လုပ်ထားကြောင်း သေချာပါ (local development အတွက်)
+  - Container ကို ပြန်လည်တည်ဆောက်ရန် ကြိုးစားပါ: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
-- **Application compilation errors?**
-  - မှန်ကန် directory (`02-SetupDevEnvironment/src/github-models`) တွင်ရှိကြောင်းသေချာပါ
-  - Clean နှင့် rebuild လုပ်ပါ: `mvn clean compile`
+- **Application compilation error များ** 
+  - သင့် directory မှန်ကန်ကြောင်း သေချာပါ: `02-SetupDevEnvironment/examples/github-models`
+  - `mvn clean compile` ဖြင့် ပြန်လည်သန့်စင်ပြီး build ပြုလုပ်ပါ
 
-> **အကူအညီလိုပါသလား?**: ပြဿနာရှိနေသေးပါက repository တွင် issue တစ်ခုဖွင့်ပြီးအကူအညီတောင်းပါ။
+> **အကူအညီလိုပါသလား?**: ပြဿနာရှိနေဆဲလျှင် repository တွင် issue တစ်ခုဖွင့်ပြီး ကျွန်ုပ်တို့ကူညီပေးပါမည်။
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရ အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
