@@ -1,7 +1,7 @@
 # Generative AI for Beginners - Java Edition
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generative AI for Beginners - Java Edition](./img/beg-genai-series.png)
+![Generative AI for Beginners - Java Edition](./images/beg-genai-series.png)
 
 **Time Commitment**: The entire workshop can be completed online without local setup. If you want to run the samples, the environment setup takes 2 minutes, with exploring the samples requiring 1-3 hours depending on exploration depth.
 
