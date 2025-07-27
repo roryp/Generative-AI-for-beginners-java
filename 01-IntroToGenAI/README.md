@@ -94,8 +94,8 @@ Here's a quick reference table showing which SDK is used in each chapter's examp
 
 | Chapter | Sample | SDK |
 |---------|--------|-----|
-| 02-SetupDevEnvironment | src/github-models/ | OpenAI Java SDK |
-| 02-SetupDevEnvironment | src/basic-chat-azure/ | Spring AI Azure OpenAI |
+| 02-SetupDevEnvironment | examples/github-models/ | OpenAI Java SDK |
+| 02-SetupDevEnvironment | examples/basic-chat-azure/ | Spring AI Azure OpenAI |
 | 03-CoreGenerativeAITechniques | examples/ | Azure OpenAI SDK |
 | 04-PracticalSamples | petstory/ | OpenAI Java SDK |
 | 04-PracticalSamples | foundrylocal/ | OpenAI Java SDK |
