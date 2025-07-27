@@ -49,7 +49,7 @@ The `ResponsibleGithubModels` class follows this flow:
 5. Display results showing which content was blocked vs. allowed
 6. Test safe content for comparison
 
-![Responsible AI Safety Demo](./img/responsible.png)
+![Responsible AI Safety Demo](./images/responsible.png)
 
 ### Setup Instructions
 
@@ -153,7 +153,7 @@ You have completed the Generative AI for Beginners - Java Edition course and are
 
 Congratulations on completing the Generative AI for Beginners course! You now have the knowledge and tools to build responsible and effective generative AI applications with Java.
 
-![Course Completion](./img/image.png)
+![Course Completion](./images/image.png)
 
 **What you've accomplished:**
 - Set up your development environment
