@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:34:49+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:50:54+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -10,24 +10,24 @@ CO_OP_TRANSLATOR_METADATA:
 # Generativ AI for Begyndere - Java Edition
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generativ AI for Begyndere - Java Edition](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.da.png)
+![Generativ AI for Begyndere - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.da.png)
 
-**Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Hvis du ønsker at køre eksemplerne, tager miljøopsætningen 2 minutter, og det kræver 1-3 timer at udforske eksemplerne, afhængigt af hvor dybt du går.
+**Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Hvis du vil køre eksemplerne, tager opsætningen af miljøet 2 minutter, og udforskning af eksemplerne kræver 1-3 timer afhængigt af dybden af din udforskning.
 
 > **Hurtig Start**
 
 1. Fork dette repository til din GitHub-konto
 2. Klik på **Code** → **Codespaces** fanen → **...** → **New with options...**
-3. Brug standardindstillingerne – dette vælger den udviklingscontainer, der er oprettet til dette kursus
+3. Brug standardindstillingerne – dette vil vælge udviklingscontaineren, der er oprettet til dette kursus
 4. Klik på **Create codespace**
-5. Vent ca. 2 minutter, indtil miljøet er klar
+5. Vent ~2 minutter på, at miljøet er klar
 6. Gå direkte til [Oprettelse af din GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Understøttelse af flere sprog
 
 ### Understøttet via GitHub Action (Automatisk & Altid Opdateret)
 
-[Fransk](../fr/README.md) | [Spansk](../es/README.md) | [Tysk](../de/README.md) | [Russisk](../ru/README.md) | [Arabisk](../ar/README.md) | [Persisk (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kinesisk (Forenklet)](../zh/README.md) | [Kinesisk (Traditionelt, Macau)](../mo/README.md) | [Kinesisk (Traditionelt, Hong Kong)](../hk/README.md) | [Kinesisk (Traditionelt, Taiwan)](../tw/README.md) | [Japansk](../ja/README.md) | [Koreansk](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalesisk](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugisisk (Portugal)](../pt/README.md) | [Portugisisk (Brasilien)](../br/README.md) | [Italiensk](../it/README.md) | [Polsk](../pl/README.md) | [Tyrkisk](../tr/README.md) | [Græsk](../el/README.md) | [Thai](../th/README.md) | [Svensk](../sv/README.md) | [Dansk](./README.md) | [Norsk](../no/README.md) | [Finsk](../fi/README.md) | [Hollandsk](../nl/README.md) | [Hebraisk](../he/README.md) | [Vietnamesisk](../vi/README.md) | [Indonesisk](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Ungarsk](../hu/README.md) | [Tjekkisk](../cs/README.md) | [Slovakisk](../sk/README.md) | [Rumænsk](../ro/README.md) | [Bulgarsk](../bg/README.md) | [Serbisk (Kyrillisk)](../sr/README.md) | [Kroatisk](../hr/README.md) | [Slovensk](../sl/README.md) | [Ukrainsk](../uk/README.md) | [Burmesisk (Myanmar)](../my/README.md)
+[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](./README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
 
 ## Kursusstruktur & Læringssti
 
@@ -39,15 +39,15 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Kapitel 1](./01-IntroToGenAI/README.md)**
 
 ### **Kapitel 2: Opsætning af Udviklingsmiljø**
-- **Multi-Provider Konfiguration**: Opsætning af GitHub Models, Azure OpenAI og OpenAI Java SDK-integrationer
+- **Multi-Provider Konfiguration**: Opsætning af GitHub Models, Azure OpenAI og OpenAI Java SDK integrationer
 - **Spring Boot + Spring AI**: Bedste praksis for udvikling af AI-applikationer til virksomheder
 - **GitHub Models**: Gratis adgang til AI-modeller til prototyper og læring (ingen kreditkort påkrævet)
-- **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces-konfiguration
+- **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces konfiguration
 - **[→ Start Kapitel 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Kapitel 3: Kerne Generative AI Teknikker**
 - **Prompt Engineering**: Teknikker til optimale AI-modelsvar
-- **Embeddings & Vektoroperationer**: Implementer semantisk søgning og lighedsmatchning
+- **Embeddings & Vektoroperationer**: Implementer semantisk søgning og lighedsmatching
 - **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
 - **Function Calling**: Udvid AI-funktioner med brugerdefinerede værktøjer og plugins
 - **[→ Start Kapitel 3](./03-CoreGenerativeAITechniques/README.md)**
@@ -55,10 +55,10 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapitel 4: Praktiske Anvendelser & Projekter**
 - **Pet Story Generator** (`petstory/`): Kreativ indholdsgenerering med GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Lokal AI-modelintegration med OpenAI Java SDK
-- **MCP Calculator Service** (`mcp/calculator/`): Grundlæggende Model Context Protocol-implementering med Spring AI
+- **MCP Calculator Service** (`mcp/calculator/`): Grundlæggende Model Context Protocol implementering med Spring AI
 - **[→ Start Kapitel 4](./04-PracticalSamples/README.md)**
 
-### **Kapitel 5: Ansvarlig AI-udvikling**
+### **Kapitel 5: Ansvarlig AI Udvikling**
 - **GitHub Models Sikkerhed**: Test indbyggede indholdsfiltre og sikkerhedsmekanismer
 - **Ansvarlig AI Demo**: Praktisk eksempel, der viser, hvordan AI-sikkerhedsfiltre fungerer i praksis
 - **Bedste Praksis**: Vigtige retningslinjer for etisk AI-udvikling og implementering
@@ -76,11 +76,11 @@ CO_OP_TRANSLATOR_METADATA:
 - [Cybersikkerhed for Begyndere](https://github.com/microsoft/Security-101)
 - [Webudvikling for Begyndere](https://aka.ms/webdev-beginners)
 - [IoT for Begyndere](https://aka.ms/iot-beginners)
-- [XR-udvikling for Begyndere](https://github.com/microsoft/xr-development-for-beginners)
+- [XR Udvikling for Begyndere](https://github.com/microsoft/xr-development-for-beginners)
 - [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App med Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

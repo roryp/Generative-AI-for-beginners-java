@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T19:25:24+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:56:45+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "ms"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Apa yang Anda Akan Pelajari
 
-- Memahami pertimbangan etika dan amalan terbaik dalam pembangunan AI
+- Memahami pertimbangan etika dan amalan terbaik untuk pembangunan AI
 - Melaksanakan penapisan kandungan dan langkah keselamatan dalam aplikasi anda
 - Menguji dan mengendalikan respons keselamatan AI menggunakan perlindungan terbina dalam GitHub Models
 - Menerapkan prinsip AI yang bertanggungjawab untuk membina sistem AI yang selamat dan beretika
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kandungan
 
 - [Pengenalan](../../../05-ResponsibleGenAI)
-- [Keselamatan Terbina Dalam GitHub Models](../../../05-ResponsibleGenAI)
+- [Keselamatan Terbina dalam GitHub Models](../../../05-ResponsibleGenAI)
 - [Contoh Praktikal: Demo Keselamatan AI yang Bertanggungjawab](../../../05-ResponsibleGenAI)
   - [Apa yang Ditunjukkan oleh Demo](../../../05-ResponsibleGenAI)
   - [Arahan Persediaan](../../../05-ResponsibleGenAI)
@@ -33,9 +33,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pengenalan
 
-Bab terakhir ini memberi tumpuan kepada aspek kritikal dalam membina aplikasi AI generatif yang bertanggungjawab dan beretika. Anda akan mempelajari cara melaksanakan langkah keselamatan, mengendalikan penapisan kandungan, dan menerapkan amalan terbaik untuk pembangunan AI yang bertanggungjawab menggunakan alat dan rangka kerja yang telah dibincangkan dalam bab sebelumnya. Memahami prinsip-prinsip ini adalah penting untuk membina sistem AI yang bukan sahaja canggih secara teknikal tetapi juga selamat, beretika, dan boleh dipercayai.
+Bab terakhir ini memberi tumpuan kepada aspek kritikal dalam membina aplikasi AI generatif yang bertanggungjawab dan beretika. Anda akan mempelajari cara melaksanakan langkah keselamatan, mengendalikan penapisan kandungan, dan menerapkan amalan terbaik untuk pembangunan AI yang bertanggungjawab menggunakan alat dan rangka kerja yang telah dibincangkan dalam bab sebelumnya. Memahami prinsip-prinsip ini adalah penting untuk membina sistem AI yang bukan sahaja mengagumkan dari segi teknikal tetapi juga selamat, beretika, dan boleh dipercayai.
 
-## Keselamatan Terbina Dalam GitHub Models
+## Keselamatan Terbina dalam GitHub Models
 
 GitHub Models dilengkapi dengan penapisan kandungan asas secara automatik. Ia seperti mempunyai penjaga pintu mesra di kelab AI anda - tidak terlalu canggih, tetapi cukup untuk senario asas.
 
@@ -58,7 +58,7 @@ Kelas `ResponsibleGithubModels` mengikuti aliran ini:
 5. Memaparkan hasil yang menunjukkan kandungan mana yang disekat berbanding yang dibenarkan
 6. Menguji kandungan selamat untuk perbandingan
 
-![Demo Keselamatan AI yang Bertanggungjawab](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.ms.png)
+![Demo Keselamatan AI yang Bertanggungjawab](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.ms.png)
 
 ### Arahan Persediaan
 
@@ -94,7 +94,7 @@ Kelas `ResponsibleGithubModels` mengikuti aliran ini:
 ### Output yang Dijangka
 
 Demo akan menguji pelbagai jenis arahan yang berpotensi berbahaya dan menunjukkan:
-- **Kandungan selamat** yang mendapat respons biasa
+- **Kandungan selamat** yang mendapat respons normal
 - **Kandungan berbahaya** yang disekat oleh penapis keselamatan
 - **Sebarang ralat** yang berlaku semasa pemprosesan
 
@@ -119,7 +119,7 @@ Status: Response generated (content appears safe)
 
 Apabila membina aplikasi AI, ikuti amalan penting ini:
 
-1. **Sentiasa kendalikan respons penapis keselamatan dengan baik**
+1. **Sentiasa mengendalikan respons penapis keselamatan dengan baik**
    - Laksanakan pengendalian ralat yang betul untuk kandungan yang disekat
    - Berikan maklum balas yang bermakna kepada pengguna apabila kandungan ditapis
 
@@ -150,7 +150,7 @@ Contoh ini menggunakan arahan bermasalah secara sengaja untuk tujuan pendidikan 
 - **Melaksanakan langkah keselamatan AI** termasuk penapisan kandungan dan pengendalian respons keselamatan
 - **Menerapkan prinsip AI yang bertanggungjawab** untuk membina sistem AI yang beretika dan boleh dipercayai
 - **Menguji mekanisme keselamatan** menggunakan keupayaan perlindungan terbina dalam GitHub Models
-- **Mempelajari amalan terbaik** untuk pembangunan dan pelaksanaan AI yang bertanggungjawab
+- **Mempelajari amalan terbaik** untuk pembangunan dan penyebaran AI yang bertanggungjawab
 
 **Sumber AI yang Bertanggungjawab:**
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Ketahui pendekatan Microsoft terhadap keselamatan, privasi, dan pematuhan
@@ -162,7 +162,7 @@ Anda telah menyelesaikan kursus Generative AI for Beginners - Java Edition dan k
 
 Tahniah kerana menyelesaikan kursus Generative AI for Beginners! Anda kini mempunyai pengetahuan dan alat untuk membina aplikasi AI generatif yang bertanggungjawab dan berkesan dengan Java.
 
-![Penyelesaian Kursus](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.ms.png)
+![Penyelesaian Kursus](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.ms.png)
 
 **Apa yang telah anda capai:**
 - Menyediakan persekitaran pembangunan anda

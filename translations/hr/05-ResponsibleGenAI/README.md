@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T20:53:06+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T09:04:26+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "hr"
 }
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Uvod
 
-Ovo završno poglavlje usredotočuje se na ključne aspekte izgradnje odgovornih i etičkih generativnih AI aplikacija. Naučit ćete kako implementirati sigurnosne mjere, upravljati filtriranjem sadržaja i primijeniti najbolje prakse za razvoj odgovorne AI koristeći alate i okvire obrađene u prethodnim poglavljima. Razumijevanje ovih principa ključno je za izgradnju AI sustava koji nisu samo tehnički impresivni, već i sigurni, etični i pouzdani.
+Ovo završno poglavlje usredotočuje se na ključne aspekte izgradnje odgovornih i etičkih generativnih AI aplikacija. Naučit ćete kako implementirati sigurnosne mjere, upravljati filtriranjem sadržaja i primijeniti najbolje prakse za razvoj odgovorne AI koristeći alate i okvire obrađene u prethodnim poglavljima. Razumijevanje ovih principa ključno je za izgradnju AI sustava koji su ne samo tehnički impresivni, već i sigurni, etični i pouzdani.
 
 ## Ugrađena sigurnost GitHub Modela
 
@@ -54,11 +54,11 @@ Klasa `ResponsibleGithubModels` slijedi ovaj tijek:
 1. Inicijalizacija GitHub Model klijenta s autentifikacijom
 2. Testiranje štetnih upita (nasilje, govor mržnje, dezinformacije, ilegalni sadržaj)
 3. Slanje svakog upita GitHub Models API-ju
-4. Upravljanje odgovorima: generirani sadržaj ili blokiranje sigurnosnim filterima
+4. Upravljanje odgovorima: generirani sadržaj ili blokiranje sigurnosnim filtrima
 5. Prikaz rezultata koji pokazuju koji je sadržaj blokiran, a koji dopušten
 6. Testiranje sigurnog sadržaja za usporedbu
 
-![Demo sigurnosti odgovorne AI](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.hr.png)
+![Demo sigurnosti odgovorne AI](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.hr.png)
 
 ### Upute za postavljanje
 
@@ -95,8 +95,8 @@ Klasa `ResponsibleGithubModels` slijedi ovaj tijek:
 
 Demo će testirati različite vrste potencijalno štetnih upita i prikazati:
 - **Siguran sadržaj** koji dobiva normalan odgovor
-- **Štetni sadržaj** koji je blokiran sigurnosnim filterima
-- **Sve greške** koje se javljaju tijekom obrade
+- **Štetni sadržaj** koji je blokiran sigurnosnim filtrima
+- **Sve pogreške** koje se javljaju tijekom obrade
 
 Format uzorka izlaza:
 ```
@@ -120,7 +120,7 @@ Status: Response generated (content appears safe)
 Prilikom izgradnje AI aplikacija, slijedite ove ključne prakse:
 
 1. **Uvijek se nosite s potencijalnim odgovorima sigurnosnih filtera na odgovarajući način**
-   - Implementirajte pravilno rukovanje greškama za blokirani sadržaj
+   - Implementirajte pravilno rukovanje pogreškama za blokirani sadržaj
    - Pružite korisnicima smislen povratni odgovor kada je sadržaj filtriran
 
 2. **Implementirajte vlastitu dodatnu validaciju sadržaja gdje je to prikladno**
@@ -141,13 +141,13 @@ Prilikom izgradnje AI aplikacija, slijedite ove ključne prakse:
 
 ## Važna napomena
 
-Ovaj primjer koristi namjerno problematične upite isključivo u edukativne svrhe. Cilj je demonstrirati sigurnosne mjere, a ne ih zaobići. Uvijek koristite AI alate odgovorno i etično.
+Ovaj primjer koristi namjerno problematične upite isključivo u edukativne svrhe. Cilj je demonstrirati sigurnosne mjere, a ne zaobići ih. Uvijek koristite AI alate odgovorno i etično.
 
 ## Sažetak
 
 **Čestitamo!** Uspješno ste:
 
-- **Implementirali sigurnosne mjere AI-a** uključujući filtriranje sadržaja i upravljanje sigurnosnim odgovorima
+- **Implementirali mjere sigurnosti AI-a** uključujući filtriranje sadržaja i upravljanje sigurnosnim odgovorima
 - **Primijenili principe odgovorne AI** za izgradnju etičkih i pouzdanih AI sustava
 - **Testirali sigurnosne mehanizme** koristeći ugrađene zaštitne sposobnosti GitHub Modela
 - **Naučili najbolje prakse** za razvoj i implementaciju odgovorne AI
@@ -162,10 +162,10 @@ Završili ste tečaj Generativna AI za početnike - Java izdanje i sada ste spre
 
 Čestitamo na završetku tečaja Generativna AI za početnike! Sada imate znanje i alate za izgradnju odgovornih i učinkovitih generativnih AI aplikacija koristeći Javu.
 
-![Završetak tečaja](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.hr.png)
+![Završetak tečaja](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.hr.png)
 
 **Što ste postigli:**
-- Postavili ste razvojno okruženje
+- Postavili razvojno okruženje
 - Naučili osnovne tehnike generativne AI
 - Izgradili praktične AI aplikacije
 - Razumjeli principe odgovorne AI
@@ -192,4 +192,4 @@ Nastavite svoje AI obrazovanje s ovim dodatnim resursima:
 - [RAG Chat App s Azure AI uslugama](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

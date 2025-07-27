@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:35:38+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:52:18+00:00",
   "source_file": "README.md",
   "language_code": "fi"
 }
@@ -10,7 +10,7 @@ CO_OP_TRANSLATOR_METADATA:
 # Generatiivinen tekoäly aloittelijoille - Java-versio
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generatiivinen tekoäly aloittelijoille - Java-versio](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.fi.png)
+![Generatiivinen tekoäly aloittelijoille - Java-versio](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.fi.png)
 
 **Aikataulu**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Jos haluat ajaa esimerkkejä, ympäristön asennus vie 2 minuuttia, ja esimerkkien tutkiminen kestää 1–3 tuntia riippuen tutkimisen syvyydestä.
 
@@ -33,9 +33,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Luku 1: Johdatus generatiiviseen tekoälyyn**
 - **Keskeiset käsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyominaisuuksien ymmärtäminen
-- **Java AI -ekosysteemi**: Katsaus Spring AI- ja OpenAI SDK:ihin
+- **Java AI -ekosysteemi**: Katsaus Spring AI- ja OpenAI-SDK:ihin
 - **Model Context Protocol**: Johdatus MCP:hen ja sen rooliin tekoälyagenttien viestinnässä
-- **Käytännön sovellukset**: Reaaliaikaisia esimerkkejä, kuten chatbotit ja sisällöntuotanto
+- **Käytännön sovellukset**: Reaaliaikaiset esimerkit, kuten chatbotit ja sisällöntuotanto
 - **[→ Aloita luku 1](./01-IntroToGenAI/README.md)**
 
 ### **Luku 2: Kehitysympäristön asennus**
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Aloita luku 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Luku 4: Käytännön sovellukset ja projektit**
-- **Lemmikkitarinageneraattori** (`petstory/`): Luova sisällöntuotanto GitHub Models -mallien avulla
+- **Lemmikkitarinageneraattori** (`petstory/`): Luova sisällöntuotanto GitHub Models -malleilla
 - **Foundry Local Demo** (`foundrylocal/`): Paikallisen tekoälymallin integrointi OpenAI Java SDK:lla
 - **MCP-laskinpalvelu** (`mcp/calculator/`): Perustason Model Context Protocol -toteutus Spring AI:lla
 - **[→ Aloita luku 4](./04-PracticalSamples/README.md)**

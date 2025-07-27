@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:36:05+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:53:08+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -10,17 +10,17 @@ CO_OP_TRANSLATOR_METADATA:
 # Generatieve AI voor Beginners - Java Editie
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generatieve AI voor Beginners - Java Editie](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.nl.png)
+![Generatieve AI voor Beginners - Java Editie](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.nl.png)
 
 **Tijdsinvestering**: De hele workshop kan online worden voltooid zonder lokale installatie. Als je de voorbeelden wilt uitvoeren, duurt het instellen van de omgeving 2 minuten, en het verkennen van de voorbeelden 1-3 uur, afhankelijk van de diepte van je verkenning.
 
 > **Snelle Start**
 
 1. Fork deze repository naar je GitHub-account
-2. Klik op **Code** → **Codespaces** tab → **...** → **Nieuw met opties...**
+2. Klik op **Code** → tabblad **Codespaces** → **...** → **Nieuw met opties...**
 3. Gebruik de standaardinstellingen – dit selecteert de ontwikkelcontainer die voor deze cursus is gemaakt
 4. Klik op **Codespace maken**
-5. Wacht ~2 minuten tot de omgeving gereed is
+5. Wacht ~2 minuten tot de omgeving klaar is
 6. Ga direct naar [Je GitHub Models Token maken](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Ondersteuning voor Meerdere Talen
@@ -35,12 +35,12 @@ CO_OP_TRANSLATOR_METADATA:
 - **Kernconcepten**: Begrip van Large Language Models, tokens, embeddings en AI-mogelijkheden
 - **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDK's
 - **Model Context Protocol**: Introductie tot MCP en de rol ervan in AI-agentcommunicatie
-- **Praktische Toepassingen**: Real-world scenario's zoals chatbots en contentgeneratie
+- **Praktische Toepassingen**: Toepassingen in de echte wereld, zoals chatbots en contentgeneratie
 - **[→ Start Hoofdstuk 1](./01-IntroToGenAI/README.md)**
 
 ### **Hoofdstuk 2: Ontwikkelomgeving Instellen**
 - **Multi-Provider Configuratie**: Instellen van GitHub Models, Azure OpenAI en OpenAI Java SDK-integraties
-- **Spring Boot + Spring AI**: Best practices voor enterprise AI-applicatieontwikkeling
+- **Spring Boot + Spring AI**: Best practices voor AI-applicatieontwikkeling in bedrijven
 - **GitHub Models**: Gratis toegang tot AI-modellen voor prototyping en leren (geen creditcard nodig)
 - **Ontwikkeltools**: Docker-containers, VS Code en GitHub Codespaces configuratie
 - **[→ Start Hoofdstuk 2](./02-SetupDevEnvironment/README.md)**
@@ -48,8 +48,8 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Hoofdstuk 3: Kerntechnieken van Generatieve AI**
 - **Prompt Engineering**: Technieken voor optimale AI-modelreacties
 - **Embeddings & Vectorbewerkingen**: Implementeren van semantisch zoeken en overeenkomsten
-- **Retrieval-Augmented Generation (RAG)**: Combineer AI met je eigen gegevensbronnen
-- **Functieaanroepen**: Breid AI-mogelijkheden uit met aangepaste tools en plugins
+- **Retrieval-Augmented Generation (RAG)**: AI combineren met je eigen gegevensbronnen
+- **Functieaanroepen**: AI uitbreiden met aangepaste tools en plugins
 - **[→ Start Hoofdstuk 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Hoofdstuk 4: Praktische Toepassingen & Projecten**
@@ -60,7 +60,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Hoofdstuk 5: Verantwoordelijke AI-ontwikkeling**
 - **GitHub Models Veiligheid**: Test ingebouwde contentfiltering en veiligheidsmechanismen
-- **Verantwoordelijke AI Demo**: Hands-on voorbeeld dat laat zien hoe AI-veiligheidsfilters in de praktijk werken
+- **Verantwoordelijke AI Demo**: Praktisch voorbeeld van hoe AI-veiligheidsfilters werken
 - **Best Practices**: Essentiële richtlijnen voor ethische AI-ontwikkeling en implementatie
 - **[→ Start Hoofdstuk 5](./05-ResponsibleGenAI/README.md)**
 

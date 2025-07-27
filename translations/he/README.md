@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:36:24+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:53:52+00:00",
   "source_file": "README.md",
   "language_code": "he"
 }
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
 3. השתמשו בהגדרות ברירת המחדל – זה יבחר את מיכל הפיתוח שנוצר עבור הקורס  
 4. לחצו על **Create codespace**  
 5. המתינו כ-2 דקות עד שהסביבה תהיה מוכנה  
-6. עברו ישירות ל-[יצירת אסימון המודלים של GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)  
+6. עברו ישירות ל-[יצירת אסימון מודלים אישי ב-GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)  
 
 ## תמיכה רב-שפתית
 
@@ -36,13 +36,13 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ התחלת פרק 1](./01-IntroToGenAI/README.md)**  
 
 ### **פרק 2: הגדרת סביבת פיתוח**
-- **תצורה רב-ספקית**: הגדרת מודלים של GitHub, Azure OpenAI ואינטגרציות SDK של OpenAI Java  
+- **תצורה רב-ספקית**: הגדרת מודלים של GitHub, Azure OpenAI ו-SDK של OpenAI ל-Java  
 - **Spring Boot + Spring AI**: שיטות עבודה מומלצות לפיתוח יישומי AI ארגוניים  
-- **מודלים של GitHub**: גישה חינמית למודלי AI לצורך אב-טיפוס ולמידה (ללא צורך בכרטיס אשראי)  
-- **כלי פיתוח**: מיכלי Docker, VS Code ותצורת GitHub Codespaces  
+- **מודלים של GitHub**: גישה חינמית למודלים של AI לצורך אבטיפוס ולמידה (ללא צורך בכרטיס אשראי)  
+- **כלי פיתוח**: תצורת מיכלי Docker, VS Code ו-GitHub Codespaces  
 - **[→ התחלת פרק 2](./02-SetupDevEnvironment/README.md)**  
 
-### **פרק 3: טכניקות ליבה של בינה מלאכותית גנרטיבית**
+### **פרק 3: טכניקות ליבה בבינה מלאכותית גנרטיבית**
 - **הנדסת הנחיות**: טכניקות לתגובות מיטביות ממודלי AI  
 - **הטמעות ופעולות וקטוריות**: יישום חיפוש סמנטי והתאמת דמיון  
 - **יצירה מוגברת על ידי אחזור (RAG)**: שילוב AI עם מקורות נתונים משלכם  
@@ -51,13 +51,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **פרק 4: יישומים מעשיים ופרויקטים**
 - **מחולל סיפורי חיות מחמד** (`petstory/`): יצירת תוכן יצירתי עם מודלים של GitHub  
-- **דמו מקומי של Foundry** (`foundrylocal/`): אינטגרציה של מודלי AI מקומיים עם OpenAI Java SDK  
+- **דמו מקומי של Foundry** (`foundrylocal/`): שילוב מודלים של AI מקומיים עם SDK של OpenAI ל-Java  
 - **שירות מחשבון MCP** (`mcp/calculator/`): יישום בסיסי של פרוטוקול הקשר של מודלים עם Spring AI  
 - **[→ התחלת פרק 4](./04-PracticalSamples/README.md)**  
 
 ### **פרק 5: פיתוח AI אחראי**
 - **בטיחות מודלים של GitHub**: בדיקת סינון תוכן מובנה ומנגנוני בטיחות  
-- **דמו AI אחראי**: דוגמה מעשית שמראה כיצד מסנני בטיחות AI עובדים בפועל  
+- **דמו AI אחראי**: דוגמה מעשית שמראה כיצד מסנני בטיחות של AI עובדים בפועל  
 - **שיטות עבודה מומלצות**: הנחיות חיוניות לפיתוח והטמעה אתית של AI  
 - **[→ התחלת פרק 5](./05-ResponsibleGenAI/README.md)**  
 
@@ -68,8 +68,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [בינה מלאכותית גנרטיבית למתחילים באמצעות JavaScript](https://github.com/microsoft/generative-ai-with-javascript)  
 - [בינה מלאכותית גנרטיבית למתחילים](https://github.com/microsoft/generative-ai-for-beginners)  
 - [למידת מכונה למתחילים](https://aka.ms/ml-beginners)  
-- [מדע נתונים למתחילים](https://aka.ms/datascience-beginners)  
-- [בינה מלאכותית למתחילים](https://aka.ms/ai-beginners)  
+- [מדעי הנתונים למתחילים](https://aka.ms/datascience-beginners)  
+- [AI למתחילים](https://aka.ms/ai-beginners)  
 - [סייבר למתחילים](https://github.com/microsoft/Security-101)  
 - [פיתוח אתרים למתחילים](https://aka.ms/webdev-beginners)  
 - [IoT למתחילים](https://aka.ms/iot-beginners)  
@@ -80,4 +80,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [אפליקציית צ'אט RAG עם שירותי Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T19:24:56+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:55:59+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "id"
 }
@@ -37,7 +37,7 @@ Bab terakhir ini berfokus pada aspek penting dalam membangun aplikasi AI generat
 
 ## Keamanan Bawaan GitHub Models
 
-GitHub Models dilengkapi dengan penyaringan konten dasar secara bawaan. Ini seperti memiliki penjaga pintu ramah di klub AI Anda - mungkin tidak terlalu canggih, tetapi cukup untuk menangani skenario dasar.
+GitHub Models dilengkapi dengan penyaringan konten dasar secara bawaan. Ini seperti memiliki penjaga pintu yang ramah di klub AI Anda - mungkin tidak terlalu canggih, tetapi cukup untuk menangani skenario dasar.
 
 **Apa yang Dilindungi oleh GitHub Models:**
 - **Konten Berbahaya**: Memblokir konten yang jelas-jelas mengandung kekerasan, seksual, atau berbahaya
@@ -58,7 +58,7 @@ Kelas `ResponsibleGithubModels` mengikuti alur berikut:
 5. Menampilkan hasil yang menunjukkan konten mana yang diblokir vs. diizinkan
 6. Menguji konten aman untuk perbandingan
 
-![Demo Keamanan AI yang Bertanggung Jawab](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.id.png)
+![Demo Keamanan AI yang Bertanggung Jawab](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.id.png)
 
 ### Instruksi Pengaturan
 
@@ -137,7 +137,7 @@ Saat membangun aplikasi AI, ikuti praktik penting berikut:
 
 5. **Hormati kebijakan konten platform**
    - Tetap perbarui dengan pedoman platform
-   - Patuhi syarat layanan dan pedoman etika
+   - Ikuti syarat layanan dan pedoman etika
 
 ## Catatan Penting
 
@@ -162,7 +162,7 @@ Anda telah menyelesaikan kursus Generative AI for Beginners - Java Edition dan s
 
 Selamat telah menyelesaikan kursus Generative AI for Beginners! Anda sekarang memiliki pengetahuan dan alat untuk membangun aplikasi AI generatif yang bertanggung jawab dan efektif dengan Java.
 
-![Penyelesaian Kursus](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.id.png)
+![Penyelesaian Kursus](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.id.png)
 
 **Apa yang telah Anda capai:**
 - Mengatur lingkungan pengembangan Anda
@@ -192,4 +192,4 @@ Lanjutkan perjalanan pembelajaran AI Anda dengan sumber daya tambahan berikut:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

@@ -1,70 +1,70 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T19:22:17+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:51:57+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "no"
 }
 -->
 # Ansvarlig Generativ AI
 
-## Hva Du Vil Lære
+## Hva du vil lære
 
 - Forstå etiske hensyn og beste praksis for AI-utvikling
 - Implementere innholdsfiltrering og sikkerhetstiltak i applikasjonene dine
 - Teste og håndtere AI-sikkerhetsresponser ved hjelp av GitHub Models' innebygde beskyttelser
-- Anvende prinsipper for ansvarlig AI for å bygge trygge og etiske AI-systemer
+- Anvende prinsipper for ansvarlig AI for å bygge sikre og etiske AI-systemer
 
 ## Innholdsfortegnelse
 
 - [Introduksjon](../../../05-ResponsibleGenAI)
-- [GitHub Models Innebygd Sikkerhet](../../../05-ResponsibleGenAI)
-- [Praktisk Eksempel: Ansvarlig AI Sikkerhetsdemo](../../../05-ResponsibleGenAI)
-  - [Hva Demoen Viser](../../../05-ResponsibleGenAI)
+- [GitHub Models innebygd sikkerhet](../../../05-ResponsibleGenAI)
+- [Praktisk eksempel: Ansvarlig AI-sikkerhetsdemo](../../../05-ResponsibleGenAI)
+  - [Hva demoen viser](../../../05-ResponsibleGenAI)
   - [Oppsettsinstruksjoner](../../../05-ResponsibleGenAI)
-  - [Kjøre Demoen](../../../05-ResponsibleGenAI)
-  - [Forventet Utdata](../../../05-ResponsibleGenAI)
-- [Beste Praksis for Ansvarlig AI-utvikling](../../../05-ResponsibleGenAI)
-- [Viktig Merknad](../../../05-ResponsibleGenAI)
+  - [Kjøre demoen](../../../05-ResponsibleGenAI)
+  - [Forventet output](../../../05-ResponsibleGenAI)
+- [Beste praksis for ansvarlig AI-utvikling](../../../05-ResponsibleGenAI)
+- [Viktig merknad](../../../05-ResponsibleGenAI)
 - [Oppsummering](../../../05-ResponsibleGenAI)
-- [Kursfullføring](../../../05-ResponsibleGenAI)
-- [Neste Steg](../../../05-ResponsibleGenAI)
+- [Fullføring av kurset](../../../05-ResponsibleGenAI)
+- [Neste steg](../../../05-ResponsibleGenAI)
 
 ## Introduksjon
 
-Dette siste kapittelet fokuserer på de kritiske aspektene ved å bygge ansvarlige og etiske generative AI-applikasjoner. Du vil lære hvordan du implementerer sikkerhetstiltak, håndterer innholdsfiltrering og anvender beste praksis for ansvarlig AI-utvikling ved hjelp av verktøyene og rammeverkene som er dekket i tidligere kapitler. Å forstå disse prinsippene er avgjørende for å bygge AI-systemer som ikke bare er teknisk imponerende, men også trygge, etiske og pålitelige.
+Dette siste kapittelet fokuserer på de kritiske aspektene ved å bygge ansvarlige og etiske generative AI-applikasjoner. Du vil lære hvordan du implementerer sikkerhetstiltak, håndterer innholdsfiltrering og anvender beste praksis for ansvarlig AI-utvikling ved hjelp av verktøyene og rammeverkene som er dekket i tidligere kapitler. Å forstå disse prinsippene er avgjørende for å bygge AI-systemer som ikke bare er teknisk imponerende, men også sikre, etiske og pålitelige.
 
-## GitHub Models Innebygd Sikkerhet
+## GitHub Models innebygd sikkerhet
 
 GitHub Models har grunnleggende innholdsfiltrering innebygd. Det er som å ha en vennlig dørvakt på AI-klubben din – ikke den mest sofistikerte, men den gjør jobben for grunnleggende scenarier.
 
-**Hva GitHub Models Beskytter Mot:**
-- **Skadelig Innhold**: Blokkerer åpenbart voldelig, seksuelt eller farlig innhold
-- **Grunnleggende Hatprat**: Filtrerer tydelig diskriminerende språk
-- **Enkle Omgåelser**: Motstår grunnleggende forsøk på å omgå sikkerhetsbarrierer
+**Hva GitHub Models beskytter mot:**
+- **Skadelig innhold**: Blokkerer åpenbart voldelig, seksuelt eller farlig innhold
+- **Grunnleggende hatprat**: Filtrerer tydelig diskriminerende språk
+- **Enkle forsøk på å omgå sikkerhet**: Motstår grunnleggende forsøk på å bryte sikkerhetsbarrierer
 
-## Praktisk Eksempel: Ansvarlig AI Sikkerhetsdemo
+## Praktisk eksempel: Ansvarlig AI-sikkerhetsdemo
 
-Dette kapittelet inkluderer en praktisk demonstrasjon av hvordan GitHub Models implementerer ansvarlige AI-sikkerhetstiltak ved å teste forespørsler som potensielt kan bryte sikkerhetsretningslinjene.
+Dette kapittelet inkluderer en praktisk demonstrasjon av hvordan GitHub Models implementerer ansvarlige AI-sikkerhetstiltak ved å teste forespørsler som potensielt kan bryte sikkerhetsretningslinjer.
 
-### Hva Demoen Viser
+### Hva demoen viser
 
 `ResponsibleGithubModels`-klassen følger denne flyten:
-1. Initialiserer GitHub Models-klienten med autentisering
-2. Tester skadelige forespørsler (vold, hatprat, feilinformasjon, ulovlig innhold)
-3. Sender hver forespørsel til GitHub Models API
-4. Håndterer svar: enten generert innhold eller blokkering av sikkerhetsfilter
-5. Viser resultater som viser hvilket innhold som ble blokkert vs. tillatt
-6. Tester trygt innhold for sammenligning
+1. Initialiser GitHub Models-klienten med autentisering
+2. Test skadelige forespørsler (vold, hatprat, feilinformasjon, ulovlig innhold)
+3. Send hver forespørsel til GitHub Models API
+4. Håndter responser: enten generert innhold eller blokkeringer fra sikkerhetsfilteret
+5. Vis resultater som viser hvilket innhold som ble blokkert vs. tillatt
+6. Test trygt innhold for sammenligning
 
-![Ansvarlig AI Sikkerhetsdemo](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.no.png)
+![Ansvarlig AI-sikkerhetsdemo](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.no.png)
 
 ### Oppsettsinstruksjoner
 
 1. **Sett opp din GitHub Personal Access Token:**
    
-   På Windows (Kommandolinje):
+   På Windows (Command Prompt):
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
@@ -79,7 +79,7 @@ Dette kapittelet inkluderer en praktisk demonstrasjon av hvordan GitHub Models i
    export GITHUB_TOKEN=your_github_token_here
    ```   
 
-### Kjøre Demoen
+### Kjøre demoen
 
 1. **Naviger til eksempelkatalogen:**
    ```bash
@@ -91,14 +91,14 @@ Dette kapittelet inkluderer en praktisk demonstrasjon av hvordan GitHub Models i
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
-### Forventet Utdata
+### Forventet output
 
 Demoen vil teste ulike typer potensielt skadelige forespørsler og vise:
-- **Trygt innhold** som får et normalt svar
+- **Trygt innhold** som får en normal respons
 - **Skadelig innhold** som blir blokkert av sikkerhetsfiltre
 - **Eventuelle feil** som oppstår under prosesseringen
 
-Eksempel på utdataformat:
+Eksempel på output-format:
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -115,33 +115,33 @@ Status: Response generated (content appears safe)
 ────────────────────────────────────────────────────────────
 ```
 
-## Beste Praksis for Ansvarlig AI-utvikling
+## Beste praksis for ansvarlig AI-utvikling
 
 Når du bygger AI-applikasjoner, følg disse essensielle praksisene:
 
-1. **Håndter alltid potensielle sikkerhetsfilterresponser på en god måte**
+1. **Håndter alltid potensielle responser fra sikkerhetsfiltre på en god måte**
    - Implementer riktig feilhåndtering for blokkert innhold
    - Gi meningsfull tilbakemelding til brukere når innhold blir filtrert
 
-2. **Implementer egne tilleggsvalideringer der det er hensiktsmessig**
-   - Legg til domenespesifikke sikkerhetssjekker
-   - Opprett tilpassede valideringsregler for din brukstilfelle
+2. **Implementer egne tilleggskontroller for innhold der det er nødvendig**
+   - Legg til sikkerhetssjekker som er spesifikke for ditt domene
+   - Lag tilpassede valideringsregler for din brukstilfelle
 
 3. **Utdann brukere om ansvarlig AI-bruk**
    - Gi klare retningslinjer for akseptabel bruk
    - Forklar hvorfor visst innhold kan bli blokkert
 
 4. **Overvåk og loggfør sikkerhetshendelser for forbedring**
-   - Spor mønstre i blokkert innhold
-   - Forbedre sikkerhetstiltakene dine kontinuerlig
+   - Spor mønstre for blokkert innhold
+   - Forbedre sikkerhetstiltakene kontinuerlig
 
 5. **Respekter plattformens innholdspolicyer**
-   - Hold deg oppdatert med plattformretningslinjer
-   - Følg tjenestevilkår og etiske retningslinjer
+   - Hold deg oppdatert med plattformens retningslinjer
+   - Følg vilkår for bruk og etiske retningslinjer
 
-## Viktig Merknad
+## Viktig merknad
 
-Dette eksempelet bruker med hensikt problematiske forespørsler kun for utdanningsformål. Målet er å demonstrere sikkerhetstiltak, ikke å omgå dem. Bruk alltid AI-verktøy ansvarlig og etisk.
+Dette eksemplet bruker med vilje problematiske forespørsler kun for utdanningsformål. Målet er å demonstrere sikkerhetstiltak, ikke å omgå dem. Bruk alltid AI-verktøy ansvarlig og etisk.
 
 ## Oppsummering
 
@@ -152,17 +152,17 @@ Dette eksempelet bruker med hensikt problematiske forespørsler kun for utdannin
 - **Testet sikkerhetsmekanismer** ved hjelp av GitHub Models' innebygde beskyttelsesfunksjoner
 - **Lært beste praksis** for ansvarlig AI-utvikling og distribusjon
 
-**Ressurser for Ansvarlig AI:**
+**Ressurser for ansvarlig AI:**
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Lær om Microsofts tilnærming til sikkerhet, personvern og samsvar
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Utforsk Microsofts prinsipper og praksis for ansvarlig AI-utvikling
 
-Du har fullført Generativ AI for Nybegynnere - Java Edition-kurset og er nå rustet til å bygge trygge og effektive AI-applikasjoner!
+Du har fullført Generative AI for Beginners - Java Edition-kurset og er nå rustet til å bygge sikre og effektive AI-applikasjoner!
 
-## Kursfullføring
+## Fullføring av kurset
 
-Gratulerer med å ha fullført Generativ AI for Nybegynnere-kurset! Du har nå kunnskapen og verktøyene til å bygge ansvarlige og effektive generative AI-applikasjoner med Java.
+Gratulerer med å ha fullført Generative AI for Beginners-kurset! Du har nå kunnskapen og verktøyene til å bygge ansvarlige og effektive generative AI-applikasjoner med Java.
 
-![Kursfullføring](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.no.png)
+![Fullføring av kurset](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.no.png)
 
 **Hva du har oppnådd:**
 - Satt opp ditt utviklingsmiljø
@@ -170,11 +170,11 @@ Gratulerer med å ha fullført Generativ AI for Nybegynnere-kurset! Du har nå k
 - Bygget praktiske AI-applikasjoner
 - Forstått prinsipper for ansvarlig AI
 
-## Neste Steg
+## Neste steg
 
-Fortsett din AI-læringsreise med disse tilleggsressursene:
+Fortsett din AI-læringsreise med disse ekstra ressursene:
 
-**Tilleggs Læringskurs:**
+**Ekstra læringskurs:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
@@ -192,4 +192,4 @@ Fortsett din AI-læringsreise med disse tilleggsressursene:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T19:22:44+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:52:44+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "fi"
 }
 -->
 # Vastuullinen Generatiivinen AI
 
-## Mitä Opit
+## Mitä opit
 
-- Ymmärrät eettisiä näkökulmia ja parhaita käytäntöjä AI-kehityksessä
+- Ymmärrät eettiset näkökohdat ja parhaat käytännöt AI:n kehittämisessä
 - Toteutat sisällön suodatusta ja turvallisuustoimenpiteitä sovelluksissasi
 - Testaat ja käsittelet AI:n turvallisuusvastauksia GitHub Models -sisäänrakennettujen suojausten avulla
 - Sovellat vastuullisen AI:n periaatteita rakentaaksesi turvallisia ja eettisiä AI-järjestelmiä
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [Asennusohjeet](../../../05-ResponsibleGenAI)
   - [Demon suorittaminen](../../../05-ResponsibleGenAI)
   - [Odotettu tulos](../../../05-ResponsibleGenAI)
-- [Parhaat käytännöt vastuulliseen AI-kehitykseen](../../../05-ResponsibleGenAI)
+- [Parhaat käytännöt vastuullisen AI:n kehittämiseen](../../../05-ResponsibleGenAI)
 - [Tärkeä huomautus](../../../05-ResponsibleGenAI)
 - [Yhteenveto](../../../05-ResponsibleGenAI)
 - [Kurssin suorittaminen](../../../05-ResponsibleGenAI)
@@ -33,11 +33,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Johdanto
 
-Tämä viimeinen luku keskittyy vastuullisten ja eettisten generatiivisten AI-sovellusten rakentamisen kriittisiin osa-alueisiin. Opit toteuttamaan turvallisuustoimenpiteitä, käsittelemään sisällön suodatusta ja soveltamaan parhaita käytäntöjä vastuulliseen AI-kehitykseen hyödyntäen aiemmissa luvuissa käsiteltyjä työkaluja ja kehyksiä. Näiden periaatteiden ymmärtäminen on olennaista, jotta voit rakentaa AI-järjestelmiä, jotka eivät ole vain teknisesti vaikuttavia, vaan myös turvallisia, eettisiä ja luotettavia.
+Tämä viimeinen luku keskittyy vastuullisten ja eettisten generatiivisten AI-sovellusten rakentamisen kriittisiin näkökohtiin. Opit toteuttamaan turvallisuustoimenpiteitä, käsittelemään sisällön suodatusta ja soveltamaan parhaita käytäntöjä vastuullisen AI:n kehittämiseen aiemmissa luvuissa käsiteltyjen työkalujen ja kehysten avulla. Näiden periaatteiden ymmärtäminen on olennaista AI-järjestelmien rakentamisessa, jotka ovat paitsi teknisesti vaikuttavia myös turvallisia, eettisiä ja luotettavia.
 
 ## GitHub Models -sisäänrakennettu turvallisuus
 
-GitHub Models sisältää perussisällön suodatuksen valmiina. Se on kuin ystävällinen portsari AI-klubillasi – ei kaikkein hienostunein, mutta riittää perusskenaarioihin.
+GitHub Models sisältää perussisällön suodatuksen valmiiksi. Se on kuin ystävällinen portsari AI-klubissasi – ei kaikkein hienostunein, mutta hoitaa perusasiat.
 
 **Mitä GitHub Models suojaa:**
 - **Haitallinen sisältö**: Estää ilmeisen väkivaltaisen, seksuaalisen tai vaarallisen sisällön
@@ -46,19 +46,19 @@ GitHub Models sisältää perussisällön suodatuksen valmiina. Se on kuin ystä
 
 ## Käytännön esimerkki: Vastuullisen AI:n turvallisuusdemo
 
-Tässä luvussa on käytännön demonstraatio siitä, miten GitHub Models toteuttaa vastuullisen AI:n turvallisuustoimenpiteitä testaamalla kehotteita, jotka saattavat rikkoa turvallisuusohjeita.
+Tämä luku sisältää käytännön demonstraation siitä, miten GitHub Models toteuttaa vastuullisia AI-turvallisuustoimenpiteitä testaamalla kehotteita, jotka voivat mahdollisesti rikkoa turvallisuusohjeita.
 
 ### Mitä demo näyttää
 
 `ResponsibleGithubModels`-luokka seuraa tätä prosessia:
-1. Alustaa GitHub Models -asiakasohjelman todennuksella
+1. Alustaa GitHub Models -asiakasohjelman autentikoinnilla
 2. Testaa haitallisia kehotteita (väkivalta, vihapuhe, väärä tieto, laiton sisältö)
-3. Lähettää jokaisen kehotteen GitHub Models API:lle
+3. Lähettää jokaisen kehotteen GitHub Models -API:lle
 4. Käsittelee vastaukset: joko luotu sisältö tai turvallisuussuodattimen estot
 5. Näyttää tulokset, jotka osoittavat, mikä sisältö estettiin ja mikä sallittiin
 6. Testaa turvallista sisältöä vertailun vuoksi
 
-![Vastuullisen AI:n turvallisuusdemo](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.fi.png)
+![Vastuullisen AI:n turvallisuusdemo](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.fi.png)
 
 ### Asennusohjeet
 
@@ -81,7 +81,7 @@ Tässä luvussa on käytännön demonstraatio siitä, miten GitHub Models toteut
 
 ### Demon suorittaminen
 
-1. **Siirry esimerkkihakemistoon:**
+1. **Siirry esimerkkikansioon:**
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
@@ -96,7 +96,7 @@ Tässä luvussa on käytännön demonstraatio siitä, miten GitHub Models toteut
 Demo testaa erilaisia mahdollisesti haitallisia kehotteita ja näyttää:
 - **Turvallinen sisältö**, joka saa normaalin vastauksen
 - **Haitallinen sisältö**, joka estetään turvallisuussuodattimilla
-- **Mahdolliset virheet**, jotka ilmenevät käsittelyn aikana
+- **Mahdolliset virheet**, jotka tapahtuvat käsittelyn aikana
 
 Esimerkkituloksen muoto:
 ```
@@ -115,54 +115,54 @@ Status: Response generated (content appears safe)
 ────────────────────────────────────────────────────────────
 ```
 
-## Parhaat käytännöt vastuulliseen AI-kehitykseen
+## Parhaat käytännöt vastuullisen AI:n kehittämiseen
 
 Kun rakennat AI-sovelluksia, noudata näitä olennaisia käytäntöjä:
 
 1. **Käsittele aina mahdolliset turvallisuussuodattimen vastaukset sujuvasti**
-   - Toteuta asianmukainen virheenkäsittely estetylle sisällölle
+   - Toteuta asianmukainen virheenkäsittely estetyille sisällöille
    - Tarjoa käyttäjille merkityksellistä palautetta, kun sisältö suodatetaan
 
-2. **Toteuta omat lisäsisällön validoinnit tarvittaessa**
+2. **Toteuta omat lisäsisällön validoinnit tarpeen mukaan**
    - Lisää alakohtaisia turvallisuustarkistuksia
    - Luo mukautettuja validointisääntöjä käyttötapauksellesi
 
 3. **Kouluta käyttäjiä vastuullisesta AI:n käytöstä**
-   - Tarjoa selkeät ohjeet hyväksyttävälle käytölle
-   - Selitä, miksi tietty sisältö saatetaan estää
+   - Tarjoa selkeät ohjeet hyväksyttävästä käytöstä
+   - Selitä, miksi tietty sisältö saattaa tulla estetyksi
 
 4. **Seuraa ja kirjaa turvallisuustapaukset parannuksia varten**
    - Seuraa estettyjen sisältöjen malleja
    - Paranna jatkuvasti turvallisuustoimenpiteitäsi
 
-5. **Noudata alustan sisältökäytäntöjä**
+5. **Kunnioita alustan sisältöpolitiikkaa**
    - Pysy ajan tasalla alustan ohjeista
-   - Noudata palveluehtoja ja eettisiä ohjeita
+   - Noudata käyttöehtoja ja eettisiä ohjeita
 
 ## Tärkeä huomautus
 
-Tämä esimerkki käyttää tarkoituksellisesti ongelmallisia kehotteita vain opetustarkoituksiin. Tavoitteena on demonstroida turvallisuustoimenpiteitä, ei kiertää niitä. Käytä aina AI-työkaluja vastuullisesti ja eettisesti.
+Tämä esimerkki käyttää tarkoituksellisesti ongelmallisia kehotteita vain opetustarkoituksiin. Tavoitteena on demonstroida turvallisuustoimenpiteitä, ei kiertää niitä. Käytä AI-työkaluja aina vastuullisesti ja eettisesti.
 
 ## Yhteenveto
 
 **Onnittelut!** Olet onnistuneesti:
 
-- **Toteuttanut AI:n turvallisuustoimenpiteitä**, mukaan lukien sisällön suodatus ja turvallisuusvastauksien käsittely
+- **Toteuttanut AI-turvallisuustoimenpiteitä**, kuten sisällön suodatusta ja turvallisuusvastauksen käsittelyä
 - **Soveltanut vastuullisen AI:n periaatteita** rakentaaksesi eettisiä ja luotettavia AI-järjestelmiä
-- **Testannut turvallisuusmekanismeja** GitHub Models -sisäänrakennettujen suojausten avulla
-- **Oppinut parhaat käytännöt** vastuulliseen AI-kehitykseen ja käyttöönottoon
+- **Testannut turvallisuusmekanismeja** GitHub Models -sisäänrakennettujen suojausominaisuuksien avulla
+- **Oppinut parhaat käytännöt** vastuullisen AI:n kehittämiseen ja käyttöönottoon
 
 **Vastuullisen AI:n resurssit:**
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Tutustu Microsoftin lähestymistapaan turvallisuuteen, yksityisyyteen ja vaatimustenmukaisuuteen
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Tutki Microsoftin periaatteita ja käytäntöjä vastuullisen AI:n kehittämiseen
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Tutustu Microsoftin periaatteisiin ja käytäntöihin vastuullisen AI:n kehittämisessä
 
-Olet suorittanut Generatiivinen AI aloittelijoille - Java Edition -kurssin ja olet nyt valmis rakentamaan turvallisia ja tehokkaita AI-sovelluksia!
+Olet suorittanut Generative AI for Beginners - Java Edition -kurssin ja olet nyt valmis rakentamaan turvallisia ja tehokkaita AI-sovelluksia!
 
 ## Kurssin suorittaminen
 
-Onnittelut Generatiivinen AI aloittelijoille -kurssin suorittamisesta! Sinulla on nyt tiedot ja työkalut vastuullisten ja tehokkaiden generatiivisten AI-sovellusten rakentamiseen Javalla.
+Onnittelut Generative AI for Beginners -kurssin suorittamisesta! Sinulla on nyt tiedot ja työkalut vastuullisten ja tehokkaiden generatiivisten AI-sovellusten rakentamiseen Java-kielellä.
 
-![Kurssin suorittaminen](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.fi.png)
+![Kurssin suorittaminen](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.fi.png)
 
 **Mitä olet saavuttanut:**
 - Kehitysympäristön asennus

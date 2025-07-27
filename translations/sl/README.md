@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:41:29+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T09:04:47+00:00",
   "source_file": "README.md",
   "language_code": "sl"
 }
@@ -10,13 +10,13 @@ CO_OP_TRANSLATOR_METADATA:
 # Generativna umetna inteligenca za začetnike - Java izdaja
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generativna umetna inteligenca za začetnike - Java izdaja](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.sl.png)
+![Generativna umetna inteligenca za začetnike - Java izdaja](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.sl.png)
 
 **Časovna zaveza**: Celotno delavnico lahko dokončate na spletu brez lokalne nastavitve. Če želite zagnati primere, nastavitev okolja traja 2 minuti, raziskovanje primerov pa zahteva 1-3 ure, odvisno od globine raziskovanja.
 
 > **Hiter začetek** 
 
-1. Forkajte to repozitorij na svoj GitHub račun
+1. Forkajte to repozitorij v svoj GitHub račun
 2. Kliknite **Code** → zavihek **Codespaces** → **...** → **New with options...**
 3. Uporabite privzete nastavitve – to bo izbralo razvojni kontejner, ustvarjen za ta tečaj
 4. Kliknite **Create codespace**
@@ -34,7 +34,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Poglavje 1: Uvod v generativno umetno inteligenco**
 - **Osnovni koncepti**: Razumevanje velikih jezikovnih modelov, tokenov, vektorskih predstavitev in zmogljivosti umetne inteligence
 - **Java AI ekosistem**: Pregled Spring AI in OpenAI SDK-jev
-- **Protokol konteksta modela**: Uvod v MCP in njegovo vlogo v komunikaciji AI agentov
+- **Protokol konteksta modela**: Uvod v MCP in njegovo vlogo pri komunikaciji AI agentov
 - **Praktične aplikacije**: Resnični scenariji, vključno s klepetalniki in generiranjem vsebin
 - **[→ Začni poglavje 1](./01-IntroToGenAI/README.md)**
 
@@ -48,7 +48,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Poglavje 3: Osnovne tehnike generativne umetne inteligence**
 - **Inženiring pozivov**: Tehnike za optimalne odgovore AI modelov
 - **Vektorske predstavitve in operacije**: Implementacija semantičnega iskanja in ujemanja podobnosti
-- **Generacija z obogatenim pridobivanjem (RAG)**: Kombinacija AI z vašimi lastnimi viri podatkov
+- **Generacija z dopolnitvijo pridobivanja (RAG)**: Kombinacija AI z lastnimi viri podatkov
 - **Klicanje funkcij**: Razširitev zmogljivosti AI z orodji in vtičniki po meri
 - **[→ Začni poglavje 3](./03-CoreGenerativeAITechniques/README.md)**
 
@@ -59,7 +59,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Začni poglavje 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavje 5: Odgovoren razvoj umetne inteligence**
-- **Varnost GitHub Models**: Testiranje vgrajenega filtriranja vsebin in varnostnih mehanizmov
+- **Varnost GitHub Models**: Preizkus vgrajenega filtriranja vsebin in varnostnih mehanizmov
 - **Predstavitev odgovorne AI**: Praktičen primer, ki prikazuje delovanje varnostnih filtrov AI
 - **Najboljše prakse**: Ključne smernice za etični razvoj in uvajanje AI
 - **[→ Začni poglavje 5](./05-ResponsibleGenAI/README.md)**
@@ -78,9 +78,9 @@ CO_OP_TRANSLATOR_METADATA:
 - [IoT za začetnike](https://aka.ms/iot-beginners)
 - [XR razvoj za začetnike](https://github.com/microsoft/xr-development-for-beginners)
 - [Obvladovanje GitHub Copilot za AI programiranje v paru](https://aka.ms/GitHubCopilotAI)
-- [Obvladovanje GitHub Copilot za razvijalce C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Obvladovanje GitHub Copilot za C#/.NET razvijalce](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Izberite svojo Copilot pustolovščino](https://github.com/microsoft/CopilotAdventures)
 - [RAG klepetalna aplikacija z Azure AI storitvami](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.

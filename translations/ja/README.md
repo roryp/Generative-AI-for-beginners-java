@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff95bb9d60ecd46e1a2215e341062967",
-  "translation_date": "2025-07-26T17:28:34+00:00",
+  "original_hash": "d684972689e288a83779255116bb42c3",
+  "translation_date": "2025-07-27T08:38:06+00:00",
   "source_file": "README.md",
   "language_code": "ja"
 }
@@ -10,9 +10,9 @@ CO_OP_TRANSLATOR_METADATA:
 # 初心者向け生成AI - Java版
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![初心者向け生成AI - Java版](../../translated_images/beg-genai-series.61edc4a6b2cc54284fa2d70eda26dc0ca2669e26e49655b842ea799cd6e16d2a.ja.png)
+![初心者向け生成AI - Java版](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ja.png)
 
-**所要時間**: ワークショップ全体はローカルセットアップなしでオンラインで完了できます。サンプルを実行したい場合、環境設定は約2分で完了し、サンプルの探索には深さに応じて1～3時間かかります。
+**所要時間**: ワークショップ全体はローカル環境のセットアップなしでオンラインで完了できます。サンプルを実行したい場合、環境設定は約2分で完了し、サンプルの探索には深さに応じて1～3時間かかります。
 
 > **クイックスタート**
 
@@ -20,10 +20,10 @@ CO_OP_TRANSLATOR_METADATA:
 2. **Code** → **Codespaces** タブ → **...** → **New with options...** をクリック
 3. デフォルト設定を使用 – このコース用に作成された開発コンテナが選択されます
 4. **Create codespace** をクリック
-5. 環境が準備されるまで約2分待つ
-6. [GitHub Models Tokenの作成](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に直接進む
+5. 環境が準備完了するまで約2分待つ
+6. [GitHub Models Tokenの作成](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に進む
 
-## 多言語サポート
+## 多言語対応
 
 ### GitHub Actionによるサポート (自動化 & 常に最新)
 
@@ -35,11 +35,11 @@ CO_OP_TRANSLATOR_METADATA:
 - **基本概念**: 大規模言語モデル、トークン、埋め込み、AIの能力を理解する
 - **Java AIエコシステム**: Spring AIとOpenAI SDKの概要
 - **モデルコンテキストプロトコル**: MCPとAIエージェント間の通信における役割の紹介
-- **実践的な応用**: チャットボットやコンテンツ生成などの実世界のシナリオ
+- **実践的な応用**: チャットボットやコンテンツ生成などの実例
 - **[→ 第1章を始める](./01-IntroToGenAI/README.md)**
 
 ### **第2章: 開発環境のセットアップ**
-- **マルチプロバイダー構成**: GitHub Models、Azure OpenAI、OpenAI Java SDKの統合設定
+- **マルチプロバイダー設定**: GitHub Models、Azure OpenAI、OpenAI Java SDKの統合設定
 - **Spring Boot + Spring AI**: エンタープライズAIアプリケーション開発のベストプラクティス
 - **GitHub Models**: クレジットカード不要でプロトタイプや学習に利用可能な無料AIモデル
 - **開発ツール**: Dockerコンテナ、VS Code、GitHub Codespacesの設定
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [Azure AIサービスを使ったRAGチャットアプリ](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当社は責任を負いません。
+この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解について、当社は責任を負いません。

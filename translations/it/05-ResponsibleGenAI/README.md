@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d47464ff06be2c10a73ac206ec22f20",
-  "translation_date": "2025-07-21T17:51:32+00:00",
+  "original_hash": "fee0290b2606d36ac1eea26d6a0a453a",
+  "translation_date": "2025-07-27T08:46:00+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "it"
 }
@@ -42,7 +42,7 @@ I modelli GitHub includono un filtro di contenuti di base integrato. È come ave
 **Cosa Proteggono i Modelli GitHub:**
 - **Contenuti Dannosi**: Blocca contenuti chiaramente violenti, sessuali o pericolosi
 - **Discorsi d'Odio di Base**: Filtra linguaggio discriminatorio evidente
-- **Tentativi di Jailbreak Semplici**: Resiste a tentativi basilari di aggirare le protezioni
+- **Tentativi di Evasione Semplici**: Resiste a tentativi basilari di bypassare le protezioni
 
 ## Esempio Pratico: Demo di Sicurezza AI Responsabile
 
@@ -58,13 +58,13 @@ La classe `ResponsibleGithubModels` segue questo flusso:
 5. Mostra i risultati indicando quali contenuti sono stati bloccati rispetto a quelli consentiti
 6. Testa contenuti sicuri per confronto
 
-![Demo di Sicurezza AI Responsabile](../../../translated_images/responsible.d11c51f81baaa03084e44a1016936cf77a89971dce9927ec992bf2482d00a944.it.png)
+![Demo di Sicurezza AI Responsabile](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.it.png)
 
 ### Istruzioni per la Configurazione
 
 1. **Imposta il tuo GitHub Personal Access Token:**
    
-   Su Windows (Prompt dei Comandi):
+   Su Windows (Command Prompt):
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
@@ -132,7 +132,7 @@ Quando costruisci applicazioni AI, segui queste pratiche essenziali:
    - Spiega perché alcuni contenuti potrebbero essere bloccati
 
 4. **Monitora e registra gli incidenti di sicurezza per miglioramenti**
-   - Tieni traccia dei modelli di contenuti bloccati
+   - Traccia i modelli di contenuti bloccati
    - Migliora continuamente le tue misure di sicurezza
 
 5. **Rispetta le politiche di contenuto della piattaforma**
@@ -141,7 +141,7 @@ Quando costruisci applicazioni AI, segui queste pratiche essenziali:
 
 ## Nota Importante
 
-Questo esempio utilizza prompt problematici intenzionalmente solo a scopo educativo. L'obiettivo è dimostrare le misure di sicurezza, non aggirarle. Usa sempre gli strumenti AI in modo responsabile ed etico.
+Questo esempio utilizza prompt problematici intenzionalmente per scopi educativi. L'obiettivo è dimostrare le misure di sicurezza, non bypassarle. Usa sempre gli strumenti AI in modo responsabile ed etico.
 
 ## Riepilogo
 
@@ -162,7 +162,7 @@ Hai completato il corso Generative AI for Beginners - Java Edition e ora sei pro
 
 Congratulazioni per aver completato il corso Generative AI for Beginners! Ora hai le conoscenze e gli strumenti per costruire applicazioni AI generative responsabili ed efficaci con Java.
 
-![Completamento del Corso](../../../translated_images/image.ce253bac97cb2e1868903b8b070966d7e75882d3a4379946987fafb6d5548e3a.it.png)
+![Completamento del Corso](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.it.png)
 
 **Cosa hai raggiunto:**
 - Configurato il tuo ambiente di sviluppo
@@ -191,5 +191,5 @@ Continua il tuo percorso di apprendimento sull'AI con queste risorse aggiuntive:
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
-**Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.
+**Disclaimer (Avvertenza)**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
