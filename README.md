@@ -3,7 +3,7 @@
 
 ![Generative AI for Beginners - Java Edition](./images/beg-genai-series.png)
 
-**Time Commitment**: The entire workshop can be completed online without local setup. If you want to run the samples, the environment setup takes 2 minutes, with exploring the samples requiring 1-3 hours depending on exploration depth.
+**Time Commitment**: The entire workshop can be completed online without local setup. The environment setup takes 2 minutes, with exploring the samples requiring 1-3 hours depending on exploration depth.
 
 > **Quick Start** 
 
