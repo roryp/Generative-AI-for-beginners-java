@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T12:19:33+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T13:10:52+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "th"
 }
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## บทนำ
 
-บทนี้จะนำคุณผ่านการตั้งค่าสภาพแวดล้อมการพัฒนา เราจะใช้ **GitHub Models** เป็นตัวอย่างหลัก เนื่องจากใช้งานฟรี ตั้งค่าได้ง่ายเพียงแค่มีบัญชี GitHub ไม่ต้องใช้บัตรเครดิต และให้คุณเข้าถึงโมเดลหลากหลายสำหรับการทดลอง
+บทนี้จะนำคุณผ่านการตั้งค่าสภาพแวดล้อมการพัฒนา เราจะใช้ **GitHub Models** เป็นตัวอย่างหลักของเรา เนื่องจากใช้งานฟรี ตั้งค่าได้ง่ายเพียงแค่มีบัญชี GitHub ไม่ต้องใช้บัตรเครดิต และให้คุณเข้าถึงโมเดลหลายตัวเพื่อการทดลอง
 
 **ไม่ต้องตั้งค่าในเครื่อง!** คุณสามารถเริ่มเขียนโค้ดได้ทันทีโดยใช้ GitHub Codespaces ซึ่งให้สภาพแวดล้อมการพัฒนาเต็มรูปแบบในเบราว์เซอร์ของคุณ
 
@@ -45,14 +45,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **ฟรี** สำหรับการเริ่มต้น
 - **ง่าย** ในการตั้งค่าเพียงแค่มีบัญชี GitHub
 - **ไม่ต้องใช้บัตรเครดิต**
-- **มีโมเดลหลากหลาย** สำหรับการทดลอง
+- **มีโมเดลหลายตัว** สำหรับการทดลอง
 
-> **หมายเหตุ**: GitHub Models ที่ใช้ในคอร์สนี้มีข้อจำกัดฟรีดังนี้:
+> **หมายเหตุ**: GitHub Models ที่ใช้ในการฝึกอบรมนี้มีข้อจำกัดฟรีดังนี้:
 > - 15 คำขอต่อหนึ่งนาที (150 ต่อวัน)
 > - ~8,000 คำเข้า, ~4,000 คำออกต่อคำขอ
 > - 5 คำขอพร้อมกัน
 > 
-> สำหรับการใช้งานในระดับโปรดักชัน อัปเกรดเป็น Azure AI Foundry Models ด้วยบัญชี Azure ของคุณ โค้ดของคุณไม่จำเป็นต้องเปลี่ยนแปลง ดู [เอกสาร Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models)
+> สำหรับการใช้งานในระดับโปรดักชัน อัปเกรดเป็น Azure AI Foundry Models ด้วยบัญชี Azure ของคุณ โค้ดของคุณไม่จำเป็นต้องเปลี่ยน ดู [เอกสาร Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models)
 
 ## ขั้นตอนที่ 1: ตั้งค่าสภาพแวดล้อมการพัฒนา
 
@@ -69,7 +69,7 @@ CO_OP_TRANSLATOR_METADATA:
 1. Fork repository นี้ไปยังบัญชี GitHub ของคุณ
    > **หมายเหตุ**: หากคุณต้องการแก้ไขการตั้งค่าพื้นฐาน โปรดดูที่ [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. คลิก **Code** → แท็บ **Codespaces** → **...** → **New with options...**
-3. ใช้ค่าตั้งต้น – จะเลือก **Dev container configuration**: **Generative AI Java Development Environment** devcontainer ที่สร้างขึ้นสำหรับคอร์สนี้
+3. ใช้ค่าดีฟอลต์ – จะเลือก **Dev container configuration**: **Generative AI Java Development Environment** devcontainer ที่สร้างขึ้นสำหรับคอร์สนี้
 4. คลิก **Create codespace**
 5. รอประมาณ ~2 นาทีเพื่อให้สภาพแวดล้อมพร้อมใช้งาน
 6. ดำเนินการต่อไปที่ [ขั้นตอนที่ 2: สร้าง GitHub Token](../../../02-SetupDevEnvironment)
@@ -82,8 +82,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **ข้อดีของ Codespaces**:
 > - ไม่ต้องติดตั้งในเครื่อง
-> - ใช้งานได้บนอุปกรณ์ใดก็ได้ที่มีเบราว์เซอร์
-> - กำหนดค่าล่วงหน้าด้วยเครื่องมือและ dependencies ทั้งหมด
+> - ใช้งานได้บนอุปกรณ์ใด ๆ ที่มีเบราว์เซอร์
+> - กำหนดค่าล่วงหน้าด้วยเครื่องมือและไลบรารีทั้งหมด
 > - ฟรี 60 ชั่วโมงต่อเดือนสำหรับบัญชีส่วนตัว
 > - สภาพแวดล้อมที่สม่ำเสมอสำหรับผู้เรียนทุกคน
 
@@ -118,7 +118,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. เปิดโปรเจกต์ใน IDE ของคุณ
 3. ดำเนินการต่อไปที่ [ขั้นตอนที่ 2: สร้าง GitHub Token](../../../02-SetupDevEnvironment)
 
-> **เคล็ดลับ**: หากคุณมีเครื่องที่สเปคต่ำแต่ต้องการใช้ VS Code ในเครื่อง ให้ใช้ GitHub Codespaces! คุณสามารถเชื่อมต่อ VS Code ในเครื่องของคุณกับ Codespace ที่โฮสต์ในคลาวด์เพื่อให้ได้ประสบการณ์ที่ดีที่สุด
+> **เคล็ดลับ**: หากคุณมีเครื่องที่สเปคต่ำแต่ต้องการใช้ VS Code ในเครื่อง ให้ใช้ GitHub Codespaces! คุณสามารถเชื่อมต่อ VS Code ในเครื่องของคุณกับ Codespace ที่โฮสต์ในคลาวด์เพื่อให้ได้ประโยชน์ทั้งสองด้าน
 
 <img src="./images/image-2.png" alt="ภาพหน้าจอ: สร้าง instance devcontainer ในเครื่อง" width="50%">
 
@@ -126,7 +126,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. ไปที่ [GitHub Settings](https://github.com/settings/profile) และเลือก **Settings** จากเมนูโปรไฟล์ของคุณ
 2. ในแถบด้านซ้าย คลิก **Developer settings** (มักจะอยู่ด้านล่าง)
-3. ภายใต้ **Personal access tokens** คลิก **Fine-grained tokens** (หรือใช้ [ลิงก์นี้](https://github.com/settings/personal-access-tokens))
+3. ภายใต้ **Personal access tokens** คลิก **Fine-grained tokens** (หรือใช้ [ลิงก์นี้](https://github.com/settings/personal-access-tokens) โดยตรง)
 4. คลิก **Generate new token**
 5. ภายใต้ "Token name" ให้ตั้งชื่อที่อธิบายได้ (เช่น `GenAI-Java-Course-Token`)
 6. ตั้งวันหมดอายุ (แนะนำ: 7 วันเพื่อความปลอดภัย)
@@ -140,12 +140,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ขั้นตอนที่ 3: ทดสอบการตั้งค่าของคุณด้วยตัวอย่าง GitHub Models
 
-เมื่อสภาพแวดล้อมการพัฒนาของคุณพร้อมแล้ว มาทดสอบการเชื่อมต่อ GitHub Models ด้วยแอปพลิเคชันตัวอย่างใน [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models)
+เมื่อสภาพแวดล้อมการพัฒนาของคุณพร้อมแล้ว มาทดสอบการเชื่อมต่อ GitHub Models ด้วยแอปพลิเคชันตัวอย่างใน [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models)
 
 1. เปิด terminal ในสภาพแวดล้อมการพัฒนาของคุณ
 2. ไปที่ตัวอย่าง GitHub Models:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. ตั้งค่า GitHub token ของคุณเป็น environment variable:
    ```bash
@@ -173,11 +173,11 @@ Response: Hello World!
 
 ### ทำความเข้าใจกับโค้ดตัวอย่าง
 
-ก่อนอื่น มาทำความเข้าใจสิ่งที่เราเพิ่งรัน ตัวอย่างใน `src/github-models` ใช้ OpenAI Java SDK เพื่อเชื่อมต่อกับ GitHub Models:
+ก่อนอื่น มาทำความเข้าใจสิ่งที่เรารันไป ตัวอย่างใน `examples/github-models` ใช้ OpenAI Java SDK เพื่อเชื่อมต่อกับ GitHub Models:
 
 **สิ่งที่โค้ดนี้ทำ:**
 - **เชื่อมต่อ** กับ GitHub Models โดยใช้ personal access token ของคุณ
-- **ส่ง** ข้อความง่ายๆ "Say Hello World!" ไปยังโมเดล AI
+- **ส่ง** ข้อความง่าย ๆ "Say Hello World!" ไปยังโมเดล AI
 - **รับ** และแสดงผลการตอบกลับของ AI
 - **ตรวจสอบ** ว่าการตั้งค่าของคุณทำงานได้ถูกต้อง
 
@@ -215,7 +215,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 **ยินดีด้วย!** คุณได้:
 
 - **สร้าง GitHub Personal Access Token** พร้อมสิทธิ์ที่เหมาะสมสำหรับการเข้าถึงโมเดล AI
-- **ตั้งค่าสภาพแวดล้อมการพัฒนา Java** โดยใช้ Codespaces, dev containers, หรือการติดตั้งในเครื่อง
+- **ตั้งค่าสภาพแวดล้อมการพัฒนา Java** โดยใช้ Codespaces, dev container หรือการติดตั้งในเครื่อง
 - **เชื่อมต่อกับ GitHub Models** โดยใช้ OpenAI Java SDK เพื่อการพัฒนา AI ฟรี
 - **ทดสอบการเชื่อมต่อ** ด้วยแอปพลิเคชันตัวอย่างที่ทำงานร่วมกับโมเดล AI
 
@@ -247,10 +247,10 @@ System.out.println("Response: " + response.choices().get(0).message().content().
   - ลองสร้าง container ใหม่: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **ข้อผิดพลาดในการคอมไพล์แอปพลิเคชัน?**
-  - ตรวจสอบว่าคุณอยู่ในไดเรกทอรีที่ถูกต้อง: `02-SetupDevEnvironment/src/github-models`
-  - ลองล้างและสร้างใหม่: `mvn clean compile`
+  - ตรวจสอบว่าคุณอยู่ในไดเรกทอรีที่ถูกต้อง: `02-SetupDevEnvironment/examples/github-models`
+  - ลอง clean และ rebuild: `mvn clean compile`
 
 > **ต้องการความช่วยเหลือ?**: ยังมีปัญหาอยู่? เปิด issue ใน repository แล้วเราจะช่วยคุณ
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามอย่างเต็มที่เพื่อความถูกต้อง โปรดทราบว่าการแปลอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่แม่นยำ เอกสารต้นฉบับในภาษาต้นทางควรถูกพิจารณาเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ แนะนำให้ใช้บริการแปลภาษามนุษย์ที่เป็นมืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้

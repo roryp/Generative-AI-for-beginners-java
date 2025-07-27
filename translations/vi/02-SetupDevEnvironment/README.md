@@ -1,31 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T12:27:16+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T13:17:48+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "vi"
 }
 -->
 # Thiết Lập Môi Trường Phát Triển cho AI Tạo Sinh với Java
 
-> **Bắt Đầu Nhanh**: Lập trình trên Cloud trong 2 phút - Chuyển đến [Thiết Lập GitHub Codespaces](../../../02-SetupDevEnvironment) - không cần cài đặt cục bộ và sử dụng các mô hình của GitHub!
+> **Bắt Đầu Nhanh**: Lập trình trên đám mây trong 2 phút - Chuyển đến [Thiết Lập GitHub Codespaces](../../../02-SetupDevEnvironment) - không cần cài đặt cục bộ và sử dụng các mô hình của GitHub!
 
 > **Quan tâm đến Azure OpenAI?**, xem [Hướng Dẫn Thiết Lập Azure OpenAI](getting-started-azure-openai.md) với các bước tạo tài nguyên Azure OpenAI mới.
 
-## Bạn Sẽ Học Được Gì
+## Những Gì Bạn Sẽ Học
 
 - Thiết lập môi trường phát triển Java cho các ứng dụng AI
-- Chọn và cấu hình môi trường phát triển ưa thích của bạn (ưu tiên cloud với Codespaces, container cục bộ, hoặc thiết lập hoàn toàn cục bộ)
+- Chọn và cấu hình môi trường phát triển ưa thích của bạn (ưu tiên đám mây với Codespaces, container phát triển cục bộ, hoặc thiết lập hoàn toàn cục bộ)
 - Kiểm tra thiết lập của bạn bằng cách kết nối với các mô hình GitHub
 
 ## Mục Lục
 
-- [Bạn Sẽ Học Được Gì](../../../02-SetupDevEnvironment)
+- [Những Gì Bạn Sẽ Học](../../../02-SetupDevEnvironment)
 - [Giới Thiệu](../../../02-SetupDevEnvironment)
 - [Bước 1: Thiết Lập Môi Trường Phát Triển](../../../02-SetupDevEnvironment)
   - [Lựa Chọn A: GitHub Codespaces (Khuyến Nghị)](../../../02-SetupDevEnvironment)
-  - [Lựa Chọn B: Container Cục Bộ](../../../02-SetupDevEnvironment)
+  - [Lựa Chọn B: Container Phát Triển Cục Bộ](../../../02-SetupDevEnvironment)
   - [Lựa Chọn C: Sử Dụng Cài Đặt Cục Bộ Hiện Có](../../../02-SetupDevEnvironment)
 - [Bước 2: Tạo GitHub Personal Access Token](../../../02-SetupDevEnvironment)
 - [Bước 3: Kiểm Tra Thiết Lập](../../../02-SetupDevEnvironment)
@@ -67,9 +67,9 @@ Chúng tôi đã tạo một container phát triển được cấu hình sẵn 
 **Bắt đầu lập trình trong 2 phút - không cần thiết lập cục bộ!**
 
 1. Fork repository này vào tài khoản GitHub của bạn
-   > **Lưu ý**: Nếu bạn muốn chỉnh sửa cấu hình cơ bản, hãy xem [Cấu Hình Dev Container](../../../.devcontainer/devcontainer.json)
+   > **Lưu ý**: Nếu bạn muốn chỉnh sửa cấu hình cơ bản, vui lòng xem [Cấu Hình Container Phát Triển](../../../.devcontainer/devcontainer.json)
 2. Nhấp vào **Code** → tab **Codespaces** → **...** → **New with options...**
-3. Sử dụng các tùy chọn mặc định – điều này sẽ chọn cấu hình **Dev container**: **Generative AI Java Development Environment** container tùy chỉnh được tạo cho khóa học này
+3. Sử dụng các tùy chọn mặc định – điều này sẽ chọn **Cấu hình container phát triển**: **Generative AI Java Development Environment** container phát triển tùy chỉnh được tạo cho khóa học này
 4. Nhấp vào **Create codespace**
 5. Chờ ~2 phút để môi trường sẵn sàng
 6. Tiếp tục đến [Bước 2: Tạo GitHub Token](../../../02-SetupDevEnvironment)
@@ -80,6 +80,7 @@ Chúng tôi đã tạo một container phát triển được cấu hình sẵn 
 
 <img src="./images/codespaces-create.png" alt="Ảnh chụp màn hình: Tùy chọn tạo codespace" width="50%">
 
+
 > **Lợi ích của Codespaces**:
 > - Không cần cài đặt cục bộ
 > - Hoạt động trên bất kỳ thiết bị nào có trình duyệt
@@ -87,12 +88,12 @@ Chúng tôi đã tạo một container phát triển được cấu hình sẵn 
 > - Miễn phí 60 giờ mỗi tháng cho tài khoản cá nhân
 > - Môi trường nhất quán cho tất cả người học
 
-#### Lựa Chọn B: Container Cục Bộ
+#### Lựa Chọn B: Container Phát Triển Cục Bộ
 
 **Dành cho các nhà phát triển thích phát triển cục bộ với Docker**
 
 1. Fork và clone repository này vào máy của bạn
-   > **Lưu ý**: Nếu bạn muốn chỉnh sửa cấu hình cơ bản, hãy xem [Cấu Hình Dev Container](../../../.devcontainer/devcontainer.json)
+   > **Lưu ý**: Nếu bạn muốn chỉnh sửa cấu hình cơ bản, vui lòng xem [Cấu Hình Container Phát Triển](../../../.devcontainer/devcontainer.json)
 2. Cài đặt [Docker Desktop](https://www.docker.com/products/docker-desktop/) và [VS Code](https://code.visualstudio.com/)
 3. Cài đặt [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) trong VS Code
 4. Mở thư mục repository trong VS Code
@@ -100,9 +101,9 @@ Chúng tôi đã tạo một container phát triển được cấu hình sẵn 
 6. Chờ container được xây dựng và khởi động
 7. Tiếp tục đến [Bước 2: Tạo GitHub Token](../../../02-SetupDevEnvironment)
 
-<img src="./images/devcontainer.png" alt="Ảnh chụp màn hình: thiết lập Dev container" width="50%">
+<img src="./images/devcontainer.png" alt="Ảnh chụp màn hình: Thiết lập container phát triển" width="50%">
 
-<img src="./images/image-3.png" alt="Ảnh chụp màn hình: hoàn thành xây dựng Dev container" width="50%">
+<img src="./images/image-3.png" alt="Ảnh chụp màn hình: Hoàn thành xây dựng container phát triển" width="50%">
 
 #### Lựa Chọn C: Sử Dụng Cài Đặt Cục Bộ Hiện Có
 
@@ -118,9 +119,10 @@ Các bước:
 2. Mở dự án trong IDE của bạn
 3. Tiếp tục đến [Bước 2: Tạo GitHub Token](../../../02-SetupDevEnvironment)
 
-> **Mẹo Chuyên Nghiệp**: Nếu bạn có máy cấu hình thấp nhưng muốn sử dụng VS Code cục bộ, hãy dùng GitHub Codespaces! Bạn có thể kết nối VS Code cục bộ của mình với Codespace trên cloud để tận dụng cả hai.
+> **Mẹo Chuyên Nghiệp**: Nếu bạn có máy cấu hình thấp nhưng muốn sử dụng VS Code cục bộ, hãy sử dụng GitHub Codespaces! Bạn có thể kết nối VS Code cục bộ của mình với Codespace được lưu trữ trên đám mây để có sự kết hợp tốt nhất.
 
-<img src="./images/image-2.png" alt="Ảnh chụp màn hình: tạo instance devcontainer cục bộ" width="50%">
+<img src="./images/image-2.png" alt="Ảnh chụp màn hình: Tạo instance container phát triển cục bộ" width="50%">
+
 
 ## Bước 2: Tạo GitHub Personal Access Token
 
@@ -128,24 +130,24 @@ Các bước:
 2. Trong thanh bên trái, nhấp vào **Developer settings** (thường ở cuối).
 3. Dưới **Personal access tokens**, nhấp vào **Fine-grained tokens** (hoặc theo liên kết trực tiếp [này](https://github.com/settings/personal-access-tokens)).
 4. Nhấp vào **Generate new token**.
-5. Trong "Token name", cung cấp một tên mô tả (ví dụ: `GenAI-Java-Course-Token`).
+5. Dưới "Token name", cung cấp một tên mô tả (ví dụ: `GenAI-Java-Course-Token`).
 6. Đặt ngày hết hạn (khuyến nghị: 7 ngày để đảm bảo an toàn).
-7. Trong "Resource owner", chọn tài khoản người dùng của bạn.
-8. Trong "Repository access", chọn các repository bạn muốn sử dụng với GitHub Models (hoặc "All repositories" nếu cần).
-9. Trong "Repository permissions", tìm **Models** và đặt thành **Read and write**.
+7. Dưới "Resource owner", chọn tài khoản người dùng của bạn.
+8. Dưới "Repository access", chọn các repository bạn muốn sử dụng với GitHub Models (hoặc "All repositories" nếu cần).
+9. Dưới "Repository permissions", tìm **Models** và đặt thành **Read and write**.
 10. Nhấp vào **Generate token**.
 11. **Sao chép và lưu token của bạn ngay bây giờ** – bạn sẽ không thể xem lại nó!
 
-> **Mẹo Bảo Mật**: Sử dụng phạm vi tối thiểu cần thiết và thời gian hết hạn ngắn nhất có thể cho các token truy cập của bạn.
+> **Mẹo Bảo Mật**: Sử dụng phạm vi yêu cầu tối thiểu và thời gian hết hạn ngắn nhất có thể cho các token truy cập của bạn.
 
 ## Bước 3: Kiểm Tra Thiết Lập với Ví Dụ GitHub Models
 
-Khi môi trường phát triển của bạn đã sẵn sàng, hãy kiểm tra tích hợp GitHub Models với ứng dụng ví dụ của chúng tôi trong [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Khi môi trường phát triển của bạn đã sẵn sàng, hãy kiểm tra tích hợp GitHub Models với ứng dụng ví dụ của chúng tôi trong [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Mở terminal trong môi trường phát triển của bạn.
 2. Điều hướng đến ví dụ GitHub Models:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Đặt token GitHub của bạn làm biến môi trường:
    ```bash
@@ -173,7 +175,7 @@ Response: Hello World!
 
 ### Hiểu Mã Ví Dụ
 
-Đầu tiên, hãy hiểu những gì chúng ta vừa chạy. Ví dụ trong `src/github-models` sử dụng OpenAI Java SDK để kết nối với GitHub Models:
+Trước tiên, hãy hiểu những gì chúng ta vừa chạy. Ví dụ trong `examples/github-models` sử dụng OpenAI Java SDK để kết nối với GitHub Models:
 
 **Những gì mã này làm:**
 - **Kết nối** với GitHub Models bằng token truy cập cá nhân của bạn
@@ -215,9 +217,9 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 **Chúc mừng!** Bạn đã thành công:
 
 - **Tạo GitHub Personal Access Token** với quyền phù hợp để truy cập mô hình AI
-- **Thiết lập môi trường phát triển Java** bằng Codespaces, container dev, hoặc cài đặt cục bộ
+- **Thiết lập môi trường phát triển Java** bằng Codespaces, container phát triển, hoặc cài đặt cục bộ
 - **Kết nối với GitHub Models** bằng OpenAI Java SDK để truy cập phát triển AI miễn phí
-- **Kiểm tra tích hợp** với ứng dụng ví dụ hoạt động, giao tiếp với các mô hình AI
+- **Kiểm tra tích hợp** với ứng dụng ví dụ hoạt động giao tiếp với mô hình AI
 
 ## Các Bước Tiếp Theo
 
@@ -230,10 +232,10 @@ Gặp vấn đề? Dưới đây là các vấn đề phổ biến và cách gi�
 - **Token không hoạt động?** 
   - Đảm bảo bạn đã sao chép toàn bộ token mà không có khoảng trắng thừa
   - Xác minh token được đặt chính xác làm biến môi trường
-  - Kiểm tra token của bạn có quyền chính xác (Models: Read and write)
+  - Kiểm tra rằng token của bạn có quyền đúng (Models: Read and write)
 
 - **Maven không tìm thấy?** 
-  - Nếu sử dụng container dev/Codespaces, Maven nên được cài đặt sẵn
+  - Nếu sử dụng container phát triển/Codespaces, Maven nên được cài đặt sẵn
   - Đối với thiết lập cục bộ, đảm bảo Java 21+ và Maven 3.9+ được cài đặt
   - Thử `mvn --version` để xác minh cài đặt
 
@@ -242,15 +244,15 @@ Gặp vấn đề? Dưới đây là các vấn đề phổ biến và cách gi�
   - Xác minh GitHub có thể truy cập từ mạng của bạn
   - Đảm bảo bạn không bị tường lửa chặn endpoint GitHub Models
 
-- **Container dev không khởi động?** 
+- **Container phát triển không khởi động?** 
   - Đảm bảo Docker Desktop đang chạy (đối với phát triển cục bộ)
   - Thử xây dựng lại container: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Lỗi biên dịch ứng dụng?**
-  - Đảm bảo bạn đang ở đúng thư mục: `02-SetupDevEnvironment/src/github-models`
+  - Đảm bảo bạn đang ở đúng thư mục: `02-SetupDevEnvironment/examples/github-models`
   - Thử làm sạch và xây dựng lại: `mvn clean compile`
 
-> **Cần hỗ trợ?**: Vẫn gặp vấn đề? Mở một issue trong repository và chúng tôi sẽ hỗ trợ bạn.
+> **Cần giúp đỡ?**: Vẫn gặp vấn đề? Mở một issue trong repository và chúng tôi sẽ hỗ trợ bạn.
 
 **Tuyên bố miễn trừ trách nhiệm**:  
 Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T19:35:50+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:16:19+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "nl"
 }
 -->
 # Het Instellen van de Ontwikkelomgeving voor Azure OpenAI
 
-> **Snelle Start**: Deze handleiding is voor het instellen van Azure OpenAI. Voor een directe start met gratis modellen, gebruik [GitHub Models met Codespaces](./README.md#quick-start-cloud).
+> **Snelle Start**: Deze handleiding is bedoeld voor het instellen van Azure OpenAI. Voor een directe start met gratis modellen, gebruik [GitHub Models met Codespaces](./README.md#quick-start-cloud).
 
 Deze handleiding helpt je bij het instellen van Azure AI Foundry-modellen voor je Java AI-apps in deze cursus.
 
@@ -17,7 +17,7 @@ Deze handleiding helpt je bij het instellen van Azure AI Foundry-modellen voor j
 
 - [Overzicht Snelle Setup](../../../02-SetupDevEnvironment)
 - [Stap 1: Maak Azure AI Foundry Resources aan](../../../02-SetupDevEnvironment)
-  - [Maak een Hub en Project aan](../../../02-SetupDevEnvironment)
+  - [Maak een Hub en Project](../../../02-SetupDevEnvironment)
   - [Implementeer GPT-4o-mini Model](../../../02-SetupDevEnvironment)
 - [Stap 2: Maak je Codespace aan](../../../02-SetupDevEnvironment)
 - [Stap 3: Configureer je Omgeving](../../../02-SetupDevEnvironment)
@@ -35,7 +35,7 @@ Deze handleiding helpt je bij het instellen van Azure AI Foundry-modellen voor j
 
 ## Stap 1: Maak Azure AI Foundry Resources aan
 
-### Maak een Hub en Project aan
+### Maak een Hub en Project
 
 1. Ga naar [Azure AI Foundry Portal](https://ai.azure.com/) en log in
 2. Klik op **+ Create** → **New hub** (of navigeer naar **Management** → **All hubs** → **+ New hub**)
@@ -43,7 +43,7 @@ Deze handleiding helpt je bij het instellen van Azure AI Foundry-modellen voor j
    - **Hubnaam**: bijv. "MijnAIHub"
    - **Abonnement**: Selecteer je Azure-abonnement
    - **Resourcegroep**: Maak een nieuwe of selecteer een bestaande
-   - **Locatie**: Kies de locatie die het dichtst bij je in de buurt is
+   - **Locatie**: Kies de dichtstbijzijnde locatie
    - **Opslagaccount**: Gebruik standaard of configureer aangepast
    - **Key vault**: Gebruik standaard of configureer aangepast
    - Klik op **Next** → **Review + create** → **Create**
@@ -73,9 +73,9 @@ Deze handleiding helpt je bij het instellen van Azure AI Foundry-modellen voor j
 
 1. Fork deze repository naar je GitHub-account
    > **Opmerking**: Als je de basisconfiguratie wilt aanpassen, bekijk dan de [Dev Container Configuratie](../../../.devcontainer/devcontainer.json)
-2. Klik in je geforkte repository op **Code** → tabblad **Codespaces**
+2. Klik in je geforkte repo op **Code** → tabblad **Codespaces**
 3. Klik op **...** → **New with options...**
-![codespace maken met opties](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.nl.png)
+![een codespace maken met opties](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.nl.png)
 4. Selecteer **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Klik op **Create codespace**
@@ -86,7 +86,7 @@ Zodra je Codespace klaar is, stel je je Azure OpenAI-referenties in:
 
 1. **Navigeer naar het voorbeeldproject vanuit de root van de repository:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Maak je .env-bestand aan:**
@@ -120,7 +120,7 @@ Je zou een reactie van het GPT-4o-mini model moeten zien!
 
 > **VS Code Gebruikers**: Je kunt ook op `F5` drukken in VS Code om de applicatie uit te voeren. De startconfiguratie is al ingesteld om je `.env`-bestand automatisch te laden.
 
-> **Volledig voorbeeld**: Zie de [End-to-End Azure OpenAI Voorbeeld](./src/basic-chat-azure/README.md) voor gedetailleerde instructies en probleemoplossing.
+> **Volledig voorbeeld**: Zie de [End-to-End Azure OpenAI Voorbeeld](./examples/basic-chat-azure/README.md) voor gedetailleerde instructies en probleemoplossing.
 
 ## Wat Nu?
 
@@ -144,4 +144,4 @@ Je zou een reactie van het GPT-4o-mini model moeten zien!
 - [Dev Container Configuratie](../../../.devcontainer/devcontainer.json)
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

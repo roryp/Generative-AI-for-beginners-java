@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T12:40:08+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T13:28:31+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "hr"
 }
 -->
-# Postavljanje razvojnog okruženja za Generativnu AI za Javu
+# Postavljanje Razvojnog Okruženja za Generativnu AI za Javu
 
 > **Brzi početak**: Kodirajte u oblaku za 2 minute - preskočite na [Postavljanje GitHub Codespaces](../../../02-SetupDevEnvironment) - nije potrebna lokalna instalacija i koristi GitHub modele!
 
@@ -16,8 +16,8 @@ CO_OP_TRANSLATOR_METADATA:
 ## Što ćete naučiti
 
 - Postaviti razvojno okruženje za Java AI aplikacije
-- Odabrati i konfigurirati preferirano razvojno okruženje (pristup oblaku s Codespaces, lokalni razvojni kontejner ili potpuno lokalno postavljanje)
-- Testirati postavke povezivanjem s GitHub modelima
+- Odabrati i konfigurirati preferirano razvojno okruženje (prvo u oblaku s Codespaces, lokalni razvojni kontejner ili potpuno lokalno postavljanje)
+- Testirati postavljanje povezivanjem s GitHub modelima
 
 ## Sadržaj
 
@@ -28,14 +28,14 @@ CO_OP_TRANSLATOR_METADATA:
   - [Opcija B: Lokalni razvojni kontejner](../../../02-SetupDevEnvironment)
   - [Opcija C: Koristite postojeću lokalnu instalaciju](../../../02-SetupDevEnvironment)
 - [Korak 2: Kreiranje GitHub osobnog pristupnog tokena](../../../02-SetupDevEnvironment)
-- [Korak 3: Testiranje postavki](../../../02-SetupDevEnvironment)
+- [Korak 3: Testiranje postavljanja](../../../02-SetupDevEnvironment)
 - [Rješavanje problema](../../../02-SetupDevEnvironment)
 - [Sažetak](../../../02-SetupDevEnvironment)
 - [Sljedeći koraci](../../../02-SetupDevEnvironment)
 
 ## Uvod
 
-Ovo poglavlje će vas voditi kroz postavljanje razvojnog okruženja. Koristit ćemo **GitHub modele** kao primarni primjer jer su besplatni, jednostavni za postavljanje samo s GitHub računom, ne zahtijevaju kreditnu karticu i omogućuju pristup raznim modelima za eksperimentiranje.
+Ovo poglavlje će vas voditi kroz postavljanje razvojnog okruženja. Koristit ćemo **GitHub modele** kao naš primarni primjer jer su besplatni, jednostavni za postavljanje samo s GitHub računom, ne zahtijevaju kreditnu karticu i omogućuju pristup raznim modelima za eksperimentiranje.
 
 **Nije potrebna lokalna instalacija!** Možete odmah početi kodirati koristeći GitHub Codespaces, koji pruža potpuno razvojno okruženje u vašem pregledniku.
 
@@ -45,20 +45,20 @@ Preporučujemo korištenje [**GitHub modela**](https://github.com/marketplace?ty
 - **Besplatni** za početak
 - **Jednostavni** za postavljanje samo s GitHub računom
 - **Bez kreditne kartice** potrebne
-- **Više modela** dostupno za eksperimentiranje
+- **Višestruki modeli** dostupni za eksperimentiranje
 
 > **Napomena**: GitHub modeli korišteni u ovom treningu imaju sljedeće besplatne limite:
 > - 15 zahtjeva po minuti (150 dnevno)
 > - ~8,000 riječi ulaz, ~4,000 riječi izlaz po zahtjevu
 > - 5 istovremenih zahtjeva
 > 
-> Za produkcijsku upotrebu, nadogradite na Azure AI Foundry modele s vašim Azure računom. Vaš kod ne treba mijenjati. Pogledajte [dokumentaciju Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Za produkcijsku upotrebu, nadogradite na Azure AI Foundry modele sa svojim Azure računom. Vaš kod ne treba mijenjati. Pogledajte [dokumentaciju Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## Korak 1: Postavljanje razvojnog okruženja
 
 <a name="quick-start-cloud"></a>
 
-Kreirali smo unaprijed konfigurirani razvojni kontejner kako bismo minimizirali vrijeme postavljanja i osigurali da imate sve potrebne alate za ovaj tečaj Generativne AI za Javu. Odaberite preferirani pristup razvoju:
+Kreirali smo unaprijed konfigurirani razvojni kontejner kako bismo minimizirali vrijeme postavljanja i osigurali da imate sve potrebne alate za ovaj tečaj Generativne AI za Javu. Odaberite svoj preferirani pristup razvoju:
 
 ### Opcije postavljanja okruženja:
 
@@ -66,7 +66,7 @@ Kreirali smo unaprijed konfigurirani razvojni kontejner kako bismo minimizirali 
 
 **Počnite kodirati za 2 minute - nije potrebna lokalna instalacija!**
 
-1. Forkajte ovaj repozitorij na vaš GitHub račun
+1. Forkajte ovaj repozitorij na svoj GitHub račun
    > **Napomena**: Ako želite urediti osnovnu konfiguraciju, pogledajte [Konfiguraciju razvojnog kontejnera](../../../.devcontainer/devcontainer.json)
 2. Kliknite **Code** → kartica **Codespaces** → **...** → **New with options...**
 3. Koristite zadane postavke – ovo će odabrati **Konfiguraciju razvojnog kontejnera**: **Razvojno okruženje za Generativnu AI za Javu** prilagođeni devcontainer kreiran za ovaj tečaj
@@ -91,12 +91,12 @@ Kreirali smo unaprijed konfigurirani razvojni kontejner kako bismo minimizirali 
 
 **Za developere koji preferiraju lokalni razvoj s Dockerom**
 
-1. Forkajte i klonirajte ovaj repozitorij na vaš lokalni stroj
+1. Forkajte i klonirajte ovaj repozitorij na svoj lokalni stroj
    > **Napomena**: Ako želite urediti osnovnu konfiguraciju, pogledajte [Konfiguraciju razvojnog kontejnera](../../../.devcontainer/devcontainer.json)
 2. Instalirajte [Docker Desktop](https://www.docker.com/products/docker-desktop/) i [VS Code](https://code.visualstudio.com/)
 3. Instalirajte [Dev Containers ekstenziju](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) u VS Code
 4. Otvorite mapu repozitorija u VS Code
-5. Kada se pojavi upit, kliknite **Reopen in Container** (ili koristite `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
+5. Kada se zatraži, kliknite **Reopen in Container** (ili koristite `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Pričekajte da se kontejner izgradi i pokrene
 7. Nastavite na [Korak 2: Kreiranje GitHub tokena](../../../02-SetupDevEnvironment)
 
@@ -106,7 +106,7 @@ Kreirali smo unaprijed konfigurirani razvojni kontejner kako bismo minimizirali 
 
 #### Opcija C: Koristite postojeću lokalnu instalaciju
 
-**Za developere s postojećim Java okruženjem**
+**Za developere s postojećim Java okruženjima**
 
 Preduvjeti:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
@@ -114,40 +114,40 @@ Preduvjeti:
 - [VS Code](https://code.visualstudio.com) ili vaš preferirani IDE
 
 Koraci:
-1. Klonirajte ovaj repozitorij na vaš lokalni stroj
-2. Otvorite projekt u vašem IDE-u
+1. Klonirajte ovaj repozitorij na svoj lokalni stroj
+2. Otvorite projekt u svom IDE-u
 3. Nastavite na [Korak 2: Kreiranje GitHub tokena](../../../02-SetupDevEnvironment)
 
-> **Pro Savjet**: Ako imate stroj s niskim specifikacijama, ali želite lokalni VS Code, koristite GitHub Codespaces! Možete povezati vaš lokalni VS Code s cloud-hostiranim Codespace-om za najbolje od oba svijeta.
+> **Pro Savjet**: Ako imate stroj s niskim specifikacijama, ali želite VS Code lokalno, koristite GitHub Codespaces! Možete povezati svoj lokalni VS Code s cloud-hostiranim Codespace-om za najbolje od oba svijeta.
 
 <img src="./images/image-2.png" alt="Snimka zaslona: Kreirana lokalna instanca razvojnog kontejnera" width="50%">
 
 ## Korak 2: Kreiranje GitHub osobnog pristupnog tokena
 
 1. Idite na [GitHub postavke](https://github.com/settings/profile) i odaberite **Settings** iz izbornika vašeg profila.
-2. U lijevom izborniku kliknite **Developer settings** (obično na dnu).
+2. U lijevom bočnom izborniku kliknite **Developer settings** (obično na dnu).
 3. Pod **Personal access tokens**, kliknite **Fine-grained tokens** (ili slijedite ovaj direktni [link](https://github.com/settings/personal-access-tokens)).
 4. Kliknite **Generate new token**.
 5. Pod "Token name", unesite opisno ime (npr., `GenAI-Java-Course-Token`).
 6. Postavite datum isteka (preporučeno: 7 dana radi sigurnosnih najboljih praksi).
-7. Pod "Resource owner", odaberite vaš korisnički račun.
+7. Pod "Resource owner", odaberite svoj korisnički račun.
 8. Pod "Repository access", odaberite repozitorije koje želite koristiti s GitHub modelima (ili "All repositories" ako je potrebno).
 9. Pod "Repository permissions", pronađite **Models** i postavite na **Read and write**.
 10. Kliknite **Generate token**.
-11. **Kopirajte i spremite vaš token sada** – nećete ga ponovno vidjeti!
+11. **Kopirajte i spremite svoj token sada** – nećete ga ponovno vidjeti!
 
-> **Sigurnosni savjet**: Koristite minimalno potrebne dozvole i najkraće praktično vrijeme isteka za vaše pristupne tokene.
+> **Sigurnosni savjet**: Koristite minimalno potrebne dozvole i najkraće praktično vrijeme isteka za svoje pristupne tokene.
 
-## Korak 3: Testiranje postavki s GitHub Models primjerom
+## Korak 3: Testiranje postavljanja s GitHub Models primjerom
 
-Kada je vaše razvojno okruženje spremno, testirajmo integraciju GitHub modela s našom primjer aplikacijom u [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Kada je vaše razvojno okruženje spremno, testirajmo integraciju GitHub modela s našom primjer aplikacijom u [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
-1. Otvorite terminal u vašem razvojnog okruženju.
-2. Idite na GitHub Models primjer:
+1. Otvorite terminal u svom razvojnog okruženju.
+2. Idite na primjer GitHub modela:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
-3. Postavite vaš GitHub token kao varijablu okruženja:
+3. Postavite svoj GitHub token kao varijablu okruženja:
    ```bash
    # macOS/Linux
    export GITHUB_TOKEN=your_token_here
@@ -171,15 +171,15 @@ Sending request to GitHub Models...
 Response: Hello World!
 ```
 
-### Razumijevanje primjer koda
+### Razumijevanje primjera koda
 
-Prvo, razumijmo što smo upravo pokrenuli. Primjer pod `src/github-models` koristi OpenAI Java SDK za povezivanje s GitHub modelima:
+Prvo, razumijmo što smo upravo pokrenuli. Primjer pod `examples/github-models` koristi OpenAI Java SDK za povezivanje s GitHub modelima:
 
 **Što ovaj kod radi:**
 - **Povezuje se** s GitHub modelima koristeći vaš osobni pristupni token
 - **Šalje** jednostavnu poruku "Say Hello World!" AI modelu
 - **Prima** i prikazuje odgovor AI-a
-- **Provjerava** da vaše postavke ispravno rade
+- **Provjerava** da vaše postavljanje radi ispravno
 
 **Ključna ovisnost** (u `pom.xml`):
 ```xml
@@ -215,7 +215,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 **Čestitamo!** Uspješno ste:
 
 - **Kreirali GitHub osobni pristupni token** s odgovarajućim dozvolama za pristup AI modelima
-- **Postavili Java razvojno okruženje** koristeći Codespaces, razvojne kontejnere ili lokalnu instalaciju
+- **Postavili svoje Java razvojno okruženje** koristeći Codespaces, razvojne kontejnere ili lokalnu instalaciju
 - **Povezali se s GitHub modelima** koristeći OpenAI Java SDK za besplatan pristup AI razvoju
 - **Testirali integraciju** s radnom primjer aplikacijom koja komunicira s AI modelima
 
@@ -230,7 +230,7 @@ Imate problema? Evo uobičajenih problema i rješenja:
 - **Token ne radi?** 
   - Provjerite jeste li kopirali cijeli token bez dodatnih razmaka
   - Provjerite je li token ispravno postavljen kao varijabla okruženja
-  - Provjerite ima li vaš token ispravne dozvole (Models: Read and write)
+  - Provjerite da vaš token ima ispravne dozvole (Models: Read and write)
 
 - **Maven nije pronađen?** 
   - Ako koristite razvojne kontejnere/Codespaces, Maven bi trebao biti unaprijed instaliran
@@ -238,19 +238,19 @@ Imate problema? Evo uobičajenih problema i rješenja:
   - Pokušajte `mvn --version` za provjeru instalacije
 
 - **Problemi s povezivanjem?** 
-  - Provjerite vašu internetsku vezu
+  - Provjerite svoju internetsku vezu
   - Provjerite je li GitHub dostupan s vaše mreže
-  - Provjerite niste li iza vatrozida koji blokira GitHub Models endpoint
+  - Provjerite da niste iza vatrozida koji blokira GitHub Models endpoint
 
 - **Razvojni kontejner se ne pokreće?** 
   - Provjerite je li Docker Desktop pokrenut (za lokalni razvoj)
   - Pokušajte ponovno izgraditi kontejner: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
-- **Greške pri kompilaciji aplikacije?**
-  - Provjerite jeste li u ispravnom direktoriju: `02-SetupDevEnvironment/src/github-models`
+- **Greške u kompilaciji aplikacije?**
+  - Provjerite jeste li u ispravnom direktoriju: `02-SetupDevEnvironment/examples/github-models`
   - Pokušajte očistiti i ponovno izgraditi: `mvn clean compile`
 
-> **Treba vam pomoć?**: Još uvijek imate problema? Otvorite problem u repozitoriju i pomoći ćemo vam.
+> **Trebate pomoć?**: Još uvijek imate problema? Otvorite problem u repozitoriju i pomoći ćemo vam.
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.

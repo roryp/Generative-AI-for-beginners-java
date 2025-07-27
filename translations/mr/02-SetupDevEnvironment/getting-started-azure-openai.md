@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T18:01:47+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:02:10+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "mr"
 }
 -->
 # Azure OpenAI साठी विकास वातावरण सेट करणे
 
-> **जलद सुरुवात**: हा मार्गदर्शक Azure OpenAI सेटअपसाठी आहे. विनामूल्य मॉडेल्ससह त्वरित सुरुवात करण्यासाठी [GitHub Models with Codespaces](./README.md#quick-start-cloud) वापरा.
+> **जलद प्रारंभ**: हा मार्गदर्शक Azure OpenAI सेटअपसाठी आहे. विनामूल्य मॉडेल्ससह त्वरित प्रारंभासाठी, [GitHub Models with Codespaces](./README.md#quick-start-cloud) वापरा.
 
 हा मार्गदर्शक तुम्हाला या कोर्समधील तुमच्या Java AI अॅप्ससाठी Azure AI Foundry मॉडेल्स सेट करण्यात मदत करेल.
 
@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. **रेपॉजिटरी रूटमधून उदाहरण प्रकल्पावर जा:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **तुमची .env फाइल तयार करा:**
@@ -110,7 +110,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## पायरी 4: तुमचा सेटअप चाचणी करा
 
-Azure OpenAI कनेक्शन चाचणी करण्यासाठी उदाहरण अॅप्लिकेशन चालवा:
+Azure OpenAI कनेक्शन चाचणीसाठी उदाहरण अॅप्लिकेशन चालवा:
 
 ```bash
 mvn clean spring-boot:run
@@ -118,9 +118,9 @@ mvn clean spring-boot:run
 
 तुम्हाला GPT-4o-mini मॉडेलकडून प्रतिसाद दिसायला हवा!
 
-> **VS Code वापरकर्ते**: तुम्ही `F5` दाबून अॅप्लिकेशन चालवू शकता. लॉन्च कॉन्फिगरेशन आधीच तुमची `.env` फाइल आपोआप लोड करण्यासाठी सेट केले आहे.
+> **VS Code वापरकर्ते**: तुम्ही `F5` दाबून अॅप्लिकेशन चालवू शकता. लॉन्च कॉन्फिगरेशन आधीच तुमची `.env` फाइल आपोआप लोड करण्यासाठी सेट केलेले आहे.
 
-> **पूर्ण उदाहरण**: सविस्तर सूचना आणि समस्या निवारणासाठी [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) पहा.
+> **पूर्ण उदाहरण**: सविस्तर सूचना आणि समस्या निवारणासाठी [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) पहा.
 
 ## पुढे काय?
 
@@ -129,7 +129,7 @@ mvn clean spring-boot:run
 - स्थानिक .env फाइल कॉन्फिगरेशन
 - Java विकास वातावरण तयार
 
-**पुढे जा** [Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.md) कडे आणि AI अॅप्लिकेशन्स तयार करण्यास सुरुवात करा!
+**पुढे जा** [Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.md) वर, AI अॅप्लिकेशन्स तयार करण्यास सुरुवात करण्यासाठी!
 
 ## संसाधने
 
@@ -144,4 +144,4 @@ mvn clean spring-boot:run
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **अस्वीकरण**:  
-हा दस्तऐवज AI भाषांतर सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) वापरून भाषांतरित करण्यात आला आहे. आम्ही अचूकतेसाठी प्रयत्नशील असलो तरी, कृपया लक्षात ठेवा की स्वयंचलित भाषांतरांमध्ये त्रुटी किंवा अचूकतेचा अभाव असू शकतो. मूळ भाषेतील दस्तऐवज हा अधिकृत स्रोत मानला जावा. महत्त्वाच्या माहितीसाठी व्यावसायिक मानवी भाषांतराची शिफारस केली जाते. या भाषांतराचा वापर करून उद्भवलेल्या कोणत्याही गैरसमज किंवा चुकीच्या अर्थासाठी आम्ही जबाबदार राहणार नाही.
+हा दस्तऐवज AI भाषांतर सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) वापरून भाषांतरित करण्यात आला आहे. आम्ही अचूकतेसाठी प्रयत्नशील असलो तरी कृपया लक्षात ठेवा की स्वयंचलित भाषांतरांमध्ये त्रुटी किंवा अचूकतेचा अभाव असू शकतो. मूळ भाषेतील दस्तऐवज हा अधिकृत स्रोत मानला जावा. महत्त्वाच्या माहितीसाठी व्यावसायिक मानवी भाषांतराची शिफारस केली जाते. या भाषांतराचा वापर करून उद्भवलेल्या कोणत्याही गैरसमज किंवा चुकीच्या अर्थासाठी आम्ही जबाबदार राहणार नाही.

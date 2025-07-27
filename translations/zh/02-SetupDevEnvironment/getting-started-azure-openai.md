@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T16:21:23+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T12:54:41+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "zh"
 }
@@ -55,7 +55,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. 在您的项目中，进入 **Model catalog** 并搜索 **gpt-4o-mini**
    - *替代方法：进入 **Deployments** → **+ Create deployment***
-2. 点击 gpt-4o-mini 模型卡片上的 **Deploy**
+2. 在 gpt-4o-mini 模型卡片上点击 **Deploy**
 3. 配置部署：
    - **部署名称**："gpt-4o-mini"
    - **模型版本**：使用最新版本
@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
    - **部署名称**（例如 "gpt-4o-mini"）
    - **目标 URI**（例如 `https://your-hub-name.openai.azure.com/`）  
       > **重要**：仅复制基础 URL（例如 `https://myhub.openai.azure.com/`），不要包含完整的端点路径。
-   - **密钥**（从密钥和端点部分获取）
+   - **密钥**（在 Keys and Endpoint 部分中获取）
 
 > **仍有问题？** 请访问官方 [Azure AI Foundry 文档](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
 
@@ -84,17 +84,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 当您的 Codespace 准备好后，设置您的 Azure OpenAI 凭据：
 
-1. **从仓库根目录导航到示例项目：**
+1. **从仓库根目录导航到示例项目：**  
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
-2. **创建您的 .env 文件：**
+2. **创建您的 .env 文件：**  
    ```bash
    cp .env.example .env
    ```
 
-3. **编辑 .env 文件并添加您的 Azure OpenAI 凭据：**
+3. **编辑 .env 文件并添加您的 Azure OpenAI 凭据：**  
    ```bash
    # Your Azure OpenAI API key (from Azure AI Foundry portal)
    AZURE_AI_KEY=your-actual-api-key-here
@@ -103,9 +103,9 @@ CO_OP_TRANSLATOR_METADATA:
    AZURE_AI_ENDPOINT=https://your-hub-name.openai.azure.com/
    ```
 
-   > **安全提示**： 
-   > - 切勿将 `.env` 文件提交到版本控制
-   > - `.env` 文件已包含在 `.gitignore` 中
+   > **安全提示**：  
+   > - 切勿将 `.env` 文件提交到版本控制中  
+   > - `.env` 文件已包含在 `.gitignore` 中  
    > - 确保您的 API 密钥安全并定期更换
 
 ## 步骤 4：测试您的设置
@@ -120,12 +120,12 @@ mvn clean spring-boot:run
 
 > **VS Code 用户**：您也可以在 VS Code 中按 `F5` 运行应用程序。启动配置已设置为自动加载您的 `.env` 文件。
 
-> **完整示例**：请参阅 [端到端 Azure OpenAI 示例](./src/basic-chat-azure/README.md) 以获取详细说明和故障排除。
+> **完整示例**：请参阅 [端到端 Azure OpenAI 示例](./examples/basic-chat-azure/README.md) 以获取详细说明和故障排除。
 
 ## 接下来做什么？
 
-**设置完成！** 您现在已经：
-- 部署了 Azure OpenAI 的 gpt-4o-mini
+**设置完成！** 您现在已经完成以下内容：
+- 部署了 gpt-4o-mini 的 Azure OpenAI
 - 配置了本地 .env 文件
 - 准备好了 Java 开发环境
 
@@ -144,4 +144,4 @@ mvn clean spring-boot:run
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **免责声明**：  
-本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。虽然我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于重要信息，建议使用专业人工翻译。我们对因使用此翻译而产生的任何误解或误读不承担责任。
+本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于重要信息，建议使用专业人工翻译。我们对因使用此翻译而产生的任何误解或误读不承担责任。

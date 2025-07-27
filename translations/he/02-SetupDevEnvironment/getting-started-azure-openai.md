@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T19:36:12+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:17:23+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "he"
 }
@@ -31,7 +31,7 @@ CO_OP_TRANSLATOR_METADATA:
 1. יצירת משאבי Azure AI Foundry (Hub, פרויקט, מודל)
 2. יצירת Codespace עם מכולת פיתוח Java
 3. הגדרת קובץ .env עם אישורי Azure OpenAI
-4. בדיקת ההגדרה עם פרויקט לדוגמה
+4. בדיקת ההגדרה עם פרויקט הדוגמה
 
 ## שלב 1: יצירת משאבי Azure AI Foundry
 
@@ -46,22 +46,22 @@ CO_OP_TRANSLATOR_METADATA:
    - **Location**: בחרו את המיקום הקרוב ביותר אליכם
    - **Storage account**: השתמשו בברירת המחדל או הגדירו מותאם אישית
    - **Key vault**: השתמשו בברירת המחדל או הגדירו מותאם אישית
-   - לחצו **Next** → **Review + create** → **Create**
-4. לאחר יצירת ה-Hub, לחצו על **+ New project** (או **Create project** ממסך ה-Hub)
+   - לחצו על **Next** → **Review + create** → **Create**
+4. לאחר יצירת ה-Hub, לחצו על **+ New project** (או **Create project** מתוך תצוגת ה-Hub)
    - **Project name**: לדוגמה, "GenAIJava"
-   - לחצו **Create**
+   - לחצו על **Create**
 
 ### פריסת מודל GPT-4o-mini
 
-1. בפרויקט שלכם, נווטו ל-**Model catalog** וחפשו את **gpt-4o-mini**
-   - *חלופה: נווטו ל-**Deployments** → **+ Create deployment***
-2. לחצו על **Deploy** בכרטיסיית המודל gpt-4o-mini
+1. בפרויקט שלכם, עברו ל-**Model catalog** וחפשו את **gpt-4o-mini**
+   - *חלופה: עברו ל-**Deployments** → **+ Create deployment***
+2. לחצו על **Deploy** בכרטיס המודל gpt-4o-mini
 3. הגדירו את הפריסה:
    - **Deployment name**: "gpt-4o-mini"
    - **Model version**: השתמשו בגרסה העדכנית ביותר
    - **Deployment type**: Standard
-4. לחצו **Deploy**
-5. לאחר הפריסה, נווטו ללשונית **Deployments** והעתיקו את הערכים הבאים:
+4. לחצו על **Deploy**
+5. לאחר הפריסה, עברו ללשונית **Deployments** והעתיקו את הערכים הבאים:
    - **Deployment name** (לדוגמה, "gpt-4o-mini")
    - **Target URI** (לדוגמה, `https://your-hub-name.openai.azure.com/`)  
       > **חשוב**: העתיקו רק את כתובת ה-URL הבסיסית (לדוגמה, `https://myhub.openai.azure.com/`) ולא את כל נתיב ה-endpoint.
@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 ![יצירת Codespace עם אפשרויות](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.he.png)
 4. בחרו **Dev container configuration**: 
    - **Generative AI Java Development Environment**
-5. לחצו **Create codespace**
+5. לחצו על **Create codespace**
 
 ## שלב 3: הגדרת הסביבה
 
@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. **נווטו לפרויקט הדוגמה משורש המאגר:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **צרו את קובץ ה-.env שלכם:**
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
    ```
 
    > **הערת אבטחה**: 
-   > - לעולם אל תתחייבו את קובץ ה-`.env` למערכת ניהול גרסאות
+   > - לעולם אל תעלו את קובץ ה-`.env` למערכת ניהול גרסאות
    > - קובץ ה-`.env` כבר כלול ב-`.gitignore`
    > - שמרו על מפתחות ה-API שלכם מאובטחים והחליפו אותם באופן קבוע
 
@@ -116,11 +116,11 @@ CO_OP_TRANSLATOR_METADATA:
 mvn clean spring-boot:run
 ```
 
-אתם אמורים לראות תגובה ממודל ה-GPT-4o-mini!
+אתם אמורים לראות תגובה ממודל GPT-4o-mini!
 
-> **משתמשי VS Code**: ניתן גם ללחוץ על `F5` ב-VS Code כדי להריץ את האפליקציה. תצורת ההשקה כבר מוגדרת לטעון את קובץ ה-`.env` שלכם באופן אוטומטי.
+> **משתמשי VS Code**: ניתן גם ללחוץ על `F5` ב-VS Code כדי להריץ את האפליקציה. תצורת ההפעלה כבר מוגדרת לטעון את קובץ ה-`.env` שלכם באופן אוטומטי.
 
-> **דוגמה מלאה**: עיינו ב-[דוגמת Azure OpenAI מקצה לקצה](./src/basic-chat-azure/README.md) להוראות מפורטות ולפתרון בעיות.
+> **דוגמה מלאה**: עיינו ב-[דוגמת Azure OpenAI מקצה לקצה](./examples/basic-chat-azure/README.md) להוראות מפורטות ופתרון בעיות.
 
 ## מה הלאה?
 
@@ -144,4 +144,4 @@ mvn clean spring-boot:run
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי בני אדם. איננו נושאים באחריות לאי-הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.

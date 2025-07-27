@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T17:59:46+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T12:51:01+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "ru"
 }
@@ -37,8 +37,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Создание хаба и проекта
 
-1. Перейдите на [портал Azure AI Foundry](https://ai.azure.com/) и войдите в систему.
-2. Нажмите **+ Create** → **New hub** (или перейдите в **Management** → **All hubs** → **+ New hub**).
+1. Перейдите на [портал Azure AI Foundry](https://ai.azure.com/) и войдите в систему
+2. Нажмите **+ Create** → **New hub** (или перейдите в **Management** → **All hubs** → **+ New hub**)
 3. Настройте ваш хаб:
    - **Hub name**: например, "MyAIHub"
    - **Subscription**: выберите вашу подписку Azure
@@ -47,38 +47,38 @@ CO_OP_TRANSLATOR_METADATA:
    - **Storage account**: используйте стандартный или настройте свой
    - **Key vault**: используйте стандартный или настройте свой
    - Нажмите **Next** → **Review + create** → **Create**
-4. После создания нажмите **+ New project** (или **Create project** на странице обзора хаба):
+4. После создания нажмите **+ New project** (или **Create project** на странице обзора хаба)
    - **Project name**: например, "GenAIJava"
    - Нажмите **Create**
 
 ### Развертывание модели GPT-4o-mini
 
-1. В вашем проекте перейдите в **Model catalog** и найдите **gpt-4o-mini**.
+1. В вашем проекте перейдите в **Model catalog** и найдите **gpt-4o-mini**
    - *Альтернатива: Перейдите в **Deployments** → **+ Create deployment***
-2. Нажмите **Deploy** на карточке модели gpt-4o-mini.
+2. Нажмите **Deploy** на карточке модели gpt-4o-mini
 3. Настройте развертывание:
    - **Deployment name**: "gpt-4o-mini"
    - **Model version**: используйте последнюю версию
    - **Deployment type**: Standard
-4. Нажмите **Deploy**.
+4. Нажмите **Deploy**
 5. После развертывания перейдите на вкладку **Deployments** и скопируйте следующие значения:
    - **Deployment name** (например, "gpt-4o-mini")
    - **Target URI** (например, `https://your-hub-name.openai.azure.com/`)  
       > **Важно**: Скопируйте только базовый URL (например, `https://myhub.openai.azure.com/`), а не полный путь к конечной точке.
    - **Key** (из раздела Keys and Endpoint)
 
-> **Все еще есть вопросы?** Посетите официальную [документацию Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project).
+> **Все еще есть вопросы?** Посетите официальную [документацию Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
 
 ## Шаг 2: Создание Codespace
 
-1. Форкните этот репозиторий в свой аккаунт GitHub.
-   > **Примечание**: Если вы хотите изменить базовую конфигурацию, ознакомьтесь с [Dev Container Configuration](../../../.devcontainer/devcontainer.json).
-2. В вашем форкнутом репозитории нажмите **Code** → вкладка **Codespaces**.
-3. Нажмите **...** → **New with options...**  
-![создание Codespace с опциями](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ru.png)
+1. Форкните этот репозиторий в свой аккаунт GitHub
+   > **Примечание**: Если вы хотите изменить базовую конфигурацию, ознакомьтесь с [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
+2. В вашем форкнутом репозитории нажмите **Code** → вкладка **Codespaces**
+3. Нажмите **...** → **New with options...**
+![создание codespace с опциями](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ru.png)
 4. Выберите **Dev container configuration**: 
    - **Generative AI Java Development Environment**
-5. Нажмите **Create codespace**.
+5. Нажмите **Create codespace**
 
 ## Шаг 3: Настройка среды
 
@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. **Перейдите в примерный проект из корня репозитория:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Создайте файл .env:**
@@ -104,9 +104,9 @@ CO_OP_TRANSLATOR_METADATA:
    ```
 
    > **Примечание по безопасности**: 
-   > - Никогда не добавляйте файл `.env` в систему контроля версий.
-   > - Файл `.env` уже включен в `.gitignore`.
-   > - Храните свои API-ключи в безопасности и регулярно их обновляйте.
+   > - Никогда не добавляйте файл `.env` в систему контроля версий
+   > - Файл `.env` уже включен в `.gitignore`
+   > - Храните свои API-ключи в безопасности и регулярно их обновляйте
 
 ## Шаг 4: Тестирование настройки
 
@@ -120,7 +120,7 @@ mvn clean spring-boot:run
 
 > **Пользователи VS Code**: Вы также можете нажать `F5` в VS Code, чтобы запустить приложение. Конфигурация запуска уже настроена для автоматической загрузки вашего файла `.env`.
 
-> **Полный пример**: Ознакомьтесь с [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) для подробных инструкций и устранения неполадок.
+> **Полный пример**: Ознакомьтесь с [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) для подробных инструкций и устранения неполадок.
 
 ## Что дальше?
 
@@ -144,4 +144,4 @@ mvn clean spring-boot:run
 - [Конфигурация Dev Container](../../../.devcontainer/devcontainer.json)
 
 **Отказ от ответственности**:  
-Этот документ был переведен с использованием сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия обеспечить точность, автоматические переводы могут содержать ошибки или неточности. Оригинальный документ на его родном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неправильные интерпретации, возникшие в результате использования данного перевода.
+Этот документ был переведен с помощью сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Хотя мы стремимся к точности, пожалуйста, учитывайте, что автоматические переводы могут содержать ошибки или неточности. Оригинальный документ на его родном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неправильные интерпретации, возникающие в результате использования данного перевода.

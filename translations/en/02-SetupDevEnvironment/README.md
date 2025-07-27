@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T11:51:18+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T12:47:09+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "en"
 }
 -->
 # Setting Up the Development Environment for Generative AI for Java
 
-> **Quick Start**: Code in the Cloud in 2 minutes - Jump to [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - no local installation required and uses GitHub Models!
+> **Quick Start**: Code in the Cloud in 2 minutes - Jump to [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - no local installation required and uses GitHub models!
 
-> **Interested in Azure OpenAI?** See our [Azure OpenAI Setup Guide](getting-started-azure-openai.md) for steps to create a new Azure OpenAI resource.
+> **Interested in Azure OpenAI?** See our [Azure OpenAI Setup Guide](getting-started-azure-openai.md) with steps to create a new Azure OpenAI resource.
 
 ## What You'll Learn
 
-- Set up a Java development environment for AI applications
-- Choose and configure your preferred development environment (cloud-first with Codespaces, local dev container, or full local setup)
-- Test your setup by connecting to GitHub Models
+- How to set up a Java development environment for AI applications
+- How to choose and configure your preferred development environment (cloud-first with Codespaces, local dev container, or full local setup)
+- How to test your setup by connecting to GitHub Models
 
 ## Table of Contents
 
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introduction
 
-This chapter will guide you through setting up a development environment. We'll use **GitHub Models** as our primary example because it's free, easy to set up with just a GitHub account, requires no credit card, and provides access to multiple models for experimentation.
+This chapter will walk you through setting up a development environment. We'll use **GitHub Models** as our primary example because it's free, easy to set up with just a GitHub account, requires no credit card, and provides access to multiple models for experimentation.
 
 **No local setup required!** You can start coding immediately using GitHub Codespaces, which provides a full development environment in your browser.
 
@@ -66,7 +66,7 @@ We've created a preconfigured development container to minimize setup time and e
 
 **Start coding in 2 minutes - no local setup required!**
 
-1. Fork this repository to your GitHub account  
+1. Fork this repository to your GitHub account
    > **Note**: If you want to edit the basic config, please check the [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
 3. Use the defaults – this will select the **Dev container configuration**: **Generative AI Java Development Environment** custom devcontainer created for this course
@@ -91,7 +91,7 @@ We've created a preconfigured development container to minimize setup time and e
 
 **For developers who prefer local development with Docker**
 
-1. Fork and clone this repository to your local machine  
+1. Fork and clone this repository to your local machine
    > **Note**: If you want to edit the basic config, please check the [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [VS Code](https://code.visualstudio.com/)
 3. Install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) in VS Code
@@ -140,12 +140,12 @@ Steps:
 
 ## Step 3: Test Your Setup with the GitHub Models Example
 
-Once your development environment is ready, let's test the GitHub Models integration with our example application in [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Once your development environment is ready, let's test the GitHub Models integration with our example application in [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Open the terminal in your development environment.
 2. Navigate to the GitHub Models example:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Set your GitHub token as an environment variable:
    ```bash
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Understanding the Example Code
 
-First, let's understand what we just ran. The example under `src/github-models` uses the OpenAI Java SDK to connect to GitHub Models:
+First, let's understand what we just ran. The example under `examples/github-models` uses the OpenAI Java SDK to connect to GitHub Models:
 
 **What this code does:**
 - **Connects** to GitHub Models using your personal access token
@@ -247,10 +247,10 @@ Having issues? Here are common problems and solutions:
   - Try rebuilding the container: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Application compilation errors?**
-  - Ensure you're in the correct directory: `02-SetupDevEnvironment/src/github-models`
+  - Ensure you're in the correct directory: `02-SetupDevEnvironment/examples/github-models`
   - Try cleaning and rebuilding: `mvn clean compile`
 
 > **Need help?**: Still having issues? Open an issue in the repository and we'll help you out.
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

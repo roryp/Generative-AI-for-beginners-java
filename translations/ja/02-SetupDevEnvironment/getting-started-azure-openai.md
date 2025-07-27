@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T16:22:44+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T12:58:34+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "ja"
 }
@@ -37,7 +37,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### ハブとプロジェクトを作成する
 
-1. [Azure AI Foundry Portal](https://ai.azure.com/) にアクセスしてサインインします
+1. [Azure AI Foundry Portal](https://ai.azure.com/) にアクセスしてサインインします。
 2. **+ Create** → **New hub** をクリック (または **Management** → **All hubs** → **+ New hub** に移動)
 3. ハブを構成します:
    - **Hub name**: 例: "MyAIHub"
@@ -71,14 +71,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ステップ 2: Codespace を作成する
 
-1. このリポジトリを GitHub アカウントにフォークします
-   > **注意**: 基本設定を編集したい場合は [Dev Container Configuration](../../../.devcontainer/devcontainer.json) を確認してください
-2. フォークしたリポジトリで **Code** → **Codespaces** タブをクリック
-3. **...** → **New with options...** をクリック
+1. このリポジトリを GitHub アカウントにフォークします。
+   > **注意**: 基本設定を編集したい場合は [Dev Container Configuration](../../../.devcontainer/devcontainer.json) を確認してください。
+2. フォークしたリポジトリで **Code** → **Codespaces** タブをクリックします。
+3. **...** → **New with options...** をクリックします。
 ![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ja.png)
-4. **Dev container configuration** を選択:
+4. **Dev container configuration** を選択します: 
    - **Generative AI Java Development Environment**
-5. **Create codespace** をクリック
+5. **Create codespace** をクリックします。
 
 ## ステップ 3: 環境を構成する
 
@@ -86,7 +86,7 @@ Codespace が準備できたら、Azure OpenAI の資格情報を設定します
 
 1. **リポジトリのルートからサンプルプロジェクトに移動します:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **.env ファイルを作成します:**
@@ -120,7 +120,7 @@ GPT-4o-mini モデルからの応答が表示されるはずです！
 
 > **VS Code ユーザー**: VS Code で `F5` を押してアプリケーションを実行することもできます。起動構成は `.env` ファイルを自動的に読み込むように設定されています。
 
-> **完全な例**: 詳細な手順とトラブルシューティングについては [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) を参照してください。
+> **完全な例**: 詳細な手順とトラブルシューティングについては [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) を参照してください。
 
 ## 次に進むべきこと
 
@@ -144,4 +144,4 @@ GPT-4o-mini モデルからの応答が表示されるはずです！
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてお考えください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解について、当社は責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を期すよう努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された原文が公式な情報源と見なされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の使用に起因する誤解や誤認について、当方は一切の責任を負いません。

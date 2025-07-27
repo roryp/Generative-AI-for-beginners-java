@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T16:23:28+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:05:34+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "pt"
 }
@@ -31,7 +31,7 @@ Este guia irá ajudá-lo a configurar os modelos do Azure AI Foundry para as sua
 1. Criar recursos do Azure AI Foundry (Hub, Projeto, Modelo)
 2. Criar um Codespace com um container de desenvolvimento Java
 3. Configurar o ficheiro .env com as credenciais do Azure OpenAI
-4. Testar a configuração com o projeto de exemplo
+4. Testar a sua configuração com o projeto de exemplo
 
 ## Passo 1: Criar Recursos do Azure AI Foundry
 
@@ -53,21 +53,21 @@ Este guia irá ajudá-lo a configurar os modelos do Azure AI Foundry para as sua
 
 ### Implementar o Modelo GPT-4o-mini
 
-1. No seu projeto, vá a **Catálogo de modelos** e procure por **gpt-4o-mini**.
-   - *Alternativa: Vá a **Implementações** → **+ Criar implementação***
+1. No seu projeto, vá até **Catálogo de modelos** e procure por **gpt-4o-mini**.
+   - *Alternativa: Vá até **Implementações** → **+ Criar implementação***
 2. Clique em **Implementar** no cartão do modelo gpt-4o-mini.
 3. Configure a implementação:
    - **Nome da implementação**: "gpt-4o-mini"
    - **Versão do modelo**: Utilize a mais recente
    - **Tipo de implementação**: Standard
-4. Clique em **Implementar**.
-5. Após a implementação, vá ao separador **Implementações** e copie os seguintes valores:
+4. Clique em **Implementar**
+5. Após a implementação, vá até ao separador **Implementações** e copie os seguintes valores:
    - **Nome da implementação** (por exemplo, "gpt-4o-mini")
    - **URI de destino** (por exemplo, `https://seu-nome-do-hub.openai.azure.com/`)  
       > **Importante**: Copie apenas o URL base (por exemplo, `https://meuhub.openai.azure.com/`) e não o caminho completo do endpoint.
    - **Chave** (na secção de Chaves e Endpoint)
 
-> **Ainda com dificuldades?** Consulte a [Documentação Oficial do Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project).
+> **Ainda com dificuldades?** Consulte a [Documentação Oficial do Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
 
 ## Passo 2: Criar o Seu Codespace
 
@@ -86,7 +86,7 @@ Quando o seu Codespace estiver pronto, configure as credenciais do Azure OpenAI:
 
 1. **Navegue até ao projeto de exemplo a partir da raiz do repositório:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Crie o seu ficheiro .env:**
@@ -104,7 +104,7 @@ Quando o seu Codespace estiver pronto, configure as credenciais do Azure OpenAI:
    ```
 
    > **Nota de Segurança**: 
-   > - Nunca faça commit do ficheiro `.env` no controlo de versões
+   > - Nunca faça commit do seu ficheiro `.env` no controlo de versões
    > - O ficheiro `.env` já está incluído no `.gitignore`
    > - Mantenha as suas chaves API seguras e rode-as regularmente
 
@@ -118,9 +118,9 @@ mvn clean spring-boot:run
 
 Deverá ver uma resposta do modelo GPT-4o-mini!
 
-> **Utilizadores do VS Code**: Também pode pressionar `F5` no VS Code para executar a aplicação. A configuração de lançamento já está preparada para carregar automaticamente o ficheiro `.env`.
+> **Utilizadores do VS Code**: Também pode pressionar `F5` no VS Code para executar a aplicação. A configuração de lançamento já está preparada para carregar automaticamente o seu ficheiro `.env`.
 
-> **Exemplo completo**: Consulte o [Exemplo Completo do Azure OpenAI](./src/basic-chat-azure/README.md) para instruções detalhadas e resolução de problemas.
+> **Exemplo completo**: Consulte o [Exemplo Completo do Azure OpenAI](./examples/basic-chat-azure/README.md) para instruções detalhadas e resolução de problemas.
 
 ## O Que Vem a Seguir?
 
@@ -139,9 +139,9 @@ Deverá ver uma resposta do modelo GPT-4o-mini!
 
 ## Recursos Adicionais
 
-- [Descarregar o VS Code](https://code.visualstudio.com/Download)
-- [Obter o Docker Desktop](https://www.docker.com/products/docker-desktop)
+- [Descarregar VS Code](https://code.visualstudio.com/Download)
+- [Obter Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Configuração do Container de Desenvolvimento](../../../.devcontainer/devcontainer.json)
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

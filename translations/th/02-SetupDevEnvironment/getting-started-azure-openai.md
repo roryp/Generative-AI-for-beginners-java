@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T19:33:58+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:11:32+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "th"
 }
@@ -22,7 +22,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [ขั้นตอนที่ 2: สร้าง Codespace ของคุณ](../../../02-SetupDevEnvironment)
 - [ขั้นตอนที่ 3: กำหนดค่าสภาพแวดล้อมของคุณ](../../../02-SetupDevEnvironment)
 - [ขั้นตอนที่ 4: ทดสอบการตั้งค่าของคุณ](../../../02-SetupDevEnvironment)
-- [ขั้นตอนถัดไป](../../../02-SetupDevEnvironment)
+- [ขั้นตอนต่อไป](../../../02-SetupDevEnvironment)
 - [แหล่งข้อมูล](../../../02-SetupDevEnvironment)
 - [แหล่งข้อมูลเพิ่มเติม](../../../02-SetupDevEnvironment)
 
@@ -86,10 +86,10 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. **ไปที่โปรเจกต์ตัวอย่างจาก root ของ repository:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
-2. **สร้างไฟล์ .env ของคุณ:**
+2. **สร้างไฟล์ .env:**
    ```bash
    cp .env.example .env
    ```
@@ -104,8 +104,8 @@ CO_OP_TRANSLATOR_METADATA:
    ```
 
    > **หมายเหตุด้านความปลอดภัย**: 
-   > - ห้าม commit ไฟล์ `.env` ของคุณไปยังระบบควบคุมเวอร์ชัน
-   > - ไฟล์ `.env` ได้ถูกรวมไว้ใน `.gitignore` แล้ว
+   > - ห้าม commit ไฟล์ `.env` ของคุณไปยัง version control
+   > - ไฟล์ `.env` ได้รับการเพิ่มไว้ใน `.gitignore` แล้ว
    > - เก็บ API keys ของคุณให้ปลอดภัยและหมุนเวียนเป็นประจำ
 
 ## ขั้นตอนที่ 4: ทดสอบการตั้งค่าของคุณ
@@ -120,9 +120,9 @@ mvn clean spring-boot:run
 
 > **ผู้ใช้ VS Code**: คุณสามารถกด `F5` ใน VS Code เพื่อรันแอปพลิเคชันได้ การตั้งค่า launch configuration ได้ถูกกำหนดไว้แล้วให้โหลดไฟล์ `.env` ของคุณโดยอัตโนมัติ
 
-> **ตัวอย่างเต็ม**: ดู [ตัวอย่าง Azure OpenAI แบบ End-to-End](./src/basic-chat-azure/README.md) สำหรับคำแนะนำและการแก้ไขปัญหาโดยละเอียด
+> **ตัวอย่างเต็มรูปแบบ**: ดู [ตัวอย่าง Azure OpenAI แบบ End-to-End](./examples/basic-chat-azure/README.md) สำหรับคำแนะนำและการแก้ไขปัญหาโดยละเอียด
 
-## ขั้นตอนถัดไป
+## ขั้นตอนต่อไป
 
 **การตั้งค่าเสร็จสมบูรณ์!** ตอนนี้คุณมี:
 - Azure OpenAI พร้อม gpt-4o-mini ที่ปรับใช้แล้ว
@@ -144,4 +144,4 @@ mvn clean spring-boot:run
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราจะไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้

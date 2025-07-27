@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T19:37:19+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:20:07+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "ms"
 }
 -->
 # Menyediakan Persekitaran Pembangunan untuk Azure OpenAI
 
-> **Permulaan Pantas**: Panduan ini adalah untuk persediaan Azure OpenAI. Untuk memulakan dengan model percuma, gunakan [GitHub Models dengan Codespaces](./README.md#quick-start-cloud).
+> **Permulaan Pantas**: Panduan ini adalah untuk persediaan Azure OpenAI. Untuk memulakan dengan model percuma, gunakan [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
 Panduan ini akan membantu anda menyediakan model Azure AI Foundry untuk aplikasi Java AI dalam kursus ini.
 
@@ -65,7 +65,7 @@ Panduan ini akan membantu anda menyediakan model Azure AI Foundry untuk aplikasi
    - **Nama Pelaksanaan** (contohnya, "gpt-4o-mini")
    - **Target URI** (contohnya, `https://your-hub-name.openai.azure.com/`) 
       > **Penting**: Salin hanya URL asas (contohnya, `https://myhub.openai.azure.com/`) bukan laluan penuh endpoint.
-   - **Key** (dari bahagian Keys dan Endpoint)
+   - **Key** (dari bahagian Keys and Endpoint)
 
 > **Masih menghadapi masalah?** Lawati [Dokumentasi Rasmi Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
 
@@ -75,18 +75,18 @@ Panduan ini akan membantu anda menyediakan model Azure AI Foundry untuk aplikasi
    > **Nota**: Jika anda ingin mengedit konfigurasi asas sila lihat [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Dalam repositori yang telah di-fork, klik **Code** → tab **Codespaces**
 3. Klik **...** → **New with options...**
-![mencipta codespace dengan pilihan](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ms.png)
+![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ms.png)
 4. Pilih **Konfigurasi kontena pembangunan**: 
-   - **Persekitaran Pembangunan Generative AI Java**
+   - **Generative AI Java Development Environment**
 5. Klik **Create codespace**
 
 ## Langkah 3: Konfigurasi Persekitaran Anda
 
-Setelah Codespace anda sedia, sediakan kelayakan Azure OpenAI anda:
+Setelah Codespace anda sedia, tetapkan kelayakan Azure OpenAI anda:
 
 1. **Navigasi ke projek contoh dari akar repositori:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Cipta fail .env anda:**
@@ -120,12 +120,12 @@ Anda sepatutnya melihat respons daripada model GPT-4o-mini!
 
 > **Pengguna VS Code**: Anda juga boleh tekan `F5` dalam VS Code untuk menjalankan aplikasi. Konfigurasi pelancaran telah disediakan untuk memuatkan fail `.env` anda secara automatik.
 
-> **Contoh penuh**: Lihat [Contoh Azure OpenAI End-to-End](./src/basic-chat-azure/README.md) untuk arahan dan penyelesaian masalah yang lebih terperinci.
+> **Contoh penuh**: Lihat [Contoh Azure OpenAI End-to-End](./examples/basic-chat-azure/README.md) untuk arahan terperinci dan penyelesaian masalah.
 
 ## Apa Seterusnya?
 
 **Persediaan Selesai!** Anda kini mempunyai:
-- Azure OpenAI dengan gpt-4o-mini dilaksanakan
+- Azure OpenAI dengan gpt-4o-mini yang telah dilaksanakan
 - Konfigurasi fail .env tempatan
 - Persekitaran pembangunan Java yang sedia
 

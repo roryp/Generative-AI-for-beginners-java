@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T21:04:17+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:24:54+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "sk"
 }
 -->
 # Nastavenie vývojového prostredia pre Azure OpenAI
 
-> **Rýchly štart**: Táto príručka je určená na nastavenie Azure OpenAI. Ak chcete začať okamžite s bezplatnými modelmi, použite [GitHub Models with Codespaces](./README.md#quick-start-cloud).
+> **Rýchly štart**: Táto príručka je určená na nastavenie Azure OpenAI. Ak chcete okamžite začať s bezplatnými modelmi, použite [GitHub Models with Codespaces](./README.md#quick-start-cloud).
 
 Táto príručka vám pomôže nastaviť modely Azure AI Foundry pre vaše Java AI aplikácie v tomto kurze.
 
 ## Obsah
 
-- [Prehľad rýchleho nastavenia](../../../02-SetupDevEnvironment)
+- [Rýchly prehľad nastavenia](../../../02-SetupDevEnvironment)
 - [Krok 1: Vytvorenie zdrojov Azure AI Foundry](../../../02-SetupDevEnvironment)
-  - [Vytvorenie hubu a projektu](../../../02-SetupDevEnvironment)
+  - [Vytvorenie Hubu a Projektu](../../../02-SetupDevEnvironment)
   - [Nasadenie modelu GPT-4o-mini](../../../02-SetupDevEnvironment)
 - [Krok 2: Vytvorenie Codespace](../../../02-SetupDevEnvironment)
 - [Krok 3: Konfigurácia prostredia](../../../02-SetupDevEnvironment)
@@ -26,16 +26,16 @@ Táto príručka vám pomôže nastaviť modely Azure AI Foundry pre vaše Java 
 - [Zdroje](../../../02-SetupDevEnvironment)
 - [Ďalšie zdroje](../../../02-SetupDevEnvironment)
 
-## Prehľad rýchleho nastavenia
+## Rýchly prehľad nastavenia
 
 1. Vytvorte zdroje Azure AI Foundry (Hub, Projekt, Model)
 2. Vytvorte Codespace s Java vývojovým kontajnerom
-3. Nakonfigurujte svoj `.env` súbor s povereniami Azure OpenAI
-4. Otestujte svoje nastavenie pomocou ukážkového projektu
+3. Nakonfigurujte svoj súbor .env s povereniami Azure OpenAI
+4. Otestujte svoje nastavenie s ukážkovým projektom
 
 ## Krok 1: Vytvorenie zdrojov Azure AI Foundry
 
-### Vytvorenie hubu a projektu
+### Vytvorenie Hubu a Projektu
 
 1. Prejdite na [Azure AI Foundry Portal](https://ai.azure.com/) a prihláste sa
 2. Kliknite na **+ Create** → **New hub** (alebo prejdite na **Management** → **All hubs** → **+ New hub**)
@@ -53,18 +53,18 @@ Táto príručka vám pomôže nastaviť modely Azure AI Foundry pre vaše Java 
 
 ### Nasadenie modelu GPT-4o-mini
 
-1. Vo vašom projekte prejdite na **Model catalog** a vyhľadajte **gpt-4o-mini**
+1. Vo svojom projekte prejdite na **Model catalog** a vyhľadajte **gpt-4o-mini**
    - *Alternatíva: Prejdite na **Deployments** → **+ Create deployment***
 2. Kliknite na **Deploy** na karte modelu gpt-4o-mini
 3. Nakonfigurujte nasadenie:
    - **Názov nasadenia**: "gpt-4o-mini"
    - **Verzia modelu**: Použite najnovšiu
-   - **Typ nasadenia**: Štandardné
+   - **Typ nasadenia**: Štandardný
 4. Kliknite na **Deploy**
 5. Po nasadení prejdite na kartu **Deployments** a skopírujte tieto hodnoty:
    - **Názov nasadenia** (napr. "gpt-4o-mini")
    - **Cieľová URI** (napr. `https://your-hub-name.openai.azure.com/`) 
-      > **Dôležité**: Skopírujte iba základnú URL adresu (napr. `https://myhub.openai.azure.com/`), nie celú cestu k endpointu.
+      > **Dôležité**: Skopírujte iba základnú URL (napr. `https://myhub.openai.azure.com/`), nie celú cestu k endpointu.
    - **Kľúč** (z časti Keys and Endpoint)
 
 > **Stále máte problémy?** Navštívte oficiálnu [dokumentáciu Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
@@ -73,10 +73,10 @@ Táto príručka vám pomôže nastaviť modely Azure AI Foundry pre vaše Java 
 
 1. Forknite toto úložisko do svojho GitHub účtu
    > **Poznámka**: Ak chcete upraviť základnú konfiguráciu, pozrite si [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
-2. Vo vašom forknutom úložisku kliknite na **Code** → kartu **Codespaces**
+2. Vo svojom forknutom úložisku kliknite na **Code** → kartu **Codespaces**
 3. Kliknite na **...** → **New with options...**
 ![vytváranie codespace s možnosťami](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.sk.png)
-4. Vyberte **Konfiguráciu vývojového kontajnera**: 
+4. Vyberte **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Kliknite na **Create codespace**
 
@@ -84,17 +84,17 @@ Táto príručka vám pomôže nastaviť modely Azure AI Foundry pre vaše Java 
 
 Keď je váš Codespace pripravený, nastavte svoje poverenia Azure OpenAI:
 
-1. **Prejdite do ukážkového projektu z koreňa úložiska:**
+1. **Prejdite na ukážkový projekt z koreňa úložiska:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
-2. **Vytvorte svoj `.env` súbor:**
+2. **Vytvorte svoj súbor .env:**
    ```bash
    cp .env.example .env
    ```
 
-3. **Upravte `.env` súbor s vašimi povereniami Azure OpenAI:**
+3. **Upravte súbor .env so svojimi povereniami Azure OpenAI:**
    ```bash
    # Your Azure OpenAI API key (from Azure AI Foundry portal)
    AZURE_AI_KEY=your-actual-api-key-here
@@ -104,8 +104,8 @@ Keď je váš Codespace pripravený, nastavte svoje poverenia Azure OpenAI:
    ```
 
    > **Bezpečnostná poznámka**: 
-   > - Nikdy nekomitujte svoj `.env` súbor do verzionovacieho systému
-   > - `.env` súbor je už zahrnutý v `.gitignore`
+   > - Nikdy neukladajte svoj `.env` súbor do verzionovacieho systému
+   > - Súbor `.env` je už zahrnutý v `.gitignore`
    > - Uchovávajte svoje API kľúče v bezpečí a pravidelne ich rotujte
 
 ## Krok 4: Testovanie nastavenia
@@ -118,15 +118,15 @@ mvn clean spring-boot:run
 
 Mali by ste vidieť odpoveď od modelu GPT-4o-mini!
 
-> **Používatelia VS Code**: Môžete tiež stlačiť `F5` vo VS Code na spustenie aplikácie. Konfigurácia spustenia je už nastavená na automatické načítanie vášho `.env` súboru.
+> **Používatelia VS Code**: Môžete tiež stlačiť `F5` vo VS Code na spustenie aplikácie. Konfigurácia spustenia je už nastavená na automatické načítanie vášho súboru `.env`.
 
-> **Kompletný príklad**: Pozrite si [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) pre podrobné pokyny a riešenie problémov.
+> **Kompletný príklad**: Pozrite si [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) pre podrobné pokyny a riešenie problémov.
 
 ## Čo ďalej?
 
 **Nastavenie dokončené!** Teraz máte:
 - Azure OpenAI s nasadeným gpt-4o-mini
-- Lokálnu konfiguráciu `.env` súboru
+- Lokálnu konfiguráciu súboru .env
 - Pripravené vývojové prostredie pre Javu
 
 **Pokračujte na** [Kapitolu 3: Základné techniky generatívnej AI](../03-CoreGenerativeAITechniques/README.md) a začnite budovať AI aplikácie!
@@ -141,7 +141,7 @@ Mali by ste vidieť odpoveď od modelu GPT-4o-mini!
 
 - [Stiahnite si VS Code](https://code.visualstudio.com/Download)
 - [Získajte Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [Konfigurácia vývojového kontajnera](../../../.devcontainer/devcontainer.json)
+- [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
-**Zrieknutie sa zodpovednosti**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Upozornenie**:  
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

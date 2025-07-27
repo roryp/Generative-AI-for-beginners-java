@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T12:13:51+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T13:05:57+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "br"
 }
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Introdução](../../../02-SetupDevEnvironment)
 - [Passo 1: Configure Seu Ambiente de Desenvolvimento](../../../02-SetupDevEnvironment)
   - [Opção A: GitHub Codespaces (Recomendado)](../../../02-SetupDevEnvironment)
-  - [Opção B: Contêiner Local de Desenvolvimento](../../../02-SetupDevEnvironment)
+  - [Opção B: Contêiner Local](../../../02-SetupDevEnvironment)
   - [Opção C: Usar Sua Instalação Local Existente](../../../02-SetupDevEnvironment)
 - [Passo 2: Crie um Token de Acesso Pessoal do GitHub](../../../02-SetupDevEnvironment)
 - [Passo 3: Teste Sua Configuração](../../../02-SetupDevEnvironment)
@@ -76,9 +76,9 @@ Criamos um contêiner de desenvolvimento pré-configurado para minimizar o tempo
 
 <img src="./images/codespaces.png" alt="Captura de tela: submenu Codespaces" width="50%">
 
-<img src="./images/image.png" alt="Captura de tela: Novo com opções" width="50%">
+<img src="./images/image.png" alt="Captura de tela: New with options" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Captura de tela: opções de criação de Codespace" width="50%">
+<img src="./images/codespaces-create.png" alt="Captura de tela: opções de criação de codespace" width="50%">
 
 > **Benefícios do Codespaces**:
 > - Sem necessidade de instalação local
@@ -87,13 +87,13 @@ Criamos um contêiner de desenvolvimento pré-configurado para minimizar o tempo
 > - 60 horas gratuitas por mês para contas pessoais
 > - Ambiente consistente para todos os alunos
 
-#### Opção B: Contêiner Local de Desenvolvimento
+#### Opção B: Contêiner Local
 
 **Para desenvolvedores que preferem desenvolvimento local com Docker**
 
 1. Faça um fork e clone este repositório para sua máquina local
    > **Nota**: Se você quiser editar a configuração básica, veja a [Configuração do Contêiner de Desenvolvimento](../../../.devcontainer/devcontainer.json)
-2. Instale o [Docker Desktop](https://www.docker.com/products/docker-desktop/) e o [VS Code](https://code.visualstudio.com/)
+2. Instale [Docker Desktop](https://www.docker.com/products/docker-desktop/) e [VS Code](https://code.visualstudio.com/)
 3. Instale a extensão [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) no VS Code
 4. Abra a pasta do repositório no VS Code
 5. Quando solicitado, clique em **Reopen in Container** (ou use `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
@@ -113,12 +113,12 @@ Pré-requisitos:
 - [Maven 3.9+](https://maven.apache.org/download.cgi)
 - [VS Code](https://code.visualstudio.com) ou seu IDE preferido
 
-Etapas:
+Passos:
 1. Clone este repositório para sua máquina local
 2. Abra o projeto no seu IDE
 3. Prossiga para [Passo 2: Crie o Token do GitHub](../../../02-SetupDevEnvironment)
 
-> **Dica Pro**: Se você tem uma máquina com especificações baixas, mas quer usar o VS Code localmente, utilize o GitHub Codespaces! Você pode conectar seu VS Code local a um Codespace hospedado na nuvem para ter o melhor dos dois mundos.
+> **Dica Pro**: Se você tem uma máquina com especificações baixas, mas quer usar o VS Code localmente, utilize o GitHub Codespaces! Você pode conectar seu VS Code local a um Codespace hospedado na nuvem para o melhor dos dois mundos.
 
 <img src="./images/image-2.png" alt="Captura de tela: instância local do contêiner de desenvolvimento criada" width="50%">
 
@@ -128,7 +128,7 @@ Etapas:
 2. Na barra lateral esquerda, clique em **Developer settings** (geralmente no final).
 3. Em **Personal access tokens**, clique em **Fine-grained tokens** (ou siga este [link direto](https://github.com/settings/personal-access-tokens)).
 4. Clique em **Generate new token**.
-5. Em "Token name", forneça um nome descritivo (ex.: `GenAI-Java-Course-Token`).
+5. Em "Token name", forneça um nome descritivo (ex.: `Token-Curso-GenAI-Java`).
 6. Defina uma data de expiração (recomendado: 7 dias para melhores práticas de segurança).
 7. Em "Resource owner", selecione sua conta de usuário.
 8. Em "Repository access", selecione os repositórios que você deseja usar com os Modelos do GitHub (ou "All repositories", se necessário).
@@ -140,12 +140,12 @@ Etapas:
 
 ## Passo 3: Teste Sua Configuração com o Exemplo dos Modelos do GitHub
 
-Depois que seu ambiente de desenvolvimento estiver pronto, vamos testar a integração dos Modelos do GitHub com nosso aplicativo de exemplo em [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Depois que seu ambiente de desenvolvimento estiver pronto, vamos testar a integração dos Modelos do GitHub com nosso aplicativo de exemplo em [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Abra o terminal no seu ambiente de desenvolvimento.
 2. Navegue até o exemplo dos Modelos do GitHub:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Defina seu token do GitHub como uma variável de ambiente:
    ```bash
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Entendendo o Código de Exemplo
 
-Primeiro, vamos entender o que acabamos de executar. O exemplo em `src/github-models` usa o SDK Java do OpenAI para conectar-se aos Modelos do GitHub:
+Primeiro, vamos entender o que acabamos de executar. O exemplo em `examples/github-models` utiliza o SDK Java do OpenAI para conectar-se aos Modelos do GitHub:
 
 **O que este código faz:**
 - **Conecta-se** aos Modelos do GitHub usando seu token de acesso pessoal
@@ -229,8 +229,8 @@ Está enfrentando problemas? Aqui estão problemas comuns e soluções:
 
 - **Token não funciona?** 
   - Certifique-se de copiar o token inteiro sem espaços extras
-  - Verifique se o token está configurado corretamente como uma variável de ambiente
-  - Confirme que seu token tem as permissões corretas (Models: Read and write)
+  - Verifique se o token foi definido corretamente como uma variável de ambiente
+  - Confirme que seu token possui as permissões corretas (Models: Read and write)
 
 - **Maven não encontrado?** 
   - Se estiver usando contêineres de desenvolvimento/Codespaces, o Maven deve estar pré-instalado
@@ -247,7 +247,7 @@ Está enfrentando problemas? Aqui estão problemas comuns e soluções:
   - Tente reconstruir o contêiner: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Erros de compilação do aplicativo?**
-  - Certifique-se de estar no diretório correto: `02-SetupDevEnvironment/src/github-models`
+  - Certifique-se de estar no diretório correto: `02-SetupDevEnvironment/examples/github-models`
   - Tente limpar e reconstruir: `mvn clean compile`
 
 > **Precisa de ajuda?**: Ainda enfrentando problemas? Abra uma issue no repositório e nós ajudaremos você.

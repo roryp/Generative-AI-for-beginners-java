@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T16:21:45+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T12:57:32+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "tw"
 }
@@ -20,8 +20,8 @@ CO_OP_TRANSLATOR_METADATA:
   - [創建 Hub 和 Project](../../../02-SetupDevEnvironment)
   - [部署 GPT-4o-mini 模型](../../../02-SetupDevEnvironment)
 - [步驟 2：創建 Codespace](../../../02-SetupDevEnvironment)
-- [步驟 3：配置您的環境](../../../02-SetupDevEnvironment)
-- [步驟 4：測試您的設置](../../../02-SetupDevEnvironment)
+- [步驟 3：配置環境](../../../02-SetupDevEnvironment)
+- [步驟 4：測試設置](../../../02-SetupDevEnvironment)
 - [下一步是什麼？](../../../02-SetupDevEnvironment)
 - [資源](../../../02-SetupDevEnvironment)
 - [其他資源](../../../02-SetupDevEnvironment)
@@ -30,8 +30,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. 創建 Azure AI Foundry 資源（Hub、Project、Model）
 2. 使用 Java 開發容器創建 Codespace
-3. 使用 Azure OpenAI 憑據配置您的 .env 文件
-4. 使用示例項目測試您的設置
+3. 使用 Azure OpenAI 憑證配置 `.env` 文件
+4. 使用示例項目測試設置
 
 ## 步驟 1：創建 Azure AI Foundry 資源
 
@@ -44,8 +44,8 @@ CO_OP_TRANSLATOR_METADATA:
    - **訂閱**：選擇您的 Azure 訂閱
    - **資源組**：創建新的或選擇現有的
    - **位置**：選擇離您最近的地點
-   - **存儲帳戶**：使用默認或配置自定義
-   - **密鑰保管庫**：使用默認或配置自定義
+   - **存儲帳戶**：使用默認或自定義配置
+   - **密鑰保管庫**：使用默認或自定義配置
    - 點擊 **Next** → **Review + create** → **Create**
 4. 創建完成後，點擊 **+ New project**（或從 Hub 概覽中點擊 **Create project**）
    - **Project 名稱**：例如 "GenAIJava"
@@ -64,10 +64,10 @@ CO_OP_TRANSLATOR_METADATA:
 5. 部署完成後，前往 **Deployments** 標籤並複製以下值：
    - **部署名稱**（例如 "gpt-4o-mini"）
    - **目標 URI**（例如 `https://your-hub-name.openai.azure.com/`）  
-      > **重要**：僅複製基礎 URL（例如 `https://myhub.openai.azure.com/`），不要複製完整的端點路徑。
+      > **重要**：僅複製基礎 URL（例如 `https://myhub.openai.azure.com/`），不要包含完整的端點路徑。
    - **密鑰**（從 Keys and Endpoint 部分獲取）
 
-> **仍有疑問？** 請訪問官方 [Azure AI Foundry Documentation](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
+> **仍有疑問？** 請參考官方 [Azure AI Foundry Documentation](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
 
 ## 步驟 2：創建 Codespace
 
@@ -80,21 +80,21 @@ CO_OP_TRANSLATOR_METADATA:
    - **Generative AI Java Development Environment**
 5. 點擊 **Create codespace**
 
-## 步驟 3：配置您的環境
+## 步驟 3：配置環境
 
-當您的 Codespace 準備好後，設置您的 Azure OpenAI 憑據：
+當您的 Codespace 準備好後，設置您的 Azure OpenAI 憑證：
 
 1. **從存儲庫根目錄導航到示例項目：**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
-2. **創建您的 .env 文件：**
+2. **創建 `.env` 文件：**
    ```bash
    cp .env.example .env
    ```
 
-3. **使用您的 Azure OpenAI 憑據編輯 .env 文件：**
+3. **使用您的 Azure OpenAI 憑證編輯 `.env` 文件：**
    ```bash
    # Your Azure OpenAI API key (from Azure AI Foundry portal)
    AZURE_AI_KEY=your-actual-api-key-here
@@ -106,9 +106,9 @@ CO_OP_TRANSLATOR_METADATA:
    > **安全提示**： 
    > - 切勿將 `.env` 文件提交到版本控制
    > - `.env` 文件已包含在 `.gitignore` 中
-   > - 保持您的 API 密鑰安全並定期更換
+   > - 保護您的 API 密鑰並定期更換
 
-## 步驟 4：測試您的設置
+## 步驟 4：測試設置
 
 運行示例應用程序以測試您的 Azure OpenAI 連接：
 
@@ -120,16 +120,16 @@ mvn clean spring-boot:run
 
 > **VS Code 使用者**：您也可以在 VS Code 中按 `F5` 運行應用程序。啟動配置已設置為自動加載您的 `.env` 文件。
 
-> **完整示例**：請參考 [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) 以獲取詳細指導和故障排除。
+> **完整示例**：請參考 [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) 獲取詳細指導和故障排除。
 
 ## 下一步是什麼？
 
 **設置完成！** 您現在擁有：
 - 部署了 gpt-4o-mini 的 Azure OpenAI
-- 本地 .env 文件配置
+- 本地 `.env` 文件配置
 - 準備好的 Java 開發環境
 
-**繼續前往** [第 3 章：核心生成式 AI 技術](../03-CoreGenerativeAITechniques/README.md) 開始構建 AI 應用程序！
+**繼續前往** [第 3 章：核心生成式 AI 技術](../03-CoreGenerativeAITechniques/README.md) 開始構建 AI 應用！
 
 ## 資源
 
@@ -144,4 +144,4 @@ mvn clean spring-boot:run
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **免責聲明**：  
-本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。
+本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或錯誤解釋不承擔責任。

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T11:52:16+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T12:47:53+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "fr"
 }
@@ -67,8 +67,8 @@ Nous avons créé un conteneur de développement préconfiguré pour minimiser l
 **Commencez à coder en 2 minutes - aucune configuration locale requise !**
 
 1. Forkez ce dépôt sur votre compte GitHub
-   > **Note** : Si vous souhaitez modifier la configuration de base, consultez le [Fichier de configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
-2. Cliquez sur **Code** → Onglet **Codespaces** → **...** → **Nouveau avec options...**
+   > **Note** : Si vous souhaitez modifier la configuration de base, consultez la [Configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
+2. Cliquez sur **Code** → onglet **Codespaces** → **...** → **Nouveau avec options...**
 3. Utilisez les paramètres par défaut – cela sélectionnera la **Configuration du conteneur de développement** : **Environnement de développement Java pour l'IA générative** créé sur mesure pour ce cours
 4. Cliquez sur **Créer un codespace**
 5. Attendez ~2 minutes que l'environnement soit prêt
@@ -82,7 +82,7 @@ Nous avons créé un conteneur de développement préconfiguré pour minimiser l
 
 > **Avantages de Codespaces** :
 > - Aucune installation locale requise
-> - Fonctionne sur n'importe quel appareil avec un navigateur
+> - Fonctionne sur tout appareil avec un navigateur
 > - Préconfiguré avec tous les outils et dépendances
 > - Gratuit 60 heures par mois pour les comptes personnels
 > - Environnement cohérent pour tous les apprenants
@@ -92,7 +92,7 @@ Nous avons créé un conteneur de développement préconfiguré pour minimiser l
 **Pour les développeurs qui préfèrent le développement local avec Docker**
 
 1. Forkez et clonez ce dépôt sur votre machine locale
-   > **Note** : Si vous souhaitez modifier la configuration de base, consultez le [Fichier de configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
+   > **Note** : Si vous souhaitez modifier la configuration de base, consultez la [Configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
 2. Installez [Docker Desktop](https://www.docker.com/products/docker-desktop/) et [VS Code](https://code.visualstudio.com/)
 3. Installez l'extension [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) dans VS Code
 4. Ouvrez le dossier du dépôt dans VS Code
@@ -118,7 +118,7 @@ Prérequis :
 2. Ouvrez le projet dans votre IDE
 3. Passez à [Étape 2 : Créez un jeton GitHub](../../../02-SetupDevEnvironment)
 
-> **Astuce Pro** : Si vous avez une machine peu performante mais souhaitez utiliser VS Code localement, utilisez GitHub Codespaces ! Vous pouvez connecter votre VS Code local à un Codespace hébergé dans le cloud pour profiter des avantages des deux mondes.
+> **Astuce pro** : Si vous avez une machine peu performante mais souhaitez utiliser VS Code localement, utilisez GitHub Codespaces ! Vous pouvez connecter votre VS Code local à un Codespace hébergé dans le cloud pour profiter des avantages des deux mondes.
 
 <img src="./images/image-2.png" alt="Capture d'écran : instance locale du conteneur de développement créée" width="50%">
 
@@ -140,12 +140,12 @@ Prérequis :
 
 ## Étape 3 : Testez votre configuration avec l'exemple des modèles GitHub
 
-Une fois votre environnement de développement prêt, testons l'intégration des modèles GitHub avec notre application exemple dans [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Une fois votre environnement de développement prêt, testons l'intégration des modèles GitHub avec notre application exemple dans [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Ouvrez le terminal dans votre environnement de développement.
 2. Accédez à l'exemple des modèles GitHub :
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Définissez votre jeton GitHub comme variable d'environnement :
    ```bash
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Comprendre le code de l'exemple
 
-Tout d'abord, comprenons ce que nous venons d'exécuter. L'exemple sous `src/github-models` utilise le SDK Java OpenAI pour se connecter aux modèles GitHub :
+Voyons ce que nous venons d'exécuter. L'exemple sous `examples/github-models` utilise le SDK Java OpenAI pour se connecter aux modèles GitHub :
 
 **Ce que fait ce code :**
 - **Se connecte** aux modèles GitHub en utilisant votre jeton d'accès personnel
@@ -247,7 +247,7 @@ Vous rencontrez des problèmes ? Voici les problèmes courants et leurs solution
   - Essayez de reconstruire le conteneur : `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Erreurs de compilation de l'application ?**
-  - Assurez-vous d'être dans le bon répertoire : `02-SetupDevEnvironment/src/github-models`
+  - Assurez-vous d'être dans le bon répertoire : `02-SetupDevEnvironment/examples/github-models`
   - Essayez de nettoyer et de reconstruire : `mvn clean compile`
 
 > **Besoin d'aide ?** : Vous avez encore des problèmes ? Ouvrez une issue dans le dépôt et nous vous aiderons.

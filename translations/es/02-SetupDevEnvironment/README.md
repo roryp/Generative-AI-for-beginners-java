@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "40abf4889418bff189039ac30ff44281",
-  "translation_date": "2025-07-23T11:53:13+00:00",
+  "original_hash": "c670445516e119888d8aaaa207bbee34",
+  "translation_date": "2025-07-27T12:48:37+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "es"
 }
@@ -64,12 +64,12 @@ Hemos creado un contenedor de desarrollo preconfigurado para minimizar el tiempo
 
 #### Opción A: GitHub Codespaces (Recomendado)
 
-**¡Comienza a programar en 2 minutos - sin configuración local!**
+**¡Comienza a programar en 2 minutos, sin necesidad de configuración local!**
 
 1. Haz un fork de este repositorio en tu cuenta de GitHub  
    > **Nota**: Si deseas editar la configuración básica, consulta la [Configuración del Contenedor de Desarrollo](../../../.devcontainer/devcontainer.json)
 2. Haz clic en **Code** → pestaña **Codespaces** → **...** → **New with options...**
-3. Usa los valores predeterminados – esto seleccionará la **Configuración del contenedor de desarrollo**: **Entorno de Desarrollo Generative AI Java** creado para este curso
+3. Usa los valores predeterminados: esto seleccionará la **Configuración del contenedor de desarrollo**: **Entorno de Desarrollo Generative AI Java** creado específicamente para este curso
 4. Haz clic en **Create codespace**
 5. Espera ~2 minutos para que el entorno esté listo
 6. Continúa con [Paso 2: Crea un Token de GitHub](../../../02-SetupDevEnvironment)
@@ -118,7 +118,7 @@ Pasos:
 2. Abre el proyecto en tu IDE
 3. Continúa con [Paso 2: Crea un Token de GitHub](../../../02-SetupDevEnvironment)
 
-> **Consejo Pro**: Si tienes una máquina con pocos recursos pero quieres usar VS Code localmente, ¡usa GitHub Codespaces! Puedes conectar tu VS Code local a un Codespace alojado en la nube para lo mejor de ambos mundos.
+> **Consejo Pro**: Si tienes una máquina con pocos recursos pero quieres usar VS Code localmente, ¡usa GitHub Codespaces! Puedes conectar tu VS Code local a un Codespace alojado en la nube para obtener lo mejor de ambos mundos.
 
 <img src="./images/image-2.png" alt="Captura de pantalla: Instancia local del contenedor de desarrollo creada" width="50%">
 
@@ -140,12 +140,12 @@ Pasos:
 
 ## Paso 3: Prueba Tu Configuración con el Ejemplo de GitHub Models
 
-Una vez que tu entorno de desarrollo esté listo, probemos la integración con GitHub Models usando nuestra aplicación de ejemplo en [`02-SetupDevEnvironment/src/github-models`](../../../02-SetupDevEnvironment/src/github-models).
+Una vez que tu entorno de desarrollo esté listo, probemos la integración con GitHub Models usando nuestra aplicación de ejemplo en [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Abre la terminal en tu entorno de desarrollo.
 2. Navega al ejemplo de GitHub Models:
    ```bash
-   cd 02-SetupDevEnvironment/src/github-models
+   cd 02-SetupDevEnvironment/examples/github-models
    ```
 3. Configura tu token de GitHub como una variable de entorno:
    ```bash
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Entendiendo el Código de Ejemplo
 
-Primero, entendamos lo que acabamos de ejecutar. El ejemplo bajo `src/github-models` usa el SDK de OpenAI para Java para conectarse a GitHub Models:
+Primero, entendamos lo que acabamos de ejecutar. El ejemplo bajo `examples/github-models` usa el SDK de OpenAI para Java para conectarse a GitHub Models:
 
 **Qué hace este código:**
 - **Se conecta** a GitHub Models usando tu token de acceso personal
@@ -247,10 +247,10 @@ System.out.println("Response: " + response.choices().get(0).message().content().
   - Intenta reconstruir el contenedor: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **¿Errores de compilación de la aplicación?**
-  - Asegúrate de estar en el directorio correcto: `02-SetupDevEnvironment/src/github-models`
+  - Asegúrate de estar en el directorio correcto: `02-SetupDevEnvironment/examples/github-models`
   - Intenta limpiar y reconstruir: `mvn clean compile`
 
 > **¿Necesitas ayuda?**: ¿Sigues teniendo problemas? Abre un issue en el repositorio y te ayudaremos.
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de ningún malentendido o interpretación errónea que surja del uso de esta traducción.

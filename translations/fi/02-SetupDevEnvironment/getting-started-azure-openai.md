@@ -1,27 +1,27 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T19:35:30+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:15:22+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "fi"
 }
 -->
-# Azure OpenAI - Kehitysympäristön asennus
+# Kehitysympäristön asennus Azure OpenAI:lle
 
-> **Pika-aloitus**: Tämä opas on tarkoitettu Azure OpenAI -asennukseen. Jos haluat aloittaa heti ilmaisilla malleilla, käytä [GitHub Models with Codespaces](./README.md#quick-start-cloud).
+> **Pika-aloitus**: Tämä opas on tarkoitettu Azure OpenAI -asennukseen. Jos haluat aloittaa nopeasti ilmaisilla malleilla, käytä [GitHub-malleja Codespacesin kanssa](./README.md#quick-start-cloud).
 
-Tämä opas auttaa sinua asentamaan Azure AI Foundry -mallit Java-pohjaisia tekoälysovelluksia varten tässä kurssissa.
+Tämä opas auttaa sinua asentamaan Azure AI Foundry -mallit Java AI -sovelluksiasi varten tässä kurssissa.
 
 ## Sisällysluettelo
 
 - [Pika-asennuksen yleiskatsaus](../../../02-SetupDevEnvironment)
 - [Vaihe 1: Luo Azure AI Foundry -resurssit](../../../02-SetupDevEnvironment)
   - [Luo Hub ja Projekti](../../../02-SetupDevEnvironment)
-  - [Ota GPT-4o-mini-malli käyttöön](../../../02-SetupDevEnvironment)
+  - [Ota käyttöön GPT-4o-mini-malli](../../../02-SetupDevEnvironment)
 - [Vaihe 2: Luo Codespace](../../../02-SetupDevEnvironment)
 - [Vaihe 3: Määritä ympäristösi](../../../02-SetupDevEnvironment)
-- [Vaihe 4: Testaa asennustasi](../../../02-SetupDevEnvironment)
+- [Vaihe 4: Testaa asennuksesi](../../../02-SetupDevEnvironment)
 - [Mitä seuraavaksi?](../../../02-SetupDevEnvironment)
 - [Resurssit](../../../02-SetupDevEnvironment)
 - [Lisäresurssit](../../../02-SetupDevEnvironment)
@@ -31,54 +31,54 @@ Tämä opas auttaa sinua asentamaan Azure AI Foundry -mallit Java-pohjaisia teko
 1. Luo Azure AI Foundry -resurssit (Hub, Projekti, Malli)
 2. Luo Codespace Java-kehityskontilla
 3. Määritä .env-tiedosto Azure OpenAI -tunnuksilla
-4. Testaa asennustasi esimerkkiprojektilla
+4. Testaa asennuksesi esimerkkiprojektilla
 
 ## Vaihe 1: Luo Azure AI Foundry -resurssit
 
 ### Luo Hub ja Projekti
 
 1. Siirry [Azure AI Foundry -portaaliin](https://ai.azure.com/) ja kirjaudu sisään
-2. Klikkaa **+ Luo** → **Uusi hub** (tai siirry **Hallinta** → **Kaikki hubit** → **+ Uusi hub**)
+2. Klikkaa **+ Create** → **New hub** (tai siirry **Management** → **All hubs** → **+ New hub**)
 3. Määritä hub:
-   - **Hubin nimi**: esim. "MyAIHub"
-   - **Tilaukset**: Valitse Azure-tilauksesi
-   - **Resurssiryhmä**: Luo uusi tai valitse olemassa oleva
-   - **Sijainti**: Valitse lähin sijainti
-   - **Tallennustili**: Käytä oletusta tai määritä mukautettu
-   - **Avainholvi**: Käytä oletusta tai määritä mukautettu
-   - Klikkaa **Seuraava** → **Tarkista + luo** → **Luo**
-4. Kun hub on luotu, klikkaa **+ Uusi projekti** (tai **Luo projekti** hubin yleiskatsauksesta)
-   - **Projektin nimi**: esim. "GenAIJava"
-   - Klikkaa **Luo**
+   - **Hub name**: esim. "MyAIHub"
+   - **Subscription**: Valitse Azure-tilauksesi
+   - **Resource group**: Luo uusi tai valitse olemassa oleva
+   - **Location**: Valitse lähin sijainti
+   - **Storage account**: Käytä oletusta tai määritä mukautettu
+   - **Key vault**: Käytä oletusta tai määritä mukautettu
+   - Klikkaa **Next** → **Review + create** → **Create**
+4. Kun hub on luotu, klikkaa **+ New project** (tai **Create project** hubin yleiskatsauksesta)
+   - **Project name**: esim. "GenAIJava"
+   - Klikkaa **Create**
 
-### Ota GPT-4o-mini-malli käyttöön
+### Ota käyttöön GPT-4o-mini-malli
 
-1. Projektissasi siirry **Malliluetteloon** ja etsi **gpt-4o-mini**
-   - *Vaihtoehto: Siirry **Käyttöönotot** → **+ Luo käyttöönotto***
-2. Klikkaa **Ota käyttöön** gpt-4o-mini-mallikortilla
+1. Projektissasi siirry kohtaan **Model catalog** ja etsi **gpt-4o-mini**
+   - *Vaihtoehto: Siirry kohtaan **Deployments** → **+ Create deployment***
+2. Klikkaa **Deploy** gpt-4o-mini-mallin kortilla
 3. Määritä käyttöönotto:
-   - **Käyttöönoton nimi**: "gpt-4o-mini"
-   - **Malliversio**: Käytä uusinta
-   - **Käyttöönoton tyyppi**: Standard
-4. Klikkaa **Ota käyttöön**
-5. Kun malli on otettu käyttöön, siirry **Käyttöönotot**-välilehteen ja kopioi seuraavat tiedot:
-   - **Käyttöönoton nimi** (esim. "gpt-4o-mini")
-   - **Kohde-URI** (esim. `https://your-hub-name.openai.azure.com/`) 
-      > **Tärkeää**: Kopioi vain perus-URL (esim. `https://myhub.openai.azure.com/`) älä koko päätepisteen polkua.
-   - **Avain** (Keys and Endpoint -osio)
+   - **Deployment name**: "gpt-4o-mini"
+   - **Model version**: Käytä uusinta
+   - **Deployment type**: Standard
+4. Klikkaa **Deploy**
+5. Kun käyttöönotto on valmis, siirry **Deployments**-välilehdelle ja kopioi seuraavat tiedot:
+   - **Deployment name** (esim. "gpt-4o-mini")
+   - **Target URI** (esim. `https://your-hub-name.openai.azure.com/`)  
+      > **Tärkeää**: Kopioi vain perus-URL (esim. `https://myhub.openai.azure.com/`) äläkä koko päätepisteen polkua.
+   - **Key** (Keys and Endpoint -osiosta)
 
-> **Onko ongelmia?** Katso virallinen [Azure AI Foundry -dokumentaatio](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
+> **Onko ongelmia?** Vieraile virallisessa [Azure AI Foundry -dokumentaatiossa](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects?tabs=ai-foundry&pivots=hub-project)
 
 ## Vaihe 2: Luo Codespace
 
 1. Haarauta tämä arkisto GitHub-tilillesi
-   > **Huomio**: Jos haluat muokata perusasetuksia, tutustu [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
-2. Haarautetussa arkistossa klikkaa **Koodi** → **Codespaces**-välilehti
-3. Klikkaa **...** → **Uusi vaihtoehdoilla...**
+   > **Huom**: Jos haluat muokata perusasetuksia, katso [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
+2. Haarautetussa arkistossasi klikkaa **Code** → **Codespaces**-välilehti
+3. Klikkaa **...** → **New with options...**
 ![codespace-vaihtoehtojen luominen](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.fi.png)
-4. Valitse **Dev Container Configuration**: 
+4. Valitse **Dev container configuration**: 
    - **Generative AI Java Development Environment**
-5. Klikkaa **Luo Codespace**
+5. Klikkaa **Create codespace**
 
 ## Vaihe 3: Määritä ympäristösi
 
@@ -86,7 +86,7 @@ Kun Codespace on valmis, määritä Azure OpenAI -tunnuksesi:
 
 1. **Siirry esimerkkiprojektiin arkiston juuresta:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Luo .env-tiedosto:**
@@ -108,9 +108,9 @@ Kun Codespace on valmis, määritä Azure OpenAI -tunnuksesi:
    > - `.env`-tiedosto on jo lisätty `.gitignore`-tiedostoon
    > - Pidä API-avaimesi turvassa ja vaihda ne säännöllisesti
 
-## Vaihe 4: Testaa asennustasi
+## Vaihe 4: Testaa asennuksesi
 
-Suorita esimerkkisovellus testataksesi Azure OpenAI -yhteyttä:
+Aja esimerkkisovellus testataksesi Azure OpenAI -yhteyttäsi:
 
 ```bash
 mvn clean spring-boot:run
@@ -118,16 +118,16 @@ mvn clean spring-boot:run
 
 Näet vastauksen GPT-4o-mini-mallilta!
 
-> **VS Code -käyttäjät**: Voit myös painaa `F5` VS Codessa sovelluksen suorittamiseksi. Käynnistyskonfiguraatio on jo asetettu lataamaan `.env`-tiedosto automaattisesti.
+> **VS Code -käyttäjät**: Voit myös painaa `F5` VS Codessa ajaaksesi sovelluksen. Käynnistyskonfiguraatio on jo asetettu lataamaan `.env`-tiedosto automaattisesti.
 
-> **Täysi esimerkki**: Katso [End-to-End Azure OpenAI Example](./src/basic-chat-azure/README.md) saadaksesi yksityiskohtaiset ohjeet ja vianmäärityksen.
+> **Täydellinen esimerkki**: Katso [End-to-End Azure OpenAI Example](./examples/basic-chat-azure/README.md) saadaksesi yksityiskohtaiset ohjeet ja vianmäärityksen.
 
 ## Mitä seuraavaksi?
 
 **Asennus valmis!** Sinulla on nyt:
 - Azure OpenAI ja gpt-4o-mini otettu käyttöön
 - Paikallinen .env-tiedosto määritetty
-- Java-kehitysympäristö valmis
+- Java-kehitysympäristö valmiina
 
 **Jatka** [Lukuun 3: Generatiivisen tekoälyn ydintekniikat](../03-CoreGenerativeAITechniques/README.md) aloittaaksesi tekoälysovellusten rakentamisen!
 
@@ -144,4 +144,4 @@ Näet vastauksen GPT-4o-mini-mallilta!
 - [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

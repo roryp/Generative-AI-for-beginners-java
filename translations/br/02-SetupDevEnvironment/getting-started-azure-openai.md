@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e00bbea0f95c611aa3bec676d23e8b43",
-  "translation_date": "2025-07-21T18:03:18+00:00",
+  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+  "translation_date": "2025-07-27T13:06:26+00:00",
   "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
   "language_code": "br"
 }
@@ -53,15 +53,15 @@ Este guia ajudará você a configurar os modelos do Azure AI Foundry para seus a
 
 ### Implantar o Modelo GPT-4o-mini
 
-1. No seu projeto, vá para **Catálogo de modelos** e procure por **gpt-4o-mini**
-   - *Alternativa: Vá para **Implantações** → **+ Criar implantação***
+1. No seu projeto, vá até **Catálogo de modelos** e procure por **gpt-4o-mini**
+   - *Alternativa: Vá até **Implantações** → **+ Criar implantação***
 2. Clique em **Implantar** no cartão do modelo gpt-4o-mini
 3. Configure a implantação:
    - **Nome da implantação**: "gpt-4o-mini"
    - **Versão do modelo**: Use a mais recente
    - **Tipo de implantação**: Padrão
 4. Clique em **Implantar**
-5. Após a implantação, vá para a aba **Implantações** e copie os seguintes valores:
+5. Após a implantação, vá até a aba **Implantações** e copie os seguintes valores:
    - **Nome da implantação** (por exemplo, "gpt-4o-mini")
    - **URI de destino** (por exemplo, `https://seu-nome-do-hub.openai.azure.com/`) 
       > **Importante**: Copie apenas a URL base (por exemplo, `https://meuhub.openai.azure.com/`) e não o caminho completo do endpoint.
@@ -86,7 +86,7 @@ Quando seu Codespace estiver pronto, configure suas credenciais do Azure OpenAI:
 
 1. **Navegue até o projeto de exemplo a partir da raiz do repositório:**
    ```bash
-   cd 02-SetupDevEnvironment/src/basic-chat-azure
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
 
 2. **Crie seu arquivo .env:**
@@ -120,13 +120,13 @@ Você deverá ver uma resposta do modelo GPT-4o-mini!
 
 > **Usuários do VS Code**: Você também pode pressionar `F5` no VS Code para executar o aplicativo. A configuração de inicialização já está preparada para carregar automaticamente seu arquivo `.env`.
 
-> **Exemplo completo**: Veja o [Exemplo Completo do Azure OpenAI](./src/basic-chat-azure/README.md) para instruções detalhadas e solução de problemas.
+> **Exemplo completo**: Veja o [Exemplo Completo do Azure OpenAI](./examples/basic-chat-azure/README.md) para instruções detalhadas e solução de problemas.
 
 ## O que vem a seguir?
 
 **Configuração Concluída!** Agora você tem:
 - Azure OpenAI com gpt-4o-mini implantado
-- Configuração local do arquivo .env
+- Configuração do arquivo .env local
 - Ambiente de desenvolvimento Java pronto
 
 **Continue para** [Capítulo 3: Técnicas Fundamentais de IA Generativa](../03-CoreGenerativeAITechniques/README.md) para começar a construir aplicativos de IA!
