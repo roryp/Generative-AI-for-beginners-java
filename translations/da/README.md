@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:50:54+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:56:29+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -12,13 +12,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativ AI for Begyndere - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.da.png)
 
-**Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Hvis du vil køre eksemplerne, tager opsætningen af miljøet 2 minutter, og udforskning af eksemplerne kræver 1-3 timer afhængigt af dybden af din udforskning.
+**Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Opsætning af miljøet tager 2 minutter, og udforskning af eksemplerne kræver 1-3 timer afhængigt af dybden af din udforskning.
 
 > **Hurtig Start**
 
 1. Fork dette repository til din GitHub-konto
 2. Klik på **Code** → **Codespaces** fanen → **...** → **New with options...**
-3. Brug standardindstillingerne – dette vil vælge udviklingscontaineren, der er oprettet til dette kursus
+3. Brug standardindstillingerne – dette vil vælge den udviklingscontainer, der er oprettet til dette kursus
 4. Klik på **Create codespace**
 5. Vent ~2 minutter på, at miljøet er klar
 6. Gå direkte til [Oprettelse af din GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
@@ -40,7 +40,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Kapitel 2: Opsætning af Udviklingsmiljø**
 - **Multi-Provider Konfiguration**: Opsætning af GitHub Models, Azure OpenAI og OpenAI Java SDK integrationer
-- **Spring Boot + Spring AI**: Bedste praksis for udvikling af AI-applikationer til virksomheder
+- **Spring Boot + Spring AI**: Best practices for udvikling af AI-applikationer til virksomheder
 - **GitHub Models**: Gratis adgang til AI-modeller til prototyper og læring (ingen kreditkort påkrævet)
 - **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces konfiguration
 - **[→ Start Kapitel 2](./02-SetupDevEnvironment/README.md)**
@@ -60,8 +60,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Kapitel 5: Ansvarlig AI Udvikling**
 - **GitHub Models Sikkerhed**: Test indbyggede indholdsfiltre og sikkerhedsmekanismer
-- **Ansvarlig AI Demo**: Praktisk eksempel, der viser, hvordan AI-sikkerhedsfiltre fungerer i praksis
-- **Bedste Praksis**: Vigtige retningslinjer for etisk AI-udvikling og implementering
+- **Ansvarlig AI Demo**: Praktisk eksempel, der viser, hvordan AI-sikkerhedsfiltre fungerer
+- **Best Practices**: Vigtige retningslinjer for etisk AI-udvikling og implementering
 - **[→ Start Kapitel 5](./05-ResponsibleGenAI/README.md)**
 
 ## Yderligere Ressourcer
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [ML for Begyndere](https://aka.ms/ml-beginners)
 - [Data Science for Begyndere](https://aka.ms/datascience-beginners)
 - [AI for Begyndere](https://aka.ms/ai-beginners)
-- [Cybersikkerhed for Begyndere](https://github.com/microsoft/Security-101)
+- [Cybersecurity for Begyndere](https://github.com/microsoft/Security-101)
 - [Webudvikling for Begyndere](https://aka.ms/webdev-beginners)
 - [IoT for Begyndere](https://aka.ms/iot-beginners)
 - [XR Udvikling for Begyndere](https://github.com/microsoft/xr-development-for-beginners)
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App med Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

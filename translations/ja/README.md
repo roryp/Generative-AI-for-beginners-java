@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:38:06+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:50:09+00:00",
   "source_file": "README.md",
   "language_code": "ja"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![初心者向け生成AI - Java版](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ja.png)
 
-**所要時間**: ワークショップ全体はローカル環境のセットアップなしでオンラインで完了できます。サンプルを実行したい場合、環境設定は約2分で完了し、サンプルの探索には深さに応じて1～3時間かかります。
+**所要時間**: ワークショップ全体はローカルセットアップなしでオンラインで完了できます。環境設定は2分、サンプルの探索は深さに応じて1～3時間かかります。
 
 > **クイックスタート**
 
@@ -20,39 +20,39 @@ CO_OP_TRANSLATOR_METADATA:
 2. **Code** → **Codespaces** タブ → **...** → **New with options...** をクリック
 3. デフォルト設定を使用 – このコース用に作成された開発コンテナが選択されます
 4. **Create codespace** をクリック
-5. 環境が準備完了するまで約2分待つ
-6. [GitHub Models Tokenの作成](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に進む
+5. 環境が準備されるまで約2分待つ
+6. [GitHub Modelsトークンの作成](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に直接進む
 
-## 多言語対応
+## 多言語サポート
 
 ### GitHub Actionによるサポート (自動化 & 常に最新)
 
 [フランス語](../fr/README.md) | [スペイン語](../es/README.md) | [ドイツ語](../de/README.md) | [ロシア語](../ru/README.md) | [アラビア語](../ar/README.md) | [ペルシャ語 (ファルシ)](../fa/README.md) | [ウルドゥー語](../ur/README.md) | [中国語 (簡体字)](../zh/README.md) | [中国語 (繁体字, マカオ)](../mo/README.md) | [中国語 (繁体字, 香港)](../hk/README.md) | [中国語 (繁体字, 台湾)](../tw/README.md) | [日本語](./README.md) | [韓国語](../ko/README.md) | [ヒンディー語](../hi/README.md) | [ベンガル語](../bn/README.md) | [マラーティー語](../mr/README.md) | [ネパール語](../ne/README.md) | [パンジャブ語 (グルムキー)](../pa/README.md) | [ポルトガル語 (ポルトガル)](../pt/README.md) | [ポルトガル語 (ブラジル)](../br/README.md) | [イタリア語](../it/README.md) | [ポーランド語](../pl/README.md) | [トルコ語](../tr/README.md) | [ギリシャ語](../el/README.md) | [タイ語](../th/README.md) | [スウェーデン語](../sv/README.md) | [デンマーク語](../da/README.md) | [ノルウェー語](../no/README.md) | [フィンランド語](../fi/README.md) | [オランダ語](../nl/README.md) | [ヘブライ語](../he/README.md) | [ベトナム語](../vi/README.md) | [インドネシア語](../id/README.md) | [マレー語](../ms/README.md) | [タガログ語 (フィリピン)](../tl/README.md) | [スワヒリ語](../sw/README.md) | [ハンガリー語](../hu/README.md) | [チェコ語](../cs/README.md) | [スロバキア語](../sk/README.md) | [ルーマニア語](../ro/README.md) | [ブルガリア語](../bg/README.md) | [セルビア語 (キリル文字)](../sr/README.md) | [クロアチア語](../hr/README.md) | [スロベニア語](../sl/README.md) | [ウクライナ語](../uk/README.md) | [ビルマ語 (ミャンマー)](../my/README.md)
 
-## コース構成 & 学習パス
+## コース構成と学習パス
 
 ### **第1章: 生成AIの概要**
 - **基本概念**: 大規模言語モデル、トークン、埋め込み、AIの能力を理解する
 - **Java AIエコシステム**: Spring AIとOpenAI SDKの概要
 - **モデルコンテキストプロトコル**: MCPとAIエージェント間の通信における役割の紹介
-- **実践的な応用**: チャットボットやコンテンツ生成などの実例
+- **実践的な応用**: チャットボットやコンテンツ生成などの実世界のシナリオ
 - **[→ 第1章を始める](./01-IntroToGenAI/README.md)**
 
 ### **第2章: 開発環境のセットアップ**
-- **マルチプロバイダー設定**: GitHub Models、Azure OpenAI、OpenAI Java SDKの統合設定
+- **マルチプロバイダー構成**: GitHub Models、Azure OpenAI、OpenAI Java SDKの統合設定
 - **Spring Boot + Spring AI**: エンタープライズAIアプリケーション開発のベストプラクティス
 - **GitHub Models**: クレジットカード不要でプロトタイプや学習に利用可能な無料AIモデル
 - **開発ツール**: Dockerコンテナ、VS Code、GitHub Codespacesの設定
 - **[→ 第2章を始める](./02-SetupDevEnvironment/README.md)**
 
-### **第3章: 生成AIの主要技術**
+### **第3章: 生成AIの基本技術**
 - **プロンプトエンジニアリング**: AIモデルの最適な応答を得るための技術
-- **埋め込み & ベクトル操作**: セマンティック検索と類似性マッチングの実装
-- **検索強化生成 (RAG)**: AIと独自のデータソースを組み合わせる
+- **埋め込みとベクトル操作**: セマンティック検索と類似性マッチングの実装
+- **検索強化生成 (RAG)**: AIを独自のデータソースと組み合わせる
 - **関数呼び出し**: カスタムツールやプラグインでAIの能力を拡張
 - **[→ 第3章を始める](./03-CoreGenerativeAITechniques/README.md)**
 
-### **第4章: 実践的な応用 & プロジェクト**
+### **第4章: 実践的な応用とプロジェクト**
 - **ペットストーリー生成器** (`petstory/`): GitHub Modelsを使った創造的なコンテンツ生成
 - **Foundryローカルデモ** (`foundrylocal/`): OpenAI Java SDKを使ったローカルAIモデル統合
 - **MCP計算サービス** (`mcp/calculator/`): Spring AIを使った基本的なモデルコンテキストプロトコルの実装
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [Azure AIサービスを使ったRAGチャットアプリ](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **免責事項**:  
-この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解について、当社は責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤った解釈について、当方は一切の責任を負いません。
