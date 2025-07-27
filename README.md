@@ -46,7 +46,7 @@
 ### **Chapter 4: Practical Applications & Projects**
 - **Pet Story Generator** (`petstory/`): Creative content generation with GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Local AI model integration with OpenAI Java SDK
-- **MCP Calculator Service** (`mcp/calculator/`): Basic Model Context Protocol implementation with Spring AI
+- **MCP Calculator Service** (`calculator/`): Basic Model Context Protocol implementation with Spring AI
 - **[→ Start Chapter 4](./04-PracticalSamples/README.md)**
 
 ### **Chapter 5: Responsible AI Development**

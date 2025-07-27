@@ -249,7 +249,7 @@ export GITHUB_TOKEN=your_github_token_here
 
 Start the server:
 ```bash
-cd 04-PracticalSamples/mcp/calculator
+cd 04-PracticalSamples/calculator
 mvn spring-boot:run
 ```
 
@@ -260,8 +260,9 @@ Started McpServerApplication in X.XXX seconds
 
 ### Step 2: Test with Direct Client
 
-In a new terminal:
+In a **NEW** terminal:
 ```bash
+cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient"
 ```
 
