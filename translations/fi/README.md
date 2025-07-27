@@ -1,18 +1,18 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:52:18+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:57:13+00:00",
   "source_file": "README.md",
   "language_code": "fi"
 }
 -->
-# Generatiivinen tekoäly aloittelijoille - Java-versio
+# Generatiivinen AI aloittelijoille - Java-versio
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generatiivinen tekoäly aloittelijoille - Java-versio](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.fi.png)
+![Generatiivinen AI aloittelijoille - Java-versio](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.fi.png)
 
-**Aikataulu**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Jos haluat ajaa esimerkkejä, ympäristön asennus vie 2 minuuttia, ja esimerkkien tutkiminen kestää 1–3 tuntia riippuen tutkimisen syvyydestä.
+**Aikataulu**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Ympäristön asennus kestää 2 minuuttia, ja esimerkkien tutkimiseen kuluu 1–3 tuntia riippuen tutkimisen syvyydestä.
 
 > **Pika-aloitus** 
 
@@ -39,14 +39,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Aloita luku 1](./01-IntroToGenAI/README.md)**
 
 ### **Luku 2: Kehitysympäristön asennus**
-- **Monitoimittajakonfiguraatio**: GitHub Models-, Azure OpenAI- ja OpenAI Java SDK -integraatioiden asennus
+- **Monipalveluntarjoajan konfigurointi**: GitHub Models-, Azure OpenAI- ja OpenAI Java SDK -integraatioiden asennus
 - **Spring Boot + Spring AI**: Parhaat käytännöt yritystason tekoälysovellusten kehittämiseen
 - **GitHub Models**: Ilmainen tekoälymallien käyttö prototyyppien ja oppimisen tueksi (ei luottokorttia vaadita)
-- **Kehitystyökalut**: Docker-kontit, VS Code ja GitHub Codespaces -konfiguraatio
+- **Kehitystyökalut**: Docker-kontit, VS Code ja GitHub Codespaces -konfigurointi
 - **[→ Aloita luku 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Luku 3: Generatiivisen tekoälyn ydintekniikat**
-- **Prompt Engineering**: Tekniikoita optimaalisten tekoälymallivastausten saamiseksi
+- **Prompt Engineering**: Tekniikat optimaalisten tekoälymallivastausten saamiseksi
 - **Upotukset ja vektorilaskenta**: Semanttisen haun ja samankaltaisuusvertailun toteutus
 - **Retrieval-Augmented Generation (RAG)**: Yhdistä tekoäly omiin tietolähteisiisi
 - **Funktiokutsut**: Laajenna tekoälyn kykyjä mukautetuilla työkaluilla ja lisäosilla
@@ -58,7 +58,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **MCP-laskinpalvelu** (`mcp/calculator/`): Perustason Model Context Protocol -toteutus Spring AI:lla
 - **[→ Aloita luku 4](./04-PracticalSamples/README.md)**
 
-### **Luku 5: Vastuullinen tekoälykehitys**
+### **Luku 5: Vastuullinen tekoälyn kehitys**
 - **GitHub Models -turvallisuus**: Sisäänrakennettujen sisällönsuodatus- ja turvallisuusmekanismien testaaminen
 - **Vastuullisen tekoälyn demo**: Käytännön esimerkki tekoälyn turvallisuussuodattimien toiminnasta
 - **Parhaat käytännöt**: Keskeiset ohjeet eettiseen tekoälyn kehittämiseen ja käyttöönottoon
@@ -67,20 +67,20 @@ CO_OP_TRANSLATOR_METADATA:
 ## Lisäresurssit 
 
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML for Beginners](https://aka.ms/ml-beginners)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)
-- [AI for Beginners](https://aka.ms/ai-beginners)
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [Generatiivinen AI aloittelijoille .NET:llä](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generatiivinen AI aloittelijoille JavaScriptillä](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generatiivinen AI aloittelijoille](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML aloittelijoille](https://aka.ms/ml-beginners)
+- [Data Science aloittelijoille](https://aka.ms/datascience-beginners)
+- [AI aloittelijoille](https://aka.ms/ai-beginners)
+- [Kyberturvallisuus aloittelijoille](https://github.com/microsoft/Security-101)
+- [Web-kehitys aloittelijoille](https://aka.ms/webdev-beginners)
+- [IoT aloittelijoille](https://aka.ms/iot-beginners)
+- [XR-kehitys aloittelijoille](https://github.com/microsoft/xr-development-for-beginners)
+- [GitHub Copilotin hallinta tekoälypariohjelmointiin](https://aka.ms/GitHubCopilotAI)
+- [GitHub Copilotin hallinta C#/.NET-kehittäjille](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Valitse oma Copilot-seikkailusi](https://github.com/microsoft/CopilotAdventures)
+- [RAG Chat -sovellus Azure AI -palveluilla](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

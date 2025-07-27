@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:44:48+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:53:32+00:00",
   "source_file": "README.md",
   "language_code": "br"
 }
@@ -12,13 +12,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![IA Generativa para Iniciantes - Edição Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.br.png)
 
-**Compromisso de Tempo**: Todo o workshop pode ser concluído online sem necessidade de configuração local. Se você quiser executar os exemplos, a configuração do ambiente leva 2 minutos, e explorar os exemplos pode levar de 1 a 3 horas, dependendo da profundidade da exploração.
+**Compromisso de Tempo**: Todo o workshop pode ser concluído online sem necessidade de configuração local. A configuração do ambiente leva 2 minutos, e a exploração dos exemplos requer de 1 a 3 horas, dependendo da profundidade da exploração.
 
-> **Início Rápido** 
+> **Início Rápido**
 
-1. Faça um fork deste repositório para sua conta do GitHub  
+1. Faça um fork deste repositório para sua conta no GitHub  
 2. Clique em **Code** → aba **Codespaces** → **...** → **New with options...**  
-3. Use as configurações padrão – isso selecionará o contêiner de desenvolvimento criado para este curso  
+3. Use as configurações padrão – isso selecionará o container de desenvolvimento criado para este curso  
 4. Clique em **Create codespace**  
 5. Aguarde ~2 minutos para o ambiente ficar pronto  
 6. Vá direto para [Criando seu Token de Modelos do GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)  
@@ -42,11 +42,11 @@ CO_OP_TRANSLATOR_METADATA:
 - **Configuração Multi-Fornecedor**: Configure integrações com GitHub Models, Azure OpenAI e OpenAI Java SDK  
 - **Spring Boot + Spring AI**: Melhores práticas para desenvolvimento de aplicações empresariais de IA  
 - **GitHub Models**: Acesso gratuito a modelos de IA para prototipagem e aprendizado (sem necessidade de cartão de crédito)  
-- **Ferramentas de Desenvolvimento**: Configuração de contêineres Docker, VS Code e GitHub Codespaces  
+- **Ferramentas de Desenvolvimento**: Configuração de containers Docker, VS Code e GitHub Codespaces  
 - **[→ Comece o Capítulo 2](./02-SetupDevEnvironment/README.md)**  
 
 ### **Capítulo 3: Técnicas Centrais de IA Generativa**
-- **Engenharia de Prompt**: Técnicas para respostas ideais de modelos de IA  
+- **Engenharia de Prompt**: Técnicas para respostas otimizadas de modelos de IA  
 - **Embeddings e Operações de Vetores**: Implementação de busca semântica e correspondência de similaridade  
 - **Geração Aumentada por Recuperação (RAG)**: Combine IA com suas próprias fontes de dados  
 - **Chamadas de Função**: Expanda as capacidades da IA com ferramentas e plugins personalizados  
@@ -59,12 +59,12 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Comece o Capítulo 4](./04-PracticalSamples/README.md)**  
 
 ### **Capítulo 5: Desenvolvimento de IA Responsável**
-- **Segurança dos Modelos do GitHub**: Teste os mecanismos de filtragem de conteúdo e segurança integrados  
+- **Segurança dos Modelos do GitHub**: Teste de filtros de conteúdo e mecanismos de segurança integrados  
 - **Demo de IA Responsável**: Exemplo prático mostrando como os filtros de segurança de IA funcionam na prática  
 - **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implantação ética de IA  
 - **[→ Comece o Capítulo 5](./05-ResponsibleGenAI/README.md)**  
 
-## Recursos Adicionais 
+## Recursos Adicionais
 
 - [Agentes de IA para Iniciantes](https://github.com/microsoft/ai-agents-for-beginners)  
 - [IA Generativa para Iniciantes usando .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [App de Chat RAG com Serviços de IA do Azure](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte oficial. Para informações críticas, recomenda-se a tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

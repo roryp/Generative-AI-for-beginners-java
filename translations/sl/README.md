@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T09:04:47+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T19:03:18+00:00",
   "source_file": "README.md",
   "language_code": "sl"
 }
@@ -12,11 +12,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativna umetna inteligenca za začetnike - Java izdaja](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.sl.png)
 
-**Časovna zaveza**: Celotno delavnico lahko dokončate na spletu brez lokalne nastavitve. Če želite zagnati primere, nastavitev okolja traja 2 minuti, raziskovanje primerov pa zahteva 1-3 ure, odvisno od globine raziskovanja.
+**Časovna zaveza**: Celotno delavnico lahko dokončate na spletu brez lokalne nastavitve. Nastavitev okolja traja 2 minuti, raziskovanje primerov pa zahteva 1-3 ure, odvisno od globine raziskovanja.
 
-> **Hiter začetek** 
+> **Hiter začetek**
 
-1. Forkajte to repozitorij v svoj GitHub račun
+1. Forkajte to repozitorij na svoj GitHub račun
 2. Kliknite **Code** → zavihek **Codespaces** → **...** → **New with options...**
 3. Uporabite privzete nastavitve – to bo izbralo razvojni kontejner, ustvarjen za ta tečaj
 4. Kliknite **Create codespace**
@@ -36,35 +36,35 @@ CO_OP_TRANSLATOR_METADATA:
 - **Java AI ekosistem**: Pregled Spring AI in OpenAI SDK-jev
 - **Protokol konteksta modela**: Uvod v MCP in njegovo vlogo pri komunikaciji AI agentov
 - **Praktične aplikacije**: Resnični scenariji, vključno s klepetalniki in generiranjem vsebin
-- **[→ Začni poglavje 1](./01-IntroToGenAI/README.md)**
+- **[→ Začnite poglavje 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavje 2: Nastavitev razvojnega okolja**
 - **Konfiguracija več ponudnikov**: Nastavitev GitHub Models, Azure OpenAI in OpenAI Java SDK integracij
 - **Spring Boot + Spring AI**: Najboljše prakse za razvoj AI aplikacij v podjetjih
 - **GitHub Models**: Brezplačen dostop do AI modelov za prototipiranje in učenje (brez kreditne kartice)
 - **Razvojna orodja**: Konfiguracija Docker kontejnerjev, VS Code in GitHub Codespaces
-- **[→ Začni poglavje 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Začnite poglavje 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Poglavje 3: Osnovne tehnike generativne umetne inteligence**
 - **Inženiring pozivov**: Tehnike za optimalne odgovore AI modelov
 - **Vektorske predstavitve in operacije**: Implementacija semantičnega iskanja in ujemanja podobnosti
-- **Generacija z dopolnitvijo pridobivanja (RAG)**: Kombinacija AI z lastnimi viri podatkov
+- **Generacija z obogatenim pridobivanjem (RAG)**: Kombinacija AI z vašimi lastnimi viri podatkov
 - **Klicanje funkcij**: Razširitev zmogljivosti AI z orodji in vtičniki po meri
-- **[→ Začni poglavje 3](./03-CoreGenerativeAITechniques/README.md)**
+- **[→ Začnite poglavje 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavje 4: Praktične aplikacije in projekti**
 - **Generator zgodb o hišnih ljubljenčkih** (`petstory/`): Ustvarjanje kreativnih vsebin z GitHub Models
 - **Foundry lokalna predstavitev** (`foundrylocal/`): Lokalna integracija AI modelov z OpenAI Java SDK
 - **MCP kalkulatorska storitev** (`mcp/calculator/`): Osnovna implementacija protokola konteksta modela s Spring AI
-- **[→ Začni poglavje 4](./04-PracticalSamples/README.md)**
+- **[→ Začnite poglavje 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavje 5: Odgovoren razvoj umetne inteligence**
-- **Varnost GitHub Models**: Preizkus vgrajenega filtriranja vsebin in varnostnih mehanizmov
+- **Varnost GitHub Models**: Testiranje vgrajenega filtriranja vsebin in varnostnih mehanizmov
 - **Predstavitev odgovorne AI**: Praktičen primer, ki prikazuje delovanje varnostnih filtrov AI
 - **Najboljše prakse**: Ključne smernice za etični razvoj in uvajanje AI
-- **[→ Začni poglavje 5](./05-ResponsibleGenAI/README.md)**
+- **[→ Začnite poglavje 5](./05-ResponsibleGenAI/README.md)**
 
-## Dodatni viri 
+## Dodatni viri
 
 - [AI agenti za začetnike](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generativna umetna inteligenca za začetnike z uporabo .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG klepetalna aplikacija z Azure AI storitvami](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne odgovarjamo za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

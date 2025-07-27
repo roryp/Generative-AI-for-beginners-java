@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d684972689e288a83779255116bb42c3",
-  "translation_date": "2025-07-27T08:49:09+00:00",
+  "original_hash": "7216baee4139fab32d7bfa0777d75551",
+  "translation_date": "2025-07-27T18:55:39+00:00",
   "source_file": "README.md",
   "language_code": "th"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative AI สำหรับผู้เริ่มต้น - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.th.png)
 
-**ระยะเวลา**: เวิร์กช็อปทั้งหมดสามารถทำได้ออนไลน์โดยไม่ต้องตั้งค่าบนเครื่อง หากต้องการทดลองตัวอย่าง การตั้งค่าสภาพแวดล้อมใช้เวลา 2 นาที และการสำรวจตัวอย่างใช้เวลา 1-3 ชั่วโมง ขึ้นอยู่กับความลึกของการสำรวจ
+**ระยะเวลา**: เวิร์กช็อปทั้งหมดสามารถทำได้ออนไลน์โดยไม่ต้องตั้งค่าบนเครื่องของคุณ การตั้งค่าสภาพแวดล้อมใช้เวลา 2 นาที และการสำรวจตัวอย่างใช้เวลา 1-3 ชั่วโมง ขึ้นอยู่กับความลึกของการสำรวจ
 
 > **เริ่มต้นอย่างรวดเร็ว**
 
@@ -34,19 +34,19 @@ CO_OP_TRANSLATOR_METADATA:
 ### **บทที่ 1: แนะนำ Generative AI**
 - **แนวคิดหลัก**: ทำความเข้าใจ Large Language Models, tokens, embeddings และความสามารถของ AI
 - **ระบบนิเวศ AI ใน Java**: ภาพรวมของ Spring AI และ OpenAI SDKs
-- **Model Context Protocol**: แนะนำ MCP และบทบาทของมันในการสื่อสารของ AI agent
+- **Model Context Protocol**: แนะนำ MCP และบทบาทของมันใน AI agent communication
 - **การใช้งานจริง**: ตัวอย่างในโลกจริง เช่น chatbot และการสร้างเนื้อหา
 - **[→ เริ่มบทที่ 1](./01-IntroToGenAI/README.md)**
 
 ### **บทที่ 2: การตั้งค่าสภาพแวดล้อมการพัฒนา**
-- **การตั้งค่าหลายผู้ให้บริการ**: ตั้งค่า GitHub Models, Azure OpenAI และ OpenAI Java SDK
+- **การตั้งค่าหลายผู้ให้บริการ**: ตั้งค่า GitHub Models, Azure OpenAI และ OpenAI Java SDK integrations
 - **Spring Boot + Spring AI**: แนวทางปฏิบัติที่ดีที่สุดสำหรับการพัฒนาแอปพลิเคชัน AI ในองค์กร
-- **GitHub Models**: เข้าถึงโมเดล AI ฟรีสำหรับการทดลองและการเรียนรู้ (ไม่ต้องใช้บัตรเครดิต)
+- **GitHub Models**: เข้าถึงโมเดล AI ฟรีสำหรับการสร้างต้นแบบและการเรียนรู้ (ไม่ต้องใช้บัตรเครดิต)
 - **เครื่องมือพัฒนา**: การตั้งค่า Docker containers, VS Code และ GitHub Codespaces
 - **[→ เริ่มบทที่ 2](./02-SetupDevEnvironment/README.md)**
 
 ### **บทที่ 3: เทคนิค Generative AI หลัก**
-- **Prompt Engineering**: เทคนิคสำหรับการตอบสนองของโมเดล AI ที่ดีที่สุด
+- **Prompt Engineering**: เทคนิคสำหรับการตอบสนองของโมเดล AI ที่เหมาะสมที่สุด
 - **Embeddings & Vector Operations**: การใช้งาน semantic search และ similarity matching
 - **Retrieval-Augmented Generation (RAG)**: ผสาน AI กับแหล่งข้อมูลของคุณเอง
 - **Function Calling**: ขยายความสามารถของ AI ด้วยเครื่องมือและปลั๊กอินที่กำหนดเอง
@@ -58,9 +58,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **MCP Calculator Service** (`mcp/calculator/`): การใช้งาน Model Context Protocol เบื้องต้นกับ Spring AI
 - **[→ เริ่มบทที่ 4](./04-PracticalSamples/README.md)**
 
-### **บทที่ 5: การพัฒนา AI อย่างรับผิดชอบ**
-- **GitHub Models Safety**: ทดสอบการกรองเนื้อหาและกลไกความปลอดภัยในตัว
-- **Responsible AI Demo**: ตัวอย่างการใช้งานจริงที่แสดงการทำงานของฟิลเตอร์ความปลอดภัย AI
+### **บทที่ 5: การพัฒนา AI อย่างมีความรับผิดชอบ**
+- **GitHub Models Safety**: ทดสอบการกรองเนื้อหาและกลไกความปลอดภัยที่มีอยู่
+- **Responsible AI Demo**: ตัวอย่างการใช้งานจริงที่แสดงให้เห็นการทำงานของตัวกรองความปลอดภัย AI
 - **แนวทางปฏิบัติที่ดีที่สุด**: แนวทางสำคัญสำหรับการพัฒนาและการใช้งาน AI อย่างมีจริยธรรม
 - **[→ เริ่มบทที่ 5](./05-ResponsibleGenAI/README.md)**
 
@@ -77,10 +77,10 @@ CO_OP_TRANSLATOR_METADATA:
 - [Web Dev สำหรับผู้เริ่มต้น](https://aka.ms/webdev-beginners)
 - [IoT สำหรับผู้เริ่มต้น](https://aka.ms/iot-beginners)
 - [XR Development สำหรับผู้เริ่มต้น](https://github.com/microsoft/xr-development-for-beginners)
-- [การใช้งาน GitHub Copilot สำหรับการเขียนโปรแกรม AI คู่มือ](https://aka.ms/GitHubCopilotAI)
+- [การใช้งาน GitHub Copilot สำหรับการเขียนโปรแกรม AI คู่](https://aka.ms/GitHubCopilotAI)
 - [การใช้งาน GitHub Copilot สำหรับนักพัฒนา C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [เลือกการผจญภัย Copilot ของคุณเอง](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App กับ Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามนุษย์ที่มีความเชี่ยวชาญ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้
