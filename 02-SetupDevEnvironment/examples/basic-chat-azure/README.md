@@ -35,7 +35,7 @@ Before running this example, ensure you have:
 
 ```bash
 # 1. Navigate to project
-cd 02-SetupDevEnvironment/src/basic-chat-azure
+cd 02-SetupDevEnvironment/examples/basic-chat-azure
 
 # 2. Configure credentials
 cp .env.example .env
