@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "df269f529a172a0197ef28460bf1da9f",
-  "translation_date": "2025-07-25T10:39:14+00:00",
+  "original_hash": "d45b8e2291ab1357592c904c103cbc81",
+  "translation_date": "2025-07-28T10:15:15+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "es"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Lo que Aprenderás
 En esta sección, presentaremos tres aplicaciones prácticas que muestran patrones de desarrollo de IA generativa con Java:
 - Crear un Generador de Historias de Mascotas multimodal que combina IA en el cliente y en el servidor
-- Implementar la integración de modelos de IA locales con el demo Foundry Local Spring Boot
+- Implementar integración de modelos de IA locales con el demo Foundry Local Spring Boot
 - Desarrollar un servicio de Protocolo de Contexto de Modelo (MCP) con el ejemplo de Calculadora
 
 ## Tabla de Contenidos
@@ -39,11 +39,11 @@ El **[Generador de Historias de Mascotas](petstory/README.md)** es una aplicaci�
 
 ### Servicio MCP Calculadora (Demo MCP para Principiantes)
 
-El **[Servicio MCP Calculadora](mcp/calculator/README.md)** es una demostración sencilla del **Protocolo de Contexto de Modelo (MCP)** utilizando Spring AI. Proporciona una introducción accesible a los conceptos de MCP, mostrando cómo crear un servidor MCP básico que interactúa con clientes MCP.
+El **[Servicio MCP Calculadora](calculator/README.md)** es una demostración sencilla del **Protocolo de Contexto de Modelo (MCP)** utilizando Spring AI. Proporciona una introducción accesible a los conceptos de MCP, mostrando cómo crear un servidor MCP básico que interactúa con clientes MCP.
 
 ## Progresión de Aprendizaje
 
-Estos proyectos están diseñados para construir sobre conceptos de capítulos anteriores:
+Estos proyectos están diseñados para construir conceptos de capítulos anteriores:
 
 1. **Comienza Simple**: Inicia con el Demo Foundry Local Spring Boot para entender la integración básica de IA con modelos locales
 2. **Añade Interactividad**: Avanza al Generador de Historias de Mascotas para procesamiento de IA multimodal e interacciones basadas en la web

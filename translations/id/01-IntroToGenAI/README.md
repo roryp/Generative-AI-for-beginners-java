@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6d8b4a0d774dc2a1e97c95859a6d6e4b",
-  "translation_date": "2025-07-21T20:18:26+00:00",
+  "original_hash": "006866db93a268a8769bb55f2e324291",
+  "translation_date": "2025-07-28T11:01:04+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "id"
 }
@@ -38,9 +38,9 @@ Generative AI adalah jenis kecerdasan buatan yang menciptakan konten baru, seper
 
 Saat Anda mengembangkan aplikasi AI Java, Anda akan bekerja dengan **model generative AI** untuk menciptakan konten. Beberapa kemampuan model generative AI meliputi:
 
-- **Pembuatan Teks**: Membuat teks yang mirip manusia untuk chatbot, konten, dan penyelesaian teks.
+- **Pembuatan Teks**: Menulis teks yang mirip manusia untuk chatbot, konten, dan penyelesaian teks.
 - **Pembuatan dan Analisis Gambar**: Menghasilkan gambar realistis, meningkatkan foto, dan mendeteksi objek.
-- **Pembuatan Kode**: Menulis cuplikan kode atau skrip.
+- **Pembuatan Kode**: Menulis potongan kode atau skrip.
 
 Ada jenis model tertentu yang dioptimalkan untuk tugas yang berbeda. Misalnya, baik **Small Language Models (SLMs)** maupun **Large Language Models (LLMs)** dapat menangani pembuatan teks, dengan LLM biasanya memberikan kinerja yang lebih baik untuk tugas yang kompleks. Untuk tugas terkait gambar, Anda akan menggunakan model visi khusus atau model multi-modal.
 
@@ -54,7 +54,7 @@ Rekayasa prompt adalah praktik merancang input yang efektif untuk membimbing mod
 
 - **Kejelasan**: Membuat instruksi yang jelas dan tidak ambigu.
 - **Konteks**: Memberikan informasi latar belakang yang diperlukan.
-- **Keterbatasan**: Menentukan batasan atau format apa pun.
+- **Keterbatasan**: Menentukan batasan atau format tertentu.
 
 Beberapa praktik terbaik untuk rekayasa prompt meliputi desain prompt, instruksi yang jelas, pemecahan tugas, pembelajaran satu kali dan beberapa kali, serta penyetelan prompt. Menguji berbagai prompt sangat penting untuk menemukan apa yang paling cocok untuk kasus penggunaan spesifik Anda.
 
@@ -67,21 +67,21 @@ Saat mengembangkan aplikasi, Anda akan bekerja dengan berbagai jenis prompt:
 
 #### Token, embedding, dan agen
 
-Saat bekerja dengan model generative AI, Anda akan menemui istilah seperti **token**, **embedding**, **agen**, dan **Model Context Protocol (MCP)**. Berikut adalah gambaran rinci tentang konsep-konsep ini:
+Saat bekerja dengan model generative AI, Anda akan menemui istilah seperti **token**, **embedding**, **agen**, dan **Model Context Protocol (MCP)**. Berikut adalah penjelasan rinci tentang konsep-konsep ini:
 
-- **Token**: Token adalah unit teks terkecil dalam model. Token dapat berupa kata, karakter, atau subkata. Token digunakan untuk merepresentasikan data teks dalam format yang dapat dipahami oleh model. Misalnya, kalimat "The quick brown fox jumped over the lazy dog" mungkin di-tokenisasi menjadi ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] atau ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"] tergantung pada strategi tokenisasi.
+- **Token**: Token adalah unit teks terkecil dalam model. Token dapat berupa kata, karakter, atau subkata. Token digunakan untuk merepresentasikan data teks dalam format yang dapat dipahami oleh model. Misalnya, kalimat "The quick brown fox jumped over the lazy dog" dapat diubah menjadi token seperti ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] atau ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"] tergantung pada strategi tokenisasi.
 
 ![Gambar: Contoh token Generative AI yang memecah kata menjadi token](../../../01-IntroToGenAI/images/tokens.webp)
 
-Tokenisasi adalah proses memecah teks menjadi unit-unit kecil ini. Ini penting karena model beroperasi pada token daripada teks mentah. Jumlah token dalam prompt memengaruhi panjang dan kualitas respons model, karena model memiliki batas token untuk jendela konteksnya (misalnya, 128K token untuk total konteks GPT-4o, termasuk input dan output).
+Tokenisasi adalah proses memecah teks menjadi unit-unit kecil ini. Hal ini penting karena model beroperasi pada token, bukan teks mentah. Jumlah token dalam prompt memengaruhi panjang dan kualitas respons model, karena model memiliki batas token untuk jendela konteksnya (misalnya, 128K token untuk total konteks GPT-4o, termasuk input dan output).
 
-  Dalam Java, Anda dapat menggunakan perpustakaan seperti OpenAI SDK untuk menangani tokenisasi secara otomatis saat mengirim permintaan ke model AI.
+  Dalam Java, Anda dapat menggunakan pustaka seperti OpenAI SDK untuk menangani tokenisasi secara otomatis saat mengirim permintaan ke model AI.
 
 - **Embedding**: Embedding adalah representasi vektor dari token yang menangkap makna semantik. Mereka adalah representasi numerik (biasanya array angka floating-point) yang memungkinkan model memahami hubungan antar kata dan menghasilkan respons yang relevan secara kontekstual. Kata-kata yang serupa memiliki embedding yang serupa, memungkinkan model memahami konsep seperti sinonim dan hubungan semantik.
 
 ![Gambar: Embedding](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.id.png)
 
-  Dalam Java, Anda dapat menghasilkan embedding menggunakan OpenAI SDK atau perpustakaan lain yang mendukung pembuatan embedding. Embedding ini penting untuk tugas seperti pencarian semantik, di mana Anda ingin menemukan konten serupa berdasarkan makna daripada kecocokan teks yang tepat.
+  Dalam Java, Anda dapat menghasilkan embedding menggunakan OpenAI SDK atau pustaka lain yang mendukung pembuatan embedding. Embedding ini penting untuk tugas seperti pencarian semantik, di mana Anda ingin menemukan konten serupa berdasarkan makna daripada kecocokan teks yang tepat.
 
 - **Basis data vektor**: Basis data vektor adalah sistem penyimpanan khusus yang dioptimalkan untuk embedding. Mereka memungkinkan pencarian kesamaan yang efisien dan sangat penting untuk pola Retrieval-Augmented Generation (RAG) di mana Anda perlu menemukan informasi yang relevan dari kumpulan data besar berdasarkan kesamaan semantik daripada kecocokan yang tepat.
 
@@ -89,7 +89,7 @@ Tokenisasi adalah proses memecah teks menjadi unit-unit kecil ini. Ini penting k
 
 > **Catatan**: Dalam kursus ini, kami tidak akan membahas basis data vektor tetapi menganggapnya layak disebutkan karena sering digunakan dalam aplikasi dunia nyata.
 
-- **Agen & MCP**: Komponen AI yang secara otonom berinteraksi dengan model, alat, dan sistem eksternal. Model Context Protocol (MCP) menyediakan cara standar bagi agen untuk mengakses sumber data eksternal dan alat secara aman. Pelajari lebih lanjut di [Kursus MCP untuk Pemula](https://github.com/microsoft/mcp-for-beginners).
+- **Agen & MCP**: Komponen AI yang secara otonom berinteraksi dengan model, alat, dan sistem eksternal. Model Context Protocol (MCP) menyediakan cara standar bagi agen untuk mengakses sumber data eksternal dan alat dengan aman. Pelajari lebih lanjut di kursus [MCP untuk Pemula](https://github.com/microsoft/mcp-for-beginners).
 
 Dalam aplikasi AI Java, Anda akan menggunakan token untuk pemrosesan teks, embedding untuk pencarian semantik dan RAG, basis data vektor untuk pengambilan data, dan agen dengan MCP untuk membangun sistem cerdas yang menggunakan alat.
 
@@ -97,18 +97,18 @@ Dalam aplikasi AI Java, Anda akan menggunakan token untuk pemrosesan teks, embed
 
 ### Alat dan Perpustakaan Pengembangan AI untuk Java
 
-Java menawarkan alat yang sangat baik untuk pengembangan AI. Ada tiga perpustakaan utama yang akan kita eksplorasi sepanjang kursus ini - OpenAI Java SDK, Azure OpenAI SDK, dan Spring AI.
+Java menawarkan alat yang sangat baik untuk pengembangan AI. Ada tiga pustaka utama yang akan kita eksplorasi sepanjang kursus ini - OpenAI Java SDK, Azure OpenAI SDK, dan Spring AI.
 
 Berikut adalah tabel referensi cepat yang menunjukkan SDK mana yang digunakan dalam contoh setiap bab:
 
 | Bab | Contoh | SDK |
 |-----|--------|-----|
-| 02-SetupDevEnvironment | src/github-models/ | OpenAI Java SDK |
-| 02-SetupDevEnvironment | src/basic-chat-azure/ | Spring AI Azure OpenAI |
-| 03-CoreGenerativeAITechniques | examples/ | Azure OpenAI SDK |
-| 04-PracticalSamples | petstory/ | OpenAI Java SDK |
-| 04-PracticalSamples | foundrylocal/ | OpenAI Java SDK |
-| 04-PracticalSamples | mcp/calculator/ | Spring AI MCP SDK + LangChain4j |
+| 02-SetupDevEnvironment | github-models | OpenAI Java SDK |
+| 02-SetupDevEnvironment | basic-chat-azure | Spring AI Azure OpenAI |
+| 03-CoreGenerativeAITechniques | examples | Azure OpenAI SDK |
+| 04-PracticalSamples | petstory | OpenAI Java SDK |
+| 04-PracticalSamples | foundrylocal | OpenAI Java SDK |
+| 04-PracticalSamples | calculator | Spring AI MCP SDK + LangChain4j |
 
 **Tautan Dokumentasi SDK:**
 - [Azure OpenAI Java SDK](https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.16/sdk/openai/azure-ai-openai)
@@ -118,13 +118,13 @@ Berikut adalah tabel referensi cepat yang menunjukkan SDK mana yang digunakan da
 
 #### OpenAI Java SDK
 
-OpenAI SDK adalah perpustakaan Java resmi untuk API OpenAI. Ini menyediakan antarmuka yang sederhana dan konsisten untuk berinteraksi dengan model OpenAI, membuatnya mudah untuk mengintegrasikan kemampuan AI ke dalam aplikasi Java. Contoh GitHub Models di Bab 2, aplikasi Pet Story di Bab 4, dan contoh Foundry Local menunjukkan pendekatan OpenAI SDK.
+OpenAI SDK adalah pustaka Java resmi untuk API OpenAI. Ini menyediakan antarmuka yang sederhana dan konsisten untuk berinteraksi dengan model OpenAI, membuatnya mudah untuk mengintegrasikan kemampuan AI ke dalam aplikasi Java. Contoh GitHub Models di Bab 2, aplikasi Pet Story di Bab 4, dan contoh Foundry Local menunjukkan pendekatan OpenAI SDK.
 
 #### Spring AI
 
 Spring AI adalah kerangka kerja komprehensif yang menghadirkan kemampuan AI ke aplikasi Spring, menyediakan lapisan abstraksi yang konsisten di berbagai penyedia AI. Ini terintegrasi dengan mulus ke dalam ekosistem Spring, menjadikannya pilihan ideal untuk aplikasi Java perusahaan yang membutuhkan kemampuan AI.
 
-Kekuatan Spring AI terletak pada integrasinya yang mulus dengan ekosistem Spring, membuatnya mudah untuk membangun aplikasi AI yang siap produksi dengan pola Spring yang sudah dikenal seperti injeksi ketergantungan, manajemen konfigurasi, dan kerangka pengujian. Anda akan menggunakan Spring AI di Bab 2 dan 4 untuk membangun aplikasi yang memanfaatkan perpustakaan Spring AI OpenAI dan Model Context Protocol (MCP).
+Kekuatan Spring AI terletak pada integrasinya yang mulus dengan ekosistem Spring, membuatnya mudah untuk membangun aplikasi AI yang siap produksi dengan pola Spring yang sudah dikenal seperti injeksi ketergantungan, manajemen konfigurasi, dan kerangka pengujian. Anda akan menggunakan Spring AI di Bab 2 dan 4 untuk membangun aplikasi yang memanfaatkan pustaka OpenAI dan Model Context Protocol (MCP) Spring AI.
 
 ##### Model Context Protocol (MCP)
 
@@ -134,7 +134,7 @@ Di Bab 4, Anda akan membangun layanan kalkulator MCP sederhana yang menunjukkan 
 
 #### Azure OpenAI Java SDK
 
-Perpustakaan klien Azure OpenAI untuk Java adalah adaptasi dari API REST OpenAI yang menyediakan antarmuka idiomatik dan integrasi dengan ekosistem SDK Azure lainnya. Di Bab 3, Anda akan membangun aplikasi menggunakan Azure OpenAI SDK, termasuk aplikasi obrolan, pemanggilan fungsi, dan pola RAG (Retrieval-Augmented Generation).
+Pustaka klien Azure OpenAI untuk Java adalah adaptasi dari API REST OpenAI yang menyediakan antarmuka idiomatik dan integrasi dengan ekosistem SDK Azure lainnya. Di Bab 3, Anda akan membangun aplikasi menggunakan Azure OpenAI SDK, termasuk aplikasi obrolan, pemanggilan fungsi, dan pola RAG (Retrieval-Augmented Generation).
 
 > Catatan: Azure OpenAI SDK tertinggal dibandingkan OpenAI Java SDK dalam hal fitur, jadi untuk proyek masa depan, pertimbangkan menggunakan OpenAI Java SDK.
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6d8b4a0d774dc2a1e97c95859a6d6e4b",
-  "translation_date": "2025-07-21T20:15:31+00:00",
+  "original_hash": "006866db93a268a8769bb55f2e324291",
+  "translation_date": "2025-07-28T10:54:26+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "no"
 }
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introduksjon
 
-Velkommen til det første kapittelet i Generativ AI for Nybegynnere - Java-utgave! Denne grunnleggende leksjonen introduserer deg for kjernebegrepene innen generativ AI og hvordan du kan jobbe med dem ved hjelp av Java. Du vil lære om de essensielle byggeklossene i AI-applikasjoner, inkludert Large Language Models (LLMs), tokens, embeddings og AI-agenter. Vi vil også utforske de viktigste Java-verktøyene du vil bruke gjennom hele kurset.
+Velkommen til første kapittel av Generativ AI for nybegynnere - Java-utgave! Denne grunnleggende leksjonen introduserer deg for kjernebegrepene innen generativ AI og hvordan du kan jobbe med dem ved hjelp av Java. Du vil lære om de essensielle byggesteinene i AI-applikasjoner, inkludert Large Language Models (LLMs), tokens, embeddings og AI-agenter. Vi vil også utforske de primære Java-verktøyene du vil bruke gjennom hele kurset.
 
 ### En rask oppfriskning av generativ AI-konsepter
 
@@ -38,77 +38,77 @@ Generativ AI er en type kunstig intelligens som skaper nytt innhold, som tekst, 
 
 Når du utvikler Java AI-applikasjoner, vil du jobbe med **generative AI-modeller** for å skape innhold. Noen av egenskapene til generative AI-modeller inkluderer:
 
-- **Tekstgenerering**: Lage menneskelignende tekst for chatboter, innhold og tekstfullføring.
-- **Bildegenerering og analyse**: Produsere realistiske bilder, forbedre bilder og oppdage objekter.
+- **Tekstgenerering**: Lage menneskelignende tekst for chatbots, innhold og tekstfullføring.
+- **Bildegenerering og analyse**: Produsere realistiske bilder, forbedre fotografier og identifisere objekter.
 - **Kodegenerering**: Skrive kodebiter eller skript.
 
 Det finnes spesifikke typer modeller som er optimalisert for ulike oppgaver. For eksempel kan både **Small Language Models (SLMs)** og **Large Language Models (LLMs)** håndtere tekstgenerering, hvor LLM-er vanligvis gir bedre ytelse for komplekse oppgaver. For bilde-relaterte oppgaver vil du bruke spesialiserte visjonsmodeller eller multimodale modeller.
 
 ![Figur: Typer generative AI-modeller og bruksområder.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.no.png)
 
-Selvfølgelig er ikke svarene fra disse modellene alltid perfekte. Du har kanskje hørt om at modeller "hallusinerer" eller genererer feilaktig informasjon på en overbevisende måte. Men du kan hjelpe modellen med å generere bedre svar ved å gi klare instruksjoner og kontekst. Dette er hvor **prompt engineering** kommer inn.
+Selvfølgelig er ikke svarene fra disse modellene alltid perfekte. Du har kanskje hørt om modeller som "hallusinerer" eller genererer feilaktig informasjon på en autoritativ måte. Men du kan hjelpe modellen med å generere bedre svar ved å gi klare instruksjoner og kontekst. Dette er hvor **prompt engineering** kommer inn.
 
 #### Gjennomgang av prompt engineering
 
-Prompt engineering er praksisen med å designe effektive innganger for å veilede AI-modeller mot ønskede utganger. Det innebærer:
+Prompt engineering er praksisen med å designe effektive input for å veilede AI-modeller mot ønskede resultater. Det innebærer:
 
 - **Klarhet**: Gjøre instruksjonene tydelige og utvetydige.
 - **Kontekst**: Gi nødvendig bakgrunnsinformasjon.
 - **Begrensninger**: Spesifisere eventuelle begrensninger eller formater.
 
-Noen beste praksiser for prompt engineering inkluderer promptdesign, klare instruksjoner, oppgavedeling, one-shot og few-shot læring, og prompt tuning. Å teste ulike prompts er essensielt for å finne det som fungerer best for din spesifikke brukstilfelle.
+Noen beste praksiser for prompt engineering inkluderer promptdesign, klare instruksjoner, oppdeling av oppgaver, one-shot og few-shot læring, og prompt-tuning. Testing av ulike prompts er essensielt for å finne hva som fungerer best for din spesifikke brukssituasjon.
 
 Når du utvikler applikasjoner, vil du jobbe med ulike typer prompts:
 - **Systemprompts**: Setter grunnreglene og konteksten for modellens oppførsel
-- **Brukerprompts**: Inndata fra applikasjonsbrukerne dine
+- **Brukerprompts**: Input-data fra applikasjonsbrukerne dine
 - **Assistentprompts**: Modellens svar basert på system- og brukerprompts
 
-> **Lær mer**: Lær mer om prompt engineering i [Prompt Engineering-kapittelet i GenAI for Nybegynnere-kurset](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals)
+> **Lær mer**: Lær mer om prompt engineering i [Prompt Engineering-kapittelet i GenAI for nybegynnere-kurset](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals)
 
 #### Tokens, embeddings og agenter
 
-Når du jobber med generative AI-modeller, vil du møte begreper som **tokens**, **embeddings**, **agenter** og **Model Context Protocol (MCP)**. Her er en detaljert oversikt over disse konseptene:
+Når du jobber med generative AI-modeller, vil du støte på begreper som **tokens**, **embeddings**, **agenter** og **Model Context Protocol (MCP)**. Her er en detaljert oversikt over disse konseptene:
 
-- **Tokens**: Tokens er de minste enhetene av tekst i en modell. De kan være ord, tegn eller delord. Tokens brukes til å representere tekstdata i et format som modellen kan forstå. For eksempel kan setningen "The quick brown fox jumped over the lazy dog" bli tokenisert som ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] eller ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"] avhengig av tokeniseringsstrategien.
+- **Tokens**: Tokens er den minste enheten av tekst i en modell. De kan være ord, tegn eller delord. Tokens brukes til å representere tekstdata i et format som modellen kan forstå. For eksempel kan setningen "The quick brown fox jumped over the lazy dog" bli tokenisert som ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] eller ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"] avhengig av tokeniseringsstrategien.
 
-![Figur: Eksempel på generative AI-tokens som deler opp ord i tokens](../../../01-IntroToGenAI/images/tokens.webp)
+![Figur: Eksempel på generative AI-tokens som bryter ord ned i tokens](../../../01-IntroToGenAI/images/tokens.webp)
 
-Tokenisering er prosessen med å bryte ned tekst i disse mindre enhetene. Dette er avgjørende fordi modeller opererer på tokens i stedet for rå tekst. Antallet tokens i en prompt påvirker modellens svarlengde og kvalitet, ettersom modeller har tokenbegrensninger for kontekstvinduet sitt (f.eks. 128K tokens for GPT-4o's totale kontekst, inkludert både input og output).
+Tokenisering er prosessen med å bryte ned tekst i disse mindre enhetene. Dette er avgjørende fordi modeller opererer på tokens i stedet for rå tekst. Antallet tokens i en prompt påvirker modellens svarlengde og kvalitet, da modeller har tokenbegrensninger for deres kontekstvindu (f.eks. 128K tokens for GPT-4o's totale kontekst, inkludert både input og output).
 
   I Java kan du bruke biblioteker som OpenAI SDK for å håndtere tokenisering automatisk når du sender forespørsler til AI-modeller.
 
-- **Embeddings**: Embeddings er vektorrepresentasjoner av tokens som fanger opp semantisk mening. De er numeriske representasjoner (vanligvis matriser av flyttall) som lar modeller forstå relasjoner mellom ord og generere kontekstuelt relevante svar. Lignende ord har lignende embeddings, noe som gjør det mulig for modellen å forstå konsepter som synonymer og semantiske relasjoner.
+- **Embeddings**: Embeddings er vektorrepresentasjoner av tokens som fanger semantisk mening. De er numeriske representasjoner (typisk matriser av flyttallsverdier) som lar modeller forstå relasjoner mellom ord og generere kontekstuelt relevante svar. Lignende ord har lignende embeddings, noe som gjør det mulig for modellen å forstå konsepter som synonymer og semantiske relasjoner.
 
 ![Figur: Embeddings](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.no.png)
 
   I Java kan du generere embeddings ved hjelp av OpenAI SDK eller andre biblioteker som støtter embedding-generering. Disse embeddings er essensielle for oppgaver som semantisk søk, hvor du ønsker å finne lignende innhold basert på mening i stedet for eksakte tekstmatcher.
 
-- **Vektordatabaser**: Vektordatabaser er spesialiserte lagringssystemer optimalisert for embeddings. De muliggjør effektiv likhetssøk og er avgjørende for Retrieval-Augmented Generation (RAG)-mønstre hvor du trenger å finne relevant informasjon fra store datasett basert på semantisk likhet i stedet for eksakte treff.
+- **Vektordatabaser**: Vektordatabaser er spesialiserte lagringssystemer optimalisert for embeddings. De muliggjør effektiv likhetssøk og er avgjørende for Retrieval-Augmented Generation (RAG)-mønstre hvor du trenger å finne relevant informasjon fra store datasett basert på semantisk likhet i stedet for eksakte matcher.
 
-![Figur: Vektordatabasenes arkitektur som viser hvordan embeddings lagres og hentes for likhetssøk.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.no.png)
+![Figur: Vektordatabasens arkitektur som viser hvordan embeddings lagres og hentes for likhetssøk.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.no.png)
 
 > **Merk**: I dette kurset vil vi ikke dekke vektordatabaser, men de er verdt å nevne siden de ofte brukes i virkelige applikasjoner.
 
-- **Agenter & MCP**: AI-komponenter som autonomt samhandler med modeller, verktøy og eksterne systemer. Model Context Protocol (MCP) gir en standardisert måte for agenter å sikkert få tilgang til eksterne datakilder og verktøy. Lær mer i vårt [MCP for Nybegynnere](https://github.com/microsoft/mcp-for-beginners)-kurs.
+- **Agenter & MCP**: AI-komponenter som autonomt samhandler med modeller, verktøy og eksterne systemer. Model Context Protocol (MCP) gir en standardisert måte for agenter å sikkert få tilgang til eksterne datakilder og verktøy. Lær mer i vårt [MCP for nybegynnere](https://github.com/microsoft/mcp-for-beginners)-kurs.
 
-I Java AI-applikasjoner vil du bruke tokens for tekstbehandling, embeddings for semantisk søk og RAG, vektordatabaser for datainnhenting, og agenter med MCP for å bygge intelligente systemer som bruker verktøy.
+I Java AI-applikasjoner vil du bruke tokens for tekstbehandling, embeddings for semantisk søk og RAG, vektordatabaser for datahenting, og agenter med MCP for å bygge intelligente systemer som bruker verktøy.
 
-![Figur: Hvordan en prompt blir til et svar—tokens, vektorer, valgfri RAG-oppslag, LLM-tenkning og en MCP-agent i én rask flyt.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.no.png)
+![Figur: Hvordan en prompt blir til et svar—tokens, vektorer, valgfri RAG-oppslag, LLM-tenkning og en MCP-agent alt i én rask flyt.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.no.png)
 
 ### AI-utviklingsverktøy og biblioteker for Java
 
-Java tilbyr utmerkede verktøy for AI-utvikling. Det finnes tre hovedbiblioteker som vi vil utforske gjennom dette kurset - OpenAI Java SDK, Azure OpenAI SDK og Spring AI.
+Java tilbyr utmerkede verktøy for AI-utvikling. Det finnes tre hovedbiblioteker som vi vil utforske gjennom hele kurset - OpenAI Java SDK, Azure OpenAI SDK og Spring AI.
 
-Her er en rask referansetabell som viser hvilket SDK som brukes i hvert kapittels eksempler:
+Her er en rask referansetabell som viser hvilket SDK som brukes i eksemplene i hvert kapittel:
 
 | Kapittel | Eksempel | SDK |
 |----------|----------|-----|
-| 02-SetupDevEnvironment | src/github-models/ | OpenAI Java SDK |
-| 02-SetupDevEnvironment | src/basic-chat-azure/ | Spring AI Azure OpenAI |
-| 03-CoreGenerativeAITechniques | examples/ | Azure OpenAI SDK |
-| 04-PracticalSamples | petstory/ | OpenAI Java SDK |
-| 04-PracticalSamples | foundrylocal/ | OpenAI Java SDK |
-| 04-PracticalSamples | mcp/calculator/ | Spring AI MCP SDK + LangChain4j |
+| 02-SetupDevEnvironment | github-models | OpenAI Java SDK |
+| 02-SetupDevEnvironment | basic-chat-azure | Spring AI Azure OpenAI |
+| 03-CoreGenerativeAITechniques | eksempler | Azure OpenAI SDK |
+| 04-PracticalSamples | petstory | OpenAI Java SDK |
+| 04-PracticalSamples | foundrylocal | OpenAI Java SDK |
+| 04-PracticalSamples | calculator | Spring AI MCP SDK + LangChain4j |
 
 **SDK-dokumentasjonslenker:**
 - [Azure OpenAI Java SDK](https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.16/sdk/openai/azure-ai-openai)
@@ -124,23 +124,23 @@ OpenAI SDK er det offisielle Java-biblioteket for OpenAI API. Det gir et enkelt 
 
 Spring AI er et omfattende rammeverk som bringer AI-funksjonalitet til Spring-applikasjoner, og gir et konsistent abstraksjonslag på tvers av ulike AI-leverandører. Det integreres sømløst med Spring-økosystemet, noe som gjør det til det ideelle valget for bedrifts-Java-applikasjoner som trenger AI-funksjonalitet.
 
-Spring AIs styrke ligger i dens sømløse integrasjon med Spring-økosystemet, noe som gjør det enkelt å bygge produksjonsklare AI-applikasjoner med kjente Spring-mønstre som avhengighetsinjeksjon, konfigurasjonsstyring og testverktøy. Du vil bruke Spring AI i Kapittel 2 og 4 for å bygge applikasjoner som utnytter både OpenAI og Model Context Protocol (MCP) Spring AI-biblioteker.
+Spring AIs styrke ligger i sin sømløse integrasjon med Spring-økosystemet, noe som gjør det enkelt å bygge produksjonsklare AI-applikasjoner med kjente Spring-mønstre som avhengighetsinjeksjon, konfigurasjonsstyring og testrammeverk. Du vil bruke Spring AI i Kapittel 2 og 4 for å bygge applikasjoner som utnytter både OpenAI og Model Context Protocol (MCP) Spring AI-biblioteker.
 
 ##### Model Context Protocol (MCP)
 
 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) er en fremvoksende standard som gjør det mulig for AI-applikasjoner å samhandle sikkert med eksterne datakilder og verktøy. MCP gir en standardisert måte for AI-modeller å få tilgang til kontekstuell informasjon og utføre handlinger i applikasjonene dine.
 
-I Kapittel 4 vil du bygge en enkel MCP-kalkulatortjeneste som demonstrerer grunnleggende om Model Context Protocol med Spring AI, og viser hvordan du lager grunnleggende verktøyintegrasjoner og tjenestearkitekturer.
+I Kapittel 4 vil du bygge en enkel MCP-kalkulatortjeneste som demonstrerer grunnleggende om Model Context Protocol med Spring AI, og viser hvordan du kan lage grunnleggende verktøyintegrasjoner og tjenestearkitekturer.
 
 #### Azure OpenAI Java SDK
 
-Azure OpenAI-klientbiblioteket for Java er en tilpasning av OpenAIs REST API-er som gir et idiomatisk grensesnitt og integrasjon med resten av Azure SDK-økosystemet. I Kapittel 3 vil du bygge applikasjoner ved hjelp av Azure OpenAI SDK, inkludert chatteapplikasjoner, funksjonskall og RAG (Retrieval-Augmented Generation)-mønstre.
+Azure OpenAI-klientbiblioteket for Java er en tilpasning av OpenAIs REST-API-er som gir et idiomatisk grensesnitt og integrasjon med resten av Azure SDK-økosystemet. I Kapittel 3 vil du bygge applikasjoner ved hjelp av Azure OpenAI SDK, inkludert chat-applikasjoner, funksjonskall og RAG (Retrieval-Augmented Generation)-mønstre.
 
 > Merk: Azure OpenAI SDK ligger etter OpenAI Java SDK når det gjelder funksjoner, så for fremtidige prosjekter bør du vurdere å bruke OpenAI Java SDK.
 
 ## Oppsummering
 
-**Gratulerer!** Du har nå:
+**Gratulerer!** Du har med suksess:
 
 - **Lært om grunnleggende generativ AI**, inkludert LLM-er, prompt engineering, tokens, embeddings og vektordatabaser
 - **Sammenlignet Java AI-utviklingsverktøy**, inkludert Azure OpenAI SDK, Spring AI og OpenAI Java SDK

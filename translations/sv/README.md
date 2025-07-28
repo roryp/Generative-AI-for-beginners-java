@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7216baee4139fab32d7bfa0777d75551",
-  "translation_date": "2025-07-27T18:56:01+00:00",
+  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
+  "translation_date": "2025-07-28T10:51:04+00:00",
   "source_file": "README.md",
   "language_code": "sv"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 3. Använd standardinställningarna – detta väljer utvecklingscontainern som skapats för denna kurs
 4. Klicka på **Create codespace**
 5. Vänta ~2 minuter tills miljön är redo
-6. Gå direkt till [Skapa din GitHub Models Token](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Hoppa direkt till [Det första exemplet](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Stöd för Flera Språk
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kursstruktur & Inlärningsväg
 
 ### **Kapitel 1: Introduktion till Generativ AI**
-- **Grundläggande Koncept**: Förstå stora språkmodeller, tokens, inbäddningar och AI-förmågor
+- **Grundläggande Koncept**: Förstå stora språkmodeller, tokens, embeddings och AI-förmågor
 - **Java AI Ekosystem**: Översikt av Spring AI och OpenAI SDKs
 - **Model Context Protocol**: Introduktion till MCP och dess roll i AI-agentkommunikation
 - **Praktiska Tillämpningar**: Verkliga scenarier inklusive chattbotar och innehållsgenerering
@@ -47,20 +47,20 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Kapitel 3: Kärntekniker för Generativ AI**
 - **Prompt Engineering**: Tekniker för optimala AI-modellsvar
-- **Inbäddningar & Vektoroperationer**: Implementera semantisk sökning och likhetsmatchning
+- **Embeddings & Vektoroperationer**: Implementera semantisk sökning och likhetsmatchning
 - **Retrieval-Augmented Generation (RAG)**: Kombinera AI med dina egna datakällor
-- **Funktionsanrop**: Utöka AI-förmågor med anpassade verktyg och plugins
+- **Function Calling**: Utöka AI-förmågor med anpassade verktyg och plugins
 - **[→ Börja Kapitel 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kapitel 4: Praktiska Tillämpningar & Projekt**
-- **Husdjursberättelsegenerator** (`petstory/`): Kreativ innehållsgenerering med GitHub Models
-- **Foundry Lokal Demo** (`foundrylocal/`): Lokal AI-modellintegration med OpenAI Java SDK
-- **MCP Kalkylatorservice** (`mcp/calculator/`): Grundläggande implementering av Model Context Protocol med Spring AI
+- **Pet Story Generator** (`petstory/`): Kreativ innehållsgenerering med GitHub Models
+- **Foundry Local Demo** (`foundrylocal/`): Lokal AI-modellintegration med OpenAI Java SDK
+- **MCP Calculator Service** (`calculator/`): Grundläggande implementation av Model Context Protocol med Spring AI
 - **[→ Börja Kapitel 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitel 5: Ansvarsfull AI-utveckling**
 - **GitHub Models Säkerhet**: Testa inbyggd innehållsfiltrering och säkerhetsmekanismer
-- **Ansvarsfull AI Demo**: Praktiskt exempel som visar hur AI-säkerhetsfilter fungerar i praktiken
+- **Ansvarsfull AI Demo**: Praktiskt exempel som visar hur AI-säkerhetsfilter fungerar
 - **Bästa Praxis**: Viktiga riktlinjer för etisk AI-utveckling och implementering
 - **[→ Börja Kapitel 5](./05-ResponsibleGenAI/README.md)**
 
@@ -79,8 +79,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [XR-utveckling för Nybörjare](https://github.com/microsoft/xr-development-for-beginners)
 - [Bemästra GitHub Copilot för AI-parprogrammering](https://aka.ms/GitHubCopilotAI)
 - [Bemästra GitHub Copilot för C#/.NET-utvecklare](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Välj ditt eget Copilot-äventyr](https://github.com/microsoft/CopilotAdventures)
+- [Välj Ditt Eget Copilot-Äventyr](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chattapp med Azure AI-tjänster](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

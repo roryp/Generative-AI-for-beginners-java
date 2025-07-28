@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7216baee4139fab32d7bfa0777d75551",
-  "translation_date": "2025-07-27T18:55:39+00:00",
+  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
+  "translation_date": "2025-07-28T10:49:35+00:00",
   "source_file": "README.md",
   "language_code": "th"
 }
@@ -17,11 +17,11 @@ CO_OP_TRANSLATOR_METADATA:
 > **เริ่มต้นอย่างรวดเร็ว**
 
 1. Fork repository นี้ไปยังบัญชี GitHub ของคุณ
-2. คลิก **Code** → **แท็บ Codespaces** → **...** → **New with options...**
+2. คลิก **Code** → **Codespaces** tab → **...** → **New with options...**
 3. ใช้ค่าตั้งต้น – ระบบจะเลือก Development container ที่สร้างขึ้นสำหรับคอร์สนี้
 4. คลิก **Create codespace**
 5. รอประมาณ ~2 นาทีเพื่อให้สภาพแวดล้อมพร้อมใช้งาน
-6. ไปที่ [การสร้าง GitHub Models Token ของคุณ](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. ไปที่ [ตัวอย่างแรก](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## รองรับหลายภาษา
 
@@ -34,20 +34,20 @@ CO_OP_TRANSLATOR_METADATA:
 ### **บทที่ 1: แนะนำ Generative AI**
 - **แนวคิดหลัก**: ทำความเข้าใจ Large Language Models, tokens, embeddings และความสามารถของ AI
 - **ระบบนิเวศ AI ใน Java**: ภาพรวมของ Spring AI และ OpenAI SDKs
-- **Model Context Protocol**: แนะนำ MCP และบทบาทของมันใน AI agent communication
+- **Model Context Protocol**: แนะนำ MCP และบทบาทของมันในการสื่อสารของ AI agent
 - **การใช้งานจริง**: ตัวอย่างในโลกจริง เช่น chatbot และการสร้างเนื้อหา
 - **[→ เริ่มบทที่ 1](./01-IntroToGenAI/README.md)**
 
 ### **บทที่ 2: การตั้งค่าสภาพแวดล้อมการพัฒนา**
-- **การตั้งค่าหลายผู้ให้บริการ**: ตั้งค่า GitHub Models, Azure OpenAI และ OpenAI Java SDK integrations
+- **การตั้งค่าหลายผู้ให้บริการ**: ตั้งค่า GitHub Models, Azure OpenAI และ OpenAI Java SDK
 - **Spring Boot + Spring AI**: แนวทางปฏิบัติที่ดีที่สุดสำหรับการพัฒนาแอปพลิเคชัน AI ในองค์กร
-- **GitHub Models**: เข้าถึงโมเดล AI ฟรีสำหรับการสร้างต้นแบบและการเรียนรู้ (ไม่ต้องใช้บัตรเครดิต)
+- **GitHub Models**: เข้าถึงโมเดล AI ฟรีสำหรับการทดลองและการเรียนรู้ (ไม่ต้องใช้บัตรเครดิต)
 - **เครื่องมือพัฒนา**: การตั้งค่า Docker containers, VS Code และ GitHub Codespaces
 - **[→ เริ่มบทที่ 2](./02-SetupDevEnvironment/README.md)**
 
 ### **บทที่ 3: เทคนิค Generative AI หลัก**
-- **Prompt Engineering**: เทคนิคสำหรับการตอบสนองของโมเดล AI ที่เหมาะสมที่สุด
-- **Embeddings & Vector Operations**: การใช้งาน semantic search และ similarity matching
+- **Prompt Engineering**: เทคนิคสำหรับการตอบสนองของโมเดล AI ที่ดีที่สุด
+- **Embeddings & Vector Operations**: การค้นหาความหมายและการจับคู่ความคล้ายคลึง
 - **Retrieval-Augmented Generation (RAG)**: ผสาน AI กับแหล่งข้อมูลของคุณเอง
 - **Function Calling**: ขยายความสามารถของ AI ด้วยเครื่องมือและปลั๊กอินที่กำหนดเอง
 - **[→ เริ่มบทที่ 3](./03-CoreGenerativeAITechniques/README.md)**
@@ -55,12 +55,12 @@ CO_OP_TRANSLATOR_METADATA:
 ### **บทที่ 4: การใช้งานจริงและโปรเจกต์**
 - **Pet Story Generator** (`petstory/`): การสร้างเนื้อหาเชิงสร้างสรรค์ด้วย GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): การผสานโมเดล AI ในเครื่องกับ OpenAI Java SDK
-- **MCP Calculator Service** (`mcp/calculator/`): การใช้งาน Model Context Protocol เบื้องต้นกับ Spring AI
+- **MCP Calculator Service** (`calculator/`): การใช้งาน Model Context Protocol เบื้องต้นกับ Spring AI
 - **[→ เริ่มบทที่ 4](./04-PracticalSamples/README.md)**
 
-### **บทที่ 5: การพัฒนา AI อย่างมีความรับผิดชอบ**
-- **GitHub Models Safety**: ทดสอบการกรองเนื้อหาและกลไกความปลอดภัยที่มีอยู่
-- **Responsible AI Demo**: ตัวอย่างการใช้งานจริงที่แสดงให้เห็นการทำงานของตัวกรองความปลอดภัย AI
+### **บทที่ 5: การพัฒนา AI อย่างรับผิดชอบ**
+- **ความปลอดภัยของ GitHub Models**: ทดสอบการกรองเนื้อหาและกลไกความปลอดภัยในตัว
+- **Responsible AI Demo**: ตัวอย่างการใช้งานจริงที่แสดงการทำงานของตัวกรองความปลอดภัย AI
 - **แนวทางปฏิบัติที่ดีที่สุด**: แนวทางสำคัญสำหรับการพัฒนาและการใช้งาน AI อย่างมีจริยธรรม
 - **[→ เริ่มบทที่ 5](./05-ResponsibleGenAI/README.md)**
 
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App กับ Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามนุษย์ที่มีความเชี่ยวชาญ เราจะไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้

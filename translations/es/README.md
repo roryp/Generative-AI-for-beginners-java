@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7216baee4139fab32d7bfa0777d75551",
-  "translation_date": "2025-07-27T18:46:04+00:00",
+  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
+  "translation_date": "2025-07-28T10:14:45+00:00",
   "source_file": "README.md",
   "language_code": "es"
 }
@@ -21,41 +21,41 @@ CO_OP_TRANSLATOR_METADATA:
 3. Usa los valores predeterminados: esto seleccionará el contenedor de desarrollo creado para este curso  
 4. Haz clic en **Create codespace**  
 5. Espera ~2 minutos para que el entorno esté listo  
-6. Ve directamente a [Crear tu Token de Modelos de GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)  
+6. Ve directamente a [El primer ejemplo](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)  
 
 ## Soporte Multilingüe
 
-### Soportado a través de GitHub Action (Automatizado y Siempre Actualizado)
+### Disponible a través de GitHub Action (Automatizado y Siempre Actualizado)
 
 [Francés](../fr/README.md) | [Español](./README.md) | [Alemán](../de/README.md) | [Ruso](../ru/README.md) | [Árabe](../ar/README.md) | [Persa (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chino (Simplificado)](../zh/README.md) | [Chino (Tradicional, Macao)](../mo/README.md) | [Chino (Tradicional, Hong Kong)](../hk/README.md) | [Chino (Tradicional, Taiwán)](../tw/README.md) | [Japonés](../ja/README.md) | [Coreano](../ko/README.md) | [Hindi](../hi/README.md) | [Bengalí](../bn/README.md) | [Maratí](../mr/README.md) | [Nepalí](../ne/README.md) | [Panyabí (Gurmukhi)](../pa/README.md) | [Portugués (Portugal)](../pt/README.md) | [Portugués (Brasil)](../br/README.md) | [Italiano](../it/README.md) | [Polaco](../pl/README.md) | [Turco](../tr/README.md) | [Griego](../el/README.md) | [Tailandés](../th/README.md) | [Sueco](../sv/README.md) | [Danés](../da/README.md) | [Noruego](../no/README.md) | [Finlandés](../fi/README.md) | [Holandés](../nl/README.md) | [Hebreo](../he/README.md) | [Vietnamita](../vi/README.md) | [Indonesio](../id/README.md) | [Malayo](../ms/README.md) | [Tagalo (Filipino)](../tl/README.md) | [Suajili](../sw/README.md) | [Húngaro](../hu/README.md) | [Checo](../cs/README.md) | [Eslovaco](../sk/README.md) | [Rumano](../ro/README.md) | [Búlgaro](../bg/README.md) | [Serbio (Cirílico)](../sr/README.md) | [Croata](../hr/README.md) | [Esloveno](../sl/README.md) | [Ucraniano](../uk/README.md) | [Birmano (Myanmar)](../my/README.md)
 
 ## Estructura del Curso y Ruta de Aprendizaje
 
-### **Capítulo 1: Introducción a la Generative AI**
+### **Capítulo 1: Introducción a la IA Generativa**
 - **Conceptos Básicos**: Comprender los Modelos de Lenguaje Extenso, tokens, embeddings y capacidades de IA  
 - **Ecosistema de IA en Java**: Resumen de Spring AI y OpenAI SDKs  
-- **Protocolo de Contexto del Modelo**: Introducción al MCP y su rol en la comunicación de agentes de IA  
+- **Protocolo de Contexto del Modelo**: Introducción al MCP y su papel en la comunicación de agentes de IA  
 - **Aplicaciones Prácticas**: Escenarios del mundo real, incluyendo chatbots y generación de contenido  
 - **[→ Comenzar el Capítulo 1](./01-IntroToGenAI/README.md)**  
 
 ### **Capítulo 2: Configuración del Entorno de Desarrollo**
-- **Configuración Multi-Proveedor**: Configura integraciones de GitHub Models, Azure OpenAI y OpenAI Java SDK  
+- **Configuración Multi-Proveedor**: Configura GitHub Models, Azure OpenAI y las integraciones de OpenAI Java SDK  
 - **Spring Boot + Spring AI**: Mejores prácticas para el desarrollo de aplicaciones empresariales de IA  
 - **GitHub Models**: Acceso gratuito a modelos de IA para prototipos y aprendizaje (sin necesidad de tarjeta de crédito)  
 - **Herramientas de Desarrollo**: Configuración de contenedores Docker, VS Code y GitHub Codespaces  
 - **[→ Comenzar el Capítulo 2](./02-SetupDevEnvironment/README.md)**  
 
-### **Capítulo 3: Técnicas Básicas de Generative AI**
+### **Capítulo 3: Técnicas Básicas de IA Generativa**
 - **Ingeniería de Prompts**: Técnicas para obtener respuestas óptimas de los modelos de IA  
-- **Embeddings y Operaciones Vectoriales**: Implementa búsqueda semántica y coincidencia de similitud  
+- **Embeddings y Operaciones Vectoriales**: Implementar búsqueda semántica y coincidencia de similitud  
 - **Generación Aumentada por Recuperación (RAG)**: Combina IA con tus propias fuentes de datos  
-- **Llamadas a Funciones**: Amplía las capacidades de IA con herramientas y plugins personalizados  
+- **Llamadas a Funciones**: Extiende las capacidades de IA con herramientas y plugins personalizados  
 - **[→ Comenzar el Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**  
 
 ### **Capítulo 4: Aplicaciones Prácticas y Proyectos**
 - **Generador de Historias de Mascotas** (`petstory/`): Generación creativa de contenido con GitHub Models  
 - **Demo Local de Foundry** (`foundrylocal/`): Integración de modelos de IA locales con OpenAI Java SDK  
-- **Servicio de Calculadora MCP** (`mcp/calculator/`): Implementación básica del Protocolo de Contexto del Modelo con Spring AI  
+- **Servicio de Calculadora MCP** (`calculator/`): Implementación básica del Protocolo de Contexto del Modelo con Spring AI  
 - **[→ Comenzar el Capítulo 4](./04-PracticalSamples/README.md)**  
 
 ### **Capítulo 5: Desarrollo Responsable de IA**
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de ningún malentendido o interpretación errónea que surja del uso de esta traducción.

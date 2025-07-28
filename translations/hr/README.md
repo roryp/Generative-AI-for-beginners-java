@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7216baee4139fab32d7bfa0777d75551",
-  "translation_date": "2025-07-27T19:02:51+00:00",
+  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
+  "translation_date": "2025-07-28T11:14:52+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -17,11 +17,11 @@ CO_OP_TRANSLATOR_METADATA:
 > **Brzi početak**
 
 1. Forkajte ovaj repozitorij na svoj GitHub račun
-2. Kliknite **Code** → kartica **Codespaces** → **...** → **New with options...**
+2. Kliknite **Code** → **Codespaces** kartica → **...** → **New with options...**
 3. Koristite zadane postavke – ovo će odabrati razvojni kontejner kreiran za ovaj tečaj
 4. Kliknite **Create codespace**
 5. Pričekajte ~2 minute da okruženje bude spremno
-6. Odmah prijeđite na [Kreiranje vašeg GitHub Models tokena](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Odmah prijeđite na [Prvi primjer](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Podrška za više jezika
 
@@ -32,34 +32,34 @@ CO_OP_TRANSLATOR_METADATA:
 ## Struktura tečaja i put učenja
 
 ### **Poglavlje 1: Uvod u generativnu umjetnu inteligenciju**
-- **Osnovni koncepti**: Razumijevanje velikih jezičnih modela, tokena, ugradnji i AI mogućnosti
+- **Osnovni koncepti**: Razumijevanje velikih jezičnih modela, tokena, ugrađivanja i AI mogućnosti
 - **Java AI ekosustav**: Pregled Spring AI i OpenAI SDK-ova
 - **Protokol konteksta modela**: Uvod u MCP i njegovu ulogu u komunikaciji AI agenata
 - **Praktične primjene**: Primjeri iz stvarnog svijeta, uključujući chatbotove i generiranje sadržaja
 - **[→ Započni poglavlje 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavlje 2: Postavljanje razvojnog okruženja**
-- **Konfiguracija za više pružatelja usluga**: Postavljanje GitHub Models, Azure OpenAI i OpenAI Java SDK integracija
+- **Konfiguracija za više pružatelja usluga**: Postavljanje GitHub modela, Azure OpenAI i OpenAI Java SDK integracija
 - **Spring Boot + Spring AI**: Najbolje prakse za razvoj AI aplikacija u poduzećima
-- **GitHub Models**: Besplatan pristup AI modelima za prototipiranje i učenje (nije potrebna kreditna kartica)
+- **GitHub modeli**: Besplatan pristup AI modelima za prototipiranje i učenje (nije potrebna kreditna kartica)
 - **Razvojni alati**: Konfiguracija Docker kontejnera, VS Code-a i GitHub Codespaces-a
 - **[→ Započni poglavlje 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Poglavlje 3: Osnovne tehnike generativne umjetne inteligencije**
 - **Inženjering upita**: Tehnike za optimalne odgovore AI modela
-- **Ugradnje i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
-- **Generiranje uz podršku pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
+- **Ugrađivanja i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
+- **Generacija uz dohvat (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
 - **Pozivanje funkcija**: Proširenje AI mogućnosti prilagođenim alatima i dodacima
 - **[→ Započni poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavlje 4: Praktične primjene i projekti**
-- **Generator priča o kućnim ljubimcima** (`petstory/`): Kreativno generiranje sadržaja s GitHub Models
+- **Generator priča o kućnim ljubimcima** (`petstory/`): Kreativno generiranje sadržaja s GitHub modelima
 - **Foundry lokalna demonstracija** (`foundrylocal/`): Integracija lokalnih AI modela s OpenAI Java SDK-om
-- **MCP kalkulator usluga** (`mcp/calculator/`): Osnovna implementacija protokola konteksta modela sa Spring AI
+- **MCP kalkulator usluga** (`calculator/`): Osnovna implementacija protokola konteksta modela sa Spring AI
 - **[→ Započni poglavlje 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavlje 5: Odgovoran razvoj umjetne inteligencije**
-- **Sigurnost GitHub Modelsa**: Testiranje ugrađenih mehanizama za filtriranje sadržaja i sigurnost
+- **Sigurnost GitHub modela**: Testiranje ugrađenih mehanizama za filtriranje sadržaja i sigurnost
 - **Demonstracija odgovorne AI**: Praktičan primjer koji pokazuje kako sigurnosni filtri AI-a funkcioniraju u praksi
 - **Najbolje prakse**: Ključne smjernice za etički razvoj i implementaciju AI-a
 - **[→ Započni poglavlje 5](./05-ResponsibleGenAI/README.md)**
@@ -80,7 +80,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Ovladavanje GitHub Copilotom za AI programiranje u paru](https://aka.ms/GitHubCopilotAI)
 - [Ovladavanje GitHub Copilotom za C#/.NET programere](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Odaberi svoju avanturu s Copilotom](https://github.com/microsoft/CopilotAdventures)
-- [RAG chat aplikacija s Azure AI uslugama](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [RAG Chat aplikacija s Azure AI uslugama](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
+Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.

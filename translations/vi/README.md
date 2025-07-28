@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7216baee4139fab32d7bfa0777d75551",
-  "translation_date": "2025-07-27T18:58:20+00:00",
+  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
+  "translation_date": "2025-07-28T10:58:48+00:00",
   "source_file": "README.md",
   "language_code": "vi"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![AI Tạo Sinh cho Người Mới Bắt Đầu - Phiên Bản Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.vi.png)
 
-**Thời Gian Cam Kết**: Toàn bộ hội thảo có thể hoàn thành trực tuyến mà không cần thiết lập cục bộ. Việc thiết lập môi trường mất 2 phút, và việc khám phá các mẫu mất từ 1-3 giờ tùy thuộc vào mức độ khám phá.
+**Thời Gian Cam Kết**: Toàn bộ hội thảo có thể hoàn thành trực tuyến mà không cần thiết lập cục bộ. Việc thiết lập môi trường mất 2 phút, và việc khám phá các ví dụ mất từ 1-3 giờ tùy thuộc vào mức độ khám phá.
 
 > **Bắt Đầu Nhanh**
 
@@ -21,48 +21,48 @@ CO_OP_TRANSLATOR_METADATA:
 3. Sử dụng các thiết lập mặc định – điều này sẽ chọn container Phát triển được tạo cho khóa học này
 4. Nhấp vào **Create codespace**
 5. Chờ khoảng ~2 phút để môi trường sẵn sàng
-6. Chuyển ngay đến [Tạo GitHub Models Token của bạn](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Đi thẳng đến [Ví dụ đầu tiên](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Hỗ Trợ Đa Ngôn Ngữ
 
-### Được Hỗ Trợ Qua GitHub Action (Tự Động & Luôn Cập Nhật)
+### Được Hỗ Trợ qua GitHub Action (Tự động & Luôn Cập Nhật)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](./README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+[Tiếng Pháp](../fr/README.md) | [Tiếng Tây Ban Nha](../es/README.md) | [Tiếng Đức](../de/README.md) | [Tiếng Nga](../ru/README.md) | [Tiếng Ả Rập](../ar/README.md) | [Tiếng Ba Tư (Farsi)](../fa/README.md) | [Tiếng Urdu](../ur/README.md) | [Tiếng Trung (Giản thể)](../zh/README.md) | [Tiếng Trung (Phồn thể, Macau)](../mo/README.md) | [Tiếng Trung (Phồn thể, Hồng Kông)](../hk/README.md) | [Tiếng Trung (Phồn thể, Đài Loan)](../tw/README.md) | [Tiếng Nhật](../ja/README.md) | [Tiếng Hàn](../ko/README.md) | [Tiếng Hindi](../hi/README.md) | [Tiếng Bengal](../bn/README.md) | [Tiếng Marathi](../mr/README.md) | [Tiếng Nepal](../ne/README.md) | [Tiếng Punjab (Gurmukhi)](../pa/README.md) | [Tiếng Bồ Đào Nha (Bồ Đào Nha)](../pt/README.md) | [Tiếng Bồ Đào Nha (Brazil)](../br/README.md) | [Tiếng Ý](../it/README.md) | [Tiếng Ba Lan](../pl/README.md) | [Tiếng Thổ Nhĩ Kỳ](../tr/README.md) | [Tiếng Hy Lạp](../el/README.md) | [Tiếng Thái](../th/README.md) | [Tiếng Thụy Điển](../sv/README.md) | [Tiếng Đan Mạch](../da/README.md) | [Tiếng Na Uy](../no/README.md) | [Tiếng Phần Lan](../fi/README.md) | [Tiếng Hà Lan](../nl/README.md) | [Tiếng Do Thái](../he/README.md) | [Tiếng Việt](./README.md) | [Tiếng Indonesia](../id/README.md) | [Tiếng Mã Lai](../ms/README.md) | [Tiếng Tagalog (Philippines)](../tl/README.md) | [Tiếng Swahili](../sw/README.md) | [Tiếng Hungary](../hu/README.md) | [Tiếng Séc](../cs/README.md) | [Tiếng Slovak](../sk/README.md) | [Tiếng Romania](../ro/README.md) | [Tiếng Bulgaria](../bg/README.md) | [Tiếng Serbia (Chữ Kirin)](../sr/README.md) | [Tiếng Croatia](../hr/README.md) | [Tiếng Slovenia](../sl/README.md) | [Tiếng Ukraina](../uk/README.md) | [Tiếng Miến Điện (Myanmar)](../my/README.md)
 
 ## Cấu Trúc Khóa Học & Lộ Trình Học Tập
 
 ### **Chương 1: Giới Thiệu về AI Tạo Sinh**
-- **Các Khái Niệm Cốt Lõi**: Hiểu về Mô Hình Ngôn Ngữ Lớn, token, embedding, và khả năng của AI
+- **Các Khái Niệm Cốt Lõi**: Hiểu về Mô hình Ngôn ngữ Lớn, token, embedding, và khả năng AI
 - **Hệ Sinh Thái AI Java**: Tổng quan về Spring AI và OpenAI SDKs
 - **Giao Thức Ngữ Cảnh Mô Hình**: Giới thiệu về MCP và vai trò của nó trong giao tiếp của tác nhân AI
 - **Ứng Dụng Thực Tiễn**: Các kịch bản thực tế bao gồm chatbot và tạo nội dung
-- **[→ Bắt Đầu Chương 1](./01-IntroToGenAI/README.md)**
+- **[→ Bắt đầu Chương 1](./01-IntroToGenAI/README.md)**
 
 ### **Chương 2: Thiết Lập Môi Trường Phát Triển**
 - **Cấu Hình Đa Nhà Cung Cấp**: Thiết lập GitHub Models, Azure OpenAI, và tích hợp OpenAI Java SDK
-- **Spring Boot + Spring AI**: Các thực hành tốt nhất cho phát triển ứng dụng AI doanh nghiệp
-- **GitHub Models**: Truy cập miễn phí các mô hình AI để tạo mẫu và học tập (không cần thẻ tín dụng)
+- **Spring Boot + Spring AI**: Các thực hành tốt nhất để phát triển ứng dụng AI doanh nghiệp
+- **GitHub Models**: Truy cập mô hình AI miễn phí để tạo mẫu và học tập (không cần thẻ tín dụng)
 - **Công Cụ Phát Triển**: Cấu hình Docker containers, VS Code, và GitHub Codespaces
-- **[→ Bắt Đầu Chương 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Bắt đầu Chương 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chương 3: Các Kỹ Thuật Cốt Lõi của AI Tạo Sinh**
 - **Kỹ Thuật Prompt Engineering**: Các kỹ thuật để có được phản hồi tối ưu từ mô hình AI
 - **Embedding & Các Phép Toán Vector**: Triển khai tìm kiếm ngữ nghĩa và so khớp tương đồng
 - **Tạo Sinh Tăng Cường Truy Xuất (RAG)**: Kết hợp AI với các nguồn dữ liệu của bạn
 - **Gọi Hàm**: Mở rộng khả năng AI với các công cụ và plugin tùy chỉnh
-- **[→ Bắt Đầu Chương 3](./03-CoreGenerativeAITechniques/README.md)**
+- **[→ Bắt đầu Chương 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chương 4: Ứng Dụng Thực Tiễn & Dự Án**
-- **Trình Tạo Câu Chuyện Về Thú Cưng** (`petstory/`): Tạo nội dung sáng tạo với GitHub Models
+- **Trình Tạo Câu Chuyện Thú Cưng** (`petstory/`): Tạo nội dung sáng tạo với GitHub Models
 - **Demo Foundry Cục Bộ** (`foundrylocal/`): Tích hợp mô hình AI cục bộ với OpenAI Java SDK
-- **Dịch Vụ Máy Tính MCP** (`mcp/calculator/`): Triển khai cơ bản Giao Thức Ngữ Cảnh Mô Hình với Spring AI
-- **[→ Bắt Đầu Chương 4](./04-PracticalSamples/README.md)**
+- **Dịch Vụ Máy Tính MCP** (`calculator/`): Triển khai cơ bản Giao Thức Ngữ Cảnh Mô Hình với Spring AI
+- **[→ Bắt đầu Chương 4](./04-PracticalSamples/README.md)**
 
 ### **Chương 5: Phát Triển AI Có Trách Nhiệm**
 - **An Toàn của GitHub Models**: Kiểm tra bộ lọc nội dung và cơ chế an toàn tích hợp sẵn
 - **Demo AI Có Trách Nhiệm**: Ví dụ thực hành cho thấy cách các bộ lọc an toàn AI hoạt động
-- **Thực Hành Tốt Nhất**: Các hướng dẫn thiết yếu để phát triển và triển khai AI một cách đạo đức
-- **[→ Bắt Đầu Chương 5](./05-ResponsibleGenAI/README.md)**
+- **Các Thực Hành Tốt Nhất**: Các hướng dẫn thiết yếu để phát triển và triển khai AI một cách đạo đức
+- **[→ Bắt đầu Chương 5](./05-ResponsibleGenAI/README.md)**
 
 ## Tài Nguyên Bổ Sung
 

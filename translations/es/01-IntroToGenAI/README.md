@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6d8b4a0d774dc2a1e97c95859a6d6e4b",
-  "translation_date": "2025-07-21T17:01:45+00:00",
+  "original_hash": "006866db93a268a8769bb55f2e324291",
+  "translation_date": "2025-07-28T10:15:27+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "es"
 }
@@ -34,7 +34,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Un repaso rápido sobre conceptos de IA generativa
 
-La IA generativa es un tipo de inteligencia artificial que crea contenido nuevo, como texto, imágenes o código, basado en patrones y relaciones aprendidas de los datos. Los modelos de IA generativa pueden generar respuestas similares a las humanas, entender el contexto y, a veces, incluso crear contenido que parece humano.
+La IA generativa es un tipo de inteligencia artificial que crea contenido nuevo, como texto, imágenes o código, basado en patrones y relaciones aprendidas de los datos. Los modelos de IA generativa pueden generar respuestas similares a las humanas, entender el contexto y, en ocasiones, crear contenido que parece humano.
 
 Mientras desarrollas tus aplicaciones de IA en Java, trabajarás con **modelos de IA generativa** para crear contenido. Algunas capacidades de los modelos de IA generativa incluyen:
 
@@ -50,26 +50,26 @@ Por supuesto, las respuestas de estos modelos no siempre son perfectas. Probable
 
 #### Revisión de ingeniería de prompts
 
-La ingeniería de prompts es la práctica de diseñar entradas efectivas para guiar a los modelos de IA hacia los resultados deseados. Esto implica:
+La ingeniería de prompts es la práctica de diseñar entradas efectivas para guiar a los modelos de IA hacia los resultados deseados. Implica:
 
 - **Claridad**: Hacer que las instrucciones sean claras y sin ambigüedades.
 - **Contexto**: Proporcionar información de fondo necesaria.
 - **Restricciones**: Especificar cualquier limitación o formato.
 
-Algunas prácticas recomendadas para la ingeniería de prompts incluyen diseño de prompts, instrucciones claras, descomposición de tareas, aprendizaje de un solo ejemplo y de pocos ejemplos, y ajuste de prompts. Probar diferentes prompts es esencial para encontrar lo que funciona mejor para tu caso de uso específico.
+Algunas buenas prácticas para la ingeniería de prompts incluyen diseño de prompts, instrucciones claras, descomposición de tareas, aprendizaje de un solo ejemplo y de pocos ejemplos, y ajuste de prompts. Probar diferentes prompts es esencial para encontrar lo que funciona mejor para tu caso de uso específico.
 
 Cuando desarrolles aplicaciones, trabajarás con diferentes tipos de prompts:
 - **Prompts del sistema**: Establecen las reglas base y el contexto para el comportamiento del modelo.
 - **Prompts del usuario**: Los datos de entrada de los usuarios de tu aplicación.
 - **Prompts del asistente**: Las respuestas del modelo basadas en los prompts del sistema y del usuario.
 
-> **Más información**: Aprende más sobre ingeniería de prompts en [el capítulo de Ingeniería de Prompts del curso GenAI para Principiantes](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals)
+> **Aprende más**: Aprende más sobre ingeniería de prompts en [el capítulo de Ingeniería de Prompts del curso GenAI para Principiantes](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals)
 
 #### Tokens, embeddings y agentes
 
 Al trabajar con modelos de IA generativa, encontrarás términos como **tokens**, **embeddings**, **agentes** y **Protocolo de Contexto del Modelo (MCP)**. Aquí tienes una descripción detallada de estos conceptos:
 
-- **Tokens**: Los tokens son la unidad más pequeña de texto en un modelo. Pueden ser palabras, caracteres o subpalabras. Los tokens se utilizan para representar datos de texto en un formato que el modelo puede entender. Por ejemplo, la frase "El rápido zorro marrón saltó sobre el perro perezoso" podría tokenizarse como ["El", " rápido", " zorro", " marrón", " saltó", " sobre", " el", " perro", " perezoso"] o ["El", " rá", "pi", "do", " zo", "rro", " ma", "rrón", " sal", "tó", " so", "bre", " el", " pe", "re", "zo", "so"] dependiendo de la estrategia de tokenización.
+- **Tokens**: Los tokens son la unidad más pequeña de texto en un modelo. Pueden ser palabras, caracteres o subpalabras. Los tokens se utilizan para representar datos de texto en un formato que el modelo puede entender. Por ejemplo, la frase "El rápido zorro marrón saltó sobre el perro perezoso" podría tokenizarse como ["El", " rápido", " zorro", " marrón", " saltó", " sobre", " el", " perro", " perezoso"] o ["El", " rá", "pi", "do", " zo", "rro", " ma", "rrón", " sal", "tó", " so", "bre", " el", " pe", "rro", " pe", "re", "zo", "so"] dependiendo de la estrategia de tokenización.
 
 ![Figura: Ejemplo de tokens de IA generativa dividiendo palabras en tokens](../../../01-IntroToGenAI/images/tokens.webp)
 
@@ -77,7 +77,7 @@ La tokenización es el proceso de dividir el texto en estas unidades más peque�
 
 En Java, puedes usar bibliotecas como el OpenAI SDK para manejar la tokenización automáticamente al enviar solicitudes a los modelos de IA.
 
-- **Embeddings**: Los embeddings son representaciones vectoriales de tokens que capturan el significado semántico. Son representaciones numéricas (típicamente matrices de números de punto flotante) que permiten a los modelos entender relaciones entre palabras y generar respuestas contextualmente relevantes. Las palabras similares tienen embeddings similares, lo que permite al modelo entender conceptos como sinónimos y relaciones semánticas.
+- **Embeddings**: Los embeddings son representaciones vectoriales de tokens que capturan el significado semántico. Son representaciones numéricas (típicamente matrices de números de punto flotante) que permiten a los modelos entender relaciones entre palabras y generar respuestas contextualmente relevantes. Palabras similares tienen embeddings similares, lo que permite al modelo entender conceptos como sinónimos y relaciones semánticas.
 
 ![Figura: Embeddings](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.es.png)
 
@@ -103,12 +103,12 @@ Aquí tienes una tabla de referencia rápida que muestra qué SDK se utiliza en 
 
 | Capítulo | Ejemplo | SDK |
 |----------|---------|-----|
-| 02-SetupDevEnvironment | src/github-models/ | OpenAI Java SDK |
-| 02-SetupDevEnvironment | src/basic-chat-azure/ | Spring AI Azure OpenAI |
-| 03-CoreGenerativeAITechniques | examples/ | Azure OpenAI SDK |
-| 04-PracticalSamples | petstory/ | OpenAI Java SDK |
-| 04-PracticalSamples | foundrylocal/ | OpenAI Java SDK |
-| 04-PracticalSamples | mcp/calculator/ | Spring AI MCP SDK + LangChain4j |
+| 02-SetupDevEnvironment | github-models | OpenAI Java SDK |
+| 02-SetupDevEnvironment | basic-chat-azure | Spring AI Azure OpenAI |
+| 03-CoreGenerativeAITechniques | ejemplos | Azure OpenAI SDK |
+| 04-PracticalSamples | petstory | OpenAI Java SDK |
+| 04-PracticalSamples | foundrylocal | OpenAI Java SDK |
+| 04-PracticalSamples | calculator | Spring AI MCP SDK + LangChain4j |
 
 **Enlaces de documentación de SDK:**
 - [Azure OpenAI Java SDK](https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.16/sdk/openai/azure-ai-openai)
@@ -122,7 +122,7 @@ El SDK de OpenAI es la biblioteca oficial de Java para la API de OpenAI. Proporc
 
 #### Spring AI
 
-Spring AI es un marco integral que lleva capacidades de IA a las aplicaciones Spring, proporcionando una capa de abstracción consistente entre diferentes proveedores de IA. Se integra perfectamente con el ecosistema Spring, lo que lo convierte en la elección ideal para aplicaciones empresariales en Java que necesitan capacidades de IA.
+Spring AI es un marco integral que lleva capacidades de IA a las aplicaciones Spring, proporcionando una capa de abstracción consistente entre diferentes proveedores de IA. Se integra perfectamente con el ecosistema Spring, lo que lo convierte en la elección ideal para aplicaciones empresariales Java que necesitan capacidades de IA.
 
 La fortaleza de Spring AI radica en su integración fluida con el ecosistema Spring, facilitando la construcción de aplicaciones de IA listas para producción con patrones familiares de Spring como inyección de dependencias, gestión de configuración y marcos de prueba. Utilizarás Spring AI en los capítulos 2 y 4 para construir aplicaciones que aprovechen tanto OpenAI como las bibliotecas de Spring AI del Protocolo de Contexto del Modelo (MCP).
 
@@ -134,9 +134,9 @@ En el Capítulo 4, construirás un servicio de calculadora MCP simple que demues
 
 #### Azure OpenAI Java SDK
 
-La biblioteca cliente de Azure OpenAI para Java es una adaptación de las API REST de OpenAI que proporciona una interfaz idiomática e integración con el resto del ecosistema de SDK de Azure. En el Capítulo 3, construirás aplicaciones utilizando el Azure OpenAI SDK, incluyendo aplicaciones de chat, llamadas a funciones y patrones de Generación Aumentada por Recuperación (RAG).
+La biblioteca cliente de Azure OpenAI para Java es una adaptación de las API REST de OpenAI que proporciona una interfaz idiomática e integración con el resto del ecosistema de SDK de Azure. En el Capítulo 3, construirás aplicaciones utilizando el SDK de Azure OpenAI, incluyendo aplicaciones de chat, llamadas a funciones y patrones de Generación Aumentada por Recuperación (RAG).
 
-> Nota: El SDK de Azure OpenAI está rezagado respecto al SDK de OpenAI Java en términos de características, por lo que para proyectos futuros, considera usar el SDK de OpenAI Java.
+> Nota: El SDK de Azure OpenAI está rezagado respecto al OpenAI Java SDK en términos de características, por lo que para proyectos futuros, considera usar el OpenAI Java SDK.
 
 ## Resumen
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "df269f529a172a0197ef28460bf1da9f",
-  "translation_date": "2025-07-25T10:40:58+00:00",
+  "original_hash": "d45b8e2291ab1357592c904c103cbc81",
+  "translation_date": "2025-07-28T10:16:28+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "de"
 }
@@ -31,7 +31,7 @@ Dieses Kapitel präsentiert **Beispielfprojekte**, die Entwicklungsmuster für g
 
 ### Foundry Local Spring Boot Demo
 
-Das **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** zeigt, wie man lokale KI-Modelle mit dem **OpenAI Java SDK** integriert. Es demonstriert die Verbindung mit dem **Phi-3.5-mini** Modell, das auf Foundry Local läuft, und ermöglicht es Ihnen, KI-Anwendungen ohne Cloud-Dienste auszuführen.
+Das **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** zeigt, wie man lokale KI-Modelle mithilfe des **OpenAI Java SDK** integriert. Es demonstriert die Verbindung mit dem **Phi-3.5-mini** Modell, das auf Foundry Local läuft, und ermöglicht es Ihnen, KI-Anwendungen ohne Abhängigkeit von Cloud-Diensten auszuführen.
 
 ### Pet Story Generator
 
@@ -39,13 +39,13 @@ Der **[Pet Story Generator](petstory/README.md)** ist eine unterhaltsame Spring 
 
 ### MCP Calculator Service (Einsteigerfreundliches MCP-Demo)
 
-Der **[MCP Calculator Service](mcp/calculator/README.md)** ist eine einfache Demonstration des **Model Context Protocol (MCP)** mit Spring AI. Es bietet eine einsteigerfreundliche Einführung in MCP-Konzepte und zeigt, wie man einen grundlegenden MCP-Server erstellt, der mit MCP-Clients interagiert.
+Der **[MCP Calculator Service](calculator/README.md)** ist eine einfache Demonstration des **Model Context Protocol (MCP)** mit Spring AI. Es bietet eine einsteigerfreundliche Einführung in MCP-Konzepte und zeigt, wie man einen grundlegenden MCP-Server erstellt, der mit MCP-Clients interagiert.
 
 ## Lernfortschritt
 
 Diese Projekte bauen auf Konzepten aus den vorherigen Kapiteln auf:
 
-1. **Einfach anfangen**: Beginnen Sie mit dem Foundry Local Spring Boot Demo, um die grundlegende KI-Integration mit lokalen Modellen zu verstehen
+1. **Einfach anfangen**: Beginnen Sie mit dem Foundry Local Spring Boot Demo, um die grundlegende Integration von KI mit lokalen Modellen zu verstehen
 2. **Interaktivität hinzufügen**: Machen Sie mit dem Pet Story Generator weiter, um multi-modale KI und webbasierte Interaktionen zu erkunden
 3. **MCP-Grundlagen lernen**: Probieren Sie den MCP Calculator Service aus, um die Grundlagen des Model Context Protocols zu verstehen
 
