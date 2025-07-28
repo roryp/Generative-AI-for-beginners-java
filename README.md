@@ -50,8 +50,8 @@
 - **[→ Start Chapter 4](./04-PracticalSamples/README.md)**
 
 ### **Chapter 5: Responsible AI Development**
-- **GitHub Models Safety**: Test built-in content filtering and safety mechanisms
-- **Responsible AI Demo**: Hands-on example showing how AI safety filters work in practice
+- **GitHub Models Safety**: Test built-in content filtering and safety mechanisms (hard blocks and soft refusals)
+- **Responsible AI Demo**: Hands-on example showing how modern AI safety systems work in practice
 - **Best Practices**: Essential guidelines for ethical AI development and deployment
 - **[→ Start Chapter 5](./05-ResponsibleGenAI/README.md)**
 
