@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "df269f529a172a0197ef28460bf1da9f",
-  "translation_date": "2025-07-25T11:22:12+00:00",
+  "original_hash": "d45b8e2291ab1357592c904c103cbc81",
+  "translation_date": "2025-07-28T10:46:24+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "tr"
 }
@@ -27,7 +27,7 @@ Bu bölümde, Java ile üretken yapay zeka geliştirme modellerini sergileyen ü
 
 ## Giriş
 
-Bu bölüm, Java ile üretken yapay zeka geliştirme modellerini sergileyen **örnek projeleri** sunar. Her proje tamamen işlevseldir ve kendi uygulamalarınıza uyarlayabileceğiniz belirli yapay zeka teknolojilerini, mimari modelleri ve en iyi uygulamaları gösterir.
+Bu bölüm, Java ile üretken yapay zeka geliştirme modellerini sergileyen **örnek projeleri** içerir. Her proje tamamen işlevseldir ve kendi uygulamalarınıza uyarlayabileceğiniz belirli yapay zeka teknolojilerini, mimari modelleri ve en iyi uygulamaları gösterir.
 
 ### Foundry Local Spring Boot Demo
 
@@ -35,11 +35,11 @@ Bu bölüm, Java ile üretken yapay zeka geliştirme modellerini sergileyen **ö
 
 ### Evcil Hayvan Hikaye Üreticisi
 
-**[Evcil Hayvan Hikaye Üreticisi](petstory/README.md)**, yaratıcı evcil hayvan hikayeleri üretmek için **çok modlu yapay zeka işleme** sergileyen eğlenceli bir Spring Boot web uygulamasıdır. Bu uygulama, tarayıcı tabanlı yapay zeka etkileşimleri için transformer.js ve sunucu tarafı işleme için OpenAI SDK kullanarak istemci tarafı ve sunucu tarafı yapay zeka yeteneklerini birleştirir.
+**[Evcil Hayvan Hikaye Üreticisi](petstory/README.md)**, yaratıcı evcil hayvan hikayeleri üretmek için **çok modlu yapay zeka işleme** sergileyen eğlenceli bir Spring Boot web uygulamasıdır. Bu uygulama, tarayıcı tabanlı yapay zeka etkileşimleri için transformer.js ve sunucu tarafı işleme için OpenAI SDK kullanarak istemci tarafı ve sunucu tarafı yapay zekayı birleştirir.
 
 ### MCP Hesap Makinesi Hizmeti (Yeni Başlayanlar İçin MCP Demo)
 
-**[MCP Hesap Makinesi Hizmeti](mcp/calculator/README.md)**, Spring AI kullanarak **Model Context Protocol (MCP)**'nin basit bir gösterimidir. MCP kavramlarına yeni başlayanlar için uygun bir giriş sunar ve MCP istemcileriyle etkileşimde bulunan temel bir MCP Sunucusu oluşturmayı gösterir.
+**[MCP Hesap Makinesi Hizmeti](calculator/README.md)**, Spring AI kullanarak **Model Context Protocol (MCP)**'yi basit bir şekilde sergileyen bir demodur. MCP kavramlarına yeni başlayanlar için uygun bir giriş sağlar ve MCP istemcileriyle etkileşim kuran temel bir MCP Sunucusu oluşturmayı gösterir.
 
 ## Öğrenme Süreci
 
@@ -53,8 +53,8 @@ Bu projeler, önceki bölümlerdeki kavramlar üzerine inşa edilmek üzere tasa
 
 **Tebrikler!** Başarıyla:
 
-- **Çok modlu yapay zeka deneyimleri oluşturdunuz**, istemci tarafı ve sunucu tarafı yapay zeka işlemlerini birleştirerek
-- **Modern Java çerçeveleri ve SDK'lar kullanarak yerel yapay zeka modeli entegrasyonu uyguladınız**
+- **Çok modlu yapay zeka deneyimleri oluşturdunuz**, istemci tarafı ve sunucu tarafı yapay zeka işlemlerini birleştirdiniz
+- **Modern Java çerçeveleri ve SDK'lar kullanarak yerel yapay zeka modeli entegrasyonu gerçekleştirdiniz**
 - **Araç entegrasyon modellerini sergileyen Model Context Protocol hizmetleri geliştirdiniz**
 
 ## Sonraki Adımlar
@@ -62,4 +62,4 @@ Bu projeler, önceki bölümlerdeki kavramlar üzerine inşa edilmek üzere tasa
 [5. Bölüm: Sorumlu Üretken Yapay Zeka](../05-ResponsibleGenAI/README.md)
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki hali yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumlama durumunda sorumluluk kabul edilmez.

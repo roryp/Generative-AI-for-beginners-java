@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6d8b4a0d774dc2a1e97c95859a6d6e4b",
-  "translation_date": "2025-07-21T18:43:56+00:00",
+  "original_hash": "006866db93a268a8769bb55f2e324291",
+  "translation_date": "2025-07-28T10:43:28+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "it"
 }
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introduzione
 
-Benvenuto al primo capitolo di AI Generativa per Principianti - Edizione Java! Questa lezione introduttiva ti guiderà attraverso i concetti fondamentali dell'AI generativa e su come lavorarci utilizzando Java. Imparerai i componenti essenziali delle applicazioni AI, inclusi i Large Language Models (LLM), i token, gli embedding e gli agenti AI. Esploreremo anche i principali strumenti Java che utilizzerai durante questo corso.
+Benvenuto al primo capitolo di AI Generativa per Principianti - Edizione Java! Questa lezione introduttiva ti guiderà attraverso i concetti fondamentali dell'AI generativa e su come lavorarci utilizzando Java. Imparerai i blocchi essenziali per costruire applicazioni AI, inclusi i Large Language Models (LLM), i token, gli embedding e gli agenti AI. Esploreremo anche i principali strumenti Java che utilizzerai durante questo corso.
 
 ### Un rapido ripasso sui concetti di AI Generativa
 
@@ -97,18 +97,18 @@ Nelle applicazioni AI in Java, utilizzerai i token per l'elaborazione del testo,
 
 ### Strumenti e librerie di sviluppo AI per Java
 
-Java offre ottimi strumenti per lo sviluppo AI. Ci sono tre principali librerie che esploreremo durante questo corso: OpenAI Java SDK, Azure OpenAI SDK e Spring AI.
+Java offre ottimi strumenti per lo sviluppo AI. Esistono tre principali librerie che esploreremo durante questo corso: OpenAI Java SDK, Azure OpenAI SDK e Spring AI.
 
 Ecco una tabella di riferimento rapido che mostra quale SDK viene utilizzato negli esempi di ciascun capitolo:
 
 | Capitolo | Esempio | SDK |
 |----------|---------|-----|
-| 02-SetupDevEnvironment | src/github-models/ | OpenAI Java SDK |
-| 02-SetupDevEnvironment | src/basic-chat-azure/ | Spring AI Azure OpenAI |
-| 03-CoreGenerativeAITechniques | examples/ | Azure OpenAI SDK |
-| 04-PracticalSamples | petstory/ | OpenAI Java SDK |
-| 04-PracticalSamples | foundrylocal/ | OpenAI Java SDK |
-| 04-PracticalSamples | mcp/calculator/ | Spring AI MCP SDK + LangChain4j |
+| 02-SetupDevEnvironment | github-models | OpenAI Java SDK |
+| 02-SetupDevEnvironment | basic-chat-azure | Spring AI Azure OpenAI |
+| 03-CoreGenerativeAITechniques | examples | Azure OpenAI SDK |
+| 04-PracticalSamples | petstory | OpenAI Java SDK |
+| 04-PracticalSamples | foundrylocal | OpenAI Java SDK |
+| 04-PracticalSamples | calculator | Spring AI MCP SDK + LangChain4j |
 
 **Link alla documentazione degli SDK:**
 - [Azure OpenAI Java SDK](https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.16/sdk/openai/azure-ai-openai)
@@ -118,7 +118,7 @@ Ecco una tabella di riferimento rapido che mostra quale SDK viene utilizzato neg
 
 #### OpenAI Java SDK
 
-L'OpenAI SDK è la libreria Java ufficiale per l'API di OpenAI. Fornisce un'interfaccia semplice e coerente per interagire con i modelli di OpenAI, rendendo facile integrare le capacità AI nelle applicazioni Java. L'esempio GitHub Models del Capitolo 2, l'applicazione Pet Story e l'esempio Foundry Local del Capitolo 4 dimostrano l'approccio con l'OpenAI SDK.
+L'OpenAI SDK è la libreria Java ufficiale per l'API di OpenAI. Fornisce un'interfaccia semplice e coerente per interagire con i modelli di OpenAI, rendendo facile integrare le capacità AI nelle applicazioni Java. L'esempio GitHub Models del Capitolo 2, l'applicazione Pet Story del Capitolo 4 e l'esempio Foundry Local dimostrano l'approccio con l'OpenAI SDK.
 
 #### Spring AI
 
@@ -130,25 +130,25 @@ La forza di Spring AI risiede nella sua integrazione senza soluzione di continui
 
 Il [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) è uno standard emergente che consente alle applicazioni AI di interagire in modo sicuro con fonti di dati esterne e strumenti. MCP fornisce un modo standardizzato per i modelli AI di accedere a informazioni contestuali ed eseguire azioni nelle tue applicazioni.
 
-Nel Capitolo 4, costruirai un semplice servizio di calcolatrice MCP che dimostra i fondamenti del Model Context Protocol con Spring AI, mostrando come creare integrazioni di strumenti di base e architetture di servizio.
+Nel Capitolo 4, costruirai un semplice servizio calcolatrice MCP che dimostra i fondamenti del Model Context Protocol con Spring AI, mostrando come creare integrazioni di strumenti di base e architetture di servizio.
 
 #### Azure OpenAI Java SDK
 
-La libreria client Azure OpenAI per Java è un adattamento delle API REST di OpenAI che fornisce un'interfaccia idiomatica e un'integrazione con il resto dell'ecosistema Azure SDK. Nel Capitolo 3, costruirai applicazioni utilizzando l'Azure OpenAI SDK, incluse applicazioni di chat, chiamate a funzioni e pattern RAG (Retrieval-Augmented Generation).
+La libreria client Azure OpenAI per Java è un adattamento delle API REST di OpenAI che fornisce un'interfaccia idiomatica e un'integrazione con il resto dell'ecosistema Azure SDK. Nel Capitolo 3, costruirai applicazioni utilizzando l'Azure OpenAI SDK, inclusi applicazioni di chat, chiamate di funzioni e pattern RAG (Retrieval-Augmented Generation).
 
 > Nota: L'Azure OpenAI SDK è meno avanzato rispetto all'OpenAI Java SDK in termini di funzionalità, quindi per progetti futuri considera l'utilizzo dell'OpenAI Java SDK.
 
 ## Riepilogo
 
-**Congratulazioni!** Hai appreso con successo:
+**Congratulazioni!** Hai imparato con successo:
 
 - **I fondamenti dell'AI Generativa**, inclusi LLM, prompt engineering, token, embedding e database vettoriali
 - **Il confronto tra strumenti di sviluppo AI in Java**, come Azure OpenAI SDK, Spring AI e OpenAI Java SDK
-- **Il Model Context Protocol** e il suo ruolo nella comunicazione tra agenti AI
+- **La scoperta del Model Context Protocol** e del suo ruolo nella comunicazione tra agenti AI
 
 ## Prossimi Passi
 
 [Capitolo 2: Configurazione dell'Ambiente di Sviluppo](../02-SetupDevEnvironment/README.md)
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

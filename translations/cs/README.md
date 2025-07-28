@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7216baee4139fab32d7bfa0777d75551",
-  "translation_date": "2025-07-27T19:00:39+00:00",
+  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
+  "translation_date": "2025-07-28T11:07:25+00:00",
   "source_file": "README.md",
   "language_code": "cs"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativní AI pro začátečníky - Java edice](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.cs.png)
 
-**Časová náročnost**: Celý workshop lze dokončit online bez nutnosti lokálního nastavení. Nastavení prostředí zabere 2 minuty, průzkum ukázek vyžaduje 1–3 hodiny v závislosti na hloubce průzkumu.
+**Časová náročnost**: Celý workshop lze dokončit online bez lokálního nastavení. Nastavení prostředí zabere 2 minuty, průzkum ukázek vyžaduje 1–3 hodiny v závislosti na hloubce průzkumu.
 
 > **Rychlý start** 
 
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 3. Použijte výchozí nastavení – tím se vybere vývojový kontejner vytvořený pro tento kurz
 4. Klikněte na **Create codespace**
 5. Počkejte ~2 minuty, než bude prostředí připraveno
-6. Přejděte rovnou na [Vytvoření tokenu GitHub Models](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Přejděte rovnou na [První příklad](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Podpora více jazyků
 
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Základní koncepty**: Porozumění velkým jazykovým modelům, tokenům, embeddingům a schopnostem AI
 - **Java AI ekosystém**: Přehled Spring AI a OpenAI SDK
 - **Protokol kontextu modelu**: Úvod do MCP a jeho role v komunikaci AI agentů
-- **Praktické aplikace**: Reálné scénáře včetně chatbotů a generování obsahu
+- **Praktické aplikace**: Scénáře z reálného světa včetně chatbotů a generování obsahu
 - **[→ Začít kapitolu 1](./01-IntroToGenAI/README.md)**
 
 ### **Kapitola 2: Nastavení vývojového prostředí**
@@ -55,7 +55,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapitola 4: Praktické aplikace a projekty**
 - **Generátor příběhů o mazlíčcích** (`petstory/`): Kreativní generování obsahu s GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Integrace lokálních AI modelů s OpenAI Java SDK
-- **MCP kalkulační služba** (`mcp/calculator/`): Základní implementace protokolu kontextu modelu se Spring AI
+- **MCP kalkulační služba** (`calculator/`): Základní implementace protokolu kontextu modelu se Spring AI
 - **[→ Začít kapitolu 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitola 5: Odpovědný vývoj AI**
