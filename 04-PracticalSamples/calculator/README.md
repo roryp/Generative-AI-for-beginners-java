@@ -250,7 +250,7 @@ export GITHUB_TOKEN=your_github_token_here
 Start the server:
 ```bash
 cd 04-PracticalSamples/calculator
-mvn spring-boot:run
+mvn clean spring-boot:run
 ```
 
 The server will start on `http://localhost:8080`. You should see:

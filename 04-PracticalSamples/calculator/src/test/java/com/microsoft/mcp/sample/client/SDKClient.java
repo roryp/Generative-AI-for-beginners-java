@@ -96,5 +96,14 @@ public class SDKClient {
 
 		// Clean up the connection
 		client.closeGracefully();
+
+		// Give threads time to shut down properly before exiting
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+
+		System.exit(0);
 	}
 }
