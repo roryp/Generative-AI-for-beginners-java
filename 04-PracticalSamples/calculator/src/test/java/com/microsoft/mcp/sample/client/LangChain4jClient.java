@@ -1,5 +1,8 @@
 package com.microsoft.mcp.sample.client;
 
+import java.time.Duration;
+import java.util.List;
+
 import dev.langchain4j.mcp.McpToolProvider;
 import dev.langchain4j.mcp.client.DefaultMcpClient;
 import dev.langchain4j.mcp.client.McpClient;
@@ -9,9 +12,6 @@ import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.openaiofficial.OpenAiOfficialChatModel;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.tool.ToolProvider;
-
-import java.time.Duration;
-import java.util.List;
 
 /**
  * LangChain4j MCP Client Example
@@ -123,6 +123,16 @@ public class LangChain4jClient {
                 } finally {
                         // Always clean up connections
                         mcpClient.close();
+                        
+                        // Give threads time to shut down properly before exiting
+                        try {
+                                Thread.sleep(200);
+                        } catch (InterruptedException e) {
+                                Thread.currentThread().interrupt();
+                        }
                 }
+                
+                // Force exit to ensure all threads terminate
+                System.exit(0);
         }
 }
