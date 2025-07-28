@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6d8b4a0d774dc2a1e97c95859a6d6e4b",
-  "translation_date": "2025-07-21T20:17:51+00:00",
+  "original_hash": "006866db93a268a8769bb55f2e324291",
+  "translation_date": "2025-07-28T10:59:45+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "vi"
 }
@@ -30,16 +30,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Giới thiệu
 
-Chào mừng bạn đến với chương đầu tiên của Generative AI cho Người Mới Bắt Đầu - Phiên bản Java! Bài học nền tảng này sẽ giới thiệu bạn đến các khái niệm cốt lõi của Generative AI và cách làm việc với chúng bằng Java. Bạn sẽ học về các thành phần cơ bản của ứng dụng AI, bao gồm Mô hình Ngôn ngữ Lớn (LLMs), tokens, embeddings, và các tác nhân AI. Chúng ta cũng sẽ khám phá các công cụ Java chính mà bạn sẽ sử dụng trong suốt khóa học này.
+Chào mừng bạn đến với chương đầu tiên của Generative AI cho Người Mới Bắt Đầu - Phiên bản Java! Bài học nền tảng này sẽ giới thiệu cho bạn các khái niệm cốt lõi của Generative AI và cách làm việc với chúng bằng Java. Bạn sẽ học về các thành phần cơ bản của ứng dụng AI, bao gồm Mô hình Ngôn ngữ Lớn (LLMs), tokens, embeddings, và các tác nhân AI. Chúng ta cũng sẽ khám phá các công cụ Java chính mà bạn sẽ sử dụng trong suốt khóa học này.
 
 ### Tóm tắt nhanh về các khái niệm Generative AI
 
-Generative AI là một loại trí tuệ nhân tạo có khả năng tạo nội dung mới, chẳng hạn như văn bản, hình ảnh, hoặc mã, dựa trên các mẫu và mối quan hệ học được từ dữ liệu. Các mô hình Generative AI có thể tạo ra phản hồi giống con người, hiểu ngữ cảnh, và đôi khi thậm chí tạo nội dung trông giống như do con người tạo ra.
+Generative AI là một loại trí tuệ nhân tạo tạo ra nội dung mới, chẳng hạn như văn bản, hình ảnh, hoặc mã, dựa trên các mẫu và mối quan hệ học được từ dữ liệu. Các mô hình Generative AI có thể tạo ra phản hồi giống con người, hiểu ngữ cảnh, và đôi khi thậm chí tạo nội dung trông giống như do con người tạo ra.
 
 Khi bạn phát triển các ứng dụng AI bằng Java, bạn sẽ làm việc với **các mô hình Generative AI** để tạo nội dung. Một số khả năng của các mô hình Generative AI bao gồm:
 
 - **Tạo văn bản**: Soạn thảo văn bản giống con người cho chatbot, nội dung, và hoàn thành văn bản.
-- **Tạo và phân tích hình ảnh**: Tạo hình ảnh thực tế, cải thiện ảnh, và phát hiện đối tượng.
+- **Tạo và phân tích hình ảnh**: Tạo ra hình ảnh thực tế, cải thiện ảnh, và phát hiện đối tượng.
 - **Tạo mã**: Viết đoạn mã hoặc script.
 
 Có những loại mô hình cụ thể được tối ưu hóa cho các nhiệm vụ khác nhau. Ví dụ, cả **Mô hình Ngôn ngữ Nhỏ (SLMs)** và **Mô hình Ngôn ngữ Lớn (LLMs)** đều có thể xử lý việc tạo văn bản, với LLMs thường mang lại hiệu suất tốt hơn cho các nhiệm vụ phức tạp. Đối với các nhiệm vụ liên quan đến hình ảnh, bạn sẽ sử dụng các mô hình thị giác chuyên biệt hoặc mô hình đa phương thức.
@@ -81,7 +81,7 @@ Phân tách là quá trình chia nhỏ văn bản thành các đơn vị nhỏ h
 
 ![Hình: Embeddings](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.vi.png)
 
-  Trong Java, bạn có thể tạo embeddings bằng cách sử dụng OpenAI SDK hoặc các thư viện khác hỗ trợ tạo embeddings. Các embeddings này rất quan trọng cho các nhiệm vụ như tìm kiếm ngữ nghĩa, nơi bạn muốn tìm nội dung tương tự dựa trên ý nghĩa thay vì khớp chính xác văn bản.
+  Trong Java, bạn có thể tạo embeddings bằng cách sử dụng OpenAI SDK hoặc các thư viện khác hỗ trợ tạo embeddings. Các embeddings này rất quan trọng cho các nhiệm vụ như tìm kiếm ngữ nghĩa, nơi bạn muốn tìm nội dung tương tự dựa trên ý nghĩa thay vì khớp văn bản chính xác.
 
 - **Cơ sở dữ liệu vector**: Cơ sở dữ liệu vector là các hệ thống lưu trữ chuyên biệt được tối ưu hóa cho embeddings. Chúng cho phép tìm kiếm tương tự hiệu quả và rất quan trọng cho các mẫu RAG (Retrieval-Augmented Generation), nơi bạn cần tìm thông tin liên quan từ các tập dữ liệu lớn dựa trên sự tương đồng ngữ nghĩa thay vì khớp chính xác.
 
@@ -89,7 +89,7 @@ Phân tách là quá trình chia nhỏ văn bản thành các đơn vị nhỏ h
 
 > **Lưu ý**: Trong khóa học này, chúng ta sẽ không đề cập đến cơ sở dữ liệu vector nhưng nghĩ rằng chúng đáng được nhắc đến vì chúng thường được sử dụng trong các ứng dụng thực tế.
 
-- **Agents & MCP**: Các thành phần AI tự động tương tác với các mô hình, công cụ, và hệ thống bên ngoài. Giao thức Ngữ cảnh Mô hình (MCP) cung cấp một cách tiêu chuẩn hóa để các agents truy cập dữ liệu và công cụ bên ngoài một cách an toàn. Tìm hiểu thêm trong khóa học [MCP cho Người Mới Bắt Đầu](https://github.com/microsoft/mcp-for-beginners).
+- **Agents & MCP**: Các thành phần AI tự động tương tác với các mô hình, công cụ, và hệ thống bên ngoài. Giao thức Ngữ cảnh Mô hình (MCP) cung cấp một cách tiêu chuẩn hóa để các agents truy cập an toàn vào các nguồn dữ liệu và công cụ bên ngoài. Tìm hiểu thêm trong khóa học [MCP cho Người Mới Bắt Đầu](https://github.com/microsoft/mcp-for-beginners).
 
 Trong các ứng dụng AI Java, bạn sẽ sử dụng tokens để xử lý văn bản, embeddings để tìm kiếm ngữ nghĩa và RAG, cơ sở dữ liệu vector để truy xuất dữ liệu, và agents với MCP để xây dựng các hệ thống thông minh sử dụng công cụ.
 
@@ -103,12 +103,12 @@ Dưới đây là bảng tham khảo nhanh hiển thị SDK nào được sử d
 
 | Chương | Mẫu | SDK |
 |---------|--------|-----|
-| 02-SetupDevEnvironment | src/github-models/ | OpenAI Java SDK |
-| 02-SetupDevEnvironment | src/basic-chat-azure/ | Spring AI Azure OpenAI |
-| 03-CoreGenerativeAITechniques | examples/ | Azure OpenAI SDK |
-| 04-PracticalSamples | petstory/ | OpenAI Java SDK |
-| 04-PracticalSamples | foundrylocal/ | OpenAI Java SDK |
-| 04-PracticalSamples | mcp/calculator/ | Spring AI MCP SDK + LangChain4j |
+| 02-SetupDevEnvironment | github-models | OpenAI Java SDK |
+| 02-SetupDevEnvironment | basic-chat-azure | Spring AI Azure OpenAI |
+| 03-CoreGenerativeAITechniques | examples | Azure OpenAI SDK |
+| 04-PracticalSamples | petstory | OpenAI Java SDK |
+| 04-PracticalSamples | foundrylocal | OpenAI Java SDK |
+| 04-PracticalSamples | calculator | Spring AI MCP SDK + LangChain4j |
 
 **Liên kết tài liệu SDK:**
 - [Azure OpenAI Java SDK](https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.16/sdk/openai/azure-ai-openai)
@@ -118,13 +118,13 @@ Dưới đây là bảng tham khảo nhanh hiển thị SDK nào được sử d
 
 #### OpenAI Java SDK
 
-OpenAI SDK là thư viện Java chính thức cho API OpenAI. Nó cung cấp một giao diện đơn giản và nhất quán để tương tác với các mô hình của OpenAI, giúp dễ dàng tích hợp các khả năng AI vào các ứng dụng Java. Ví dụ GitHub Models của Chương 2, ứng dụng Pet Story của Chương 4 và ví dụ Foundry Local minh họa cách tiếp cận với OpenAI SDK.
+OpenAI SDK là thư viện Java chính thức cho API OpenAI. Nó cung cấp một giao diện đơn giản và nhất quán để tương tác với các mô hình của OpenAI, giúp dễ dàng tích hợp các khả năng AI vào các ứng dụng Java. Ví dụ GitHub Models của Chương 2, ứng dụng Pet Story của Chương 4 và ví dụ Foundry Local minh họa cách tiếp cận của OpenAI SDK.
 
 #### Spring AI
 
 Spring AI là một framework toàn diện mang lại các khả năng AI cho các ứng dụng Spring, cung cấp một lớp trừu tượng nhất quán trên các nhà cung cấp AI khác nhau. Nó tích hợp liền mạch với hệ sinh thái Spring, làm cho nó trở thành lựa chọn lý tưởng cho các ứng dụng Java doanh nghiệp cần các khả năng AI.
 
-Điểm mạnh của Spring AI nằm ở sự tích hợp liền mạch với hệ sinh thái Spring, giúp dễ dàng xây dựng các ứng dụng AI sẵn sàng cho sản xuất với các mẫu Spring quen thuộc như tiêm phụ thuộc, quản lý cấu hình, và các framework kiểm thử. Bạn sẽ sử dụng Spring AI trong Chương 2 và 4 để xây dựng các ứng dụng tận dụng cả thư viện OpenAI và Model Context Protocol (MCP) của Spring AI.
+Điểm mạnh của Spring AI nằm ở sự tích hợp liền mạch với hệ sinh thái Spring, giúp dễ dàng xây dựng các ứng dụng AI sẵn sàng cho sản xuất với các mẫu Spring quen thuộc như tiêm phụ thuộc, quản lý cấu hình, và framework kiểm thử. Bạn sẽ sử dụng Spring AI trong Chương 2 và 4 để xây dựng các ứng dụng tận dụng cả thư viện OpenAI và Model Context Protocol (MCP) của Spring AI.
 
 ##### Giao thức Ngữ cảnh Mô hình (MCP)
 
@@ -134,7 +134,7 @@ Trong Chương 4, bạn sẽ xây dựng một dịch vụ máy tính MCP đơn 
 
 #### Azure OpenAI Java SDK
 
-Thư viện khách hàng Azure OpenAI cho Java là một phiên bản thích nghi của các API REST của OpenAI, cung cấp một giao diện theo phong cách Java và tích hợp với phần còn lại của hệ sinh thái SDK Azure. Trong Chương 3, bạn sẽ xây dựng các ứng dụng sử dụng Azure OpenAI SDK, bao gồm các ứng dụng trò chuyện, gọi hàm, và các mẫu RAG (Retrieval-Augmented Generation).
+Thư viện khách Azure OpenAI cho Java là một phiên bản thích nghi của các API REST của OpenAI, cung cấp một giao diện theo phong cách Java và tích hợp với phần còn lại của hệ sinh thái SDK Azure. Trong Chương 3, bạn sẽ xây dựng các ứng dụng sử dụng Azure OpenAI SDK, bao gồm các ứng dụng chat, gọi hàm, và các mẫu RAG (Retrieval-Augmented Generation).
 
 > Lưu ý: Azure OpenAI SDK hiện có ít tính năng hơn so với OpenAI Java SDK, vì vậy cho các dự án tương lai, hãy cân nhắc sử dụng OpenAI Java SDK.
 
@@ -151,4 +151,4 @@ Thư viện khách hàng Azure OpenAI cho Java là một phiên bản thích ngh
 [Chương 2: Thiết lập Môi trường Phát triển](../02-SetupDevEnvironment/README.md)
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

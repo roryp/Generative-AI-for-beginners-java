@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "df269f529a172a0197ef28460bf1da9f",
-  "translation_date": "2025-07-25T11:29:06+00:00",
+  "original_hash": "d45b8e2291ab1357592c904c103cbc81",
+  "translation_date": "2025-07-28T10:51:33+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "sv"
 }
@@ -10,9 +10,9 @@ CO_OP_TRANSLATOR_METADATA:
 # Praktiska Tillämpningar & Projekt
 
 ## Vad Du Kommer Lära Dig
-I den här sektionen demonstrerar vi tre praktiska tillämpningar som visar utvecklingsmönster för generativ AI med Java:
+I det här avsnittet demonstrerar vi tre praktiska tillämpningar som visar utvecklingsmönster för generativ AI med Java:
 - Skapa en multimodal berättelsegenerator för husdjur som kombinerar AI på klient- och serversidan
-- Implementera integration av lokala AI-modeller med Foundry Local Spring Boot-demo
+- Implementera lokal AI-modellintegration med Foundry Local Spring Boot-demo
 - Utveckla en Model Context Protocol (MCP)-tjänst med kalkylatorexemplet
 
 ## Innehållsförteckning
@@ -21,17 +21,17 @@ I den här sektionen demonstrerar vi tre praktiska tillämpningar som visar utve
   - [Foundry Local Spring Boot-demo](../../../04-PracticalSamples)
   - [Berättelsegenerator för husdjur](../../../04-PracticalSamples)
   - [MCP Kalkylatortjänst (Nybörjarvänlig MCP-demo)](../../../04-PracticalSamples)
-- [Lärandets Framsteg](../../../04-PracticalSamples)
+- [Lärandeutveckling](../../../04-PracticalSamples)
 - [Sammanfattning](../../../04-PracticalSamples)
 - [Nästa Steg](../../../04-PracticalSamples)
 
 ## Introduktion
 
-Det här kapitlet visar **exempelprojekt** som demonstrerar utvecklingsmönster för generativ AI med Java. Varje projekt är fullt fungerande och visar specifika AI-teknologier, arkitektoniska mönster och bästa praxis som du kan anpassa till dina egna applikationer.
+Det här kapitlet visar **exempelprojekt** som demonstrerar utvecklingsmönster för generativ AI med Java. Varje projekt är fullt fungerande och visar specifika AI-teknologier, arkitekturmönster och bästa praxis som du kan anpassa till dina egna applikationer.
 
 ### Foundry Local Spring Boot-demo
 
-**[Foundry Local Spring Boot-demo](foundrylocal/README.md)** demonstrerar hur man integrerar med lokala AI-modeller med hjälp av **OpenAI Java SDK**. Den visar hur man ansluter till modellen **Phi-3.5-mini** som körs på Foundry Local, vilket gör det möjligt att köra AI-applikationer utan att förlita sig på molntjänster.
+**[Foundry Local Spring Boot-demo](foundrylocal/README.md)** demonstrerar hur man integrerar med lokala AI-modeller med hjälp av **OpenAI Java SDK**. Den visar hur man ansluter till **Phi-3.5-mini**-modellen som körs på Foundry Local, vilket gör det möjligt att köra AI-applikationer utan att förlita sig på molntjänster.
 
 ### Berättelsegenerator för husdjur
 
@@ -39,14 +39,14 @@ Det här kapitlet visar **exempelprojekt** som demonstrerar utvecklingsmönster 
 
 ### MCP Kalkylatortjänst (Nybörjarvänlig MCP-demo)
 
-**[MCP Kalkylatortjänst](mcp/calculator/README.md)** är en enkel demonstration av **Model Context Protocol (MCP)** med Spring AI. Den ger en nybörjarvänlig introduktion till MCP-koncept och visar hur man skapar en grundläggande MCP-server som interagerar med MCP-klienter.
+**[MCP Kalkylatortjänst](calculator/README.md)** är en enkel demonstration av **Model Context Protocol (MCP)** med Spring AI. Den ger en nybörjarvänlig introduktion till MCP-koncept och visar hur man skapar en grundläggande MCP-server som interagerar med MCP-klienter.
 
-## Lärandets Framsteg
+## Lärandeutveckling
 
 Dessa projekt är utformade för att bygga vidare på koncept från tidigare kapitel:
 
 1. **Börja Enkelt**: Börja med Foundry Local Spring Boot-demo för att förstå grundläggande AI-integration med lokala modeller
-2. **Lägg Till Interaktivitet**: Gå vidare till Berättelsegenerator för husdjur för multimodal AI och webbaserade interaktioner
+2. **Lägg till Interaktivitet**: Gå vidare till Berättelsegenerator för husdjur för multimodal AI och webbaserade interaktioner
 3. **Lär Dig MCP-grunderna**: Testa MCP Kalkylatortjänst för att förstå grunderna i Model Context Protocol
 
 ## Sammanfattning
@@ -54,7 +54,7 @@ Dessa projekt är utformade för att bygga vidare på koncept från tidigare kap
 **Grattis!** Du har framgångsrikt:
 
 - **Skapat multimodala AI-upplevelser** som kombinerar AI-bearbetning på klient- och serversidan
-- **Implementerat integration av lokala AI-modeller** med moderna Java-ramverk och SDK:er
+- **Implementerat lokal AI-modellintegration** med moderna Java-ramverk och SDK:er
 - **Utvecklat Model Context Protocol-tjänster** som demonstrerar integrationsmönster för verktyg
 
 ## Nästa Steg

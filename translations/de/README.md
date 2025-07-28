@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7216baee4139fab32d7bfa0777d75551",
-  "translation_date": "2025-07-27T18:46:29+00:00",
+  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
+  "translation_date": "2025-07-28T10:15:58+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 3. Verwenden Sie die Standardeinstellungen – dies wählt den für diesen Kurs erstellten Entwicklungscontainer aus
 4. Klicken Sie auf **Codespace erstellen**
 5. Warten Sie ~2 Minuten, bis die Umgebung bereit ist
-6. Gehen Sie direkt zu [Erstellen Ihres GitHub Models Tokens](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Springen Sie direkt zu [Das erste Beispiel](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Mehrsprachige Unterstützung
 
@@ -41,7 +41,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapitel 2: Einrichtung der Entwicklungsumgebung**
 - **Multi-Provider-Konfiguration**: Einrichtung von GitHub Models, Azure OpenAI und OpenAI Java SDK-Integrationen
 - **Spring Boot + Spring AI**: Best Practices für die Entwicklung von Unternehmens-KI-Anwendungen
-- **GitHub Models**: Kostenloser Zugang zu KI-Modellen für Prototyping und Lernen (keine Kreditkarte erforderlich)
+- **GitHub Models**: Kostenloser Zugriff auf KI-Modelle für Prototyping und Lernen (keine Kreditkarte erforderlich)
 - **Entwicklungswerkzeuge**: Docker-Container, VS Code und GitHub Codespaces-Konfiguration
 - **[→ Kapitel 2 starten](./02-SetupDevEnvironment/README.md)**
 
@@ -55,7 +55,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapitel 4: Praktische Anwendungen & Projekte**
 - **Pet Story Generator** (`petstory/`): Kreative Inhaltserstellung mit GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Lokale KI-Modellintegration mit OpenAI Java SDK
-- **MCP Calculator Service** (`mcp/calculator/`): Grundlegende Implementierung des Model Context Protocol mit Spring AI
+- **MCP Calculator Service** (`calculator/`): Grundlegende Implementierung des Model Context Protocol mit Spring AI
 - **[→ Kapitel 4 starten](./04-PracticalSamples/README.md)**
 
 ### **Kapitel 5: Verantwortungsvolle KI-Entwicklung**
@@ -80,7 +80,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [GitHub Copilot meistern für KI-gestütztes Programmieren](https://aka.ms/GitHubCopilotAI)
 - [GitHub Copilot meistern für C#/.NET-Entwickler](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Wählen Sie Ihr eigenes Copilot-Abenteuer](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App mit Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [RAG-Chat-App mit Azure AI-Diensten](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Haftungsausschluss**:  
 Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

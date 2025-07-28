@@ -1,15 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7216baee4139fab32d7bfa0777d75551",
-  "translation_date": "2025-07-27T18:57:59+00:00",
+  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
+  "translation_date": "2025-07-28T10:57:33+00:00",
   "source_file": "README.md",
   "language_code": "he"
 }
 -->
-# בינה מלאכותית גנרטיבית למתחילים - גרסת Java
+# בינה מלאכותית גנרטיבית למתחילים - מהדורת Java
 
-**זמן נדרש**: ניתן להשלים את הסדנה כולה באופן מקוון ללא צורך בהתקנה מקומית. הגדרת הסביבה אורכת כ-2 דקות, והחקירה של הדוגמאות עשויה להימשך בין שעה לשלוש שעות, בהתאם לעומק החקירה.
+[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+
+![בינה מלאכותית גנרטיבית למתחילים - מהדורת Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.he.png)
+
+**זמן נדרש**: ניתן להשלים את הסדנה כולה באופן מקוון ללא צורך בהתקנה מקומית. הגדרת הסביבה אורכת 2 דקות, וההתנסות בדוגמאות דורשת 1-3 שעות בהתאם לעומק החקירה.
 
 > **התחלה מהירה**
 
@@ -18,9 +22,9 @@ CO_OP_TRANSLATOR_METADATA:
 3. השתמשו בהגדרות ברירת המחדל – זה יבחר את מיכל הפיתוח שנוצר עבור הקורס  
 4. לחצו על **Create codespace**  
 5. המתינו כ-2 דקות עד שהסביבה תהיה מוכנה  
-6. עברו ישירות ל-[יצירת אסימון מודלים אישי ב-GitHub](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)  
+6. עברו ישירות ל[הדוגמה הראשונה](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)  
 
-## תמיכה רב-שפתית
+## תמיכה בריבוי שפות
 
 ### נתמך באמצעות GitHub Action (אוטומטי ותמיד מעודכן)
 
@@ -29,37 +33,37 @@ CO_OP_TRANSLATOR_METADATA:
 ## מבנה הקורס ומסלול הלמידה
 
 ### **פרק 1: מבוא לבינה מלאכותית גנרטיבית**
-- **מושגים מרכזיים**: הבנת מודלים שפתיים גדולים, טוקנים, הטמעות ויכולות AI  
+- **מושגים מרכזיים**: הבנת מודלים שפה גדולים, טוקנים, הטמעות ויכולות AI  
 - **מערכת AI ב-Java**: סקירה של Spring AI ו-SDKs של OpenAI  
-- **פרוטוקול הקשר מודלים**: מבוא ל-MCP ותפקידו בתקשורת סוכני AI  
-- **יישומים מעשיים**: תרחישים בעולם האמיתי כמו צ'אטבוטים ויצירת תוכן  
-- **[→ התחלת פרק 1](./01-IntroToGenAI/README.md)**  
+- **פרוטוקול הקשר של מודלים**: מבוא ל-MCP ותפקידו בתקשורת סוכני AI  
+- **יישומים מעשיים**: תרחישים בעולם האמיתי כולל צ'אטבוטים ויצירת תוכן  
+- **[→ התחילו את פרק 1](./01-IntroToGenAI/README.md)**  
 
 ### **פרק 2: הגדרת סביבת פיתוח**
-- **תצורה רב-ספקית**: הגדרת מודלים של GitHub, Azure OpenAI ואינטגרציות SDK של OpenAI ב-Java  
+- **הגדרת ספקים מרובים**: הגדרת מודלים של GitHub, Azure OpenAI ואינטגרציות SDK של OpenAI Java  
 - **Spring Boot + Spring AI**: שיטות עבודה מומלצות לפיתוח יישומי AI ארגוניים  
-- **מודלים של GitHub**: גישה חינמית למודלים של AI לצורך אבטיפוס ולמידה (ללא צורך בכרטיס אשראי)  
-- **כלי פיתוח**: מיכלי Docker, VS Code ותצורת GitHub Codespaces  
-- **[→ התחלת פרק 2](./02-SetupDevEnvironment/README.md)**  
+- **מודלים של GitHub**: גישה חינמית למודלי AI לצורך אבטיפוס ולמידה (ללא צורך בכרטיס אשראי)  
+- **כלי פיתוח**: הגדרת מיכלי Docker, VS Code ו-GitHub Codespaces  
+- **[→ התחילו את פרק 2](./02-SetupDevEnvironment/README.md)**  
 
 ### **פרק 3: טכניקות ליבה של בינה מלאכותית גנרטיבית**
 - **הנדסת הנחיות**: טכניקות לתגובות מיטביות ממודלי AI  
 - **הטמעות ופעולות וקטוריות**: יישום חיפוש סמנטי והתאמת דמיון  
 - **יצירה מוגברת על ידי אחזור (RAG)**: שילוב AI עם מקורות נתונים משלכם  
 - **קריאת פונקציות**: הרחבת יכולות AI עם כלים ותוספים מותאמים אישית  
-- **[→ התחלת פרק 3](./03-CoreGenerativeAITechniques/README.md)**  
+- **[→ התחילו את פרק 3](./03-CoreGenerativeAITechniques/README.md)**  
 
 ### **פרק 4: יישומים מעשיים ופרויקטים**
 - **מחולל סיפורי חיות מחמד** (`petstory/`): יצירת תוכן יצירתי עם מודלים של GitHub  
-- **דמו מקומי של Foundry** (`foundrylocal/`): אינטגרציה של מודלים מקומיים עם SDK של OpenAI ב-Java  
-- **שירות מחשבון MCP** (`mcp/calculator/`): יישום בסיסי של פרוטוקול הקשר מודלים עם Spring AI  
-- **[→ התחלת פרק 4](./04-PracticalSamples/README.md)**  
+- **דמו מקומי של Foundry** (`foundrylocal/`): אינטגרציה של מודלי AI מקומיים עם OpenAI Java SDK  
+- **שירות מחשבון MCP** (`calculator/`): יישום בסיסי של פרוטוקול הקשר של מודלים עם Spring AI  
+- **[→ התחילו את פרק 4](./04-PracticalSamples/README.md)**  
 
 ### **פרק 5: פיתוח AI אחראי**
 - **בטיחות מודלים של GitHub**: בדיקת סינון תוכן מובנה ומנגנוני בטיחות  
-- **דמו AI אחראי**: דוגמה מעשית שמראה כיצד מסנני בטיחות של AI עובדים בפועל  
-- **שיטות עבודה מומלצות**: הנחיות חיוניות לפיתוח והטמעה אתית של AI  
-- **[→ התחלת פרק 5](./05-ResponsibleGenAI/README.md)**  
+- **דמו AI אחראי**: דוגמה מעשית שמראה כיצד מסנני בטיחות AI עובדים בפועל  
+- **שיטות עבודה מומלצות**: הנחיות חיוניות לפיתוח והפצה אתית של AI  
+- **[→ התחילו את פרק 5](./05-ResponsibleGenAI/README.md)**  
 
 ## משאבים נוספים
 
@@ -68,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [בינה מלאכותית גנרטיבית למתחילים באמצעות JavaScript](https://github.com/microsoft/generative-ai-with-javascript)  
 - [בינה מלאכותית גנרטיבית למתחילים](https://github.com/microsoft/generative-ai-for-beginners)  
 - [למידת מכונה למתחילים](https://aka.ms/ml-beginners)  
-- [מדע נתונים למתחילים](https://aka.ms/datascience-beginners)  
+- [מדעי הנתונים למתחילים](https://aka.ms/datascience-beginners)  
 - [AI למתחילים](https://aka.ms/ai-beginners)  
 - [סייבר למתחילים](https://github.com/microsoft/Security-101)  
 - [פיתוח אתרים למתחילים](https://aka.ms/webdev-beginners)  
@@ -76,8 +80,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [פיתוח XR למתחילים](https://github.com/microsoft/xr-development-for-beginners)  
 - [שליטה ב-GitHub Copilot לתכנות זוגי עם AI](https://aka.ms/GitHubCopilotAI)  
 - [שליטה ב-GitHub Copilot למפתחי C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
-- [הרפתקאות Copilot לבחירתכם](https://github.com/microsoft/CopilotAdventures)  
+- [בחרו את הרפתקת Copilot שלכם](https://github.com/microsoft/CopilotAdventures)  
 - [אפליקציית צ'אט RAG עם שירותי Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). בעוד שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
