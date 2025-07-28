@@ -260,7 +260,7 @@ Started McpServerApplication in X.XXX seconds
 
 ### Step 2: Test with Direct Client
 
-In a **NEW** terminal:
+In a **NEW** terminal with the Server still running, run the direct MCP client:
 ```bash
 cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
@@ -284,6 +284,11 @@ You'll see the AI automatically using tools:
 The sum of 24.5 and 17.3 is 41.8.
 The square root of 144 is 12.
 ```
+
+### Step 4: Close the MCP Server
+
+When you're done testing, you can stop the AI client by pressing `Ctrl+C` in its terminal. The MCP server will keep running until you stop it.
+To stop the server, press `Ctrl+C` in the terminal where it's running.
 
 ## How It All Works Together
 
