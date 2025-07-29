@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T13:19:31+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T09:48:13+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "ms"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Apa yang Anda Akan Pelajari
 
 - Menyediakan persekitaran pembangunan Java untuk aplikasi AI
-- Memilih dan mengkonfigurasi persekitaran pembangunan pilihan anda (berorientasikan awan dengan Codespaces, kontena pembangunan tempatan, atau persediaan tempatan sepenuhnya)
+- Memilih dan mengkonfigurasi persekitaran pembangunan pilihan anda (berasaskan awan dengan Codespaces, kontena pembangunan tempatan, atau persediaan tempatan sepenuhnya)
 - Menguji persediaan anda dengan menyambung ke Model GitHub
 
 ## Kandungan
@@ -39,7 +39,7 @@ Bab ini akan membimbing anda melalui proses menyediakan persekitaran pembangunan
 
 **Tiada persediaan tempatan diperlukan!** Anda boleh mula menulis kod dengan segera menggunakan GitHub Codespaces, yang menyediakan persekitaran pembangunan penuh dalam pelayar anda.
 
-<img src="./images/models.webp" alt="Tangkapan Skrin: Model GitHub" width="50%">
+<img src="./images/models.webp" alt="Tangkapan skrin: Model GitHub" width="50%">
 
 Kami mengesyorkan menggunakan [**Model GitHub**](https://github.com/marketplace?type=models) untuk kursus ini kerana:
 - **Percuma** untuk bermula
@@ -69,16 +69,16 @@ Kami telah mencipta kontena pembangunan yang telah dikonfigurasi untuk meminimum
 1. Fork repositori ini ke akaun GitHub anda
    > **Nota**: Jika anda ingin mengedit konfigurasi asas, sila lihat [Konfigurasi Kontena Pembangunan](../../../.devcontainer/devcontainer.json)
 2. Klik **Code** → tab **Codespaces** → **...** → **New with options...**
-3. Gunakan tetapan lalai – ini akan memilih **Konfigurasi Kontena Pembangunan**: **Persekitaran Pembangunan Generative AI Java** kontena pembangunan khusus yang dicipta untuk kursus ini
+3. Gunakan tetapan lalai – ini akan memilih **Konfigurasi kontena pembangunan**: **Persekitaran Pembangunan Generative AI Java** kontena pembangunan khas yang dicipta untuk kursus ini
 4. Klik **Create codespace**
-5. Tunggu ~2 minit untuk persekitaran bersedia
+5. Tunggu ~2 minit sehingga persekitaran sedia
 6. Teruskan ke [Langkah 2: Cipta Token GitHub](../../../02-SetupDevEnvironment)
 
-<img src="./images/codespaces.png" alt="Tangkapan Skrin: Submenu Codespaces" width="50%">
+<img src="./images/codespaces.png" alt="Tangkapan skrin: Submenu Codespaces" width="50%">
 
-<img src="./images/image.png" alt="Tangkapan Skrin: New with options" width="50%">
+<img src="./images/image.png" alt="Tangkapan skrin: New with options" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Tangkapan Skrin: Pilihan create codespace" width="50%">
+<img src="./images/codespaces-create.png" alt="Tangkapan skrin: Pilihan create codespace" width="50%">
 
 > **Kelebihan Codespaces**:
 > - Tiada pemasangan tempatan diperlukan
@@ -97,36 +97,36 @@ Kami telah mencipta kontena pembangunan yang telah dikonfigurasi untuk meminimum
 3. Pasang [sambungan Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) dalam VS Code
 4. Buka folder repositori dalam VS Code
 5. Apabila diminta, klik **Reopen in Container** (atau gunakan `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
-6. Tunggu kontena dibina dan dimulakan
+6. Tunggu sehingga kontena dibina dan dimulakan
 7. Teruskan ke [Langkah 2: Cipta Token GitHub](../../../02-SetupDevEnvironment)
 
-<img src="./images/devcontainer.png" alt="Tangkapan Skrin: Persediaan kontena pembangunan" width="50%">
+<img src="./images/devcontainer.png" alt="Tangkapan skrin: Persediaan kontena pembangunan" width="50%">
 
-<img src="./images/image-3.png" alt="Tangkapan Skrin: Pembinaan kontena pembangunan selesai" width="50%">
+<img src="./images/image-3.png" alt="Tangkapan skrin: Pembinaan kontena pembangunan selesai" width="50%">
 
 #### Pilihan C: Gunakan Pemasangan Tempatan Sedia Ada Anda
 
 **Untuk pembangun dengan persekitaran Java sedia ada**
 
-Prasyarat:
+Keperluan:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
 - [Maven 3.9+](https://maven.apache.org/download.cgi)
 - [VS Code](https://code.visualstudio.com) atau IDE pilihan anda
 
-Langkah:
+Langkah-langkah:
 1. Klon repositori ini ke mesin tempatan anda
 2. Buka projek dalam IDE anda
 3. Teruskan ke [Langkah 2: Cipta Token GitHub](../../../02-SetupDevEnvironment)
 
-> **Petua Pro**: Jika anda mempunyai mesin dengan spesifikasi rendah tetapi ingin menggunakan VS Code secara tempatan, gunakan GitHub Codespaces! Anda boleh menyambungkan VS Code tempatan anda ke Codespace yang dihoskan di awan untuk mendapatkan yang terbaik dari kedua-dua dunia.
+> **Petua Pro**: Jika anda mempunyai mesin berspesifikasi rendah tetapi ingin menggunakan VS Code secara tempatan, gunakan GitHub Codespaces! Anda boleh menyambungkan VS Code tempatan anda ke Codespace yang dihoskan di awan untuk mendapatkan yang terbaik dari kedua-dua dunia.
 
-<img src="./images/image-2.png" alt="Tangkapan Skrin: Instans kontena pembangunan tempatan yang dicipta" width="50%">
+<img src="./images/image-2.png" alt="Tangkapan skrin: Instans kontena pembangunan tempatan yang dicipta" width="50%">
 
 ## Langkah 2: Cipta Token Akses Peribadi GitHub
 
 1. Navigasi ke [Tetapan GitHub](https://github.com/settings/profile) dan pilih **Settings** dari menu profil anda.
 2. Di bar sisi kiri, klik **Developer settings** (biasanya di bahagian bawah).
-3. Di bawah **Personal access tokens**, klik **Fine-grained tokens** (atau ikuti pautan langsung ini [link](https://github.com/settings/personal-access-tokens)).
+3. Di bawah **Personal access tokens**, klik **Fine-grained tokens** (atau ikuti [pautan langsung ini](https://github.com/settings/personal-access-tokens)).
 4. Klik **Generate new token**.
 5. Di bawah "Token name", berikan nama deskriptif (contoh: `GenAI-Java-Course-Token`).
 6. Tetapkan tarikh luput (disyorkan: 7 hari untuk amalan keselamatan terbaik).
@@ -140,7 +140,7 @@ Langkah:
 
 ## Langkah 3: Uji Persediaan Anda dengan Contoh Model GitHub
 
-Setelah persekitaran pembangunan anda bersedia, mari uji integrasi Model GitHub dengan aplikasi contoh kami di [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
+Setelah persekitaran pembangunan anda sedia, mari kita uji integrasi Model GitHub dengan aplikasi contoh kami di [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Buka terminal dalam persekitaran pembangunan anda.
 2. Navigasi ke contoh Model GitHub:
@@ -173,9 +173,9 @@ Response: Hello World!
 
 ### Memahami Kod Contoh
 
-Pertama, mari fahami apa yang baru sahaja dijalankan. Contoh di bawah `examples/github-models` menggunakan OpenAI Java SDK untuk menyambung ke Model GitHub:
+Pertama, mari kita fahami apa yang baru sahaja dijalankan. Contoh di bawah `examples/github-models` menggunakan OpenAI Java SDK untuk menyambung ke Model GitHub:
 
-**Apa yang kod ini lakukan:**
+**Apa yang dilakukan oleh kod ini:**
 - **Menyambung** ke Model GitHub menggunakan token akses peribadi anda
 - **Menghantar** mesej ringkas "Say Hello World!" kepada model AI
 - **Menerima** dan memaparkan respons AI
@@ -212,12 +212,12 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Ringkasan
 
-**Tahniah!** Anda telah berjaya:
+Hebat! Anda kini telah menyediakan semuanya:
 
-- **Mencipta Token Akses Peribadi GitHub** dengan kebenaran yang betul untuk akses model AI
-- **Menyediakan persekitaran pembangunan Java anda** menggunakan Codespaces, kontena pembangunan, atau pemasangan tempatan
-- **Menyambung ke Model GitHub** menggunakan OpenAI Java SDK untuk akses pembangunan AI percuma
-- **Menguji integrasi** dengan aplikasi contoh yang berfungsi yang berkomunikasi dengan model AI
+- Mencipta Token Akses Peribadi GitHub dengan kebenaran yang betul untuk akses model AI
+- Menjalankan persekitaran pembangunan Java anda (sama ada Codespaces, kontena pembangunan, atau tempatan)
+- Menyambung ke Model GitHub menggunakan OpenAI Java SDK untuk pembangunan AI percuma
+- Mengujinya berfungsi dengan contoh ringkas yang berkomunikasi dengan model AI
 
 ## Langkah Seterusnya
 
@@ -232,7 +232,7 @@ Menghadapi masalah? Berikut adalah masalah biasa dan penyelesaiannya:
   - Sahkan token ditetapkan dengan betul sebagai pembolehubah persekitaran
   - Periksa bahawa token anda mempunyai kebenaran yang betul (Models: Read and write)
 
-- **Maven tidak dijumpai?** 
+- **Maven tidak ditemui?** 
   - Jika menggunakan kontena pembangunan/Codespaces, Maven sepatutnya telah dipasang
   - Untuk persediaan tempatan, pastikan Java 21+ dan Maven 3.9+ dipasang
   - Cuba `mvn --version` untuk mengesahkan pemasangan
@@ -246,11 +246,11 @@ Menghadapi masalah? Berikut adalah masalah biasa dan penyelesaiannya:
   - Pastikan Docker Desktop sedang berjalan (untuk pembangunan tempatan)
   - Cuba bina semula kontena: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
-- **Ralat pengkompilasian aplikasi?**
+- **Ralat pengkompilasi aplikasi?**
   - Pastikan anda berada di direktori yang betul: `02-SetupDevEnvironment/examples/github-models`
   - Cuba bersihkan dan bina semula: `mvn clean compile`
 
 > **Perlu bantuan?**: Masih menghadapi masalah? Buka isu dalam repositori dan kami akan membantu anda.
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

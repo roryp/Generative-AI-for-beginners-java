@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T10:40:19+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T08:56:46+00:00",
   "source_file": "README.md",
   "language_code": "pt"
 }
@@ -36,33 +36,33 @@ CO_OP_TRANSLATOR_METADATA:
 - **Ecossistema de IA em Java**: Visão geral do Spring AI e SDKs OpenAI  
 - **Protocolo de Contexto de Modelo**: Introdução ao MCP e seu papel na comunicação de agentes de IA  
 - **Aplicações Práticas**: Cenários reais, incluindo chatbots e geração de conteúdo  
-- **[→ Começar o Capítulo 1](./01-IntroToGenAI/README.md)**  
+- **[→ Começar Capítulo 1](./01-IntroToGenAI/README.md)**  
 
 ### **Capítulo 2: Configuração do Ambiente de Desenvolvimento**
 - **Configuração Multi-Fornecedor**: Configurar modelos do GitHub, Azure OpenAI e integrações do SDK OpenAI Java  
 - **Spring Boot + Spring AI**: Melhores práticas para desenvolvimento de aplicações empresariais de IA  
 - **Modelos do GitHub**: Acesso gratuito a modelos de IA para prototipagem e aprendizado (sem necessidade de cartão de crédito)  
 - **Ferramentas de Desenvolvimento**: Configuração de containers Docker, VS Code e GitHub Codespaces  
-- **[→ Começar o Capítulo 2](./02-SetupDevEnvironment/README.md)**  
+- **[→ Começar Capítulo 2](./02-SetupDevEnvironment/README.md)**  
 
 ### **Capítulo 3: Técnicas Fundamentais de IA Generativa**
 - **Engenharia de Prompts**: Técnicas para respostas ideais de modelos de IA  
 - **Embeddings e Operações com Vetores**: Implementar busca semântica e correspondência de similaridade  
 - **Geração Aumentada por Recuperação (RAG)**: Combinar IA com suas próprias fontes de dados  
-- **Chamadas de Função**: Expandir as capacidades da IA com ferramentas e plugins personalizados  
-- **[→ Começar o Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**  
+- **Chamadas de Função**: Expandir capacidades de IA com ferramentas e plugins personalizados  
+- **[→ Começar Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**  
 
 ### **Capítulo 4: Aplicações Práticas e Projetos**
 - **Gerador de Histórias de Animais de Estimação** (`petstory/`): Geração criativa de conteúdo com Modelos do GitHub  
-- **Demo Local Foundry** (`foundrylocal/`): Integração local de modelos de IA com o SDK OpenAI Java  
+- **Demo Local Foundry** (`foundrylocal/`): Integração local de modelos de IA com SDK OpenAI Java  
 - **Serviço de Calculadora MCP** (`calculator/`): Implementação básica do Protocolo de Contexto de Modelo com Spring AI  
-- **[→ Começar o Capítulo 4](./04-PracticalSamples/README.md)**  
+- **[→ Começar Capítulo 4](./04-PracticalSamples/README.md)**  
 
 ### **Capítulo 5: Desenvolvimento Responsável de IA**
-- **Segurança dos Modelos do GitHub**: Testar mecanismos de filtragem de conteúdo e segurança integrados  
-- **Demo de IA Responsável**: Exemplo prático mostrando como os filtros de segurança de IA funcionam na prática  
+- **Segurança dos Modelos do GitHub**: Testar filtragem de conteúdo integrada e mecanismos de segurança (bloqueios rígidos e recusas suaves)  
+- **Demo de IA Responsável**: Exemplo prático mostrando como os sistemas modernos de segurança de IA funcionam na prática  
 - **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implementação ética de IA  
-- **[→ Começar o Capítulo 5](./05-ResponsibleGenAI/README.md)**  
+- **[→ Começar Capítulo 5](./05-ResponsibleGenAI/README.md)**  
 
 ## Recursos Adicionais
 
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [App de Chat RAG com Serviços de IA do Azure](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte oficial. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.

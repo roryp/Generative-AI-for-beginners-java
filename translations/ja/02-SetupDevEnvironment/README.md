@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T12:57:48+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T08:31:23+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "ja"
 }
 -->
 # Java向け生成AIの開発環境セットアップ
 
-> **クイックスタート**: クラウドで2分でコードを書く - [GitHub Codespacesのセットアップ](../../../02-SetupDevEnvironment)にジャンプしてください - ローカルインストール不要でGitHubモデルを使用可能！
+> **クイックスタート**: クラウドで2分でコードを書く - [GitHub Codespacesのセットアップ](../../../02-SetupDevEnvironment)にジャンプしてください - ローカルインストールは不要で、GitHubモデルを使用します！
 
 > **Azure OpenAIに興味がありますか？** [Azure OpenAIセットアップガイド](getting-started-azure-openai.md)をご覧ください。新しいAzure OpenAIリソースを作成する手順が記載されています。
 
@@ -24,7 +24,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [学べること](../../../02-SetupDevEnvironment)
 - [はじめに](../../../02-SetupDevEnvironment)
 - [ステップ1: 開発環境をセットアップする](../../../02-SetupDevEnvironment)
-  - [オプションA: GitHub Codespaces (推奨)](../../../02-SetupDevEnvironment)
+  - [オプションA: GitHub Codespaces（推奨）](../../../02-SetupDevEnvironment)
   - [オプションB: ローカル開発コンテナ](../../../02-SetupDevEnvironment)
   - [オプションC: 既存のローカルインストールを使用する](../../../02-SetupDevEnvironment)
 - [ステップ2: GitHub個人アクセストークンを作成する](../../../02-SetupDevEnvironment)
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## はじめに
 
-この章では開発環境のセットアップ方法を説明します。**GitHubモデル**を主な例として使用します。これは無料で、GitHubアカウントだけで簡単にセットアップでき、クレジットカード不要で複数のモデルにアクセスして実験できます。
+この章では、開発環境のセットアップ方法を説明します。**GitHubモデル**を主な例として使用します。これは無料で、GitHubアカウントだけで簡単にセットアップでき、クレジットカードは不要で、複数のモデルにアクセスして実験できます。
 
 **ローカルセットアップは不要！** GitHub Codespacesを使用すれば、ブラウザ内で完全な開発環境をすぐに開始できます。
 
@@ -50,7 +50,7 @@ CO_OP_TRANSLATOR_METADATA:
 > **注意**: このトレーニングで使用するGitHubモデルには以下の無料制限があります：
 > - 1分あたり15リクエスト（1日150リクエスト）
 > - リクエストごとに約8,000語入力、約4,000語出力
-> - 同時リクエスト数5件
+> - 同時リクエストは5件まで
 > 
 > 本番環境で使用する場合は、AzureアカウントでAzure AI Foundryモデルにアップグレードしてください。コードを変更する必要はありません。[Azure AI Foundryドキュメント](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models)をご覧ください。
 
@@ -62,14 +62,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 環境セットアップオプション：
 
-#### オプションA: GitHub Codespaces (推奨)
+#### オプションA: GitHub Codespaces（推奨）
 
-**2分でコードを開始 - ローカルセットアップ不要！**
+**ローカルセットアップ不要で2分でコードを開始！**
 
 1. このリポジトリをGitHubアカウントにフォークする
    > **注意**: 基本設定を編集したい場合は[Devコンテナ設定](../../../.devcontainer/devcontainer.json)をご覧ください。
 2. **Code** → **Codespaces**タブ → **...** → **New with options...**をクリック
-3. デフォルトを使用 – これにより、このコース用に作成された**Generative AI Java Development Environment**カスタムDevコンテナ設定が選択されます。
+3. デフォルトを使用 – これにより、このコース用に作成された**Generative AI Java Development Environment**カスタムDevコンテナ設定が選択されます
 4. **Create codespace**をクリック
 5. 環境が準備されるまで約2分待つ
 6. [ステップ2: GitHubトークンを作成する](../../../02-SetupDevEnvironment)に進む
@@ -108,7 +108,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **既存のJava環境を持つ開発者向け**
 
-必要条件:
+前提条件:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
 - [Maven 3.9+](https://maven.apache.org/download.cgi)
 - [VS Code](https://code.visualstudio.com)または好みのIDE
@@ -118,7 +118,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. プロジェクトをIDEで開く
 3. [ステップ2: GitHubトークンを作成する](../../../02-SetupDevEnvironment)に進む
 
-> **プロのヒント**: スペックの低いマシンを使用しているがVS Codeをローカルで使用したい場合は、GitHub Codespacesを使用してください！ローカルVS CodeをクラウドホストされたCodespaceに接続することで、両方の利点を享受できます。
+> **プロのヒント**: スペックの低いマシンを使用している場合でも、ローカルでVS Codeを使用したい場合はGitHub Codespacesを使用してください！ローカルVS CodeをクラウドホストされたCodespaceに接続することで、両方の利点を享受できます。
 
 <img src="./images/image-2.png" alt="スクリーンショット: ローカルDevコンテナインスタンス作成済み" width="50%">
 
@@ -134,7 +134,7 @@ CO_OP_TRANSLATOR_METADATA:
 8. 「Repository access」でGitHubモデルを使用するリポジトリを選択します（必要に応じて「All repositories」を選択）。
 9. 「Repository permissions」で**Models**を見つけて**Read and write**に設定します。
 10. **Generate token**をクリックします。
-11. **今すぐトークンをコピーして保存してください** – 後で再表示することはできません！
+11. **今すぐトークンをコピーして保存してください** – 後で再表示されません！
 
 > **セキュリティのヒント**: 必要最小限のスコープと最短の実用的な有効期限を使用してアクセストークンを管理してください。
 
@@ -212,12 +212,12 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## まとめ
 
-**おめでとうございます！** 以下を成功させました：
+素晴らしい！以下の準備が整いました：
 
-- **GitHub個人アクセストークンを作成**し、AIモデルアクセスに必要な適切な権限を付与
-- **Java開発環境をセットアップ**（Codespaces、Devコンテナ、またはローカルインストールを使用）
-- **GitHubモデルに接続**し、無料のAI開発アクセスを利用
-- **統合をテスト**し、AIモデルと通信する動作する例のアプリケーションを実行
+- AIモデルアクセスに必要な権限を持つGitHub個人アクセストークンを作成
+- Java開発環境を稼働（Codespaces、Devコンテナ、またはローカルのいずれか）
+- OpenAI Java SDKを使用してGitHubモデルに接続し、無料でAI開発を開始
+- AIモデルと対話する簡単な例で動作確認済み
 
 ## 次のステップ
 
@@ -230,10 +230,10 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 - **トークンが機能しない？** 
   - トークン全体を余分なスペースなしでコピーしたことを確認してください
   - トークンが環境変数として正しく設定されていることを確認してください
-  - トークンに正しい権限（Models: Read and write）が付与されていることを確認してください
+  - トークンに正しい権限（Models: Read and write）があることを確認してください
 
 - **Mavenが見つからない？** 
-  - Devコンテナ/Codespacesを使用している場合、Mavenは事前インストールされています
+  - DevコンテナやCodespacesを使用している場合、Mavenは事前インストールされています
   - ローカルセットアップの場合、Java 21+とMaven 3.9+がインストールされていることを確認してください
   - `mvn --version`を試してインストールを確認してください
 
@@ -243,7 +243,7 @@ System.out.println("Response: " + response.choices().get(0).message().content().
   - GitHubモデルのエンドポイントをブロックしているファイアウォールがないことを確認してください
 
 - **Devコンテナが起動しない？** 
-  - Docker Desktopが実行中であることを確認してください（ローカル開発の場合）
+  - Docker Desktopが稼働していることを確認してください（ローカル開発の場合）
   - コンテナを再構築してみてください：`Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **アプリケーションのコンパイルエラー？**
@@ -253,4 +253,4 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 > **助けが必要ですか？**: まだ問題が解決しない場合は、リポジトリでIssueを開いてください。サポートします。
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当社は責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された原文が公式な情報源と見なされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用に起因する誤解や誤訳について、当方は一切の責任を負いません。

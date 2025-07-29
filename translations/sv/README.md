@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T10:51:04+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T09:21:50+00:00",
   "source_file": "README.md",
   "language_code": "sv"
 }
@@ -21,9 +21,9 @@ CO_OP_TRANSLATOR_METADATA:
 3. Använd standardinställningarna – detta väljer utvecklingscontainern som skapats för denna kurs
 4. Klicka på **Create codespace**
 5. Vänta ~2 minuter tills miljön är redo
-6. Hoppa direkt till [Det första exemplet](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Gå direkt till [Det första exemplet](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Stöd för Flera Språk
+## Stöd för flera språk
 
 ### Stöds via GitHub Action (Automatiserat & Alltid Uppdaterat)
 
@@ -32,24 +32,24 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kursstruktur & Inlärningsväg
 
 ### **Kapitel 1: Introduktion till Generativ AI**
-- **Grundläggande Koncept**: Förstå stora språkmodeller, tokens, embeddings och AI-förmågor
-- **Java AI Ekosystem**: Översikt av Spring AI och OpenAI SDKs
+- **Grundläggande koncept**: Förstå stora språkmodeller, tokens, inbäddningar och AI-förmågor
+- **Java AI-ekosystem**: Översikt av Spring AI och OpenAI SDK:er
 - **Model Context Protocol**: Introduktion till MCP och dess roll i AI-agentkommunikation
-- **Praktiska Tillämpningar**: Verkliga scenarier inklusive chattbotar och innehållsgenerering
+- **Praktiska tillämpningar**: Verkliga scenarier inklusive chattbotar och innehållsgenerering
 - **[→ Börja Kapitel 1](./01-IntroToGenAI/README.md)**
 
 ### **Kapitel 2: Inställning av Utvecklingsmiljö**
-- **Konfiguration för Flera Leverantörer**: Ställ in GitHub Models, Azure OpenAI och OpenAI Java SDK-integrationer
+- **Konfiguration för flera leverantörer**: Ställ in GitHub Models, Azure OpenAI och OpenAI Java SDK-integrationer
 - **Spring Boot + Spring AI**: Bästa praxis för utveckling av AI-applikationer för företag
 - **GitHub Models**: Gratis AI-modellåtkomst för prototyper och inlärning (ingen kreditkort krävs)
 - **Utvecklingsverktyg**: Docker-containrar, VS Code och GitHub Codespaces-konfiguration
 - **[→ Börja Kapitel 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Kapitel 3: Kärntekniker för Generativ AI**
-- **Prompt Engineering**: Tekniker för optimala AI-modellsvar
-- **Embeddings & Vektoroperationer**: Implementera semantisk sökning och likhetsmatchning
+- **Prompt Engineering**: Tekniker för att optimera AI-modellens svar
+- **Inbäddningar & Vektoroperationer**: Implementera semantisk sökning och likhetsmatchning
 - **Retrieval-Augmented Generation (RAG)**: Kombinera AI med dina egna datakällor
-- **Function Calling**: Utöka AI-förmågor med anpassade verktyg och plugins
+- **Funktionsanrop**: Utöka AI-förmågor med anpassade verktyg och plugins
 - **[→ Börja Kapitel 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kapitel 4: Praktiska Tillämpningar & Projekt**
@@ -59,28 +59,28 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Börja Kapitel 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitel 5: Ansvarsfull AI-utveckling**
-- **GitHub Models Säkerhet**: Testa inbyggd innehållsfiltrering och säkerhetsmekanismer
-- **Ansvarsfull AI Demo**: Praktiskt exempel som visar hur AI-säkerhetsfilter fungerar
-- **Bästa Praxis**: Viktiga riktlinjer för etisk AI-utveckling och implementering
+- **GitHub Models Säkerhet**: Testa inbyggd innehållsfiltrering och säkerhetsmekanismer (hårda blockeringar och mjuka avslag)
+- **Ansvarsfull AI-demo**: Praktiskt exempel som visar hur moderna AI-säkerhetssystem fungerar i praktiken
+- **Bästa praxis**: Viktiga riktlinjer för etisk AI-utveckling och implementering
 - **[→ Börja Kapitel 5](./05-ResponsibleGenAI/README.md)**
 
 ## Ytterligare Resurser
 
-- [AI-agenter för Nybörjare](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generativ AI för Nybörjare med .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generativ AI för Nybörjare med JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generativ AI för Nybörjare](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML för Nybörjare](https://aka.ms/ml-beginners)
-- [Data Science för Nybörjare](https://aka.ms/datascience-beginners)
-- [AI för Nybörjare](https://aka.ms/ai-beginners)
-- [Cybersäkerhet för Nybörjare](https://github.com/microsoft/Security-101)
-- [Webbutveckling för Nybörjare](https://aka.ms/webdev-beginners)
-- [IoT för Nybörjare](https://aka.ms/iot-beginners)
-- [XR-utveckling för Nybörjare](https://github.com/microsoft/xr-development-for-beginners)
+- [AI-agenter för nybörjare](https://github.com/microsoft/ai-agents-for-beginners)
+- [Generativ AI för nybörjare med .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generativ AI för nybörjare med JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generativ AI för nybörjare](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML för nybörjare](https://aka.ms/ml-beginners)
+- [Data Science för nybörjare](https://aka.ms/datascience-beginners)
+- [AI för nybörjare](https://aka.ms/ai-beginners)
+- [Cybersäkerhet för nybörjare](https://github.com/microsoft/Security-101)
+- [Webbutveckling för nybörjare](https://aka.ms/webdev-beginners)
+- [IoT för nybörjare](https://aka.ms/iot-beginners)
+- [XR-utveckling för nybörjare](https://github.com/microsoft/xr-development-for-beginners)
 - [Bemästra GitHub Copilot för AI-parprogrammering](https://aka.ms/GitHubCopilotAI)
 - [Bemästra GitHub Copilot för C#/.NET-utvecklare](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Välj Ditt Eget Copilot-Äventyr](https://github.com/microsoft/CopilotAdventures)
+- [Välj ditt eget Copilot-äventyr](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chattapp med Azure AI-tjänster](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
