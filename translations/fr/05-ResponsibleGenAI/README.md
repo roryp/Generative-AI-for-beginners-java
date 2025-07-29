@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "25b39778820b3bc2a84bd8d0d3aeff69",
-  "translation_date": "2025-07-29T07:55:18+00:00",
+  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+  "translation_date": "2025-07-29T15:39:37+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "fr"
 }
@@ -14,21 +14,21 @@ CO_OP_TRANSLATOR_METADATA:
 - Comprendre les considérations éthiques et les meilleures pratiques essentielles au développement de l'IA
 - Intégrer des mesures de filtrage de contenu et de sécurité dans vos applications
 - Tester et gérer les réponses de sécurité de l'IA grâce aux protections intégrées des modèles GitHub
-- Appliquer les principes d'IA responsable pour créer des systèmes d'IA sûrs et éthiques
+- Appliquer les principes d'IA responsable pour créer des systèmes sûrs, éthiques et fiables
 
 ## Table des matières
 
 - [Introduction](../../../05-ResponsibleGenAI)
 - [Sécurité intégrée des modèles GitHub](../../../05-ResponsibleGenAI)
-- [Exemple pratique : Démonstration de sécurité IA responsable](../../../05-ResponsibleGenAI)
-  - [Ce que montre la démonstration](../../../05-ResponsibleGenAI)
+- [Exemple pratique : Démo de sécurité IA responsable](../../../05-ResponsibleGenAI)
+  - [Ce que montre la démo](../../../05-ResponsibleGenAI)
   - [Instructions de configuration](../../../05-ResponsibleGenAI)
-  - [Exécution de la démonstration](../../../05-ResponsibleGenAI)
+  - [Exécution de la démo](../../../05-ResponsibleGenAI)
   - [Résultat attendu](../../../05-ResponsibleGenAI)
 - [Meilleures pratiques pour le développement d'IA responsable](../../../05-ResponsibleGenAI)
 - [Note importante](../../../05-ResponsibleGenAI)
 - [Résumé](../../../05-ResponsibleGenAI)
-- [Achèvement du cours](../../../05-ResponsibleGenAI)
+- [Fin du cours](../../../05-ResponsibleGenAI)
 - [Prochaines étapes](../../../05-ResponsibleGenAI)
 
 ## Introduction
@@ -41,14 +41,14 @@ Les modèles GitHub incluent un filtrage de contenu de base dès le départ. C'e
 
 **Ce que les modèles GitHub protègent :**
 - **Contenu nuisible** : Bloque les contenus violents, sexuels ou dangereux évidents
-- **Discours haineux de base** : Filtre les propos discriminatoires évidents
+- **Discours haineux basique** : Filtre les propos discriminatoires évidents
 - **Tentatives de contournement simples** : Résiste aux tentatives basiques de contourner les garde-fous de sécurité
 
-## Exemple pratique : Démonstration de sécurité IA responsable
+## Exemple pratique : Démo de sécurité IA responsable
 
 Ce chapitre inclut une démonstration pratique de la manière dont les modèles GitHub mettent en œuvre des mesures de sécurité IA responsable en testant des invites qui pourraient potentiellement enfreindre les directives de sécurité.
 
-### Ce que montre la démonstration
+### Ce que montre la démo
 
 La classe `ResponsibleGithubModels` suit ce processus :
 1. Initialiser le client des modèles GitHub avec authentification
@@ -58,42 +58,42 @@ La classe `ResponsibleGithubModels` suit ce processus :
 5. Afficher les résultats montrant quel contenu a été bloqué, refusé ou autorisé
 6. Tester du contenu sûr pour comparaison
 
-![Démonstration de sécurité IA responsable](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.fr.png)
+![Démo de sécurité IA responsable](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.fr.png)
 
 ### Instructions de configuration
 
 1. **Définissez votre jeton d'accès personnel GitHub :**
    
-   Sous Windows (Invite de commandes) :
+   Sur Windows (Invite de commandes) :
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
    
-   Sous Windows (PowerShell) :
+   Sur Windows (PowerShell) :
    ```powershell
    $env:GITHUB_TOKEN="your_github_token_here"
    ```
    
-   Sous Linux/macOS :
+   Sur Linux/macOS :
    ```bash
    export GITHUB_TOKEN=your_github_token_here
    ```   
 
-### Exécution de la démonstration
+### Exécution de la démo
 
 1. **Accédez au répertoire des exemples :**
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
 
-2. **Compilez et exécutez la démonstration :**
+2. **Compilez et exécutez la démo :**
    ```bash
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
 ### Résultat attendu
 
-La démonstration testera différents types d'invites potentiellement nuisibles et montrera comment fonctionne la sécurité moderne de l'IA via deux mécanismes :
+La démo testera différents types d'invites potentiellement nuisibles et montrera comment fonctionne la sécurité moderne de l'IA via deux mécanismes :
 
 - **Blocages stricts** : Erreurs HTTP 400 lorsque le contenu est bloqué par les filtres de sécurité avant d'atteindre le modèle
 - **Refus doux** : Le modèle répond par des refus polis comme "Je ne peux pas vous aider avec cela" (le plus courant avec les modèles modernes)
@@ -145,14 +145,14 @@ Lors de la création d'applications d'IA, suivez ces pratiques essentielles :
 
 ## Note importante
 
-Cet exemple utilise des invites intentionnellement problématiques à des fins éducatives uniquement. L'objectif est de démontrer les mesures de sécurité, et non de les contourner. Utilisez toujours les outils d'IA de manière responsable et éthique.
+Cet exemple utilise des invites problématiques intentionnellement à des fins éducatives uniquement. L'objectif est de démontrer les mesures de sécurité, et non de les contourner. Utilisez toujours les outils d'IA de manière responsable et éthique.
 
 ## Résumé
 
 **Félicitations !** Vous avez réussi à :
 
 - **Mettre en œuvre des mesures de sécurité IA**, y compris le filtrage de contenu et la gestion des réponses de sécurité
-- **Appliquer les principes d'IA responsable** pour concevoir des systèmes d'IA éthiques et dignes de confiance
+- **Appliquer les principes d'IA responsable** pour concevoir des systèmes d'IA éthiques et fiables
 - **Tester les mécanismes de sécurité** en utilisant les capacités de protection intégrées des modèles GitHub
 - **Apprendre les meilleures pratiques** pour le développement et le déploiement d'IA responsable
 
@@ -160,13 +160,11 @@ Cet exemple utilise des invites intentionnellement problématiques à des fins �
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Découvrez l'approche de Microsoft en matière de sécurité, confidentialité et conformité
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Explorez les principes et pratiques de Microsoft pour le développement d'IA responsable
 
-Vous avez terminé le cours "IA générative pour débutants - Édition Java" et êtes maintenant prêt à créer des applications d'IA sûres et efficaces !
+## Fin du cours
 
-## Achèvement du cours
+Félicitations pour avoir terminé le cours "IA générative pour débutants" !
 
-Félicitations pour avoir terminé le cours "IA générative pour débutants" ! Vous avez désormais les connaissances et les outils nécessaires pour concevoir des applications d'IA générative responsables et efficaces avec Java.
-
-![Achèvement du cours](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.fr.png)
+![Fin du cours](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.fr.png)
 
 **Ce que vous avez accompli :**
 - Configuré votre environnement de développement
@@ -179,21 +177,21 @@ Félicitations pour avoir terminé le cours "IA générative pour débutants" ! 
 Poursuivez votre apprentissage de l'IA avec ces ressources supplémentaires :
 
 **Cours supplémentaires :**
-- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML for Beginners](https://aka.ms/ml-beginners)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)
-- [AI for Beginners](https://aka.ms/ai-beginners)
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [Agents IA pour débutants](https://github.com/microsoft/ai-agents-for-beginners)
+- [IA générative pour débutants avec .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [IA générative pour débutants avec JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [IA générative pour débutants](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML pour débutants](https://aka.ms/ml-beginners)
+- [Data Science pour débutants](https://aka.ms/datascience-beginners)
+- [IA pour débutants](https://aka.ms/ai-beginners)
+- [Cybersécurité pour débutants](https://github.com/microsoft/Security-101)
+- [Développement web pour débutants](https://aka.ms/webdev-beginners)
+- [IoT pour débutants](https://aka.ms/iot-beginners)
+- [Développement XR pour débutants](https://github.com/microsoft/xr-development-for-beginners)
+- [Maîtriser GitHub Copilot pour la programmation assistée par IA](https://aka.ms/GitHubCopilotAI)
+- [Maîtriser GitHub Copilot pour les développeurs C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Choisissez votre propre aventure Copilot](https://github.com/microsoft/CopilotAdventures)
+- [Application de chat RAG avec les services Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction professionnelle humaine. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

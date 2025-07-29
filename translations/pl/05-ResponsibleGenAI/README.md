@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "25b39778820b3bc2a84bd8d0d3aeff69",
-  "translation_date": "2025-07-29T09:07:13+00:00",
+  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+  "translation_date": "2025-07-29T15:49:53+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "pl"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Czego się nauczysz
 
 - Poznasz kwestie etyczne i najlepsze praktyki istotne dla rozwoju AI
-- Wbudujesz filtrowanie treści i środki bezpieczeństwa w swoje aplikacje
+- Dowiesz się, jak wbudować filtrowanie treści i środki bezpieczeństwa w swoje aplikacje
 - Przetestujesz i obsłużysz odpowiedzi związane z bezpieczeństwem AI, korzystając z wbudowanych zabezpieczeń modeli GitHub
 - Zastosujesz zasady odpowiedzialnej AI, aby tworzyć bezpieczne i etyczne systemy AI
 
@@ -95,8 +95,8 @@ Klasa `ResponsibleGithubModels` działa według następującego schematu:
 
 Demonstracja przetestuje różne typy potencjalnie szkodliwych zapytań i pokaże, jak działa współczesne bezpieczeństwo AI za pomocą dwóch mechanizmów:
 
-- **Twarde blokady**: Błędy HTTP 400, gdy treści są blokowane przez filtry bezpieczeństwa przed dotarciem do modelu
-- **Miękkie odmowy**: Model odpowiada uprzejmymi odmowami, takimi jak „Nie mogę pomóc w tym” (najczęstsze w nowoczesnych modelach)
+- **Twarde blokady**: Błędy HTTP 400, gdy treść jest blokowana przez filtry bezpieczeństwa przed dotarciem do modelu
+- **Miękkie odmowy**: Model odpowiada uprzejmymi odmowami, takimi jak „Nie mogę pomóc w tej sprawie” (najczęstsze w nowoczesnych modelach)
 - **Bezpieczne treści**, które otrzymują normalną odpowiedź
 
 Przykładowy format wyników:
@@ -125,21 +125,21 @@ Podczas tworzenia aplikacji AI stosuj następujące kluczowe praktyki:
 
 1. **Zawsze obsługuj odpowiedzi filtrów bezpieczeństwa w sposób przemyślany**
    - Wdrażaj odpowiednie mechanizmy obsługi błędów dla zablokowanych treści
-   - Zapewniaj użytkownikom znaczące informacje zwrotne, gdy treści są filtrowane
+   - Zapewniaj użytkownikom sensowną informację zwrotną, gdy treść jest filtrowana
 
 2. **Wdrażaj dodatkową walidację treści tam, gdzie to konieczne**
-   - Dodaj specyficzne dla domeny kontrole bezpieczeństwa
+   - Dodaj specyficzne dla domeny mechanizmy bezpieczeństwa
    - Twórz niestandardowe reguły walidacji dla swojego przypadku użycia
 
-3. **Edukacja użytkowników w zakresie odpowiedzialnego korzystania z AI**
-   - Zapewnij jasne wytyczne dotyczące akceptowalnego użycia
-   - Wyjaśnij, dlaczego niektóre treści mogą być blokowane
+3. **Edukowanie użytkowników w zakresie odpowiedzialnego korzystania z AI**
+   - Przekazuj jasne wytyczne dotyczące akceptowalnego użycia
+   - Wyjaśniaj, dlaczego pewne treści mogą być blokowane
 
 4. **Monitoruj i rejestruj incydenty związane z bezpieczeństwem w celu ich poprawy**
    - Śledź wzorce blokowanych treści
    - Nieustannie ulepszaj swoje środki bezpieczeństwa
 
-5. **Przestrzegaj zasad dotyczących treści platformy**
+5. **Szanuj polityki dotyczące treści platformy**
    - Bądź na bieżąco z wytycznymi platformy
    - Przestrzegaj warunków korzystania z usług i zasad etycznych
 
@@ -158,21 +158,19 @@ Ten przykład wykorzystuje celowo problematyczne zapytania wyłącznie w celach 
 
 **Zasoby dotyczące odpowiedzialnej AI:**
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Dowiedz się więcej o podejściu Microsoftu do bezpieczeństwa, prywatności i zgodności
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Poznaj zasady i praktyki Microsoftu dotyczące odpowiedzialnego rozwoju AI
-
-Ukończyłeś kurs Generatywna AI dla początkujących - edycja Java i jesteś teraz gotowy do budowania bezpiecznych, skutecznych aplikacji AI!
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Poznaj zasady i praktyki Microsoftu dotyczące rozwoju odpowiedzialnej AI
 
 ## Zakończenie kursu
 
-Gratulacje z okazji ukończenia kursu Generatywna AI dla początkujących! Masz teraz wiedzę i narzędzia, aby tworzyć odpowiedzialne i skuteczne aplikacje generatywnej AI z użyciem Javy.
+Gratulacje z okazji ukończenia kursu Generatywna AI dla początkujących!
 
 ![Zakończenie kursu](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.pl.png)
 
-**Co osiągnąłeś:**
-- Skonfigurowałeś swoje środowisko programistyczne
-- Poznałeś podstawowe techniki generatywnej AI
-- Zbadałeś praktyczne zastosowania AI
-- Zrozumiałeś zasady odpowiedzialnej AI
+**Co udało Ci się osiągnąć:**
+- Skonfigurować środowisko programistyczne
+- Poznać podstawowe techniki generatywnej AI
+- Zbadać praktyczne zastosowania AI
+- Zrozumieć zasady odpowiedzialnej AI
 
 ## Kolejne kroki
 
@@ -196,4 +194,4 @@ Kontynuuj swoją naukę AI, korzystając z tych dodatkowych zasobów:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "25b39778820b3bc2a84bd8d0d3aeff69",
-  "translation_date": "2025-07-29T09:28:49+00:00",
+  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+  "translation_date": "2025-07-29T15:53:03+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "no"
 }
@@ -14,12 +14,12 @@ CO_OP_TRANSLATOR_METADATA:
 - Lær om etiske hensyn og beste praksis som er viktige for AI-utvikling
 - Bygg innholdsfiltering og sikkerhetstiltak i applikasjonene dine
 - Test og håndter AI-sikkerhetsresponser ved hjelp av GitHub Models' innebygde beskyttelser
-- Bruk prinsipper for ansvarlig AI for å skape sikre og etiske AI-systemer
+- Anvend prinsipper for ansvarlig AI for å skape sikre og etiske AI-systemer
 
 ## Innholdsfortegnelse
 
 - [Introduksjon](../../../05-ResponsibleGenAI)
-- [GitHub Models innebygde sikkerhet](../../../05-ResponsibleGenAI)
+- [GitHub Models innebygd sikkerhet](../../../05-ResponsibleGenAI)
 - [Praktisk eksempel: Demo for ansvarlig AI-sikkerhet](../../../05-ResponsibleGenAI)
   - [Hva demoen viser](../../../05-ResponsibleGenAI)
   - [Oppsettsinstruksjoner](../../../05-ResponsibleGenAI)
@@ -33,9 +33,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introduksjon
 
-Dette siste kapittelet fokuserer på de kritiske aspektene ved å bygge ansvarlige og etiske generative AI-applikasjoner. Du vil lære hvordan du implementerer sikkerhetstiltak, håndterer innholdsfiltering og bruker beste praksis for ansvarlig AI-utvikling ved hjelp av verktøyene og rammeverkene som er dekket i tidligere kapitler. Å forstå disse prinsippene er avgjørende for å bygge AI-systemer som ikke bare er teknisk imponerende, men også sikre, etiske og pålitelige.
+Dette siste kapittelet fokuserer på de kritiske aspektene ved å bygge ansvarlige og etiske generative AI-applikasjoner. Du vil lære hvordan du implementerer sikkerhetstiltak, håndterer innholdsfiltering og anvender beste praksis for ansvarlig AI-utvikling ved hjelp av verktøyene og rammeverkene som er dekket i tidligere kapitler. Å forstå disse prinsippene er avgjørende for å bygge AI-systemer som ikke bare er teknisk imponerende, men også sikre, etiske og pålitelige.
 
-## GitHub Models innebygde sikkerhet
+## GitHub Models innebygd sikkerhet
 
 GitHub Models har grunnleggende innholdsfiltering innebygd. Det er som å ha en vennlig dørvakt på AI-klubben din – ikke den mest sofistikerte, men den gjør jobben for enkle scenarioer.
 
@@ -50,7 +50,7 @@ Dette kapittelet inkluderer en praktisk demonstrasjon av hvordan GitHub Models i
 
 ### Hva demoen viser
 
-`ResponsibleGithubModels`-klassen følger denne flyten:
+`ResponsibleGithubModels`-klassen følger denne prosessen:
 1. Initialiser GitHub Models-klienten med autentisering
 2. Test skadelige forespørsler (vold, hatprat, feilinformasjon, ulovlig innhold)
 3. Send hver forespørsel til GitHub Models API
@@ -121,9 +121,9 @@ Status: Response generated successfully
 
 ## Beste praksis for ansvarlig AI-utvikling
 
-Når du bygger AI-applikasjoner, følg disse essensielle praksisene:
+Når du bygger AI-applikasjoner, følg disse viktige praksisene:
 
-1. **Håndter alltid potensielle responser fra sikkerhetsfiltre på en god måte**
+1. **Håndter alltid potensielle sikkerhetsfilterresponser på en god måte**
    - Implementer riktig feilhåndtering for blokkert innhold
    - Gi meningsfull tilbakemelding til brukere når innhold blir filtrert
 
@@ -137,7 +137,7 @@ Når du bygger AI-applikasjoner, følg disse essensielle praksisene:
 
 4. **Overvåk og loggfør sikkerhetshendelser for forbedring**
    - Spor mønstre for blokkert innhold
-   - Forbedre sikkerhetstiltakene kontinuerlig
+   - Forbedre sikkerhetstiltakene dine kontinuerlig
 
 5. **Respekter plattformens innholdspolicyer**
    - Hold deg oppdatert med plattformens retningslinjer
@@ -152,7 +152,7 @@ Dette eksempelet bruker med vilje problematiske forespørsler kun for utdannings
 **Gratulerer!** Du har med suksess:
 
 - **Implementert AI-sikkerhetstiltak** inkludert innholdsfiltering og håndtering av sikkerhetsresponser
-- **Brukt prinsipper for ansvarlig AI** for å bygge etiske og pålitelige AI-systemer
+- **Anvendt prinsipper for ansvarlig AI** for å bygge etiske og pålitelige AI-systemer
 - **Testet sikkerhetsmekanismer** ved hjelp av GitHub Models' innebygde beskyttelsesfunksjoner
 - **Lært beste praksis** for ansvarlig AI-utvikling og distribusjon
 
@@ -160,11 +160,9 @@ Dette eksempelet bruker med vilje problematiske forespørsler kun for utdannings
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Lær om Microsofts tilnærming til sikkerhet, personvern og samsvar
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Utforsk Microsofts prinsipper og praksis for ansvarlig AI-utvikling
 
-Du har fullført kurset Generativ AI for nybegynnere - Java Edition og er nå rustet til å bygge sikre og effektive AI-applikasjoner!
-
 ## Fullføring av kurset
 
-Gratulerer med å ha fullført kurset Generativ AI for nybegynnere! Du har nå kunnskapen og verktøyene til å bygge ansvarlige og effektive generative AI-applikasjoner med Java.
+Gratulerer med å ha fullført kurset Generativ AI for nybegynnere!
 
 ![Fullføring av kurset](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.no.png)
 
@@ -196,4 +194,4 @@ Fortsett din AI-læringsreise med disse ekstra ressursene:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

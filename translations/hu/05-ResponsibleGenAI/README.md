@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "25b39778820b3bc2a84bd8d0d3aeff69",
-  "translation_date": "2025-07-29T09:57:41+00:00",
+  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+  "translation_date": "2025-07-29T15:57:09+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "hu"
 }
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [Telepítési Útmutató](../../../05-ResponsibleGenAI)
   - [A Bemutató Futtatása](../../../05-ResponsibleGenAI)
   - [Várható Kimenet](../../../05-ResponsibleGenAI)
-- [Legjobb Gyakorlatok a Felelős AI Fejlesztéshez](../../../05-ResponsibleGenAI)
+- [Legjobb Gyakorlatok Felelős AI Fejlesztéshez](../../../05-ResponsibleGenAI)
 - [Fontos Megjegyzés](../../../05-ResponsibleGenAI)
 - [Összefoglalás](../../../05-ResponsibleGenAI)
 - [Tanfolyam Befejezése](../../../05-ResponsibleGenAI)
@@ -42,18 +42,18 @@ A GitHub Models alapvető tartalomszűréssel rendelkezik már a kezdetektől. O
 **Amit a GitHub Models Véd:**
 - **Káros Tartalom**: Blokkolja az egyértelműen erőszakos, szexuális vagy veszélyes tartalmat
 - **Alapvető Gyűlöletbeszéd**: Szűri az egyértelműen diszkriminatív nyelvezetet
-- **Egyszerű Kijátszási Kísérletek**: Ellenáll az alapvető próbálkozásoknak, amelyek a biztonsági korlátok megkerülésére irányulnak
+- **Egyszerű Jailbreak Kísérletek**: Ellenáll az alapvető próbálkozásoknak, amelyek megkerülnék a biztonsági korlátokat
 
 ## Gyakorlati Példa: Felelős AI Biztonsági Bemutató
 
-Ez a fejezet egy gyakorlati bemutatót tartalmaz arról, hogyan valósítja meg a GitHub Models a felelős AI biztonsági intézkedéseket olyan parancsok tesztelésével, amelyek potenciálisan megsérthetik a biztonsági irányelveket.
+Ez a fejezet egy gyakorlati bemutatót tartalmaz arról, hogyan valósítja meg a GitHub Models a felelős AI biztonsági intézkedéseket, problémás promptok tesztelésével, amelyek potenciálisan megsérthetik a biztonsági irányelveket.
 
 ### Mit Mutat a Bemutató
 
 A `ResponsibleGithubModels` osztály az alábbi folyamatot követi:
 1. GitHub Models kliens inicializálása hitelesítéssel
-2. Káros parancsok tesztelése (erőszak, gyűlöletbeszéd, félretájékoztatás, illegális tartalom)
-3. Minden parancs elküldése a GitHub Models API-nak
+2. Káros promptok tesztelése (erőszak, gyűlöletbeszéd, félretájékoztatás, illegális tartalom)
+3. Minden prompt elküldése a GitHub Models API-nak
 4. Válaszok kezelése: kemény blokkok (HTTP hibák), lágy elutasítások (udvarias "Ebben nem tudok segíteni" válaszok), vagy normál tartalomgenerálás
 5. Eredmények megjelenítése, amelyek mutatják, hogy mely tartalmakat blokkolták, utasították el vagy engedélyezték
 6. Biztonságos tartalom tesztelése összehasonlítás céljából
@@ -93,7 +93,7 @@ A `ResponsibleGithubModels` osztály az alábbi folyamatot követi:
 
 ### Várható Kimenet
 
-A bemutató különböző típusú potenciálisan káros parancsokat tesztel, és megmutatja, hogyan működik a modern AI biztonság két mechanizmuson keresztül:
+A bemutató különböző típusú potenciálisan káros promptokat tesztel, és megmutatja, hogyan működik a modern AI biztonság két mechanizmuson keresztül:
 
 - **Kemény Blokkok**: HTTP 400 hibák, amikor a tartalmat a biztonsági szűrők blokkolják, mielőtt elérné a modellt
 - **Lágy Elutasítások**: A modell udvarias elutasításokat küld, például "Ebben nem tudok segíteni" (ez a leggyakoribb a modern modelleknél)
@@ -119,33 +119,33 @@ Status: Response generated successfully
 
 **Megjegyzés**: A kemény blokkok és a lágy elutasítások egyaránt azt jelzik, hogy a biztonsági rendszer megfelelően működik.
 
-## Legjobb Gyakorlatok a Felelős AI Fejlesztéshez
+## Legjobb Gyakorlatok Felelős AI Fejlesztéshez
 
-AI alkalmazások építésekor kövesd ezeket az alapvető gyakorlatokat:
+AI alkalmazások fejlesztésekor kövesd ezeket az alapvető gyakorlatokat:
 
 1. **Mindig kezeld megfelelően a biztonsági szűrő válaszait**
    - Valósíts meg megfelelő hibakezelést a blokkolt tartalom esetén
    - Adj értelmes visszajelzést a felhasználóknak, amikor tartalmat szűrnek
 
-2. **Valósíts meg saját kiegészítő tartalomellenőrzést, ahol szükséges**
-   - Adj hozzá specifikus biztonsági ellenőrzéseket az adott területhez
-   - Hozz létre egyedi ellenőrzési szabályokat az adott felhasználási esethez
+2. **Valósíts meg saját további tartalomellenőrzést, ahol szükséges**
+   - Adj hozzá specifikus biztonsági ellenőrzéseket a saját területedhez
+   - Hozz létre egyedi validációs szabályokat az esetedhez
 
 3. **Oktasd a felhasználókat a felelős AI használatáról**
    - Adj világos iránymutatásokat az elfogadható használatról
-   - Magyarázd el, miért lehet bizonyos tartalmakat blokkolni
+   - Magyarázd el, miért lehet bizonyos tartalom blokkolva
 
 4. **Figyeld és naplózd a biztonsági incidenseket a fejlesztés érdekében**
    - Kövesd nyomon a blokkolt tartalom mintáit
-   - Folyamatosan javítsd a biztonsági intézkedéseket
+   - Folyamatosan javítsd a biztonsági intézkedéseidet
 
-5. **Tartsd tiszteletben a platform tartalompolitikáját**
+5. **Tartsd tiszteletben a platform tartalmi irányelveit**
    - Maradj naprakész a platform irányelveivel
    - Kövesd a szolgáltatási feltételeket és etikai irányelveket
 
 ## Fontos Megjegyzés
 
-Ez a példa kizárólag oktatási célokra használ szándékosan problémás parancsokat. A cél a biztonsági intézkedések bemutatása, nem azok megkerülése. Mindig használd az AI eszközöket felelősségteljesen és etikusan.
+Ez a példa kizárólag oktatási célból használ problémás promptokat. A cél a biztonsági intézkedések bemutatása, nem azok megkerülése. Mindig felelősségteljesen és etikusan használd az AI eszközöket.
 
 ## Összefoglalás
 
@@ -154,24 +154,22 @@ Ez a példa kizárólag oktatási célokra használ szándékosan problémás pa
 - **Megvalósítottál AI biztonsági intézkedéseket**, beleértve a tartalomszűrést és a biztonsági válaszok kezelését
 - **Alkalmaztad a felelős AI elveit**, hogy etikus és megbízható AI rendszereket építs
 - **Tesztelted a biztonsági mechanizmusokat** a GitHub Models beépített védelmi képességeivel
-- **Megtanultad a legjobb gyakorlatokat** a felelős AI fejlesztéshez és telepítéshez
+- **Megtanultad a legjobb gyakorlatokat** a felelős AI fejlesztéshez és bevezetéshez
 
 **Felelős AI Források:**
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Tudj meg többet a Microsoft biztonsági, adatvédelmi és megfelelési megközelítéséről
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Fedezd fel a Microsoft elveit és gyakorlatát a felelős AI fejlesztéshez
 
-Befejezted a Generatív AI Kezdőknek - Java Kiadás tanfolyamot, és most már készen állsz arra, hogy biztonságos, hatékony AI alkalmazásokat építs!
-
 ## Tanfolyam Befejezése
 
-Gratulálunk a Generatív AI Kezdőknek tanfolyam elvégzéséhez! Most már rendelkezel a tudással és eszközökkel, hogy felelős és hatékony generatív AI alkalmazásokat építs Java-val.
+Gratulálunk, hogy befejezted a Generatív AI Kezdőknek tanfolyamot!
 
 ![Tanfolyam Befejezése](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.hu.png)
 
 **Amit elértél:**
 - Beállítottad a fejlesztési környezetedet
 - Megtanultad a generatív AI alaptechnikáit
-- Felfedezted a gyakorlati AI alkalmazásokat
+- Felfedeztél gyakorlati AI alkalmazásokat
 - Megértetted a felelős AI elveit
 
 ## Következő Lépések
@@ -195,5 +193,5 @@ Folytasd az AI tanulási utadat ezekkel a további forrásokkal:
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális, emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár igyekszünk pontosságra törekedni, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
