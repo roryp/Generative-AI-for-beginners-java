@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "25b39778820b3bc2a84bd8d0d3aeff69",
-  "translation_date": "2025-07-29T07:58:06+00:00",
+  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+  "translation_date": "2025-07-29T15:40:02+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "es"
 }
@@ -12,9 +12,9 @@ CO_OP_TRANSLATOR_METADATA:
 ## Lo que Aprenderás
 
 - Conocer las consideraciones éticas y las mejores prácticas importantes para el desarrollo de IA
-- Incorporar medidas de filtrado de contenido y seguridad en tus aplicaciones
+- Incorporar medidas de seguridad y filtrado de contenido en tus aplicaciones
 - Probar y manejar respuestas de seguridad de IA utilizando las protecciones integradas de GitHub Models
-- Aplicar principios de IA responsable para crear sistemas de IA seguros y éticos
+- Aplicar principios de IA responsable para crear sistemas de IA seguros, éticos y confiables
 
 ## Tabla de Contenidos
 
@@ -37,7 +37,7 @@ Este capítulo final se centra en los aspectos críticos de la construcción de 
 
 ## Seguridad Integrada en GitHub Models
 
-GitHub Models incluye un filtrado básico de contenido de forma predeterminada. Es como tener un portero amigable en tu club de IA: no es el más sofisticado, pero cumple con los escenarios básicos.
+GitHub Models incluye un filtrado básico de contenido de forma predeterminada. Es como tener un portero amigable en tu club de IA: no es el más sofisticado, pero cumple con lo necesario para escenarios básicos.
 
 **Qué Protege GitHub Models:**
 - **Contenido Dañino**: Bloquea contenido violento, sexual o peligroso evidente
@@ -46,7 +46,7 @@ GitHub Models incluye un filtrado básico de contenido de forma predeterminada. 
 
 ## Ejemplo Práctico: Demostración de Seguridad en IA Responsable
 
-Este capítulo incluye una demostración práctica de cómo GitHub Models implementa medidas de seguridad en IA responsable probando indicaciones que podrían violar las pautas de seguridad.
+Este capítulo incluye una demostración práctica de cómo GitHub Models implementa medidas de seguridad en IA responsable probando indicaciones que podrían violar las directrices de seguridad.
 
 ### Qué Muestra la Demostración
 
@@ -125,14 +125,14 @@ Al construir aplicaciones de IA, sigue estas prácticas esenciales:
 
 1. **Maneja siempre las respuestas de los filtros de seguridad de manera adecuada**
    - Implementa un manejo de errores adecuado para contenido bloqueado
-   - Proporciona retroalimentación significativa a los usuarios cuando se filtra contenido
+   - Proporciona retroalimentación significativa a los usuarios cuando el contenido es filtrado
 
 2. **Implementa validación adicional de contenido donde sea apropiado**
    - Agrega verificaciones de seguridad específicas del dominio
    - Crea reglas de validación personalizadas para tu caso de uso
 
 3. **Educa a los usuarios sobre el uso responsable de la IA**
-   - Proporciona pautas claras sobre el uso aceptable
+   - Proporciona directrices claras sobre el uso aceptable
    - Explica por qué cierto contenido podría ser bloqueado
 
 4. **Monitorea y registra incidentes de seguridad para mejorar**
@@ -140,12 +140,12 @@ Al construir aplicaciones de IA, sigue estas prácticas esenciales:
    - Mejora continuamente tus medidas de seguridad
 
 5. **Respeta las políticas de contenido de la plataforma**
-   - Mantente actualizado con las pautas de la plataforma
+   - Mantente actualizado con las directrices de la plataforma
    - Sigue los términos de servicio y las pautas éticas
 
 ## Nota Importante
 
-Este ejemplo utiliza indicaciones problemáticas de manera intencional solo con fines educativos. El objetivo es demostrar las medidas de seguridad, no eludirlas. Usa siempre las herramientas de IA de manera responsable y ética.
+Este ejemplo utiliza indicaciones intencionalmente problemáticas solo con fines educativos. El objetivo es demostrar las medidas de seguridad, no eludirlas. Usa siempre las herramientas de IA de manera responsable y ética.
 
 ## Resumen
 
@@ -160,11 +160,9 @@ Este ejemplo utiliza indicaciones problemáticas de manera intencional solo con 
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Aprende sobre el enfoque de Microsoft en seguridad, privacidad y cumplimiento
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Explora los principios y prácticas de Microsoft para el desarrollo de IA responsable
 
-¡Has completado el curso de IA Generativa para Principiantes - Edición Java y ahora estás preparado para construir aplicaciones de IA seguras y efectivas!
-
 ## Finalización del Curso
 
-¡Felicidades por completar el curso de IA Generativa para Principiantes! Ahora tienes el conocimiento y las herramientas para construir aplicaciones de IA generativa responsables y efectivas con Java.
+¡Felicidades por completar el curso de IA Generativa para Principiantes!
 
 ![Finalización del Curso](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.es.png)
 
@@ -176,7 +174,7 @@ Este ejemplo utiliza indicaciones problemáticas de manera intencional solo con 
 
 ## Próximos Pasos
 
-Continúa tu viaje de aprendizaje en IA con estos recursos adicionales:
+Continúa tu aprendizaje en IA con estos recursos adicionales:
 
 **Cursos Adicionales de Aprendizaje:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)

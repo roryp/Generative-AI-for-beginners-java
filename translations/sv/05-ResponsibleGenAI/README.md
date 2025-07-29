@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "25b39778820b3bc2a84bd8d0d3aeff69",
-  "translation_date": "2025-07-29T09:22:47+00:00",
+  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+  "translation_date": "2025-07-29T15:52:06+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "sv"
 }
@@ -42,7 +42,7 @@ GitHub Models har grundläggande innehållsfiltrering inbyggt från början. Det
 **Vad GitHub Models skyddar mot:**
 - **Skadligt innehåll**: Blockerar uppenbart våldsamt, sexuellt eller farligt innehåll
 - **Grundläggande hatretorik**: Filtrerar tydligt diskriminerande språk
-- **Enkla försök att kringgå säkerhet**: Motstår grundläggande försök att kringgå säkerhetsåtgärder
+- **Enkla försök att kringgå säkerhet**: Motstår grundläggande försök att bryta säkerhetsgränser
 
 ## Praktiskt exempel: Demo för ansvarsfull AI-säkerhet
 
@@ -54,7 +54,7 @@ Klassen `ResponsibleGithubModels` följer detta flöde:
 1. Initiera GitHub Models-klienten med autentisering
 2. Testa skadliga uppmaningar (våld, hatretorik, desinformation, olagligt innehåll)
 3. Skicka varje uppmaning till GitHub Models API
-4. Hantera svar: hårda blockeringar (HTTP-fel), mjuka avslag (artiga "Jag kan tyvärr inte hjälpa"-svar) eller normal innehållsgenerering
+4. Hantera svar: hårda blockeringar (HTTP-fel), mjuka avslag (artiga "Jag kan inte hjälpa till"-svar) eller normal innehållsgenerering
 5. Visa resultat som visar vilket innehåll som blockerades, avslogs eller tilläts
 6. Testa säkert innehåll för jämförelse
 
@@ -64,7 +64,7 @@ Klassen `ResponsibleGithubModels` följer detta flöde:
 
 1. **Ställ in din GitHub Personal Access Token:**
    
-   På Windows (Kommandotolken):
+   På Windows (Command Prompt):
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
@@ -96,7 +96,7 @@ Klassen `ResponsibleGithubModels` följer detta flöde:
 Demon kommer att testa olika typer av potentiellt skadliga uppmaningar och visa hur moderna AI-säkerhetsåtgärder fungerar genom två mekanismer:
 
 - **Hårda blockeringar**: HTTP 400-fel när innehåll blockeras av säkerhetsfilter innan det når modellen
-- **Mjuka avslag**: Modellen svarar med artiga avslag som "Jag kan tyvärr inte hjälpa med det" (vanligt med moderna modeller)
+- **Mjuka avslag**: Modellen svarar med artiga avslag som "Jag kan inte hjälpa till med det" (vanligt med moderna modeller)
 - **Säkert innehåll** som får ett normalt svar
 
 Exempel på utdataformat:
@@ -157,18 +157,16 @@ Detta exempel använder avsiktligt problematiska uppmaningar endast i utbildning
 - **Lärt dig bästa praxis** för ansvarsfull AI-utveckling och distribution
 
 **Resurser för ansvarsfull AI:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Läs om Microsofts syn på säkerhet, integritet och efterlevnad
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Läs om Microsofts tillvägagångssätt för säkerhet, integritet och efterlevnad
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Utforska Microsofts principer och praxis för ansvarsfull AI-utveckling
-
-Du har slutfört kursen Generativ AI för nybörjare - Java Edition och är nu redo att bygga säkra och effektiva AI-applikationer!
 
 ## Kursavslutning
 
-Grattis till att ha slutfört kursen Generativ AI för nybörjare! Du har nu kunskapen och verktygen för att bygga ansvarsfulla och effektiva generativa AI-applikationer med Java.
+Grattis till att ha slutfört kursen Generativ AI för nybörjare!
 
 ![Kursavslutning](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.sv.png)
 
-**Vad du har uppnått:**
+**Vad du har åstadkommit:**
 - Ställt in din utvecklingsmiljö
 - Lärt dig grundläggande tekniker för generativ AI
 - Utforskat praktiska AI-applikationer
@@ -176,24 +174,24 @@ Grattis till att ha slutfört kursen Generativ AI för nybörjare! Du har nu kun
 
 ## Nästa steg
 
-Fortsätt din AI-läranderesa med dessa ytterligare resurser:
+Fortsätt din AI-inlärningsresa med dessa ytterligare resurser:
 
 **Ytterligare utbildningskurser:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generativ AI för nybörjare med .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generativ AI för nybörjare med JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generativ AI för nybörjare](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML för nybörjare](https://aka.ms/ml-beginners)
-- [Data Science för nybörjare](https://aka.ms/datascience-beginners)
-- [AI för nybörjare](https://aka.ms/ai-beginners)
-- [Cybersäkerhet för nybörjare](https://github.com/microsoft/Security-101)
-- [Webbutveckling för nybörjare](https://aka.ms/webdev-beginners)
-- [IoT för nybörjare](https://aka.ms/iot-beginners)
-- [XR-utveckling för nybörjare](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot för AI-parprogrammering](https://aka.ms/GitHubCopilotAI)
-- [Mastering GitHub Copilot för C#/.NET-utvecklare](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Välj ditt eget Copilot-äventyr](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App med Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML for Beginners](https://aka.ms/ml-beginners)
+- [Data Science for Beginners](https://aka.ms/datascience-beginners)
+- [AI for Beginners](https://aka.ms/ai-beginners)
+- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
+- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
+- [IoT for Beginners](https://aka.ms/iot-beginners)
+- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
+- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
+- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
+- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "25b39778820b3bc2a84bd8d0d3aeff69",
-  "translation_date": "2025-07-29T08:01:05+00:00",
+  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+  "translation_date": "2025-07-29T15:40:31+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "de"
 }
@@ -13,8 +13,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 - Erfahren Sie mehr über ethische Überlegungen und bewährte Praktiken für die KI-Entwicklung
 - Integrieren Sie Inhaltsfilterung und Sicherheitsmaßnahmen in Ihre Anwendungen
-- Testen und handhaben Sie KI-Sicherheitsantworten mit den integrierten Schutzmechanismen von GitHub Models
-- Wenden Sie Prinzipien verantwortungsvoller KI an, um sichere und ethische KI-Systeme zu erstellen
+- Testen und handhaben Sie KI-Sicherheitsantworten mit den integrierten Schutzfunktionen von GitHub Models
+- Wenden Sie Prinzipien der verantwortungsvollen KI an, um sichere und ethische KI-Systeme zu erstellen
 
 ## Inhaltsverzeichnis
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Einleitung
 
-Dieses letzte Kapitel konzentriert sich auf die entscheidenden Aspekte beim Aufbau verantwortungsvoller und ethischer generativer KI-Anwendungen. Sie lernen, wie Sie Sicherheitsmaßnahmen implementieren, Inhaltsfilterung handhaben und bewährte Praktiken für die Entwicklung verantwortungsvoller KI anwenden können, indem Sie die in den vorherigen Kapiteln behandelten Tools und Frameworks nutzen. Das Verständnis dieser Prinzipien ist unerlässlich, um KI-Systeme zu entwickeln, die nicht nur technisch beeindruckend, sondern auch sicher, ethisch und vertrauenswürdig sind.
+Dieses letzte Kapitel konzentriert sich auf die entscheidenden Aspekte beim Aufbau verantwortungsvoller und ethischer generativer KI-Anwendungen. Sie lernen, wie Sie Sicherheitsmaßnahmen implementieren, Inhaltsfilterung handhaben und bewährte Praktiken für die Entwicklung verantwortungsvoller KI anwenden können, indem Sie die in den vorherigen Kapiteln behandelten Tools und Frameworks nutzen. Das Verständnis dieser Prinzipien ist entscheidend, um KI-Systeme zu entwickeln, die nicht nur technisch beeindruckend, sondern auch sicher, ethisch und vertrauenswürdig sind.
 
 ## Integrierte Sicherheitsfunktionen von GitHub Models
 
@@ -54,7 +54,7 @@ Die Klasse `ResponsibleGithubModels` folgt diesem Ablauf:
 1. Initialisieren des GitHub Models-Clients mit Authentifizierung
 2. Testen schädlicher Eingaben (Gewalt, Hassrede, Fehlinformationen, illegale Inhalte)
 3. Senden jeder Eingabe an die GitHub Models API
-4. Umgang mit Antworten: harte Blockierungen (HTTP-Fehler), weiche Ablehnungen (höfliche Antworten wie „Ich kann dabei nicht helfen“) oder normale Inhaltserstellung
+4. Umgang mit Antworten: harte Blockierungen (HTTP-Fehler), weiche Ablehnungen (höfliche „Ich kann dabei nicht helfen“-Antworten) oder normale Inhaltserstellung
 5. Anzeigen der Ergebnisse, die zeigen, welche Inhalte blockiert, abgelehnt oder zugelassen wurden
 6. Testen sicherer Inhalte zum Vergleich
 
@@ -62,7 +62,7 @@ Die Klasse `ResponsibleGithubModels` folgt diesem Ablauf:
 
 ### Einrichtungsanweisungen
 
-1. **Setzen Sie Ihr GitHub Personal Access Token:**
+1. **Legen Sie Ihr GitHub Personal Access Token fest:**
    
    Unter Windows (Command Prompt):
    ```cmd
@@ -123,7 +123,7 @@ Status: Response generated successfully
 
 Beim Aufbau von KI-Anwendungen sollten Sie diese wesentlichen Praktiken befolgen:
 
-1. **Gehen Sie mit potenziellen Antworten von Sicherheitsfiltern immer angemessen um**
+1. **Gehen Sie immer mit möglichen Antworten von Sicherheitsfiltern umsichtig um**
    - Implementieren Sie eine ordnungsgemäße Fehlerbehandlung für blockierte Inhalte
    - Geben Sie den Nutzern sinnvolles Feedback, wenn Inhalte gefiltert werden
 
@@ -140,38 +140,36 @@ Beim Aufbau von KI-Anwendungen sollten Sie diese wesentlichen Praktiken befolgen
    - Verbessern Sie kontinuierlich Ihre Sicherheitsmaßnahmen
 
 5. **Respektieren Sie die Inhaltsrichtlinien der Plattform**
-   - Bleiben Sie über die Richtlinien der Plattform informiert
+   - Bleiben Sie über die Richtlinien der Plattform auf dem Laufenden
    - Befolgen Sie die Nutzungsbedingungen und ethischen Richtlinien
 
 ## Wichtiger Hinweis
 
-Dieses Beispiel verwendet absichtlich problematische Eingaben nur zu Bildungszwecken. Ziel ist es, Sicherheitsmaßnahmen zu demonstrieren, nicht sie zu umgehen. Verwenden Sie KI-Tools immer verantwortungsvoll und ethisch.
+Dieses Beispiel verwendet absichtlich problematische Eingaben nur zu Bildungszwecken. Ziel ist es, Sicherheitsmaßnahmen zu demonstrieren, nicht sie zu umgehen. Nutzen Sie KI-Tools immer verantwortungsvoll und ethisch.
 
 ## Zusammenfassung
 
 **Herzlichen Glückwunsch!** Sie haben erfolgreich:
 
 - **KI-Sicherheitsmaßnahmen implementiert**, einschließlich Inhaltsfilterung und Umgang mit Sicherheitsantworten
-- **Prinzipien verantwortungsvoller KI angewendet**, um ethische und vertrauenswürdige KI-Systeme zu erstellen
+- **Prinzipien der verantwortungsvollen KI angewendet**, um ethische und vertrauenswürdige KI-Systeme zu erstellen
 - **Sicherheitsmechanismen getestet** mit den integrierten Schutzfunktionen von GitHub Models
 - **Bewährte Praktiken gelernt** für die Entwicklung und Bereitstellung verantwortungsvoller KI
 
 **Ressourcen für verantwortungsvolle KI:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) – Erfahren Sie mehr über Microsofts Ansatz zu Sicherheit, Datenschutz und Compliance
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) – Entdecken Sie Microsofts Prinzipien und Praktiken für die Entwicklung verantwortungsvoller KI
-
-Sie haben den Kurs „Generative KI für Anfänger – Java Edition“ abgeschlossen und sind nun bereit, sichere und effektive KI-Anwendungen zu entwickeln!
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Erfahren Sie mehr über Microsofts Ansatz zu Sicherheit, Datenschutz und Compliance
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Entdecken Sie Microsofts Prinzipien und Praktiken für die Entwicklung verantwortungsvoller KI
 
 ## Kursabschluss
 
-Herzlichen Glückwunsch zum Abschluss des Kurses „Generative KI für Anfänger“! Sie verfügen nun über das Wissen und die Werkzeuge, um verantwortungsvolle und effektive generative KI-Anwendungen mit Java zu entwickeln.
+Herzlichen Glückwunsch zum Abschluss des Kurses „Generative KI für Anfänger“!
 
 ![Kursabschluss](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.de.png)
 
 **Was Sie erreicht haben:**
 - Einrichtung Ihrer Entwicklungsumgebung
 - Erlernen grundlegender generativer KI-Techniken
-- Erkundung praktischer KI-Anwendungen
+- Erkunden praktischer KI-Anwendungen
 - Verständnis der Prinzipien verantwortungsvoller KI
 
 ## Nächste Schritte
@@ -196,4 +194,4 @@ Setzen Sie Ihre KI-Lernreise mit diesen zusätzlichen Ressourcen fort:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

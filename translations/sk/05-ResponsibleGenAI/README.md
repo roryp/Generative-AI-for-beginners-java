@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "25b39778820b3bc2a84bd8d0d3aeff69",
-  "translation_date": "2025-07-29T10:04:48+00:00",
+  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+  "translation_date": "2025-07-29T15:58:07+00:00",
   "source_file": "05-ResponsibleGenAI/README.md",
   "language_code": "sk"
 }
@@ -22,7 +22,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Vstavaná bezpečnosť GitHub Models](../../../05-ResponsibleGenAI)
 - [Praktický príklad: Ukážka bezpečnosti zodpovednej AI](../../../05-ResponsibleGenAI)
   - [Čo ukážka demonštruje](../../../05-ResponsibleGenAI)
-  - [Pokyny na nastavenie](../../../05-ResponsibleGenAI)
+  - [Inštrukcie na nastavenie](../../../05-ResponsibleGenAI)
   - [Spustenie ukážky](../../../05-ResponsibleGenAI)
   - [Očakávaný výstup](../../../05-ResponsibleGenAI)
 - [Osvedčené postupy pre vývoj zodpovednej AI](../../../05-ResponsibleGenAI)
@@ -46,21 +46,21 @@ GitHub Models má základné filtrovanie obsahu už zabudované. Je to ako mať 
 
 ## Praktický príklad: Ukážka bezpečnosti zodpovednej AI
 
-Táto kapitola obsahuje praktickú ukážku toho, ako GitHub Models implementuje bezpečnostné opatrenia zodpovednej AI testovaním výziev, ktoré by mohli potenciálne porušiť bezpečnostné pravidlá.
+Táto kapitola obsahuje praktickú ukážku toho, ako GitHub Models implementuje bezpečnostné opatrenia zodpovednej AI testovaním vstupov, ktoré by mohli potenciálne porušiť bezpečnostné pravidlá.
 
 ### Čo ukážka demonštruje
 
 Trieda `ResponsibleGithubModels` postupuje podľa tohto toku:
 1. Inicializuje klienta GitHub Models s autentifikáciou
-2. Testuje škodlivé výzvy (násilie, nenávistné prejavy, dezinformácie, nelegálny obsah)
-3. Posiela každú výzvu do API GitHub Models
-4. Spracováva odpovede: tvrdé blokovania (HTTP chyby), mäkké odmietnutia (zdvorilé „Nemôžem s tým pomôcť“ odpovede) alebo normálne generovanie obsahu
+2. Testuje škodlivé vstupy (násilie, nenávistné prejavy, dezinformácie, nelegálny obsah)
+3. Posiela každý vstup do API GitHub Models
+4. Spracováva odpovede: tvrdé blokovania (HTTP chyby), mäkké odmietnutia (zdvorilé „S tým vám nemôžem pomôcť“ odpovede) alebo normálne generovanie obsahu
 5. Zobrazuje výsledky, ktoré ukazujú, ktorý obsah bol blokovaný, odmietnutý alebo povolený
 6. Testuje bezpečný obsah na porovnanie
 
 ![Ukážka bezpečnosti zodpovednej AI](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.sk.png)
 
-### Pokyny na nastavenie
+### Inštrukcie na nastavenie
 
 1. **Nastavte svoj GitHub Personal Access Token:**
    
@@ -93,13 +93,13 @@ Trieda `ResponsibleGithubModels` postupuje podľa tohto toku:
 
 ### Očakávaný výstup
 
-Ukážka otestuje rôzne typy potenciálne škodlivých výziev a ukáže, ako moderná bezpečnosť AI funguje prostredníctvom dvoch mechanizmov:
+Ukážka otestuje rôzne typy potenciálne škodlivých vstupov a ukáže, ako moderná bezpečnosť AI funguje prostredníctvom dvoch mechanizmov:
 
 - **Tvrdé blokovania**: HTTP 400 chyby, keď je obsah blokovaný bezpečnostnými filtrami ešte pred dosiahnutím modelu
-- **Mäkké odmietnutia**: Model odpovedá zdvorilými odmietnutiami ako „Nemôžem s tým pomôcť“ (najbežnejšie pri moderných modeloch)
+- **Mäkké odmietnutia**: Model odpovie zdvorilým odmietnutím, ako napríklad „S tým vám nemôžem pomôcť“ (najčastejšie pri moderných modeloch)
 - **Bezpečný obsah**, ktorý dostane normálnu odpoveď
 
-Formát ukážkového výstupu:
+Ukážkový formát výstupu:
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -140,43 +140,41 @@ Pri budovaní AI aplikácií dodržiavajte tieto základné postupy:
    - Neustále zlepšujte svoje bezpečnostné opatrenia
 
 5. **Rešpektujte obsahové pravidlá platformy**
-   - Sledujte aktualizácie pravidiel platformy
-   - Dodržiavajte podmienky používania a etické smernice
+   - Sledujte aktuálne pokyny platformy
+   - Dodržiavajte podmienky používania a etické zásady
 
 ## Dôležitá poznámka
 
-Tento príklad používa zámerne problematické výzvy len na vzdelávacie účely. Cieľom je demonštrovať bezpečnostné opatrenia, nie ich obchádzať. Vždy používajte AI nástroje zodpovedne a eticky.
+Tento príklad používa zámerne problematické vstupy len na vzdelávacie účely. Cieľom je demonštrovať bezpečnostné opatrenia, nie ich obchádzať. Vždy používajte AI nástroje zodpovedne a eticky.
 
 ## Zhrnutie
 
 **Gratulujeme!** Úspešne ste:
 
 - **Implementovali bezpečnostné opatrenia AI**, vrátane filtrovania obsahu a spracovania bezpečnostných odpovedí
-- **Aplikovali princípy zodpovednej AI** na vytváranie etických a dôveryhodných AI systémov
+- **Aplikovali princípy zodpovednej AI** na budovanie etických a dôveryhodných AI systémov
 - **Otestovali bezpečnostné mechanizmy** pomocou vstavaných ochranných schopností GitHub Models
 - **Naučili sa osvedčené postupy** pre vývoj a nasadenie zodpovednej AI
 
 **Zdroje pre zodpovednú AI:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Zistite viac o prístupe Microsoftu k bezpečnosti, ochrane súkromia a súladu
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Zistite viac o prístupe Microsoftu k bezpečnosti, súkromiu a súladu
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Preskúmajte princípy a postupy Microsoftu pre vývoj zodpovednej AI
-
-Dokončili ste kurz Generatívna AI pre začiatočníkov - Java edícia a teraz ste pripravení vytvárať bezpečné a efektívne AI aplikácie!
 
 ## Dokončenie kurzu
 
-Gratulujeme k dokončeniu kurzu Generatívna AI pre začiatočníkov! Teraz máte vedomosti a nástroje na vytváranie zodpovedných a efektívnych generatívnych AI aplikácií s použitím Javy.
+Gratulujeme k dokončeniu kurzu Generatívna AI pre začiatočníkov!
 
 ![Dokončenie kurzu](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.sk.png)
 
 **Čo ste dosiahli:**
 - Nastavili ste svoje vývojové prostredie
 - Naučili ste sa základné techniky generatívnej AI
-- Preskúmali ste praktické AI aplikácie
+- Preskúmali ste praktické aplikácie AI
 - Pochopili ste princípy zodpovednej AI
 
 ## Ďalšie kroky
 
-Pokračujte vo svojej AI vzdelávacej ceste s týmito dodatočnými zdrojmi:
+Pokračujte vo svojom vzdelávaní v oblasti AI s týmito dodatočnými zdrojmi:
 
 **Dodatočné vzdelávacie kurzy:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
@@ -196,4 +194,4 @@ Pokračujte vo svojej AI vzdelávacej ceste s týmito dodatočnými zdrojmi:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie odporúčame profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
