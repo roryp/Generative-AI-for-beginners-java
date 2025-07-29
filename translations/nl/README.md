@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T10:56:20+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T09:34:06+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -12,9 +12,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generatieve AI voor Beginners - Java Editie](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.nl.png)
 
-**Tijdsinvestering**: De hele workshop kan online worden voltooid zonder lokale installatie. Het instellen van de omgeving duurt 2 minuten, en het verkennen van de voorbeelden neemt 1-3 uur in beslag, afhankelijk van de diepgang van de verkenning.
+**Tijdsinvestering**: De hele workshop kan online worden voltooid zonder lokale installatie. Het instellen van de omgeving duurt 2 minuten, en het verkennen van de voorbeelden kost 1-3 uur, afhankelijk van de diepgang van de verkenning.
 
-> **Snelstartgids**
+> **Snelle Start** 
 
 1. Fork deze repository naar je GitHub-account
 2. Klik op **Code** → Tabblad **Codespaces** → **...** → **Nieuw met opties...**
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Ondersteund via GitHub Action (Automatisch & Altijd up-to-date)
 
-[Frans](../fr/README.md) | [Spaans](../es/README.md) | [Duits](../de/README.md) | [Russisch](../ru/README.md) | [Arabisch](../ar/README.md) | [Perzisch (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinees (Vereenvoudigd)](../zh/README.md) | [Chinees (Traditioneel, Macau)](../mo/README.md) | [Chinees (Traditioneel, Hong Kong)](../hk/README.md) | [Chinees (Traditioneel, Taiwan)](../tw/README.md) | [Japans](../ja/README.md) | [Koreaans](../ko/README.md) | [Hindi](../hi/README.md) | [Bengaals](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalees](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugees (Portugal)](../pt/README.md) | [Portugees (Brazilië)](../br/README.md) | [Italiaans](../it/README.md) | [Pools](../pl/README.md) | [Turks](../tr/README.md) | [Grieks](../el/README.md) | [Thais](../th/README.md) | [Zweeds](../sv/README.md) | [Deens](../da/README.md) | [Noors](../no/README.md) | [Fins](../fi/README.md) | [Nederlands](./README.md) | [Hebreeuws](../he/README.md) | [Vietnamees](../vi/README.md) | [Indonesisch](../id/README.md) | [Maleis](../ms/README.md) | [Tagalog (Filipijns)](../tl/README.md) | [Swahili](../sw/README.md) | [Hongaars](../hu/README.md) | [Tsjechisch](../cs/README.md) | [Slowaaks](../sk/README.md) | [Roemeens](../ro/README.md) | [Bulgaars](../bg/README.md) | [Servisch (Cyrillisch)](../sr/README.md) | [Kroatisch](../hr/README.md) | [Sloveens](../sl/README.md) | [Oekraïens](../uk/README.md) | [Birmaans (Myanmar)](../my/README.md)
+[Frans](../fr/README.md) | [Spaans](../es/README.md) | [Duits](../de/README.md) | [Russisch](../ru/README.md) | [Arabisch](../ar/README.md) | [Perzisch (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinees (Vereenvoudigd)](../zh/README.md) | [Chinees (Traditioneel, Macau)](../mo/README.md) | [Chinees (Traditioneel, Hong Kong)](../hk/README.md) | [Chinees (Traditioneel, Taiwan)](../tw/README.md) | [Japans](../ja/README.md) | [Koreaans](../ko/README.md) | [Hindi](../hi/README.md) | [Bengaals](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalees](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugees (Portugal)](../pt/README.md) | [Portugees (Brazilië)](../br/README.md) | [Italiaans](../it/README.md) | [Pools](../pl/README.md) | [Turks](../tr/README.md) | [Grieks](../el/README.md) | [Thais](../th/README.md) | [Zweeds](../sv/README.md) | [Deens](../da/README.md) | [Noors](../no/README.md) | [Fins](../fi/README.md) | [Nederlands](./README.md) | [Hebreeuws](../he/README.md) | [Vietnamees](../vi/README.md) | [Indonesisch](../id/README.md) | [Maleis](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hongaars](../hu/README.md) | [Tsjechisch](../cs/README.md) | [Slowaaks](../sk/README.md) | [Roemeens](../ro/README.md) | [Bulgaars](../bg/README.md) | [Servisch (Cyrillisch)](../sr/README.md) | [Kroatisch](../hr/README.md) | [Sloveens](../sl/README.md) | [Oekraïens](../uk/README.md) | [Birmaans (Myanmar)](../my/README.md)
 
 ## Cursusstructuur & Leerpad
 
@@ -47,7 +47,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Hoofdstuk 3: Kerntechnieken van Generatieve AI**
 - **Prompt Engineering**: Technieken voor optimale AI-modelreacties
-- **Embeddings & Vectorbewerkingen**: Implementeer semantisch zoeken en gelijkenisvergelijking
+- **Embeddings & Vectorbewerkingen**: Semantisch zoeken en overeenkomsten implementeren
 - **Retrieval-Augmented Generation (RAG)**: Combineer AI met je eigen gegevensbronnen
 - **Functieaanroepen**: Breid AI-mogelijkheden uit met aangepaste tools en plug-ins
 - **[→ Start Hoofdstuk 3](./03-CoreGenerativeAITechniques/README.md)**
@@ -59,12 +59,12 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Hoofdstuk 4](./04-PracticalSamples/README.md)**
 
 ### **Hoofdstuk 5: Verantwoordelijke AI-ontwikkeling**
-- **GitHub Models Veiligheid**: Test ingebouwde contentfilters en veiligheidsmechanismen
-- **Verantwoordelijke AI Demo**: Hands-on voorbeeld dat laat zien hoe AI-veiligheidsfilters in de praktijk werken
+- **GitHub Models Veiligheid**: Test ingebouwde contentfilters en veiligheidsmechanismen (harde blokkades en zachte weigeringen)
+- **Verantwoordelijke AI Demo**: Praktisch voorbeeld van hoe moderne AI-veiligheidssystemen werken
 - **Best Practices**: Essentiële richtlijnen voor ethische AI-ontwikkeling en -implementatie
 - **[→ Start Hoofdstuk 5](./05-ResponsibleGenAI/README.md)**
 
-## Aanvullende Bronnen
+## Aanvullende Bronnen 
 
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generatieve AI voor Beginners met .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App met Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

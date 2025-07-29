@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T10:15:58+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T08:00:12+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Kernkonzepte**: Verständnis von großen Sprachmodellen, Tokens, Embeddings und KI-Fähigkeiten
 - **Java KI-Ökosystem**: Überblick über Spring AI und OpenAI SDKs
 - **Model Context Protocol**: Einführung in MCP und seine Rolle in der Kommunikation von KI-Agenten
-- **Praktische Anwendungen**: Szenarien aus der realen Welt, einschließlich Chatbots und Inhaltserstellung
+- **Praktische Anwendungen**: Szenarien aus der Praxis, einschließlich Chatbots und Inhaltserstellung
 - **[→ Kapitel 1 starten](./01-IntroToGenAI/README.md)**
 
 ### **Kapitel 2: Einrichtung der Entwicklungsumgebung**
@@ -59,9 +59,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Kapitel 4 starten](./04-PracticalSamples/README.md)**
 
 ### **Kapitel 5: Verantwortungsvolle KI-Entwicklung**
-- **GitHub Models Sicherheit**: Testen von eingebauten Inhaltsfiltern und Sicherheitsmechanismen
-- **Responsible AI Demo**: Praktisches Beispiel, das zeigt, wie KI-Sicherheitsfilter in der Praxis funktionieren
-- **Best Practices**: Wesentliche Richtlinien für ethische KI-Entwicklung und -Bereitstellung
+- **GitHub Models Sicherheit**: Testen von eingebauten Inhaltsfiltern und Sicherheitsmechanismen (harte Blockierungen und weiche Ablehnungen)
+- **Responsible AI Demo**: Praktisches Beispiel, das zeigt, wie moderne KI-Sicherheitssysteme in der Praxis funktionieren
+- **Best Practices**: Wesentliche Richtlinien für die ethische Entwicklung und Bereitstellung von KI
 - **[→ Kapitel 5 starten](./05-ResponsibleGenAI/README.md)**
 
 ## Zusätzliche Ressourcen
@@ -77,10 +77,10 @@ CO_OP_TRANSLATOR_METADATA:
 - [Webentwicklung für Anfänger](https://aka.ms/webdev-beginners)
 - [IoT für Anfänger](https://aka.ms/iot-beginners)
 - [XR-Entwicklung für Anfänger](https://github.com/microsoft/xr-development-for-beginners)
-- [GitHub Copilot meistern für KI-gestütztes Programmieren](https://aka.ms/GitHubCopilotAI)
-- [GitHub Copilot meistern für C#/.NET-Entwickler](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [GitHub Copilot für KI-gestütztes Programmieren meistern](https://aka.ms/GitHubCopilotAI)
+- [GitHub Copilot für C#/.NET-Entwickler meistern](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Wählen Sie Ihr eigenes Copilot-Abenteuer](https://github.com/microsoft/CopilotAdventures)
 - [RAG-Chat-App mit Azure AI-Diensten](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

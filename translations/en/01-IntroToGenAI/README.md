@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "006866db93a268a8769bb55f2e324291",
-  "translation_date": "2025-07-28T10:12:51+00:00",
+  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
+  "translation_date": "2025-07-29T07:53:45+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "en"
 }
@@ -30,19 +30,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introduction
 
-Welcome to the first chapter of Generative AI for Beginners - Java Edition! This introductory lesson will familiarize you with the foundational concepts of generative AI and how to work with them using Java. You'll explore the essential components of AI applications, such as Large Language Models (LLMs), tokens, embeddings, and AI agents. Additionally, we'll introduce the primary Java tools you'll use throughout this course.
+Welcome to the first chapter of Generative AI for Beginners - Java Edition! This introductory lesson will guide you through the fundamental concepts of generative AI and how to work with them using Java. You'll explore the essential components of AI applications, such as Large Language Models (LLMs), tokens, embeddings, and AI agents. Additionally, we'll introduce the primary Java tools you'll use throughout this course.
 
 ### A quick refresh on Generative AI concepts
 
-Generative AI refers to a type of artificial intelligence that can create new content—like text, images, or code—by learning patterns and relationships from data. These models can generate human-like responses, understand context, and even produce content that feels authentic.
+Generative AI refers to a type of artificial intelligence that creates new content—like text, images, or code—based on patterns and relationships it has learned from data. These models can generate human-like responses, understand context, and even create content that feels authentic.
 
-When building Java AI applications, you'll use **generative AI models** to create content. Some of the capabilities of these models include:
+When building Java AI applications, you'll use **generative AI models** to produce content. These models can perform tasks such as:
 
-- **Text Generation**: Producing human-like text for chatbots, content creation, or text completion.
-- **Image Generation and Analysis**: Creating realistic images, enhancing photos, or identifying objects.
+- **Text Generation**: Creating human-like text for chatbots, content writing, or text completion.
+- **Image Generation and Analysis**: Producing realistic images, enhancing photos, or identifying objects.
 - **Code Generation**: Writing code snippets or scripts.
 
-Different models are optimized for specific tasks. For instance, **Small Language Models (SLMs)** and **Large Language Models (LLMs)** are both used for text generation, but LLMs generally perform better on complex tasks. For image-related tasks, specialized vision models or multi-modal models are used.
+Different models are optimized for specific tasks. For instance, **Small Language Models (SLMs)** and **Large Language Models (LLMs)** are both capable of text generation, but LLMs generally perform better on complex tasks. For image-related tasks, specialized vision models or multi-modal models are used.
 
 ![Figure: Generative AI model types and use cases.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.en.png)
 
@@ -50,7 +50,7 @@ Of course, these models aren't perfect and can sometimes "hallucinate" or genera
 
 #### Prompt engineering review
 
-Prompt engineering involves crafting effective inputs to guide AI models toward the desired outputs. It focuses on:
+Prompt engineering involves crafting effective inputs to guide AI models toward desired outputs. It focuses on:
 
 - **Clarity**: Ensuring instructions are clear and unambiguous.
 - **Context**: Providing relevant background information.
@@ -58,22 +58,22 @@ Prompt engineering involves crafting effective inputs to guide AI models toward 
 
 Best practices for prompt engineering include designing prompts carefully, giving clear instructions, breaking tasks into smaller steps, using one-shot or few-shot learning, and tuning prompts. Testing different prompts is key to finding the best approach for your specific use case.
 
-When building applications, you'll work with different types of prompts:
+When building applications, you'll work with various types of prompts:
 - **System prompts**: Define the base rules and context for the model's behavior.
-- **User prompts**: Represent input data from your application's users.
-- **Assistant prompts**: Reflect the model's responses based on system and user prompts.
+- **User prompts**: Input data provided by your application's users.
+- **Assistant prompts**: The model's responses based on system and user prompts.
 
-> **Learn more**: Check out the [Prompt Engineering chapter of the GenAI for Beginners course](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals) for more details.
+> **Learn more**: Explore prompt engineering in the [Prompt Engineering chapter of the GenAI for Beginners course](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals)
 
 #### Tokens, embeddings, and agents
 
 When working with generative AI models, you'll encounter terms like **tokens**, **embeddings**, **agents**, and **Model Context Protocol (MCP)**. Here's a closer look at these concepts:
 
-- **Tokens**: Tokens are the smallest units of text that a model processes. They can be words, characters, or subwords. Tokens represent text data in a format the model can understand. For example, the sentence "The quick brown fox jumped over the lazy dog" might be tokenized as ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] or ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"], depending on the tokenization strategy.
+- **Tokens**: Tokens are the smallest units of text a model processes. They can be words, characters, or subwords. Tokens represent text data in a format the model can understand. For example, the sentence "The quick brown fox jumped over the lazy dog" might be tokenized as ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] or ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"], depending on the tokenization strategy.
 
 ![Figure: Generative AI tokens example of breaking words into tokens](../../../01-IntroToGenAI/images/tokens.webp)
 
-Tokenization is the process of breaking text into these smaller units. Models operate on tokens rather than raw text, and the number of tokens in a prompt affects the model's response length and quality. Models have token limits for their context window (e.g., GPT-4o supports up to 128K tokens, including input and output).
+Tokenization is the process of breaking text into these smaller units. This is important because models work with tokens rather than raw text. The number of tokens in a prompt affects the model's response length and quality, as models have token limits for their context window (e.g., 128K tokens for GPT-4o's total context, including input and output).
 
   In Java, libraries like the OpenAI SDK can handle tokenization automatically when sending requests to AI models.
 
@@ -81,9 +81,9 @@ Tokenization is the process of breaking text into these smaller units. Models op
 
 ![Figure: Embeddings](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.en.png)
 
-  In Java, you can generate embeddings using the OpenAI SDK or other libraries. Embeddings are crucial for tasks like semantic search, where you want to find similar content based on meaning rather than exact text matches.
+  In Java, you can generate embeddings using the OpenAI SDK or other libraries that support embedding generation. Embeddings are crucial for tasks like semantic search, where you want to find similar content based on meaning rather than exact text matches.
 
-- **Vector databases**: Vector databases are specialized storage systems optimized for embeddings. They enable efficient similarity searches and are essential for Retrieval-Augmented Generation (RAG) patterns, where you retrieve relevant information from large datasets based on semantic similarity.
+- **Vector databases**: Vector databases are specialized storage systems optimized for embeddings. They enable efficient similarity searches and are essential for Retrieval-Augmented Generation (RAG) patterns, where you retrieve relevant information from large datasets based on semantic similarity rather than exact matches.
 
 ![Figure: Vector database architecture showing how embeddings are stored and retrieved for similarity search.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.en.png)
 
@@ -93,7 +93,7 @@ Tokenization is the process of breaking text into these smaller units. Models op
 
 In Java AI applications, you'll use tokens for text processing, embeddings for semantic search and RAG, vector databases for data retrieval, and agents with MCP to build intelligent systems that can use external tools.
 
-![Figure: how a prompt becomes a reply—tokens, vectors, optional RAG lookup, LLM thinking, and an MCP agent all in one quick flow..](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.en.png)
+![Figure: how a prompt becomes a reply—tokens, vectors, optional RAG lookup, LLM thinking, and an MCP agent all in one quick flow.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.en.png)
 
 ### AI Development Tools and Libraries for Java
 
@@ -140,11 +140,11 @@ The Azure OpenAI client library for Java is an adaptation of OpenAI's REST APIs 
 
 ## Summary
 
-**Congratulations!** You have successfully:
+That wraps up the foundations! You now understand:
 
-- **Learned about Generative AI fundamentals**, including LLMs, prompt engineering, tokens, embeddings, and vector databases
-- **Compared Java AI development tools**, such as Azure OpenAI SDK, Spring AI, and OpenAI Java SDK
-- **Discovered the Model Context Protocol** and its role in AI agent communication
+- The core concepts behind generative AI, including LLMs, prompt engineering, tokens, embeddings, and vector databases
+- The available tools for Java AI development: Azure OpenAI SDK, Spring AI, and OpenAI Java SDK
+- The role of the Model Context Protocol in enabling AI agents to interact with external tools
 
 ## Next Steps
 

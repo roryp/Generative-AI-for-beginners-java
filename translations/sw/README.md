@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T11:04:19+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T09:52:56+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
@@ -16,71 +16,71 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **Anza Haraka**
 
-1. Fork hifadhi hii kwenye akaunti yako ya GitHub  
-2. Bonyeza **Code** → **Kichupo cha Codespaces** → **...** → **New with options...**  
-3. Tumia chaguo-msingi – hii itachagua kontena la Maendeleo lililoundwa kwa ajili ya kozi hii  
-4. Bonyeza **Create codespace**  
-5. Subiri ~dakika 2 kwa mazingira kuwa tayari  
-6. Nenda moja kwa moja kwenye [Mfano wa kwanza](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)  
+1. Fork hifadhi hii kwenye akaunti yako ya GitHub
+2. Bonyeza **Code** → **Kichupo cha Codespaces** → **...** → **New with options...**
+3. Tumia chaguo-msingi – hii itachagua kontena la Maendeleo lililoundwa kwa ajili ya kozi hii
+4. Bonyeza **Create codespace**
+5. Subiri ~dakika 2 kwa mazingira kuwa tayari
+6. Nenda moja kwa moja kwenye [Mfano wa kwanza](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Usaidizi wa Lugha Nyingi
 
-### Inayoungwa mkono kupitia GitHub Action (Imefanywa Kiotomatiki & Daima Imeboreshwa)
+### Inayosaidiwa Kupitia GitHub Action (Imefanywa Kiotomatiki & Inasasishwa Kila Wakati)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](./README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+[Kifaransa](../fr/README.md) | [Kihispania](../es/README.md) | [Kijerumani](../de/README.md) | [Kirusi](../ru/README.md) | [Kiarabu](../ar/README.md) | [Kiajemi (Farsi)](../fa/README.md) | [Kiurdu](../ur/README.md) | [Kichina (Kilichorahisishwa)](../zh/README.md) | [Kichina (Kijadi, Macau)](../mo/README.md) | [Kichina (Kijadi, Hong Kong)](../hk/README.md) | [Kichina (Kijadi, Taiwan)](../tw/README.md) | [Kijapani](../ja/README.md) | [Kikorea](../ko/README.md) | [Kihindi](../hi/README.md) | [Kibengali](../bn/README.md) | [Kimarathi](../mr/README.md) | [Kinepali](../ne/README.md) | [Kipunjabi (Gurmukhi)](../pa/README.md) | [Kireno (Ureno)](../pt/README.md) | [Kireno (Brazili)](../br/README.md) | [Kiitaliano](../it/README.md) | [Kipolandi](../pl/README.md) | [Kituruki](../tr/README.md) | [Kigiriki](../el/README.md) | [Kithai](../th/README.md) | [Kiswidi](../sv/README.md) | [Kideni](../da/README.md) | [Kinorwe](../no/README.md) | [Kifini](../fi/README.md) | [Kiholanzi](../nl/README.md) | [Kiebrania](../he/README.md) | [Kivietinamu](../vi/README.md) | [Kiindonesia](../id/README.md) | [Kimalei](../ms/README.md) | [Kitagalogi (Kifilipino)](../tl/README.md) | [Kiswahili](./README.md) | [Kihungari](../hu/README.md) | [Kicheki](../cs/README.md) | [Kislovakia](../sk/README.md) | [Kiromania](../ro/README.md) | [Kibulgaria](../bg/README.md) | [Kiserbia (Kisiriliki)](../sr/README.md) | [Kikroeshia](../hr/README.md) | [Kislovenia](../sl/README.md) | [Kiukraini](../uk/README.md) | [Kiburma (Myanmar)](../my/README.md)
 
 ## Muundo wa Kozi & Njia ya Kujifunza
 
 ### **Sura ya 1: Utangulizi wa AI Jenereta**
-- **Misingi Muhimu**: Kuelewa Large Language Models, tokens, embeddings, na uwezo wa AI  
-- **Mfumo wa AI wa Java**: Muhtasari wa Spring AI na OpenAI SDKs  
-- **Itifaki ya Muktadha wa Modeli**: Utangulizi wa MCP na jukumu lake katika mawasiliano ya wakala wa AI  
-- **Matumizi ya Kivitendo**: Matukio ya ulimwengu halisi ikiwa ni pamoja na chatbots na uzalishaji wa maudhui  
-- **[→ Anza Sura ya 1](./01-IntroToGenAI/README.md)**  
+- **Misingi Muhimu**: Kuelewa Miundo Mikubwa ya Lugha, tokeni, embeddings, na uwezo wa AI
+- **Mfumo wa AI wa Java**: Muhtasari wa Spring AI na OpenAI SDKs
+- **Itifaki ya Muktadha wa Mfano**: Utangulizi wa MCP na jukumu lake katika mawasiliano ya wakala wa AI
+- **Matumizi ya Kivitendo**: Matukio ya ulimwengu halisi ikiwa ni pamoja na chatbots na uzalishaji wa maudhui
+- **[→ Anza Sura ya 1](./01-IntroToGenAI/README.md)**
 
 ### **Sura ya 2: Usanidi wa Mazingira ya Maendeleo**
-- **Usanidi wa Watoa Huduma Wengi**: Sanidi GitHub Models, Azure OpenAI, na OpenAI Java SDK  
-- **Spring Boot + Spring AI**: Mbinu bora kwa maendeleo ya programu za AI za biashara  
-- **GitHub Models**: Ufikiaji wa bure wa modeli za AI kwa majaribio na kujifunza (hakuna kadi ya mkopo inayohitajika)  
-- **Zana za Maendeleo**: Usanidi wa kontena za Docker, VS Code, na GitHub Codespaces  
-- **[→ Anza Sura ya 2](./02-SetupDevEnvironment/README.md)**  
+- **Usanidi wa Watoa Huduma Wengi**: Sanidi Miundo ya GitHub, Azure OpenAI, na ujumuishaji wa OpenAI Java SDK
+- **Spring Boot + Spring AI**: Mbinu bora kwa maendeleo ya programu za AI za biashara
+- **Miundo ya GitHub**: Ufikiaji wa bure wa modeli za AI kwa majaribio na kujifunza (hakuna kadi ya mkopo inayohitajika)
+- **Zana za Maendeleo**: Usanidi wa kontena za Docker, VS Code, na GitHub Codespaces
+- **[→ Anza Sura ya 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Sura ya 3: Mbinu Muhimu za AI Jenereta**
-- **Uhandisi wa Maagizo**: Mbinu za kupata majibu bora kutoka kwa modeli za AI  
-- **Embeddings & Operesheni za Vector**: Tekeleza utafutaji wa semantic na kulinganisha kufanana  
-- **Uzalishaji Ulioimarishwa na Urejeshaji (RAG)**: Changanya AI na vyanzo vyako vya data  
-- **Kuita Kazi**: Panua uwezo wa AI kwa zana na programu-jalizi maalum  
-- **[→ Anza Sura ya 3](./03-CoreGenerativeAITechniques/README.md)**  
+- **Uhandisi wa Maagizo**: Mbinu za kupata majibu bora kutoka kwa modeli za AI
+- **Embeddings & Operesheni za Vector**: Tekeleza utafutaji wa semantiki na kulinganisha kufanana
+- **Uzalishaji Ulioimarishwa na Urejeshaji (RAG)**: Changanya AI na vyanzo vyako vya data
+- **Kuita Kazi**: Panua uwezo wa AI kwa zana na programu-jalizi maalum
+- **[→ Anza Sura ya 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Sura ya 4: Matumizi ya Kivitendo & Miradi**
-- **Kizalishaji Hadithi za Wanyama** (`petstory/`): Uzalishaji wa maudhui ya ubunifu kwa kutumia GitHub Models  
-- **Demo ya Foundry ya Ndani** (`foundrylocal/`): Ujumuishaji wa modeli za AI za ndani kwa kutumia OpenAI Java SDK  
-- **Huduma ya Kikokotozi ya MCP** (`calculator/`): Utekelezaji wa msingi wa Itifaki ya Muktadha wa Modeli kwa kutumia Spring AI  
-- **[→ Anza Sura ya 4](./04-PracticalSamples/README.md)**  
+- **Jenereta ya Hadithi za Wanyama** (`petstory/`): Uzalishaji wa maudhui ya ubunifu kwa kutumia Miundo ya GitHub
+- **Demo ya Ndani ya Foundry** (`foundrylocal/`): Ujumuishaji wa modeli za AI za ndani kwa kutumia OpenAI Java SDK
+- **Huduma ya Kikokotoo cha MCP** (`calculator/`): Utekelezaji wa msingi wa Itifaki ya Muktadha wa Mfano kwa kutumia Spring AI
+- **[→ Anza Sura ya 4](./04-PracticalSamples/README.md)**
 
-### **Sura ya 5: Maendeleo ya AI yenye Uwajibikaji**
-- **Usalama wa GitHub Models**: Jaribu vichujio vya maudhui vilivyojengwa ndani na mifumo ya usalama  
-- **Demo ya AI yenye Uwajibikaji**: Mfano wa vitendo unaoonyesha jinsi vichujio vya usalama vya AI vinavyofanya kazi  
-- **Mbinu Bora**: Miongozo muhimu kwa maendeleo na utekelezaji wa AI wa kimaadili  
-- **[→ Anza Sura ya 5](./05-ResponsibleGenAI/README.md)**  
+### **Sura ya 5: Maendeleo ya AI ya Kuwajibika**
+- **Usalama wa Miundo ya GitHub**: Jaribu vichujio vya maudhui vilivyojengwa ndani na mifumo ya usalama (vizuizi vikubwa na kukataa kwa upole)
+- **Demo ya AI ya Kuwajibika**: Mfano wa vitendo unaoonyesha jinsi mifumo ya kisasa ya usalama wa AI inavyofanya kazi
+- **Mbinu Bora**: Miongozo muhimu kwa maendeleo na utekelezaji wa AI wa kimaadili
+- **[→ Anza Sura ya 5](./05-ResponsibleGenAI/README.md)**
 
 ## Rasilimali za Ziada
 
-- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)  
-- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
-- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)  
-- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)  
-- [ML for Beginners](https://aka.ms/ml-beginners)  
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)  
-- [AI for Beginners](https://aka.ms/ai-beginners)  
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)  
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)  
-- [IoT for Beginners](https://aka.ms/iot-beginners)  
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)  
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)  
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
-- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)  
-- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
+- [Wakala wa AI kwa Anzia](https://github.com/microsoft/ai-agents-for-beginners)
+- [AI Jenereta kwa Anzia kwa kutumia .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [AI Jenereta kwa Anzia kwa kutumia JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [AI Jenereta kwa Anzia](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML kwa Anzia](https://aka.ms/ml-beginners)
+- [Sayansi ya Data kwa Anzia](https://aka.ms/datascience-beginners)
+- [AI kwa Anzia](https://aka.ms/ai-beginners)
+- [Usalama wa Mtandao kwa Anzia](https://github.com/microsoft/Security-101)
+- [Maendeleo ya Wavuti kwa Anzia](https://aka.ms/webdev-beginners)
+- [IoT kwa Anzia](https://aka.ms/iot-beginners)
+- [Maendeleo ya XR kwa Anzia](https://github.com/microsoft/xr-development-for-beginners)
+- [Kumudu GitHub Copilot kwa Uandishi wa Programu wa Pamoja wa AI](https://aka.ms/GitHubCopilotAI)
+- [Kumudu GitHub Copilot kwa Waendelezaji wa C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Chagua Safari Yako ya Copilot](https://github.com/microsoft/CopilotAdventures)
+- [RAG Chat App na Huduma za Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kibinadamu ya kitaalamu. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T10:41:37+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T08:59:48+00:00",
   "source_file": "README.md",
   "language_code": "br"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![IA Generativa para Iniciantes - Edição Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.br.png)
 
-**Tempo Estimado**: Todo o workshop pode ser concluído online sem necessidade de configuração local. A configuração do ambiente leva 2 minutos, e a exploração dos exemplos requer de 1 a 3 horas, dependendo da profundidade da exploração.
+**Compromisso de Tempo**: Todo o workshop pode ser concluído online sem necessidade de configuração local. A configuração do ambiente leva 2 minutos, e a exploração dos exemplos requer de 1 a 3 horas, dependendo da profundidade da exploração.
 
 > **Início Rápido**
 
@@ -46,10 +46,10 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Comece o Capítulo 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capítulo 3: Técnicas Centrais de IA Generativa**
-- **Engenharia de Prompts**: Técnicas para obter respostas ideais de modelos de IA
+- **Engenharia de Prompt**: Técnicas para respostas ideais de modelos de IA
 - **Embeddings e Operações com Vetores**: Implementação de busca semântica e correspondência de similaridade
 - **Geração Aumentada por Recuperação (RAG)**: Combine IA com suas próprias fontes de dados
-- **Chamada de Funções**: Expanda as capacidades da IA com ferramentas e plugins personalizados
+- **Chamada de Funções**: Amplie as capacidades da IA com ferramentas e plugins personalizados
 - **[→ Comece o Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capítulo 4: Aplicações Práticas e Projetos**
@@ -59,9 +59,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Comece o Capítulo 4](./04-PracticalSamples/README.md)**
 
 ### **Capítulo 5: Desenvolvimento de IA Responsável**
-- **Segurança dos GitHub Models**: Teste os mecanismos de filtragem de conteúdo e segurança integrados
-- **Demo de IA Responsável**: Exemplo prático mostrando como os filtros de segurança de IA funcionam na prática
-- **Melhores Práticas**: Diretrizes essenciais para o desenvolvimento e implantação ética de IA
+- **Segurança dos Modelos GitHub**: Teste os mecanismos de filtragem de conteúdo e segurança integrados (bloqueios rígidos e recusas suaves)
+- **Demo de IA Responsável**: Exemplo prático mostrando como os sistemas modernos de segurança de IA funcionam na prática
+- **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implantação ética de IA
 - **[→ Comece o Capítulo 5](./05-ResponsibleGenAI/README.md)**
 
 ## Recursos Adicionais
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [App de Chat RAG com Serviços de IA do Azure](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte oficial. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

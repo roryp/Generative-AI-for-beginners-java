@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T13:08:45+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T09:11:55+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "tr"
 }
 -->
-# Java için Üretken Yapay Zeka Geliştirme Ortamını Kurma
+# Java için Generative AI Geliştirme Ortamını Kurma
 
-> **Hızlı Başlangıç**: Bulutta 2 dakikada kod yazmaya başlayın - [GitHub Codespaces Kurulumu](../../../02-SetupDevEnvironment) bölümüne geçin - yerel kurulum gerekmez ve GitHub modellerini kullanır!
+> **Hızlı Başlangıç**: Bulutta 2 dakikada kod yazmaya başlayın - [GitHub Codespaces Kurulumu](../../../02-SetupDevEnvironment) bölümüne atlayın - yerel kurulum gerekmez ve GitHub modellerini kullanır!
 
-> **Azure OpenAI ile ilgileniyor musunuz?** [Azure OpenAI Kurulum Kılavuzumuza](getting-started-azure-openai.md) göz atın ve yeni bir Azure OpenAI kaynağı oluşturma adımlarını öğrenin.
+> **Azure OpenAI ile ilgileniyor musunuz?** Yeni bir Azure OpenAI kaynağı oluşturma adımları için [Azure OpenAI Kurulum Kılavuzumuza](getting-started-azure-openai.md) göz atın.
 
 ## Öğrenecekleriniz
 
-- Yapay zeka uygulamaları için bir Java geliştirme ortamı kurmayı öğrenin
-- Tercih ettiğiniz geliştirme ortamını seçin ve yapılandırın (Codespaces ile bulut öncelikli, yerel geliştirme konteyneri veya tam yerel kurulum)
-- GitHub Modellerine bağlanarak kurulumunuzu test edin
+- AI uygulamaları için bir Java geliştirme ortamı kurmayı
+- Tercih ettiğiniz geliştirme ortamını seçip yapılandırmayı (Codespaces ile bulut öncelikli, yerel geliştirme konteyneri veya tam yerel kurulum)
+- GitHub Modellerine bağlanarak kurulumunuzu test etmeyi
 
 ## İçindekiler
 
@@ -35,39 +35,39 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Giriş
 
-Bu bölüm, geliştirme ortamınızı kurmanıza rehberlik edecek. **GitHub Modellerini** ana örneğimiz olarak kullanacağız çünkü sadece bir GitHub hesabı ile ücretsiz, kolay bir şekilde kurulabilir, kredi kartı gerektirmez ve deney yapmak için birden fazla modele erişim sağlar.
+Bu bölüm, bir geliştirme ortamı kurmanıza rehberlik edecek. **GitHub Modellerini** ana örneğimiz olarak kullanacağız çünkü bu ücretsizdir, yalnızca bir GitHub hesabıyla kolayca kurulabilir, kredi kartı gerektirmez ve deneme için birden fazla modele erişim sağlar.
 
-**Yerel kurulum gerekmez!** GitHub Codespaces kullanarak tarayıcınızda tam bir geliştirme ortamı ile hemen kod yazmaya başlayabilirsiniz.
+**Yerel kurulum gerekmez!** GitHub Codespaces kullanarak tarayıcınızda tam bir geliştirme ortamıyla hemen kod yazmaya başlayabilirsiniz.
 
 <img src="./images/models.webp" alt="Ekran Görüntüsü: GitHub Modelleri" width="50%">
 
 Bu kurs için [**GitHub Modellerini**](https://github.com/marketplace?type=models) kullanmanızı öneriyoruz çünkü:
-- **Ücretsiz** başlamak için
-- **Kolay** bir şekilde sadece bir GitHub hesabı ile kurulabilir
+- Başlamak için **ücretsiz**
+- Sadece bir GitHub hesabıyla **kolay** kurulum
 - **Kredi kartı** gerektirmez
-- **Birden fazla model** deney yapmak için mevcut
+- Deneme için **birden fazla model** mevcut
 
-> **Not**: Bu eğitimde kullanılan GitHub Modellerinin ücretsiz limitleri şunlardır:
-> - Dakikada 15 istek (günde 150 istek)
-> - İstek başına ~8,000 kelime giriş, ~4,000 kelime çıkış
+> **Not**: Bu eğitimde kullanılan GitHub Modellerinin ücretsiz sınırları şunlardır:
+> - Dakikada 15 istek (günde 150)
+> - İstek başına ~8.000 kelime giriş, ~4.000 kelime çıkış
 > - 5 eşzamanlı istek
 > 
-> Üretim kullanımı için, Azure hesabınızla Azure AI Foundry Modellerine yükseltin. Kodunuzu değiştirmeniz gerekmez. [Azure AI Foundry belgelerine](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models) göz atın.
+> Üretim kullanımı için, Azure hesabınızla Azure AI Foundry Modellerine yükseltin. Kodunuzun değişmesine gerek yok. [Azure AI Foundry belgelerine](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models) bakın.
 
 ## Adım 1: Geliştirme Ortamınızı Kurun
 
 <a name="quick-start-cloud"></a>
 
-Bu Java için Üretken Yapay Zeka kursu için gerekli tüm araçları içeren önceden yapılandırılmış bir geliştirme konteyneri oluşturduk. Tercih ettiğiniz geliştirme yaklaşımını seçin:
+Bu Generative AI for Java kursu için gerekli tüm araçlara sahip olmanızı sağlamak ve kurulum süresini en aza indirmek için önceden yapılandırılmış bir geliştirme konteyneri oluşturduk. Tercih ettiğiniz geliştirme yaklaşımını seçin:
 
 ### Ortam Kurulum Seçenekleri:
 
 #### Seçenek A: GitHub Codespaces (Önerilen)
 
-**2 dakikada kod yazmaya başlayın - yerel kurulum gerekmez!**
+**Yerel kurulum gerekmeden 2 dakikada kod yazmaya başlayın!**
 
-1. Bu depoyu GitHub hesabınıza çatallayın
-   > **Not**: Temel yapılandırmayı düzenlemek isterseniz [Geliştirme Konteyneri Yapılandırması](../../../.devcontainer/devcontainer.json) bölümüne göz atın.
+1. Bu depoyu GitHub hesabınıza forklayın
+   > **Not**: Temel yapılandırmayı düzenlemek isterseniz [Geliştirme Konteyneri Yapılandırmasına](../../../.devcontainer/devcontainer.json) göz atın.
 2. **Code** → **Codespaces** sekmesi → **...** → **New with options...** seçeneğine tıklayın.
 3. Varsayılanları kullanın – bu, bu kurs için özel olarak oluşturulmuş **Generative AI Java Development Environment** geliştirme konteyneri yapılandırmasını seçecektir.
 4. **Create codespace** seçeneğine tıklayın.
@@ -76,14 +76,14 @@ Bu Java için Üretken Yapay Zeka kursu için gerekli tüm araçları içeren ö
 
 <img src="./images/codespaces.png" alt="Ekran Görüntüsü: Codespaces alt menüsü" width="50%">
 
-<img src="./images/image.png" alt="Ekran Görüntüsü: Yeni seçeneklerle oluştur" width="50%">
+<img src="./images/image.png" alt="Ekran Görüntüsü: Yeni seçeneklerle" width="50%">
 
 <img src="./images/codespaces-create.png" alt="Ekran Görüntüsü: Codespace oluşturma seçenekleri" width="50%">
 
 > **Codespaces'in Avantajları**:
 > - Yerel kurulum gerekmez
 > - Tarayıcıya sahip herhangi bir cihazda çalışır
-> - Tüm araçlar ve bağımlılıklar önceden yapılandırılmıştır
+> - Tüm araçlar ve bağımlılıklarla önceden yapılandırılmıştır
 > - Kişisel hesaplar için ayda 60 saat ücretsiz
 > - Tüm öğrenenler için tutarlı bir ortam
 
@@ -91,13 +91,13 @@ Bu Java için Üretken Yapay Zeka kursu için gerekli tüm araçları içeren ö
 
 **Docker ile yerel geliştirmeyi tercih eden geliştiriciler için**
 
-1. Bu depoyu yerel makinenize çatallayın ve klonlayın.
-   > **Not**: Temel yapılandırmayı düzenlemek isterseniz [Geliştirme Konteyneri Yapılandırması](../../../.devcontainer/devcontainer.json) bölümüne göz atın.
+1. Bu depoyu yerel makinenize forklayın ve klonlayın.
+   > **Not**: Temel yapılandırmayı düzenlemek isterseniz [Geliştirme Konteyneri Yapılandırmasına](../../../.devcontainer/devcontainer.json) göz atın.
 2. [Docker Desktop](https://www.docker.com/products/docker-desktop/) ve [VS Code](https://code.visualstudio.com/) yükleyin.
 3. VS Code'da [Geliştirme Konteynerleri eklentisini](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) yükleyin.
 4. Depo klasörünü VS Code'da açın.
 5. İstendiğinde, **Konteynerde Yeniden Aç** seçeneğine tıklayın (veya `Ctrl+Shift+P` → "Dev Containers: Reopen in Container" seçeneğini kullanın).
-6. Konteynerin oluşturulması ve başlatılması için bekleyin.
+6. Konteynerin oluşturulup başlatılmasını bekleyin.
 7. [Adım 2: GitHub Jetonu Oluşturun](../../../02-SetupDevEnvironment) bölümüne geçin.
 
 <img src="./images/devcontainer.png" alt="Ekran Görüntüsü: Geliştirme konteyneri kurulumu" width="50%">
@@ -108,7 +108,7 @@ Bu Java için Üretken Yapay Zeka kursu için gerekli tüm araçları içeren ö
 
 **Mevcut Java ortamlarına sahip geliştiriciler için**
 
-Önkoşullar:
+Gereksinimler:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
 - [Maven 3.9+](https://maven.apache.org/download.cgi)
 - [VS Code](https://code.visualstudio.com) veya tercih ettiğiniz IDE
@@ -118,29 +118,29 @@ Adımlar:
 2. Projeyi IDE'nizde açın.
 3. [Adım 2: GitHub Jetonu Oluşturun](../../../02-SetupDevEnvironment) bölümüne geçin.
 
-> **Profesyonel İpucu**: Düşük özellikli bir makineniz varsa ancak VS Code'u yerel olarak kullanmak istiyorsanız, GitHub Codespaces'i kullanın! Yerel VS Code'unuzu bulutta barındırılan bir Codespace'e bağlayarak her iki dünyanın en iyisini elde edebilirsiniz.
+> **İpucu**: Düşük özellikli bir makineniz varsa ancak VS Code'u yerel olarak kullanmak istiyorsanız, GitHub Codespaces'ı kullanın! Yerel VS Code'unuzu bulut barındırmalı bir Codespace'e bağlayarak her iki dünyanın en iyisini elde edebilirsiniz.
 
 <img src="./images/image-2.png" alt="Ekran Görüntüsü: Yerel geliştirme konteyneri örneği oluşturuldu" width="50%">
 
 ## Adım 2: GitHub Kişisel Erişim Jetonu Oluşturun
 
-1. [GitHub Ayarları](https://github.com/settings/profile) sayfasına gidin ve profil menüsünden **Settings** seçeneğini seçin.
-2. Sol kenar çubuğunda, genellikle en altta bulunan **Developer settings** seçeneğine tıklayın.
-3. **Personal access tokens** altında, **Fine-grained tokens** seçeneğine tıklayın (veya bu doğrudan [bağlantıyı](https://github.com/settings/personal-access-tokens) takip edin).
-4. **Generate new token** seçeneğine tıklayın.
-5. "Token name" alanına açıklayıcı bir ad verin (ör. `GenAI-Java-Course-Token`).
-6. Bir son kullanma tarihi belirleyin (güvenlik en iyi uygulamaları için önerilen: 7 gün).
-7. "Resource owner" altında kullanıcı hesabınızı seçin.
-8. "Repository access" altında, GitHub Modelleri ile kullanmak istediğiniz depoları seçin (veya gerekirse "All repositories").
-9. "Repository permissions" altında **Models** seçeneğini bulun ve **Read and write** olarak ayarlayın.
-10. **Generate token** seçeneğine tıklayın.
-11. **Jetonunuzu şimdi kopyalayıp kaydedin** – daha sonra göremeyeceksiniz!
+1. [GitHub Ayarları](https://github.com/settings/profile) sayfasına gidin ve profil menüsünden **Ayarlar**'ı seçin.
+2. Sol kenar çubuğunda, **Geliştirici ayarları** seçeneğine tıklayın (genellikle en altta).
+3. **Kişisel erişim jetonları** altında, **İnce ayarlı jetonlar** seçeneğine tıklayın (veya bu doğrudan [bağlantıyı](https://github.com/settings/personal-access-tokens) takip edin).
+4. **Yeni jeton oluştur** seçeneğine tıklayın.
+5. "Jeton adı" altında, açıklayıcı bir ad verin (ör. `GenAI-Java-Course-Token`).
+6. Bir son kullanma tarihi belirleyin (güvenlik için önerilen: 7 gün).
+7. "Kaynak sahibi" altında, kullanıcı hesabınızı seçin.
+8. "Depo erişimi" altında, GitHub Modelleri ile kullanmak istediğiniz depoları seçin (veya gerekirse "Tüm depolar").
+9. "Depo izinleri" altında, **Modeller** seçeneğini bulun ve **Okuma ve yazma** olarak ayarlayın.
+10. **Jeton oluştur** seçeneğine tıklayın.
+11. **Jetonunuzu şimdi kopyalayın ve kaydedin** – tekrar göremeyeceksiniz!
 
-> **Güvenlik İpucu**: Erişim jetonlarınız için minimum gerekli kapsamı ve en kısa pratik son kullanma süresini kullanın.
+> **Güvenlik İpucu**: Erişim jetonlarınız için gereken minimum kapsamı ve en kısa pratik son kullanma süresini kullanın.
 
 ## Adım 3: GitHub Modelleri Örneği ile Kurulumunuzu Test Edin
 
-Geliştirme ortamınız hazır olduğunda, GitHub Modelleri entegrasyonunu [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models) içindeki örnek uygulamamızla test edelim.
+Geliştirme ortamınız hazır olduğunda, GitHub Modelleri entegrasyonunu [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models) dizinindeki örnek uygulama ile test edelim.
 
 1. Geliştirme ortamınızda terminali açın.
 2. GitHub Modelleri örneğine gidin:
@@ -176,10 +176,10 @@ Response: Hello World!
 Öncelikle, çalıştırdığımız şeyi anlayalım. `examples/github-models` altındaki örnek, GitHub Modellerine bağlanmak için OpenAI Java SDK'sını kullanır:
 
 **Bu kodun yaptığı şey:**
-- **Bağlanır**: GitHub Modellerine kişisel erişim jetonunuzu kullanarak
-- **Gönderir**: AI modeline basit bir "Merhaba Dünya!" mesajı
-- **Alır**: AI'nın yanıtını görüntüler
-- **Doğrular**: Kurulumunuzun doğru çalıştığını
+- Kişisel erişim jetonunuzu kullanarak GitHub Modellerine **bağlanır**
+- AI modeline basit bir "Merhaba Dünya!" mesajı **gönderir**
+- AI'nın yanıtını **alır** ve görüntüler
+- Kurulumunuzun doğru çalıştığını **doğrular**
 
 **Ana Bağımlılık** (`pom.xml` içinde):
 ```xml
@@ -212,29 +212,29 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Özet
 
-**Tebrikler!** Başarıyla:
+Harika! Artık her şey hazır:
 
-- **GitHub Kişisel Erişim Jetonu** oluşturdunuz ve AI model erişimi için doğru izinleri ayarladınız.
-- **Java geliştirme ortamınızı** Codespaces, geliştirme konteynerleri veya yerel kurulum kullanarak kurdunuz.
-- **GitHub Modellerine bağlandınız** ve ücretsiz AI geliştirme erişimi için OpenAI Java SDK'sını kullandınız.
-- **Entegrasyonu test ettiniz** ve AI modelleriyle iletişim kuran çalışan bir örnek uygulama çalıştırdınız.
+- AI modeli erişimi için doğru izinlere sahip bir GitHub Kişisel Erişim Jetonu oluşturdunuz.
+- Java geliştirme ortamınızı çalıştırdınız (Codespaces, geliştirme konteynerleri veya yerel kurulum).
+- OpenAI Java SDK'sını kullanarak GitHub Modellerine bağlandınız.
+- AI modelleriyle konuşan basit bir örnekle her şeyin çalıştığını test ettiniz.
 
 ## Sonraki Adımlar
 
-[3. Bölüm: Temel Üretken Yapay Zeka Teknikleri](../03-CoreGenerativeAITechniques/README.md)
+[3. Bölüm: Temel Generative AI Teknikleri](../03-CoreGenerativeAITechniques/README.md)
 
 ## Sorun Giderme
 
-Sorun mu yaşıyorsunuz? İşte yaygın problemler ve çözümleri:
+Sorun mu yaşıyorsunuz? İşte yaygın sorunlar ve çözümleri:
 
 - **Jeton çalışmıyor mu?** 
-  - Jetonun tamamını ekstra boşluklar olmadan kopyaladığınızdan emin olun.
+  - Tüm jetonu ekstra boşluklar olmadan kopyaladığınızdan emin olun.
   - Jetonun doğru bir şekilde ortam değişkeni olarak ayarlandığını doğrulayın.
-  - Jetonunuzun doğru izinlere sahip olduğundan emin olun (Modeller: Okuma ve yazma).
+  - Jetonunuzun doğru izinlere sahip olduğunu kontrol edin (Modeller: Okuma ve yazma).
 
 - **Maven bulunamadı mı?** 
   - Geliştirme konteynerleri/Codespaces kullanıyorsanız, Maven önceden yüklenmiş olmalıdır.
-  - Yerel kurulum için Java 21+ ve Maven 3.9+ yüklü olduğundan emin olun.
+  - Yerel kurulum için, Java 21+ ve Maven 3.9+'ın yüklü olduğundan emin olun.
   - Kurulumu doğrulamak için `mvn --version` komutunu deneyin.
 
 - **Bağlantı sorunları mı?** 
@@ -246,11 +246,11 @@ Sorun mu yaşıyorsunuz? İşte yaygın problemler ve çözümleri:
   - Docker Desktop'ın çalıştığından emin olun (yerel geliştirme için).
   - Konteyneri yeniden oluşturmayı deneyin: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container".
 
-- **Uygulama derleme hataları mı?**
+- **Uygulama derleme hataları mı alıyorsunuz?**
   - Doğru dizinde olduğunuzdan emin olun: `02-SetupDevEnvironment/examples/github-models`
   - Temizleyip yeniden derlemeyi deneyin: `mvn clean compile`
 
-> **Yardım mı gerekiyor?**: Hala sorun yaşıyorsanız, depoda bir sorun açın ve size yardımcı olalım.
+> **Yardım mı gerekiyor?**: Hâlâ sorun yaşıyorsanız, depoda bir sorun açın, size yardımcı olalım.
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

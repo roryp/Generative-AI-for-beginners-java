@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T10:42:51+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T09:02:30+00:00",
   "source_file": "README.md",
   "language_code": "it"
 }
@@ -33,16 +33,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Capitolo 1: Introduzione alla Generative AI**
 - **Concetti Fondamentali**: Comprendere i Large Language Models, i token, gli embeddings e le capacità dell'AI
-- **Ecosistema AI in Java**: Panoramica su Spring AI e OpenAI SDKs
+- **Ecosistema AI in Java**: Panoramica su Spring AI e sugli SDK OpenAI
 - **Model Context Protocol**: Introduzione al MCP e al suo ruolo nella comunicazione degli agenti AI
 - **Applicazioni Pratiche**: Scenari reali, inclusi chatbot e generazione di contenuti
 - **[→ Inizia il Capitolo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capitolo 2: Configurazione dell'Ambiente di Sviluppo**
-- **Configurazione Multi-Provider**: Configura GitHub Models, Azure OpenAI e le integrazioni con OpenAI Java SDK
+- **Configurazione Multi-Provider**: Configura GitHub Models, Azure OpenAI e integrazioni con OpenAI Java SDK
 - **Spring Boot + Spring AI**: Best practice per lo sviluppo di applicazioni AI aziendali
-- **GitHub Models**: Accesso gratuito ai modelli AI per prototipazione e apprendimento (senza necessità di carta di credito)
-- **Strumenti di Sviluppo**: Configurazione di Docker containers, VS Code e GitHub Codespaces
+- **GitHub Models**: Accesso gratuito ai modelli AI per prototipazione e apprendimento (senza carta di credito)
+- **Strumenti di Sviluppo**: Configurazione di container Docker, VS Code e GitHub Codespaces
 - **[→ Inizia il Capitolo 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capitolo 3: Tecniche Fondamentali di Generative AI**
@@ -59,8 +59,8 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Inizia il Capitolo 4](./04-PracticalSamples/README.md)**
 
 ### **Capitolo 5: Sviluppo Responsabile dell'AI**
-- **Sicurezza dei GitHub Models**: Testa i meccanismi di filtraggio dei contenuti e di sicurezza integrati
-- **Demo AI Responsabile**: Esempio pratico che mostra come funzionano i filtri di sicurezza dell'AI
+- **Sicurezza dei GitHub Models**: Testa i meccanismi di filtraggio dei contenuti e di sicurezza integrati (blocchi rigidi e rifiuti morbidi)
+- **Demo di AI Responsabile**: Esempio pratico che mostra come funzionano i moderni sistemi di sicurezza AI
 - **Best Practice**: Linee guida essenziali per uno sviluppo e un'implementazione etica dell'AI
 - **[→ Inizia il Capitolo 5](./05-ResponsibleGenAI/README.md)**
 
@@ -83,4 +83,4 @@ CO_OP_TRANSLATOR_METADATA:
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

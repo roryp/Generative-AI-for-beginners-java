@@ -1,22 +1,22 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T10:36:46+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T08:48:21+00:00",
   "source_file": "README.md",
   "language_code": "ne"
 }
 -->
-# सुरुआतीहरूको लागि जेनेरेटिभ एआई - जाभा संस्करण
+# सुरुवातीका लागि जेनेरेटिभ एआई - जाभा संस्करण
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![सुरुआतीहरूको लागि जेनेरेटिभ एआई - जाभा संस्करण](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ne.png)
+![सुरुवातीका लागि जेनेरेटिभ एआई - जाभा संस्करण](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ne.png)
 
-**समय प्रतिबद्धता**: यो सम्पूर्ण कार्यशाला स्थानीय सेटअप बिना अनलाइन पूरा गर्न सकिन्छ। वातावरण सेटअप गर्न २ मिनेट लाग्छ, र नमूनाहरू अन्वेषण गर्न १-३ घण्टा लाग्न सक्छ, अन्वेषणको गहिराइमा निर्भर गर्दै।
+**समय प्रतिबद्धता**: यो सम्पूर्ण कार्यशाला स्थानीय सेटअप बिना नै अनलाइन पूरा गर्न सकिन्छ। वातावरण सेटअप गर्न २ मिनेट लाग्छ, र नमूनाहरू अन्वेषण गर्न १-३ घण्टा लाग्न सक्छ, अन्वेषणको गहिराइमा निर्भर गर्दै।
 
 > **छिटो सुरु गर्नुहोस्**
 
-1. यो रिपोजिटरी आफ्नो GitHub खातामा फोर्क गर्नुहोस्  
+1. यो रिपोजिटरीलाई आफ्नो GitHub खातामा फोर्क गर्नुहोस्  
 2. **Code** → **Codespaces** ट्याब → **...** → **New with options...** मा क्लिक गर्नुहोस्  
 3. डिफल्ट सेटिङहरू प्रयोग गर्नुहोस् – यसले यस कोर्सका लागि बनाइएको Development container चयन गर्नेछ  
 4. **Create codespace** मा क्लिक गर्नुहोस्  
@@ -35,52 +35,52 @@ CO_OP_TRANSLATOR_METADATA:
 - **मुख्य अवधारणाहरू**: ठूलो भाषा मोडेलहरू, टोकनहरू, एम्बेडिङहरू, र एआई क्षमताहरू बुझ्ने  
 - **जाभा एआई इकोसिस्टम**: Spring AI र OpenAI SDKs को अवलोकन  
 - **मोडेल कन्टेक्स्ट प्रोटोकल**: MCP र एआई एजेन्ट सञ्चारमा यसको भूमिकाको परिचय  
-- **व्यावहारिक अनुप्रयोगहरू**: च्याटबोटहरू र सामग्री निर्माण जस्ता वास्तविक संसारका परिदृश्यहरू  
+- **व्यावहारिक अनुप्रयोगहरू**: च्याटबट र सामग्री निर्माण जस्ता वास्तविक संसारका परिदृश्यहरू  
 - **[→ अध्याय १ सुरु गर्नुहोस्](./01-IntroToGenAI/README.md)**  
 
 ### **अध्याय २: विकास वातावरण सेटअप**
 - **बहु-प्रदायक कन्फिगरेसन**: GitHub Models, Azure OpenAI, र OpenAI Java SDK एकीकरण सेटअप गर्नुहोस्  
 - **Spring Boot + Spring AI**: उद्यम एआई अनुप्रयोग विकासका लागि उत्कृष्ट अभ्यासहरू  
 - **GitHub Models**: प्रोटोटाइप र सिकाइका लागि निःशुल्क एआई मोडेल पहुँच (क्रेडिट कार्ड आवश्यक छैन)  
-- **विकास उपकरणहरू**: Docker containers, VS Code, र GitHub Codespaces कन्फिगरेसन  
+- **विकास उपकरणहरू**: Docker कन्टेनरहरू, VS Code, र GitHub Codespaces कन्फिगरेसन  
 - **[→ अध्याय २ सुरु गर्नुहोस्](./02-SetupDevEnvironment/README.md)**  
 
 ### **अध्याय ३: मुख्य जेनेरेटिभ एआई प्रविधिहरू**
-- **प्रम्प्ट इन्जिनियरिङ**: एआई मोडेलको उत्कृष्ट प्रतिक्रिया प्राप्त गर्नका लागि प्रविधिहरू  
+- **प्रम्प्ट इन्जिनियरिङ**: एआई मोडेलको उत्कृष्ट प्रतिक्रिया प्राप्त गर्ने प्रविधिहरू  
 - **एम्बेडिङ र भेक्टर अपरेसनहरू**: सेम्यान्टिक खोज र समानता मिलान कार्यान्वयन गर्नुहोस्  
 - **Retrieval-Augmented Generation (RAG)**: एआईलाई आफ्नै डाटा स्रोतहरूसँग संयोजन गर्नुहोस्  
 - **फङ्सन कलिङ**: कस्टम उपकरण र प्लगइनहरूसँग एआई क्षमताहरू विस्तार गर्नुहोस्  
 - **[→ अध्याय ३ सुरु गर्नुहोस्](./03-CoreGenerativeAITechniques/README.md)**  
 
 ### **अध्याय ४: व्यावहारिक अनुप्रयोगहरू र परियोजनाहरू**
-- **Pet Story Generator** (`petstory/`): GitHub Models को साथ सिर्जनात्मक सामग्री निर्माण  
+- **पेट स्टोरी जेनेरेटर** (`petstory/`): GitHub Models को साथ सिर्जनात्मक सामग्री निर्माण  
 - **Foundry Local Demo** (`foundrylocal/`): OpenAI Java SDK को साथ स्थानीय एआई मोडेल एकीकरण  
-- **MCP Calculator Service** (`calculator/`): Spring AI को साथ आधारभूत मोडेल कन्टेक्स्ट प्रोटोकल कार्यान्वयन  
+- **MCP क्याल्कुलेटर सेवा** (`calculator/`): Spring AI को साथ आधारभूत मोडेल कन्टेक्स्ट प्रोटोकल कार्यान्वयन  
 - **[→ अध्याय ४ सुरु गर्नुहोस्](./04-PracticalSamples/README.md)**  
 
 ### **अध्याय ५: जिम्मेवार एआई विकास**
-- **GitHub Models सुरक्षा**: बिल्ट-इन सामग्री फिल्टरिङ र सुरक्षा संयन्त्रहरूको परीक्षण गर्नुहोस्  
-- **जिम्मेवार एआई डेमो**: एआई सुरक्षा फिल्टरहरू व्यवहारमा कसरी काम गर्छन् भन्ने देखाउने व्यावहारिक उदाहरण  
-- **सर्वोत्तम अभ्यासहरू**: नैतिक एआई विकास र परिनियोजनका लागि आवश्यक दिशानिर्देशहरू  
+- **GitHub Models सुरक्षा**: सामग्री फिल्टरिङ र सुरक्षा संयन्त्रहरूको परीक्षण गर्नुहोस् (कडा ब्लकहरू र नरम अस्वीकारहरू)  
+- **जिम्मेवार एआई डेमो**: आधुनिक एआई सुरक्षा प्रणालीहरू कसरी व्यवहारमा काम गर्छन् भन्ने देखाउने व्यावहारिक उदाहरण  
+- **उत्तम अभ्यासहरू**: नैतिक एआई विकास र परिनियोजनका लागि आवश्यक दिशानिर्देशहरू  
 - **[→ अध्याय ५ सुरु गर्नुहोस्](./05-ResponsibleGenAI/README.md)**  
 
 ## थप स्रोतहरू
 
-- [सुरुआतीहरूको लागि एआई एजेन्टहरू](https://github.com/microsoft/ai-agents-for-beginners)  
-- [सुरुआतीहरूको लागि जेनेरेटिभ एआई (.NET प्रयोग गरेर)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
-- [सुरुआतीहरूको लागि जेनेरेटिभ एआई (JavaScript प्रयोग गरेर)](https://github.com/microsoft/generative-ai-with-javascript)  
-- [सुरुआतीहरूको लागि जेनेरेटिभ एआई](https://github.com/microsoft/generative-ai-for-beginners)  
-- [सुरुआतीहरूको लागि मेसिन लर्निङ](https://aka.ms/ml-beginners)  
-- [सुरुआतीहरूको लागि डाटा विज्ञान](https://aka.ms/datascience-beginners)  
-- [सुरुआतीहरूको लागि एआई](https://aka.ms/ai-beginners)  
-- [सुरक्षा सुरुआतीहरूको लागि](https://github.com/microsoft/Security-101)  
-- [सुरुआतीहरूको लागि वेब विकास](https://aka.ms/webdev-beginners)  
-- [सुरुआतीहरूको लागि IoT](https://aka.ms/iot-beginners)  
-- [सुरुआतीहरूको लागि XR विकास](https://github.com/microsoft/xr-development-for-beginners)  
+- [सुरुवातीका लागि एआई एजेन्टहरू](https://github.com/microsoft/ai-agents-for-beginners)  
+- [सुरुवातीका लागि जेनेरेटिभ एआई (.NET प्रयोग गरेर)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
+- [सुरुवातीका लागि जेनेरेटिभ एआई (JavaScript प्रयोग गरेर)](https://github.com/microsoft/generative-ai-with-javascript)  
+- [सुरुवातीका लागि जेनेरेटिभ एआई](https://github.com/microsoft/generative-ai-for-beginners)  
+- [सुरुवातीका लागि मेसिन लर्निङ](https://aka.ms/ml-beginners)  
+- [सुरुवातीका लागि डाटा विज्ञान](https://aka.ms/datascience-beginners)  
+- [सुरुवातीका लागि एआई](https://aka.ms/ai-beginners)  
+- [सुरुवातीका लागि साइबर सुरक्षा](https://github.com/microsoft/Security-101)  
+- [सुरुवातीका लागि वेब विकास](https://aka.ms/webdev-beginners)  
+- [सुरुवातीका लागि IoT](https://aka.ms/iot-beginners)  
+- [सुरुवातीका लागि XR विकास](https://github.com/microsoft/xr-development-for-beginners)  
 - [GitHub Copilot को मास्टरी (एआई जोडी प्रोग्रामिङका लागि)](https://aka.ms/GitHubCopilotAI)  
-- [C#/.NET विकासकर्ताहरूका लागि GitHub Copilot को मास्टरी](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
+- [GitHub Copilot को मास्टरी (C#/.NET विकासकर्ताहरूका लागि)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
 - [आफ्नै Copilot साहसिक यात्रा चयन गर्नुहोस्](https://github.com/microsoft/CopilotAdventures)  
 - [Azure AI सेवाहरूको साथ RAG च्याट एप](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
 
 **अस्वीकरण**:  
-यो दस्तावेज़ AI अनुवाद सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) प्रयोग गरेर अनुवाद गरिएको छ। हामी शुद्धताको लागि प्रयास गर्छौं, तर कृपया ध्यान दिनुहोस् कि स्वचालित अनुवादमा त्रुटिहरू वा अशुद्धताहरू हुन सक्छ। यसको मूल भाषा मा रहेको मूल दस्तावेज़लाई आधिकारिक स्रोत मानिनुपर्छ। महत्वपूर्ण जानकारीको लागि, व्यावसायिक मानव अनुवाद सिफारिस गरिन्छ। यस अनुवादको प्रयोगबाट उत्पन्न हुने कुनै पनि गलतफहमी वा गलत व्याख्याको लागि हामी जिम्मेवार हुने छैनौं।
+यो दस्तावेज़ AI अनुवाद सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) प्रयोग गरी अनुवाद गरिएको हो। हामी यथासम्भव सटीकता सुनिश्चित गर्न प्रयास गर्छौं, तर कृपया ध्यान दिनुहोस् कि स्वचालित अनुवादहरूमा त्रुटि वा अशुद्धता हुन सक्छ। यसको मूल भाषामा रहेको मूल दस्तावेज़लाई आधिकारिक स्रोत मानिनुपर्छ। महत्त्वपूर्ण जानकारीका लागि, व्यावसायिक मानव अनुवाद सिफारिस गरिन्छ। यस अनुवादको प्रयोगबाट उत्पन्न हुने कुनै पनि गलतफहमी वा गलत व्याख्याको लागि हामी जिम्मेवार हुने छैनौं।

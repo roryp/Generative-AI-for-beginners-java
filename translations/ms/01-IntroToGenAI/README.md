@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "006866db93a268a8769bb55f2e324291",
-  "translation_date": "2025-07-28T11:02:14+00:00",
+  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
+  "translation_date": "2025-07-29T09:49:06+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "ms"
 }
@@ -34,7 +34,7 @@ Selamat datang ke bab pertama Generative AI untuk Pemula - Edisi Java! Pelajaran
 
 ### Penyegaran pantas tentang konsep Generative AI
 
-Generative AI adalah sejenis kecerdasan buatan yang mencipta kandungan baru, seperti teks, imej, atau kod, berdasarkan corak dan hubungan yang dipelajari daripada data. Model generative AI boleh menghasilkan respons seperti manusia, memahami konteks, dan kadangkala mencipta kandungan yang kelihatan seperti buatan manusia.
+Generative AI adalah sejenis kecerdasan buatan yang mencipta kandungan baru, seperti teks, imej, atau kod, berdasarkan corak dan hubungan yang dipelajari daripada data. Model generative AI boleh menghasilkan respons seperti manusia, memahami konteks, dan kadangkala mencipta kandungan yang kelihatan seperti manusia.
 
 Semasa anda membangunkan aplikasi AI Java anda, anda akan bekerja dengan **model generative AI** untuk mencipta kandungan. Beberapa keupayaan model generative AI termasuk:
 
@@ -73,21 +73,21 @@ Semasa bekerja dengan model generative AI, anda akan menemui istilah seperti **t
 
 ![Rajah: Contoh token Generative AI memecahkan perkataan kepada token](../../../01-IntroToGenAI/images/tokens.webp)
 
-Tokenisasi adalah proses memecahkan teks kepada unit-unit kecil ini. Ini penting kerana model beroperasi pada token dan bukannya teks mentah. Bilangan token dalam prompt mempengaruhi panjang dan kualiti respons model, kerana model mempunyai had token untuk tetingkap konteks mereka (contohnya, 128K token untuk konteks keseluruhan GPT-4o, termasuk input dan output).
+Tokenisasi adalah proses memecahkan teks kepada unit-unit kecil ini. Ini penting kerana model beroperasi pada token dan bukannya teks mentah. Bilangan token dalam prompt mempengaruhi panjang dan kualiti respons model, kerana model mempunyai had token untuk tetingkap konteks mereka (contohnya, 128K token untuk konteks total GPT-4o, termasuk input dan output).
 
   Dalam Java, anda boleh menggunakan perpustakaan seperti OpenAI SDK untuk mengendalikan tokenisasi secara automatik semasa menghantar permintaan kepada model AI.
 
-- **Embedding**: Embedding adalah perwakilan vektor token yang menangkap makna semantik. Ia adalah perwakilan berangka (biasanya tatasusunan nombor titik terapung) yang membolehkan model memahami hubungan antara perkataan dan menghasilkan respons yang relevan secara kontekstual. Perkataan yang serupa mempunyai embedding yang serupa, membolehkan model memahami konsep seperti sinonim dan hubungan semantik.
+- **Embedding**: Embedding adalah representasi vektor token yang menangkap makna semantik. Ia adalah representasi berangka (biasanya tatasusunan nombor titik terapung) yang membolehkan model memahami hubungan antara perkataan dan menghasilkan respons yang relevan secara kontekstual. Perkataan yang serupa mempunyai embedding yang serupa, membolehkan model memahami konsep seperti sinonim dan hubungan semantik.
 
 ![Rajah: Embedding](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.ms.png)
 
-  Dalam Java, anda boleh menjana embedding menggunakan OpenAI SDK atau perpustakaan lain yang menyokong penjanaan embedding. Embedding ini penting untuk tugas seperti carian semantik, di mana anda ingin mencari kandungan yang serupa berdasarkan makna dan bukannya padanan teks tepat.
+  Dalam Java, anda boleh menghasilkan embedding menggunakan OpenAI SDK atau perpustakaan lain yang menyokong penjanaan embedding. Embedding ini penting untuk tugas seperti carian semantik, di mana anda ingin mencari kandungan yang serupa berdasarkan makna dan bukannya padanan teks tepat.
 
 - **Pangkalan data vektor**: Pangkalan data vektor adalah sistem penyimpanan khusus yang dioptimumkan untuk embedding. Ia membolehkan carian keserupaan yang cekap dan penting untuk corak Penjanaan Augmentasi Pengambilan (RAG) di mana anda perlu mencari maklumat yang relevan daripada set data besar berdasarkan keserupaan semantik dan bukannya padanan tepat.
 
 ![Rajah: Seni bina pangkalan data vektor menunjukkan bagaimana embedding disimpan dan diambil untuk carian keserupaan.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.ms.png)
 
-> **Nota**: Dalam kursus ini, kami tidak akan merangkumi pangkalan data vektor tetapi menganggap ia patut disebut kerana ia sering digunakan dalam aplikasi dunia sebenar.
+> **Nota**: Dalam kursus ini, kami tidak akan merangkumi pangkalan data vektor tetapi menganggap ia patut disebut kerana ia sering digunakan dalam aplikasi dunia nyata.
 
 - **Agen & MCP**: Komponen AI yang berinteraksi secara autonomi dengan model, alat, dan sistem luaran. Protokol Konteks Model (MCP) menyediakan cara standard untuk agen mengakses sumber data luaran dan alat dengan selamat. Ketahui lebih lanjut dalam kursus kami [MCP untuk Pemula](https://github.com/microsoft/mcp-for-beginners).
 
@@ -97,7 +97,7 @@ Dalam aplikasi AI Java, anda akan menggunakan token untuk pemprosesan teks, embe
 
 ### Alat dan Perpustakaan Pembangunan AI untuk Java
 
-Java menawarkan alat yang sangat baik untuk pembangunan AI. Terdapat tiga perpustakaan utama yang akan kami terokai sepanjang kursus ini - OpenAI Java SDK, Azure OpenAI SDK, dan Spring AI.
+Java menawarkan alat yang sangat baik untuk pembangunan AI. Terdapat tiga perpustakaan utama yang akan kita terokai sepanjang kursus ini - OpenAI Java SDK, Azure OpenAI SDK, dan Spring AI.
 
 Berikut adalah jadual rujukan pantas yang menunjukkan SDK mana yang digunakan dalam contoh setiap bab:
 
@@ -122,9 +122,9 @@ OpenAI SDK adalah perpustakaan Java rasmi untuk API OpenAI. Ia menyediakan antar
 
 #### Spring AI
 
-Spring AI adalah rangka kerja komprehensif yang membawa keupayaan AI ke dalam aplikasi Spring, menyediakan lapisan abstraksi yang konsisten merentasi penyedia AI yang berbeza. Ia berintegrasi dengan lancar dengan ekosistem Spring, menjadikannya pilihan ideal untuk aplikasi Java perusahaan yang memerlukan keupayaan AI.
+Spring AI adalah rangka kerja komprehensif yang membawa keupayaan AI ke aplikasi Spring, menyediakan lapisan abstraksi yang konsisten merentasi penyedia AI yang berbeza. Ia berintegrasi dengan lancar dengan ekosistem Spring, menjadikannya pilihan ideal untuk aplikasi Java perusahaan yang memerlukan keupayaan AI.
 
-Kekuatan Spring AI terletak pada integrasinya yang lancar dengan ekosistem Spring, menjadikannya mudah untuk membina aplikasi AI yang sedia untuk pengeluaran dengan corak Spring yang biasa seperti suntikan kebergantungan, pengurusan konfigurasi, dan rangka kerja ujian. Anda akan menggunakan Spring AI dalam Bab 2 dan 4 untuk membina aplikasi yang memanfaatkan perpustakaan OpenAI dan Model Context Protocol (MCP) Spring AI.
+Kekuatan Spring AI terletak pada integrasinya yang lancar dengan ekosistem Spring, menjadikannya mudah untuk membina aplikasi AI yang sedia untuk pengeluaran dengan corak Spring yang biasa seperti suntikan kebergantungan, pengurusan konfigurasi, dan rangka kerja ujian. Anda akan menggunakan Spring AI dalam Bab 2 dan 4 untuk membina aplikasi yang memanfaatkan kedua-dua OpenAI dan perpustakaan Spring AI Model Context Protocol (MCP).
 
 ##### Protokol Konteks Model (MCP)
 
@@ -140,15 +140,15 @@ Perpustakaan klien Azure OpenAI untuk Java adalah adaptasi API REST OpenAI yang 
 
 ## Ringkasan
 
-**Tahniah!** Anda telah berjaya:
+Itu merangkumi asas-asasnya! Anda kini memahami:
 
-- **Mempelajari asas Generative AI** termasuk LLM, kejuruteraan prompt, token, embedding, dan pangkalan data vektor
-- **Membandingkan alat pembangunan AI untuk Java** termasuk Azure OpenAI SDK, Spring AI, dan OpenAI Java SDK
-- **Meneroka Protokol Konteks Model** dan peranannya dalam komunikasi agen AI
+- Konsep utama di sebalik generative AI - daripada LLM dan kejuruteraan prompt kepada token, embedding, dan pangkalan data vektor
+- Pilihan alat anda untuk pembangunan AI Java: Azure OpenAI SDK, Spring AI, dan OpenAI Java SDK
+- Apa itu Protokol Konteks Model dan bagaimana ia membolehkan agen AI bekerja dengan alat luaran
 
 ## Langkah Seterusnya
 
 [Bab 2: Menyediakan Persekitaran Pembangunan](../02-SetupDevEnvironment/README.md)
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

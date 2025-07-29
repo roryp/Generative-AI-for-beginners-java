@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "006866db93a268a8769bb55f2e324291",
-  "translation_date": "2025-07-28T10:24:20+00:00",
+  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
+  "translation_date": "2025-07-29T08:19:31+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "zh"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **生成式人工智能基础知识**，包括大型语言模型（LLMs）、提示工程、tokens、嵌入和向量数据库
 - **比较 Java 的 AI 开发工具**，包括 Azure OpenAI SDK、Spring AI 和 OpenAI Java SDK
-- **了解模型上下文协议（MCP）**及其在 AI 代理通信中的作用
+- **了解模型上下文协议（Model Context Protocol）**及其在 AI 代理通信中的作用
 
 ## 目录
 
@@ -46,7 +46,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![图示：生成式 AI 模型类型及其应用场景。](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.zh.png)
 
-当然，这些模型的响应并非总是完美的。你可能听说过模型会“幻觉”或以权威的方式生成错误信息。但通过提供清晰的指令和上下文，你可以帮助模型生成更好的响应。这就是**提示工程**的作用。
+当然，这些模型的响应并非总是完美的。你可能听说过模型会“幻觉”（hallucinate），即以权威的方式生成错误信息。但通过为模型提供清晰的指令和上下文，你可以帮助它生成更好的响应。这就是**提示工程**的用武之地。
 
 #### 提示工程回顾
 
@@ -56,44 +56,44 @@ CO_OP_TRANSLATOR_METADATA:
 - **上下文**：提供必要的背景信息。
 - **约束条件**：指定任何限制或格式要求。
 
-提示工程的一些最佳实践包括提示设计、清晰指令、任务分解、单样本学习和少样本学习，以及提示调优。测试不同的提示对于找到适合特定用例的最佳方法至关重要。
+提示工程的一些最佳实践包括提示设计、清晰指令、任务分解、单样本学习和少样本学习，以及提示微调。测试不同的提示对于找到适合特定用例的最佳方法至关重要。
 
-在开发应用程序时，你会使用不同类型的提示：
-- **系统提示**：设置模型行为的基本规则和上下文。
-- **用户提示**：来自应用程序用户的输入数据。
-- **助手提示**：基于系统提示和用户提示生成的模型响应。
+在开发应用程序时，你将使用不同类型的提示：
+- **系统提示**：设置模型行为的基本规则和上下文
+- **用户提示**：来自应用程序用户的输入数据
+- **助手提示**：基于系统提示和用户提示生成的模型响应
 
 > **了解更多**：在 [生成式 AI 入门课程的提示工程章节](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals) 中了解更多提示工程内容。
 
 #### Tokens、嵌入和代理
 
-在使用生成式 AI 模型时，你会接触到一些术语，如 **tokens**、**嵌入**、**代理** 和 **模型上下文协议（MCP）**。以下是这些概念的详细介绍：
+在使用生成式 AI 模型时，你会接触到一些术语，如**tokens**、**嵌入**、**代理**和**模型上下文协议（MCP）**。以下是这些概念的详细介绍：
 
-- **Tokens**：Tokens 是模型中的最小文本单位，可以是单词、字符或子词。Tokens 用于将文本数据表示为模型可以理解的格式。例如，句子 "The quick brown fox jumped over the lazy dog" 可能会被分解为 ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] 或 ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"]，具体取决于分词策略。
+- **Tokens**：Tokens 是模型中最小的文本单位，可以是单词、字符或子词。Tokens 用于将文本数据表示为模型可以理解的格式。例如，句子“The quick brown fox jumped over the lazy dog”可能被标记为 ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] 或 ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"]，具体取决于标记化策略。
 
 ![图示：生成式 AI 中将单词分解为 tokens 的示例](../../../01-IntroToGenAI/images/tokens.webp)
 
-分词是将文本分解为这些小单元的过程。这很重要，因为模型是基于 tokens 而非原始文本进行操作的。提示中的 token 数量会影响模型的响应长度和质量，因为模型对上下文窗口的 token 数量有上限（例如，GPT-4 的上下文窗口总计 128K tokens，包括输入和输出）。
+标记化是将文本分解为这些更小单位的过程。这很重要，因为模型是基于 tokens 而非原始文本进行操作的。提示中的 token 数量会影响模型的响应长度和质量，因为模型对其上下文窗口（例如 GPT-4 的总上下文，包括输入和输出）有 token 限制。
 
-  在 Java 中，你可以使用 OpenAI SDK 等库在向 AI 模型发送请求时自动处理分词。
+  在 Java 中，你可以使用 OpenAI SDK 等库在向 AI 模型发送请求时自动处理标记化。
 
-- **嵌入**：嵌入是捕捉语义意义的 token 向量表示。它们是数值表示（通常是浮点数数组），使模型能够理解单词之间的关系并生成上下文相关的响应。相似的单词具有相似的嵌入，从而使模型能够理解同义词和语义关系。
+- **嵌入**：嵌入是捕捉语义意义的 tokens 的向量表示。它们是数值表示（通常是浮点数数组），使模型能够理解单词之间的关系并生成语境相关的响应。相似的单词具有相似的嵌入，这使得模型能够理解同义词和语义关系。
 
 ![图示：嵌入](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.zh.png)
 
-  在 Java 中，你可以使用 OpenAI SDK 或其他支持嵌入生成的库来生成嵌入。这些嵌入对于语义搜索等任务至关重要，在语义搜索中，你希望基于意义而非精确文本匹配找到相似内容。
+  在 Java 中，你可以使用 OpenAI SDK 或其他支持嵌入生成的库来生成嵌入。这些嵌入对于语义搜索等任务至关重要，在语义搜索中，你希望根据含义而非精确文本匹配找到相似内容。
 
 - **向量数据库**：向量数据库是针对嵌入优化的专用存储系统。它们支持高效的相似性搜索，对于需要基于语义相似性而非精确匹配从大型数据集中查找相关信息的检索增强生成（RAG）模式至关重要。
 
-![图示：向量数据库架构，展示了如何存储和检索嵌入以进行相似性搜索。](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.zh.png)
+![图示：向量数据库架构，展示嵌入如何存储和检索以进行相似性搜索。](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.zh.png)
 
-> **注意**：本课程不会详细讲解向量数据库，但它们在实际应用中非常常见，因此值得一提。
+> **注意**：本课程不会涵盖向量数据库，但它们在实际应用中非常常见，因此值得一提。
 
-- **代理 & MCP**：代理是能够自主与模型、工具和外部系统交互的 AI 组件。模型上下文协议（MCP）为代理安全访问外部数据源和工具提供了标准化方式。你可以在我们的 [MCP 入门课程](https://github.com/microsoft/mcp-for-beginners) 中了解更多。
+- **代理和 MCP**：代理是能够自主与模型、工具和外部系统交互的 AI 组件。模型上下文协议（MCP）为代理安全访问外部数据源和工具提供了标准化方式。更多内容请参考我们的 [MCP 入门课程](https://github.com/microsoft/mcp-for-beginners)。
 
-在 Java 的 AI 应用程序中，你将使用 tokens 进行文本处理，使用嵌入进行语义搜索和 RAG，使用向量数据库进行数据检索，并结合 MCP 使用代理构建智能工具系统。
+在 Java AI 应用程序中，你将使用 tokens 进行文本处理，使用嵌入进行语义搜索和 RAG，使用向量数据库进行数据检索，并结合 MCP 使用代理构建智能工具系统。
 
-![图示：从提示到回复的流程——tokens、向量、可选的 RAG 查找、LLM 思考以及 MCP 代理在一个快速流程中的协作。](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.zh.png)
+![图示：从提示到回复的流程——包括 tokens、向量、可选的 RAG 查找、LLM 思考以及 MCP 代理的快速流程。](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.zh.png)
 
 ### Java 的 AI 开发工具和库
 
@@ -122,9 +122,9 @@ OpenAI SDK 是 OpenAI API 的官方 Java 库。它提供了一个简单且一致
 
 #### Spring AI
 
-Spring AI 是一个综合框架，为 Spring 应用程序带来了 AI 功能，并在不同 AI 提供商之间提供了一致的抽象层。它与 Spring 生态系统无缝集成，是需要 AI 功能的企业级 Java 应用程序的理想选择。
+Spring AI 是一个全面的框架，为 Spring 应用程序带来了 AI 功能，并在不同 AI 提供商之间提供了一致的抽象层。它与 Spring 生态系统无缝集成，是需要 AI 功能的企业级 Java 应用程序的理想选择。
 
-Spring AI 的优势在于它与 Spring 生态系统的无缝集成，使得使用熟悉的 Spring 模式（如依赖注入、配置管理和测试框架）构建生产级 AI 应用程序变得简单。在第 2 章和第 4 章中，你将使用 Spring AI 构建利用 OpenAI 和模型上下文协议（MCP）Spring AI 库的应用程序。
+Spring AI 的优势在于它与 Spring 生态系统的无缝集成，使得使用熟悉的 Spring 模式（如依赖注入、配置管理和测试框架）构建生产就绪的 AI 应用程序变得简单。在第 2 章和第 4 章中，你将使用 Spring AI 构建利用 OpenAI 和模型上下文协议（MCP）的应用程序。
 
 ##### 模型上下文协议（MCP）
 
@@ -134,21 +134,21 @@ Spring AI 的优势在于它与 Spring 生态系统的无缝集成，使得使�
 
 #### Azure OpenAI Java SDK
 
-Azure OpenAI Java 客户端库是 OpenAI REST API 的一种改编版，提供了符合 Java 习惯的接口，并与 Azure SDK 生态系统的其他部分集成。在第 3 章中，你将使用 Azure OpenAI SDK 构建应用程序，包括聊天应用程序、函数调用和 RAG（检索增强生成）模式。
+Azure OpenAI Java 客户端库是 OpenAI REST API 的一个适配版本，提供了符合 Java 习惯的接口，并与 Azure SDK 生态系统的其他部分集成。在第 3 章中，你将使用 Azure OpenAI SDK 构建应用程序，包括聊天应用程序、函数调用和 RAG（检索增强生成）模式。
 
-> 注意：Azure OpenAI SDK 的功能落后于 OpenAI Java SDK，因此对于未来的项目，建议优先考虑使用 OpenAI Java SDK。
+> 注意：Azure OpenAI SDK 的功能落后于 OpenAI Java SDK，因此在未来的项目中，建议优先考虑使用 OpenAI Java SDK。
 
 ## 总结
 
-**恭喜你！** 你已经成功：
+本章内容到此结束！你现在已经了解了：
 
-- **学习了生成式 AI 的基础知识**，包括 LLMs、提示工程、tokens、嵌入和向量数据库
-- **比较了 Java 的 AI 开发工具**，包括 Azure OpenAI SDK、Spring AI 和 OpenAI Java SDK
-- **了解了模型上下文协议（MCP）**及其在 AI 代理通信中的作用
+- 生成式人工智能的核心概念——从 LLMs 和提示工程到 tokens、嵌入和向量数据库
+- Java AI 开发的工具选项：Azure OpenAI SDK、Spring AI 和 OpenAI Java SDK
+- 什么是模型上下文协议，以及它如何使 AI 代理与外部工具协作
 
 ## 下一步
 
 [第 2 章：设置开发环境](../02-SetupDevEnvironment/README.md)
 
 **免责声明**：  
-本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。应以原始语言的文档作为权威来源。对于关键信息，建议使用专业人工翻译。因使用本翻译而引起的任何误解或误读，我们概不负责。
+本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保准确性，但请注意，自动翻译可能包含错误或不准确之处。应以原始语言的文档作为权威来源。对于关键信息，建议使用专业人工翻译。对于因使用本翻译而引起的任何误解或误读，我们概不负责。

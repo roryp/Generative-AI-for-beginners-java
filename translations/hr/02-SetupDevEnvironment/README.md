@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T13:28:31+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T10:19:55+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "hr"
 }
 -->
-# Postavljanje Razvojnog Okruženja za Generativnu AI za Javu
+# Postavljanje razvojnog okruženja za Generativnu AI za Javu
 
 > **Brzi početak**: Kodirajte u oblaku za 2 minute - preskočite na [Postavljanje GitHub Codespaces](../../../02-SetupDevEnvironment) - nije potrebna lokalna instalacija i koristi GitHub modele!
 
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - Postaviti razvojno okruženje za Java AI aplikacije
 - Odabrati i konfigurirati preferirano razvojno okruženje (prvo u oblaku s Codespaces, lokalni razvojni kontejner ili potpuno lokalno postavljanje)
-- Testirati postavljanje povezivanjem s GitHub modelima
+- Testirati postavke povezivanjem s GitHub modelima
 
 ## Sadržaj
 
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [Opcija B: Lokalni razvojni kontejner](../../../02-SetupDevEnvironment)
   - [Opcija C: Koristite postojeću lokalnu instalaciju](../../../02-SetupDevEnvironment)
 - [Korak 2: Kreiranje GitHub osobnog pristupnog tokena](../../../02-SetupDevEnvironment)
-- [Korak 3: Testiranje postavljanja](../../../02-SetupDevEnvironment)
+- [Korak 3: Testiranje postavki](../../../02-SetupDevEnvironment)
 - [Rješavanje problema](../../../02-SetupDevEnvironment)
 - [Sažetak](../../../02-SetupDevEnvironment)
 - [Sljedeći koraci](../../../02-SetupDevEnvironment)
@@ -45,7 +45,7 @@ Preporučujemo korištenje [**GitHub modela**](https://github.com/marketplace?ty
 - **Besplatni** za početak
 - **Jednostavni** za postavljanje samo s GitHub računom
 - **Bez kreditne kartice** potrebne
-- **Višestruki modeli** dostupni za eksperimentiranje
+- **Više modela** dostupno za eksperimentiranje
 
 > **Napomena**: GitHub modeli korišteni u ovom treningu imaju sljedeće besplatne limite:
 > - 15 zahtjeva po minuti (150 dnevno)
@@ -78,9 +78,9 @@ Kreirali smo unaprijed konfigurirani razvojni kontejner kako bismo minimizirali 
 
 <img src="./images/image.png" alt="Snimka zaslona: New with options" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Snimka zaslona: Opcije za kreiranje Codespace-a" width="50%">
+<img src="./images/codespaces-create.png" alt="Snimka zaslona: Create codespace options" width="50%">
 
-> **Prednosti Codespaces-a**:
+> **Prednosti Codespaces**:
 > - Nije potrebna lokalna instalacija
 > - Radi na bilo kojem uređaju s preglednikom
 > - Unaprijed konfigurirano sa svim alatima i ovisnostima
@@ -96,7 +96,7 @@ Kreirali smo unaprijed konfigurirani razvojni kontejner kako bismo minimizirali 
 2. Instalirajte [Docker Desktop](https://www.docker.com/products/docker-desktop/) i [VS Code](https://code.visualstudio.com/)
 3. Instalirajte [Dev Containers ekstenziju](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) u VS Code
 4. Otvorite mapu repozitorija u VS Code
-5. Kada se zatraži, kliknite **Reopen in Container** (ili koristite `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
+5. Kada se pojavi upit, kliknite **Reopen in Container** (ili koristite `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Pričekajte da se kontejner izgradi i pokrene
 7. Nastavite na [Korak 2: Kreiranje GitHub tokena](../../../02-SetupDevEnvironment)
 
@@ -106,7 +106,7 @@ Kreirali smo unaprijed konfigurirani razvojni kontejner kako bismo minimizirali 
 
 #### Opcija C: Koristite postojeću lokalnu instalaciju
 
-**Za developere s postojećim Java okruženjima**
+**Za developere s postojećim Java okruženjem**
 
 Preduvjeti:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
@@ -118,14 +118,14 @@ Koraci:
 2. Otvorite projekt u svom IDE-u
 3. Nastavite na [Korak 2: Kreiranje GitHub tokena](../../../02-SetupDevEnvironment)
 
-> **Pro Savjet**: Ako imate stroj s niskim specifikacijama, ali želite VS Code lokalno, koristite GitHub Codespaces! Možete povezati svoj lokalni VS Code s cloud-hostiranim Codespace-om za najbolje od oba svijeta.
+> **Pro Savjet**: Ako imate stroj s niskim specifikacijama, ali želite VS Code lokalno, koristite GitHub Codespaces! Možete povezati svoj lokalni VS Code s cloud-hostiranim Codespaceom za najbolje od oba svijeta.
 
 <img src="./images/image-2.png" alt="Snimka zaslona: Kreirana lokalna instanca razvojnog kontejnera" width="50%">
 
 ## Korak 2: Kreiranje GitHub osobnog pristupnog tokena
 
-1. Idite na [GitHub postavke](https://github.com/settings/profile) i odaberite **Settings** iz izbornika vašeg profila.
-2. U lijevom bočnom izborniku kliknite **Developer settings** (obično na dnu).
+1. Idite na [GitHub postavke](https://github.com/settings/profile) i odaberite **Settings** iz izbornika profila.
+2. U lijevom izborniku kliknite **Developer settings** (obično na dnu).
 3. Pod **Personal access tokens**, kliknite **Fine-grained tokens** (ili slijedite ovaj direktni [link](https://github.com/settings/personal-access-tokens)).
 4. Kliknite **Generate new token**.
 5. Pod "Token name", unesite opisno ime (npr., `GenAI-Java-Course-Token`).
@@ -138,7 +138,7 @@ Koraci:
 
 > **Sigurnosni savjet**: Koristite minimalno potrebne dozvole i najkraće praktično vrijeme isteka za svoje pristupne tokene.
 
-## Korak 3: Testiranje postavljanja s GitHub Models primjerom
+## Korak 3: Testiranje postavki s GitHub Models primjerom
 
 Kada je vaše razvojno okruženje spremno, testirajmo integraciju GitHub modela s našom primjer aplikacijom u [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
@@ -171,7 +171,7 @@ Sending request to GitHub Models...
 Response: Hello World!
 ```
 
-### Razumijevanje primjera koda
+### Razumijevanje primjer koda
 
 Prvo, razumijmo što smo upravo pokrenuli. Primjer pod `examples/github-models` koristi OpenAI Java SDK za povezivanje s GitHub modelima:
 
@@ -179,7 +179,7 @@ Prvo, razumijmo što smo upravo pokrenuli. Primjer pod `examples/github-models` 
 - **Povezuje se** s GitHub modelima koristeći vaš osobni pristupni token
 - **Šalje** jednostavnu poruku "Say Hello World!" AI modelu
 - **Prima** i prikazuje odgovor AI-a
-- **Provjerava** da vaše postavljanje radi ispravno
+- **Provjerava** da vaše postavke rade ispravno
 
 **Ključna ovisnost** (u `pom.xml`):
 ```xml
@@ -212,12 +212,12 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Sažetak
 
-**Čestitamo!** Uspješno ste:
+Odlično! Sada imate sve postavljeno:
 
-- **Kreirali GitHub osobni pristupni token** s odgovarajućim dozvolama za pristup AI modelima
-- **Postavili svoje Java razvojno okruženje** koristeći Codespaces, razvojne kontejnere ili lokalnu instalaciju
-- **Povezali se s GitHub modelima** koristeći OpenAI Java SDK za besplatan pristup AI razvoju
-- **Testirali integraciju** s radnom primjer aplikacijom koja komunicira s AI modelima
+- Kreirali ste GitHub osobni pristupni token s pravim dozvolama za pristup AI modelima
+- Pokrenuli ste svoje Java razvojno okruženje (bilo da je to Codespaces, razvojni kontejneri ili lokalno)
+- Povezali ste se s GitHub modelima koristeći OpenAI Java SDK za besplatni AI razvoj
+- Testirali ste da sve radi s jednostavnim primjerom koji komunicira s AI modelima
 
 ## Sljedeći koraci
 
@@ -230,7 +230,7 @@ Imate problema? Evo uobičajenih problema i rješenja:
 - **Token ne radi?** 
   - Provjerite jeste li kopirali cijeli token bez dodatnih razmaka
   - Provjerite je li token ispravno postavljen kao varijabla okruženja
-  - Provjerite da vaš token ima ispravne dozvole (Models: Read and write)
+  - Provjerite ima li vaš token ispravne dozvole (Models: Read and write)
 
 - **Maven nije pronađen?** 
   - Ako koristite razvojne kontejnere/Codespaces, Maven bi trebao biti unaprijed instaliran
@@ -250,7 +250,7 @@ Imate problema? Evo uobičajenih problema i rješenja:
   - Provjerite jeste li u ispravnom direktoriju: `02-SetupDevEnvironment/examples/github-models`
   - Pokušajte očistiti i ponovno izgraditi: `mvn clean compile`
 
-> **Trebate pomoć?**: Još uvijek imate problema? Otvorite problem u repozitoriju i pomoći ćemo vam.
+> **Treba vam pomoć?**: Još uvijek imate problema? Otvorite problem u repozitoriju i pomoći ćemo vam.
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.
+Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.

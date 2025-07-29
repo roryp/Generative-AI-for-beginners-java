@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d45b8e2291ab1357592c904c103cbc81",
-  "translation_date": "2025-07-28T10:15:15+00:00",
+  "original_hash": "14c0a61ecc1cd2012a9c129236dfdf71",
+  "translation_date": "2025-07-29T07:59:17+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "es"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Lo que Aprenderás
 En esta sección, presentaremos tres aplicaciones prácticas que muestran patrones de desarrollo de IA generativa con Java:
 - Crear un Generador de Historias de Mascotas multimodal que combina IA en el cliente y en el servidor
-- Implementar integración de modelos de IA locales con el demo Foundry Local Spring Boot
+- Implementar la integración de modelos de IA locales con el demo Foundry Local Spring Boot
 - Desarrollar un servicio de Protocolo de Contexto de Modelo (MCP) con el ejemplo de Calculadora
 
 ## Tabla de Contenidos
@@ -31,11 +31,11 @@ Este capítulo presenta **proyectos de ejemplo** que demuestran patrones de desa
 
 ### Demo Foundry Local Spring Boot
 
-El **[Demo Foundry Local Spring Boot](foundrylocal/README.md)** demuestra cómo integrar modelos de IA locales utilizando el **OpenAI Java SDK**. Muestra la conexión con el modelo **Phi-3.5-mini** ejecutándose en Foundry Local, permitiéndote ejecutar aplicaciones de IA sin depender de servicios en la nube.
+El **[Demo Foundry Local Spring Boot](foundrylocal/README.md)** demuestra cómo integrar modelos de IA locales utilizando el **OpenAI Java SDK**. Muestra la conexión con el modelo **Phi-3.5-mini** ejecutándose en Foundry Local, permitiéndote desarrollar aplicaciones de IA sin depender de servicios en la nube.
 
 ### Generador de Historias de Mascotas
 
-El **[Generador de Historias de Mascotas](petstory/README.md)** es una aplicación web interactiva de Spring Boot que demuestra el **procesamiento de IA multimodal** para generar historias creativas de mascotas. Combina capacidades de IA en el cliente y en el servidor utilizando transformer.js para interacciones de IA en el navegador y el OpenAI SDK para el procesamiento en el servidor.
+El **[Generador de Historias de Mascotas](petstory/README.md)** es una aplicación web interactiva basada en Spring Boot que demuestra el **procesamiento de IA multimodal** para generar historias creativas de mascotas. Combina capacidades de IA en el cliente y en el servidor utilizando transformer.js para interacciones de IA en el navegador y el OpenAI SDK para el procesamiento en el servidor.
 
 ### Servicio MCP Calculadora (Demo MCP para Principiantes)
 
@@ -43,23 +43,23 @@ El **[Servicio MCP Calculadora](calculator/README.md)** es una demostración sen
 
 ## Progresión de Aprendizaje
 
-Estos proyectos están diseñados para construir conceptos de capítulos anteriores:
+Estos proyectos están diseñados para construir sobre los conceptos de capítulos anteriores:
 
 1. **Comienza Simple**: Inicia con el Demo Foundry Local Spring Boot para entender la integración básica de IA con modelos locales
-2. **Añade Interactividad**: Avanza al Generador de Historias de Mascotas para procesamiento de IA multimodal e interacciones basadas en la web
+2. **Añade Interactividad**: Avanza al Generador de Historias de Mascotas para explorar IA multimodal e interacciones basadas en la web
 3. **Aprende los Fundamentos de MCP**: Prueba el Servicio MCP Calculadora para comprender los conceptos básicos del Protocolo de Contexto de Modelo
 
 ## Resumen
 
-**¡Felicidades!** Has logrado:
+¡Buen trabajo! Ahora has explorado algunas aplicaciones reales:
 
-- **Crear experiencias de IA multimodal** combinando procesamiento de IA en el cliente y en el servidor
-- **Implementar integración de modelos de IA locales** utilizando frameworks y SDKs modernos de Java
-- **Desarrollar servicios de Protocolo de Contexto de Modelo** que demuestran patrones de integración de herramientas
+- Experiencias de IA multimodal que funcionan tanto en el navegador como en el servidor
+- Integración de modelos de IA locales utilizando frameworks y SDKs modernos de Java
+- Tu primer servicio de Protocolo de Contexto de Modelo para ver cómo las herramientas se integran con la IA
 
 ## Próximos Pasos
 
 [Capítulo 5: IA Generativa Responsable](../05-ResponsibleGenAI/README.md)
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
