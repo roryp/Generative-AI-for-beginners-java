@@ -151,11 +151,9 @@ This example uses intentionally problematic prompts for educational purposes onl
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Learn about Microsoft's approach to security, privacy, and compliance
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Explore Microsoft's principles and practices for responsible AI development
 
-You have completed the Generative AI for Beginners - Java Edition course and are now equipped to build safe, effective AI applications!
-
 ## Course Completion
 
-Congratulations on completing the Generative AI for Beginners course! You now have the knowledge and tools to build responsible and effective generative AI applications with Java.
+Congratulations on completing the Generative AI for Beginners course!
 
 ![Course Completion](./images/image.png)
 
