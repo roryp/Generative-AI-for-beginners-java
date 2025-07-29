@@ -206,12 +206,12 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Summary
 
-**Congratulations!** You have successfully:
+Great! You now have everything set up:
 
-- **Created a GitHub Personal Access Token** with proper permissions for AI model access
-- **Set up your Java development environment** using Codespaces, dev containers, or local installation
-- **Connected to GitHub Models** using the OpenAI Java SDK for free AI development access
-- **Tested the integration** with a working example application that communicates with AI models
+- Created a GitHub Personal Access Token with the right permissions for AI model access
+- Got your Java development environment running (whether that's Codespaces, dev containers, or local)
+- Connected to GitHub Models using the OpenAI Java SDK for free AI development
+- Tested it all works with a simple example that talks to AI models
 
 ## Next Steps
 

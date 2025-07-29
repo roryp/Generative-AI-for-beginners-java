@@ -42,11 +42,11 @@ These projects are designed to build upon concepts from previous chapters:
 
 ## Summary
 
-**Congratulations!** You have successfully:
+Nice work! You've now explored some real applications:
 
-- **Created multi-modal AI experiences** combining client-side and server-side AI processing
-- **Implemented local AI model integration** using modern Java frameworks and SDKs
-- **Developed Model Context Protocol services** demonstrating tool integration patterns
+- Multi-modal AI experiences that work both in the browser and on the server
+- Local AI model integration using modern Java frameworks and SDKs
+- Your first Model Context Protocol service to see how tools integrate with AI
 
 ## Next Steps
 

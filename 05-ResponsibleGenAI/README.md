@@ -2,10 +2,10 @@
 
 ## What You'll Learn
 
-- Understand ethical considerations and best practices for AI development
-- Implement content filtering and safety measures in your applications
+- Learn the ethical considerations and best practices that matter for AI development
+- Build content filtering and safety measures into your applications
 - Test and handle AI safety responses using GitHub Models' built-in protections
-- Apply responsible AI principles to build safe, ethical AI systems
+- Apply responsible AI principles to create safe, ethical AI systems
 
 ## Table of Contents
 
@@ -162,7 +162,7 @@ Congratulations on completing the Generative AI for Beginners course! You now ha
 **What you've accomplished:**
 - Set up your development environment
 - Learned core generative AI techniques
-- Built practical AI applications
+- Explored practical AI applications
 - Understood responsible AI principles
 
 ## Next Steps

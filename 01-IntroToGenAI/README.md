@@ -131,11 +131,11 @@ The Azure OpenAI client library for Java is an adaptation of OpenAI's REST APIs 
 
 ## Summary
 
-**Congratulations!** You have successfully:
+That wraps up the foundations! You now understand:
 
-- **Learned about Generative AI fundamentals** including LLMs, prompt engineering, tokens, embeddings, and vector databases
-- **Compared Java AI development tools** including Azure OpenAI SDK, Spring AI, and OpenAI Java SDK
-- **Discovered the Model Context Protocol** and its role in AI agent communication
+- The core concepts behind generative AI - from LLMs and prompt engineering to tokens, embeddings, and vector databases
+- Your toolkit options for Java AI development: Azure OpenAI SDK, Spring AI, and OpenAI Java SDK
+- What the Model Context Protocol is and how it enables AI agents to work with external tools
 
 ## Next Steps
 
