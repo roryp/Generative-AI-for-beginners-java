@@ -21,7 +21,6 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .anyRequest().permitAll()
             )
-            .csrf(csrf -> csrf.disable()) // Disabled for simplicity in this demo
             .headers(headers -> headers
                 .frameOptions(frameOptions -> frameOptions.deny())
                 .contentTypeOptions(contentTypeOptions -> {})
