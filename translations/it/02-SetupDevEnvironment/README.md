@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T13:06:47+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T09:04:09+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "it"
 }
 -->
 # Configurare l'Ambiente di Sviluppo per Generative AI con Java
 
-> **Avvio Rapido**: Codifica nel cloud in 2 minuti - Vai a [Configurazione di GitHub Codespaces](../../../02-SetupDevEnvironment) - nessuna installazione locale richiesta e utilizza i modelli di GitHub!
+> **Avvio Rapido**: Codifica nel Cloud in 2 minuti - Vai a [Configurazione di GitHub Codespaces](../../../02-SetupDevEnvironment) - nessuna installazione locale richiesta e utilizza i modelli di GitHub!
 
 > **Interessato ad Azure OpenAI?** Consulta la nostra [Guida alla Configurazione di Azure OpenAI](getting-started-azure-openai.md) con i passaggi per creare una nuova risorsa Azure OpenAI.
 
@@ -37,17 +37,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 Questo capitolo ti guiderà nella configurazione di un ambiente di sviluppo. Utilizzeremo **GitHub Models** come esempio principale perché è gratuito, facile da configurare con un account GitHub, non richiede una carta di credito e offre accesso a diversi modelli per sperimentare.
 
-**Nessuna configurazione locale richiesta!** Puoi iniziare a programmare immediatamente utilizzando GitHub Codespaces, che fornisce un ambiente di sviluppo completo direttamente nel tuo browser.
+**Nessuna configurazione locale richiesta!** Puoi iniziare a programmare immediatamente utilizzando GitHub Codespaces, che fornisce un ambiente di sviluppo completo direttamente nel browser.
 
 <img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
 
-Consigliamo di utilizzare [**GitHub Models**](https://github.com/marketplace?type=models) per questo corso perché è:
-- **Gratuito** per iniziare
-- **Facile** da configurare con un account GitHub
+Consigliamo di utilizzare [**GitHub Models**](https://github.com/marketplace?type=models) per questo corso perché:
+- È **gratuito** per iniziare
+- È **facile** da configurare con un account GitHub
 - **Non richiede carta di credito**
-- **Diversi modelli** disponibili per sperimentare
+- Offre **molteplici modelli** per sperimentare
 
-> **Nota**: I Modelli di GitHub utilizzati in questa formazione hanno i seguenti limiti gratuiti:
+> **Nota**: I Modelli di GitHub utilizzati in questo corso hanno i seguenti limiti gratuiti:
 > - 15 richieste al minuto (150 al giorno)
 > - ~8.000 parole in ingresso, ~4.000 parole in uscita per richiesta
 > - 5 richieste simultanee
@@ -58,7 +58,7 @@ Consigliamo di utilizzare [**GitHub Models**](https://github.com/marketplace?typ
 
 <a name="quick-start-cloud"></a>
 
-Abbiamo creato un contenitore di sviluppo preconfigurato per ridurre al minimo i tempi di configurazione e garantire che tu abbia tutti gli strumenti necessari per questo corso su Generative AI con Java. Scegli il tuo approccio di sviluppo preferito:
+Abbiamo creato un contenitore di sviluppo preconfigurato per ridurre al minimo i tempi di configurazione e garantire che tu abbia tutti gli strumenti necessari per questo corso su Generative AI con Java. Scegli l'approccio di sviluppo che preferisci:
 
 ### Opzioni di Configurazione dell'Ambiente:
 
@@ -69,10 +69,10 @@ Abbiamo creato un contenitore di sviluppo preconfigurato per ridurre al minimo i
 1. Fai un fork di questo repository sul tuo account GitHub
    > **Nota**: Se desideri modificare la configurazione di base, consulta la [Configurazione del Contenitore di Sviluppo](../../../.devcontainer/devcontainer.json)
 2. Clicca su **Code** → scheda **Codespaces** → **...** → **New with options...**
-3. Usa le impostazioni predefinite – questo selezionerà la **Configurazione del contenitore di sviluppo**: **Generative AI Java Development Environment**, un contenitore personalizzato creato per questo corso
+3. Usa le impostazioni predefinite – questo selezionerà la **Configurazione del Contenitore di Sviluppo**: **Generative AI Java Development Environment**, un contenitore personalizzato creato per questo corso
 4. Clicca su **Create codespace**
 5. Attendi circa 2 minuti affinché l'ambiente sia pronto
-6. Procedi al [Passo 2: Crea un Token GitHub](../../../02-SetupDevEnvironment)
+6. Procedi a [Passo 2: Crea Token GitHub](../../../02-SetupDevEnvironment)
 
 <img src="./images/codespaces.png" alt="Screenshot: Sottomenu Codespaces" width="50%">
 
@@ -98,7 +98,7 @@ Abbiamo creato un contenitore di sviluppo preconfigurato per ridurre al minimo i
 4. Apri la cartella del repository in VS Code
 5. Quando richiesto, clicca su **Reopen in Container** (o usa `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Attendi che il contenitore venga costruito e avviato
-7. Procedi al [Passo 2: Crea un Token GitHub](../../../02-SetupDevEnvironment)
+7. Procedi a [Passo 2: Crea Token GitHub](../../../02-SetupDevEnvironment)
 
 <img src="./images/devcontainer.png" alt="Screenshot: Configurazione del contenitore di sviluppo" width="50%">
 
@@ -116,9 +116,9 @@ Prerequisiti:
 Passaggi:
 1. Clona questo repository sulla tua macchina locale
 2. Apri il progetto nel tuo IDE
-3. Procedi al [Passo 2: Crea un Token GitHub](../../../02-SetupDevEnvironment)
+3. Procedi a [Passo 2: Crea Token GitHub](../../../02-SetupDevEnvironment)
 
-> **Suggerimento Pro**: Se hai un computer con specifiche basse ma vuoi usare VS Code localmente, utilizza GitHub Codespaces! Puoi collegare il tuo VS Code locale a un Codespace ospitato nel cloud per ottenere il meglio di entrambi i mondi.
+> **Suggerimento Pro**: Se hai un computer con specifiche basse ma vuoi usare VS Code localmente, utilizza GitHub Codespaces! Puoi connettere il tuo VS Code locale a un Codespace ospitato nel cloud per ottenere il meglio di entrambi i mondi.
 
 <img src="./images/image-2.png" alt="Screenshot: Istanza locale del contenitore di sviluppo creata" width="50%">
 
@@ -131,12 +131,12 @@ Passaggi:
 5. Sotto "Token name", fornisci un nome descrittivo (es. `GenAI-Java-Course-Token`).
 6. Imposta una data di scadenza (consigliato: 7 giorni per motivi di sicurezza).
 7. Sotto "Resource owner", seleziona il tuo account utente.
-8. Sotto "Repository access", seleziona i repository che vuoi utilizzare con GitHub Models (o "All repositories" se necessario).
+8. Sotto "Repository access", seleziona i repository che vuoi usare con GitHub Models (o "All repositories" se necessario).
 9. Sotto "Repository permissions", trova **Models** e impostalo su **Read and write**.
 10. Clicca su **Generate token**.
 11. **Copia e salva il tuo token ora** – non potrai più visualizzarlo!
 
-> **Suggerimento di Sicurezza**: Usa l'ambito minimo richiesto e il tempo di scadenza più breve possibile per i tuoi token di accesso.
+> **Consiglio di Sicurezza**: Usa l'ambito minimo richiesto e il tempo di scadenza più breve possibile per i tuoi token di accesso.
 
 ## Passo 3: Testa la Configurazione con l'Esempio GitHub Models
 
@@ -171,7 +171,7 @@ Sending request to GitHub Models...
 Response: Hello World!
 ```
 
-### Comprendere il Codice d'Esempio
+### Comprendere il Codice di Esempio
 
 Prima, capiamo cosa abbiamo appena eseguito. L'esempio sotto `examples/github-models` utilizza l'SDK Java di OpenAI per connettersi ai Modelli di GitHub:
 
@@ -212,12 +212,12 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Riepilogo
 
-**Congratulazioni!** Hai completato con successo:
+Ottimo! Ora hai tutto configurato:
 
-- **La creazione di un Token di Accesso Personale GitHub** con le autorizzazioni corrette per l'accesso ai modelli AI
-- **La configurazione del tuo ambiente di sviluppo Java** utilizzando Codespaces, contenitori di sviluppo o installazione locale
-- **La connessione ai Modelli di GitHub** utilizzando l'SDK Java di OpenAI per l'accesso gratuito allo sviluppo AI
-- **Il test dell'integrazione** con un'applicazione di esempio funzionante che comunica con i modelli AI
+- Creato un Token di Accesso Personale GitHub con le autorizzazioni corrette per accedere ai modelli AI
+- Avviato il tuo ambiente di sviluppo Java (sia con Codespaces, contenitori di sviluppo o locale)
+- Connesso ai Modelli di GitHub utilizzando l'SDK Java di OpenAI per lo sviluppo AI gratuito
+- Testato che tutto funzioni con un semplice esempio che comunica con i modelli AI
 
 ## Prossimi Passi
 
@@ -233,8 +233,8 @@ Hai problemi? Ecco i problemi comuni e le soluzioni:
   - Controlla che il tuo token abbia le autorizzazioni corrette (Models: Read and write)
 
 - **Maven non trovato?** 
-  - Se utilizzi contenitori di sviluppo/Codespaces, Maven dovrebbe essere preinstallato
-  - Per la configurazione locale, assicurati che Java 21+ e Maven 3.9+ siano installati
+  - Se usi contenitori di sviluppo/Codespaces, Maven dovrebbe essere preinstallato
+  - Per configurazioni locali, assicurati che Java 21+ e Maven 3.9+ siano installati
   - Prova `mvn --version` per verificare l'installazione
 
 - **Problemi di connessione?** 
@@ -252,5 +252,5 @@ Hai problemi? Ecco i problemi comuni e le soluzioni:
 
 > **Hai bisogno di aiuto?**: Hai ancora problemi? Apri un problema nel repository e ti aiuteremo.
 
-**Disclaimer (Avvertenza)**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di tenere presente che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

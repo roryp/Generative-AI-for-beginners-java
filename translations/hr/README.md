@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4c05c53b67571aee42e9532404f2fb8",
-  "translation_date": "2025-07-28T11:14:52+00:00",
+  "original_hash": "63b6426b88f6f56398ca3f1fbfc30889",
+  "translation_date": "2025-07-29T10:18:14+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Struktura tečaja i put učenja
 
 ### **Poglavlje 1: Uvod u generativnu umjetnu inteligenciju**
-- **Osnovni koncepti**: Razumijevanje velikih jezičnih modela, tokena, ugrađivanja i AI mogućnosti
+- **Osnovni koncepti**: Razumijevanje velikih jezičnih modela, tokena, ugradnji i AI mogućnosti
 - **Java AI ekosustav**: Pregled Spring AI i OpenAI SDK-ova
 - **Protokol konteksta modela**: Uvod u MCP i njegovu ulogu u komunikaciji AI agenata
 - **Praktične primjene**: Primjeri iz stvarnog svijeta, uključujući chatbotove i generiranje sadržaja
@@ -47,26 +47,26 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Poglavlje 3: Osnovne tehnike generativne umjetne inteligencije**
 - **Inženjering upita**: Tehnike za optimalne odgovore AI modela
-- **Ugrađivanja i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
+- **Ugradnje i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
 - **Generacija uz dohvat (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
 - **Pozivanje funkcija**: Proširenje AI mogućnosti prilagođenim alatima i dodacima
 - **[→ Započni poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavlje 4: Praktične primjene i projekti**
-- **Generator priča o kućnim ljubimcima** (`petstory/`): Kreativno generiranje sadržaja s GitHub modelima
+- **Generator priča o kućnim ljubimcima** (`petstory/`): Generiranje kreativnog sadržaja s GitHub modelima
 - **Foundry lokalna demonstracija** (`foundrylocal/`): Integracija lokalnih AI modela s OpenAI Java SDK-om
 - **MCP kalkulator usluga** (`calculator/`): Osnovna implementacija protokola konteksta modela sa Spring AI
 - **[→ Započni poglavlje 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavlje 5: Odgovoran razvoj umjetne inteligencije**
-- **Sigurnost GitHub modela**: Testiranje ugrađenih mehanizama za filtriranje sadržaja i sigurnost
-- **Demonstracija odgovorne AI**: Praktičan primjer koji pokazuje kako sigurnosni filtri AI-a funkcioniraju u praksi
-- **Najbolje prakse**: Ključne smjernice za etički razvoj i implementaciju AI-a
+- **Sigurnost GitHub modela**: Testiranje ugrađenih mehanizama za filtriranje sadržaja i sigurnosnih sustava (tvrde blokade i mekana odbijanja)
+- **Demonstracija odgovorne umjetne inteligencije**: Praktičan primjer koji pokazuje kako moderni AI sigurnosni sustavi funkcioniraju u praksi
+- **Najbolje prakse**: Ključne smjernice za etički razvoj i implementaciju umjetne inteligencije
 - **[→ Započni poglavlje 5](./05-ResponsibleGenAI/README.md)**
 
 ## Dodatni resursi
 
-- [AI agenti za početnike](https://github.com/microsoft/ai-agents-for-beginners)
+- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generativna umjetna inteligencija za početnike koristeći .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generativna umjetna inteligencija za početnike koristeći JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generativna umjetna inteligencija za početnike](https://github.com/microsoft/generative-ai-for-beginners)

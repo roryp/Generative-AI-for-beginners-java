@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "006866db93a268a8769bb55f2e324291",
-  "translation_date": "2025-07-28T11:06:38+00:00",
+  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
+  "translation_date": "2025-07-29T09:59:32+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "hu"
 }
@@ -11,8 +11,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Amit megtanulsz
 
-- **Generatív MI alapok**, beleértve az LLM-eket, prompt tervezést, tokeneket, beágyazásokat és vektoralapú adatbázisokat
-- **Java MI fejlesztői eszközök összehasonlítása**, mint az Azure OpenAI SDK, Spring AI és OpenAI Java SDK
+- **Generatív MI alapjai**, beleértve az LLM-eket, prompt tervezést, tokeneket, beágyazásokat és vektor adatbázisokat
+- **Java MI fejlesztői eszközök összehasonlítása**, mint például az Azure OpenAI SDK, Spring AI és OpenAI Java SDK
 - **Fedezd fel a Model Context Protocol-t**, és annak szerepét az MI ügynökök kommunikációjában
 
 ## Tartalomjegyzék
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Bevezetés
 
-Üdvözlünk a Generatív MI kezdőknek - Java kiadás első fejezetében! Ez az alapozó lecke bemutatja a generatív MI alapfogalmait, és azt, hogyan dolgozhatsz velük Java segítségével. Megismered az MI alkalmazások alapvető építőelemeit, mint például a Nagy Nyelvi Modellek (LLM-ek), tokenek, beágyazások és MI ügynökök. Emellett felfedezzük azokat a Java eszközöket, amelyeket a kurzus során használni fogsz.
+Üdvözlünk a Generatív MI kezdőknek - Java kiadás első fejezetében! Ez az alapozó lecke bemutatja a generatív MI alapfogalmait, és azt, hogyan dolgozhatsz velük Java segítségével. Megismered az MI alkalmazások alapvető építőelemeit, beleértve a Nagy Nyelvi Modelleket (LLM-ek), tokeneket, beágyazásokat és MI ügynököket. Emellett felfedezzük azokat a Java eszközöket, amelyeket a kurzus során használni fogsz.
 
 ### Gyors áttekintés a generatív MI fogalmakról
 
@@ -38,11 +38,11 @@ A generatív MI olyan mesterséges intelligencia, amely új tartalmat hoz létre
 
 Java MI alkalmazások fejlesztése során generatív MI modellekkel fogsz dolgozni, hogy tartalmat hozz létre. A generatív MI modellek néhány képessége:
 
-- **Szöveg generálás**: Emberi-szerű szövegek készítése chatbotokhoz, tartalomhoz és szövegkiegészítéshez.
+- **Szöveg generálás**: Emberi-szerű szövegek létrehozása chatbotokhoz, tartalomhoz és szövegkiegészítéshez.
 - **Kép generálás és elemzés**: Valósághű képek létrehozása, fotók javítása és objektumok felismerése.
 - **Kód generálás**: Kódrészletek vagy szkriptek írása.
 
-Vannak olyan modellek, amelyek különböző feladatokra optimalizáltak. Például a **Kis Nyelvi Modellek (SLM-ek)** és a **Nagy Nyelvi Modellek (LLM-ek)** is képesek szöveg generálására, de az LLM-ek általában jobb teljesítményt nyújtanak összetett feladatok esetén. Képhez kapcsolódó feladatokhoz pedig speciális látásmodelleket vagy multimodális modelleket használnál.
+Vannak olyan modellek, amelyek különböző feladatokra optimalizáltak. Például a **Kis Nyelvi Modellek (SLM-ek)** és a **Nagy Nyelvi Modellek (LLM-ek)** képesek szöveg generálására, az LLM-ek általában jobb teljesítményt nyújtanak összetett feladatok esetén. Képhez kapcsolódó feladatokhoz speciális látásmodelleket vagy multimodális modelleket használnál.
 
 ![Ábra: Generatív MI modellek típusai és felhasználási területei.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.hu.png)
 
@@ -50,18 +50,18 @@ Természetesen ezeknek a modelleknek a válaszai nem mindig tökéletesek. Való
 
 #### Prompt tervezés áttekintése
 
-A prompt tervezés az a gyakorlat, amely során hatékony bemeneteket tervezünk, hogy az MI modelleket a kívánt kimenetek felé irányítsuk. Ez magában foglalja:
+A prompt tervezés az a gyakorlat, amely hatékony bemeneteket tervez, hogy az MI modelleket a kívánt kimenetek felé irányítsa. Ez magában foglalja:
 
 - **Világosság**: Az utasítások egyértelművé és félreérthetetlenné tétele.
 - **Kontextus**: Szükséges háttérinformációk biztosítása.
 - **Korlátok**: Bármilyen korlátozás vagy formátum megadása.
 
-A prompt tervezés legjobb gyakorlatai közé tartozik a prompt kialakítása, világos utasítások, feladatok lebontása, egy-shot és néhány-shot tanulás, valamint prompt finomhangolás. Különböző promtokat tesztelni elengedhetetlen, hogy megtaláld, mi működik a legjobban az adott felhasználási esetben.
+A prompt tervezés legjobb gyakorlatai közé tartozik a prompt kialakítás, világos utasítások, feladatok lebontása, egy-shot és néhány-shot tanulás, valamint prompt hangolás. Különböző promtokat tesztelni elengedhetetlen, hogy megtaláld, mi működik a legjobban az adott felhasználási esetben.
 
 Alkalmazások fejlesztésekor különböző prompt típusokkal fogsz dolgozni:
-- **Rendszer promtok**: Meghatározzák a modell viselkedésének alapvető szabályait és kontextusát.
-- **Felhasználói promtok**: Az alkalmazás felhasználóitól származó bemeneti adatok.
-- **Asszisztens promtok**: A modell válaszai a rendszer és felhasználói promtok alapján.
+- **Rendszer promptok**: Meghatározzák a modell viselkedésének alapvető szabályait és kontextusát
+- **Felhasználói promptok**: Az alkalmazás felhasználóitól származó bemeneti adatok
+- **Asszisztens promptok**: A modell válaszai a rendszer és felhasználói promptok alapján
 
 > **További információ**: Tudj meg többet a prompt tervezésről a [Generatív MI kezdőknek kurzus Prompt Tervezés fejezetében](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals)
 
@@ -71,9 +71,9 @@ Generatív MI modellekkel dolgozva olyan fogalmakkal találkozol, mint **tokenek
 
 - **Tokenek**: A tokenek a szöveg legkisebb egységei a modellben. Lehetnek szavak, karakterek vagy szóelemek. A tokenek a szövegadatokat olyan formátumba alakítják, amelyet a modell megérthet. Például a "The quick brown fox jumped over the lazy dog" mondat tokenizálva lehet ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] vagy ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"] a tokenizálási stratégiától függően.
 
-![Ábra: Generatív MI tokenek példája, amely bemutatja, hogyan bontják le a szavakat tokenekre](../../../01-IntroToGenAI/images/tokens.webp)
+![Ábra: Generatív MI tokenek példája, amely bemutatja, hogyan oszlik fel a szavak tokenekre](../../../01-IntroToGenAI/images/tokens.webp)
 
-A tokenizálás az a folyamat, amely során a szöveget ezekre a kisebb egységekre bontják. Ez kulcsfontosságú, mivel a modellek tokenekkel dolgoznak, nem nyers szöveggel. A promptban lévő tokenek száma befolyásolja a modell válaszának hosszát és minőségét, mivel a modelleknek tokenkorlátja van a kontextusablakukban (pl. 128K token a GPT-4o teljes kontextusában, beleértve a bemenetet és a kimenetet).
+A tokenizálás az a folyamat, amely során a szöveget ezekre a kisebb egységekre bontják. Ez kulcsfontosságú, mivel a modellek tokenekkel dolgoznak, nem nyers szöveggel. A promptban lévő tokenek száma befolyásolja a modell válaszának hosszát és minőségét, mivel a modelleknek token korlátjuk van a kontextusablakukban (pl. 128K token a GPT-4o teljes kontextusára, beleértve a bemenetet és a kimenetet).
 
   Java-ban az OpenAI SDK-t használhatod a tokenizálás automatikus kezelésére, amikor kéréseket küldesz az MI modelleknek.
 
@@ -83,15 +83,15 @@ A tokenizálás az a folyamat, amely során a szöveget ezekre a kisebb egysége
 
   Java-ban beágyazásokat generálhatsz az OpenAI SDK vagy más könyvtárak segítségével, amelyek támogatják a beágyazás generálását. Ezek a beágyazások elengedhetetlenek olyan feladatokhoz, mint a szemantikai keresés, ahol a jelentés alapján szeretnél hasonló tartalmat találni, nem pedig pontos szöveg egyezések alapján.
 
-- **Vektoralapú adatbázisok**: A vektoralapú adatbázisok olyan speciális tárolórendszerek, amelyek optimalizáltak a beágyazások számára. Hatékony hasonlósági keresést tesznek lehetővé, és kulcsfontosságúak a Retrieval-Augmented Generation (RAG) mintákhoz, ahol nagy adathalmazokból szemantikai hasonlóság alapján kell releváns információt találni, nem pedig pontos egyezések alapján.
+- **Vektor adatbázisok**: A vektor adatbázisok olyan speciális tárolórendszerek, amelyek optimalizáltak a beágyazások számára. Hatékony hasonlósági keresést tesznek lehetővé, és kulcsfontosságúak a Retrieval-Augmented Generation (RAG) mintákhoz, ahol nagy adathalmazokból szemantikai hasonlóság alapján kell releváns információt találni, nem pedig pontos egyezések alapján.
 
-![Ábra: Vektoralapú adatbázis architektúra, amely bemutatja, hogyan tárolják és keresik a beágyazásokat hasonlósági kereséshez.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.hu.png)
+![Ábra: Vektor adatbázis architektúra, amely bemutatja, hogyan tárolják és keresik a beágyazásokat hasonlósági kereséshez.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.hu.png)
 
-> **Megjegyzés**: Ebben a kurzusban nem térünk ki a vektoralapú adatbázisokra, de érdemes megemlíteni őket, mivel gyakran használják őket valós alkalmazásokban.
+> **Megjegyzés**: Ebben a kurzusban nem foglalkozunk vektor adatbázisokkal, de érdemes megemlíteni őket, mivel gyakran használják őket valós alkalmazásokban.
 
-- **Ügynökök és MCP**: MI komponensek, amelyek önállóan lépnek kapcsolatba modellekkel, eszközökkel és külső rendszerekkel. A Model Context Protocol (MCP) szabványosított módot biztosít az ügynökök számára, hogy biztonságosan hozzáférjenek külső adatforrásokhoz és eszközökhöz. Tudj meg többet a [MCP kezdőknek](https://github.com/microsoft/mcp-for-beginners) kurzusban.
+- **Ügynökök & MCP**: MI komponensek, amelyek autonóm módon lépnek kapcsolatba modellekkel, eszközökkel és külső rendszerekkel. A Model Context Protocol (MCP) szabványosított módot biztosít az ügynökök számára, hogy biztonságosan hozzáférjenek külső adatforrásokhoz és eszközökhöz. Tudj meg többet a [MCP kezdőknek](https://github.com/microsoft/mcp-for-beginners) kurzusban.
 
-Java MI alkalmazásokban tokeneket használsz szövegfeldolgozáshoz, beágyazásokat szemantikai kereséshez és RAG-hoz, vektoralapú adatbázisokat adatlekérdezéshez, valamint ügynököket MCP-vel intelligens, eszközhasználó rendszerek építéséhez.
+Java MI alkalmazásokban tokeneket használsz szövegfeldolgozáshoz, beágyazásokat szemantikai kereséshez és RAG-hoz, vektor adatbázisokat adatkereséshez, valamint ügynököket MCP-vel intelligens, eszközhasználó rendszerek építéséhez.
 
 ![Ábra: hogyan válik egy prompt válasszá—tokenek, vektorok, opcionális RAG keresés, LLM gondolkodás és MCP ügynök egy gyors folyamatban.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.hu.png)
 
@@ -122,33 +122,33 @@ Az OpenAI SDK az OpenAI API hivatalos Java könyvtára. Egyszerű és következe
 
 #### Spring AI
 
-A Spring AI egy átfogó keretrendszer, amely MI képességeket hoz a Spring alkalmazásokba, következetes absztrakciós réteget biztosítva különböző MI szolgáltatók között. Zökkenőmentesen integrálódik a Spring ökoszisztémába, így ideális választás vállalati Java alkalmazásokhoz, amelyek MI képességeket igényelnek.
+A Spring AI egy átfogó keretrendszer, amely MI képességeket hoz a Spring alkalmazásokba, következetes absztrakciós réteget biztosítva különböző MI szolgáltatók között. Zökkenőmentesen integrálódik a Spring ökoszisztémába, ideális választás az MI képességeket igénylő vállalati Java alkalmazások számára.
 
-A Spring AI erőssége a Spring ökoszisztémával való zökkenőmentes integrációban rejlik, megkönnyítve a gyártásra kész MI alkalmazások építését a Spring minták, például függőség injektálás, konfigurációkezelés és tesztelési keretrendszerek segítségével. A 2. és 4. fejezetben a Spring AI-t fogod használni olyan alkalmazások építéséhez, amelyek az OpenAI-t és a Model Context Protocol (MCP) Spring AI könyvtárakat használják.
+A Spring AI erőssége a Spring ökoszisztémával való zökkenőmentes integrációban rejlik, megkönnyítve a termelésre kész MI alkalmazások építését a Spring minták, például függőség injektálás, konfigurációkezelés és tesztelési keretrendszerek segítségével. A 2. és 4. fejezetben a Spring AI-t fogod használni olyan alkalmazások építéséhez, amelyek az OpenAI-t és a Model Context Protocol (MCP) Spring AI könyvtárakat használják.
 
 ##### Model Context Protocol (MCP)
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) egy feltörekvő szabvány, amely lehetővé teszi az MI alkalmazások számára, hogy biztonságosan lépjenek kapcsolatba külső adatforrásokkal és eszközökkel. Az MCP szabványosított módot biztosít az MI modellek számára, hogy hozzáférjenek kontextuális információkhoz és végrehajtsanak műveleteket az alkalmazásokban.
 
-A 4. fejezetben egy egyszerű MCP kalkulátor szolgáltatást fogsz építeni, amely bemutatja a Model Context Protocol alapjait a Spring AI segítségével, megmutatva, hogyan hozhatsz létre alapvető eszközintegrációkat és szolgáltatásarchitektúrákat.
+A 4. fejezetben egy egyszerű MCP kalkulátor szolgáltatást fogsz építeni, amely bemutatja a Model Context Protocol alapjait a Spring AI segítségével, megmutatva, hogyan lehet alapvető eszközintegrációkat és szolgáltatásarchitektúrákat létrehozni.
 
 #### Azure OpenAI Java SDK
 
-Az Azure OpenAI Java kliens könyvtár az OpenAI REST API-k adaptációja, amely idiomatikus interfészt és integrációt biztosít az Azure SDK ökoszisztémával. A 3. fejezetben olyan alkalmazásokat fogsz építeni, amelyek az Azure OpenAI SDK-t használják, beleértve chat alkalmazásokat, funkcióhívásokat és RAG (Retrieval-Augmented Generation) mintákat.
+Az Azure OpenAI Java kliens könyvtár az OpenAI REST API-k adaptációja, amely idiomatikus interfészt és integrációt biztosít az Azure SDK ökoszisztéma többi részével. A 3. fejezetben olyan alkalmazásokat fogsz építeni, amelyek az Azure OpenAI SDK-t használják, beleértve chat alkalmazásokat, funkcióhívásokat és RAG (Retrieval-Augmented Generation) mintákat.
 
 > Megjegyzés: Az Azure OpenAI SDK elmarad az OpenAI Java SDK mögött funkciók tekintetében, így jövőbeli projektekhez érdemes az OpenAI Java SDK-t használni.
 
 ## Összefoglalás
 
-**Gratulálunk!** Sikeresen:
+Ezzel lezártuk az alapokat! Most már érted:
 
-- **Megtanultad a generatív MI alapjait**, beleértve az LLM-eket, prompt tervezést, tokeneket, beágyazásokat és vektoralapú adatbázisokat
-- **Összehasonlítottad a Java MI fejlesztői eszközöket**, mint az Azure OpenAI SDK, Spring AI és OpenAI Java SDK
-- **Felfedezted a Model Context Protocol-t**, és annak szerepét az MI ügynökök kommunikációjában
+- A generatív MI mögötti alapfogalmakat - az LLM-ektől és prompt tervezéstől a tokenekig, beágyazásokig és vektor adatbázisokig
+- A Java MI fejlesztéshez rendelkezésre álló eszköztár lehetőségeit: Azure OpenAI SDK, Spring AI és OpenAI Java SDK
+- Mi az a Model Context Protocol, és hogyan teszi lehetővé az MI ügynökök számára, hogy külső eszközökkel dolgozzanak
 
 ## Következő lépések
 
-[2. fejezet: Fejlesztői környezet beállítása](../02-SetupDevEnvironment/README.md)
+[2. fejezet: Fejlesztési környezet beállítása](../02-SetupDevEnvironment/README.md)
 
-**Felelősség kizárása**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+**Felelősségkizárás**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítószolgáltatás segítségével készült fordítás. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

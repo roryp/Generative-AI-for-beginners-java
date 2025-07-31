@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T13:14:45+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T09:32:18+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "fi"
 }
 -->
 # Kehitysympäristön asennus Generatiiviselle tekoälylle Javassa
 
-> **Pikakäynnistys**: Koodaa pilvessä 2 minuutissa - Siirry kohtaan [GitHub Codespaces -asennus](../../../02-SetupDevEnvironment) - ei vaadi paikallista asennusta ja käyttää GitHub-malleja!
+> **Pikakäynnistys**: Koodaa pilvessä 2 minuutissa - siirry kohtaan [GitHub Codespaces -asennus](../../../02-SetupDevEnvironment) - ei vaadi paikallista asennusta ja käyttää GitHub-malleja!
 
 > **Kiinnostunut Azure OpenAI:sta?** Katso [Azure OpenAI -asennusoppaamme](getting-started-azure-openai.md), jossa on ohjeet uuden Azure OpenAI -resurssin luomiseen.
 
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Johdanto
 
-Tässä luvussa opastetaan kehitysympäristön asennuksessa. Käytämme esimerkkinä **GitHub-malleja**, koska ne ovat ilmaisia, helppoja ottaa käyttöön pelkällä GitHub-tilillä, eivät vaadi luottokorttia ja tarjoavat useita malleja kokeiltavaksi.
+Tässä luvussa opastetaan kehitysympäristön asennuksessa. Käytämme esimerkkinä **GitHub-malleja**, koska ne ovat ilmaisia, helppoja ottaa käyttöön pelkällä GitHub-tilillä, eivät vaadi luottokorttia ja tarjoavat pääsyn useisiin malleihin kokeilua varten.
 
 **Ei paikallista asennusta vaadita!** Voit aloittaa koodaamisen heti käyttämällä GitHub Codespacesia, joka tarjoaa täyden kehitysympäristön suoraan selaimessasi.
 
@@ -52,24 +52,24 @@ Suosittelemme käyttämään [**GitHub-malleja**](https://github.com/marketplace
 > - ~8 000 sanaa sisään, ~4 000 sanaa ulos per pyyntö
 > - 5 samanaikaista pyyntöä
 > 
-> Tuotantokäyttöön päivitä Azure AI Foundry -malleihin Azure-tililläsi. Koodiasi ei tarvitse muuttaa. Katso [Azure AI Foundry -dokumentaatio](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Tuotantokäyttöön voit päivittää Azure AI Foundry -malleihin Azure-tililläsi. Koodiasi ei tarvitse muuttaa. Katso [Azure AI Foundry -dokumentaatio](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## Vaihe 1: Kehitysympäristön asennus
 
 <a name="quick-start-cloud"></a>
 
-Olemme luoneet esikonfiguroidun kehityskontin minimoidaksemme asennusaikaa ja varmistaaksemme, että sinulla on kaikki tarvittavat työkalut tätä Generatiivinen tekoäly Javassa -kurssia varten. Valitse haluamasi kehitystapa:
+Olemme luoneet esikonfiguroidun kehityskontin, joka minimoi asennusajan ja varmistaa, että sinulla on kaikki tarvittavat työkalut tätä Generatiivinen tekoäly Javassa -kurssia varten. Valitse haluamasi kehitystapa:
 
 ### Ympäristön asennusvaihtoehdot:
 
 #### Vaihtoehto A: GitHub Codespaces (suositeltu)
 
-**Aloita koodaaminen 2 minuutissa - ei paikallista asennusta vaadita!**
+**Aloita koodaaminen 2 minuutissa - ei paikallista asennusta!**
 
-1. Haarauta tämä arkisto GitHub-tilillesi
+1. Haaroita tämä arkisto GitHub-tilillesi
    > **Huomio**: Jos haluat muokata peruskonfiguraatiota, katso [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Klikkaa **Code** → **Codespaces**-välilehti → **...** → **New with options...**
-3. Käytä oletusasetuksia – tämä valitsee **Dev-kontin konfiguraation**: **Generative AI Java Development Environment**, joka on luotu tätä kurssia varten
+3. Käytä oletusasetuksia – tämä valitsee **Dev container configuration**: **Generative AI Java Development Environment** -kontin, joka on luotu tätä kurssia varten
 4. Klikkaa **Create codespace**
 5. Odota ~2 minuuttia, että ympäristö on valmis
 6. Siirry kohtaan [Vaihe 2: Luo GitHub-tunnus](../../../02-SetupDevEnvironment)
@@ -84,14 +84,14 @@ Olemme luoneet esikonfiguroidun kehityskontin minimoidaksemme asennusaikaa ja va
 > - Ei paikallista asennusta vaadita
 > - Toimii millä tahansa laitteella, jossa on selain
 > - Esikonfiguroitu kaikilla työkaluilla ja riippuvuuksilla
-> - Ilmainen 60 tuntia kuukaudessa henkilökohtaisille tileille
+> - 60 ilmaista tuntia kuukaudessa henkilökohtaisille tileille
 > - Yhtenäinen ympäristö kaikille oppijoille
 
 #### Vaihtoehto B: Paikallinen kehityskontti
 
 **Kehittäjille, jotka suosivat paikallista kehitystä Dockerilla**
 
-1. Haarauta ja kloonaa tämä arkisto paikalliselle koneellesi
+1. Haaroita ja kloonaa tämä arkisto paikalliselle koneellesi
    > **Huomio**: Jos haluat muokata peruskonfiguraatiota, katso [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Asenna [Docker Desktop](https://www.docker.com/products/docker-desktop/) ja [VS Code](https://code.visualstudio.com/)
 3. Asenna [Dev Containers -laajennus](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) VS Codeen
@@ -118,32 +118,32 @@ Vaiheet:
 2. Avaa projekti IDE:ssäsi
 3. Siirry kohtaan [Vaihe 2: Luo GitHub-tunnus](../../../02-SetupDevEnvironment)
 
-> **Vinkki**: Jos sinulla on vähätehoinen kone, mutta haluat käyttää VS Codea paikallisesti, käytä GitHub Codespacesia! Voit yhdistää paikallisen VS Coden pilvessä isännöityyn Codespaceen ja saada molempien maailmojen parhaat puolet.
+> **Vinkki**: Jos sinulla on vähätehoinen kone mutta haluat käyttää VS Codea paikallisesti, käytä GitHub Codespacesia! Voit yhdistää paikallisen VS Coden pilvessä isännöityyn Codespaceen ja saada molempien maailmojen parhaat puolet.
 
-<img src="./images/image-2.png" alt="Kuvakaappaus: Paikallisen kehityskontin luonti" width="50%">
+<img src="./images/image-2.png" alt="Kuvakaappaus: Paikallinen kehityskontti luotu" width="50%">
 
 ## Vaihe 2: Luo GitHubin henkilökohtainen käyttöoikeustunnus
 
-1. Siirry [GitHub-asetuksiin](https://github.com/settings/profile) ja valitse **Settings** profiilivalikosta.
+1. Siirry [GitHub-asetuksiin](https://github.com/settings/profile) ja valitse **Settings** profiilivalikostasi.
 2. Vasemmasta sivupalkista klikkaa **Developer settings** (yleensä alhaalla).
-3. Valitse **Personal access tokens** -kohdasta **Fine-grained tokens** (tai käytä tätä suoraa [linkkiä](https://github.com/settings/personal-access-tokens)).
+3. Valitse **Personal access tokens** ja klikkaa **Fine-grained tokens** (tai käytä tätä suoraa [linkkiä](https://github.com/settings/personal-access-tokens)).
 4. Klikkaa **Generate new token**.
-5. Anna "Token name" -kohtaan kuvaava nimi (esim. `GenAI-Java-Course-Token`).
-6. Aseta vanhenemispäivä (suositus: 7 päivää turvallisuuskäytäntöjen mukaisesti).
-7. Valitse "Resource owner" -kohdasta käyttäjätilisi.
-8. Valitse "Repository access" -kohdasta ne arkistot, joita haluat käyttää GitHub-mallien kanssa (tai "All repositories", jos tarpeen).
-9. Valitse "Repository permissions" -kohdasta **Models** ja aseta se arvoon **Read and write**.
+5. Anna "Token name" -kenttään kuvaava nimi (esim. `GenAI-Java-Course-Token`).
+6. Aseta vanhenemispäivä (suositus: 7 päivää turvallisuuden vuoksi).
+7. Valitse "Resource owner" -kohdassa käyttäjätilisi.
+8. Valitse "Repository access" -kohdassa haluamasi arkistot (tai "All repositories", jos tarpeen).
+9. Aseta "Repository permissions" -kohdassa **Models** kohtaan **Read and write**.
 10. Klikkaa **Generate token**.
 11. **Kopioi ja tallenna tunnuksesi nyt** – et näe sitä enää uudelleen!
 
-> **Turvallisuusvinkki**: Käytä vähimmäisvaadittua laajuutta ja lyhintä mahdollista vanhenemisaikaa käyttöoikeustunnuksille.
+> **Turvallisuusvinkki**: Käytä vähimmäisvaadittuja oikeuksia ja lyhintä mahdollista vanhenemisaikaa käyttöoikeustunnuksille.
 
-## Vaihe 3: Testaa asennuksesi GitHub-malliesimerkillä
+## Vaihe 3: Testaa asennuksesi GitHub-mallien esimerkillä
 
 Kun kehitysympäristösi on valmis, testataan GitHub-mallien integrointi esimerkkisovelluksellamme [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Avaa terminaali kehitysympäristössäsi.
-2. Siirry GitHub-malliesimerkkiin:
+2. Siirry GitHub-mallien esimerkkikansioon:
    ```bash
    cd 02-SetupDevEnvironment/examples/github-models
    ```
@@ -173,7 +173,7 @@ Response: Hello World!
 
 ### Esimerkkikoodin ymmärtäminen
 
-Katsotaan, mitä juuri suoritimme. Esimerkki `examples/github-models`-kansiossa käyttää OpenAI Java SDK:ta yhdistääkseen GitHub-malleihin:
+Katsotaanpa, mitä juuri suoritimme. Esimerkki `examples/github-models` -kansiossa käyttää OpenAI Java SDK:ta yhdistääkseen GitHub-malleihin:
 
 **Mitä tämä koodi tekee:**
 - **Yhdistää** GitHub-malleihin henkilökohtaisella käyttöoikeustunnuksellasi
@@ -212,12 +212,12 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Yhteenveto
 
-**Onnittelut!** Olet onnistuneesti:
+Hienoa! Nyt sinulla on kaikki valmiina:
 
-- **Luonut GitHubin henkilökohtaisen käyttöoikeustunnuksen**, jolla on oikeat käyttöoikeudet tekoälymallien käyttöön
-- **Asentanut Java-kehitysympäristön** käyttämällä Codespacesia, kehityskontteja tai paikallista asennusta
-- **Yhdistänyt GitHub-malleihin** OpenAI Java SDK:lla ilmaista tekoälykehitystä varten
-- **Testannut integraation** toimivalla esimerkkisovelluksella, joka kommunikoi tekoälymallien kanssa
+- Loit GitHubin henkilökohtaisen käyttöoikeustunnuksen oikeilla oikeuksilla tekoälymallien käyttöön
+- Käynnistit Java-kehitysympäristön (olipa se sitten Codespaces, kehityskontti tai paikallinen)
+- Yhdistit GitHub-malleihin OpenAI Java SDK:lla ilmaista tekoälykehitystä varten
+- Testasit, että kaikki toimii yksinkertaisella esimerkillä, joka keskustelee tekoälymallien kanssa
 
 ## Seuraavat vaiheet
 
@@ -230,7 +230,7 @@ Ongelmia? Tässä yleisiä ongelmia ja ratkaisuja:
 - **Tunnus ei toimi?** 
   - Varmista, että kopioit koko tunnuksen ilman ylimääräisiä välilyöntejä
   - Tarkista, että tunnus on asetettu oikein ympäristömuuttujaksi
-  - Varmista, että tunnuksellasi on oikeat käyttöoikeudet (Models: Read and write)
+  - Varmista, että tunnuksellasi on oikeat oikeudet (Models: Read and write)
 
 - **Mavenia ei löydy?** 
   - Jos käytät kehityskontteja/Codespacesia, Mavenin pitäisi olla esiasennettu
@@ -239,7 +239,7 @@ Ongelmia? Tässä yleisiä ongelmia ja ratkaisuja:
 
 - **Yhteysongelmia?** 
   - Tarkista internet-yhteytesi
-  - Varmista, että GitHub on käytettävissä verkostasi
+  - Varmista, että GitHub on saavutettavissa verkostasi
   - Varmista, ettei palomuuri estä GitHub-mallien päätepistettä
 
 - **Kehityskontti ei käynnisty?** 
@@ -253,4 +253,4 @@ Ongelmia? Tässä yleisiä ongelmia ja ratkaisuja:
 > **Tarvitsetko apua?**: Onko ongelmia edelleen? Avaa ongelma arkistossa, niin autamme sinua.
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virhetulkinnoista.

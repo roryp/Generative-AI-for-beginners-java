@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T13:11:56+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T09:23:25+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "sv"
 }
@@ -58,7 +58,7 @@ Vi rekommenderar att använda [**GitHub-modeller**](https://github.com/marketpla
 
 <a name="quick-start-cloud"></a>
 
-Vi har skapat en förkonfigurerad utvecklingscontainer för att minimera installationstiden och säkerställa att du har alla nödvändiga verktyg för denna Generativ AI för Java-kurs. Välj din föredragna utvecklingsmetod:
+Vi har skapat en förkonfigurerad utvecklingscontainer för att minimera installationstiden och säkerställa att du har alla nödvändiga verktyg för denna kurs om Generativ AI för Java. Välj din föredragna utvecklingsmetod:
 
 ### Alternativ för miljöinställning:
 
@@ -125,7 +125,7 @@ Steg:
 ## Steg 2: Skapa GitHub Personal Access Token
 
 1. Navigera till [GitHub Settings](https://github.com/settings/profile) och välj **Settings** från din profilmeny.
-2. I vänstra sidofältet, klicka på **Developer settings** (vanligtvis längst ner).
+2. I den vänstra sidomenyn, klicka på **Developer settings** (vanligtvis längst ner).
 3. Under **Personal access tokens**, klicka på **Fine-grained tokens** (eller följ denna direkta [länk](https://github.com/settings/personal-access-tokens)).
 4. Klicka på **Generate new token**.
 5. Under "Token name", ge ett beskrivande namn (t.ex. `GenAI-Java-Course-Token`).
@@ -136,9 +136,9 @@ Steg:
 10. Klicka på **Generate token**.
 11. **Kopiera och spara ditt token nu** – du kommer inte att se det igen!
 
-> **Säkerhetstips**: Använd den minsta nödvändiga omfattningen och kortaste praktiska utgångstiden för dina åtkomsttokens.
+> **Säkerhetstips**: Använd den minsta nödvändiga omfattningen och kortaste praktiska utgångstiden för dina åtkomsttoken.
 
-## Steg 3: Testa din installation med GitHub-modeller
+## Steg 3: Testa din installation med GitHub-modeller-exemplet
 
 När din utvecklingsmiljö är redo, låt oss testa GitHub-modeller-integrationen med vårt exempelprogram i [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
@@ -181,7 +181,7 @@ Låt oss först förstå vad vi just körde. Exemplet under `examples/github-mod
 - **Tar emot** och visar AI:s svar
 - **Validerar** att din installation fungerar korrekt
 
-**Viktig beroende** (i `pom.xml`):
+**Viktigt beroende** (i `pom.xml`):
 ```xml
 <dependency>
     <groupId>com.openai</groupId>
@@ -212,12 +212,12 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Sammanfattning
 
-**Grattis!** Du har framgångsrikt:
+Bra jobbat! Du har nu allt inställt:
 
-- **Skapat ett GitHub Personal Access Token** med rätt behörigheter för AI-modellåtkomst
-- **Ställt in din Java-utvecklingsmiljö** med Codespaces, utvecklingscontainers eller lokal installation
-- **Anslutit till GitHub-modeller** med OpenAI Java SDK för gratis AI-utvecklingsåtkomst
-- **Testat integrationen** med ett fungerande exempelprogram som kommunicerar med AI-modeller
+- Skapat ett GitHub Personal Access Token med rätt behörigheter för AI-modellåtkomst
+- Fått din Java-utvecklingsmiljö att fungera (oavsett om det är Codespaces, utvecklingscontainers eller lokalt)
+- Anslutit till GitHub-modeller med OpenAI Java SDK för gratis AI-utveckling
+- Testat att allt fungerar med ett enkelt exempel som kommunicerar med AI-modeller
 
 ## Nästa steg
 
@@ -239,8 +239,8 @@ Har du problem? Här är vanliga problem och lösningar:
 
 - **Anslutningsproblem?** 
   - Kontrollera din internetanslutning
-  - Verifiera att GitHub är tillgängligt från ditt nätverk
-  - Säkerställ att du inte är bakom en brandvägg som blockerar GitHub-modeller-slutpunkten
+  - Verifiera att GitHub är åtkomligt från ditt nätverk
+  - Säkerställ att du inte är bakom en brandvägg som blockerar GitHub-modeller-endpointen
 
 - **Utvecklingscontainer startar inte?** 
   - Kontrollera att Docker Desktop körs (för lokal utveckling)
@@ -250,7 +250,7 @@ Har du problem? Här är vanliga problem och lösningar:
   - Kontrollera att du är i rätt katalog: `02-SetupDevEnvironment/examples/github-models`
   - Testa att rensa och bygga om: `mvn clean compile`
 
-> **Behöver hjälp?**: Har du fortfarande problem? Öppna ett ärende i repositoryt så hjälper vi dig.
+> **Behöver hjälp?**: Har du fortfarande problem? Öppna ett ärende i repositoryn så hjälper vi dig.
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

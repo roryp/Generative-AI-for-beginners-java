@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T13:20:23+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T09:51:24+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "tl"
 }
@@ -13,15 +13,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **Interesado sa Azure OpenAI?**, tingnan ang aming [Azure OpenAI Setup Guide](getting-started-azure-openai.md) para sa mga hakbang sa paglikha ng bagong Azure OpenAI resource.
 
-## Ano ang Matututuhan Mo
+## Ano ang Iyong Matututuhan
 
-- Paano mag-set up ng Java development environment para sa AI applications
-- Pumili at i-configure ang iyong gustong development environment (cloud-first gamit ang Codespaces, lokal na dev container, o full local setup)
+- Paano mag-set up ng Java development environment para sa mga AI application
+- Pumili at i-configure ang iyong gustong development environment (cloud-first gamit ang Codespaces, lokal na dev container, o buong lokal na setup)
 - Subukan ang iyong setup sa pamamagitan ng pagkonekta sa GitHub Models
 
 ## Talaan ng Nilalaman
 
-- [Ano ang Matututuhan Mo](../../../02-SetupDevEnvironment)
+- [Ano ang Iyong Matututuhan](../../../02-SetupDevEnvironment)
 - [Panimula](../../../02-SetupDevEnvironment)
 - [Hakbang 1: I-set Up ang Iyong Development Environment](../../../02-SetupDevEnvironment)
   - [Opsyon A: GitHub Codespaces (Inirerekomenda)](../../../02-SetupDevEnvironment)
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Panimula
 
-Ang kabanatang ito ay gagabay sa iyo sa pagsasaayos ng development environment. Gagamitin natin ang **GitHub Models** bilang pangunahing halimbawa dahil ito ay libre, madaling i-set up gamit lamang ang isang GitHub account, hindi nangangailangan ng credit card, at nagbibigay ng access sa maraming modelo para sa eksperimento.
+Ang kabanatang ito ay gagabay sa iyo sa pagsasaayos ng development environment. Gagamitin natin ang **GitHub Models** bilang pangunahing halimbawa dahil ito ay libre, madaling i-set up gamit ang isang GitHub account, hindi nangangailangan ng credit card, at nagbibigay ng access sa maraming modelo para sa eksperimento.
 
 **Walang kinakailangang lokal na setup!** Maaari kang magsimulang mag-code kaagad gamit ang GitHub Codespaces, na nagbibigay ng buong development environment sa iyong browser.
 
@@ -43,8 +43,8 @@ Ang kabanatang ito ay gagabay sa iyo sa pagsasaayos ng development environment. 
 
 Inirerekomenda namin ang paggamit ng [**GitHub Models**](https://github.com/marketplace?type=models) para sa kursong ito dahil ito ay:
 - **Libre** upang magsimula
-- **Madaling** i-set up gamit lamang ang isang GitHub account
-- **Walang kinakailangang credit card**
+- **Madaling** i-set up gamit ang isang GitHub account
+- **Hindi kailangan ng credit card**
 - **Maraming modelo** ang magagamit para sa eksperimento
 
 > **Tandaan**: Ang mga GitHub Models na ginamit sa pagsasanay na ito ay may mga libreng limitasyon:
@@ -58,7 +58,7 @@ Inirerekomenda namin ang paggamit ng [**GitHub Models**](https://github.com/mark
 
 <a name="quick-start-cloud"></a>
 
-Naghanda kami ng preconfigured development container upang mabawasan ang oras ng setup at matiyak na mayroon kang lahat ng kinakailangang tools para sa kursong Generative AI para sa Java. Piliin ang iyong gustong paraan ng development:
+Naghanda kami ng preconfigured development container upang mabawasan ang oras ng setup at matiyak na mayroon kang lahat ng kinakailangang tool para sa kursong Generative AI para sa Java. Piliin ang iyong gustong paraan ng development:
 
 ### Mga Opsyon sa Environment Setup:
 
@@ -66,10 +66,10 @@ Naghanda kami ng preconfigured development container upang mabawasan ang oras ng
 
 **Magsimula ng pag-code sa loob ng 2 minuto - walang kinakailangang lokal na setup!**
 
-1. I-fork ang repositoryong ito sa iyong GitHub account  
+1. I-fork ang repositoryong ito sa iyong GitHub account
    > **Tandaan**: Kung nais mong i-edit ang pangunahing config, tingnan ang [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
-2. I-click ang **Code** → **Codespaces** tab → **...** → **New with options...**
-3. Gamitin ang mga default – pipiliin nito ang **Dev container configuration**: **Generative AI Java Development Environment** na custom devcontainer na ginawa para sa kursong ito
+2. I-click ang **Code** → tab na **Codespaces** → **...** → **New with options...**
+3. Gamitin ang mga default – pipiliin nito ang **Dev container configuration**: **Generative AI Java Development Environment** custom devcontainer na ginawa para sa kursong ito
 4. I-click ang **Create codespace**
 5. Maghintay ng ~2 minuto para maging handa ang environment
 6. Magpatuloy sa [Hakbang 2: Gumawa ng GitHub Token](../../../02-SetupDevEnvironment)
@@ -83,15 +83,15 @@ Naghanda kami ng preconfigured development container upang mabawasan ang oras ng
 > **Mga Benepisyo ng Codespaces**:
 > - Walang kinakailangang lokal na pag-install
 > - Gumagana sa anumang device na may browser
-> - Pre-configured na may lahat ng tools at dependencies
-> - Libreng 60 oras kada buwan para sa personal na account
-> - Konsistent na environment para sa lahat ng mag-aaral
+> - Pre-configured na may lahat ng tool at dependencies
+> - Libreng 60 oras kada buwan para sa mga personal na account
+> - Konsistenteng environment para sa lahat ng mag-aaral
 
 #### Opsyon B: Lokal na Dev Container
 
 **Para sa mga developer na mas gusto ang lokal na development gamit ang Docker**
 
-1. I-fork at i-clone ang repositoryong ito sa iyong lokal na makina  
+1. I-fork at i-clone ang repositoryong ito sa iyong lokal na makina
    > **Tandaan**: Kung nais mong i-edit ang pangunahing config, tingnan ang [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. I-install ang [Docker Desktop](https://www.docker.com/products/docker-desktop/) at [VS Code](https://code.visualstudio.com/)
 3. I-install ang [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) sa VS Code
@@ -106,7 +106,7 @@ Naghanda kami ng preconfigured development container upang mabawasan ang oras ng
 
 #### Opsyon C: Gamitin ang Iyong Kasalukuyang Lokal na Pag-install
 
-**Para sa mga developer na may kasalukuyang Java environments**
+**Para sa mga developer na may kasalukuyang Java environment**
 
 Mga Kinakailangan:
 - [Java 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) 
@@ -140,10 +140,10 @@ Mga Hakbang:
 
 ## Hakbang 3: Subukan ang Iyong Setup gamit ang GitHub Models Example
 
-Kapag handa na ang iyong development environment, subukan natin ang GitHub Models integration gamit ang aming example application sa [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
+Kapag handa na ang iyong development environment, subukan natin ang integrasyon ng GitHub Models gamit ang aming halimbawa sa [`02-SetupDevEnvironment/examples/github-models`](../../../02-SetupDevEnvironment/examples/github-models).
 
 1. Buksan ang terminal sa iyong development environment.
-2. Pumunta sa GitHub Models example:
+2. Pumunta sa halimbawa ng GitHub Models:
    ```bash
    cd 02-SetupDevEnvironment/examples/github-models
    ```
@@ -171,15 +171,15 @@ Sending request to GitHub Models...
 Response: Hello World!
 ```
 
-### Pag-unawa sa Example Code
+### Pag-unawa sa Halimbawang Code
 
-Unawain muna natin ang ating pinatakbo. Ang halimbawa sa `examples/github-models` ay gumagamit ng OpenAI Java SDK upang kumonekta sa GitHub Models:
+Unawain muna natin ang ating pinatakbo. Ang halimbawa sa ilalim ng `examples/github-models` ay gumagamit ng OpenAI Java SDK upang kumonekta sa GitHub Models:
 
 **Ano ang ginagawa ng code na ito:**
 - **Kumokonekta** sa GitHub Models gamit ang iyong personal access token
 - **Nagpapadala** ng simpleng mensaheng "Say Hello World!" sa AI model
 - **Tumatanggap** at nagpapakita ng tugon mula sa AI
-- **Sinusuri** kung gumagana nang tama ang iyong setup
+- **Nagsusuri** kung gumagana nang tama ang iyong setup
 
 **Pangunahing Dependency** (sa `pom.xml`):
 ```xml
@@ -212,12 +212,12 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Buod
 
-**Binabati kita!** Matagumpay mong:
+Mahusay! Ngayon ay na-set up mo na ang lahat:
 
-- **Nagawa ang GitHub Personal Access Token** na may tamang pahintulot para sa AI model access
-- **Na-set up ang iyong Java development environment** gamit ang Codespaces, dev containers, o lokal na pag-install
-- **Nakakonekta sa GitHub Models** gamit ang OpenAI Java SDK para sa libreng AI development access
-- **Nasubukan ang integration** gamit ang gumaganang example application na nakikipag-usap sa AI models
+- Gumawa ng GitHub Personal Access Token na may tamang pahintulot para sa AI model access
+- Naipatakbo ang iyong Java development environment (Codespaces, dev containers, o lokal)
+- Nakakonekta sa GitHub Models gamit ang OpenAI Java SDK para sa libreng AI development
+- Nasubukan na gumagana ang lahat gamit ang simpleng halimbawa na nakikipag-usap sa AI models
 
 ## Mga Susunod na Hakbang
 
@@ -230,7 +230,7 @@ May mga isyu? Narito ang mga karaniwang problema at solusyon:
 - **Hindi gumagana ang token?** 
   - Siguraduhing kinopya mo ang buong token nang walang dagdag na espasyo
   - Tiyaking tama ang pagkakatalaga ng token bilang environment variable
-  - Suriin kung tama ang mga pahintulot ng iyong token (Models: Read and write)
+  - Suriin kung tama ang pahintulot ng iyong token (Models: Read and write)
 
 - **Hindi mahanap ang Maven?** 
   - Kung gumagamit ng dev containers/Codespaces, dapat naka-pre-install ang Maven
@@ -238,19 +238,19 @@ May mga isyu? Narito ang mga karaniwang problema at solusyon:
   - Subukang patakbuhin ang `mvn --version` upang suriin ang pag-install
 
 - **Mga isyu sa koneksyon?** 
-  - Suriin ang iyong internet connection
-  - Siguraduhing naa-access ang GitHub mula sa iyong network
-  - Tiyaking hindi ka nasa likod ng firewall na humaharang sa GitHub Models endpoint
+  - Suriin ang iyong koneksyon sa internet
+  - Tiyaking naa-access ang GitHub mula sa iyong network
+  - Siguraduhing hindi ka nasa likod ng firewall na humaharang sa GitHub Models endpoint
 
 - **Hindi nagsisimula ang dev container?** 
   - Siguraduhing tumatakbo ang Docker Desktop (para sa lokal na development)
   - Subukang i-rebuild ang container: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
-- **Mga error sa compilation ng application?**
+- **Mga error sa pag-compile ng application?**
   - Siguraduhing nasa tamang direktoryo ka: `02-SetupDevEnvironment/examples/github-models`
   - Subukang linisin at i-rebuild: `mvn clean compile`
 
 > **Kailangan ng tulong?**: May problema pa rin? Magbukas ng isyu sa repositoryo at tutulungan ka namin.
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang orihinal na wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.

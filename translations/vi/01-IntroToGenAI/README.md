@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "006866db93a268a8769bb55f2e324291",
-  "translation_date": "2025-07-28T10:59:45+00:00",
+  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
+  "translation_date": "2025-07-29T09:43:00+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "vi"
 }
@@ -40,17 +40,17 @@ Khi bạn phát triển các ứng dụng AI bằng Java, bạn sẽ làm việc
 
 - **Tạo văn bản**: Soạn thảo văn bản giống con người cho chatbot, nội dung, và hoàn thành văn bản.
 - **Tạo và phân tích hình ảnh**: Tạo ra hình ảnh thực tế, cải thiện ảnh, và phát hiện đối tượng.
-- **Tạo mã**: Viết đoạn mã hoặc script.
+- **Tạo mã**: Viết các đoạn mã hoặc script.
 
 Có những loại mô hình cụ thể được tối ưu hóa cho các nhiệm vụ khác nhau. Ví dụ, cả **Mô hình Ngôn ngữ Nhỏ (SLMs)** và **Mô hình Ngôn ngữ Lớn (LLMs)** đều có thể xử lý việc tạo văn bản, với LLMs thường mang lại hiệu suất tốt hơn cho các nhiệm vụ phức tạp. Đối với các nhiệm vụ liên quan đến hình ảnh, bạn sẽ sử dụng các mô hình thị giác chuyên biệt hoặc mô hình đa phương thức.
 
 ![Hình: Các loại mô hình Generative AI và các trường hợp sử dụng.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.vi.png)
 
-Tất nhiên, các phản hồi từ những mô hình này không phải lúc nào cũng hoàn hảo. Bạn có thể đã nghe về việc các mô hình "ảo tưởng" hoặc tạo ra thông tin sai lệch một cách tự tin. Nhưng bạn có thể hướng dẫn mô hình tạo ra các phản hồi tốt hơn bằng cách cung cấp cho chúng các hướng dẫn và ngữ cảnh rõ ràng. Đây là lúc **kỹ thuật tạo prompt** phát huy tác dụng.
+Tất nhiên, các phản hồi từ các mô hình này không phải lúc nào cũng hoàn hảo. Bạn có thể đã nghe về việc các mô hình "ảo tưởng" hoặc tạo ra thông tin sai lệch một cách tự tin. Nhưng bạn có thể hướng dẫn mô hình tạo ra các phản hồi tốt hơn bằng cách cung cấp cho chúng các hướng dẫn và ngữ cảnh rõ ràng. Đây là lúc **kỹ thuật tạo prompt** phát huy tác dụng.
 
 #### Ôn lại kỹ thuật tạo prompt
 
-Kỹ thuật tạo prompt là thực hành thiết kế các đầu vào hiệu quả để hướng dẫn các mô hình AI tạo ra các kết quả mong muốn. Nó bao gồm:
+Kỹ thuật tạo prompt là thực hành thiết kế các đầu vào hiệu quả để hướng dẫn các mô hình AI tạo ra các đầu ra mong muốn. Nó bao gồm:
 
 - **Rõ ràng**: Làm cho các hướng dẫn rõ ràng và không mơ hồ.
 - **Ngữ cảnh**: Cung cấp thông tin nền cần thiết.
@@ -69,27 +69,27 @@ Khi phát triển ứng dụng, bạn sẽ làm việc với các loại prompt 
 
 Khi làm việc với các mô hình Generative AI, bạn sẽ gặp các thuật ngữ như **tokens**, **embeddings**, **agents**, và **Giao thức Ngữ cảnh Mô hình (MCP)**. Dưới đây là tổng quan chi tiết về các khái niệm này:
 
-- **Tokens**: Tokens là đơn vị nhỏ nhất của văn bản trong một mô hình. Chúng có thể là từ, ký tự, hoặc các phần từ. Tokens được sử dụng để đại diện cho dữ liệu văn bản ở định dạng mà mô hình có thể hiểu. Ví dụ, câu "The quick brown fox jumped over the lazy dog" có thể được phân tách thành ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] hoặc ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"] tùy thuộc vào chiến lược phân tách.
+- **Tokens**: Tokens là đơn vị nhỏ nhất của văn bản trong một mô hình. Chúng có thể là từ, ký tự, hoặc các phần từ. Tokens được sử dụng để đại diện cho dữ liệu văn bản ở định dạng mà mô hình có thể hiểu. Ví dụ, câu "The quick brown fox jumped over the lazy dog" có thể được token hóa thành ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] hoặc ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"] tùy thuộc vào chiến lược token hóa.
 
-![Hình: Ví dụ về tokens trong Generative AI, phân tách từ thành các tokens](../../../01-IntroToGenAI/images/tokens.webp)
+![Hình: Ví dụ về tokens trong Generative AI, phân chia từ thành các tokens](../../../01-IntroToGenAI/images/tokens.webp)
 
-Phân tách là quá trình chia nhỏ văn bản thành các đơn vị nhỏ hơn này. Điều này rất quan trọng vì các mô hình hoạt động trên tokens thay vì văn bản thô. Số lượng tokens trong một prompt ảnh hưởng đến độ dài và chất lượng phản hồi của mô hình, vì các mô hình có giới hạn tokens cho cửa sổ ngữ cảnh của chúng (ví dụ: 128K tokens cho tổng ngữ cảnh của GPT-4o, bao gồm cả đầu vào và đầu ra).
+Tokenization là quá trình phân chia văn bản thành các đơn vị nhỏ hơn này. Điều này rất quan trọng vì các mô hình hoạt động trên tokens thay vì văn bản thô. Số lượng tokens trong một prompt ảnh hưởng đến độ dài và chất lượng phản hồi của mô hình, vì các mô hình có giới hạn tokens cho cửa sổ ngữ cảnh của chúng (ví dụ: 128K tokens cho tổng ngữ cảnh của GPT-4o, bao gồm cả đầu vào và đầu ra).
 
-  Trong Java, bạn có thể sử dụng các thư viện như OpenAI SDK để xử lý phân tách tự động khi gửi yêu cầu đến các mô hình AI.
+  Trong Java, bạn có thể sử dụng các thư viện như OpenAI SDK để xử lý tokenization tự động khi gửi yêu cầu đến các mô hình AI.
 
-- **Embeddings**: Embeddings là các biểu diễn vector của tokens, nắm bắt ý nghĩa ngữ nghĩa. Chúng là các biểu diễn số (thường là các mảng số thập phân) cho phép các mô hình hiểu mối quan hệ giữa các từ và tạo ra các phản hồi phù hợp với ngữ cảnh. Các từ tương tự có embeddings tương tự, giúp mô hình hiểu các khái niệm như từ đồng nghĩa và mối quan hệ ngữ nghĩa.
+- **Embeddings**: Embeddings là các biểu diễn vector của tokens, nắm bắt ý nghĩa ngữ nghĩa. Chúng là các biểu diễn số (thường là các mảng số thập phân) cho phép các mô hình hiểu mối quan hệ giữa các từ và tạo ra các phản hồi phù hợp với ngữ cảnh. Các từ tương tự có embeddings tương tự, cho phép mô hình hiểu các khái niệm như từ đồng nghĩa và mối quan hệ ngữ nghĩa.
 
 ![Hình: Embeddings](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.vi.png)
 
-  Trong Java, bạn có thể tạo embeddings bằng cách sử dụng OpenAI SDK hoặc các thư viện khác hỗ trợ tạo embeddings. Các embeddings này rất quan trọng cho các nhiệm vụ như tìm kiếm ngữ nghĩa, nơi bạn muốn tìm nội dung tương tự dựa trên ý nghĩa thay vì khớp văn bản chính xác.
+  Trong Java, bạn có thể tạo embeddings bằng cách sử dụng OpenAI SDK hoặc các thư viện khác hỗ trợ tạo embeddings. Các embeddings này rất cần thiết cho các nhiệm vụ như tìm kiếm ngữ nghĩa, nơi bạn muốn tìm nội dung tương tự dựa trên ý nghĩa thay vì khớp văn bản chính xác.
 
 - **Cơ sở dữ liệu vector**: Cơ sở dữ liệu vector là các hệ thống lưu trữ chuyên biệt được tối ưu hóa cho embeddings. Chúng cho phép tìm kiếm tương tự hiệu quả và rất quan trọng cho các mẫu RAG (Retrieval-Augmented Generation), nơi bạn cần tìm thông tin liên quan từ các tập dữ liệu lớn dựa trên sự tương đồng ngữ nghĩa thay vì khớp chính xác.
 
-![Hình: Kiến trúc cơ sở dữ liệu vector hiển thị cách embeddings được lưu trữ và truy xuất để tìm kiếm tương tự.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.vi.png)
+![Hình: Kiến trúc cơ sở dữ liệu vector, hiển thị cách embeddings được lưu trữ và truy xuất để tìm kiếm tương tự.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.vi.png)
 
 > **Lưu ý**: Trong khóa học này, chúng ta sẽ không đề cập đến cơ sở dữ liệu vector nhưng nghĩ rằng chúng đáng được nhắc đến vì chúng thường được sử dụng trong các ứng dụng thực tế.
 
-- **Agents & MCP**: Các thành phần AI tự động tương tác với các mô hình, công cụ, và hệ thống bên ngoài. Giao thức Ngữ cảnh Mô hình (MCP) cung cấp một cách tiêu chuẩn hóa để các agents truy cập an toàn vào các nguồn dữ liệu và công cụ bên ngoài. Tìm hiểu thêm trong khóa học [MCP cho Người Mới Bắt Đầu](https://github.com/microsoft/mcp-for-beginners).
+- **Agents & MCP**: Các thành phần AI tự động tương tác với các mô hình, công cụ, và hệ thống bên ngoài. Giao thức Ngữ cảnh Mô hình (MCP) cung cấp một cách tiêu chuẩn hóa để các agents truy cập dữ liệu nguồn bên ngoài và công cụ một cách an toàn. Tìm hiểu thêm trong khóa học [MCP cho Người Mới Bắt Đầu](https://github.com/microsoft/mcp-for-beginners).
 
 Trong các ứng dụng AI Java, bạn sẽ sử dụng tokens để xử lý văn bản, embeddings để tìm kiếm ngữ nghĩa và RAG, cơ sở dữ liệu vector để truy xuất dữ liệu, và agents với MCP để xây dựng các hệ thống thông minh sử dụng công cụ.
 
@@ -134,21 +134,21 @@ Trong Chương 4, bạn sẽ xây dựng một dịch vụ máy tính MCP đơn 
 
 #### Azure OpenAI Java SDK
 
-Thư viện khách Azure OpenAI cho Java là một phiên bản thích nghi của các API REST của OpenAI, cung cấp một giao diện theo phong cách Java và tích hợp với phần còn lại của hệ sinh thái SDK Azure. Trong Chương 3, bạn sẽ xây dựng các ứng dụng sử dụng Azure OpenAI SDK, bao gồm các ứng dụng chat, gọi hàm, và các mẫu RAG (Retrieval-Augmented Generation).
+Thư viện khách hàng Azure OpenAI cho Java là một sự thích nghi của các API REST của OpenAI, cung cấp một giao diện theo phong cách Java và tích hợp với phần còn lại của hệ sinh thái Azure SDK. Trong Chương 3, bạn sẽ xây dựng các ứng dụng sử dụng Azure OpenAI SDK, bao gồm các ứng dụng chat, gọi hàm, và các mẫu RAG (Retrieval-Augmented Generation).
 
 > Lưu ý: Azure OpenAI SDK hiện có ít tính năng hơn so với OpenAI Java SDK, vì vậy cho các dự án tương lai, hãy cân nhắc sử dụng OpenAI Java SDK.
 
 ## Tóm tắt
 
-**Chúc mừng bạn!** Bạn đã:
+Vậy là chúng ta đã hoàn thành phần nền tảng! Bạn đã hiểu:
 
-- **Học về các kiến thức cơ bản của Generative AI** bao gồm LLMs, kỹ thuật tạo prompt, tokens, embeddings, và cơ sở dữ liệu vector
-- **So sánh các công cụ phát triển AI trong Java** bao gồm Azure OpenAI SDK, Spring AI, và OpenAI Java SDK
-- **Khám phá Giao thức Ngữ cảnh Mô hình** và vai trò của nó trong giao tiếp giữa các tác nhân AI
+- Các khái niệm cốt lõi đằng sau Generative AI - từ LLMs và kỹ thuật tạo prompt đến tokens, embeddings, và cơ sở dữ liệu vector
+- Các tùy chọn công cụ của bạn cho phát triển AI trong Java: Azure OpenAI SDK, Spring AI, và OpenAI Java SDK
+- Giao thức Ngữ cảnh Mô hình là gì và cách nó cho phép các tác nhân AI làm việc với các công cụ bên ngoài
 
 ## Bước tiếp theo
 
 [Chương 2: Thiết lập Môi trường Phát triển](../02-SetupDevEnvironment/README.md)
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, chúng tôi khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

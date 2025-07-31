@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "006866db93a268a8769bb55f2e324291",
-  "translation_date": "2025-07-28T11:01:04+00:00",
+  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
+  "translation_date": "2025-07-29T09:46:18+00:00",
   "source_file": "01-IntroToGenAI/README.md",
   "language_code": "id"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **Dasar-dasar Generative AI** termasuk LLM, rekayasa prompt, token, embedding, dan basis data vektor
 - **Membandingkan alat pengembangan AI Java** termasuk Azure OpenAI SDK, Spring AI, dan OpenAI Java SDK
-- **Menemukan Model Context Protocol** dan perannya dalam komunikasi agen AI
+- **Mengenal Model Context Protocol** dan perannya dalam komunikasi agen AI
 
 ## Daftar Isi
 
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pengantar
 
-Selamat datang di bab pertama Generative AI untuk Pemula - Edisi Java! Pelajaran dasar ini memperkenalkan Anda pada konsep inti generative AI dan cara menggunakannya dengan Java. Anda akan mempelajari elemen-elemen penting dalam aplikasi AI, termasuk Large Language Models (LLMs), token, embedding, dan agen AI. Kami juga akan menjelajahi alat utama Java yang akan Anda gunakan sepanjang kursus ini.
+Selamat datang di bab pertama Generative AI untuk Pemula - Edisi Java! Pelajaran dasar ini memperkenalkan Anda pada konsep inti generative AI dan cara menggunakannya dengan Java. Anda akan mempelajari elemen-elemen penting dalam aplikasi AI, termasuk Large Language Models (LLMs), token, embedding, dan agen AI. Kami juga akan menjelajahi alat-alat utama Java yang akan Anda gunakan sepanjang kursus ini.
 
 ### Penyegaran singkat tentang konsep Generative AI
 
@@ -42,7 +42,7 @@ Saat Anda mengembangkan aplikasi AI Java, Anda akan bekerja dengan **model gener
 - **Pembuatan dan Analisis Gambar**: Menghasilkan gambar realistis, meningkatkan foto, dan mendeteksi objek.
 - **Pembuatan Kode**: Menulis potongan kode atau skrip.
 
-Ada jenis model tertentu yang dioptimalkan untuk tugas yang berbeda. Misalnya, baik **Small Language Models (SLMs)** maupun **Large Language Models (LLMs)** dapat menangani pembuatan teks, dengan LLM biasanya memberikan kinerja yang lebih baik untuk tugas yang kompleks. Untuk tugas terkait gambar, Anda akan menggunakan model visi khusus atau model multi-modal.
+Ada jenis model tertentu yang dioptimalkan untuk tugas-tugas berbeda. Misalnya, baik **Small Language Models (SLMs)** maupun **Large Language Models (LLMs)** dapat menangani pembuatan teks, dengan LLM biasanya memberikan kinerja yang lebih baik untuk tugas-tugas kompleks. Untuk tugas terkait gambar, Anda akan menggunakan model visi khusus atau model multi-modal.
 
 ![Gambar: Jenis model Generative AI dan kasus penggunaannya.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.id.png)
 
@@ -73,7 +73,7 @@ Saat bekerja dengan model generative AI, Anda akan menemui istilah seperti **tok
 
 ![Gambar: Contoh token Generative AI yang memecah kata menjadi token](../../../01-IntroToGenAI/images/tokens.webp)
 
-Tokenisasi adalah proses memecah teks menjadi unit-unit kecil ini. Hal ini penting karena model beroperasi pada token, bukan teks mentah. Jumlah token dalam prompt memengaruhi panjang dan kualitas respons model, karena model memiliki batas token untuk jendela konteksnya (misalnya, 128K token untuk total konteks GPT-4o, termasuk input dan output).
+Tokenisasi adalah proses memecah teks menjadi unit-unit kecil ini. Ini penting karena model beroperasi pada token daripada teks mentah. Jumlah token dalam prompt memengaruhi panjang dan kualitas respons model, karena model memiliki batas token untuk jendela konteksnya (misalnya, 128K token untuk total konteks GPT-4o, termasuk input dan output).
 
   Dalam Java, Anda dapat menggunakan pustaka seperti OpenAI SDK untuk menangani tokenisasi secara otomatis saat mengirim permintaan ke model AI.
 
@@ -81,15 +81,15 @@ Tokenisasi adalah proses memecah teks menjadi unit-unit kecil ini. Hal ini penti
 
 ![Gambar: Embedding](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.id.png)
 
-  Dalam Java, Anda dapat menghasilkan embedding menggunakan OpenAI SDK atau pustaka lain yang mendukung pembuatan embedding. Embedding ini penting untuk tugas seperti pencarian semantik, di mana Anda ingin menemukan konten serupa berdasarkan makna daripada kecocokan teks yang tepat.
+  Dalam Java, Anda dapat menghasilkan embedding menggunakan OpenAI SDK atau pustaka lain yang mendukung pembuatan embedding. Embedding ini penting untuk tugas seperti pencarian semantik, di mana Anda ingin menemukan konten serupa berdasarkan makna daripada kecocokan teks yang persis.
 
-- **Basis data vektor**: Basis data vektor adalah sistem penyimpanan khusus yang dioptimalkan untuk embedding. Mereka memungkinkan pencarian kesamaan yang efisien dan sangat penting untuk pola Retrieval-Augmented Generation (RAG) di mana Anda perlu menemukan informasi yang relevan dari kumpulan data besar berdasarkan kesamaan semantik daripada kecocokan yang tepat.
+- **Basis data vektor**: Basis data vektor adalah sistem penyimpanan khusus yang dioptimalkan untuk embedding. Mereka memungkinkan pencarian kesamaan yang efisien dan sangat penting untuk pola Retrieval-Augmented Generation (RAG) di mana Anda perlu menemukan informasi yang relevan dari kumpulan data besar berdasarkan kesamaan semantik daripada kecocokan yang persis.
 
 ![Gambar: Arsitektur basis data vektor yang menunjukkan bagaimana embedding disimpan dan diambil untuk pencarian kesamaan.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.id.png)
 
 > **Catatan**: Dalam kursus ini, kami tidak akan membahas basis data vektor tetapi menganggapnya layak disebutkan karena sering digunakan dalam aplikasi dunia nyata.
 
-- **Agen & MCP**: Komponen AI yang secara otonom berinteraksi dengan model, alat, dan sistem eksternal. Model Context Protocol (MCP) menyediakan cara standar bagi agen untuk mengakses sumber data eksternal dan alat dengan aman. Pelajari lebih lanjut di kursus [MCP untuk Pemula](https://github.com/microsoft/mcp-for-beginners).
+- **Agen & MCP**: Komponen AI yang secara otonom berinteraksi dengan model, alat, dan sistem eksternal. Model Context Protocol (MCP) menyediakan cara standar bagi agen untuk mengakses sumber data eksternal dan alat secara aman. Pelajari lebih lanjut di kursus [MCP untuk Pemula](https://github.com/microsoft/mcp-for-beginners).
 
 Dalam aplikasi AI Java, Anda akan menggunakan token untuk pemrosesan teks, embedding untuk pencarian semantik dan RAG, basis data vektor untuk pengambilan data, dan agen dengan MCP untuk membangun sistem cerdas yang menggunakan alat.
 
@@ -136,19 +136,19 @@ Di Bab 4, Anda akan membangun layanan kalkulator MCP sederhana yang menunjukkan 
 
 Pustaka klien Azure OpenAI untuk Java adalah adaptasi dari API REST OpenAI yang menyediakan antarmuka idiomatik dan integrasi dengan ekosistem SDK Azure lainnya. Di Bab 3, Anda akan membangun aplikasi menggunakan Azure OpenAI SDK, termasuk aplikasi obrolan, pemanggilan fungsi, dan pola RAG (Retrieval-Augmented Generation).
 
-> Catatan: Azure OpenAI SDK tertinggal dibandingkan OpenAI Java SDK dalam hal fitur, jadi untuk proyek masa depan, pertimbangkan menggunakan OpenAI Java SDK.
+> Catatan: Azure OpenAI SDK tertinggal dibandingkan OpenAI Java SDK dalam hal fitur, jadi untuk proyek mendatang, pertimbangkan menggunakan OpenAI Java SDK.
 
 ## Ringkasan
 
-**Selamat!** Anda telah berhasil:
+Itu merangkum dasar-dasarnya! Anda sekarang memahami:
 
-- **Mempelajari dasar-dasar Generative AI** termasuk LLM, rekayasa prompt, token, embedding, dan basis data vektor
-- **Membandingkan alat pengembangan AI Java** termasuk Azure OpenAI SDK, Spring AI, dan OpenAI Java SDK
-- **Menemukan Model Context Protocol** dan perannya dalam komunikasi agen AI
+- Konsep inti di balik generative AI - dari LLM dan rekayasa prompt hingga token, embedding, dan basis data vektor
+- Pilihan alat Anda untuk pengembangan AI Java: Azure OpenAI SDK, Spring AI, dan OpenAI Java SDK
+- Apa itu Model Context Protocol dan bagaimana ia memungkinkan agen AI bekerja dengan alat eksternal
 
 ## Langkah Selanjutnya
 
 [Bab 2: Menyiapkan Lingkungan Pengembangan](../02-SetupDevEnvironment/README.md)
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

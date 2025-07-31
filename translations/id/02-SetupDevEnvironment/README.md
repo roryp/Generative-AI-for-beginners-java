@@ -1,22 +1,22 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c670445516e119888d8aaaa207bbee34",
-  "translation_date": "2025-07-27T13:18:37+00:00",
+  "original_hash": "c2a244c959e00da1ae1613d2ebfdac65",
+  "translation_date": "2025-07-29T09:45:26+00:00",
   "source_file": "02-SetupDevEnvironment/README.md",
   "language_code": "id"
 }
 -->
 # Menyiapkan Lingkungan Pengembangan untuk Generative AI dengan Java
 
-> **Mulai Cepat**: Kode di Cloud dalam 2 menit - Langsung ke [Pengaturan GitHub Codespaces](../../../02-SetupDevEnvironment) - tanpa instalasi lokal dan menggunakan model GitHub!
+> **Mulai Cepat**: Kode di Cloud dalam 2 menit - Langsung ke [Pengaturan GitHub Codespaces](../../../02-SetupDevEnvironment) - tidak perlu instalasi lokal dan menggunakan model GitHub!
 
 > **Tertarik dengan Azure OpenAI?**, lihat [Panduan Pengaturan Azure OpenAI](getting-started-azure-openai.md) kami untuk langkah-langkah membuat sumber daya Azure OpenAI baru.
 
 ## Apa yang Akan Anda Pelajari
 
 - Menyiapkan lingkungan pengembangan Java untuk aplikasi AI
-- Memilih dan mengonfigurasi lingkungan pengembangan pilihan Anda (berbasis cloud dengan Codespaces, kontainer dev lokal, atau pengaturan lokal penuh)
+- Memilih dan mengonfigurasi lingkungan pengembangan yang Anda sukai (berbasis cloud dengan Codespaces, kontainer lokal, atau pengaturan lokal penuh)
 - Menguji pengaturan Anda dengan menghubungkan ke Model GitHub
 
 ## Daftar Isi
@@ -52,7 +52,7 @@ Kami merekomendasikan menggunakan [**Model GitHub**](https://github.com/marketpl
 > - ~8.000 kata masuk, ~4.000 kata keluar per permintaan
 > - 5 permintaan bersamaan
 > 
-> Untuk penggunaan produksi, tingkatkan ke Azure AI Foundry Models dengan akun Azure Anda. Kode Anda tidak perlu diubah. Lihat [dokumentasi Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> Untuk penggunaan produksi, tingkatkan ke Model Azure AI Foundry dengan akun Azure Anda. Kode Anda tidak perlu diubah. Lihat [dokumentasi Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
 
 ## Langkah 1: Siapkan Lingkungan Pengembangan Anda
 
@@ -64,24 +64,24 @@ Kami telah membuat kontainer pengembangan yang sudah dikonfigurasi sebelumnya un
 
 #### Opsi A: GitHub Codespaces (Direkomendasikan)
 
-**Mulai coding dalam 2 menit - tanpa pengaturan lokal!**
+**Mulai coding dalam 2 menit - tidak perlu pengaturan lokal!**
 
 1. Fork repositori ini ke akun GitHub Anda
    > **Catatan**: Jika Anda ingin mengedit konfigurasi dasar, silakan lihat [Konfigurasi Kontainer Dev](../../../.devcontainer/devcontainer.json)
 2. Klik **Code** → tab **Codespaces** → **...** → **New with options...**
-3. Gunakan pengaturan default – ini akan memilih **Konfigurasi Kontainer Dev**: **Generative AI Java Development Environment** kontainer dev khusus yang dibuat untuk kursus ini
+3. Gunakan pengaturan default – ini akan memilih **Konfigurasi Kontainer Dev**: **Lingkungan Pengembangan Generative AI Java** kontainer dev khusus yang dibuat untuk kursus ini
 4. Klik **Create codespace**
 5. Tunggu ~2 menit hingga lingkungan siap
 6. Lanjutkan ke [Langkah 2: Buat Token GitHub](../../../02-SetupDevEnvironment)
 
-<img src="./images/codespaces.png" alt="Tangkapan layar: Submenu Codespaces" width="50%">
+<img src="./images/codespaces.png" alt="Tangkapan layar: submenu Codespaces" width="50%">
 
 <img src="./images/image.png" alt="Tangkapan layar: New with options" width="50%">
 
-<img src="./images/codespaces-create.png" alt="Tangkapan layar: Opsi pembuatan codespace" width="50%">
+<img src="./images/codespaces-create.png" alt="Tangkapan layar: Opsi membuat codespace" width="50%">
 
 > **Keuntungan Codespaces**:
-> - Tidak memerlukan instalasi lokal
+> - Tidak perlu instalasi lokal
 > - Berfungsi di perangkat apa pun dengan browser
 > - Sudah dikonfigurasi dengan semua alat dan dependensi
 > - Gratis 60 jam per bulan untuk akun pribadi
@@ -94,15 +94,15 @@ Kami telah membuat kontainer pengembangan yang sudah dikonfigurasi sebelumnya un
 1. Fork dan clone repositori ini ke mesin lokal Anda
    > **Catatan**: Jika Anda ingin mengedit konfigurasi dasar, silakan lihat [Konfigurasi Kontainer Dev](../../../.devcontainer/devcontainer.json)
 2. Instal [Docker Desktop](https://www.docker.com/products/docker-desktop/) dan [VS Code](https://code.visualstudio.com/)
-3. Instal [ekstensi Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) di VS Code
+3. Instal ekstensi [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) di VS Code
 4. Buka folder repositori di VS Code
 5. Ketika diminta, klik **Reopen in Container** (atau gunakan `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Tunggu hingga kontainer selesai dibangun dan dimulai
 7. Lanjutkan ke [Langkah 2: Buat Token GitHub](../../../02-SetupDevEnvironment)
 
-<img src="./images/devcontainer.png" alt="Tangkapan layar: Pengaturan kontainer dev" width="50%">
+<img src="./images/devcontainer.png" alt="Tangkapan layar: pengaturan kontainer dev" width="50%">
 
-<img src="./images/image-3.png" alt="Tangkapan layar: Pembangunan kontainer dev selesai" width="50%">
+<img src="./images/image-3.png" alt="Tangkapan layar: kontainer dev selesai dibangun" width="50%">
 
 #### Opsi C: Gunakan Instalasi Lokal yang Sudah Ada
 
@@ -118,15 +118,15 @@ Langkah-langkah:
 2. Buka proyek di IDE Anda
 3. Lanjutkan ke [Langkah 2: Buat Token GitHub](../../../02-SetupDevEnvironment)
 
-> **Tips Pro**: Jika Anda memiliki mesin dengan spesifikasi rendah tetapi ingin menggunakan VS Code secara lokal, gunakan GitHub Codespaces! Anda dapat menghubungkan VS Code lokal Anda ke Codespace yang di-host di cloud untuk mendapatkan yang terbaik dari keduanya.
+> **Tips Pro**: Jika Anda memiliki mesin dengan spesifikasi rendah tetapi ingin menggunakan VS Code secara lokal, gunakan GitHub Codespaces! Anda dapat menghubungkan VS Code lokal Anda ke Codespace yang di-host di cloud untuk mendapatkan manfaat terbaik dari keduanya.
 
-<img src="./images/image-2.png" alt="Tangkapan layar: Instans kontainer dev lokal yang dibuat" width="50%">
+<img src="./images/image-2.png" alt="Tangkapan layar: instance kontainer dev lokal yang dibuat" width="50%">
 
 ## Langkah 2: Buat Token Akses Pribadi GitHub
 
 1. Buka [Pengaturan GitHub](https://github.com/settings/profile) dan pilih **Settings** dari menu profil Anda.
 2. Di sidebar kiri, klik **Developer settings** (biasanya di bagian bawah).
-3. Di bawah **Personal access tokens**, klik **Fine-grained tokens** (atau ikuti [tautan ini](https://github.com/settings/personal-access-tokens)).
+3. Di bawah **Personal access tokens**, klik **Fine-grained tokens** (atau ikuti [tautan langsung ini](https://github.com/settings/personal-access-tokens)).
 4. Klik **Generate new token**.
 5. Di bawah "Token name", berikan nama deskriptif (misalnya, `GenAI-Java-Course-Token`).
 6. Tetapkan tanggal kedaluwarsa (disarankan: 7 hari untuk praktik keamanan terbaik).
@@ -164,7 +164,7 @@ Setelah lingkungan pengembangan Anda siap, mari kita uji integrasi Model GitHub 
    mvn compile exec:java -Dexec.mainClass="com.example.githubmodels.App"
    ```
 
-Anda akan melihat output serupa dengan:
+Anda akan melihat output yang mirip dengan:
 ```text
 Using model: gpt-4.1-nano
 Sending request to GitHub Models...
@@ -212,16 +212,16 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 ## Ringkasan
 
-**Selamat!** Anda telah berhasil:
+Hebat! Anda sekarang telah menyelesaikan pengaturan:
 
-- **Membuat Token Akses Pribadi GitHub** dengan izin yang sesuai untuk akses model AI
-- **Menyiapkan lingkungan pengembangan Java** menggunakan Codespaces, kontainer dev, atau instalasi lokal
-- **Terhubung ke Model GitHub** menggunakan OpenAI Java SDK untuk akses pengembangan AI gratis
-- **Menguji integrasi** dengan aplikasi contoh yang berfungsi yang berkomunikasi dengan model AI
+- Membuat Token Akses Pribadi GitHub dengan izin yang tepat untuk akses model AI
+- Menjalankan lingkungan pengembangan Java Anda (baik itu Codespaces, kontainer dev, atau lokal)
+- Terhubung ke Model GitHub menggunakan OpenAI Java SDK untuk pengembangan AI gratis
+- Menguji semuanya berfungsi dengan contoh sederhana yang berbicara dengan model AI
 
 ## Langkah Selanjutnya
 
-[Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.md)
+[Chapter 3: Teknik Inti Generative AI](../03-CoreGenerativeAITechniques/README.md)
 
 ## Pemecahan Masalah
 
@@ -229,7 +229,7 @@ Mengalami masalah? Berikut adalah masalah umum dan solusinya:
 
 - **Token tidak berfungsi?** 
   - Pastikan Anda menyalin seluruh token tanpa spasi tambahan
-  - Verifikasi token diatur dengan benar sebagai variabel lingkungan
+  - Verifikasi bahwa token diatur dengan benar sebagai variabel lingkungan
   - Periksa bahwa token Anda memiliki izin yang benar (Models: Read and write)
 
 - **Maven tidak ditemukan?** 
@@ -239,7 +239,7 @@ Mengalami masalah? Berikut adalah masalah umum dan solusinya:
 
 - **Masalah koneksi?** 
   - Periksa koneksi internet Anda
-  - Verifikasi GitHub dapat diakses dari jaringan Anda
+  - Verifikasi bahwa GitHub dapat diakses dari jaringan Anda
   - Pastikan Anda tidak berada di belakang firewall yang memblokir endpoint Model GitHub
 
 - **Kontainer dev tidak dimulai?** 
@@ -250,7 +250,7 @@ Mengalami masalah? Berikut adalah masalah umum dan solusinya:
   - Pastikan Anda berada di direktori yang benar: `02-SetupDevEnvironment/examples/github-models`
   - Coba bersihkan dan bangun ulang: `mvn clean compile`
 
-> **Butuh bantuan?**: Masih mengalami masalah? Buka issue di repositori dan kami akan membantu Anda.
+> **Butuh bantuan?**: Masih mengalami masalah? Buka masalah di repositori dan kami akan membantu Anda.
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

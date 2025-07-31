@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d45b8e2291ab1357592c904c103cbc81",
-  "translation_date": "2025-07-28T10:12:39+00:00",
+  "original_hash": "14c0a61ecc1cd2012a9c129236dfdf71",
+  "translation_date": "2025-07-29T07:53:33+00:00",
   "source_file": "04-PracticalSamples/README.md",
   "language_code": "en"
 }
@@ -31,31 +31,31 @@ This chapter presents **sample projects** that illustrate generative AI developm
 
 ### Foundry Local Spring Boot Demo
 
-The **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** shows how to integrate with local AI models using the **OpenAI Java SDK**. It demonstrates connecting to the **Phi-3.5-mini** model running on Foundry Local, enabling you to build AI applications without depending on cloud services.
+The **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** shows how to integrate with local AI models using the **OpenAI Java SDK**. It demonstrates connecting to the **Phi-3.5-mini** model running on Foundry Local, enabling you to run AI applications without relying on cloud services.
 
 ### Pet Story Generator
 
-The **[Pet Story Generator](petstory/README.md)** is an interactive Spring Boot web application that showcases **multi-modal AI processing** to create imaginative pet stories. It combines client-side and server-side AI capabilities using transformer.js for browser-based AI interactions and the OpenAI SDK for server-side processing.
+The **[Pet Story Generator](petstory/README.md)** is an interactive Spring Boot web application that demonstrates **multi-modal AI processing** to create imaginative pet stories. It combines client-side and server-side AI capabilities using transformer.js for browser-based AI interactions and the OpenAI SDK for server-side processing.
 
 ### MCP Calculator Service (Beginner-Friendly MCP Demo)
 
-The **[MCP Calculator Service](calculator/README.md)** is a straightforward demonstration of the **Model Context Protocol (MCP)** using Spring AI. It provides an easy-to-follow introduction to MCP concepts, showing how to build a basic MCP Server that communicates with MCP clients.
+The **[MCP Calculator Service](calculator/README.md)** is a straightforward demonstration of the **Model Context Protocol (MCP)** using Spring AI. It provides an easy introduction to MCP concepts, showing how to build a basic MCP Server that interacts with MCP clients.
 
 ## Learning Progression
 
-These projects are designed to build on concepts introduced in earlier chapters:
+These projects are designed to build on concepts from earlier chapters:
 
-1. **Start Simple**: Begin with the Foundry Local Spring Boot Demo to learn the basics of AI integration with local models.
-2. **Add Interactivity**: Move on to the Pet Story Generator to explore multi-modal AI and web-based interactions.
-3. **Learn MCP Basics**: Experiment with the MCP Calculator Service to grasp the fundamentals of the Model Context Protocol.
+1. **Start Simple**: Begin with the Foundry Local Spring Boot Demo to learn basic AI integration with local models
+2. **Add Interactivity**: Move on to the Pet Story Generator for multi-modal AI and web-based interactions
+3. **Learn MCP Basics**: Try the MCP Calculator Service to understand the fundamentals of the Model Context Protocol
 
 ## Summary
 
-**Congratulations!** You’ve successfully:
+Great job! You’ve now explored some real-world applications:
 
-- **Created multi-modal AI experiences** by combining client-side and server-side AI processing
-- **Integrated local AI models** using modern Java frameworks and SDKs
-- **Developed Model Context Protocol services** to demonstrate tool integration patterns
+- Multi-modal AI experiences that function both in the browser and on the server
+- Integration of local AI models using modern Java frameworks and SDKs
+- Your first Model Context Protocol service to see how tools interact with AI
 
 ## Next Steps
 
