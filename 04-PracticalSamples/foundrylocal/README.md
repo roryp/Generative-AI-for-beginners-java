@@ -231,6 +231,11 @@ To set up Foundry Local, follow these steps:
    ```bash
    foundry service status
    ```
+   
+   **Optional**: If you prefer to use a specific port (e.g., 5273), you can configure it manually:
+   ```bash
+   foundry service set --port 5273
+   ```
 
 3. **Download the AI model** you want to use, for example, `phi-3.5-mini`, with the following command:
    ```bash
@@ -279,6 +284,7 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 - Make sure Foundry Local is running: `foundry model list`
 - Check the actual port Foundry Local is using: `foundry service status`
 - Update your `application.properties` with the correct port from the status command
+- Alternatively, set a specific port if desired: `foundry service set --port 5273`
 - Try restarting Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" errors**
