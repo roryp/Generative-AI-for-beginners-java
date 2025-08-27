@@ -56,7 +56,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu
 ```
 
 **What this does:**
-- **base-url**: Specifies where Foundry Local is running (default port 5273)
+- **base-url**: Specifies where Foundry Local is running. **Note**: Foundry Local dynamically assigns a port, so check your actual port using `foundry service status`
 - **model**: Names the AI model to use for text generation
 
 **Key concept:** Spring Boot automatically loads these properties and makes them available to your application using the `@Value` annotation.
@@ -226,11 +226,18 @@ Here's the complete flow when you run the application:
 To set up Foundry Local, follow these steps:
 
 1. **Install Foundry Local** using the instructions in the [Prerequisites](#prerequisites) section.
-2. **Download the AI model** you want to use, for example, `phi-3.5-mini`, with the following command:
+
+2. **Check the dynamically assigned port**. Foundry Local automatically assigns a port when it starts. Find your port with:
+   ```bash
+   foundry service status
+   ```
+
+3. **Download the AI model** you want to use, for example, `phi-3.5-mini`, with the following command:
    ```bash
    foundry model run phi-3.5-mini
    ```
-3. **Configure the application.properties** file to match your Foundry Local settings, especially if you're using a different port or model.
+
+4. **Configure the application.properties** file to match your Foundry Local settings, especially updating the base-url with the correct port from step 2.
 
 ## Running the Application
 
@@ -270,7 +277,8 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 
 **"Connection refused" or "Service unavailable"**
 - Make sure Foundry Local is running: `foundry model list`
-- Verify the service is on port 5273: Check `application.properties`
+- Check the actual port Foundry Local is using: `foundry service status`
+- Update your `application.properties` with the correct port from the status command
 - Try restarting Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" errors**
