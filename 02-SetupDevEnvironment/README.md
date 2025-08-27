@@ -126,7 +126,7 @@ Steps:
 6. Set an expiration date (recommended: 7 days for security best practices).
 7. Under "Resource owner", select your user account.
 8. Under "Repository access", select the repositories you want to use with GitHub Models (or "All repositories" if needed).
-9. Under "Repository permissions", find **Models** and set it to **Read and write**.
+9. Under "Account permissions", find **Models** and set it to **Read-only**.
 10. Click **Generate token**.
 11. **Copy and save your token now** – you won't see it again!
 
