@@ -28,8 +28,8 @@ import java.util.Scanner;
  */
 public class LLMCompletionsApp {
     // Define the model once to use consistently across all examples
-    // gpt-4o-mini is a cost-effective model good for learning and experimentation
-    private static final String MODEL = "gpt-4o-mini";
+    // gpt-4.1-nano is a cost-effective model good for learning and experimentation
+    private static final String MODEL = "gpt-4.1-nano";
     
     public static void main(String[] args) {
         // GitHub Models endpoint - provides free access to various AI models for learning

@@ -6,6 +6,7 @@
 - [Getting Started](#getting-started)
   - [Step 1: Set Your Environment Variable](#step-1-set-your-environment-variable)
   - [Step 2: Navigate to the Examples Directory](#step-2-navigate-to-the-examples-directory)
+- [Model Selection Guide](#model-selection-guide)
 - [Tutorial 1: LLM Completions and Chat](#tutorial-1-llm-completions-and-chat)
 - [Tutorial 2: Function Calling](#tutorial-2-function-calling)
 - [Tutorial 3: RAG (Retrieval-Augmented Generation)](#tutorial-3-rag-retrieval-augmented-generation)
@@ -54,6 +55,25 @@ export GITHUB_TOKEN=your_github_token_here
 cd 03-CoreGenerativeAITechniques/examples/
 ```
 
+## Model Selection Guide
+
+These examples use different models optimized for their specific use cases:
+
+**GPT-4.1-nano** (Completions example):
+- Ultra-fast and ultra-cheap
+- Perfect for basic text completion and chat
+- Ideal for learning fundamental LLM interaction patterns
+
+**GPT-4o-mini** (Functions, RAG, and Responsible AI examples):
+- Small but fully-featured "omni workhorse" model
+- Reliably supports advanced capabilities across vendors:
+  - Vision processing
+  - JSON/structured outputs  
+  - Tool/function calling
+- More capabilities than nano, ensuring examples work consistently
+
+> **Why this matters**: While "nano" models are great for speed and cost, "mini" models are the safer choice when you need reliable access to advanced features like function calling, which may not be fully exposed by all hosting providers for nano variants.
+
 ## Tutorial 1: LLM Completions and Chat
 
 **File:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
@@ -85,9 +105,9 @@ List<ChatRequestMessage> messages = List.of(
 );
 
 ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
-    .setModel("gpt-4o-mini")
-    .setMaxTokens(200)      // Limit response length
-    .setTemperature(0.7);   // Control creativity (0.0-1.0)
+    .setModel("gpt-4.1-nano")  // Fast, cost-effective model for basic completions
+    .setMaxTokens(200)         // Limit response length
+    .setTemperature(0.7);      // Control creativity (0.0-1.0)
 ```
 
 #### 3. Conversation Memory
@@ -117,6 +137,8 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions
 ### What This Example Teaches
 
 Function calling enables AI models to request execution of external tools and APIs through a structured protocol where the model analyzes natural language requests, determines required function calls with appropriate parameters using JSON Schema definitions, and processes returned results to generate contextual responses, while the actual function execution remains under developer control for security and reliability.
+
+> **Note**: This example uses `gpt-4o-mini` because function calling requires reliable tool calling capabilities that may not be fully exposed in nano models on all hosting platforms.
 
 ### Key Code Concepts
 
@@ -193,6 +215,8 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.F
 
 Retrieval-Augmented Generation (RAG) combines information retrieval with language generation by injecting external document context into AI prompts, enabling models to provide accurate answers based on specific knowledge sources rather than potentially outdated or inaccurate training data, while maintaining clear boundaries between user queries and authoritative information sources through strategic prompt engineering.
 
+> **Note**: This example uses `gpt-4o-mini` to ensure reliable processing of structured prompts and consistent handling of document context, which is crucial for effective RAG implementations.
+
 ### Key Code Concepts
 
 #### 1. Document Loading
@@ -247,6 +271,8 @@ Try asking: "What is GitHub Models?" vs "What is the weather like?"
 ### What This Example Teaches
 
 The Responsible AI example showcases the importance of implementing safety measures in AI applications. It demonstrates how modern AI safety systems work through two primary mechanisms: hard blocks (HTTP 400 errors from safety filters) and soft refusals (polite "I can't assist with that" responses from the model itself). This example shows how production AI applications should gracefully handle content policy violations through proper exception handling, refusal detection, user feedback mechanisms, and fallback response strategies.
+
+> **Note**: This example uses `gpt-4o-mini` because it provides more consistent and reliable safety responses across different types of potentially harmful content, ensuring the safety mechanisms are properly demonstrated.
 
 ### Key Code Concepts
 
