@@ -1,4 +1,4 @@
-# Core Generative AI Techniques Tutorial
+# Core Generative AI Techniques Tutorial 
 
 ## Table of Contents
 
