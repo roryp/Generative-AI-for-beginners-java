@@ -41,7 +41,7 @@
 - **Embeddings & Vector Operations**: Implement semantic search and similarity matching
 - **Retrieval-Augmented Generation (RAG)**: Combine AI with your own data sources
 - **Function Calling**: Extend AI capabilities with custom tools and plugins
-- **[→ Start Chapter 3](./03CoreGenerativeAITechniques/README.md)**
+- **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapter 4: Practical Applications & Projects**
 - **Pet Story Generator** (`petstory/`): Creative content generation with GitHub Models
