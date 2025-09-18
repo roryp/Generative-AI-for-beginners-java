@@ -132,9 +132,9 @@ This client talks directly to the MCP server without using AI. It manually calls
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -163,10 +163,12 @@ public class SDKClient {
 ```
 
 **What this does:**
-1. **Connects** to the calculator server at `http://localhost:8080`
+1. **Connects** to the calculator server at `http://localhost:8080` using the builder pattern
 2. **Lists** all available tools (our calculator functions)
 3. **Calls** specific functions with exact parameters
 4. **Prints** the results directly
+
+**Note:** This example uses the Spring AI 1.1.0-SNAPSHOT dependency, which introduced a builder pattern for the `WebFluxSseClientTransport`. If you're using an older stable version, you might need to use the direct constructor instead.
 
 **When to use this:** When you know exactly which calculation you want to perform and want to call it programmatically.
 

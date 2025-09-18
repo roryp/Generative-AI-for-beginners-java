@@ -31,7 +31,8 @@ public class SDKClient {
 	public static void main(String[] args) {
 		// Create transport that connects to our MCP server via Server-Sent Events
 		// SSE is a standard protocol for real-time communication
-		var transport = new WebFluxSseClientTransport(WebClient.builder().baseUrl("http://localhost:8080"));
+		McpClientTransport transport = WebFluxSseClientTransport.builder(WebClient.builder().baseUrl("http://localhost:8080"))
+			.build();
 		new SDKClient(transport).run();
 	}
 	
