@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:35:39+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:37:09+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "ms"
 }
@@ -14,13 +14,13 @@ CO_OP_TRANSLATOR_METADATA:
 - [Apa yang Anda Akan Pelajari](../../../../04-PracticalSamples/calculator)
 - [Prasyarat](../../../../04-PracticalSamples/calculator)
 - [Memahami Struktur Projek](../../../../04-PracticalSamples/calculator)
-- [Komponen Teras Dijelaskan](../../../../04-PracticalSamples/calculator)
+- [Komponen Utama Dijelaskan](../../../../04-PracticalSamples/calculator)
   - [1. Aplikasi Utama](../../../../04-PracticalSamples/calculator)
   - [2. Perkhidmatan Kalkulator](../../../../04-PracticalSamples/calculator)
   - [3. Klien MCP Langsung](../../../../04-PracticalSamples/calculator)
   - [4. Klien Berkuasa AI](../../../../04-PracticalSamples/calculator)
 - [Menjalankan Contoh](../../../../04-PracticalSamples/calculator)
-- [Bagaimana Semua Ini Berfungsi Bersama](../../../../04-PracticalSamples/calculator)
+- [Bagaimana Kesemuanya Berfungsi Bersama](../../../../04-PracticalSamples/calculator)
 - [Langkah Seterusnya](../../../../04-PracticalSamples/calculator)
 
 ## Apa yang Anda Akan Pelajari
@@ -55,13 +55,13 @@ calculator/
     └── Bot.java                          # Simple chat interface
 ```
 
-## Komponen Teras Dijelaskan
+## Komponen Utama Dijelaskan
 
 ### 1. Aplikasi Utama
 
 **Fail:** `McpServerApplication.java`
 
-Ini adalah titik masuk untuk perkhidmatan kalkulator kita. Ia adalah aplikasi Spring Boot standard dengan satu tambahan khas:
+Ini adalah titik permulaan perkhidmatan kalkulator kami. Ia adalah aplikasi Spring Boot standard dengan satu tambahan istimewa:
 
 ```java
 @SpringBootApplication
@@ -80,14 +80,14 @@ public class McpServerApplication {
 
 **Apa yang dilakukan:**
 - Memulakan pelayan web Spring Boot pada port 8080
-- Mencipta `ToolCallbackProvider` yang menjadikan kaedah kalkulator kita tersedia sebagai alat MCP
+- Mencipta `ToolCallbackProvider` yang menjadikan kaedah kalkulator kami tersedia sebagai alat MCP
 - Anotasi `@Bean` memberitahu Spring untuk menguruskan ini sebagai komponen yang boleh digunakan oleh bahagian lain
 
 ### 2. Perkhidmatan Kalkulator
 
 **Fail:** `CalculatorService.java`
 
-Di sinilah semua pengiraan matematik dilakukan. Setiap kaedah ditandai dengan `@Tool` untuk menjadikannya tersedia melalui MCP:
+Di sinilah semua pengiraan matematik berlaku. Setiap kaedah ditandai dengan `@Tool` untuk menjadikannya tersedia melalui MCP:
 
 ```java
 @Service
@@ -115,21 +115,21 @@ public class CalculatorService {
 
 **Ciri utama:**
 
-1. **Anotasi `@Tool`**: Ini memberitahu MCP bahawa kaedah ini boleh dipanggil oleh klien luaran
+1. **Anotasi `@Tool`**: Memberitahu MCP bahawa kaedah ini boleh dipanggil oleh klien luaran
 2. **Penerangan Jelas**: Setiap alat mempunyai penerangan yang membantu model AI memahami bila untuk menggunakannya
 3. **Format Pulangan Konsisten**: Semua operasi mengembalikan string yang mudah dibaca seperti "5.00 + 3.00 = 8.00"
-4. **Pengendalian Ralat**: Pembahagian dengan sifar dan punca kuasa dua nombor negatif mengembalikan mesej ralat
+4. **Pengendalian Ralat**: Pembahagian dengan sifar dan akar kuasa dua negatif mengembalikan mesej ralat
 
-**Operasi yang Tersedia:**
+**Operasi Tersedia:**
 - `add(a, b)` - Menambah dua nombor
-- `subtract(a, b)` - Menolak nombor kedua daripada yang pertama
+- `subtract(a, b)` - Menolak nombor kedua daripada nombor pertama
 - `multiply(a, b)` - Mendarab dua nombor
-- `divide(a, b)` - Membahagi nombor pertama dengan yang kedua (dengan semakan sifar)
+- `divide(a, b)` - Membahagi nombor pertama dengan nombor kedua (dengan semakan sifar)
 - `power(base, exponent)` - Menaikkan asas kepada kuasa eksponen
-- `squareRoot(number)` - Mengira punca kuasa dua (dengan semakan negatif)
+- `squareRoot(number)` - Mengira akar kuasa dua (dengan semakan negatif)
 - `modulus(a, b)` - Mengembalikan baki pembahagian
 - `absolute(number)` - Mengembalikan nilai mutlak
-- `help()` - Memberikan maklumat tentang semua operasi
+- `help()` - Mengembalikan maklumat tentang semua operasi
 
 ### 3. Klien MCP Langsung
 
@@ -141,9 +141,9 @@ Klien ini berkomunikasi secara langsung dengan pelayan MCP tanpa menggunakan AI.
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,12 +172,14 @@ public class SDKClient {
 ```
 
 **Apa yang dilakukan:**
-1. **Menyambung** ke pelayan kalkulator di `http://localhost:8080`
-2. **Menyenaraikan** semua alat yang tersedia (fungsi kalkulator kita)
+1. **Menyambung** ke pelayan kalkulator di `http://localhost:8080` menggunakan corak pembina
+2. **Menyenaraikan** semua alat yang tersedia (fungsi kalkulator kami)
 3. **Memanggil** fungsi tertentu dengan parameter yang tepat
 4. **Mencetak** hasil secara langsung
 
-**Bila untuk digunakan:** Apabila anda tahu dengan tepat pengiraan yang ingin dilakukan dan mahu memanggilnya secara programatik.
+**Nota:** Contoh ini menggunakan kebergantungan Spring AI 1.1.0-SNAPSHOT, yang memperkenalkan corak pembina untuk `WebFluxSseClientTransport`. Jika anda menggunakan versi stabil yang lebih lama, anda mungkin perlu menggunakan pembina langsung sebagai ganti.
+
+**Bila untuk digunakan:** Apabila anda tahu dengan tepat pengiraan yang ingin dilakukan dan ingin memanggilnya secara programatik.
 
 ### 4. Klien Berkuasa AI
 
@@ -230,12 +232,12 @@ public class LangChain4jClient {
 
 **Apa yang dilakukan:**
 1. **Mencipta** sambungan model AI menggunakan token GitHub anda
-2. **Menyambung** AI ke pelayan MCP kalkulator kita
-3. **Memberikan** AI akses kepada semua alat kalkulator kita
+2. **Menyambung** AI ke pelayan MCP kalkulator kami
+3. **Memberikan** AI akses kepada semua alat kalkulator kami
 4. **Membolehkan** permintaan bahasa semula jadi seperti "Kira jumlah 24.5 dan 17.3"
 
 **AI secara automatik:**
-- Memahami anda mahu menambah nombor
+- Memahami anda ingin menambah nombor
 - Memilih alat `add`
 - Memanggil `add(24.5, 17.3)`
 - Mengembalikan hasil dalam respons semula jadi
@@ -297,23 +299,25 @@ The square root of 144 is 12.
 ### Langkah 4: Tutup Pelayan MCP
 
 Apabila anda selesai menguji, anda boleh menghentikan klien AI dengan menekan `Ctrl+C` dalam terminalnya. Pelayan MCP akan terus berjalan sehingga anda menghentikannya.
-Untuk menghentikan pelayan, tekan `Ctrl+C` dalam terminal di mana ia berjalan.
+Untuk menghentikan pelayan, tekan `Ctrl+C` dalam terminal di mana ia sedang berjalan.
 
-## Bagaimana Semua Ini Berfungsi Bersama
+## Bagaimana Kesemuanya Berfungsi Bersama
 
-Berikut adalah aliran lengkap apabila anda bertanya kepada AI "Berapakah 5 + 3?":
+Berikut adalah aliran lengkap apabila anda bertanya kepada AI "Apa hasil 5 + 3?":
 
 1. **Anda** bertanya kepada AI dalam bahasa semula jadi
-2. **AI** menganalisis permintaan anda dan menyedari anda mahu melakukan penambahan
+2. **AI** menganalisis permintaan anda dan menyedari anda ingin melakukan penambahan
 3. **AI** memanggil pelayan MCP: `add(5.0, 3.0)`
 4. **Perkhidmatan Kalkulator** melaksanakan: `5.0 + 3.0 = 8.0`
 5. **Perkhidmatan Kalkulator** mengembalikan: `"5.00 + 3.00 = 8.00"`
 6. **AI** menerima hasil dan memformat respons semula jadi
-7. **Anda** mendapat: "Jumlah 5 dan 3 adalah 8"
+7. **Anda** menerima: "Jumlah 5 dan 3 adalah 8"
 
 ## Langkah Seterusnya
 
 Untuk lebih banyak contoh, lihat [Bab 04: Contoh Praktikal](../README.md)
 
+---
+
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

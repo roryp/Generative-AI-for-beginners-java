@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:34:54+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:36:26+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "vi"
 }
@@ -17,10 +17,10 @@ CO_OP_TRANSLATOR_METADATA:
 - [Giải thích các thành phần cốt lõi](../../../../04-PracticalSamples/calculator)
   - [1. Ứng dụng chính](../../../../04-PracticalSamples/calculator)
   - [2. Dịch vụ máy tính](../../../../04-PracticalSamples/calculator)
-  - [3. Client MCP trực tiếp](../../../../04-PracticalSamples/calculator)
+  - [3. MCP Client trực tiếp](../../../../04-PracticalSamples/calculator)
   - [4. Client sử dụng AI](../../../../04-PracticalSamples/calculator)
 - [Chạy các ví dụ](../../../../04-PracticalSamples/calculator)
-- [Cách các thành phần hoạt động cùng nhau](../../../../04-PracticalSamples/calculator)
+- [Cách mọi thứ hoạt động cùng nhau](../../../../04-PracticalSamples/calculator)
 - [Bước tiếp theo](../../../../04-PracticalSamples/calculator)
 
 ## Những gì bạn sẽ học
@@ -34,11 +34,11 @@ Hướng dẫn này giải thích cách xây dựng một dịch vụ máy tính
 
 ## Yêu cầu trước khi bắt đầu
 
-Trước khi bắt đầu, hãy đảm bảo bạn đã có:
-- Java 21 hoặc phiên bản cao hơn
-- Maven để quản lý phụ thuộc
+Trước khi bắt đầu, hãy đảm bảo bạn có:
+- Java 21 hoặc phiên bản cao hơn đã được cài đặt
+- Maven để quản lý các phụ thuộc
 - Tài khoản GitHub với mã thông báo truy cập cá nhân (PAT)
-- Kiến thức cơ bản về Java và Spring Boot
+- Hiểu biết cơ bản về Java và Spring Boot
 
 ## Hiểu cấu trúc dự án
 
@@ -79,15 +79,15 @@ public class McpServerApplication {
 ```
 
 **Chức năng:**
-- Khởi động máy chủ web Spring Boot trên cổng 8080
-- Tạo một `ToolCallbackProvider` để làm cho các phương pháp máy tính của chúng ta có thể sử dụng như các công cụ MCP
+- Khởi động một máy chủ web Spring Boot trên cổng 8080
+- Tạo một `ToolCallbackProvider` để làm cho các phương pháp máy tính của chúng ta có sẵn như các công cụ MCP
 - Annotation `@Bean` cho phép Spring quản lý thành phần này để các phần khác có thể sử dụng
 
 ### 2. Dịch vụ máy tính
 
 **Tệp:** `CalculatorService.java`
 
-Đây là nơi thực hiện các phép toán. Mỗi phương pháp được đánh dấu bằng `@Tool` để có thể sử dụng thông qua MCP:
+Đây là nơi thực hiện các phép toán. Mỗi phương pháp được đánh dấu với `@Tool` để làm cho nó có thể truy cập thông qua MCP:
 
 ```java
 @Service
@@ -113,10 +113,10 @@ public class CalculatorService {
 }
 ```
 
-**Các đặc điểm chính:**
+**Các tính năng chính:**
 
 1. **Annotation `@Tool`**: Cho MCP biết rằng phương pháp này có thể được gọi bởi các client bên ngoài
-2. **Mô tả rõ ràng**: Mỗi công cụ có một mô tả giúp các mô hình AI hiểu khi nào nên sử dụng
+2. **Mô tả rõ ràng**: Mỗi công cụ có một mô tả giúp các mô hình AI hiểu khi nào nên sử dụng nó
 3. **Định dạng kết quả nhất quán**: Tất cả các phép toán trả về chuỗi dễ đọc như "5.00 + 3.00 = 8.00"
 4. **Xử lý lỗi**: Chia cho 0 và căn bậc hai số âm trả về thông báo lỗi
 
@@ -131,7 +131,7 @@ public class CalculatorService {
 - `absolute(number)` - Trả về giá trị tuyệt đối
 - `help()` - Trả về thông tin về tất cả các phép toán
 
-### 3. Client MCP trực tiếp
+### 3. MCP Client trực tiếp
 
 **Tệp:** `SDKClient.java`
 
@@ -141,9 +141,9 @@ Client này giao tiếp trực tiếp với máy chủ MCP mà không sử dụn
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,10 +172,12 @@ public class SDKClient {
 ```
 
 **Chức năng:**
-1. **Kết nối** với máy chủ máy tính tại `http://localhost:8080`
+1. **Kết nối** với máy chủ máy tính tại `http://localhost:8080` sử dụng builder pattern
 2. **Liệt kê** tất cả các công cụ có sẵn (các chức năng máy tính của chúng ta)
-3. **Gọi** các chức năng cụ thể với tham số chính xác
+3. **Gọi** các chức năng cụ thể với các tham số chính xác
 4. **In** kết quả trực tiếp
+
+**Lưu ý:** Ví dụ này sử dụng phụ thuộc Spring AI 1.1.0-SNAPSHOT, giới thiệu builder pattern cho `WebFluxSseClientTransport`. Nếu bạn sử dụng phiên bản ổn định cũ hơn, bạn có thể cần sử dụng constructor trực tiếp.
 
 **Khi nào sử dụng:** Khi bạn biết chính xác phép toán cần thực hiện và muốn gọi nó bằng lập trình.
 
@@ -231,7 +233,7 @@ public class LangChain4jClient {
 **Chức năng:**
 1. **Tạo** kết nối với mô hình AI sử dụng mã thông báo GitHub của bạn
 2. **Kết nối** AI với máy chủ MCP của máy tính
-3. **Cung cấp** cho AI quyền truy cập vào tất cả các công cụ máy tính
+3. **Cung cấp** cho AI quyền truy cập vào tất cả các công cụ máy tính của chúng ta
 4. **Cho phép** yêu cầu ngôn ngữ tự nhiên như "Tính tổng của 24.5 và 17.3"
 
 **AI tự động:**
@@ -244,7 +246,7 @@ public class LangChain4jClient {
 
 ### Bước 1: Khởi động máy chủ máy tính
 
-Đầu tiên, thiết lập mã thông báo GitHub của bạn (cần thiết cho client AI):
+Đầu tiên, đặt mã thông báo GitHub của bạn (cần thiết cho client AI):
 
 **Windows:**
 ```cmd
@@ -269,7 +271,7 @@ Started McpServerApplication in X.XXX seconds
 
 ### Bước 2: Kiểm tra với Client trực tiếp
 
-Trong một **terminal MỚI** với máy chủ vẫn đang chạy, chạy client MCP trực tiếp:
+Trong một **terminal MỚI** với máy chủ vẫn đang chạy, chạy MCP Client trực tiếp:
 ```bash
 cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
@@ -299,9 +301,9 @@ The square root of 144 is 12.
 Khi bạn hoàn thành việc kiểm tra, bạn có thể dừng client AI bằng cách nhấn `Ctrl+C` trong terminal của nó. Máy chủ MCP sẽ tiếp tục chạy cho đến khi bạn dừng nó.  
 Để dừng máy chủ, nhấn `Ctrl+C` trong terminal nơi nó đang chạy.
 
-## Cách các thành phần hoạt động cùng nhau
+## Cách mọi thứ hoạt động cùng nhau
 
-Dưới đây là luồng hoàn chỉnh khi bạn hỏi AI "5 + 3 bằng bao nhiêu?":
+Dưới đây là luồng hoàn chỉnh khi bạn hỏi AI "5 + 3 là bao nhiêu?":
 
 1. **Bạn** hỏi AI bằng ngôn ngữ tự nhiên
 2. **AI** phân tích yêu cầu của bạn và nhận ra bạn muốn cộng
@@ -315,5 +317,7 @@ Dưới đây là luồng hoàn chỉnh khi bạn hỏi AI "5 + 3 bằng bao nhi
 
 Để xem thêm các ví dụ, hãy xem [Chương 04: Các mẫu thực tế](../README.md)
 
+---
+
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

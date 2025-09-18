@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:38:06+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:39:42+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "sk"
 }
@@ -29,7 +29,7 @@ Tento návod vysvetľuje, ako vytvoriť službu kalkulačky pomocou Model Contex
 
 - Ako vytvoriť službu, ktorú môže AI používať ako nástroj
 - Ako nastaviť priamu komunikáciu s MCP službami
-- Ako AI modely automaticky vyberajú, ktoré nástroje použiť
+- Ako môžu AI modely automaticky vyberať, ktoré nástroje použiť
 - Rozdiel medzi priamymi volaniami protokolu a interakciami podporovanými AI
 
 ## Predpoklady
@@ -61,7 +61,7 @@ calculator/
 
 **Súbor:** `McpServerApplication.java`
 
-Toto je vstupný bod našej služby kalkulačky. Ide o štandardnú Spring Boot aplikáciu s jedným špeciálnym doplnkom:
+Toto je vstupný bod našej služby kalkulačky. Ide o štandardnú Spring Boot aplikáciu s jednou špeciálnou prídavnou funkciou:
 
 ```java
 @SpringBootApplication
@@ -115,7 +115,7 @@ public class CalculatorService {
 
 **Kľúčové vlastnosti:**
 
-1. **Anotácia `@Tool`**: Označuje, že túto metódu môže volať externý klient
+1. **Anotácia `@Tool`**: Označuje MCP, že túto metódu môžu volať externí klienti
 2. **Jasné popisy**: Každý nástroj má popis, ktorý pomáha AI modelom pochopiť, kedy ho použiť
 3. **Konzistentný formát návratu**: Všetky operácie vracajú čitateľné reťazce ako "5.00 + 3.00 = 8.00"
 4. **Spracovanie chýb**: Delenie nulou a záporné odmocniny vracajú chybové hlásenia
@@ -124,7 +124,7 @@ public class CalculatorService {
 - `add(a, b)` - Sčítanie dvoch čísel
 - `subtract(a, b)` - Odčítanie druhého čísla od prvého
 - `multiply(a, b)` - Násobenie dvoch čísel
-- `divide(a, b)` - Delenie prvého čísla druhým (s kontrolou nulového deliteľa)
+- `divide(a, b)` - Delenie prvého čísla druhým (s kontrolou nulového delenia)
 - `power(base, exponent)` - Umocnenie základu na exponent
 - `squareRoot(number)` - Výpočet odmocniny (s kontrolou záporných čísel)
 - `modulus(a, b)` - Zvyšok po delení
@@ -141,9 +141,9 @@ Tento klient komunikuje priamo s MCP serverom bez použitia AI. Manuálne volá 
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,12 +172,14 @@ public class SDKClient {
 ```
 
 **Čo to robí:**
-1. **Pripojí sa** k serveru kalkulačky na `http://localhost:8080`
-2. **Zobrazí** všetky dostupné nástroje (funkcie kalkulačky)
+1. **Pripojí sa** k serveru kalkulačky na `http://localhost:8080` pomocou builder patternu
+2. **Zobrazí** všetky dostupné nástroje (naše funkcie kalkulačky)
 3. **Volá** konkrétne funkcie s presnými parametrami
-4. **Zobrazí** výsledky priamo
+4. **Vypíše** výsledky priamo
 
-**Kedy to použiť:** Keď presne viete, aký výpočet chcete vykonať, a chcete ho zavolať programovo.
+**Poznámka:** Tento príklad používa Spring AI 1.1.0-SNAPSHOT závislosť, ktorá zaviedla builder pattern pre `WebFluxSseClientTransport`. Ak používate staršiu stabilnú verziu, možno budete musieť použiť priamy konštruktor.
+
+**Kedy to použiť:** Keď presne viete, aký výpočet chcete vykonať a chcete ho zavolať programovo.
 
 ### 4. Klient s podporou AI
 
@@ -230,8 +232,8 @@ public class LangChain4jClient {
 
 **Čo to robí:**
 1. **Vytvorí** pripojenie k AI modelu pomocou vášho GitHub tokenu
-2. **Pripojí** AI k MCP serveru kalkulačky
-3. **Sprístupní** AI všetky nástroje kalkulačky
+2. **Pripojí** AI k nášmu MCP serveru kalkulačky
+3. **Sprístupní** AI všetky naše nástroje kalkulačky
 4. **Umožní** prirodzené jazykové požiadavky ako "Vypočítaj súčet 24.5 a 17.3"
 
 **AI automaticky:**
@@ -296,7 +298,7 @@ The square root of 144 is 12.
 
 ### Krok 4: Zatvorenie MCP servera
 
-Keď skončíte testovanie, môžete zastaviť AI klient stlačením `Ctrl+C` v jeho termináli. MCP server bude bežať, kým ho nezastavíte.
+Keď skončíte testovanie, môžete zastaviť AI klienta stlačením `Ctrl+C` v jeho termináli. MCP server bude bežať, kým ho nezastavíte.
 Na zastavenie servera stlačte `Ctrl+C` v termináli, kde beží.
 
 ## Ako to všetko spolu funguje
@@ -304,7 +306,7 @@ Na zastavenie servera stlačte `Ctrl+C` v termináli, kde beží.
 Tu je kompletný proces, keď sa opýtate AI "Aký je súčet 5 + 3?":
 
 1. **Vy** sa opýtate AI v prirodzenom jazyku
-2. **AI** analyzuje vašu požiadavku a pochopí, že chcete sčítať
+2. **AI** analyzuje vašu požiadavku a zistí, že chcete sčítať
 3. **AI** zavolá MCP server: `add(5.0, 3.0)`
 4. **Služba kalkulačky** vykoná: `5.0 + 3.0 = 8.0`
 5. **Služba kalkulačky** vráti: `"5.00 + 3.00 = 8.00"`
@@ -315,5 +317,7 @@ Tu je kompletný proces, keď sa opýtate AI "Aký je súčet 5 + 3?":
 
 Pre viac príkladov si pozrite [Kapitolu 04: Praktické ukážky](../README.md)
 
+---
+
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

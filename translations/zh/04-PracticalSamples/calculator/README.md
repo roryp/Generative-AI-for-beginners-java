@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:24:16+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:25:30+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "zh"
 }
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [1. 主应用程序](../../../../04-PracticalSamples/calculator)
   - [2. 计算器服务](../../../../04-PracticalSamples/calculator)
   - [3. 直接MCP客户端](../../../../04-PracticalSamples/calculator)
-  - [4. AI驱动客户端](../../../../04-PracticalSamples/calculator)
+  - [4. AI驱动的客户端](../../../../04-PracticalSamples/calculator)
 - [运行示例](../../../../04-PracticalSamples/calculator)
 - [如何协同工作](../../../../04-PracticalSamples/calculator)
 - [下一步](../../../../04-PracticalSamples/calculator)
@@ -34,7 +34,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 前置条件
 
-开始之前，请确保你已准备好以下内容：
+开始之前，请确保你已具备以下条件：
 - 安装了Java 21或更高版本
 - 使用Maven进行依赖管理
 - 拥有一个GitHub账户并设置了个人访问令牌（PAT）
@@ -59,9 +59,9 @@ calculator/
 
 ### 1. 主应用程序
 
-**文件:** `McpServerApplication.java`
+**文件名：** `McpServerApplication.java`
 
-这是计算器服务的入口点。它是一个标准的Spring Boot应用程序，并有一个特殊的功能：
+这是计算器服务的入口点。它是一个标准的Spring Boot应用程序，并有一个特别的功能：
 
 ```java
 @SpringBootApplication
@@ -78,16 +78,16 @@ public class McpServerApplication {
 }
 ```
 
-**功能说明:**
-- 在端口8080启动一个Spring Boot Web服务器
-- 创建一个`ToolCallbackProvider`，使我们的计算器方法可以作为MCP工具使用
+**功能说明：**
+- 在8080端口启动一个Spring Boot Web服务器
+- 创建一个`ToolCallbackProvider`，使计算器方法可以作为MCP工具使用
 - `@Bean`注解告诉Spring将其管理为其他组件可用的组件
 
 ### 2. 计算器服务
 
-**文件:** `CalculatorService.java`
+**文件名：** `CalculatorService.java`
 
-这是所有数学运算的核心。每个方法都使用`@Tool`标记，以便通过MCP调用：
+这里是所有数学运算的核心。每个方法都使用`@Tool`标注，以便通过MCP调用：
 
 ```java
 @Service
@@ -113,18 +113,18 @@ public class CalculatorService {
 }
 ```
 
-**关键特点:**
+**关键特性：**
 
-1. **`@Tool`注解**: 告诉MCP该方法可以被外部客户端调用
-2. **清晰的描述**: 每个工具都有一个描述，帮助AI模型理解何时使用它
-3. **一致的返回格式**: 所有操作返回可读的字符串，例如"5.00 + 3.00 = 8.00"
-4. **错误处理**: 除零和负数开平方会返回错误信息
+1. **`@Tool`注解：** 告诉MCP该方法可以被外部客户端调用
+2. **清晰的描述：** 每个工具都有描述，帮助AI模型理解何时使用
+3. **一致的返回格式：** 所有操作返回可读字符串，例如"5.00 + 3.00 = 8.00"
+4. **错误处理：** 除以零和负数开平方会返回错误信息
 
-**可用操作:**
+**可用操作：**
 - `add(a, b)` - 两数相加
-- `subtract(a, b)` - 两数相减
+- `subtract(a, b)` - 第一个数减去第二个数
 - `multiply(a, b)` - 两数相乘
-- `divide(a, b)` - 两数相除（带零检查）
+- `divide(a, b)` - 第一个数除以第二个数（带零检查）
 - `power(base, exponent)` - 基数的指数次幂
 - `squareRoot(number)` - 计算平方根（带负数检查）
 - `modulus(a, b)` - 返回除法的余数
@@ -133,7 +133,7 @@ public class CalculatorService {
 
 ### 3. 直接MCP客户端
 
-**文件:** `SDKClient.java`
+**文件名：** `SDKClient.java`
 
 此客户端直接与MCP服务器通信，不使用AI。它手动调用特定的计算器功能：
 
@@ -141,9 +141,9 @@ public class CalculatorService {
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -171,17 +171,19 @@ public class SDKClient {
 }
 ```
 
-**功能说明:**
-1. **连接**到计算器服务器`http://localhost:8080`
-2. **列出**所有可用工具（我们的计算器功能）
+**功能说明：**
+1. **连接**到计算器服务器`http://localhost:8080`，使用构建器模式
+2. **列出**所有可用工具（即计算器功能）
 3. **调用**特定功能并传递精确参数
 4. **直接打印**结果
 
-**使用场景:** 当你明确知道需要执行的计算并希望以编程方式调用时。
+**注意：** 此示例使用Spring AI 1.1.0-SNAPSHOT依赖，该版本引入了`WebFluxSseClientTransport`的构建器模式。如果你使用较旧的稳定版本，可能需要使用直接构造函数。
 
-### 4. AI驱动客户端
+**使用场景：** 当你明确知道需要执行的计算并希望以编程方式调用时。
 
-**文件:** `LangChain4jClient.java`
+### 4. AI驱动的客户端
+
+**文件名：** `LangChain4jClient.java`
 
 此客户端使用AI模型（GPT-4o-mini），可以自动决定使用哪些计算器工具：
 
@@ -228,13 +230,13 @@ public class LangChain4jClient {
 }
 ```
 
-**功能说明:**
+**功能说明：**
 1. **创建**一个AI模型连接，使用你的GitHub令牌
 2. **连接**AI到我们的计算器MCP服务器
 3. **赋予**AI访问所有计算器工具的权限
 4. **支持**自然语言请求，例如"计算24.5和17.3的和"
 
-**AI自动完成以下操作:**
+**AI自动完成：**
 - 理解你想要进行加法运算
 - 选择`add`工具
 - 调用`add(24.5, 17.3)`
@@ -242,7 +244,7 @@ public class LangChain4jClient {
 
 ## 运行示例
 
-### 第一步: 启动计算器服务器
+### 第一步：启动计算器服务器
 
 首先，设置你的GitHub令牌（AI客户端需要）：
 
@@ -267,7 +269,7 @@ mvn clean spring-boot:run
 Started McpServerApplication in X.XXX seconds
 ```
 
-### 第二步: 使用直接客户端测试
+### 第二步：使用直接客户端测试
 
 在**新**终端中（服务器仍在运行），运行直接MCP客户端：
 ```bash
@@ -275,33 +277,33 @@ cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
 ```
 
-你会看到类似以下的输出：
+你将看到类似以下的输出：
 ```
 Available Tools = [add, subtract, multiply, divide, power, squareRoot, modulus, absolute, help]
 Add Result = 5.00 + 3.00 = 8.00
 Square Root Result = √16.00 = 4.00
 ```
 
-### 第三步: 使用AI客户端测试
+### 第三步：使用AI客户端测试
 
 ```bash
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
 ```
 
-你会看到AI自动使用工具：
+你将看到AI自动使用工具：
 ```
 The sum of 24.5 and 17.3 is 41.8.
 The square root of 144 is 12.
 ```
 
-### 第四步: 关闭MCP服务器
+### 第四步：关闭MCP服务器
 
 测试完成后，可以通过在其终端中按`Ctrl+C`停止AI客户端。MCP服务器将继续运行，直到你停止它。
 要停止服务器，请在运行它的终端中按`Ctrl+C`。
 
 ## 如何协同工作
 
-以下是当你向AI询问"5 + 3是多少？"时的完整流程：
+当你问AI“5 + 3等于多少？”时，完整流程如下：
 
 1. **你**以自然语言向AI提问
 2. **AI**分析你的请求并确定你需要加法运算
@@ -315,5 +317,7 @@ The square root of 144 is 12.
 
 更多示例请参见[第04章：实用样例](../README.md)
 
+---
+
 **免责声明**：  
-本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。应以原始语言的文档作为权威来源。对于关键信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。
+本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于重要信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。

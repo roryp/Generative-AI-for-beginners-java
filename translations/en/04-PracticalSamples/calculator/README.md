@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:21:05+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:21:53+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "en"
 }
@@ -35,7 +35,7 @@ This tutorial walks you through building a calculator service using the Model Co
 ## Prerequisites
 
 Before you begin, ensure you have:
-- Java 21 or later installed
+- Java 21 or higher installed
 - Maven for managing dependencies
 - A GitHub account with a personal access token (PAT)
 - Basic knowledge of Java and Spring Boot
@@ -81,7 +81,7 @@ public class McpServerApplication {
 **What it does:**
 - Launches a Spring Boot web server on port 8080
 - Creates a `ToolCallbackProvider` to make calculator methods accessible as MCP tools
-- The `@Bean` annotation ensures Spring manages this as a reusable component
+- The `@Bean` annotation ensures Spring manages this as a component for other parts to use
 
 ### 2. Calculator Service
 
@@ -117,8 +117,8 @@ public class CalculatorService {
 
 1. **`@Tool` Annotation**: Marks methods as callable by external clients
 2. **Clear Descriptions**: Each tool includes a description to help AI models understand its purpose
-3. **Consistent Return Format**: All operations return user-friendly strings like "5.00 + 3.00 = 8.00"
-4. **Error Handling**: Handles issues like division by zero or negative square roots with error messages
+3. **Consistent Return Format**: All operations return human-readable strings like "5.00 + 3.00 = 8.00"
+4. **Error Handling**: Handles cases like division by zero and negative square roots with error messages
 
 **Available Operations:**
 - `add(a, b)` - Adds two numbers
@@ -141,9 +141,9 @@ This client communicates directly with the MCP server without involving AI. It m
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,18 +172,20 @@ public class SDKClient {
 ```
 
 **What it does:**
-1. **Connects** to the calculator server at `http://localhost:8080`
+1. **Connects** to the calculator server at `http://localhost:8080` using the builder pattern
 2. **Lists** all available tools (calculator functions)
 3. **Calls** specific functions with precise parameters
 4. **Prints** the results directly
 
-**When to use this:** When you know exactly what calculation you need and want to execute it programmatically.
+**Note:** This example uses the Spring AI 1.1.0-SNAPSHOT dependency, which introduced a builder pattern for the `WebFluxSseClientTransport`. If you're using an older stable version, you may need to use the direct constructor instead.
+
+**When to use this:** When you know exactly which calculation you want to perform and need to call it programmatically.
 
 ### 4. AI-Powered Client
 
 **File:** `LangChain4jClient.java`
 
-This client uses an AI model (GPT-4o-mini) that can automatically determine which calculator tools to use:
+This client uses an AI model (GPT-4o-mini) that can automatically decide which calculator tools to use:
 
 ```java
 public class LangChain4jClient {
@@ -232,12 +234,12 @@ public class LangChain4jClient {
 1. **Establishes** a connection to the AI model using your GitHub token
 2. **Links** the AI to the calculator MCP server
 3. **Grants** the AI access to all calculator tools
-4. **Allows** natural language queries like "What is the sum of 24.5 and 17.3?"
+4. **Enables** natural language requests like "Calculate the sum of 24.5 and 17.3"
 
 **The AI automatically:**
 - Understands the request involves addition
 - Selects the `add` tool
-- Executes `add(24.5, 17.3)`
+- Calls `add(24.5, 17.3)`
 - Returns the result in a natural response
 
 ## Running the Examples
@@ -301,10 +303,10 @@ To stop the server, press `Ctrl+C` in the terminal where it's running.
 
 ## How It All Works Together
 
-Here’s the complete process when you ask the AI "What’s 5 + 3?":
+Here’s the complete process when you ask the AI "What's 5 + 3?":
 
-1. **You** ask the AI in plain language
-2. **AI** interprets your request and identifies it as an addition
+1. **You** ask the AI in natural language
+2. **AI** interprets your request and identifies it as an addition operation
 3. **AI** calls the MCP server: `add(5.0, 3.0)`
 4. **Calculator Service** performs: `5.0 + 3.0 = 8.0`
 5. **Calculator Service** returns: `"5.00 + 3.00 = 8.00"`
@@ -313,7 +315,9 @@ Here’s the complete process when you ask the AI "What’s 5 + 3?":
 
 ## Next Steps
 
-For more examples, refer to [Chapter 04: Practical samples](../README.md)
+For more examples, see [Chapter 04: Practical samples](../README.md)
+
+---
 
 **Disclaimer**:  
 This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

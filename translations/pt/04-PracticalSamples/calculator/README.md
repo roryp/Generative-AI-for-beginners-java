@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:29:28+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:30:26+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "pt"
 }
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Este tutorial explica como construir um serviço de calculadora utilizando o Model Context Protocol (MCP). Vai aprender:
 
-- Como criar um serviço que a IA pode usar como ferramenta
+- Como criar um serviço que pode ser usado como ferramenta por IA
 - Como configurar comunicação direta com serviços MCP
 - Como modelos de IA podem escolher automaticamente quais ferramentas usar
 - A diferença entre chamadas diretas ao protocolo e interações assistidas por IA
@@ -87,7 +87,7 @@ public class McpServerApplication {
 
 **Ficheiro:** `CalculatorService.java`
 
-Aqui é onde todos os cálculos acontecem. Cada método está marcado com `@Tool` para estar disponível através do MCP:
+Aqui é onde todos os cálculos são realizados. Cada método está marcado com `@Tool` para torná-lo acessível através do MCP:
 
 ```java
 @Service
@@ -141,9 +141,9 @@ Este cliente comunica diretamente com o servidor MCP sem usar IA. Ele chama manu
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,10 +172,12 @@ public class SDKClient {
 ```
 
 **O que faz:**
-1. **Conecta-se** ao servidor da calculadora em `http://localhost:8080`
+1. **Conecta-se** ao servidor da calculadora em `http://localhost:8080` usando o padrão builder
 2. **Lista** todas as ferramentas disponíveis (as funções da calculadora)
 3. **Chama** funções específicas com parâmetros exatos
 4. **Imprime** os resultados diretamente
+
+**Nota:** Este exemplo utiliza a dependência Spring AI 1.1.0-SNAPSHOT, que introduziu um padrão builder para o `WebFluxSseClientTransport`. Se estiver a usar uma versão estável mais antiga, pode ser necessário usar o construtor direto.
 
 **Quando usar:** Quando sabe exatamente qual cálculo quer realizar e deseja chamá-lo programaticamente.
 
@@ -244,7 +246,7 @@ public class LangChain4jClient {
 
 ### Passo 1: Iniciar o Servidor da Calculadora
 
-Primeiro, configure o seu token GitHub (necessário para o cliente com IA):
+Primeiro, defina o seu token GitHub (necessário para o cliente com IA):
 
 **Windows:**
 ```cmd
@@ -315,5 +317,7 @@ Aqui está o fluxo completo quando pergunta à IA "Quanto é 5 + 3?":
 
 Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
 
+---
+
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

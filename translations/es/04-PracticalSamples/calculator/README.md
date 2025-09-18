@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:21:49+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:22:46+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "es"
 }
 -->
-# Tutorial del Calculador MCP para Principiantes
+# Tutorial de la Calculadora MCP para Principiantes
 
 ## Tabla de Contenidos
 
@@ -28,9 +28,9 @@ CO_OP_TRANSLATOR_METADATA:
 Este tutorial explica cómo construir un servicio de calculadora utilizando el Protocolo de Contexto de Modelo (MCP). Aprenderás:
 
 - Cómo crear un servicio que la IA pueda usar como herramienta
-- Cómo configurar comunicación directa con servicios MCP
+- Cómo configurar la comunicación directa con servicios MCP
 - Cómo los modelos de IA pueden elegir automáticamente qué herramientas usar
-- La diferencia entre llamadas directas al protocolo e interacciones asistidas por IA
+- La diferencia entre llamadas directas al protocolo y las interacciones asistidas por IA
 
 ## Requisitos Previos
 
@@ -87,7 +87,7 @@ public class McpServerApplication {
 
 **Archivo:** `CalculatorService.java`
 
-Aquí es donde se realizan todos los cálculos. Cada método está marcado con `@Tool` para hacerlo disponible a través de MCP:
+Aquí es donde ocurre toda la matemática. Cada método está marcado con `@Tool` para hacerlo disponible a través de MCP:
 
 ```java
 @Service
@@ -117,7 +117,7 @@ public class CalculatorService {
 
 1. **Anotación `@Tool`**: Indica a MCP que este método puede ser llamado por clientes externos
 2. **Descripciones Claras**: Cada herramienta tiene una descripción que ayuda a los modelos de IA a entender cuándo usarla
-3. **Formato de Retorno Consistente**: Todas las operaciones devuelven cadenas legibles como "5.00 + 3.00 = 8.00"
+3. **Formato Consistente de Retorno**: Todas las operaciones devuelven cadenas legibles como "5.00 + 3.00 = 8.00"
 4. **Manejo de Errores**: La división por cero y las raíces cuadradas negativas devuelven mensajes de error
 
 **Operaciones Disponibles:**
@@ -125,7 +125,7 @@ public class CalculatorService {
 - `subtract(a, b)` - Resta el segundo del primero
 - `multiply(a, b)` - Multiplica dos números
 - `divide(a, b)` - Divide el primero por el segundo (con verificación de cero)
-- `power(base, exponent)` - Eleva la base al exponente
+- `power(base, exponent)` - Eleva la base a la potencia del exponente
 - `squareRoot(number)` - Calcula la raíz cuadrada (con verificación de negativos)
 - `modulus(a, b)` - Devuelve el resto de la división
 - `absolute(number)` - Devuelve el valor absoluto
@@ -141,9 +141,9 @@ Este cliente se comunica directamente con el servidor MCP sin usar IA. Llama man
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,18 +172,20 @@ public class SDKClient {
 ```
 
 **Qué hace:**
-1. **Se conecta** al servidor de la calculadora en `http://localhost:8080`
+1. **Conecta** al servidor de calculadora en `http://localhost:8080` usando el patrón builder
 2. **Lista** todas las herramientas disponibles (nuestras funciones de calculadora)
 3. **Llama** a funciones específicas con parámetros exactos
 4. **Imprime** los resultados directamente
 
-**Cuándo usarlo:** Cuando sabes exactamente qué cálculo quieres realizar y deseas llamarlo programáticamente.
+**Nota:** Este ejemplo utiliza la dependencia Spring AI 1.1.0-SNAPSHOT, que introdujo un patrón builder para el `WebFluxSseClientTransport`. Si estás usando una versión estable más antigua, es posible que necesites usar el constructor directo en su lugar.
+
+**Cuándo usar esto:** Cuando sabes exactamente qué cálculo quieres realizar y deseas llamarlo programáticamente.
 
 ### 4. Cliente Potenciado por IA
 
 **Archivo:** `LangChain4jClient.java`
 
-Este cliente utiliza un modelo de IA (GPT-4o-mini) que puede decidir automáticamente qué herramientas de la calculadora usar:
+Este cliente utiliza un modelo de IA (GPT-4o-mini) que puede decidir automáticamente qué herramientas de calculadora usar:
 
 ```java
 public class LangChain4jClient {
@@ -229,8 +231,8 @@ public class LangChain4jClient {
 ```
 
 **Qué hace:**
-1. **Crea** una conexión con el modelo de IA utilizando tu token de GitHub
-2. **Conecta** la IA a nuestro servidor MCP de la calculadora
+1. **Crea** una conexión con el modelo de IA usando tu token de GitHub
+2. **Conecta** la IA a nuestro servidor MCP de calculadora
 3. **Da** acceso a la IA a todas nuestras herramientas de calculadora
 4. **Permite** solicitudes en lenguaje natural como "Calcula la suma de 24.5 y 17.3"
 
@@ -242,7 +244,7 @@ public class LangChain4jClient {
 
 ## Ejecutando los Ejemplos
 
-### Paso 1: Inicia el Servidor de la Calculadora
+### Paso 1: Inicia el Servidor de Calculadora
 
 Primero, configura tu token de GitHub (necesario para el cliente de IA):
 
@@ -297,13 +299,13 @@ The square root of 144 is 12.
 ### Paso 4: Cierra el Servidor MCP
 
 Cuando termines de probar, puedes detener el cliente de IA presionando `Ctrl+C` en su terminal. El servidor MCP seguirá ejecutándose hasta que lo detengas.
-Para detener el servidor, presiona `Ctrl+C` en la terminal donde está en ejecución.
+Para detener el servidor, presiona `Ctrl+C` en la terminal donde está ejecutándose.
 
 ## Cómo Funciona Todo Junto
 
-Este es el flujo completo cuando le preguntas a la IA "¿Cuánto es 5 + 3?":
+Aquí está el flujo completo cuando le preguntas a la IA "¿Cuánto es 5 + 3?":
 
-1. **Tú** le preguntas a la IA en lenguaje natural
+1. **Tú** preguntas a la IA en lenguaje natural
 2. **La IA** analiza tu solicitud y se da cuenta de que quieres sumar
 3. **La IA** llama al servidor MCP: `add(5.0, 3.0)`
 4. **El Servicio de Calculadora** realiza: `5.0 + 3.0 = 8.0`
@@ -315,5 +317,7 @@ Este es el flujo completo cuando le preguntas a la IA "¿Cuánto es 5 + 3?":
 
 Para más ejemplos, consulta [Capítulo 04: Ejemplos prácticos](../README.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

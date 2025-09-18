@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:33:36+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:35:10+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "fi"
 }
 -->
-# MCP-laskimen opas aloittelijoille
+# MCP-laskinopas aloittelijoille
 
 ## Sisällysluettelo
 
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Mitä opit
 
-Tämä opas selittää, kuinka rakentaa laskinpalvelu Model Context Protocolin (MCP) avulla. Opit:
+Tämä opas selittää, kuinka rakentaa laskinpalvelu käyttämällä Model Context Protocolia (MCP). Opit:
 
 - Kuinka luoda palvelu, jota tekoäly voi käyttää työkaluna
 - Kuinka asettaa suora yhteys MCP-palveluihin
@@ -87,7 +87,7 @@ public class McpServerApplication {
 
 **Tiedosto:** `CalculatorService.java`
 
-Täällä tapahtuu kaikki laskenta. Jokainen metodi on merkitty `@Tool`-annotaatiolla, jotta se on käytettävissä MCP:n kautta:
+Täällä tapahtuu kaikki laskenta. Jokainen metodi on merkitty `@Tool`-annotaatiolla, jotta se on saatavilla MCP:n kautta:
 
 ```java
 @Service
@@ -115,7 +115,7 @@ public class CalculatorService {
 
 **Keskeiset ominaisuudet:**
 
-1. **`@Tool`-annotaatio**: Tämä kertoo MCP:lle, että ulkoiset asiakkaat voivat kutsua tätä metodia
+1. **`@Tool`-annotaatio**: Tämä kertoo MCP:lle, että metodia voi kutsua ulkoiset asiakkaat
 2. **Selkeät kuvaukset**: Jokaisella työkalulla on kuvaus, joka auttaa tekoälymalleja ymmärtämään, milloin sitä käyttää
 3. **Johdonmukainen palautusmuoto**: Kaikki operaatiot palauttavat helposti luettavia merkkijonoja, kuten "5.00 + 3.00 = 8.00"
 4. **Virheenkäsittely**: Nollalla jakaminen ja negatiiviset neliöjuuret palauttavat virheilmoituksia
@@ -124,9 +124,9 @@ public class CalculatorService {
 - `add(a, b)` - Laskee kahden luvun summan
 - `subtract(a, b)` - Vähentää toisen luvun ensimmäisestä
 - `multiply(a, b)` - Kertoo kaksi lukua
-- `divide(a, b)` - Jakaa ensimmäisen luvun toisella (nollatarkistus)
+- `divide(a, b)` - Jakaa ensimmäisen luvun toisella (nollatarkistus mukana)
 - `power(base, exponent)` - Korottaa luvun eksponenttiin
-- `squareRoot(number)` - Laskee neliöjuuren (negatiivisten tarkistus)
+- `squareRoot(number)` - Laskee neliöjuuren (negatiivisten lukujen tarkistus mukana)
 - `modulus(a, b)` - Palauttaa jakolaskun jakojäännöksen
 - `absolute(number)` - Palauttaa luvun itseisarvon
 - `help()` - Palauttaa tietoa kaikista operaatioista
@@ -141,9 +141,9 @@ Tämä asiakas kommunikoi suoraan MCP-palvelimen kanssa ilman tekoälyä. Se kut
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,10 +172,12 @@ public class SDKClient {
 ```
 
 **Mitä tämä tekee:**
-1. **Yhdistää** laskinpalvelimeen osoitteessa `http://localhost:8080`
+1. **Yhdistää** laskinpalvelimeen osoitteessa `http://localhost:8080` käyttäen builder-mallia
 2. **Listaa** kaikki saatavilla olevat työkalut (laskimen toiminnot)
-3. **Kutsuu** tiettyjä toimintoja tarkkojen parametrien avulla
+3. **Kutsuu** tiettyjä toimintoja tarkoin parametrein
 4. **Tulostaa** tulokset suoraan
+
+**Huom:** Tämä esimerkki käyttää Spring AI 1.1.0-SNAPSHOT -riippuvuutta, joka esitteli builder-mallin `WebFluxSseClientTransport`-luokalle. Jos käytät vanhempaa vakaata versiota, sinun täytyy ehkä käyttää suoraa konstruktoria.
 
 **Milloin käyttää tätä:** Kun tiedät tarkalleen, minkä laskutoimituksen haluat suorittaa ja haluat kutsua sen ohjelmallisesti.
 
@@ -183,7 +185,7 @@ public class SDKClient {
 
 **Tiedosto:** `LangChain4jClient.java`
 
-Tämä asiakas käyttää tekoälymallia (GPT-4o-mini), joka voi automaattisesti päättää, mitä laskimen työkaluja käyttää:
+Tämä asiakas käyttää tekoälymallia (GPT-4o-mini), joka voi automaattisesti päättää, mitä laskintyökaluja käyttää:
 
 ```java
 public class LangChain4jClient {
@@ -230,8 +232,8 @@ public class LangChain4jClient {
 
 **Mitä tämä tekee:**
 1. **Luo** yhteyden tekoälymalliin GitHub-tunnuksesi avulla
-2. **Yhdistää** tekoälyn laskinpalvelimeen MCP:n kautta
-3. **Antaa** tekoälylle pääsyn kaikkiin laskimen työkaluihin
+2. **Yhdistää** tekoälyn laskinpalvelimeemme MCP:n kautta
+3. **Antaa** tekoälylle pääsyn kaikkiin laskintyökaluihimme
 4. **Mahdollistaa** luonnollisen kielen pyynnöt, kuten "Laske 24.5 ja 17.3 summa"
 
 **Tekoäly automaattisesti:**
@@ -262,14 +264,14 @@ cd 04-PracticalSamples/calculator
 mvn clean spring-boot:run
 ```
 
-Palvelin käynnistyy osoitteessa `http://localhost:8080`. Näet:
+Palvelin käynnistyy osoitteessa `http://localhost:8080`. Näet seuraavan:
 ```
 Started McpServerApplication in X.XXX seconds
 ```
 
 ### Vaihe 2: Testaa suoralla asiakkaalla
 
-Avaa **UUSI** pääte, kun palvelin on edelleen käynnissä, ja suorita suora MCP-asiakas:
+Avaa **UUSI** terminaali, kun palvelin on edelleen käynnissä, ja suorita suora MCP-asiakas:
 ```bash
 cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
@@ -296,8 +298,8 @@ The square root of 144 is 12.
 
 ### Vaihe 4: Sulje MCP-palvelin
 
-Kun olet valmis testaamaan, voit lopettaa tekoälyasiakkaan painamalla `Ctrl+C` sen pääteikkunassa. MCP-palvelin pysyy käynnissä, kunnes lopetat sen.
-Sulkeaksesi palvelimen, paina `Ctrl+C` pääteikkunassa, jossa se on käynnissä.
+Kun olet valmis testaamaan, voit sulkea tekoälyasiakkaan painamalla `Ctrl+C` sen terminaalissa. MCP-palvelin pysyy käynnissä, kunnes pysäytät sen.
+Pysäyttääksesi palvelimen, paina `Ctrl+C` terminaalissa, jossa se on käynnissä.
 
 ## Kuinka kaikki toimii yhdessä
 
@@ -313,7 +315,9 @@ Näin koko prosessi etenee, kun kysyt tekoälyltä "Mikä on 5 + 3?":
 
 ## Seuraavat askeleet
 
-Lisää esimerkkejä löydät [Luku 04: Käytännön esimerkit](../README.md)
+Lisää esimerkkejä löydät kohdasta [Luku 04: Käytännön esimerkit](../README.md)
+
+---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

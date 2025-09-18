@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:32:31+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:33:54+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "sv"
 }
@@ -115,7 +115,7 @@ public class CalculatorService {
 
 **Viktiga funktioner:**
 
-1. **`@Tool`-annotering**: Detta säger till MCP att denna metod kan anropas av externa klienter
+1. **`@Tool`-annotering**: Detta berättar för MCP att denna metod kan anropas av externa klienter
 2. **Tydliga beskrivningar**: Varje verktyg har en beskrivning som hjälper AI-modeller att förstå när det ska användas
 3. **Konsekvent returformat**: Alla operationer returnerar läsbara strängar som "5.00 + 3.00 = 8.00"
 4. **Felhantering**: Division med noll och negativa kvadratrötter returnerar felmeddelanden
@@ -125,7 +125,7 @@ public class CalculatorService {
 - `subtract(a, b)` - Subtraherar det andra från det första
 - `multiply(a, b)` - Multiplicerar två tal
 - `divide(a, b)` - Dividerar det första med det andra (med kontroll för noll)
-- `power(base, exponent)` - Höjer basen till exponentens potens
+- `power(base, exponent)` - Upphöjer basen till exponenten
 - `squareRoot(number)` - Beräknar kvadratroten (med kontroll för negativa tal)
 - `modulus(a, b)` - Returnerar resten av divisionen
 - `absolute(number)` - Returnerar absolutvärdet
@@ -141,9 +141,9 @@ Denna klient kommunicerar direkt med MCP-servern utan att använda AI. Den anrop
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,18 +172,20 @@ public class SDKClient {
 ```
 
 **Vad detta gör:**
-1. **Ansluter** till kalkylatorservern på `http://localhost:8080`
+1. **Ansluter** till kalkylatorservern på `http://localhost:8080` med hjälp av builder-mönstret
 2. **Listar** alla tillgängliga verktyg (våra kalkylatorfunktioner)
 3. **Anropar** specifika funktioner med exakta parametrar
 4. **Skriver ut** resultaten direkt
 
-**När detta används:** När du vet exakt vilken beräkning du vill utföra och vill anropa den programmatiskt.
+**Obs:** Detta exempel använder Spring AI 1.1.0-SNAPSHOT-beroendet, som introducerade ett builder-mönster för `WebFluxSseClientTransport`. Om du använder en äldre stabil version kan du behöva använda den direkta konstruktorn istället.
+
+**När detta ska användas:** När du vet exakt vilken beräkning du vill utföra och vill anropa den programmatiskt.
 
 ### 4. AI-driven Klient
 
 **Fil:** `LangChain4jClient.java`
 
-Denna klient använder en AI-modell (GPT-4o-mini) som automatiskt kan avgöra vilka kalkylatorverktyg som ska användas:
+Denna klient använder en AI-modell (GPT-4o-mini) som automatiskt kan bestämma vilka kalkylatorverktyg som ska användas:
 
 ```java
 public class LangChain4jClient {
@@ -315,5 +317,7 @@ Här är det kompletta flödet när du frågar AI "Vad är 5 + 3?":
 
 För fler exempel, se [Kapitel 04: Praktiska exempel](../README.md)
 
+---
+
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

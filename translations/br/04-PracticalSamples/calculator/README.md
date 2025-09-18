@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:29:51+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:30:49+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "br"
 }
@@ -141,9 +141,9 @@ Este cliente se comunica diretamente com o servidor MCP sem usar IA. Ele chama m
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,10 +172,12 @@ public class SDKClient {
 ```
 
 **O que isso faz:**
-1. **Conecta-se** ao servidor da calculadora em `http://localhost:8080`
-2. **Lista** todas as ferramentas disponíveis (nossas funções da calculadora)
+1. **Conecta-se** ao servidor da calculadora em `http://localhost:8080` usando o padrão builder
+2. **Lista** todas as ferramentas disponíveis (nossas funções de calculadora)
 3. **Chama** funções específicas com parâmetros exatos
 4. **Imprime** os resultados diretamente
+
+**Nota:** Este exemplo usa a dependência Spring AI 1.1.0-SNAPSHOT, que introduziu um padrão builder para o `WebFluxSseClientTransport`. Se você estiver usando uma versão estável mais antiga, pode precisar usar o construtor direto.
 
 **Quando usar:** Quando você sabe exatamente qual cálculo deseja realizar e quer chamá-lo programaticamente.
 
@@ -242,9 +244,9 @@ public class LangChain4jClient {
 
 ## Executando os Exemplos
 
-### Passo 1: Iniciar o Servidor da Calculadora
+### Passo 1: Inicie o Servidor da Calculadora
 
-Primeiro, configure seu token do GitHub (necessário para o cliente de IA):
+Primeiro, configure seu token do GitHub (necessário para o cliente com IA):
 
 **Windows:**
 ```cmd
@@ -267,7 +269,7 @@ O servidor será iniciado em `http://localhost:8080`. Você deve ver:
 Started McpServerApplication in X.XXX seconds
 ```
 
-### Passo 2: Testar com o Cliente Direto
+### Passo 2: Teste com o Cliente Direto
 
 Em um **NOVO** terminal com o servidor ainda em execução, execute o cliente MCP direto:
 ```bash
@@ -282,7 +284,7 @@ Add Result = 5.00 + 3.00 = 8.00
 Square Root Result = √16.00 = 4.00
 ```
 
-### Passo 3: Testar com o Cliente de IA
+### Passo 3: Teste com o Cliente com IA
 
 ```bash
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
@@ -294,9 +296,9 @@ The sum of 24.5 and 17.3 is 41.8.
 The square root of 144 is 12.
 ```
 
-### Passo 4: Fechar o Servidor MCP
+### Passo 4: Feche o Servidor MCP
 
-Quando terminar os testes, você pode parar o cliente de IA pressionando `Ctrl+C` no terminal onde ele está rodando. O servidor MCP continuará em execução até que você o pare.
+Quando terminar os testes, você pode parar o cliente com IA pressionando `Ctrl+C` no terminal onde ele está rodando. O servidor MCP continuará em execução até que você o pare.
 Para parar o servidor, pressione `Ctrl+C` no terminal onde ele está rodando.
 
 ## Como Tudo Funciona Junto
@@ -314,6 +316,8 @@ Aqui está o fluxo completo quando você pergunta à IA "Quanto é 5 + 3?":
 ## Próximos Passos
 
 Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

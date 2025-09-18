@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:38:29+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:40:09+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "ro"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Cuprins
 
 - [Ce Vei Învăța](../../../../04-PracticalSamples/calculator)
-- [Cerințe Prealabile](../../../../04-PracticalSamples/calculator)
+- [Prerechizite](../../../../04-PracticalSamples/calculator)
 - [Înțelegerea Structurii Proiectului](../../../../04-PracticalSamples/calculator)
 - [Componentele de Bază Explicate](../../../../04-PracticalSamples/calculator)
   - [1. Aplicația Principală](../../../../04-PracticalSamples/calculator)
@@ -20,19 +20,19 @@ CO_OP_TRANSLATOR_METADATA:
   - [3. Client MCP Direct](../../../../04-PracticalSamples/calculator)
   - [4. Client Bazat pe AI](../../../../04-PracticalSamples/calculator)
 - [Rularea Exemplului](../../../../04-PracticalSamples/calculator)
-- [Cum Funcționează Împreună](../../../../04-PracticalSamples/calculator)
-- [Pașii Următori](../../../../04-PracticalSamples/calculator)
+- [Cum Funcționează Totul Împreună](../../../../04-PracticalSamples/calculator)
+- [Pași Următori](../../../../04-PracticalSamples/calculator)
 
 ## Ce Vei Învăța
 
 Acest tutorial explică cum să construiești un serviciu de calculator folosind Model Context Protocol (MCP). Vei înțelege:
 
-- Cum să creezi un serviciu pe care AI îl poate folosi ca unealtă
+- Cum să creezi un serviciu pe care AI îl poate folosi ca instrument
 - Cum să configurezi comunicarea directă cu serviciile MCP
-- Cum modelele AI pot alege automat ce unelte să folosească
-- Diferența dintre apelurile directe de protocol și interacțiunile asistate de AI
+- Cum modelele AI pot alege automat ce instrumente să folosească
+- Diferența dintre apelurile directe ale protocolului și interacțiunile asistate de AI
 
-## Cerințe Prealabile
+## Prerechizite
 
 Înainte de a începe, asigură-te că ai:
 - Java 21 sau o versiune mai recentă instalată
@@ -80,14 +80,14 @@ public class McpServerApplication {
 
 **Ce face:**
 - Pornește un server web Spring Boot pe portul 8080
-- Creează un `ToolCallbackProvider` care face metodele calculatorului disponibile ca unelte MCP
+- Creează un `ToolCallbackProvider` care face metodele calculatorului disponibile ca instrumente MCP
 - Anotarea `@Bean` spune Spring să gestioneze acest lucru ca un component pe care alte părți îl pot folosi
 
 ### 2. Serviciul Calculator
 
 **Fișier:** `CalculatorService.java`
 
-Aici se realizează toate calculele. Fiecare metodă este marcată cu `@Tool` pentru a fi disponibilă prin MCP:
+Aici se întâmplă toate calculele. Fiecare metodă este marcată cu `@Tool` pentru a fi disponibilă prin MCP:
 
 ```java
 @Service
@@ -116,8 +116,8 @@ public class CalculatorService {
 **Caracteristici cheie:**
 
 1. **Anotarea `@Tool`**: Indică MCP că această metodă poate fi apelată de clienți externi
-2. **Descrieri Clare**: Fiecare unealtă are o descriere care ajută modelele AI să înțeleagă când să o folosească
-3. **Format Consistent al Răspunsurilor**: Toate operațiile returnează șiruri de caractere ușor de citit, precum "5.00 + 3.00 = 8.00"
+2. **Descrieri Clare**: Fiecare instrument are o descriere care ajută modelele AI să înțeleagă când să-l folosească
+3. **Format Consistent de Returnare**: Toate operațiile returnează șiruri de caractere ușor de citit, cum ar fi "5.00 + 3.00 = 8.00"
 4. **Gestionarea Erorilor**: Împărțirea la zero și rădăcinile pătrate negative returnează mesaje de eroare
 
 **Operații Disponibile:**
@@ -141,9 +141,9 @@ Acest client comunică direct cu serverul MCP fără a folosi AI. Apelează manu
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,18 +172,20 @@ public class SDKClient {
 ```
 
 **Ce face:**
-1. **Se conectează** la serverul calculatorului la `http://localhost:8080`
-2. **Listează** toate uneltele disponibile (funcțiile calculatorului nostru)
+1. **Se conectează** la serverul calculatorului la `http://localhost:8080` folosind pattern-ul builder
+2. **Listează** toate instrumentele disponibile (funcțiile calculatorului nostru)
 3. **Apelează** funcții specifice cu parametri exacți
-4. **Afișează** rezultatele direct
+4. **Tipărește** rezultatele direct
 
-**Când să-l folosești:** Când știi exact ce calcul vrei să efectuezi și dorești să-l apelezi programatic.
+**Notă:** Acest exemplu folosește dependența Spring AI 1.1.0-SNAPSHOT, care a introdus un pattern builder pentru `WebFluxSseClientTransport`. Dacă folosești o versiune stabilă mai veche, poate fi necesar să folosești constructorul direct.
+
+**Când să folosești acest lucru:** Când știi exact ce calcul vrei să efectuezi și dorești să-l apelezi programatic.
 
 ### 4. Client Bazat pe AI
 
 **Fișier:** `LangChain4jClient.java`
 
-Acest client folosește un model AI (GPT-4o-mini) care poate decide automat ce unelte ale calculatorului să folosească:
+Acest client folosește un model AI (GPT-4o-mini) care poate decide automat ce instrumente ale calculatorului să folosească:
 
 ```java
 public class LangChain4jClient {
@@ -229,14 +231,14 @@ public class LangChain4jClient {
 ```
 
 **Ce face:**
-1. **Creează** o conexiune cu modelul AI folosind token-ul tău GitHub
+1. **Creează** o conexiune cu modelul AI folosind token-ul GitHub
 2. **Conectează** AI-ul la serverul MCP al calculatorului nostru
-3. **Oferă** AI-ului acces la toate uneltele calculatorului
-4. **Permite** cereri în limbaj natural, precum "Calculează suma dintre 24.5 și 17.3"
+3. **Oferă** AI-ului acces la toate instrumentele calculatorului nostru
+4. **Permite** cereri în limbaj natural, cum ar fi "Calculează suma dintre 24.5 și 17.3"
 
 **AI-ul automat:**
 - Înțelege că vrei să aduni numere
-- Alege unealta `add`
+- Alege instrumentul `add`
 - Apelează `add(24.5, 17.3)`
 - Returnează rezultatul într-un răspuns natural
 
@@ -269,13 +271,13 @@ Started McpServerApplication in X.XXX seconds
 
 ### Pasul 2: Testează cu Clientul Direct
 
-Într-un **NOU** terminal, cu serverul încă pornit, rulează clientul MCP direct:
+Într-un **TERMINAL NOU** cu serverul încă pornit, rulează clientul MCP direct:
 ```bash
 cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
 ```
 
-Vei vedea un output precum:
+Vei vedea un output similar cu:
 ```
 Available Tools = [add, subtract, multiply, divide, power, squareRoot, modulus, absolute, help]
 Add Result = 5.00 + 3.00 = 8.00
@@ -288,7 +290,7 @@ Square Root Result = √16.00 = 4.00
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
 ```
 
-Vei vedea AI-ul folosind automat uneltele:
+Vei vedea AI-ul folosind automat instrumentele:
 ```
 The sum of 24.5 and 17.3 is 41.8.
 The square root of 144 is 12.
@@ -299,21 +301,23 @@ The square root of 144 is 12.
 Când ai terminat testarea, poți opri clientul AI apăsând `Ctrl+C` în terminalul său. Serverul MCP va continua să ruleze până când îl oprești.
 Pentru a opri serverul, apasă `Ctrl+C` în terminalul unde rulează.
 
-## Cum Funcționează Împreună
+## Cum Funcționează Totul Împreună
 
 Iată fluxul complet când întrebi AI-ul "Cât fac 5 + 3?":
 
 1. **Tu** întrebi AI-ul în limbaj natural
-2. **AI-ul** analizează cererea ta și își dă seama că vrei să aduni
+2. **AI-ul** analizează cererea ta și își dă seama că vrei o adunare
 3. **AI-ul** apelează serverul MCP: `add(5.0, 3.0)`
 4. **Serviciul Calculator** efectuează: `5.0 + 3.0 = 8.0`
 5. **Serviciul Calculator** returnează: `"5.00 + 3.00 = 8.00"`
 6. **AI-ul** primește rezultatul și îl formatează într-un răspuns natural
 7. **Tu** primești: "Suma dintre 5 și 3 este 8"
 
-## Pașii Următori
+## Pași Următori
 
 Pentru mai multe exemple, vezi [Capitolul 04: Exemple practice](../README.md)
+
+---
 
 **Declinare de responsabilitate**:  
 Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
