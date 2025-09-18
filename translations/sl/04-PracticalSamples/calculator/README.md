@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:40:22+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:43:44+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "sl"
 }
@@ -29,7 +29,7 @@ Ta vadnica pojasnjuje, kako zgraditi storitev kalkulatorja z uporabo Model Conte
 
 - Kako ustvariti storitev, ki jo lahko AI uporablja kot orodje
 - Kako vzpostaviti neposredno komunikacijo z MCP storitvami
-- Kako lahko AI modeli samodejno izberejo, katera orodja uporabiti
+- Kako AI modeli samodejno izberejo, katera orodja uporabiti
 - Razliko med neposrednimi klici protokola in interakcijami, ki jih podpira AI
 
 ## Predpogoji
@@ -79,9 +79,9 @@ public class McpServerApplication {
 ```
 
 **Kaj to počne:**
-- Zažene Spring Boot spletni strežnik na portu 8080
+- Zažene Spring Boot spletni strežnik na vratih 8080
 - Ustvari `ToolCallbackProvider`, ki omogoča dostop do metod kalkulatorja kot MCP orodij
-- Anotacija `@Bean` pove Springu, da naj to komponento upravlja za uporabo v drugih delih aplikacije
+- Anotacija `@Bean` pove Springu, naj to upravlja kot komponento, ki jo lahko uporabljajo drugi deli
 
 ### 2. Storitev kalkulatorja
 
@@ -115,17 +115,17 @@ public class CalculatorService {
 
 **Ključne značilnosti:**
 
-1. **Anotacija `@Tool`**: Označuje, da je metoda dostopna zunanjim odjemalcem
+1. **Anotacija `@Tool`**: Označuje, da je metoda dostopna zunanjim odjemalcem prek MCP
 2. **Jasni opisi**: Vsako orodje ima opis, ki pomaga AI modelom razumeti, kdaj ga uporabiti
 3. **Dosleden format vračanja**: Vse operacije vračajo človeško berljive nize, kot je "5.00 + 3.00 = 8.00"
-4. **Obravnava napak**: Deljenje z nič in negativne kvadratne korene vračajo sporočila o napakah
+4. **Obravnava napak**: Deljenje z nič in negativne kvadratne korene vračajo sporočila o napaki
 
 **Razpoložljive operacije:**
 - `add(a, b)` - Sešteje dve števili
 - `subtract(a, b)` - Odšteje drugo število od prvega
 - `multiply(a, b)` - Pomnoži dve števili
 - `divide(a, b)` - Deli prvo število z drugim (z preverjanjem ničle)
-- `power(base, exponent)` - Potencira osnovo na eksponent
+- `power(base, exponent)` - Potencira osnovo z eksponentom
 - `squareRoot(number)` - Izračuna kvadratni koren (z negativnim preverjanjem)
 - `modulus(a, b)` - Vrne ostanek deljenja
 - `absolute(number)` - Vrne absolutno vrednost
@@ -141,9 +141,9 @@ Ta odjemalec neposredno komunicira z MCP strežnikom brez uporabe AI. Ročno kli
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,12 +172,14 @@ public class SDKClient {
 ```
 
 **Kaj to počne:**
-1. **Poveže se** s strežnikom kalkulatorja na `http://localhost:8080`
+1. **Poveže se** s strežnikom kalkulatorja na `http://localhost:8080` z uporabo vzorca graditelja
 2. **Prikaže** vsa razpoložljiva orodja (funkcije kalkulatorja)
 3. **Kliče** specifične funkcije z natančnimi parametri
 4. **Neposredno izpiše** rezultate
 
-**Kdaj to uporabiti:** Ko natančno veste, katero operacijo želite izvesti, in jo želite poklicati programatsko.
+**Opomba:** Ta primer uporablja odvisnost Spring AI 1.1.0-SNAPSHOT, ki je uvedla vzorec graditelja za `WebFluxSseClientTransport`. Če uporabljate starejšo stabilno različico, boste morda morali uporabiti neposreden konstruktor.
+
+**Kdaj uporabiti:** Ko natančno veste, katero operacijo želite izvesti, in jo želite programatično poklicati.
 
 ### 4. Odjemalec, ki uporablja AI
 
@@ -229,9 +231,10 @@ public class LangChain4jClient {
 ```
 
 **Kaj to počne:**
-1. **Vzpostavi** povezavo z AI modelom z uporabo vašega GitHub žetona
+1. **Vzpostavi** povezavo z AI modelom z vašim GitHub žetonom
 2. **Poveže** AI z našim MCP strežnikom kalkulatorja
-3. **Omogoči** naravne jezikovne zahteve, kot je "Izračunaj vsoto 24.5 in 17.3"
+3. **Omogoči** AI dostop do vseh orodij kalkulatorja
+4. **Dovoli** naravne jezikovne zahteve, kot je "Izračunaj vsoto 24.5 in 17.3"
 
 **AI samodejno:**
 - Razume, da želite sešteti števila
@@ -287,7 +290,7 @@ Square Root Result = √16.00 = 4.00
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
 ```
 
-Videli boste, kako AI samodejno uporablja orodja:
+Videli boste, da AI samodejno uporablja orodja:
 ```
 The sum of 24.5 and 17.3 is 41.8.
 The square root of 144 is 12.
@@ -296,23 +299,25 @@ The square root of 144 is 12.
 ### Korak 4: Ustavite MCP strežnik
 
 Ko končate testiranje, lahko ustavite AI odjemalca s pritiskom na `Ctrl+C` v njegovem terminalu. MCP strežnik bo deloval, dokler ga ne ustavite.
-Za ustavitev strežnika pritisnite `Ctrl+C` v terminalu, kjer je zagnan.
+Za ustavitev strežnika pritisnite `Ctrl+C` v terminalu, kjer deluje.
 
 ## Kako vse deluje skupaj
 
-Tukaj je celoten potek, ko vprašate AI "Koliko je 5 + 3?":
+Tukaj je celoten potek, ko AI vprašate "Koliko je 5 + 3?":
 
 1. **Vi** vprašate AI v naravnem jeziku
 2. **AI** analizira vašo zahtevo in ugotovi, da želite seštevanje
 3. **AI** pokliče MCP strežnik: `add(5.0, 3.0)`
 4. **Storitev kalkulatorja** izvede: `5.0 + 3.0 = 8.0`
 5. **Storitev kalkulatorja** vrne: `"5.00 + 3.00 = 8.00"`
-6. **AI** prejme rezultat in ga oblikuje v naravni odgovor
+6. **AI** prejme rezultat in oblikuje naravni odgovor
 7. **Vi** dobite: "Vsota 5 in 3 je 8"
 
 ## Naslednji koraki
 
 Za več primerov si oglejte [Poglavje 04: Praktični primeri](../README.md)
 
+---
+
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.

@@ -1,18 +1,18 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:26:34+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:27:32+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "ko"
 }
 -->
-# MCP 계산기 초보자 튜토리얼
+# MCP 계산기 튜토리얼 초보자용
 
 ## 목차
 
 - [배울 내용](../../../../04-PracticalSamples/calculator)
-- [사전 준비 사항](../../../../04-PracticalSamples/calculator)
+- [사전 준비](../../../../04-PracticalSamples/calculator)
 - [프로젝트 구조 이해하기](../../../../04-PracticalSamples/calculator)
 - [핵심 구성 요소 설명](../../../../04-PracticalSamples/calculator)
   - [1. 메인 애플리케이션](../../../../04-PracticalSamples/calculator)
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 - AI 모델이 어떤 도구를 사용할지 자동으로 선택하는 방법
 - 직접 프로토콜 호출과 AI 지원 상호작용의 차이점
 
-## 사전 준비 사항
+## 사전 준비
 
 시작하기 전에 다음을 준비하세요:
 - Java 21 이상 설치
@@ -81,7 +81,7 @@ public class McpServerApplication {
 **이 기능의 역할:**
 - 포트 8080에서 Spring Boot 웹 서버를 시작
 - 계산기 메서드를 MCP 도구로 사용할 수 있도록 `ToolCallbackProvider` 생성
-- `@Bean` 애노테이션을 사용하여 Spring이 다른 구성 요소에서 사용할 수 있도록 관리
+- `@Bean` 애노테이션은 Spring이 이 구성 요소를 관리하도록 지정
 
 ### 2. 계산기 서비스
 
@@ -141,9 +141,9 @@ public class CalculatorService {
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,12 +172,14 @@ public class SDKClient {
 ```
 
 **이 기능의 역할:**
-1. **계산기 서버**에 `http://localhost:8080`으로 연결
-2. **사용 가능한 도구** 목록 표시 (계산기 기능)
-3. **특정 기능**을 정확한 매개변수로 호출
-4. **결과**를 직접 출력
+1. **연결**: `http://localhost:8080`에서 계산기 서버에 연결 (빌더 패턴 사용)
+2. **목록 표시**: 사용 가능한 모든 도구(계산기 기능) 나열
+3. **호출**: 정확한 매개변수를 사용하여 특정 기능 호출
+4. **출력**: 결과를 직접 출력
 
-**사용 시점:** 수행하려는 계산을 정확히 알고 있고 프로그래밍 방식으로 호출하려는 경우.
+**참고:** 이 예제는 Spring AI 1.1.0-SNAPSHOT 의존성을 사용하며, `WebFluxSseClientTransport`에 대한 빌더 패턴을 도입했습니다. 이전 안정 버전을 사용하는 경우 직접 생성자를 사용해야 할 수 있습니다.
+
+**사용 시점:** 정확히 어떤 계산을 수행할지 알고 있고 이를 프로그래밍 방식으로 호출하려는 경우
 
 ### 4. AI 기반 클라이언트
 
@@ -229,10 +231,10 @@ public class LangChain4jClient {
 ```
 
 **이 기능의 역할:**
-1. **GitHub 토큰**을 사용하여 AI 모델 연결 생성
-2. **AI**를 계산기 MCP 서버에 연결
-3. **AI**가 계산기 도구에 접근 가능하도록 설정
-4. **자연어 요청**을 허용 (예: "24.5와 17.3의 합을 계산해줘")
+1. **AI 모델 연결**: GitHub 토큰을 사용하여 AI 모델 연결
+2. **MCP 서버 연결**: AI를 계산기 MCP 서버에 연결
+3. **도구 제공**: AI에 모든 계산기 도구 접근 권한 제공
+4. **자연어 요청 허용**: "24.5와 17.3의 합을 계산해줘"와 같은 요청 가능
 
 **AI가 자동으로 수행:**
 - 사용자가 숫자를 더하고 싶어 한다는 것을 이해
@@ -315,5 +317,7 @@ The square root of 144 is 12.
 
 더 많은 예제를 보려면 [Chapter 04: Practical samples](../README.md)를 참조하세요.
 
+---
+
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어 버전을 권위 있는 출처로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임을 지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있으나, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어 버전이 권위 있는 출처로 간주되어야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임을 지지 않습니다.

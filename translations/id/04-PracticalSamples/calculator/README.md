@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:35:16+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:36:48+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "id"
 }
@@ -87,7 +87,7 @@ public class McpServerApplication {
 
 **File:** `CalculatorService.java`
 
-Di sinilah semua perhitungan matematika dilakukan. Setiap metode ditandai dengan `@Tool` agar tersedia melalui MCP:
+Di sinilah semua perhitungan dilakukan. Setiap metode diberi tanda `@Tool` agar tersedia melalui MCP:
 
 ```java
 @Service
@@ -122,10 +122,10 @@ public class CalculatorService {
 
 **Operasi yang Tersedia:**
 - `add(a, b)` - Menjumlahkan dua angka
-- `subtract(a, b)` - Mengurangi angka kedua dari angka pertama
+- `subtract(a, b)` - Mengurangi angka kedua dari yang pertama
 - `multiply(a, b)` - Mengalikan dua angka
-- `divide(a, b)` - Membagi angka pertama dengan angka kedua (dengan pengecekan nol)
-- `power(base, exponent)` - Menghitung pangkat dari basis terhadap eksponen
+- `divide(a, b)` - Membagi angka pertama dengan yang kedua (dengan pengecekan nol)
+- `power(base, exponent)` - Menghitung pangkat
 - `squareRoot(number)` - Menghitung akar kuadrat (dengan pengecekan negatif)
 - `modulus(a, b)` - Mengembalikan sisa pembagian
 - `absolute(number)` - Mengembalikan nilai absolut
@@ -141,9 +141,9 @@ Klien ini berkomunikasi langsung dengan server MCP tanpa menggunakan AI. Klien i
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,12 +172,14 @@ public class SDKClient {
 ```
 
 **Apa yang dilakukan:**
-1. **Terhubung** ke server kalkulator di `http://localhost:8080`
-2. **Mendaftar** semua alat yang tersedia (fungsi kalkulator kita)
+1. **Terhubung** ke server kalkulator di `http://localhost:8080` menggunakan pola builder
+2. **Mendaftarkan** semua alat yang tersedia (fungsi kalkulator kita)
 3. **Memanggil** fungsi tertentu dengan parameter yang tepat
 4. **Mencetak** hasil secara langsung
 
-**Kapan digunakan:** Ketika Anda tahu persis perhitungan yang ingin dilakukan dan ingin memanggilnya secara programatis.
+**Catatan:** Contoh ini menggunakan dependensi Spring AI 1.1.0-SNAPSHOT, yang memperkenalkan pola builder untuk `WebFluxSseClientTransport`. Jika Anda menggunakan versi stabil yang lebih lama, Anda mungkin perlu menggunakan konstruktor langsung.
+
+**Kapan digunakan:** Ketika Anda tahu persis perhitungan apa yang ingin dilakukan dan ingin memanggilnya secara programatis.
 
 ### 4. Klien Berbasis AI
 
@@ -230,8 +232,8 @@ public class LangChain4jClient {
 
 **Apa yang dilakukan:**
 1. **Membuat** koneksi model AI menggunakan token GitHub Anda
-2. **Terhubung** AI ke server MCP kalkulator kita
-3. **Memberikan** akses AI ke semua alat kalkulator kita
+2. **Menghubungkan** AI ke server MCP kalkulator kita
+3. **Memberikan** AI akses ke semua alat kalkulator kita
 4. **Memungkinkan** permintaan dalam bahasa alami seperti "Hitung jumlah 24.5 dan 17.3"
 
 **AI secara otomatis:**
@@ -262,7 +264,7 @@ cd 04-PracticalSamples/calculator
 mvn clean spring-boot:run
 ```
 
-Server akan dimulai di `http://localhost:8080`. Anda akan melihat:
+Server akan berjalan di `http://localhost:8080`. Anda akan melihat:
 ```
 Started McpServerApplication in X.XXX seconds
 ```
@@ -315,5 +317,7 @@ Berikut alur lengkap ketika Anda bertanya kepada AI "Berapa 5 + 3?":
 
 Untuk lebih banyak contoh, lihat [Bab 04: Contoh Praktis](../README.md)
 
+---
+
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

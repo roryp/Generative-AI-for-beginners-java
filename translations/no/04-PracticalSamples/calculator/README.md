@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:33:13+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:34:44+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "no"
 }
@@ -30,7 +30,7 @@ Denne veiledningen forklarer hvordan du bygger en kalkulatortjeneste ved hjelp a
 - Hvordan lage en tjeneste som AI kan bruke som et verktøy
 - Hvordan sette opp direkte kommunikasjon med MCP-tjenester
 - Hvordan AI-modeller automatisk kan velge hvilke verktøy de skal bruke
-- Forskjellen mellom direkte protokollanrop og AI-assisterte interaksjoner
+- Forskjellen mellom direkte protokollkall og AI-assisterte interaksjoner
 
 ## Forutsetninger
 
@@ -61,7 +61,7 @@ calculator/
 
 **Fil:** `McpServerApplication.java`
 
-Dette er startpunktet for vår kalkulatortjeneste. Det er en standard Spring Boot-applikasjon med én spesiell tillegg:
+Dette er startpunktet for kalkulatortjenesten vår. Det er en standard Spring Boot-applikasjon med én spesiell tillegg:
 
 ```java
 @SpringBootApplication
@@ -141,9 +141,9 @@ Denne klienten kommuniserer direkte med MCP-serveren uten å bruke AI. Den kalle
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,10 +172,12 @@ public class SDKClient {
 ```
 
 **Hva dette gjør:**
-1. **Kobler til** kalkulatorserveren på `http://localhost:8080`
-2. **Lister opp** alle tilgjengelige verktøy (våre kalkulatorfunksjoner)
+1. **Kobler til** kalkulatorserveren på `http://localhost:8080` ved hjelp av builder-mønsteret
+2. **Lister opp** alle tilgjengelige verktøy (kalkulatorfunksjonene våre)
 3. **Kaller** spesifikke funksjoner med eksakte parametere
 4. **Skriver ut** resultatene direkte
+
+**Merk:** Dette eksemplet bruker Spring AI 1.1.0-SNAPSHOT-avhengigheten, som introduserte et builder-mønster for `WebFluxSseClientTransport`. Hvis du bruker en eldre stabil versjon, må du kanskje bruke den direkte konstruktøren i stedet.
 
 **Når du skal bruke dette:** Når du vet nøyaktig hvilken beregning du vil utføre og ønsker å kalle den programmessig.
 
@@ -229,9 +231,9 @@ public class LangChain4jClient {
 ```
 
 **Hva dette gjør:**
-1. **Oppretter** en AI-modelltilkobling ved hjelp av din GitHub-token
+1. **Oppretter** en AI-modelltilkobling ved hjelp av GitHub-tokenet ditt
 2. **Kobler** AI til vår kalkulator MCP-server
-3. **Gir** AI tilgang til alle våre kalkulatorverktøy
+3. **Gir** AI tilgang til alle kalkulatorverktøyene våre
 4. **Tillater** naturlige språkforespørsler som "Beregn summen av 24.5 og 17.3"
 
 **AI gjør automatisk:**
@@ -244,7 +246,7 @@ public class LangChain4jClient {
 
 ### Steg 1: Start Kalkulatorserveren
 
-Først, sett din GitHub-token (nødvendig for AI-klienten):
+Først, sett GitHub-tokenet ditt (nødvendig for AI-klienten):
 
 **Windows:**
 ```cmd
@@ -262,7 +264,7 @@ cd 04-PracticalSamples/calculator
 mvn clean spring-boot:run
 ```
 
-Serveren vil starte på `http://localhost:8080`. Du bør se:
+Serveren starter på `http://localhost:8080`. Du bør se:
 ```
 Started McpServerApplication in X.XXX seconds
 ```
@@ -296,7 +298,8 @@ The square root of 144 is 12.
 
 ### Steg 4: Lukk MCP-serveren
 
-Når du er ferdig med testing, kan du stoppe AI-klienten ved å trykke `Ctrl+C` i terminalen der den kjører. MCP-serveren vil fortsette å kjøre til du stopper den. For å stoppe serveren, trykk `Ctrl+C` i terminalen der den kjører.
+Når du er ferdig med testing, kan du stoppe AI-klienten ved å trykke `Ctrl+C` i terminalen der den kjører. MCP-serveren vil fortsette å kjøre til du stopper den.
+For å stoppe serveren, trykk `Ctrl+C` i terminalen der den kjører.
 
 ## Hvordan Alt Fungerer Sammen
 
@@ -314,5 +317,7 @@ Her er den komplette flyten når du spør AI "Hva er 5 + 3?":
 
 For flere eksempler, se [Kapittel 04: Praktiske eksempler](../README.md)
 
+---
+
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

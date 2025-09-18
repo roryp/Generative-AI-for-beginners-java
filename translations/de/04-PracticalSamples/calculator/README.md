@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:22:12+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:23:09+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "de"
 }
 -->
-# MCP-Rechner-Tutorial für Einsteiger
+# MCP-Rechner-Tutorial für Anfänger
 
 ## Inhaltsverzeichnis
 
@@ -19,8 +19,8 @@ CO_OP_TRANSLATOR_METADATA:
   - [2. Rechnerdienst](../../../../04-PracticalSamples/calculator)
   - [3. Direkter MCP-Client](../../../../04-PracticalSamples/calculator)
   - [4. KI-gestützter Client](../../../../04-PracticalSamples/calculator)
-- [Ausführen der Beispiele](../../../../04-PracticalSamples/calculator)
-- [Wie alles zusammenarbeitet](../../../../04-PracticalSamples/calculator)
+- [Beispiele ausführen](../../../../04-PracticalSamples/calculator)
+- [Wie alles zusammen funktioniert](../../../../04-PracticalSamples/calculator)
 - [Nächste Schritte](../../../../04-PracticalSamples/calculator)
 
 ## Was Sie lernen werden
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 Dieses Tutorial erklärt, wie man einen Rechnerdienst mit dem Model Context Protocol (MCP) erstellt. Sie werden verstehen:
 
 - Wie man einen Dienst erstellt, den KI als Werkzeug nutzen kann
-- Wie man die direkte Kommunikation mit MCP-Diensten einrichtet
+- Wie man direkte Kommunikation mit MCP-Diensten einrichtet
 - Wie KI-Modelle automatisch entscheiden können, welche Werkzeuge verwendet werden sollen
 - Den Unterschied zwischen direkten Protokollaufrufen und KI-gestützten Interaktionen
 
@@ -78,7 +78,7 @@ public class McpServerApplication {
 }
 ```
 
-**Was das macht:**
+**Was dies bewirkt:**
 - Startet einen Spring-Boot-Webserver auf Port 8080
 - Erstellt einen `ToolCallbackProvider`, der unsere Rechenmethoden als MCP-Werkzeuge verfügbar macht
 - Die `@Bean`-Annotation weist Spring an, dies als Komponente zu verwalten, die von anderen Teilen verwendet werden kann
@@ -115,21 +115,21 @@ public class CalculatorService {
 
 **Wichtige Merkmale:**
 
-1. **`@Tool`-Annotation**: Diese zeigt MCP an, dass diese Methode von externen Clients aufgerufen werden kann
+1. **`@Tool`-Annotation**: Dies zeigt MCP an, dass diese Methode von externen Clients aufgerufen werden kann
 2. **Klare Beschreibungen**: Jedes Werkzeug hat eine Beschreibung, die KI-Modelle dabei unterstützt, zu verstehen, wann es verwendet werden soll
-3. **Einheitliches Rückgabeformat**: Alle Operationen geben menschenlesbare Strings zurück, wie "5.00 + 3.00 = 8.00"
+3. **Konsistentes Rückgabeformat**: Alle Operationen geben menschenlesbare Zeichenketten zurück, wie "5.00 + 3.00 = 8.00"
 4. **Fehlerbehandlung**: Division durch Null und negative Quadratwurzeln geben Fehlermeldungen zurück
 
 **Verfügbare Operationen:**
 - `add(a, b)` - Addiert zwei Zahlen
-- `subtract(a, b)` - Subtrahiert die zweite Zahl von der ersten
+- `subtract(a, b)` - Subtrahiert die zweite von der ersten
 - `multiply(a, b)` - Multipliziert zwei Zahlen
-- `divide(a, b)` - Teilt die erste Zahl durch die zweite (mit Nullprüfung)
-- `power(base, exponent)` - Hebt die Basis auf die Potenz des Exponenten
-- `squareRoot(number)` - Berechnet die Quadratwurzel (mit negativer Prüfung)
-- `modulus(a, b)` - Gibt den Rest einer Division zurück
+- `divide(a, b)` - Teilt die erste durch die zweite (mit Nullprüfung)
+- `power(base, exponent)` - Erhöht die Basis auf die Potenz des Exponenten
+- `squareRoot(number)` - Berechnet die Quadratwurzel (mit Negativprüfung)
+- `modulus(a, b)` - Gibt den Rest der Division zurück
 - `absolute(number)` - Gibt den Absolutwert zurück
-- `help()` - Gibt Informationen zu allen Operationen zurück
+- `help()` - Gibt Informationen über alle Operationen zurück
 
 ### 3. Direkter MCP-Client
 
@@ -141,9 +141,9 @@ Dieser Client kommuniziert direkt mit dem MCP-Server, ohne KI zu verwenden. Er r
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -171,13 +171,15 @@ public class SDKClient {
 }
 ```
 
-**Was das macht:**
-1. **Verbindet sich** mit dem Rechner-Server unter `http://localhost:8080`
+**Was dies bewirkt:**
+1. **Verbindet** sich mit dem Rechner-Server unter `http://localhost:8080` mithilfe des Builder-Musters
 2. **Listet** alle verfügbaren Werkzeuge (unsere Rechnerfunktionen) auf
 3. **Ruft** spezifische Funktionen mit genauen Parametern auf
 4. **Gibt** die Ergebnisse direkt aus
 
-**Wann verwenden:** Wenn Sie genau wissen, welche Berechnung Sie durchführen möchten, und diese programmgesteuert aufrufen möchten.
+**Hinweis:** Dieses Beispiel verwendet die Spring AI 1.1.0-SNAPSHOT-Abhängigkeit, die ein Builder-Muster für den `WebFluxSseClientTransport` eingeführt hat. Wenn Sie eine ältere stabile Version verwenden, müssen Sie möglicherweise den direkten Konstruktor verwenden.
+
+**Wann dies verwendet wird:** Wenn Sie genau wissen, welche Berechnung Sie durchführen möchten, und diese programmgesteuert aufrufen möchten.
 
 ### 4. KI-gestützter Client
 
@@ -228,19 +230,19 @@ public class LangChain4jClient {
 }
 ```
 
-**Was das macht:**
+**Was dies bewirkt:**
 1. **Erstellt** eine Verbindung zum KI-Modell mit Ihrem GitHub-Token
-2. **Verbindet** die KI mit unserem MCP-Rechner-Server
+2. **Verbindet** die KI mit unserem Rechner-MCP-Server
 3. **Gibt** der KI Zugriff auf alle unsere Rechnerwerkzeuge
-4. **Ermöglicht** natürliche Sprachbefehle wie "Berechne die Summe von 24.5 und 17.3"
+4. **Ermöglicht** natürliche Sprachaufforderungen wie "Berechne die Summe von 24.5 und 17.3"
 
-**Die KI:**
+**Die KI führt automatisch aus:**
 - Versteht, dass Sie Zahlen addieren möchten
 - Wählt das Werkzeug `add`
 - Ruft `add(24.5, 17.3)` auf
 - Gibt das Ergebnis in einer natürlichen Antwort zurück
 
-## Ausführen der Beispiele
+## Beispiele ausführen
 
 ### Schritt 1: Rechner-Server starten
 
@@ -269,13 +271,13 @@ Started McpServerApplication in X.XXX seconds
 
 ### Schritt 2: Test mit direktem Client
 
-Öffnen Sie ein **NEUES** Terminal, während der Server noch läuft, und führen Sie den direkten MCP-Client aus:
+In einem **NEUEN** Terminal, während der Server noch läuft, führen Sie den direkten MCP-Client aus:
 ```bash
 cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
 ```
 
-Sie sehen eine Ausgabe wie:
+Sie werden eine Ausgabe wie diese sehen:
 ```
 Available Tools = [add, subtract, multiply, divide, power, squareRoot, modulus, absolute, help]
 Add Result = 5.00 + 3.00 = 8.00
@@ -288,7 +290,7 @@ Square Root Result = √16.00 = 4.00
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
 ```
 
-Sie sehen, wie die KI automatisch Werkzeuge verwendet:
+Sie werden sehen, wie die KI automatisch Werkzeuge verwendet:
 ```
 The sum of 24.5 and 17.3 is 41.8.
 The square root of 144 is 12.
@@ -296,24 +298,26 @@ The square root of 144 is 12.
 
 ### Schritt 4: MCP-Server schließen
 
-Wenn Sie mit den Tests fertig sind, können Sie den KI-Client beenden, indem Sie `Strg+C` in dessen Terminal drücken. Der MCP-Server läuft weiter, bis Sie ihn stoppen.
+Wenn Sie mit dem Testen fertig sind, können Sie den KI-Client durch Drücken von `Strg+C` in seinem Terminal stoppen. Der MCP-Server läuft weiter, bis Sie ihn stoppen.
 Um den Server zu stoppen, drücken Sie `Strg+C` im Terminal, in dem er läuft.
 
-## Wie alles zusammenarbeitet
+## Wie alles zusammen funktioniert
 
 So funktioniert der gesamte Ablauf, wenn Sie die KI fragen: "Was ist 5 + 3?":
 
 1. **Sie** fragen die KI in natürlicher Sprache
-2. **Die KI** analysiert Ihre Anfrage und erkennt, dass Sie eine Addition möchten
-3. **Die KI** ruft den MCP-Server auf: `add(5.0, 3.0)`
-4. **Der Rechnerdienst** führt aus: `5.0 + 3.0 = 8.0`
-5. **Der Rechnerdienst** gibt zurück: `"5.00 + 3.00 = 8.00"`
-6. **Die KI** erhält das Ergebnis und formatiert eine natürliche Antwort
+2. **KI** analysiert Ihre Anfrage und erkennt, dass Sie eine Addition möchten
+3. **KI** ruft den MCP-Server auf: `add(5.0, 3.0)`
+4. **Rechnerdienst** führt aus: `5.0 + 3.0 = 8.0`
+5. **Rechnerdienst** gibt zurück: `"5.00 + 3.00 = 8.00"`
+6. **KI** erhält das Ergebnis und formatiert eine natürliche Antwort
 7. **Sie** erhalten: "Die Summe von 5 und 3 ist 8"
 
 ## Nächste Schritte
 
 Für weitere Beispiele siehe [Kapitel 04: Praktische Beispiele](../README.md)
+
+---
 
 **Haftungsausschluss**:  
 Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

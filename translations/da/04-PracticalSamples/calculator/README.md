@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:32:51+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:34:18+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "da"
 }
@@ -27,14 +27,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 Denne tutorial forklarer, hvordan man bygger en calculator service ved hjælp af Model Context Protocol (MCP). Du vil lære:
 
-- Hvordan man opretter en service, som AI kan bruge som et værktøj
+- Hvordan man opretter en service, som AI kan bruge som værktøj
 - Hvordan man opsætter direkte kommunikation med MCP-tjenester
 - Hvordan AI-modeller automatisk kan vælge, hvilke værktøjer der skal bruges
-- Forskellen mellem direkte protokolopkald og AI-assisterede interaktioner
+- Forskellen mellem direkte protokolkald og AI-assisterede interaktioner
 
 ## Forudsætninger
 
-Før du går i gang, skal du sørge for at have:
+Før du starter, skal du sørge for at have:
 - Java 21 eller nyere installeret
 - Maven til håndtering af afhængigheder
 - En GitHub-konto med en personlig adgangstoken (PAT)
@@ -61,7 +61,7 @@ calculator/
 
 **Fil:** `McpServerApplication.java`
 
-Dette er indgangspunktet for vores calculator service. Det er en standard Spring Boot-applikation med en særlig tilføjelse:
+Dette er indgangspunktet for vores calculator service. Det er en standard Spring Boot-applikation med én særlig tilføjelse:
 
 ```java
 @SpringBootApplication
@@ -113,11 +113,11 @@ public class CalculatorService {
 }
 ```
 
-**Nøglefunktioner:**
+**Vigtige funktioner:**
 
 1. **`@Tool`-annotering**: Dette fortæller MCP, at denne metode kan kaldes af eksterne klienter
 2. **Klare beskrivelser**: Hvert værktøj har en beskrivelse, der hjælper AI-modeller med at forstå, hvornår det skal bruges
-3. **Konsistent returformat**: Alle operationer returnerer menneskelæsbare strenge som "5.00 + 3.00 = 8.00"
+3. **Konsistent returformat**: Alle operationer returnerer læsbare strenge som "5.00 + 3.00 = 8.00"
 4. **Fejlhåndtering**: Division med nul og negative kvadratrødder returnerer fejlmeddelelser
 
 **Tilgængelige operationer:**
@@ -141,9 +141,9 @@ Denne klient kommunikerer direkte med MCP-serveren uden at bruge AI. Den kalder 
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,12 +172,14 @@ public class SDKClient {
 ```
 
 **Hvad dette gør:**
-1. **Forbinder** til calculator-serveren på `http://localhost:8080`
+1. **Forbinder** til calculator-serveren på `http://localhost:8080` ved hjælp af builder-mønsteret
 2. **Lister** alle tilgængelige værktøjer (vores calculator-funktioner)
 3. **Kalder** specifikke funktioner med præcise parametre
 4. **Printer** resultaterne direkte
 
-**Hvornår man skal bruge dette:** Når du præcist ved, hvilken beregning du vil udføre, og ønsker at kalde den programmæssigt.
+**Bemærk:** Dette eksempel bruger Spring AI 1.1.0-SNAPSHOT-afhængigheden, som introducerede et builder-mønster for `WebFluxSseClientTransport`. Hvis du bruger en ældre stabil version, skal du muligvis bruge den direkte konstruktor i stedet.
+
+**Hvornår man bruger dette:** Når du præcist ved, hvilken beregning du vil udføre, og ønsker at kalde den programmæssigt.
 
 ### 4. AI-drevet Klient
 
@@ -238,11 +240,11 @@ public class LangChain4jClient {
 - Forstår, at du vil lægge tal sammen
 - Vælger værktøjet `add`
 - Kalder `add(24.5, 17.3)`
-- Returnerer resultatet i en naturlig respons
+- Returnerer resultatet i et naturligt svar
 
 ## Kør Eksemplerne
 
-### Trin 1: Start Calculator-serveren
+### Trin 1: Start Calculator Serveren
 
 Først skal du indstille din GitHub-token (nødvendig for AI-klienten):
 
@@ -282,7 +284,7 @@ Add Result = 5.00 + 3.00 = 8.00
 Square Root Result = √16.00 = 4.00
 ```
 
-### Trin 3: Test med AI-klient
+### Trin 3: Test med AI Klient
 
 ```bash
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient" -Dexec.classpathScope=test
@@ -294,7 +296,7 @@ The sum of 24.5 and 17.3 is 41.8.
 The square root of 144 is 12.
 ```
 
-### Trin 4: Luk MCP-serveren
+### Trin 4: Luk MCP Serveren
 
 Når du er færdig med at teste, kan du stoppe AI-klienten ved at trykke på `Ctrl+C` i dens terminal. MCP-serveren vil fortsætte med at køre, indtil du stopper den.
 For at stoppe serveren skal du trykke på `Ctrl+C` i terminalen, hvor den kører.
@@ -308,12 +310,14 @@ Her er den komplette proces, når du spørger AI "Hvad er 5 + 3?":
 3. **AI** kalder MCP-serveren: `add(5.0, 3.0)`
 4. **Calculator Service** udfører: `5.0 + 3.0 = 8.0`
 5. **Calculator Service** returnerer: `"5.00 + 3.00 = 8.00"`
-6. **AI** modtager resultatet og formaterer en naturlig respons
+6. **AI** modtager resultatet og formaterer et naturligt svar
 7. **Du** får: "Summen af 5 og 3 er 8"
 
 ## Næste Skridt
 
 For flere eksempler, se [Kapitel 04: Praktiske eksempler](../README.md)
 
+---
+
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

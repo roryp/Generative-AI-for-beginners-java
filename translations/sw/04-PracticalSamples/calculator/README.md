@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:36:30+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:38:06+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "sw"
 }
@@ -17,27 +17,27 @@ CO_OP_TRANSLATOR_METADATA:
 - [Vipengele Muhimu Vilivyoelezwa](../../../../04-PracticalSamples/calculator)
   - [1. Programu Kuu](../../../../04-PracticalSamples/calculator)
   - [2. Huduma ya Calculator](../../../../04-PracticalSamples/calculator)
-  - [3. Mteja wa Moja kwa Moja wa MCP](../../../../04-PracticalSamples/calculator)
+  - [3. Mteja wa MCP wa Moja kwa Moja](../../../../04-PracticalSamples/calculator)
   - [4. Mteja Anayetumia AI](../../../../04-PracticalSamples/calculator)
 - [Kuendesha Mifano](../../../../04-PracticalSamples/calculator)
-- [Jinsi Inavyofanya Kazi Pamoja](../../../../04-PracticalSamples/calculator)
+- [Jinsi Vyote Vinavyofanya Kazi Pamoja](../../../../04-PracticalSamples/calculator)
 - [Hatua Zifuatazo](../../../../04-PracticalSamples/calculator)
 
 ## Unachojifunza
 
-Mafunzo haya yanaelezea jinsi ya kujenga huduma ya calculator kwa kutumia Model Context Protocol (MCP). Utaelewa:
+Mafunzo haya yanaelezea jinsi ya kujenga huduma ya calculator kwa kutumia Model Context Protocol (MCP). Utajifunza:
 
 - Jinsi ya kuunda huduma ambayo AI inaweza kutumia kama zana
-- Jinsi ya kusanidi mawasiliano ya moja kwa moja na huduma za MCP
+- Jinsi ya kuanzisha mawasiliano ya moja kwa moja na huduma za MCP
 - Jinsi mifano ya AI inaweza kuchagua zana za kutumia kiotomatiki
 - Tofauti kati ya miito ya moja kwa moja ya itifaki na mwingiliano unaosaidiwa na AI
 
 ## Mahitaji ya Awali
 
 Kabla ya kuanza, hakikisha una:
-- Java 21 au toleo la juu zaidi limewekwa
+- Java 21 au toleo la juu zaidi lililowekwa
 - Maven kwa usimamizi wa utegemezi
-- Akaunti ya GitHub yenye tokeni ya ufikiaji wa kibinafsi (PAT)
+- Akaunti ya GitHub yenye tokeni ya ufikiaji binafsi (PAT)
 - Uelewa wa msingi wa Java na Spring Boot
 
 ## Kuelewa Muundo wa Mradi
@@ -81,13 +81,13 @@ public class McpServerApplication {
 **Inachofanya:**
 - Inaendesha seva ya wavuti ya Spring Boot kwenye bandari 8080
 - Inaunda `ToolCallbackProvider` inayofanya mbinu za calculator zetu zipatikane kama zana za MCP
-- Anotesheni ya `@Bean` inaiambia Spring kusimamia hii kama sehemu ambayo sehemu nyingine zinaweza kutumia
+- Anotesheni ya `@Bean` inaambia Spring kusimamia hii kama sehemu ambayo sehemu nyingine zinaweza kutumia
 
 ### 2. Huduma ya Calculator
 
 **Faili:** `CalculatorService.java`
 
-Hapa ndipo hesabu zote hufanyika. Kila mbinu imewekwa alama na `@Tool` ili iweze kupatikana kupitia MCP:
+Hapa ndipo hesabu zote zinapofanyika. Kila mbinu imewekwa alama na `@Tool` ili iweze kupatikana kupitia MCP:
 
 ```java
 @Service
@@ -115,9 +115,9 @@ public class CalculatorService {
 
 **Vipengele Muhimu:**
 
-1. **Anotesheni ya `@Tool`**: Hii inaiambia MCP kwamba mbinu hii inaweza kuitwa na wateja wa nje
+1. **Anotesheni ya `@Tool`**: Hii inaambia MCP kwamba mbinu hii inaweza kuitwa na wateja wa nje
 2. **Maelezo Wazi**: Kila zana ina maelezo yanayosaidia mifano ya AI kuelewa wakati wa kuitumia
-3. **Muundo Thabiti wa Majibu**: Operesheni zote zinarudisha maandishi yanayosomeka kama "5.00 + 3.00 = 8.00"
+3. **Muundo wa Matokeo Thabiti**: Operesheni zote zinarudisha maandishi yanayosomeka kama "5.00 + 3.00 = 8.00"
 4. **Ushughulikiaji wa Makosa**: Mgawanyiko kwa sifuri na mizizi ya mraba hasi hurudisha ujumbe wa makosa
 
 **Operesheni Zinazopatikana:**
@@ -125,25 +125,25 @@ public class CalculatorService {
 - `subtract(a, b)` - Hutoa ya pili kutoka ya kwanza
 - `multiply(a, b)` - Huzidisha namba mbili
 - `divide(a, b)` - Hugawa ya kwanza kwa ya pili (na ukaguzi wa sifuri)
-- `power(base, exponent)` - Huinua msingi kwa nguvu ya kipimo
-- `squareRoot(number)` - Hukokotoa mzizi wa mraba (na ukaguzi wa hasi)
-- `modulus(a, b)` - Hurejesha baki ya mgawanyiko
-- `absolute(number)` - Hurejesha thamani kamili
+- `power(base, exponent)` - Huinua msingi kwa nguvu ya exponent
+- `squareRoot(number)` - Hukokotoa mizizi ya mraba (na ukaguzi wa hasi)
+- `modulus(a, b)` - Hutoa baki ya mgawanyiko
+- `absolute(number)` - Hutoa thamani kamili
 - `help()` - Hutoa taarifa kuhusu operesheni zote
 
-### 3. Mteja wa Moja kwa Moja wa MCP
+### 3. Mteja wa MCP wa Moja kwa Moja
 
 **Faili:** `SDKClient.java`
 
-Mteja huyu huzungumza moja kwa moja na seva ya MCP bila kutumia AI. Huita mbinu maalum za calculator kwa mikono:
+Mteja huyu huzungumza moja kwa moja na seva ya MCP bila kutumia AI. Unaita mbinu maalum za calculator kwa mikono:
 
 ```java
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,12 +172,14 @@ public class SDKClient {
 ```
 
 **Inachofanya:**
-1. **Inaunganisha** na seva ya calculator kwenye `http://localhost:8080`
+1. **Inaunganisha** na seva ya calculator kwenye `http://localhost:8080` kwa kutumia muundo wa builder
 2. **Inaorodhesha** zana zote zinazopatikana (mbinu za calculator zetu)
 3. **Inaita** mbinu maalum na vigezo sahihi
 4. **Inachapisha** matokeo moja kwa moja
 
-**Wakati wa kutumia hii:** Wakati unajua hasa hesabu unayotaka kufanya na unataka kuifanya kwa mpangilio.
+**Kumbuka:** Mfano huu unatumia utegemezi wa Spring AI 1.1.0-SNAPSHOT, ambao ulianzisha muundo wa builder kwa `WebFluxSseClientTransport`. Ikiwa unatumia toleo la zamani, unaweza kuhitaji kutumia constructor ya moja kwa moja badala yake.
+
+**Wakati wa kutumia hii:** Wakati unajua hasa hesabu unayotaka kufanya na unataka kuifanya kwa programu.
 
 ### 4. Mteja Anayetumia AI
 
@@ -230,15 +232,15 @@ public class LangChain4jClient {
 
 **Inachofanya:**
 1. **Inaunda** muunganisho wa mfano wa AI kwa kutumia tokeni yako ya GitHub
-2. **Inaunganisha** AI na seva yetu ya MCP ya calculator
+2. **Inaunganisha** AI na seva yetu ya calculator MCP
 3. **Inatoa** AI ufikiaji wa zana zote za calculator zetu
-4. **Inaruhusu** maombi ya lugha asilia kama "Hesabu jumla ya 24.5 na 17.3"
+4. **Inaruhusu** maombi ya lugha ya kawaida kama "Hesabu jumla ya 24.5 na 17.3"
 
 **AI kiotomatiki:**
 - Inaelewa unataka kuongeza namba
 - Inachagua zana ya `add`
 - Inaita `add(24.5, 17.3)`
-- Inarudisha matokeo kwa majibu ya asili
+- Inarudisha matokeo kwa majibu ya kawaida
 
 ## Kuendesha Mifano
 
@@ -269,7 +271,7 @@ Started McpServerApplication in X.XXX seconds
 
 ### Hatua ya 2: Jaribu na Mteja wa Moja kwa Moja
 
-Katika **TERMINAL MPYA** huku Seva bado inaendelea, endesha mteja wa moja kwa moja wa MCP:
+Katika **TERMINAL MPYA** huku Seva ikiwa bado inaendesha, endesha mteja wa MCP wa moja kwa moja:
 ```bash
 cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
@@ -296,24 +298,26 @@ The square root of 144 is 12.
 
 ### Hatua ya 4: Funga Seva ya MCP
 
-Ukimaliza kujaribu, unaweza kusimamisha mteja wa AI kwa kubonyeza `Ctrl+C` kwenye terminal yake. Seva ya MCP itaendelea kukimbia hadi uisimamishe.
+Ukimaliza kujaribu, unaweza kusimamisha mteja wa AI kwa kubonyeza `Ctrl+C` kwenye terminal yake. Seva ya MCP itaendelea kuendesha hadi uisimamishe.
 Ili kusimamisha seva, bonyeza `Ctrl+C` kwenye terminal ambapo inaendesha.
 
-## Jinsi Inavyofanya Kazi Pamoja
+## Jinsi Vyote Vinavyofanya Kazi Pamoja
 
-Hivi ndivyo mtiririko mzima unavyokuwa unapouliza AI "5 + 3 ni ngapi?":
+Hapa kuna mtiririko kamili unapouliza AI "Je, 5 + 3 ni ngapi?":
 
-1. **Wewe** unauliza AI kwa lugha asilia
+1. **Wewe** unauliza AI kwa lugha ya kawaida
 2. **AI** inachambua ombi lako na kugundua unataka kuongeza
 3. **AI** inaita seva ya MCP: `add(5.0, 3.0)`
 4. **Huduma ya Calculator** inafanya: `5.0 + 3.0 = 8.0`
 5. **Huduma ya Calculator** inarudisha: `"5.00 + 3.00 = 8.00"`
-6. **AI** inapokea matokeo na kuunda jibu la asili
-7. **Wewe** unapokea: "Jumla ya 5 na 3 ni 8"
+6. **AI** inapokea matokeo na kuunda majibu ya kawaida
+7. **Wewe** unapata: "Jumla ya 5 na 3 ni 8"
 
 ## Hatua Zifuatazo
 
 Kwa mifano zaidi, angalia [Sura ya 04: Sampuli za vitendo](../README.md)
 
+---
+
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asilia katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:34:01+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:35:35+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "nl"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [2. Calculator Service](../../../../04-PracticalSamples/calculator)
   - [3. Directe MCP Client](../../../../04-PracticalSamples/calculator)
   - [4. AI-gestuurde Client](../../../../04-PracticalSamples/calculator)
-- [Voorbeelden Uitvoeren](../../../../04-PracticalSamples/calculator)
+- [De Voorbeelden Uitvoeren](../../../../04-PracticalSamples/calculator)
 - [Hoe Alles Samenwerkt](../../../../04-PracticalSamples/calculator)
 - [Volgende Stappen](../../../../04-PracticalSamples/calculator)
 
@@ -29,16 +29,16 @@ Deze tutorial legt uit hoe je een calculatorservice bouwt met het Model Context 
 
 - Hoe je een service maakt die door AI als hulpmiddel kan worden gebruikt
 - Hoe je directe communicatie met MCP-services instelt
-- Hoe AI-modellen automatisch kunnen kiezen welke tools te gebruiken
+- Hoe AI-modellen automatisch kunnen kiezen welke tools ze moeten gebruiken
 - Het verschil tussen directe protocoloproepen en AI-ondersteunde interacties
 
 ## Vereisten
 
-Voordat je begint, zorg ervoor dat je:
-- Java 21 of hoger hebt geïnstalleerd
-- Maven gebruikt voor dependency management
-- Een GitHub-account hebt met een persoonlijke toegangstoken (PAT)
-- Basiskennis hebt van Java en Spring Boot
+Voordat je begint, zorg ervoor dat je het volgende hebt:
+- Java 21 of hoger geïnstalleerd
+- Maven voor afhankelijkheidsbeheer
+- Een GitHub-account met een persoonlijke toegangstoken (PAT)
+- Basiskennis van Java en Spring Boot
 
 ## De Projectstructuur Begrijpen
 
@@ -87,7 +87,7 @@ public class McpServerApplication {
 
 **Bestand:** `CalculatorService.java`
 
-Hier vindt alle wiskundige berekeningen plaats. Elke methode is gemarkeerd met `@Tool` om deze beschikbaar te maken via MCP:
+Hier vindt alle wiskunde plaats. Elke methode is gemarkeerd met `@Tool` om deze via MCP beschikbaar te maken:
 
 ```java
 @Service
@@ -115,12 +115,12 @@ public class CalculatorService {
 
 **Belangrijke kenmerken:**
 
-1. **`@Tool`-annotatie**: Dit vertelt MCP dat deze methode kan worden aangeroepen door externe clients
-2. **Duidelijke beschrijvingen**: Elke tool heeft een beschrijving die AI-modellen helpt te begrijpen wanneer deze te gebruiken
-3. **Consistent retourformaat**: Alle operaties retourneren menselijk leesbare strings zoals "5.00 + 3.00 = 8.00"
+1. **`@Tool`-annotatie**: Dit vertelt MCP dat deze methode door externe clients kan worden aangeroepen
+2. **Duidelijke beschrijvingen**: Elke tool heeft een beschrijving die AI-modellen helpt te begrijpen wanneer ze deze moeten gebruiken
+3. **Consistent retourformaat**: Alle bewerkingen retourneren menselijk leesbare strings zoals "5.00 + 3.00 = 8.00"
 4. **Foutafhandeling**: Delen door nul en negatieve vierkantswortels retourneren foutmeldingen
 
-**Beschikbare operaties:**
+**Beschikbare bewerkingen:**
 - `add(a, b)` - Optelt twee getallen
 - `subtract(a, b)` - Aftrekt het tweede van het eerste
 - `multiply(a, b)` - Vermenigvuldigt twee getallen
@@ -129,7 +129,7 @@ public class CalculatorService {
 - `squareRoot(number)` - Berekent de vierkantswortel (met controle op negatieve waarden)
 - `modulus(a, b)` - Geeft de rest van de deling
 - `absolute(number)` - Geeft de absolute waarde
-- `help()` - Geeft informatie over alle operaties
+- `help()` - Geeft informatie over alle bewerkingen
 
 ### 3. Directe MCP Client
 
@@ -141,9 +141,9 @@ Deze client communiceert rechtstreeks met de MCP-server zonder gebruik te maken 
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,18 +172,20 @@ public class SDKClient {
 ```
 
 **Wat dit doet:**
-1. **Verbindt** met de calculatorserver op `http://localhost:8080`
+1. **Verbindt** met de calculatorserver op `http://localhost:8080` via het builderpatroon
 2. **Lijst** alle beschikbare tools (onze calculatorfuncties)
 3. **Roept** specifieke functies aan met exacte parameters
 4. **Print** de resultaten direct
 
-**Wanneer te gebruiken:** Wanneer je precies weet welke berekening je wilt uitvoeren en dit programmatisch wilt aanroepen.
+**Opmerking:** Dit voorbeeld gebruikt de Spring AI 1.1.0-SNAPSHOT-afhankelijkheid, die een builderpatroon introduceerde voor de `WebFluxSseClientTransport`. Als je een oudere stabiele versie gebruikt, moet je mogelijk de directe constructor gebruiken.
+
+**Wanneer te gebruiken:** Wanneer je precies weet welke berekening je wilt uitvoeren en deze programmatisch wilt aanroepen.
 
 ### 4. AI-gestuurde Client
 
 **Bestand:** `LangChain4jClient.java`
 
-Deze client gebruikt een AI-model (GPT-4o-mini) dat automatisch kan beslissen welke calculatortools te gebruiken:
+Deze client gebruikt een AI-model (GPT-4o-mini) dat automatisch kan beslissen welke calculatortools moeten worden gebruikt:
 
 ```java
 public class LangChain4jClient {
@@ -229,18 +231,18 @@ public class LangChain4jClient {
 ```
 
 **Wat dit doet:**
-1. **Creëert** een AI-modelverbinding met behulp van je GitHub-token
+1. **Creëert** een AI-modelverbinding met je GitHub-token
 2. **Verbindt** de AI met onze calculator MCP-server
 3. **Geeft** de AI toegang tot al onze calculatortools
-4. **Maakt** natuurlijke taalverzoeken mogelijk zoals "Bereken de som van 24.5 en 17.3"
+4. **Staat** natuurlijke taalverzoeken toe zoals "Bereken de som van 24.5 en 17.3"
 
 **De AI doet automatisch:**
-- Begrijpt dat je getallen wilt optellen
+- Begrijpt dat je wilt optellen
 - Kiest de `add`-tool
 - Roept `add(24.5, 17.3)` aan
 - Retourneert het resultaat in een natuurlijke reactie
 
-## Voorbeelden Uitvoeren
+## De Voorbeelden Uitvoeren
 
 ### Stap 1: Start de Calculatorserver
 
@@ -269,7 +271,7 @@ Started McpServerApplication in X.XXX seconds
 
 ### Stap 2: Test met Directe Client
 
-In een **NIEUWE** terminal terwijl de server nog draait, voer de directe MCP-client uit:
+Open een **NIEUWE** terminal terwijl de server nog draait en voer de directe MCP-client uit:
 ```bash
 cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
@@ -294,17 +296,17 @@ The sum of 24.5 and 17.3 is 41.8.
 The square root of 144 is 12.
 ```
 
-### Stap 4: Sluit de MCP Server
+### Stap 4: Sluit de MCP-server
 
 Wanneer je klaar bent met testen, kun je de AI-client stoppen door `Ctrl+C` in de terminal in te drukken. De MCP-server blijft draaien totdat je deze stopt.
-Om de server te stoppen, druk op `Ctrl+C` in de terminal waarin deze draait.
+Om de server te stoppen, druk je op `Ctrl+C` in de terminal waarin deze draait.
 
 ## Hoe Alles Samenwerkt
 
-Hier is de volledige flow wanneer je de AI vraagt "Wat is 5 + 3?":
+Hier is de volledige flow wanneer je de AI vraagt: "Wat is 5 + 3?":
 
 1. **Jij** vraagt de AI in natuurlijke taal
-2. **AI** analyseert je verzoek en realiseert zich dat je optelling wilt
+2. **AI** analyseert je verzoek en begrijpt dat je wilt optellen
 3. **AI** roept de MCP-server aan: `add(5.0, 3.0)`
 4. **Calculator Service** voert uit: `5.0 + 3.0 = 8.0`
 5. **Calculator Service** retourneert: `"5.00 + 3.00 = 8.00"`
@@ -315,5 +317,7 @@ Hier is de volledige flow wanneer je de AI vraagt "Wat is 5 + 3?":
 
 Voor meer voorbeelden, zie [Hoofdstuk 04: Praktische voorbeelden](../README.md)
 
+---
+
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

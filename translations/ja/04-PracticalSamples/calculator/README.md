@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:26:08+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:27:07+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "ja"
 }
@@ -16,28 +16,28 @@ CO_OP_TRANSLATOR_METADATA:
 - [プロジェクト構造の理解](../../../../04-PracticalSamples/calculator)
 - [主要コンポーネントの説明](../../../../04-PracticalSamples/calculator)
   - [1. メインアプリケーション](../../../../04-PracticalSamples/calculator)
-  - [2. 計算サービス](../../../../04-PracticalSamples/calculator)
+  - [2. 計算機サービス](../../../../04-PracticalSamples/calculator)
   - [3. 直接MCPクライアント](../../../../04-PracticalSamples/calculator)
-  - [4. AI駆動クライアント](../../../../04-PracticalSamples/calculator)
+  - [4. AI駆動型クライアント](../../../../04-PracticalSamples/calculator)
 - [例の実行方法](../../../../04-PracticalSamples/calculator)
 - [全体の仕組み](../../../../04-PracticalSamples/calculator)
 - [次のステップ](../../../../04-PracticalSamples/calculator)
 
 ## 学べること
 
-このチュートリアルでは、Model Context Protocol (MCP)を使用して計算サービスを構築する方法を説明します。以下を理解できます：
+このチュートリアルでは、Model Context Protocol (MCP)を使用して計算機サービスを構築する方法を説明します。以下を理解できます：
 
 - AIがツールとして使用できるサービスの作成方法
 - MCPサービスとの直接通信の設定方法
 - AIモデルがどのツールを使用するかを自動的に選択する仕組み
-- 直接プロトコル呼び出しとAI支援インタラクションの違い
+- 直接プロトコル呼び出しとAI支援型インタラクションの違い
 
 ## 前提条件
 
 始める前に以下を準備してください：
 - Java 21以上がインストールされていること
 - 依存関係管理のためのMaven
-- 個人アクセストークン（PAT）を持つGitHubアカウント
+- 個人アクセストークン(PAT)を持つGitHubアカウント
 - JavaとSpring Bootの基本的な理解
 
 ## プロジェクト構造の理解
@@ -61,7 +61,7 @@ calculator/
 
 **ファイル:** `McpServerApplication.java`
 
-これは計算サービスのエントリーポイントです。標準的なSpring Bootアプリケーションですが、特別な追加があります：
+これは計算機サービスのエントリーポイントです。標準的なSpring Bootアプリケーションですが、特別な追加があります：
 
 ```java
 @SpringBootApplication
@@ -81,9 +81,9 @@ public class McpServerApplication {
 **これが行うこと:**
 - ポート8080でSpring Bootウェブサーバーを起動
 - `ToolCallbackProvider`を作成し、計算機メソッドをMCPツールとして利用可能にする
-- `@Bean`アノテーションは、Springがこれを他の部分で使用できるコンポーネントとして管理することを示す
+- `@Bean`アノテーションはSpringにこれをコンポーネントとして管理させ、他の部分で使用可能にする
 
-### 2. 計算サービス
+### 2. 計算機サービス
 
 **ファイル:** `CalculatorService.java`
 
@@ -116,8 +116,8 @@ public class CalculatorService {
 **主な特徴:**
 
 1. **`@Tool`アノテーション**: このメソッドが外部クライアントによって呼び出されることをMCPに伝える
-2. **明確な説明**: 各ツールには、AIモデルが使用するタイミングを理解するための説明が付いている
-3. **一貫した返却形式**: 全ての操作は「5.00 + 3.00 = 8.00」のような人間が読みやすい文字列を返す
+2. **明確な説明**: 各ツールにはAIモデルが使用するタイミングを理解するための説明が付いている
+3. **一貫した返却形式**: 全ての操作は「5.00 + 3.00 = 8.00」のような人間が読める文字列を返す
 4. **エラーハンドリング**: ゼロ除算や負の平方根はエラーメッセージを返す
 
 **利用可能な操作:**
@@ -126,8 +126,8 @@ public class CalculatorService {
 - `multiply(a, b)` - 2つの数値を乗算
 - `divide(a, b)` - 1つ目を2つ目で除算（ゼロチェック付き）
 - `power(base, exponent)` - 基数を指数で累乗
-- `squareRoot(number)` - 平方根を計算（負のチェック付き）
-- `modulus(a, b)` - 除算の余りを返す
+- `squareRoot(number)` - 平方根を計算（負の値チェック付き）
+- `modulus(a, b)` - 剰余を返す
 - `absolute(number)` - 絶対値を返す
 - `help()` - 全ての操作に関する情報を返す
 
@@ -135,15 +135,15 @@ public class CalculatorService {
 
 **ファイル:** `SDKClient.java`
 
-このクライアントはAIを使用せず、MCPサーバーと直接通信します。特定の計算機能を手動で呼び出します：
+このクライアントはAIを使用せず、MCPサーバーと直接通信します。特定の計算機関数を手動で呼び出します：
 
 ```java
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,18 +172,20 @@ public class SDKClient {
 ```
 
 **これが行うこと:**
-1. **接続**: `http://localhost:8080`の計算機サーバーに接続
-2. **ツール一覧**: 利用可能な全てのツール（計算機能）をリスト化
-3. **特定の機能を呼び出し**: 正確なパラメータで呼び出し
-4. **結果を直接出力**: 結果をそのまま表示
+1. **接続**: ビルダーパターンを使用して`http://localhost:8080`の計算機サーバーに接続
+2. **ツール一覧**: 利用可能な全てのツール（計算機関数）をリスト化
+3. **特定の関数を呼び出し**: 正確なパラメータで関数を呼び出す
+4. **結果を直接出力**: 結果をそのまま出力
 
-**使用する場面:** 実行したい計算が明確で、プログラム的に呼び出したい場合。
+**注意:** この例ではSpring AI 1.1.0-SNAPSHOT依存関係を使用しており、`WebFluxSseClientTransport`のビルダーパターンを導入しています。古い安定版を使用している場合は、直接コンストラクタを使用する必要があるかもしれません。
 
-### 4. AI駆動クライアント
+**使用する場面:** 実行したい計算が正確に分かっており、プログラム的に呼び出したい場合。
+
+### 4. AI駆動型クライアント
 
 **ファイル:** `LangChain4jClient.java`
 
-このクライアントはAIモデル（GPT-4o-mini）を使用し、どの計算機ツールを使用するかを自動的に決定します：
+このクライアントはAIモデル(GPT-4o-mini)を使用し、どの計算機ツールを使用するかを自動的に決定します：
 
 ```java
 public class LangChain4jClient {
@@ -230,12 +232,12 @@ public class LangChain4jClient {
 
 **これが行うこと:**
 1. **AIモデル接続を作成**: GitHubトークンを使用して接続
-2. **AIを計算機MCPサーバーに接続**: 
-3. **AIに全ての計算機ツールを提供**: 
-4. **自然言語リクエストを許可**: 例「24.5と17.3の合計を計算して」
+2. **AIを計算機MCPサーバーに接続**: MCPサーバーに接続
+3. **AIに全ての計算機ツールへのアクセスを提供**: ツールを利用可能にする
+4. **自然言語リクエストを許可**: 「24.5と17.3の合計を計算して」のようなリクエストを受け付ける
 
 **AIが自動的に行うこと:**
-- 加算が必要だと理解
+- 数値を加算したいことを理解
 - `add`ツールを選択
 - `add(24.5, 17.3)`を呼び出し
 - 自然な応答で結果を返す
@@ -244,7 +246,7 @@ public class LangChain4jClient {
 
 ### ステップ1: 計算機サーバーを起動
 
-まず、GitHubトークンを設定します（AIクライアントに必要）：
+まず、GitHubトークンを設定します（AIクライアントに必要です）：
 
 **Windows:**
 ```cmd
@@ -256,7 +258,7 @@ set GITHUB_TOKEN=your_github_token_here
 export GITHUB_TOKEN=your_github_token_here
 ```
 
-サーバーを起動：
+サーバーを起動します：
 ```bash
 cd 04-PracticalSamples/calculator
 mvn clean spring-boot:run
@@ -269,7 +271,7 @@ Started McpServerApplication in X.XXX seconds
 
 ### ステップ2: 直接クライアントでテスト
 
-**新しい**ターミナルでサーバーを実行したまま、直接MCPクライアントを実行：
+**新しい**ターミナルでサーバーを起動したまま、直接MCPクライアントを実行します：
 ```bash
 cd 04-PracticalSamples/calculator
 mvn test-compile exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient" -Dexec.classpathScope=test
@@ -296,24 +298,26 @@ The square root of 144 is 12.
 
 ### ステップ4: MCPサーバーを終了
 
-テストが終了したら、AIクライアントを実行しているターミナルで`Ctrl+C`を押して終了します。MCPサーバーは停止するまで実行され続けます。
-サーバーを停止するには、サーバーを実行しているターミナルで`Ctrl+C`を押します。
+テストが終了したら、AIクライアントを終了するにはそのターミナルで`Ctrl+C`を押します。MCPサーバーは停止するまで動作し続けます。
+サーバーを停止するには、サーバーが実行されているターミナルで`Ctrl+C`を押します。
 
 ## 全体の仕組み
 
-AIに「5 + 3は何？」と尋ねた場合の完全な流れ：
+AIに「5 + 3は何？」と尋ねた場合の完全な流れは以下の通りです：
 
 1. **あなた**がAIに自然言語で質問
-2. **AI**がリクエストを分析し、加算が必要だと判断
-3. **AI**がMCPサーバーに`add(5.0, 3.0)`を呼び出し
-4. **計算サービス**が`5.0 + 3.0 = 8.0`を実行
-5. **計算サービス**が`"5.00 + 3.00 = 8.00"`を返す
-6. **AI**が結果を受け取り、自然な応答を整形
-7. **あなた**が「5と3の合計は8です」という応答を受け取る
+2. **AI**がリクエストを分析し、加算を求めていることを理解
+3. **AI**がMCPサーバーを呼び出し: `add(5.0, 3.0)`
+4. **計算機サービス**が計算を実行: `5.0 + 3.0 = 8.0`
+5. **計算機サービス**が結果を返す: `"5.00 + 3.00 = 8.00"`
+6. **AI**が結果を受け取り、自然な応答をフォーマット
+7. **あなた**が応答を受け取る: 「5と3の合計は8です」
 
 ## 次のステップ
 
 さらなる例については、[Chapter 04: Practical samples](../README.md)をご覧ください。
 
+---
+
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当社は責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてお考えください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解について、当社は責任を負いません。

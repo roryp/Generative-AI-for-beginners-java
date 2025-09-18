@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "82ea3c5a1b9d4bf4f1e2d906649e874e",
-  "translation_date": "2025-07-28T11:30:08+00:00",
+  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+  "translation_date": "2025-09-18T15:31:13+00:00",
   "source_file": "04-PracticalSamples/calculator/README.md",
   "language_code": "it"
 }
@@ -38,7 +38,7 @@ Prima di iniziare, assicurati di avere:
 - Java 21 o superiore installato
 - Maven per la gestione delle dipendenze
 - Un account GitHub con un personal access token (PAT)
-- Conoscenze di base di Java e Spring Boot
+- Comprensione di base di Java e Spring Boot
 
 ## Comprendere la Struttura del Progetto
 
@@ -61,7 +61,7 @@ calculator/
 
 **File:** `McpServerApplication.java`
 
-Questo è il punto di ingresso del nostro servizio calcolatore. È un'applicazione Spring Boot standard con un'aggiunta speciale:
+Questo è il punto di ingresso del nostro servizio calcolatore. È un'applicazione standard Spring Boot con un'aggiunta speciale:
 
 ```java
 @SpringBootApplication
@@ -81,7 +81,7 @@ public class McpServerApplication {
 **Cosa fa:**
 - Avvia un server web Spring Boot sulla porta 8080
 - Crea un `ToolCallbackProvider` che rende i metodi del calcolatore disponibili come strumenti MCP
-- L'annotazione `@Bean` dice a Spring di gestire questo componente affinché altre parti possano utilizzarlo
+- L'annotazione `@Bean` indica a Spring di gestirlo come un componente utilizzabile da altre parti
 
 ### 2. Servizio Calcolatore
 
@@ -117,19 +117,19 @@ public class CalculatorService {
 
 1. **Annotazione `@Tool`**: Indica a MCP che questo metodo può essere chiamato da client esterni
 2. **Descrizioni Chiare**: Ogni strumento ha una descrizione che aiuta i modelli AI a capire quando utilizzarlo
-3. **Formato di Ritorno Coerente**: Tutte le operazioni restituiscono stringhe leggibili come "5.00 + 3.00 = 8.00"
-4. **Gestione degli Errori**: Divisioni per zero e radici quadrate di numeri negativi restituiscono messaggi di errore
+3. **Formato di Ritorno Consistente**: Tutte le operazioni restituiscono stringhe leggibili come "5.00 + 3.00 = 8.00"
+4. **Gestione degli Errori**: La divisione per zero e le radici quadrate negative restituiscono messaggi di errore
 
 **Operazioni Disponibili:**
 - `add(a, b)` - Somma due numeri
-- `subtract(a, b)` - Sottrae il secondo numero dal primo
+- `subtract(a, b)` - Sottrae il secondo dal primo
 - `multiply(a, b)` - Moltiplica due numeri
-- `divide(a, b)` - Divide il primo numero per il secondo (con controllo dello zero)
+- `divide(a, b)` - Divide il primo per il secondo (con controllo dello zero)
 - `power(base, exponent)` - Eleva la base alla potenza dell'esponente
 - `squareRoot(number)` - Calcola la radice quadrata (con controllo dei numeri negativi)
 - `modulus(a, b)` - Restituisce il resto della divisione
 - `absolute(number)` - Restituisce il valore assoluto
-- `help()` - Fornisce informazioni su tutte le operazioni
+- `help()` - Restituisce informazioni su tutte le operazioni
 
 ### 3. Client MCP Diretto
 
@@ -141,9 +141,9 @@ Questo client comunica direttamente con il server MCP senza utilizzare l'AI. Chi
 public class SDKClient {
     
     public static void main(String[] args) {
-        var transport = new WebFluxSseClientTransport(
+        McpClientTransport transport = WebFluxSseClientTransport.builder(
             WebClient.builder().baseUrl("http://localhost:8080")
-        );
+        ).build();
         new SDKClient(transport).run();
     }
     
@@ -172,10 +172,12 @@ public class SDKClient {
 ```
 
 **Cosa fa:**
-1. **Si connette** al server del calcolatore su `http://localhost:8080`
+1. **Si connette** al server del calcolatore su `http://localhost:8080` utilizzando il pattern builder
 2. **Elenca** tutti gli strumenti disponibili (le funzioni del calcolatore)
 3. **Chiama** funzioni specifiche con parametri esatti
-4. **Stampa** i risultati direttamente
+4. **Stampa** direttamente i risultati
+
+**Nota:** Questo esempio utilizza la dipendenza Spring AI 1.1.0-SNAPSHOT, che ha introdotto un pattern builder per il `WebFluxSseClientTransport`. Se stai utilizzando una versione stabile precedente, potrebbe essere necessario utilizzare il costruttore diretto.
 
 **Quando usarlo:** Quando sai esattamente quale calcolo vuoi eseguire e desideri chiamarlo programmaticamente.
 
@@ -230,7 +232,7 @@ public class LangChain4jClient {
 
 **Cosa fa:**
 1. **Crea** una connessione al modello AI utilizzando il tuo token GitHub
-2. **Si connette** al server MCP del nostro calcolatore
+2. **Si connette** al nostro server MCP del calcolatore
 3. **Dà** accesso all'AI a tutti gli strumenti del calcolatore
 4. **Permette** richieste in linguaggio naturale come "Calcola la somma di 24.5 e 17.3"
 
@@ -296,8 +298,8 @@ The square root of 144 is 12.
 
 ### Passo 4: Chiudere il Server MCP
 
-Quando hai finito i test, puoi interrompere il client AI premendo `Ctrl+C` nel suo terminale. Il server MCP continuerà a funzionare finché non lo fermerai.
-Per fermare il server, premi `Ctrl+C` nel terminale in cui è in esecuzione.
+Quando hai finito di testare, puoi interrompere il client AI premendo `Ctrl+C` nel suo terminale. Il server MCP continuerà a funzionare fino a quando non lo interrompi.
+Per interrompere il server, premi `Ctrl+C` nel terminale in cui è in esecuzione.
 
 ## Come Funziona Tutto Insieme
 
@@ -313,7 +315,9 @@ Ecco il flusso completo quando chiedi all'AI "Quanto fa 5 + 3?":
 
 ## Prossimi Passi
 
-Per ulteriori esempi, consulta [Capitolo 04: Esempi pratici](../README.md)
+Per ulteriori esempi, vedi [Capitolo 04: Esempi pratici](../README.md)
+
+---
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un esperto umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.
