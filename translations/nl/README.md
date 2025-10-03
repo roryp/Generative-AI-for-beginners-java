@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:43:38+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:14:59+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. Wacht ~2 minuten tot de omgeving gereed is
 6. Ga direct naar [Het eerste voorbeeld](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Ondersteuning voor Meerdere Talen
+## Meertalige Ondersteuning
 
 ### Ondersteund via GitHub Action (Automatisch & Altijd Actueel)
 
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Kernconcepten**: Begrip van grote taalmodellen, tokens, embeddings en AI-mogelijkheden
 - **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDK's
 - **Model Context Protocol**: Introductie tot MCP en de rol ervan in AI-agentcommunicatie
-- **Praktische Toepassingen**: Realistische scenario's zoals chatbots en contentgeneratie
+- **Praktische Toepassingen**: Toepassingen in de echte wereld, zoals chatbots en contentgeneratie
 - **[→ Start Hoofdstuk 1](./01-IntroToGenAI/README.md)**
 
 ### **Hoofdstuk 2: Ontwikkelomgeving Instellen**
@@ -48,8 +48,8 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Hoofdstuk 3: Kerntechnieken van Generatieve AI**
 - **Prompt Engineering**: Technieken voor optimale AI-modelreacties
 - **Embeddings & Vectorbewerkingen**: Implementeren van semantisch zoeken en overeenkomsten
-- **Retrieval-Augmented Generation (RAG)**: Combineer AI met je eigen gegevensbronnen
-- **Functieaanroepen**: Breid AI-mogelijkheden uit met aangepaste tools en plugins
+- **Retrieval-Augmented Generation (RAG)**: AI combineren met je eigen gegevensbronnen
+- **Functieaanroepen**: AI uitbreiden met aangepaste tools en plugins
 - **[→ Start Hoofdstuk 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Hoofdstuk 4: Praktische Toepassingen & Projecten**
@@ -60,12 +60,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Hoofdstuk 5: Verantwoordelijke AI-ontwikkeling**
 - **GitHub Models Veiligheid**: Test ingebouwde contentfiltering en veiligheidsmechanismen (harde blokkades en zachte weigeringen)
-- **Verantwoordelijke AI Demo**: Praktisch voorbeeld dat laat zien hoe moderne AI-veiligheidssystemen werken
+- **Verantwoordelijke AI Demo**: Praktisch voorbeeld van hoe moderne AI-veiligheidssystemen werken
 - **Best Practices**: Essentiële richtlijnen voor ethische AI-ontwikkeling en implementatie
 - **[→ Start Hoofdstuk 5](./05-ResponsibleGenAI/README.md)**
 
 ## Aanvullende Bronnen
 
+- [Edge AI voor Beginners](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP Voor Beginners](https://github.com/microsoft/mcp-for-beginners)
 - [AI Agents Voor Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generatieve AI voor Beginners met .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -83,7 +84,17 @@ CO_OP_TRANSLATOR_METADATA:
 - [Kies Je Eigen Copilot Avontuur](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App met Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+## Hulp Krijgen
+
+Als je vastloopt of vragen hebt over het bouwen van AI-apps, sluit je aan bij:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+Als je productfeedback hebt of fouten tegenkomt tijdens het bouwen, bezoek:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:40:50+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:11:44+00:00",
   "source_file": "README.md",
   "language_code": "el"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Γενετική Τεχνητή Νοημοσύνη για Αρχάριους - Έκδοση Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.el.png)
 
-**Χρόνος Δέσμευσης**: Το εργαστήριο μπορεί να ολοκληρωθεί εξ ολοκλήρου διαδικτυακά χωρίς τοπική εγκατάσταση. Η ρύθμιση του περιβάλλοντος απαιτεί 2 λεπτά, ενώ η εξερεύνηση των παραδειγμάτων μπορεί να διαρκέσει 1-3 ώρες, ανάλογα με το βάθος της εξερεύνησης.
+**Χρόνος Δέσμευσης**: Το εργαστήριο μπορεί να ολοκληρωθεί εξ ολοκλήρου online χωρίς τοπική εγκατάσταση. Η ρύθμιση του περιβάλλοντος απαιτεί 2 λεπτά, ενώ η εξερεύνηση των παραδειγμάτων μπορεί να διαρκέσει 1-3 ώρες, ανάλογα με το βάθος της εξερεύνησης.
 
 > **Γρήγορη Εκκίνηση**
 
@@ -33,29 +33,29 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Κεφάλαιο 1: Εισαγωγή στη Γενετική Τεχνητή Νοημοσύνη**
 - **Βασικές Έννοιες**: Κατανόηση Μεγάλων Γλωσσικών Μοντέλων, tokens, embeddings και δυνατοτήτων AI
-- **Οικοσύστημα AI για Java**: Επισκόπηση των Spring AI και OpenAI SDKs
+- **Java AI Οικοσύστημα**: Επισκόπηση των Spring AI και OpenAI SDKs
 - **Πρωτόκολλο Context Μοντέλου**: Εισαγωγή στο MCP και τον ρόλο του στην επικοινωνία AI agents
 - **Πρακτικές Εφαρμογές**: Σενάρια πραγματικού κόσμου, όπως chatbots και δημιουργία περιεχομένου
 - **[→ Ξεκινήστε το Κεφάλαιο 1](./01-IntroToGenAI/README.md)**
 
 ### **Κεφάλαιο 2: Ρύθμιση Περιβάλλοντος Ανάπτυξης**
-- **Διαμόρφωση Πολλαπλών Παρόχων**: Ρύθμιση ενσωματώσεων GitHub Models, Azure OpenAI και OpenAI Java SDK
+- **Ρύθμιση Πολλαπλών Παρόχων**: Ενσωμάτωση GitHub Models, Azure OpenAI και OpenAI Java SDK
 - **Spring Boot + Spring AI**: Βέλτιστες πρακτικές για ανάπτυξη εφαρμογών AI σε επιχειρήσεις
 - **GitHub Models**: Δωρεάν πρόσβαση σε μοντέλα AI για πρωτότυπα και μάθηση (χωρίς πιστωτική κάρτα)
 - **Εργαλεία Ανάπτυξης**: Ρύθμιση Docker containers, VS Code και GitHub Codespaces
 - **[→ Ξεκινήστε το Κεφάλαιο 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Κεφάλαιο 3: Βασικές Τεχνικές Γενετικής Τεχνητής Νοημοσύνης**
-- **Μηχανική Προτροπών**: Τεχνικές για βέλτιστες απαντήσεις μοντέλων AI
-- **Embeddings & Λειτουργίες Διανυσμάτων**: Υλοποίηση σημασιολογικής αναζήτησης και αντιστοίχισης ομοιότητας
+- **Prompt Engineering**: Τεχνικές για βέλτιστες απαντήσεις από μοντέλα AI
+- **Embeddings & Vector Operations**: Υλοποίηση σημασιολογικής αναζήτησης και αντιστοίχισης ομοιότητας
 - **Ανάκτηση-Εμπλουτισμένη Γενετική (RAG)**: Συνδυασμός AI με δικές σας πηγές δεδομένων
-- **Κλήση Λειτουργιών**: Επέκταση δυνατοτήτων AI με προσαρμοσμένα εργαλεία και plugins
+- **Function Calling**: Επέκταση δυνατοτήτων AI με προσαρμοσμένα εργαλεία και plugins
 - **[→ Ξεκινήστε το Κεφάλαιο 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Κεφάλαιο 4: Πρακτικές Εφαρμογές & Έργα**
-- **Γεννήτρια Ιστοριών Κατοικίδιων** (`petstory/`): Δημιουργία περιεχομένου με τα GitHub Models
+- **Γεννήτρια Ιστοριών Κατοικίδιων** (`petstory/`): Δημιουργία περιεχομένου με GitHub Models
 - **Τοπική Επίδειξη Foundry** (`foundrylocal/`): Ενσωμάτωση τοπικών μοντέλων AI με OpenAI Java SDK
-- **Υπηρεσία Υπολογιστή MCP** (`calculator/`): Βασική υλοποίηση του Πρωτοκόλλου Context Μοντέλου με Spring AI
+- **Υπηρεσία Υπολογιστή MCP** (`calculator/`): Βασική υλοποίηση Πρωτοκόλλου Context Μοντέλου με Spring AI
 - **[→ Ξεκινήστε το Κεφάλαιο 4](./04-PracticalSamples/README.md)**
 
 ### **Κεφάλαιο 5: Υπεύθυνη Ανάπτυξη AI**
@@ -66,8 +66,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Πρόσθετοι Πόροι
 
-- [MCP Για Αρχάριους](https://github.com/microsoft/mcp-for-beginners)
-- [AI Agents Για Αρχάριους](https://github.com/microsoft/ai-agents-for-beginners)
+- [Edge AI για Αρχάριους](https://github.com/microsoft/edgeai-for-beginners)
+- [MCP για Αρχάριους](https://github.com/microsoft/mcp-for-beginners)
+- [AI Agents για Αρχάριους](https://github.com/microsoft/ai-agents-for-beginners)
 - [Γενετική Τεχνητή Νοημοσύνη για Αρχάριους με .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Γενετική Τεχνητή Νοημοσύνη για Αρχάριους με JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Γενετική Τεχνητή Νοημοσύνη για Αρχάριους](https://github.com/microsoft/generative-ai-for-beginners)
@@ -83,7 +84,17 @@ CO_OP_TRANSLATOR_METADATA:
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App με Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+## Λήψη Βοήθειας
+
+Αν αντιμετωπίζετε δυσκολίες ή έχετε ερωτήσεις σχετικά με την ανάπτυξη εφαρμογών AI, συμμετάσχετε:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+Αν έχετε σχόλια για το προϊόν ή σφάλματα κατά την ανάπτυξη, επισκεφθείτε:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+
 ---
 
 **Αποποίηση ευθύνης**:  
-Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που καταβάλλουμε προσπάθειες για ακρίβεια, παρακαλούμε να έχετε υπόψη ότι οι αυτοματοποιημένες μεταφράσεις ενδέχεται να περιέχουν σφάλματα ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα θα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
+Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που καταβάλλουμε προσπάθειες για ακρίβεια, παρακαλούμε να έχετε υπόψη ότι οι αυτόματες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα θα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:46:55+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:18:44+00:00",
   "source_file": "README.md",
   "language_code": "cs"
 }
@@ -12,13 +12,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativní AI pro začátečníky - Java edice](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.cs.png)
 
-**Časová náročnost**: Celý workshop lze dokončit online bez lokálního nastavení. Nastavení prostředí zabere 2 minuty, prozkoumání ukázek vyžaduje 1–3 hodiny v závislosti na hloubce průzkumu.
+**Časová náročnost**: Celý workshop lze dokončit online bez lokálního nastavení. Nastavení prostředí trvá 2 minuty, průzkum ukázek vyžaduje 1–3 hodiny v závislosti na hloubce průzkumu.
 
-> **Rychlý start** 
+> **Rychlý start**
 
 1. Forkněte tento repozitář do svého GitHub účtu
 2. Klikněte na **Code** → záložka **Codespaces** → **...** → **New with options...**
-3. Použijte výchozí nastavení – to vybere vývojový kontejner vytvořený pro tento kurz
+3. Použijte výchozí nastavení – tím se vybere vývojový kontejner vytvořený pro tento kurz
 4. Klikněte na **Create codespace**
 5. Počkejte ~2 minuty, než bude prostředí připraveno
 6. Přejděte rovnou na [První příklad](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
@@ -27,14 +27,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Podporováno prostřednictvím GitHub Action (automatizované a vždy aktuální)
 
-[Francouzština](../fr/README.md) | [Španělština](../es/README.md) | [Němčina](../de/README.md) | [Ruština](../ru/README.md) | [Arabština](../ar/README.md) | [Perština (Fársí)](../fa/README.md) | [Urdu](../ur/README.md) | [Čínština (zjednodušená)](../zh/README.md) | [Čínština (tradiční, Macao)](../mo/README.md) | [Čínština (tradiční, Hongkong)](../hk/README.md) | [Čínština (tradiční, Tchaj-wan)](../tw/README.md) | [Japonština](../ja/README.md) | [Korejština](../ko/README.md) | [Hindština](../hi/README.md) | [Bengálština](../bn/README.md) | [Maráthština](../mr/README.md) | [Nepálština](../ne/README.md) | [Paňdžábština (Gurmukhi)](../pa/README.md) | [Portugalština (Portugalsko)](../pt/README.md) | [Portugalština (Brazílie)](../br/README.md) | [Italština](../it/README.md) | [Polština](../pl/README.md) | [Turečtina](../tr/README.md) | [Řečtina](../el/README.md) | [Thajština](../th/README.md) | [Švédština](../sv/README.md) | [Dánština](../da/README.md) | [Norština](../no/README.md) | [Finština](../fi/README.md) | [Nizozemština](../nl/README.md) | [Hebrejština](../he/README.md) | [Vietnamština](../vi/README.md) | [Indonéština](../id/README.md) | [Malajština](../ms/README.md) | [Tagalog (Filipínština)](../tl/README.md) | [Svahilština](../sw/README.md) | [Maďarština](../hu/README.md) | [Čeština](./README.md) | [Slovenština](../sk/README.md) | [Rumunština](../ro/README.md) | [Bulharština](../bg/README.md) | [Srbština (cyrilice)](../sr/README.md) | [Chorvatština](../hr/README.md) | [Slovinština](../sl/README.md) | [Ukrajinština](../uk/README.md) | [Barmština (Myanmar)](../my/README.md)
+[Francouzština](../fr/README.md) | [Španělština](../es/README.md) | [Němčina](../de/README.md) | [Ruština](../ru/README.md) | [Arabština](../ar/README.md) | [Perština (Fársí)](../fa/README.md) | [Urdu](../ur/README.md) | [Čínština (zjednodušená)](../zh/README.md) | [Čínština (tradiční, Macao)](../mo/README.md) | [Čínština (tradiční, Hongkong)](../hk/README.md) | [Čínština (tradiční, Tchaj-wan)](../tw/README.md) | [Japonština](../ja/README.md) | [Korejština](../ko/README.md) | [Hindština](../hi/README.md) | [Bengálština](../bn/README.md) | [Maráthština](../mr/README.md) | [Nepálština](../ne/README.md) | [Paňdžábština (Gurmukhi)](../pa/README.md) | [Portugalština (Portugalsko)](../pt/README.md) | [Portugalština (Brazílie)](../br/README.md) | [Italština](../it/README.md) | [Polština](../pl/README.md) | [Turečtina](../tr/README.md) | [Řečtina](../el/README.md) | [Thajština](../th/README.md) | [Švédština](../sv/README.md) | [Dánština](../da/README.md) | [Norština](../no/README.md) | [Finština](../fi/README.md) | [Nizozemština](../nl/README.md) | [Hebrejština](../he/README.md) | [Vietnamština](../vi/README.md) | [Indonéština](../id/README.md) | [Malajština](../ms/README.md) | [Tagalog (Filipíny)](../tl/README.md) | [Svahilština](../sw/README.md) | [Maďarština](../hu/README.md) | [Čeština](./README.md) | [Slovenština](../sk/README.md) | [Rumunština](../ro/README.md) | [Bulharština](../bg/README.md) | [Srbština (cyrilice)](../sr/README.md) | [Chorvatština](../hr/README.md) | [Slovinština](../sl/README.md) | [Ukrajinština](../uk/README.md) | [Barmština (Myanmar)](../my/README.md)
 
-## Struktura kurzu a vzdělávací cesta
+## Struktura kurzu a učební cesta
 
 ### **Kapitola 1: Úvod do generativní AI**
 - **Základní koncepty**: Porozumění velkým jazykovým modelům, tokenům, embeddingům a schopnostem AI
 - **Java AI ekosystém**: Přehled Spring AI a OpenAI SDK
-- **Model Context Protocol**: Úvod do MCP a jeho role v komunikaci AI agentů
+- **Protokol kontextu modelu**: Úvod do MCP a jeho role v komunikaci AI agentů
 - **Praktické aplikace**: Reálné scénáře včetně chatbotů a generování obsahu
 - **[→ Začít kapitolu 1](./01-IntroToGenAI/README.md)**
 
@@ -46,16 +46,16 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Začít kapitolu 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Kapitola 3: Základní techniky generativní AI**
-- **Prompt Engineering**: Techniky pro optimální odpovědi AI modelů
-- **Embeddingy a vektorové operace**: Implementace sémantického vyhledávání a porovnávání podobnosti
-- **Retrieval-Augmented Generation (RAG)**: Kombinace AI s vlastními datovými zdroji
+- **Návrh promptů**: Techniky pro optimální odpovědi AI modelů
+- **Embeddingy a operace s vektory**: Implementace semantického vyhledávání a porovnávání podobnosti
+- **Generování s podporou vyhledávání (RAG)**: Kombinace AI s vlastními datovými zdroji
 - **Volání funkcí**: Rozšíření schopností AI pomocí vlastních nástrojů a pluginů
 - **[→ Začít kapitolu 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kapitola 4: Praktické aplikace a projekty**
-- **Generátor příběhů o mazlíčcích** (`petstory/`): Kreativní generování obsahu s GitHub Models
+- **Generátor příběhů o mazlíčcích** (`petstory/`): Kreativní generování obsahu pomocí GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Integrace lokálních AI modelů s OpenAI Java SDK
-- **MCP kalkulačka** (`calculator/`): Základní implementace Model Context Protocol se Spring AI
+- **MCP kalkulační služba** (`calculator/`): Základní implementace protokolu kontextu modelu pomocí Spring AI
 - **[→ Začít kapitolu 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitola 5: Odpovědný vývoj AI**
@@ -64,8 +64,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **Nejlepší postupy**: Zásadní pokyny pro etický vývoj a nasazení AI
 - **[→ Začít kapitolu 5](./05-ResponsibleGenAI/README.md)**
 
-## Další zdroje 
+## Další zdroje
 
+- [Edge AI pro začátečníky](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP pro začátečníky](https://github.com/microsoft/mcp-for-beginners)
 - [AI agenti pro začátečníky](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generativní AI pro začátečníky s .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -78,12 +79,22 @@ CO_OP_TRANSLATOR_METADATA:
 - [Webový vývoj pro začátečníky](https://aka.ms/webdev-beginners)
 - [IoT pro začátečníky](https://aka.ms/iot-beginners)
 - [XR vývoj pro začátečníky](https://github.com/microsoft/xr-development-for-beginners)
-- [Ovládnutí GitHub Copilot pro AI párové programování](https://aka.ms/GitHubCopilotAI)
+- [Ovládnutí GitHub Copilot pro párové programování s AI](https://aka.ms/GitHubCopilotAI)
 - [Ovládnutí GitHub Copilot pro vývojáře C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Vyberte si vlastní dobrodružství s Copilotem](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App s Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+## Získání pomoci
+
+Pokud narazíte na problém nebo máte otázky ohledně budování AI aplikací, připojte se:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+Pokud máte zpětnou vazbu k produktu nebo narazíte na chyby při budování, navštivte:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Za autoritativní zdroj by měl být považován původní dokument v jeho původním jazyce. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

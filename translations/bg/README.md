@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:48:19+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:20:18+00:00",
   "source_file": "README.md",
   "language_code": "bg"
 }
@@ -12,76 +12,87 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Генеративен AI за начинаещи - Java издание](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.bg.png)
 
-**Време за изпълнение**: Целият уъркшоп може да бъде завършен онлайн без локална настройка. Настройката на средата отнема 2 минути, а изследването на примерите изисква 1-3 часа в зависимост от дълбочината на изследването.
+**Време за ангажимент**: Целият уъркшоп може да бъде завършен онлайн без локална настройка. Настройката на средата отнема 2 минути, а изследването на примерите изисква 1-3 часа в зависимост от дълбочината на изследването.
 
 > **Бърз старт**
 
-1. Форкнете това хранилище във вашия GitHub акаунт
+1. Форкнете това хранилище към вашия GitHub акаунт
 2. Кликнете **Code** → **Codespaces** таб → **...** → **New with options...**
 3. Използвайте настройките по подразбиране – това ще избере контейнера за разработка, създаден за този курс
 4. Кликнете **Create codespace**
 5. Изчакайте ~2 минути, докато средата бъде готова
-6. Прескочете директно към [Първия пример](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Започнете директно с [Първия пример](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Поддръжка на много езици
 
 ### Поддържани чрез GitHub Action (Автоматизирано и винаги актуално)
 
-[Френски](../fr/README.md) | [Испански](../es/README.md) | [Немски](../de/README.md) | [Руски](../ru/README.md) | [Арабски](../ar/README.md) | [Персийски (Фарси)](../fa/README.md) | [Урду](../ur/README.md) | [Китайски (опростен)](../zh/README.md) | [Китайски (традиционен, Макао)](../mo/README.md) | [Китайски (традиционен, Хонконг)](../hk/README.md) | [Китайски (традиционен, Тайван)](../tw/README.md) | [Японски](../ja/README.md) | [Корейски](../ko/README.md) | [Хинди](../hi/README.md) | [Бенгалски](../bn/README.md) | [Марати](../mr/README.md) | [Непалски](../ne/README.md) | [Пенджабски (Гурмукхи)](../pa/README.md) | [Португалски (Португалия)](../pt/README.md) | [Португалски (Бразилия)](../br/README.md) | [Италиански](../it/README.md) | [Полски](../pl/README.md) | [Турски](../tr/README.md) | [Гръцки](../el/README.md) | [Тайландски](../th/README.md) | [Шведски](../sv/README.md) | [Датски](../da/README.md) | [Норвежки](../no/README.md) | [Фински](../fi/README.md) | [Холандски](../nl/README.md) | [Иврит](../he/README.md) | [Виетнамски](../vi/README.md) | [Индонезийски](../id/README.md) | [Малайски](../ms/README.md) | [Тагалог (Филипински)](../tl/README.md) | [Суахили](../sw/README.md) | [Унгарски](../hu/README.md) | [Чешки](../cs/README.md) | [Словашки](../sk/README.md) | [Румънски](../ro/README.md) | [Български](./README.md) | [Сръбски (Кирилица)](../sr/README.md) | [Хърватски](../hr/README.md) | [Словенски](../sl/README.md) | [Украински](../uk/README.md) | [Бирмански (Мианмар)](../my/README.md)
+[Френски](../fr/README.md) | [Испански](../es/README.md) | [Немски](../de/README.md) | [Руски](../ru/README.md) | [Арабски](../ar/README.md) | [Персийски (Фарси)](../fa/README.md) | [Урду](../ur/README.md) | [Китайски (опростен)](../zh/README.md) | [Китайски (традиционен, Макао)](../mo/README.md) | [Китайски (традиционен, Хонконг)](../hk/README.md) | [Китайски (традиционен, Тайван)](../tw/README.md) | [Японски](../ja/README.md) | [Корейски](../ko/README.md) | [Хинди](../hi/README.md) | [Бенгалски](../bn/README.md) | [Маратхи](../mr/README.md) | [Непалски](../ne/README.md) | [Пенджабски (Гурмуки)](../pa/README.md) | [Португалски (Португалия)](../pt/README.md) | [Португалски (Бразилия)](../br/README.md) | [Италиански](../it/README.md) | [Полски](../pl/README.md) | [Турски](../tr/README.md) | [Гръцки](../el/README.md) | [Тайландски](../th/README.md) | [Шведски](../sv/README.md) | [Датски](../da/README.md) | [Норвежки](../no/README.md) | [Фински](../fi/README.md) | [Холандски](../nl/README.md) | [Иврит](../he/README.md) | [Виетнамски](../vi/README.md) | [Индонезийски](../id/README.md) | [Малайски](../ms/README.md) | [Тагалог (Филипински)](../tl/README.md) | [Суахили](../sw/README.md) | [Унгарски](../hu/README.md) | [Чешки](../cs/README.md) | [Словашки](../sk/README.md) | [Румънски](../ro/README.md) | [Български](./README.md) | [Сръбски (кирилица)](../sr/README.md) | [Хърватски](../hr/README.md) | [Словенски](../sl/README.md) | [Украински](../uk/README.md) | [Бирмански (Мианмар)](../my/README.md)
 
 ## Структура на курса и учебен път
 
 ### **Глава 1: Въведение в Генеративния AI**
-- **Основни концепции**: Разбиране на големите езикови модели, токени, вграждания и AI възможности
+- **Основни концепции**: Разбиране на големи езикови модели, токени, вграждания и AI възможности
 - **Java AI екосистема**: Преглед на Spring AI и OpenAI SDKs
-- **Протокол за контекст на модела**: Въведение в MCP и неговата роля в комуникацията на AI агентите
+- **Протокол за контекст на модела**: Въведение в MCP и неговата роля в комуникацията на AI агенти
 - **Практически приложения**: Реални сценарии, включително чатботове и генериране на съдържание
 - **[→ Започнете Глава 1](./01-IntroToGenAI/README.md)**
 
-### **Глава 2: Настройка на средата за разработка**
+### **Глава 2: Настройка на среда за разработка**
 - **Конфигурация за множество доставчици**: Настройка на GitHub Models, Azure OpenAI и OpenAI Java SDK интеграции
-- **Spring Boot + Spring AI**: Най-добри практики за разработка на AI приложения за предприятия
-- **GitHub Models**: Безплатен достъп до AI модели за прототипиране и обучение (без нужда от кредитна карта)
+- **Spring Boot + Spring AI**: Най-добри практики за разработка на корпоративни AI приложения
+- **GitHub Models**: Безплатен достъп до AI модели за прототипиране и обучение (без необходимост от кредитна карта)
 - **Инструменти за разработка**: Конфигурация на Docker контейнери, VS Code и GitHub Codespaces
 - **[→ Започнете Глава 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Глава 3: Основни техники за Генеративен AI**
-- **Инженеринг на подканите**: Техники за оптимални отговори от AI моделите
-- **Вграждания и векторни операции**: Реализиране на семантично търсене и съвпадение по сходство
-- **Генериране с извличане (RAG)**: Комбиниране на AI с ваши собствени източници на данни
-- **Извикване на функции**: Разширяване на възможностите на AI с персонализирани инструменти и плъгини
+- **Инженеринг на подсказки**: Техники за оптимални отговори от AI модели
+- **Вграждания и векторни операции**: Имплементация на семантично търсене и съвпадение по сходство
+- **Генерация с допълнително извличане (RAG)**: Комбиниране на AI с ваши собствени източници на данни
+- **Извикване на функции**: Разширяване на AI възможностите с персонализирани инструменти и плъгини
 - **[→ Започнете Глава 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Глава 4: Практически приложения и проекти**
-- **Генератор на истории за домашни любимци** (`petstory/`): Генериране на креативно съдържание с GitHub Models
-- **Локална демонстрация на Foundry** (`foundrylocal/`): Интеграция на локален AI модел с OpenAI Java SDK
+- **Генератор на истории за домашни любимци** (`petstory/`): Креативно генериране на съдържание с GitHub Models
+- **Локална демонстрация на Foundry** (`foundrylocal/`): Локална интеграция на AI модели с OpenAI Java SDK
 - **Калкулатор на MCP** (`calculator/`): Основна имплементация на Протокол за контекст на модела със Spring AI
 - **[→ Започнете Глава 4](./04-PracticalSamples/README.md)**
 
 ### **Глава 5: Отговорна разработка на AI**
-- **Безопасност на GitHub Models**: Тестване на вградени механизми за филтриране на съдържание и безопасност (твърди блокове и меки откази)
-- **Демонстрация на отговорен AI**: Практически пример, показващ как работят съвременните AI системи за безопасност
-- **Най-добри практики**: Основни насоки за етично разработване и внедряване на AI
+- **Безопасност на GitHub Models**: Тестване на вградени механизми за филтриране на съдържание и безопасност (твърди блокировки и меки откази)
+- **Демонстрация на отговорен AI**: Практически пример, показващ как работят съвременните системи за безопасност на AI
+- **Най-добри практики**: Основни насоки за етична разработка и внедряване на AI
 - **[→ Започнете Глава 5](./05-ResponsibleGenAI/README.md)**
 
 ## Допълнителни ресурси
 
+- [Edge AI за начинаещи](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP за начинаещи](https://github.com/microsoft/mcp-for-beginners)
 - [AI агенти за начинаещи](https://github.com/microsoft/ai-agents-for-beginners)
 - [Генеративен AI за начинаещи с .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Генеративен AI за начинаещи с JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Генеративен AI за начинаещи](https://github.com/microsoft/generative-ai-for-beginners)
-- [Машинно обучение за начинаещи](https://aka.ms/ml-beginners)
+- [ML за начинаещи](https://aka.ms/ml-beginners)
 - [Наука за данни за начинаещи](https://aka.ms/datascience-beginners)
 - [AI за начинаещи](https://aka.ms/ai-beginners)
 - [Киберсигурност за начинаещи](https://github.com/microsoft/Security-101)
 - [Уеб разработка за начинаещи](https://aka.ms/webdev-beginners)
 - [IoT за начинаещи](https://aka.ms/iot-beginners)
 - [XR разработка за начинаещи](https://github.com/microsoft/xr-development-for-beginners)
-- [Майсторство на GitHub Copilot за AI програмиране в екип](https://aka.ms/GitHubCopilotAI)
-- [Майсторство на GitHub Copilot за C#/.NET разработчици](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Изберете своето собствено приключение с Copilot](https://github.com/microsoft/CopilotAdventures)
+- [Овладяване на GitHub Copilot за AI програмиране в двойка](https://aka.ms/GitHubCopilotAI)
+- [Овладяване на GitHub Copilot за C#/.NET разработчици](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Изберете своето приключение с Copilot](https://github.com/microsoft/CopilotAdventures)
 - [RAG чат приложение с Azure AI услуги](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+
+## Получаване на помощ
+
+Ако се затрудните или имате въпроси относно изграждането на AI приложения, присъединете се:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+Ако имате обратна връзка за продукта или грешки при разработката, посетете:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 

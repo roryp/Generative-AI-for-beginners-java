@@ -1,17 +1,20 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:30:45+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:00:11+00:00",
   "source_file": "README.md",
   "language_code": "en"
 }
 -->
 # Generative AI for Beginners - Java Edition
+[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-**Time Commitment**: This workshop can be completed entirely online without requiring a local setup. Setting up the environment takes about 2 minutes, and exploring the examples can take 1-3 hours depending on how deeply you dive into them.
+![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.en.png)
 
-> **Quick Start**
+**Time Commitment**: This workshop can be completed entirely online without requiring local setup. Setting up the environment takes about 2 minutes, and exploring the examples can take 1-3 hours depending on how deeply you dive into them.
+
+> **Quick Start** 
 
 1. Fork this repository to your GitHub account.
 2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
@@ -30,20 +33,20 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Chapter 1: Introduction to Generative AI**
 - **Core Concepts**: Learn about Large Language Models, tokens, embeddings, and AI capabilities.
-- **Java AI Ecosystem**: Explore Spring AI and OpenAI SDKs.
-- **Model Context Protocol**: Understand MCP and its importance in AI agent communication.
-- **Practical Applications**: Real-world use cases like chatbots and content generation.
+- **Java AI Ecosystem**: Overview of Spring AI and OpenAI SDKs.
+- **Model Context Protocol**: Introduction to MCP and its role in AI agent communication.
+- **Practical Applications**: Explore real-world use cases like chatbots and content generation.
 - **[→ Start Chapter 1](./01-IntroToGenAI/README.md)**
 
 ### **Chapter 2: Development Environment Setup**
-- **Multi-Provider Configuration**: Set up GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations.
-- **Spring Boot + Spring AI**: Learn best practices for building enterprise AI applications.
+- **Multi-Provider Configuration**: Set up integrations for GitHub Models, Azure OpenAI, and OpenAI Java SDK.
+- **Spring Boot + Spring AI**: Best practices for developing enterprise AI applications.
 - **GitHub Models**: Access free AI models for prototyping and learning (no credit card required).
 - **Development Tools**: Configure Docker containers, VS Code, and GitHub Codespaces.
 - **[→ Start Chapter 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chapter 3: Core Generative AI Techniques**
-- **Prompt Engineering**: Learn how to craft prompts for optimal AI responses.
+- **Prompt Engineering**: Learn techniques to optimize AI model responses.
 - **Embeddings & Vector Operations**: Implement semantic search and similarity matching.
 - **Retrieval-Augmented Generation (RAG)**: Combine AI with your own data sources.
 - **Function Calling**: Extend AI capabilities with custom tools and plugins.
@@ -57,12 +60,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Chapter 5: Responsible AI Development**
 - **GitHub Models Safety**: Test built-in content filtering and safety mechanisms (hard blocks and soft refusals).
-- **Responsible AI Demo**: Hands-on example showcasing modern AI safety systems.
+- **Responsible AI Demo**: Hands-on example demonstrating modern AI safety systems.
 - **Best Practices**: Learn essential guidelines for ethical AI development and deployment.
 - **[→ Start Chapter 5](./05-ResponsibleGenAI/README.md)**
 
-## Additional Resources
+## Additional Resources 
 
+- [Edge AI for Beginners](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP For Beginners](https://github.com/microsoft/mcp-for-beginners)
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -80,7 +84,17 @@ CO_OP_TRANSLATOR_METADATA:
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+## Getting Help
+
+If you encounter any issues or have questions about building AI applications, join:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+For product feedback or troubleshooting errors, visit:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
