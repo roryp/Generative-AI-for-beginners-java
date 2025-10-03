@@ -1,24 +1,27 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:36:16+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:06:45+00:00",
   "source_file": "README.md",
   "language_code": "hi"
 }
 -->
 # शुरुआती लोगों के लिए जनरेटिव AI - जावा संस्करण
+[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-**समय प्रतिबद्धता**: पूरा वर्कशॉप ऑनलाइन पूरा किया जा सकता है, बिना किसी लोकल सेटअप के। पर्यावरण सेटअप में 2 मिनट लगते हैं, और नमूनों को एक्सप्लोर करने में 1-3 घंटे लग सकते हैं, यह आपकी गहराई पर निर्भर करता है।
+![शुरुआती लोगों के लिए जनरेटिव AI - जावा संस्करण](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.hi.png)
+
+**समय की आवश्यकता**: पूरा वर्कशॉप ऑनलाइन बिना किसी लोकल सेटअप के पूरा किया जा सकता है। पर्यावरण सेटअप में 2 मिनट लगते हैं, और नमूनों को एक्सप्लोर करने में 1-3 घंटे लग सकते हैं, यह आपकी गहराई से एक्सप्लोरेशन पर निर्भर करता है।
 
 > **त्वरित शुरुआत**
 
-1. इस रिपॉजिटरी को अपने GitHub अकाउंट पर फोर्क करें  
-2. **Code** → **Codespaces** टैब → **...** → **New with options...** पर क्लिक करें  
-3. डिफॉल्ट विकल्प चुनें – यह इस कोर्स के लिए बनाए गए डेवलपमेंट कंटेनर को चुनेगा  
-4. **Create codespace** पर क्लिक करें  
-5. पर्यावरण तैयार होने में लगभग 2 मिनट का इंतजार करें  
-6. सीधे [पहले उदाहरण](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token) पर जाएं  
+1. इस रिपॉजिटरी को अपने GitHub अकाउंट में फोर्क करें
+2. **Code** → **Codespaces** टैब → **...** → **New with options...** पर क्लिक करें
+3. डिफॉल्ट विकल्प चुनें – यह इस कोर्स के लिए बनाए गए डेवलपमेंट कंटेनर को चुनेगा
+4. **Create codespace** पर क्लिक करें
+5. पर्यावरण तैयार होने में ~2 मिनट का इंतजार करें
+6. सीधे [पहले उदाहरण](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token) पर जाएं
 
 ## बहुभाषी समर्थन
 
@@ -29,58 +32,69 @@ CO_OP_TRANSLATOR_METADATA:
 ## कोर्स संरचना और सीखने का मार्ग
 
 ### **अध्याय 1: जनरेटिव AI का परिचय**
-- **मुख्य अवधारणाएं**: बड़े भाषा मॉडल, टोकन, एम्बेडिंग और AI क्षमताओं को समझना  
-- **जावा AI इकोसिस्टम**: Spring AI और OpenAI SDKs का अवलोकन  
-- **मॉडल कॉन्टेक्स्ट प्रोटोकॉल**: MCP और AI एजेंट संचार में इसकी भूमिका का परिचय  
-- **व्यावहारिक अनुप्रयोग**: वास्तविक दुनिया के परिदृश्य जैसे चैटबॉट्स और सामग्री निर्माण  
-- **[→ अध्याय 1 शुरू करें](./01-IntroToGenAI/README.md)**  
+- **मुख्य अवधारणाएं**: बड़े भाषा मॉडल, टोकन, एम्बेडिंग और AI क्षमताओं को समझना
+- **जावा AI इकोसिस्टम**: Spring AI और OpenAI SDKs का अवलोकन
+- **मॉडल कॉन्टेक्स्ट प्रोटोकॉल**: MCP और AI एजेंट संचार में इसकी भूमिका का परिचय
+- **व्यावहारिक अनुप्रयोग**: वास्तविक दुनिया के परिदृश्य जैसे चैटबॉट और सामग्री निर्माण
+- **[→ अध्याय 1 शुरू करें](./01-IntroToGenAI/README.md)**
 
 ### **अध्याय 2: विकास पर्यावरण सेटअप**
-- **मल्टी-प्रोवाइडर कॉन्फ़िगरेशन**: GitHub Models, Azure OpenAI, और OpenAI Java SDK इंटीग्रेशन सेटअप करें  
-- **Spring Boot + Spring AI**: एंटरप्राइज AI एप्लिकेशन विकास के लिए सर्वोत्तम प्रथाएं  
-- **GitHub Models**: प्रोटोटाइप और सीखने के लिए मुफ्त AI मॉडल एक्सेस (क्रेडिट कार्ड की आवश्यकता नहीं)  
-- **विकास उपकरण**: Docker कंटेनर, VS Code, और GitHub Codespaces कॉन्फ़िगरेशन  
-- **[→ अध्याय 2 शुरू करें](./02-SetupDevEnvironment/README.md)**  
+- **मल्टी-प्रोवाइडर कॉन्फ़िगरेशन**: GitHub Models, Azure OpenAI, और OpenAI Java SDK इंटीग्रेशन सेटअप करें
+- **Spring Boot + Spring AI**: एंटरप्राइज AI एप्लिकेशन विकास के लिए सर्वोत्तम प्रथाएं
+- **GitHub Models**: प्रोटोटाइप और सीखने के लिए मुफ्त AI मॉडल एक्सेस (क्रेडिट कार्ड की आवश्यकता नहीं)
+- **विकास उपकरण**: Docker कंटेनर, VS Code, और GitHub Codespaces कॉन्फ़िगरेशन
+- **[→ अध्याय 2 शुरू करें](./02-SetupDevEnvironment/README.md)**
 
-### **अध्याय 3: जनरेटिव AI की मुख्य तकनीकें**
-- **प्रॉम्प्ट इंजीनियरिंग**: AI मॉडल से सर्वोत्तम प्रतिक्रियाओं के लिए तकनीकें  
-- **एम्बेडिंग और वेक्टर ऑपरेशन्स**: सिमेंटिक सर्च और समानता मिलान लागू करें  
-- **रिट्रीवल-ऑगमेंटेड जनरेशन (RAG)**: AI को अपने डेटा स्रोतों के साथ जोड़ें  
-- **फंक्शन कॉलिंग**: कस्टम टूल्स और प्लगइन्स के साथ AI क्षमताओं का विस्तार करें  
-- **[→ अध्याय 3 शुरू करें](./03-CoreGenerativeAITechniques/README.md)**  
+### **अध्याय 3: मुख्य जनरेटिव AI तकनीकें**
+- **प्रॉम्प्ट इंजीनियरिंग**: AI मॉडल से सर्वोत्तम प्रतिक्रियाओं के लिए तकनीकें
+- **एम्बेडिंग और वेक्टर ऑपरेशन्स**: सेमांटिक सर्च और समानता मिलान लागू करें
+- **रिट्रीवल-ऑगमेंटेड जनरेशन (RAG)**: AI को अपने डेटा स्रोतों के साथ जोड़ें
+- **फंक्शन कॉलिंग**: कस्टम टूल्स और प्लगइन्स के साथ AI क्षमताओं का विस्तार करें
+- **[→ अध्याय 3 शुरू करें](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **अध्याय 4: व्यावहारिक अनुप्रयोग और प्रोजेक्ट्स**
-- **पेट स्टोरी जनरेटर** (`petstory/`): GitHub Models के साथ रचनात्मक सामग्री निर्माण  
-- **Foundry Local Demo** (`foundrylocal/`): OpenAI Java SDK के साथ लोकल AI मॉडल इंटीग्रेशन  
-- **MCP कैलकुलेटर सर्विस** (`calculator/`): Spring AI के साथ बेसिक मॉडल कॉन्टेक्स्ट प्रोटोकॉल का कार्यान्वयन  
-- **[→ अध्याय 4 शुरू करें](./04-PracticalSamples/README.md)**  
+- **पेट स्टोरी जनरेटर** (`petstory/`): GitHub Models के साथ रचनात्मक सामग्री निर्माण
+- **Foundry Local Demo** (`foundrylocal/`): OpenAI Java SDK के साथ लोकल AI मॉडल इंटीग्रेशन
+- **MCP कैलकुलेटर सर्विस** (`calculator/`): Spring AI के साथ बेसिक मॉडल कॉन्टेक्स्ट प्रोटोकॉल का कार्यान्वयन
+- **[→ अध्याय 4 शुरू करें](./04-PracticalSamples/README.md)**
 
 ### **अध्याय 5: जिम्मेदार AI विकास**
-- **GitHub Models सुरक्षा**: अंतर्निहित सामग्री फ़िल्टरिंग और सुरक्षा तंत्र का परीक्षण करें (हार्ड ब्लॉक्स और सॉफ्ट रिजेक्शन)  
-- **जिम्मेदार AI डेमो**: यह दिखाने के लिए व्यावहारिक उदाहरण कि आधुनिक AI सुरक्षा प्रणाली कैसे काम करती है  
-- **सर्वोत्तम प्रथाएं**: नैतिक AI विकास और तैनाती के लिए आवश्यक दिशानिर्देश  
-- **[→ अध्याय 5 शुरू करें](./05-ResponsibleGenAI/README.md)**  
+- **GitHub Models सुरक्षा**: अंतर्निहित सामग्री फ़िल्टरिंग और सुरक्षा तंत्र (हार्ड ब्लॉक्स और सॉफ्ट रिजेक्शन) का परीक्षण करें
+- **जिम्मेदार AI डेमो**: आधुनिक AI सुरक्षा प्रणालियों के व्यावहारिक कार्य का उदाहरण
+- **सर्वोत्तम प्रथाएं**: नैतिक AI विकास और तैनाती के लिए आवश्यक दिशानिर्देश
+- **[→ अध्याय 5 शुरू करें](./05-ResponsibleGenAI/README.md)**
 
 ## अतिरिक्त संसाधन
 
-- [MCP For Beginners](https://github.com/microsoft/mcp-for-beginners)  
-- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)  
-- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
-- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)  
-- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)  
-- [ML for Beginners](https://aka.ms/ml-beginners)  
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)  
-- [AI for Beginners](https://aka.ms/ai-beginners)  
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)  
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)  
-- [IoT for Beginners](https://aka.ms/iot-beginners)  
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)  
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)  
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
-- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)  
-- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)  
+- [Edge AI for Beginners](https://github.com/microsoft/edgeai-for-beginners)
+- [MCP For Beginners](https://github.com/microsoft/mcp-for-beginners)
+- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
+- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML for Beginners](https://aka.ms/ml-beginners)
+- [Data Science for Beginners](https://aka.ms/datascience-beginners)
+- [AI for Beginners](https://aka.ms/ai-beginners)
+- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
+- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
+- [IoT for Beginners](https://aka.ms/iot-beginners)
+- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
+- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
+- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
+- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+
+## सहायता प्राप्त करना
+
+यदि आप कहीं अटक जाते हैं या AI ऐप्स बनाने के बारे में कोई सवाल है, तो शामिल हों:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+यदि आपको उत्पाद प्रतिक्रिया देनी है या निर्माण के दौरान कोई त्रुटि आती है, तो जाएं:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 **अस्वीकरण**:  
-यह दस्तावेज़ AI अनुवाद सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) का उपयोग करके अनुवादित किया गया है। जबकि हम सटीकता सुनिश्चित करने का प्रयास करते हैं, कृपया ध्यान दें कि स्वचालित अनुवाद में त्रुटियां या अशुद्धियां हो सकती हैं। मूल दस्तावेज़, जो इसकी मूल भाषा में है, को प्रामाणिक स्रोत माना जाना चाहिए। महत्वपूर्ण जानकारी के लिए, पेशेवर मानव अनुवाद की सिफारिश की जाती है। इस अनुवाद के उपयोग से उत्पन्न किसी भी गलतफहमी या गलत व्याख्या के लिए हम जिम्मेदार नहीं हैं।
+यह दस्तावेज़ AI अनुवाद सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) का उपयोग करके अनुवादित किया गया है। जबकि हम सटीकता के लिए प्रयास करते हैं, कृपया ध्यान दें कि स्वचालित अनुवाद में त्रुटियां या अशुद्धियां हो सकती हैं। मूल भाषा में उपलब्ध मूल दस्तावेज़ को आधिकारिक स्रोत माना जाना चाहिए। महत्वपूर्ण जानकारी के लिए, पेशेवर मानव अनुवाद की सिफारिश की जाती है। इस अनुवाद के उपयोग से उत्पन्न किसी भी गलतफहमी या गलत व्याख्या के लिए हम उत्तरदायी नहीं हैं।

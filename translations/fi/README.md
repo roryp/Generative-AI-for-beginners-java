@@ -1,24 +1,24 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:43:07+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:14:24+00:00",
   "source_file": "README.md",
   "language_code": "fi"
 }
 -->
-# Generatiivinen AI aloittelijoille - Java-versio
+# Generatiivinen tekoäly aloittelijoille - Java-versio
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generatiivinen AI aloittelijoille - Java-versio](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.fi.png)
+![Generatiivinen tekoäly aloittelijoille - Java-versio](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.fi.png)
 
-**Aikataulu**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Ympäristön asennus kestää 2 minuuttia, ja esimerkkien tutkiminen vie 1–3 tuntia riippuen tutkimisen syvyydestä.
+**Aikavaatimukset**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Ympäristön asennus vie 2 minuuttia, ja esimerkkien tutkiminen kestää 1–3 tuntia riippuen tutkimuksen syvyydestä.
 
-> **Pika-aloitus** 
+> **Pikakäynnistys**
 
-1. Haarauta tämä arkisto GitHub-tilillesi
+1. Haaroita tämä arkisto GitHub-tilillesi
 2. Klikkaa **Code** → **Codespaces**-välilehti → **...** → **New with options...**
-3. Käytä oletusasetuksia – tämä valitsee tämän kurssin kehityskontin
+3. Käytä oletusasetuksia – tämä valitsee kurssille luodun kehityskontin
 4. Klikkaa **Create codespace**
 5. Odota noin 2 minuuttia, että ympäristö on valmis
 6. Siirry suoraan [Ensimmäiseen esimerkkiin](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
@@ -32,10 +32,10 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kurssin rakenne ja oppimispolku
 
 ### **Luku 1: Johdatus generatiiviseen tekoälyyn**
-- **Keskeiset käsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyominaisuuksien ymmärtäminen
+- **Keskeiset käsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyn kykyjen ymmärtäminen
 - **Java AI -ekosysteemi**: Katsaus Spring AI- ja OpenAI SDK:ihin
 - **Model Context Protocol**: Johdatus MCP:hen ja sen rooliin tekoälyagenttien viestinnässä
-- **Käytännön sovellukset**: Reaaliaikaisia esimerkkejä, kuten chatbotit ja sisällöntuotanto
+- **Käytännön sovellukset**: Todelliset esimerkit, kuten chatbotit ja sisällön luominen
 - **[→ Aloita luku 1](./01-IntroToGenAI/README.md)**
 
 ### **Luku 2: Kehitysympäristön asennus**
@@ -46,26 +46,27 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Aloita luku 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Luku 3: Generatiivisen tekoälyn ydintekniikat**
-- **Prompt Engineering**: Tekniikoita optimaalisten tekoälymallivastausten saamiseksi
-- **Upotukset ja vektorilaskenta**: Semanttisen haun ja samankaltaisuuden tunnistaminen
-- **Retrieval-Augmented Generation (RAG)**: Yhdistä tekoäly omiin tietolähteisiisi
-- **Toimintokutsut**: Laajenna tekoälyn kykyjä mukautetuilla työkaluilla ja lisäosilla
+- **Prompt Engineering**: Tekniikat optimaalisten tekoälymallivastausten saamiseksi
+- **Upotukset ja vektoritoiminnot**: Semanttisen haun ja samankaltaisuuden vertailun toteuttaminen
+- **Retrieval-Augmented Generation (RAG)**: Tekoälyn yhdistäminen omiin tietolähteisiin
+- **Toimintojen kutsuminen**: Tekoälyn laajentaminen mukautetuilla työkaluilla ja laajennuksilla
 - **[→ Aloita luku 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Luku 4: Käytännön sovellukset ja projektit**
-- **Lemmikkitarinageneraattori** (`petstory/`): Luova sisällöntuotanto GitHub Models -malleilla
-- **Foundry Local Demo** (`foundrylocal/`): Paikallisten tekoälymallien integrointi OpenAI Java SDK:lla
-- **MCP-laskinpalvelu** (`calculator/`): Perustason Model Context Protocol -toteutus Spring AI:lla
+- **Lemmikkitarinageneraattori** (`petstory/`): Luova sisällön luominen GitHub Models -malleilla
+- **Foundry Local Demo** (`foundrylocal/`): Paikallisen tekoälymallin integrointi OpenAI Java SDK:lla
+- **MCP-laskinpalvelu** (`calculator/`): Perus Model Context Protocol -toteutus Spring AI:lla
 - **[→ Aloita luku 4](./04-PracticalSamples/README.md)**
 
 ### **Luku 5: Vastuullinen tekoälyn kehitys**
-- **GitHub Models -turvallisuus**: Sisäänrakennetun sisällönsuodatuksen ja turvallisuusmekanismien testaaminen (kovat estot ja pehmeät kieltäytymiset)
-- **Vastuullisen tekoälyn demo**: Käytännön esimerkki siitä, miten modernit tekoälyturvajärjestelmät toimivat
+- **GitHub Models -turvallisuus**: Sisäänrakennetun sisällön suodatuksen ja turvallisuusmekanismien testaaminen (kovat estot ja pehmeät kieltäytymiset)
+- **Vastuullinen tekoälydemo**: Käytännön esimerkki siitä, miten modernit tekoälyn turvallisuusjärjestelmät toimivat
 - **Parhaat käytännöt**: Keskeiset ohjeet eettiseen tekoälyn kehittämiseen ja käyttöönottoon
 - **[→ Aloita luku 5](./05-ResponsibleGenAI/README.md)**
 
-## Lisäresurssit 
+## Lisäresurssit
 
+- [Edge AI for Beginners](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP For Beginners](https://github.com/microsoft/mcp-for-beginners)
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -82,6 +83,16 @@ CO_OP_TRANSLATOR_METADATA:
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+
+## Apua saatavilla
+
+Jos jäät jumiin tai sinulla on kysymyksiä tekoälysovellusten rakentamisesta, liity:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+Jos sinulla on tuotepalautetta tai virheitä rakentamisen aikana, vieraile:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 

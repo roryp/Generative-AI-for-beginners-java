@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:47:26+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:19:20+00:00",
   "source_file": "README.md",
   "language_code": "sk"
 }
@@ -25,47 +25,48 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Podpora viacerých jazykov
 
-### Podporované cez GitHub Action (automatizované a vždy aktuálne)
+### Podporované cez GitHub Action (Automatizované & vždy aktuálne)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](./README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+[Francúzština](../fr/README.md) | [Španielčina](../es/README.md) | [Nemčina](../de/README.md) | [Ruština](../ru/README.md) | [Arabčina](../ar/README.md) | [Perzština (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Čínština (zjednodušená)](../zh/README.md) | [Čínština (tradičná, Macao)](../mo/README.md) | [Čínština (tradičná, Hongkong)](../hk/README.md) | [Čínština (tradičná, Taiwan)](../tw/README.md) | [Japončina](../ja/README.md) | [Kórejčina](../ko/README.md) | [Hindčina](../hi/README.md) | [Bengálčina](../bn/README.md) | [Maráthčina](../mr/README.md) | [Nepálčina](../ne/README.md) | [Pandžábčina (Gurmukhi)](../pa/README.md) | [Portugalčina (Portugalsko)](../pt/README.md) | [Portugalčina (Brazília)](../br/README.md) | [Taliančina](../it/README.md) | [Poľština](../pl/README.md) | [Turečtina](../tr/README.md) | [Gréčtina](../el/README.md) | [Thajčina](../th/README.md) | [Švédčina](../sv/README.md) | [Dánčina](../da/README.md) | [Nórčina](../no/README.md) | [Fínčina](../fi/README.md) | [Holandčina](../nl/README.md) | [Hebrejčina](../he/README.md) | [Vietnamčina](../vi/README.md) | [Indonézčina](../id/README.md) | [Malajčina](../ms/README.md) | [Tagalog (Filipínčina)](../tl/README.md) | [Swahilčina](../sw/README.md) | [Maďarčina](../hu/README.md) | [Čeština](../cs/README.md) | [Slovenčina](./README.md) | [Rumunčina](../ro/README.md) | [Bulharčina](../bg/README.md) | [Srbčina (cyrilika)](../sr/README.md) | [Chorvátčina](../hr/README.md) | [Slovinčina](../sl/README.md) | [Ukrajinčina](../uk/README.md) | [Barmčina (Myanmar)](../my/README.md)
 
-## Štruktúra kurzu a učebná cesta
+## Štruktúra kurzu & učebná cesta
 
 ### **Kapitola 1: Úvod do generatívnej AI**
 - **Základné koncepty**: Porozumenie veľkým jazykovým modelom, tokenom, embeddingom a schopnostiam AI
 - **Java AI ekosystém**: Prehľad Spring AI a OpenAI SDK
 - **Protokol kontextu modelu**: Úvod do MCP a jeho úlohy v komunikácii AI agentov
-- **Praktické aplikácie**: Scenáre z reálneho sveta vrátane chatbotov a generovania obsahu
+- **Praktické aplikácie**: Reálne scenáre vrátane chatbotov a generovania obsahu
 - **[→ Začať kapitolu 1](./01-IntroToGenAI/README.md)**
 
 ### **Kapitola 2: Nastavenie vývojového prostredia**
-- **Konfigurácia viacerých poskytovateľov**: Nastavenie GitHub modelov, Azure OpenAI a OpenAI Java SDK integrácií
-- **Spring Boot + Spring AI**: Najlepšie postupy pre vývoj AI aplikácií v podnikovej sfére
-- **GitHub modely**: Bezplatný prístup k AI modelom na prototypovanie a učenie (bez potreby kreditnej karty)
+- **Konfigurácia viacerých poskytovateľov**: Nastavenie GitHub Models, Azure OpenAI a OpenAI Java SDK integrácií
+- **Spring Boot + Spring AI**: Najlepšie postupy pre vývoj podnikových AI aplikácií
+- **GitHub Models**: Bezplatný prístup k AI modelom na prototypovanie a učenie (bez potreby kreditnej karty)
 - **Vývojové nástroje**: Konfigurácia Docker kontajnerov, VS Code a GitHub Codespaces
 - **[→ Začať kapitolu 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Kapitola 3: Základné techniky generatívnej AI**
-- **Prompt Engineering**: Techniky na dosiahnutie optimálnych odpovedí AI modelov
-- **Embeddingy a vektorové operácie**: Implementácia semantického vyhľadávania a porovnávania podobnosti
-- **Generovanie s podporou vyhľadávania (RAG)**: Kombinácia AI s vlastnými dátovými zdrojmi
+- **Prompt Engineering**: Techniky pre optimálne odpovede AI modelov
+- **Embeddingy & vektorové operácie**: Implementácia semantického vyhľadávania a porovnávania podobnosti
+- **Generovanie s podporou vyhľadávania (RAG)**: Kombinácia AI s vlastnými zdrojmi dát
 - **Volanie funkcií**: Rozšírenie schopností AI pomocou vlastných nástrojov a pluginov
 - **[→ Začať kapitolu 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Kapitola 4: Praktické aplikácie a projekty**
-- **Generátor príbehov o domácich miláčikoch** (`petstory/`): Kreatívne generovanie obsahu pomocou GitHub modelov
+### **Kapitola 4: Praktické aplikácie & projekty**
+- **Generátor príbehov o domácich miláčikoch** (`petstory/`): Kreatívne generovanie obsahu s GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Lokálna integrácia AI modelov s OpenAI Java SDK
 - **MCP kalkulačná služba** (`calculator/`): Základná implementácia protokolu kontextu modelu so Spring AI
 - **[→ Začať kapitolu 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitola 5: Zodpovedný vývoj AI**
-- **Bezpečnosť GitHub modelov**: Testovanie zabudovaného filtrovania obsahu a bezpečnostných mechanizmov (tvrdé bloky a mäkké odmietnutia)
+- **Bezpečnosť GitHub Models**: Testovanie zabudovaného filtrovania obsahu a bezpečnostných mechanizmov (tvrdé bloky a mäkké odmietnutia)
 - **Demo zodpovednej AI**: Praktický príklad ukazujúci, ako moderné bezpečnostné systémy AI fungujú v praxi
 - **Najlepšie postupy**: Základné pokyny pre etický vývoj a nasadenie AI
 - **[→ Začať kapitolu 5](./05-ResponsibleGenAI/README.md)**
 
 ## Ďalšie zdroje
 
+- [Edge AI pre začiatočníkov](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP pre začiatočníkov](https://github.com/microsoft/mcp-for-beginners)
 - [AI agenti pre začiatočníkov](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generatívna AI pre začiatočníkov pomocou .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
@@ -83,7 +84,17 @@ CO_OP_TRANSLATOR_METADATA:
 - [Vyberte si vlastné dobrodružstvo s Copilotom](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App s Azure AI službami](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+## Získanie pomoci
+
+Ak narazíte na problémy alebo máte otázky ohľadom budovania AI aplikácií, pridajte sa:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+Ak máte spätnú väzbu k produktu alebo chyby pri budovaní, navštívte:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

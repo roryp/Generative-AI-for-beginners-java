@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:49:20+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:21:26+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -12,16 +12,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativna umjetna inteligencija za početnike - Java izdanje](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.hr.png)
 
-**Vrijeme potrebno**: Cijela radionica može se završiti online bez lokalne postavke. Postavljanje okruženja traje 2 minute, dok istraživanje primjera zahtijeva 1-3 sata, ovisno o dubini istraživanja.
+**Vrijeme potrebno**: Cijeli radionicu možete završiti online bez lokalne instalacije. Postavljanje okruženja traje 2 minute, dok istraživanje primjera zahtijeva 1-3 sata, ovisno o dubini istraživanja.
 
 > **Brzi početak**
 
 1. Forkajte ovaj repozitorij na svoj GitHub račun
-2. Kliknite **Code** → **Codespaces** kartica → **...** → **New with options...**
+2. Kliknite **Code** → kartica **Codespaces** → **...** → **New with options...**
 3. Koristite zadane postavke – ovo će odabrati razvojni kontejner kreiran za ovaj tečaj
 4. Kliknite **Create codespace**
 5. Pričekajte ~2 minute da okruženje bude spremno
-6. Odmah prijeđite na [Prvi primjer](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Odmah krenite na [Prvi primjer](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Podrška za više jezika
 
@@ -32,58 +32,69 @@ CO_OP_TRANSLATOR_METADATA:
 ## Struktura tečaja i put učenja
 
 ### **Poglavlje 1: Uvod u generativnu umjetnu inteligenciju**
-- **Osnovni koncepti**: Razumijevanje velikih jezičnih modela, tokena, ugradnji i AI mogućnosti
+- **Osnovni pojmovi**: Razumijevanje velikih jezičnih modela, tokena, ugrađivanja i AI sposobnosti
 - **Java AI ekosustav**: Pregled Spring AI i OpenAI SDK-ova
 - **Protokol konteksta modela**: Uvod u MCP i njegovu ulogu u komunikaciji AI agenata
 - **Praktične primjene**: Primjeri iz stvarnog svijeta, uključujući chatbotove i generiranje sadržaja
-- **[→ Započni poglavlje 1](./01-IntroToGenAI/README.md)**
+- **[→ Započnite Poglavlje 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavlje 2: Postavljanje razvojnog okruženja**
 - **Konfiguracija za više pružatelja usluga**: Postavljanje GitHub modela, Azure OpenAI i OpenAI Java SDK integracija
 - **Spring Boot + Spring AI**: Najbolje prakse za razvoj AI aplikacija u poduzećima
 - **GitHub modeli**: Besplatan pristup AI modelima za prototipiranje i učenje (nije potrebna kreditna kartica)
 - **Razvojni alati**: Konfiguracija Docker kontejnera, VS Code-a i GitHub Codespaces-a
-- **[→ Započni poglavlje 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Započnite Poglavlje 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Poglavlje 3: Osnovne tehnike generativne umjetne inteligencije**
 - **Inženjering upita**: Tehnike za optimalne odgovore AI modela
-- **Ugradnje i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
-- **Generacija uz podršku pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
-- **Pozivanje funkcija**: Proširenje AI mogućnosti prilagođenim alatima i dodacima
-- **[→ Započni poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
+- **Ugrađivanja i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
+- **Generacija uz pomoć pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
+- **Pozivanje funkcija**: Proširenje AI sposobnosti prilagođenim alatima i dodacima
+- **[→ Započnite Poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavlje 4: Praktične primjene i projekti**
 - **Generator priča o kućnim ljubimcima** (`petstory/`): Kreativno generiranje sadržaja s GitHub modelima
-- **Foundry lokalna demonstracija** (`foundrylocal/`): Integracija lokalnih AI modela s OpenAI Java SDK-om
+- **Foundry lokalna demonstracija** (`foundrylocal/`): Lokalna integracija AI modela s OpenAI Java SDK-om
 - **MCP kalkulator usluga** (`calculator/`): Osnovna implementacija protokola konteksta modela sa Spring AI
-- **[→ Započni poglavlje 4](./04-PracticalSamples/README.md)**
+- **[→ Započnite Poglavlje 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavlje 5: Odgovoran razvoj umjetne inteligencije**
-- **Sigurnost GitHub modela**: Testiranje ugrađenih mehanizama za filtriranje sadržaja i sigurnosnih sustava (tvrde blokade i mekana odbijanja)
-- **Demonstracija odgovorne umjetne inteligencije**: Praktičan primjer koji pokazuje kako moderni AI sigurnosni sustavi funkcioniraju u praksi
-- **Najbolje prakse**: Ključne smjernice za etički razvoj i implementaciju umjetne inteligencije
-- **[→ Započni poglavlje 5](./05-ResponsibleGenAI/README.md)**
+- **Sigurnost GitHub modela**: Testiranje ugrađenog filtriranja sadržaja i sigurnosnih mehanizama (tvrde blokade i mekana odbijanja)
+- **Demonstracija odgovorne AI**: Praktični primjer koji pokazuje kako moderni AI sigurnosni sustavi funkcioniraju
+- **Najbolje prakse**: Ključne smjernice za etički razvoj i implementaciju AI-a
+- **[→ Započnite Poglavlje 5](./05-ResponsibleGenAI/README.md)**
 
 ## Dodatni resursi
 
+- [Edge AI za početnike](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP za početnike](https://github.com/microsoft/mcp-for-beginners)
 - [AI agenti za početnike](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generativna umjetna inteligencija za početnike koristeći .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generativna umjetna inteligencija za početnike koristeći JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generativna umjetna inteligencija za početnike](https://github.com/microsoft/generative-ai-for-beginners)
 - [Strojno učenje za početnike](https://aka.ms/ml-beginners)
-- [Znanost o podacima za početnike](https://aka.ms/datascience-beginners)
-- [Umjetna inteligencija za početnike](https://aka.ms/ai-beginners)
+- [Data Science za početnike](https://aka.ms/datascience-beginners)
+- [AI za početnike](https://aka.ms/ai-beginners)
 - [Kibernetička sigurnost za početnike](https://github.com/microsoft/Security-101)
 - [Web razvoj za početnike](https://aka.ms/webdev-beginners)
 - [IoT za početnike](https://aka.ms/iot-beginners)
 - [XR razvoj za početnike](https://github.com/microsoft/xr-development-for-beginners)
 - [Ovladavanje GitHub Copilotom za AI programiranje u paru](https://aka.ms/GitHubCopilotAI)
 - [Ovladavanje GitHub Copilotom za C#/.NET programere](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Odaberi svoju avanturu s Copilotom](https://github.com/microsoft/CopilotAdventures)
+- [Odaberite vlastitu Copilot avanturu](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat aplikacija s Azure AI uslugama](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+
+## Dobivanje pomoći
+
+Ako zapnete ili imate pitanja o izradi AI aplikacija, pridružite se:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+Ako imate povratne informacije o proizvodu ili pogreške tijekom izrade, posjetite:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+**Izjava o odricanju odgovornosti**:  
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90ac762d40c6db51b8081cdb3e49e9db",
-  "translation_date": "2025-08-28T21:44:52+00:00",
+  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
+  "translation_date": "2025-10-03T08:16:21+00:00",
   "source_file": "README.md",
   "language_code": "id"
 }
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Bab 1: Pengantar Generative AI**
 - **Konsep Inti**: Memahami Large Language Models, token, embeddings, dan kemampuan AI
-- **Ekosistem AI Java**: Gambaran umum Spring AI dan OpenAI SDKs
+- **Ekosistem AI Java**: Gambaran tentang Spring AI dan OpenAI SDK
 - **Model Context Protocol**: Pengantar MCP dan perannya dalam komunikasi agen AI
 - **Aplikasi Praktis**: Skenario dunia nyata termasuk chatbot dan pembuatan konten
 - **[→ Mulai Bab 1](./01-IntroToGenAI/README.md)**
@@ -66,8 +66,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Sumber Daya Tambahan
 
-- [MCP For Beginners](https://github.com/microsoft/mcp-for-beginners)
-- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
+- [Edge AI untuk Pemula](https://github.com/microsoft/edgeai-for-beginners)
+- [MCP Untuk Pemula](https://github.com/microsoft/mcp-for-beginners)
+- [AI Agents Untuk Pemula](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI untuk Pemula menggunakan .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI untuk Pemula menggunakan JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generative AI untuk Pemula](https://github.com/microsoft/generative-ai-for-beginners)
@@ -81,9 +82,19 @@ CO_OP_TRANSLATOR_METADATA:
 - [Menguasai GitHub Copilot untuk Pemrograman Berpasangan AI](https://aka.ms/GitHubCopilotAI)
 - [Menguasai GitHub Copilot untuk Pengembang C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Pilih Petualangan Copilot Anda Sendiri](https://github.com/microsoft/CopilotAdventures)
-- [Aplikasi Chat RAG dengan Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [Aplikasi Chat RAG dengan Layanan Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+
+## Mendapatkan Bantuan
+
+Jika Anda mengalami kesulitan atau memiliki pertanyaan tentang membangun aplikasi AI, bergabunglah:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+Jika Anda memiliki umpan balik produk atau menemukan kesalahan saat membangun, kunjungi:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
