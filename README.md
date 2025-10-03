@@ -57,6 +57,7 @@
 
 ## Additional Resources 
 
+- [Edge AI for Beginners](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP For Beginners](https://github.com/microsoft/mcp-for-beginners)
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
