@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:02:00+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:18:45+00:00",
   "source_file": "README.md",
   "language_code": "ru"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Генеративный ИИ для начинающих - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ru.png)
 
-**Время на выполнение**: Весь воркшоп можно пройти онлайн без локальной настройки. Настройка окружения занимает 2 минуты, а изучение примеров требует от 1 до 3 часов в зависимости от глубины изучения.
+**Время на выполнение**: Весь воркшоп можно пройти онлайн без локальной настройки. Настройка окружения занимает 2 минуты, а изучение примеров требует от 1 до 3 часов, в зависимости от глубины изучения.
 
 > **Быстрый старт**
 
@@ -27,22 +27,24 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Поддерживается через GitHub Action (автоматически и всегда актуально)
 
-[Французский](../fr/README.md) | [Испанский](../es/README.md) | [Немецкий](../de/README.md) | [Русский](./README.md) | [Арабский](../ar/README.md) | [Персидский (фарси)](../fa/README.md) | [Урду](../ur/README.md) | [Китайский (упрощенный)](../zh/README.md) | [Китайский (традиционный, Макао)](../mo/README.md) | [Китайский (традиционный, Гонконг)](../hk/README.md) | [Китайский (традиционный, Тайвань)](../tw/README.md) | [Японский](../ja/README.md) | [Корейский](../ko/README.md) | [Хинди](../hi/README.md) | [Бенгальский](../bn/README.md) | [Маратхи](../mr/README.md) | [Непальский](../ne/README.md) | [Панджаби (гурмукхи)](../pa/README.md) | [Португальский (Португалия)](../pt/README.md) | [Португальский (Бразилия)](../br/README.md) | [Итальянский](../it/README.md) | [Польский](../pl/README.md) | [Турецкий](../tr/README.md) | [Греческий](../el/README.md) | [Тайский](../th/README.md) | [Шведский](../sv/README.md) | [Датский](../da/README.md) | [Норвежский](../no/README.md) | [Финский](../fi/README.md) | [Голландский](../nl/README.md) | [Иврит](../he/README.md) | [Вьетнамский](../vi/README.md) | [Индонезийский](../id/README.md) | [Малайский](../ms/README.md) | [Тагальский (филиппинский)](../tl/README.md) | [Суахили](../sw/README.md) | [Венгерский](../hu/README.md) | [Чешский](../cs/README.md) | [Словацкий](../sk/README.md) | [Румынский](../ro/README.md) | [Болгарский](../bg/README.md) | [Сербский (кириллица)](../sr/README.md) | [Хорватский](../hr/README.md) | [Словенский](../sl/README.md) | [Украинский](../uk/README.md) | [Бирманский (Мьянма)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Арабский](../ar/README.md) | [Бенгальский](../bn/README.md) | [Болгарский](../bg/README.md) | [Бирманский (Мьянма)](../my/README.md) | [Китайский (упрощенный)](../zh/README.md) | [Китайский (традиционный, Гонконг)](../hk/README.md) | [Китайский (традиционный, Макао)](../mo/README.md) | [Китайский (традиционный, Тайвань)](../tw/README.md) | [Хорватский](../hr/README.md) | [Чешский](../cs/README.md) | [Датский](../da/README.md) | [Нидерландский](../nl/README.md) | [Эстонский](../et/README.md) | [Финский](../fi/README.md) | [Французский](../fr/README.md) | [Немецкий](../de/README.md) | [Греческий](../el/README.md) | [Иврит](../he/README.md) | [Хинди](../hi/README.md) | [Венгерский](../hu/README.md) | [Индонезийский](../id/README.md) | [Итальянский](../it/README.md) | [Японский](../ja/README.md) | [Корейский](../ko/README.md) | [Литовский](../lt/README.md) | [Малайский](../ms/README.md) | [Маратхи](../mr/README.md) | [Непальский](../ne/README.md) | [Норвежский](../no/README.md) | [Персидский (фарси)](../fa/README.md) | [Польский](../pl/README.md) | [Португальский (Бразилия)](../br/README.md) | [Португальский (Португалия)](../pt/README.md) | [Панджаби (Гурмукхи)](../pa/README.md) | [Румынский](../ro/README.md) | [Русский](./README.md) | [Сербский (кириллица)](../sr/README.md) | [Словацкий](../sk/README.md) | [Словенский](../sl/README.md) | [Испанский](../es/README.md) | [Суахили](../sw/README.md) | [Шведский](../sv/README.md) | [Тагальский (Филиппины)](../tl/README.md) | [Тамильский](../ta/README.md) | [Тайский](../th/README.md) | [Турецкий](../tr/README.md) | [Украинский](../uk/README.md) | [Урду](../ur/README.md) | [Вьетнамский](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Структура курса и учебный путь
 
 ### **Глава 1: Введение в генеративный ИИ**
 - **Основные концепции**: Понимание больших языковых моделей, токенов, эмбеддингов и возможностей ИИ
 - **Экосистема Java для ИИ**: Обзор Spring AI и OpenAI SDK
-- **Протокол контекста модели**: Введение в MCP и его роль в коммуникации ИИ-агентов
+- **Протокол контекста модели**: Введение в MCP и его роль в коммуникации агентов ИИ
 - **Практическое применение**: Реальные сценарии, включая чат-ботов и генерацию контента
 - **[→ Начать главу 1](./01-IntroToGenAI/README.md)**
 
 ### **Глава 2: Настройка среды разработки**
 - **Конфигурация для нескольких провайдеров**: Настройка GitHub Models, Azure OpenAI и OpenAI Java SDK
-- **Spring Boot + Spring AI**: Лучшие практики для разработки корпоративных приложений с ИИ
+- **Spring Boot + Spring AI**: Лучшие практики для разработки корпоративных приложений ИИ
 - **GitHub Models**: Бесплатный доступ к моделям ИИ для прототипирования и обучения (без необходимости кредитной карты)
-- **Инструменты разработки**: Настройка Docker-контейнеров, VS Code и GitHub Codespaces
+- **Инструменты разработки**: Конфигурация Docker-контейнеров, VS Code и GitHub Codespaces
 - **[→ Начать главу 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Глава 3: Основные техники генеративного ИИ**
@@ -55,20 +57,20 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Глава 4: Практическое применение и проекты**
 - **Генератор историй о питомцах** (`petstory/`): Творческая генерация контента с использованием GitHub Models
 - **Локальная демонстрация Foundry** (`foundrylocal/`): Интеграция локальных моделей ИИ с OpenAI Java SDK
-- **Сервис калькулятора MCP** (`calculator/`): Базовая реализация протокола контекста модели с использованием Spring AI
+- **Сервис калькулятора MCP** (`calculator/`): Базовая реализация протокола контекста модели с Spring AI
 - **[→ Начать главу 4](./04-PracticalSamples/README.md)**
 
 ### **Глава 5: Ответственная разработка ИИ**
-- **Безопасность моделей GitHub**: Тестирование встроенной фильтрации контента и механизмов безопасности (жесткие блокировки и мягкие отказы)
+- **Безопасность GitHub Models**: Тестирование встроенной фильтрации контента и механизмов безопасности (жесткие блокировки и мягкие отказы)
 - **Демонстрация ответственного ИИ**: Практический пример работы современных систем безопасности ИИ
-- **Лучшие практики**: Основные рекомендации для этичной разработки и развертывания ИИ
+- **Лучшие практики**: Основные рекомендации для этичной разработки и внедрения ИИ
 - **[→ Начать главу 5](./05-ResponsibleGenAI/README.md)**
 
 ## Дополнительные ресурсы
 
 - [Edge AI для начинающих](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP для начинающих](https://github.com/microsoft/mcp-for-beginners)
-- [ИИ-агенты для начинающих](https://github.com/microsoft/ai-agents-for-beginners)
+- [Агенты ИИ для начинающих](https://github.com/microsoft/ai-agents-for-beginners)
 - [Генеративный ИИ для начинающих с использованием .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Генеративный ИИ для начинающих с использованием JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Генеративный ИИ для начинающих](https://github.com/microsoft/generative-ai-for-beginners)
@@ -81,12 +83,12 @@ CO_OP_TRANSLATOR_METADATA:
 - [Разработка XR для начинающих](https://github.com/microsoft/xr-development-for-beginners)
 - [Мастерство GitHub Copilot для парного программирования с ИИ](https://aka.ms/GitHubCopilotAI)
 - [Мастерство GitHub Copilot для разработчиков C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Выбери свое приключение с Copilot](https://github.com/microsoft/CopilotAdventures)
+- [Выберите свое приключение с Copilot](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App с Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 ## Получение помощи
 
-Если вы столкнулись с трудностями или у вас есть вопросы о создании приложений с ИИ, присоединяйтесь:
+Если вы столкнулись с трудностями или у вас есть вопросы о создании приложений ИИ, присоединяйтесь:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 

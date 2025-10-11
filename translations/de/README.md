@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:01:34+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:18:24+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -21,13 +21,15 @@ CO_OP_TRANSLATOR_METADATA:
 3. Verwenden Sie die Standardeinstellungen – dies wählt den Entwicklungscontainer aus, der für diesen Kurs erstellt wurde
 4. Klicken Sie auf **Codespace erstellen**
 5. Warten Sie ~2 Minuten, bis die Umgebung bereit ist
-6. Gehen Sie direkt zu [Dem ersten Beispiel](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Gehen Sie direkt zu [Das erste Beispiel](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Mehrsprachige Unterstützung
 
 ### Unterstützt durch GitHub Action (Automatisiert & Immer aktuell)
 
-[Französisch](../fr/README.md) | [Spanisch](../es/README.md) | [Deutsch](./README.md) | [Russisch](../ru/README.md) | [Arabisch](../ar/README.md) | [Persisch (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinesisch (Vereinfacht)](../zh/README.md) | [Chinesisch (Traditionell, Macau)](../mo/README.md) | [Chinesisch (Traditionell, Hongkong)](../hk/README.md) | [Chinesisch (Traditionell, Taiwan)](../tw/README.md) | [Japanisch](../ja/README.md) | [Koreanisch](../ko/README.md) | [Hindi](../hi/README.md) | [Bengalisch](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalesisch](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugiesisch (Portugal)](../pt/README.md) | [Portugiesisch (Brasilien)](../br/README.md) | [Italienisch](../it/README.md) | [Polnisch](../pl/README.md) | [Türkisch](../tr/README.md) | [Griechisch](../el/README.md) | [Thailändisch](../th/README.md) | [Schwedisch](../sv/README.md) | [Dänisch](../da/README.md) | [Norwegisch](../no/README.md) | [Finnisch](../fi/README.md) | [Niederländisch](../nl/README.md) | [Hebräisch](../he/README.md) | [Vietnamesisch](../vi/README.md) | [Indonesisch](../id/README.md) | [Malaiisch](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Ungarisch](../hu/README.md) | [Tschechisch](../cs/README.md) | [Slowakisch](../sk/README.md) | [Rumänisch](../ro/README.md) | [Bulgarisch](../bg/README.md) | [Serbisch (Kyrillisch)](../sr/README.md) | [Kroatisch](../hr/README.md) | [Slowenisch](../sl/README.md) | [Ukrainisch](../uk/README.md) | [Birmanisch (Myanmar)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabisch](../ar/README.md) | [Bengalisch](../bn/README.md) | [Bulgarisch](../bg/README.md) | [Birmanisch (Myanmar)](../my/README.md) | [Chinesisch (Vereinfacht)](../zh/README.md) | [Chinesisch (Traditionell, Hongkong)](../hk/README.md) | [Chinesisch (Traditionell, Macau)](../mo/README.md) | [Chinesisch (Traditionell, Taiwan)](../tw/README.md) | [Kroatisch](../hr/README.md) | [Tschechisch](../cs/README.md) | [Dänisch](../da/README.md) | [Niederländisch](../nl/README.md) | [Estnisch](../et/README.md) | [Finnisch](../fi/README.md) | [Französisch](../fr/README.md) | [Deutsch](./README.md) | [Griechisch](../el/README.md) | [Hebräisch](../he/README.md) | [Hindi](../hi/README.md) | [Ungarisch](../hu/README.md) | [Indonesisch](../id/README.md) | [Italienisch](../it/README.md) | [Japanisch](../ja/README.md) | [Koreanisch](../ko/README.md) | [Litauisch](../lt/README.md) | [Malaiisch](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalesisch](../ne/README.md) | [Norwegisch](../no/README.md) | [Persisch (Farsi)](../fa/README.md) | [Polnisch](../pl/README.md) | [Portugiesisch (Brasilien)](../br/README.md) | [Portugiesisch (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumänisch](../ro/README.md) | [Russisch](../ru/README.md) | [Serbisch (Kyrillisch)](../sr/README.md) | [Slowakisch](../sk/README.md) | [Slowenisch](../sl/README.md) | [Spanisch](../es/README.md) | [Swahili](../sw/README.md) | [Schwedisch](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thai](../th/README.md) | [Türkisch](../tr/README.md) | [Ukrainisch](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamesisch](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Kursstruktur & Lernpfad
 
@@ -64,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Best Practices**: Wesentliche Richtlinien für ethische KI-Entwicklung und -Bereitstellung
 - **[→ Kapitel 5 starten](./05-ResponsibleGenAI/README.md)**
 
-## Zusätzliche Ressourcen 
+## Zusätzliche Ressourcen
 
 - [Edge KI für Anfänger](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP für Anfänger](https://github.com/microsoft/mcp-for-beginners)
@@ -72,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Generative KI für Anfänger mit .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative KI für Anfänger mit JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generative KI für Anfänger](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML für Anfänger](https://aka.ms/ml-beginners)
+- [Maschinelles Lernen für Anfänger](https://aka.ms/ml-beginners)
 - [Datenwissenschaft für Anfänger](https://aka.ms/datascience-beginners)
 - [KI für Anfänger](https://aka.ms/ai-beginners)
 - [Cybersicherheit für Anfänger](https://github.com/microsoft/Security-101)
@@ -82,7 +84,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [GitHub Copilot für KI-gestütztes Programmieren meistern](https://aka.ms/GitHubCopilotAI)
 - [GitHub Copilot für C#/.NET-Entwickler meistern](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Wählen Sie Ihr eigenes Copilot-Abenteuer](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App mit Azure KI-Diensten](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [RAG-Chat-App mit Azure KI-Diensten](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 ## Hilfe erhalten
 
@@ -90,7 +92,7 @@ Wenn Sie nicht weiterkommen oder Fragen zum Erstellen von KI-Anwendungen haben, 
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Wenn Sie Produktfeedback haben oder auf Fehler beim Erstellen stoßen, besuchen Sie:
+Wenn Sie Produktfeedback haben oder auf Fehler stoßen, besuchen Sie:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:11:44+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:27:03+00:00",
   "source_file": "README.md",
   "language_code": "el"
 }
@@ -27,35 +27,37 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Υποστηρίζεται μέσω GitHub Action (Αυτοματοποιημένο & Πάντα Ενημερωμένο)
 
-[Γαλλικά](../fr/README.md) | [Ισπανικά](../es/README.md) | [Γερμανικά](../de/README.md) | [Ρωσικά](../ru/README.md) | [Αραβικά](../ar/README.md) | [Περσικά (Φαρσί)](../fa/README.md) | [Ουρντού](../ur/README.md) | [Κινέζικα (Απλοποιημένα)](../zh/README.md) | [Κινέζικα (Παραδοσιακά, Μακάο)](../mo/README.md) | [Κινέζικα (Παραδοσιακά, Χονγκ Κονγκ)](../hk/README.md) | [Κινέζικα (Παραδοσιακά, Ταϊβάν)](../tw/README.md) | [Ιαπωνικά](../ja/README.md) | [Κορεατικά](../ko/README.md) | [Χίντι](../hi/README.md) | [Μπενγκάλι](../bn/README.md) | [Μαραθικά](../mr/README.md) | [Νεπαλικά](../ne/README.md) | [Παντζάμπι (Γκουρμούκι)](../pa/README.md) | [Πορτογαλικά (Πορτογαλία)](../pt/README.md) | [Πορτογαλικά (Βραζιλία)](../br/README.md) | [Ιταλικά](../it/README.md) | [Πολωνικά](../pl/README.md) | [Τουρκικά](../tr/README.md) | [Ελληνικά](./README.md) | [Ταϊλανδικά](../th/README.md) | [Σουηδικά](../sv/README.md) | [Δανικά](../da/README.md) | [Νορβηγικά](../no/README.md) | [Φινλανδικά](../fi/README.md) | [Ολλανδικά](../nl/README.md) | [Εβραϊκά](../he/README.md) | [Βιετναμέζικα](../vi/README.md) | [Ινδονησιακά](../id/README.md) | [Μαλαισιανά](../ms/README.md) | [Ταγκαλόγκ (Φιλιππινέζικα)](../tl/README.md) | [Σουαχίλι](../sw/README.md) | [Ουγγρικά](../hu/README.md) | [Τσέχικα](../cs/README.md) | [Σλοβακικά](../sk/README.md) | [Ρουμανικά](../ro/README.md) | [Βουλγαρικά](../bg/README.md) | [Σερβικά (Κυριλλικά)](../sr/README.md) | [Κροατικά](../hr/README.md) | [Σλοβενικά](../sl/README.md) | [Ουκρανικά](../uk/README.md) | [Βιρμανικά (Μιανμάρ)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Αραβικά](../ar/README.md) | [Βεγγαλικά](../bn/README.md) | [Βουλγαρικά](../bg/README.md) | [Βιρμανικά (Μιανμάρ)](../my/README.md) | [Κινέζικα (Απλοποιημένα)](../zh/README.md) | [Κινέζικα (Παραδοσιακά, Χονγκ Κονγκ)](../hk/README.md) | [Κινέζικα (Παραδοσιακά, Μακάο)](../mo/README.md) | [Κινέζικα (Παραδοσιακά, Ταϊβάν)](../tw/README.md) | [Κροατικά](../hr/README.md) | [Τσέχικα](../cs/README.md) | [Δανικά](../da/README.md) | [Ολλανδικά](../nl/README.md) | [Εσθονικά](../et/README.md) | [Φινλανδικά](../fi/README.md) | [Γαλλικά](../fr/README.md) | [Γερμανικά](../de/README.md) | [Ελληνικά](./README.md) | [Εβραϊκά](../he/README.md) | [Χίντι](../hi/README.md) | [Ουγγρικά](../hu/README.md) | [Ινδονησιακά](../id/README.md) | [Ιταλικά](../it/README.md) | [Ιαπωνικά](../ja/README.md) | [Κορεατικά](../ko/README.md) | [Λιθουανικά](../lt/README.md) | [Μαλαισιανά](../ms/README.md) | [Μαραθικά](../mr/README.md) | [Νεπαλικά](../ne/README.md) | [Νορβηγικά](../no/README.md) | [Περσικά (Φαρσί)](../fa/README.md) | [Πολωνικά](../pl/README.md) | [Πορτογαλικά (Βραζιλία)](../br/README.md) | [Πορτογαλικά (Πορτογαλία)](../pt/README.md) | [Παντζάμπι (Γκουρμούκι)](../pa/README.md) | [Ρουμανικά](../ro/README.md) | [Ρωσικά](../ru/README.md) | [Σερβικά (Κυριλλικά)](../sr/README.md) | [Σλοβακικά](../sk/README.md) | [Σλοβενικά](../sl/README.md) | [Ισπανικά](../es/README.md) | [Σουαχίλι](../sw/README.md) | [Σουηδικά](../sv/README.md) | [Ταγκαλόγκ (Φιλιππινέζικα)](../tl/README.md) | [Ταμίλ](../ta/README.md) | [Ταϊλανδικά](../th/README.md) | [Τουρκικά](../tr/README.md) | [Ουκρανικά](../uk/README.md) | [Ουρντού](../ur/README.md) | [Βιετναμέζικα](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Δομή Μαθήματος & Διαδρομή Μάθησης
 
 ### **Κεφάλαιο 1: Εισαγωγή στη Γενετική Τεχνητή Νοημοσύνη**
 - **Βασικές Έννοιες**: Κατανόηση Μεγάλων Γλωσσικών Μοντέλων, tokens, embeddings και δυνατοτήτων AI
-- **Java AI Οικοσύστημα**: Επισκόπηση των Spring AI και OpenAI SDKs
+- **Οικοσύστημα AI για Java**: Επισκόπηση των Spring AI και OpenAI SDKs
 - **Πρωτόκολλο Context Μοντέλου**: Εισαγωγή στο MCP και τον ρόλο του στην επικοινωνία AI agents
 - **Πρακτικές Εφαρμογές**: Σενάρια πραγματικού κόσμου, όπως chatbots και δημιουργία περιεχομένου
 - **[→ Ξεκινήστε το Κεφάλαιο 1](./01-IntroToGenAI/README.md)**
 
 ### **Κεφάλαιο 2: Ρύθμιση Περιβάλλοντος Ανάπτυξης**
-- **Ρύθμιση Πολλαπλών Παρόχων**: Ενσωμάτωση GitHub Models, Azure OpenAI και OpenAI Java SDK
+- **Διαμόρφωση Πολλαπλών Παρόχων**: Ρύθμιση ενσωματώσεων GitHub Models, Azure OpenAI και OpenAI Java SDK
 - **Spring Boot + Spring AI**: Βέλτιστες πρακτικές για ανάπτυξη εφαρμογών AI σε επιχειρήσεις
 - **GitHub Models**: Δωρεάν πρόσβαση σε μοντέλα AI για πρωτότυπα και μάθηση (χωρίς πιστωτική κάρτα)
 - **Εργαλεία Ανάπτυξης**: Ρύθμιση Docker containers, VS Code και GitHub Codespaces
 - **[→ Ξεκινήστε το Κεφάλαιο 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Κεφάλαιο 3: Βασικές Τεχνικές Γενετικής Τεχνητής Νοημοσύνης**
-- **Prompt Engineering**: Τεχνικές για βέλτιστες απαντήσεις από μοντέλα AI
-- **Embeddings & Vector Operations**: Υλοποίηση σημασιολογικής αναζήτησης και αντιστοίχισης ομοιότητας
-- **Ανάκτηση-Εμπλουτισμένη Γενετική (RAG)**: Συνδυασμός AI με δικές σας πηγές δεδομένων
-- **Function Calling**: Επέκταση δυνατοτήτων AI με προσαρμοσμένα εργαλεία και plugins
+- **Μηχανική Προτροπών**: Τεχνικές για βέλτιστες απαντήσεις μοντέλων AI
+- **Embeddings & Λειτουργίες Διανυσμάτων**: Υλοποίηση σημασιολογικής αναζήτησης και αντιστοίχισης ομοιότητας
+- **Ανάκτηση-Ενισχυμένη Γενετική (RAG)**: Συνδυασμός AI με δικές σας πηγές δεδομένων
+- **Κλήση Λειτουργιών**: Επέκταση δυνατοτήτων AI με προσαρμοσμένα εργαλεία και plugins
 - **[→ Ξεκινήστε το Κεφάλαιο 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Κεφάλαιο 4: Πρακτικές Εφαρμογές & Έργα**
-- **Γεννήτρια Ιστοριών Κατοικίδιων** (`petstory/`): Δημιουργία περιεχομένου με GitHub Models
+- **Γεννήτρια Ιστοριών για Κατοικίδια** (`petstory/`): Δημιουργία περιεχομένου με GitHub Models
 - **Τοπική Επίδειξη Foundry** (`foundrylocal/`): Ενσωμάτωση τοπικών μοντέλων AI με OpenAI Java SDK
-- **Υπηρεσία Υπολογιστή MCP** (`calculator/`): Βασική υλοποίηση Πρωτοκόλλου Context Μοντέλου με Spring AI
+- **Υπηρεσία Υπολογιστή MCP** (`calculator/`): Βασική υλοποίηση του Πρωτοκόλλου Context Μοντέλου με Spring AI
 - **[→ Ξεκινήστε το Κεφάλαιο 4](./04-PracticalSamples/README.md)**
 
 ### **Κεφάλαιο 5: Υπεύθυνη Ανάπτυξη AI**
@@ -79,7 +81,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Web Dev για Αρχάριους](https://aka.ms/webdev-beginners)
 - [IoT για Αρχάριους](https://aka.ms/iot-beginners)
 - [Ανάπτυξη XR για Αρχάριους](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot για AI Συνεργατική Προγραμματιστική](https://aka.ms/GitHubCopilotAI)
+- [Mastering GitHub Copilot για AI Paired Programming](https://aka.ms/GitHubCopilotAI)
 - [Mastering GitHub Copilot για Προγραμματιστές C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App με Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
@@ -96,5 +98,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
 
-**Αποποίηση ευθύνης**:  
+**Αποποίηση ευθυνών**:  
 Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που καταβάλλουμε προσπάθειες για ακρίβεια, παρακαλούμε να έχετε υπόψη ότι οι αυτόματες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα θα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.

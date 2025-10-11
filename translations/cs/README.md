@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:18:44+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:32:57+00:00",
   "source_file": "README.md",
   "language_code": "cs"
 }
@@ -12,9 +12,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativní AI pro začátečníky - Java edice](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.cs.png)
 
-**Časová náročnost**: Celý workshop lze dokončit online bez lokálního nastavení. Nastavení prostředí trvá 2 minuty, průzkum ukázek vyžaduje 1–3 hodiny v závislosti na hloubce průzkumu.
+**Časová náročnost**: Celý workshop lze dokončit online bez nutnosti lokálního nastavení. Nastavení prostředí zabere 2 minuty, průzkum ukázek vyžaduje 1–3 hodiny v závislosti na hloubce průzkumu.
 
-> **Rychlý start**
+> **Rychlý start** 
 
 1. Forkněte tento repozitář do svého GitHub účtu
 2. Klikněte na **Code** → záložka **Codespaces** → **...** → **New with options...**
@@ -27,7 +27,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Podporováno prostřednictvím GitHub Action (automatizované a vždy aktuální)
 
-[Francouzština](../fr/README.md) | [Španělština](../es/README.md) | [Němčina](../de/README.md) | [Ruština](../ru/README.md) | [Arabština](../ar/README.md) | [Perština (Fársí)](../fa/README.md) | [Urdu](../ur/README.md) | [Čínština (zjednodušená)](../zh/README.md) | [Čínština (tradiční, Macao)](../mo/README.md) | [Čínština (tradiční, Hongkong)](../hk/README.md) | [Čínština (tradiční, Tchaj-wan)](../tw/README.md) | [Japonština](../ja/README.md) | [Korejština](../ko/README.md) | [Hindština](../hi/README.md) | [Bengálština](../bn/README.md) | [Maráthština](../mr/README.md) | [Nepálština](../ne/README.md) | [Paňdžábština (Gurmukhi)](../pa/README.md) | [Portugalština (Portugalsko)](../pt/README.md) | [Portugalština (Brazílie)](../br/README.md) | [Italština](../it/README.md) | [Polština](../pl/README.md) | [Turečtina](../tr/README.md) | [Řečtina](../el/README.md) | [Thajština](../th/README.md) | [Švédština](../sv/README.md) | [Dánština](../da/README.md) | [Norština](../no/README.md) | [Finština](../fi/README.md) | [Nizozemština](../nl/README.md) | [Hebrejština](../he/README.md) | [Vietnamština](../vi/README.md) | [Indonéština](../id/README.md) | [Malajština](../ms/README.md) | [Tagalog (Filipíny)](../tl/README.md) | [Svahilština](../sw/README.md) | [Maďarština](../hu/README.md) | [Čeština](./README.md) | [Slovenština](../sk/README.md) | [Rumunština](../ro/README.md) | [Bulharština](../bg/README.md) | [Srbština (cyrilice)](../sr/README.md) | [Chorvatština](../hr/README.md) | [Slovinština](../sl/README.md) | [Ukrajinština](../uk/README.md) | [Barmština (Myanmar)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabština](../ar/README.md) | [Bengálština](../bn/README.md) | [Bulharština](../bg/README.md) | [Barmština (Myanmar)](../my/README.md) | [Čínština (zjednodušená)](../zh/README.md) | [Čínština (tradiční, Hongkong)](../hk/README.md) | [Čínština (tradiční, Macao)](../mo/README.md) | [Čínština (tradiční, Tchaj-wan)](../tw/README.md) | [Chorvatština](../hr/README.md) | [Čeština](./README.md) | [Dánština](../da/README.md) | [Nizozemština](../nl/README.md) | [Estonština](../et/README.md) | [Finština](../fi/README.md) | [Francouzština](../fr/README.md) | [Němčina](../de/README.md) | [Řečtina](../el/README.md) | [Hebrejština](../he/README.md) | [Hindština](../hi/README.md) | [Maďarština](../hu/README.md) | [Indonéština](../id/README.md) | [Italština](../it/README.md) | [Japonština](../ja/README.md) | [Korejština](../ko/README.md) | [Litevština](../lt/README.md) | [Malajština](../ms/README.md) | [Maráthština](../mr/README.md) | [Nepálština](../ne/README.md) | [Norština](../no/README.md) | [Perština (Farsi)](../fa/README.md) | [Polština](../pl/README.md) | [Portugalština (Brazílie)](../br/README.md) | [Portugalština (Portugalsko)](../pt/README.md) | [Paňdžábština (Gurmukhi)](../pa/README.md) | [Rumunština](../ro/README.md) | [Ruština](../ru/README.md) | [Srbština (cyrilice)](../sr/README.md) | [Slovenština](../sk/README.md) | [Slovinština](../sl/README.md) | [Španělština](../es/README.md) | [Svahilština](../sw/README.md) | [Švédština](../sv/README.md) | [Tagalog (Filipíny)](../tl/README.md) | [Tamilština](../ta/README.md) | [Thajština](../th/README.md) | [Turečtina](../tr/README.md) | [Ukrajinština](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamština](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Struktura kurzu a učební cesta
 
@@ -46,16 +48,16 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Začít kapitolu 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Kapitola 3: Základní techniky generativní AI**
-- **Návrh promptů**: Techniky pro optimální odpovědi AI modelů
-- **Embeddingy a operace s vektory**: Implementace semantického vyhledávání a porovnávání podobnosti
+- **Prompt Engineering**: Techniky pro optimální odpovědi AI modelů
+- **Embeddingy a vektorové operace**: Implementace sémantického vyhledávání a porovnávání podobnosti
 - **Generování s podporou vyhledávání (RAG)**: Kombinace AI s vlastními datovými zdroji
 - **Volání funkcí**: Rozšíření schopností AI pomocí vlastních nástrojů a pluginů
 - **[→ Začít kapitolu 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kapitola 4: Praktické aplikace a projekty**
-- **Generátor příběhů o mazlíčcích** (`petstory/`): Kreativní generování obsahu pomocí GitHub Models
+- **Generátor příběhů o mazlíčcích** (`petstory/`): Kreativní generování obsahu s GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Integrace lokálních AI modelů s OpenAI Java SDK
-- **MCP kalkulační služba** (`calculator/`): Základní implementace protokolu kontextu modelu pomocí Spring AI
+- **MCP kalkulační služba** (`calculator/`): Základní implementace protokolu kontextu modelu se Spring AI
 - **[→ Začít kapitolu 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitola 5: Odpovědný vývoj AI**
@@ -64,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Nejlepší postupy**: Zásadní pokyny pro etický vývoj a nasazení AI
 - **[→ Začít kapitolu 5](./05-ResponsibleGenAI/README.md)**
 
-## Další zdroje
+## Další zdroje 
 
 - [Edge AI pro začátečníky](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP pro začátečníky](https://github.com/microsoft/mcp-for-beginners)
@@ -97,4 +99,4 @@ Pokud máte zpětnou vazbu k produktu nebo narazíte na chyby při budování, n
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

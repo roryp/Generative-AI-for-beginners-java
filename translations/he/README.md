@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:15:21+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:30:03+00:00",
   "source_file": "README.md",
   "language_code": "he"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![בינה מלאכותית יוצרת למתחילים - מהדורת Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.he.png)
 
-**זמן נדרש**: ניתן להשלים את הסדנה כולה באופן מקוון ללא צורך בהתקנה מקומית. הגדרת הסביבה אורכת 2 דקות, וההתנסות בדוגמאות דורשת 1-3 שעות, תלוי בעומק החקירה.
+**זמן נדרש**: ניתן להשלים את הסדנה כולה באופן מקוון ללא צורך בהתקנה מקומית. הגדרת הסביבה אורכת 2 דקות, וההתנסות בדוגמאות עשויה להימשך בין שעה לשלוש שעות, בהתאם לעומק החקירה.
 
 > **התחלה מהירה**
 
@@ -23,16 +23,18 @@ CO_OP_TRANSLATOR_METADATA:
 5. המתינו כ-2 דקות עד שהסביבה תהיה מוכנה
 6. עברו ישירות ל[הדוגמה הראשונה](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## תמיכה רב-שפתית
+## תמיכה בריבוי שפות
 
 ### נתמך באמצעות GitHub Action (אוטומטי ותמיד מעודכן)
 
-[צרפתית](../fr/README.md) | [ספרדית](../es/README.md) | [גרמנית](../de/README.md) | [רוסית](../ru/README.md) | [ערבית](../ar/README.md) | [פרסית (פארסי)](../fa/README.md) | [אורדו](../ur/README.md) | [סינית (פשוטה)](../zh/README.md) | [סינית (מסורתית, מקאו)](../mo/README.md) | [סינית (מסורתית, הונג קונג)](../hk/README.md) | [סינית (מסורתית, טייוואן)](../tw/README.md) | [יפנית](../ja/README.md) | [קוריאנית](../ko/README.md) | [הינדי](../hi/README.md) | [בנגלית](../bn/README.md) | [מראטהי](../mr/README.md) | [נפאלית](../ne/README.md) | [פונג'אבית (גורמוקי)](../pa/README.md) | [פורטוגזית (פורטוגל)](../pt/README.md) | [פורטוגזית (ברזיל)](../br/README.md) | [איטלקית](../it/README.md) | [פולנית](../pl/README.md) | [טורקית](../tr/README.md) | [יוונית](../el/README.md) | [תאית](../th/README.md) | [שוודית](../sv/README.md) | [דנית](../da/README.md) | [נורווגית](../no/README.md) | [פינית](../fi/README.md) | [הולנדית](../nl/README.md) | [עברית](./README.md) | [וייטנאמית](../vi/README.md) | [אינדונזית](../id/README.md) | [מלאית](../ms/README.md) | [טאגאלוג (פיליפינית)](../tl/README.md) | [סוואהילית](../sw/README.md) | [הונגרית](../hu/README.md) | [צ'כית](../cs/README.md) | [סלובקית](../sk/README.md) | [רומנית](../ro/README.md) | [בולגרית](../bg/README.md) | [סרבית (קירילית)](../sr/README.md) | [קרואטית](../hr/README.md) | [סלובנית](../sl/README.md) | [אוקראינית](../uk/README.md) | [בורמזית (מיאנמר)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[ערבית](../ar/README.md) | [בנגלית](../bn/README.md) | [בולגרית](../bg/README.md) | [בורמזית (מיאנמר)](../my/README.md) | [סינית (פשוטה)](../zh/README.md) | [סינית (מסורתית, הונג קונג)](../hk/README.md) | [סינית (מסורתית, מקאו)](../mo/README.md) | [סינית (מסורתית, טייוואן)](../tw/README.md) | [קרואטית](../hr/README.md) | [צ'כית](../cs/README.md) | [דנית](../da/README.md) | [הולנדית](../nl/README.md) | [אסטונית](../et/README.md) | [פינית](../fi/README.md) | [צרפתית](../fr/README.md) | [גרמנית](../de/README.md) | [יוונית](../el/README.md) | [עברית](./README.md) | [הינדית](../hi/README.md) | [הונגרית](../hu/README.md) | [אינדונזית](../id/README.md) | [איטלקית](../it/README.md) | [יפנית](../ja/README.md) | [קוריאנית](../ko/README.md) | [ליטאית](../lt/README.md) | [מלאית](../ms/README.md) | [מרטהי](../mr/README.md) | [נפאלית](../ne/README.md) | [נורווגית](../no/README.md) | [פרסית (פארסי)](../fa/README.md) | [פולנית](../pl/README.md) | [פורטוגזית (ברזיל)](../br/README.md) | [פורטוגזית (פורטוגל)](../pt/README.md) | [פונג'בית (גורמוקי)](../pa/README.md) | [רומנית](../ro/README.md) | [רוסית](../ru/README.md) | [סרבית (קירילית)](../sr/README.md) | [סלובקית](../sk/README.md) | [סלובנית](../sl/README.md) | [ספרדית](../es/README.md) | [סוואהילית](../sw/README.md) | [שוודית](../sv/README.md) | [טאגאלוג (פיליפינית)](../tl/README.md) | [טמילית](../ta/README.md) | [תאית](../th/README.md) | [טורקית](../tr/README.md) | [אוקראינית](../uk/README.md) | [אורדו](../ur/README.md) | [וייטנאמית](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-## מבנה הקורס ונתיב הלמידה
+## מבנה הקורס ומסלול הלמידה
 
 ### **פרק 1: מבוא לבינה מלאכותית יוצרת**
-- **מושגים מרכזיים**: הבנת מודלים שפתיים גדולים, טוקנים, הטמעות ויכולות AI
+- **מושגים מרכזיים**: הבנת מודלים של שפה גדולה, טוקנים, הטמעות ויכולות AI
 - **מערכת AI ב-Java**: סקירה של Spring AI ו-SDKs של OpenAI
 - **פרוטוקול הקשר של מודל**: מבוא ל-MCP ותפקידו בתקשורת סוכני AI
 - **יישומים מעשיים**: תרחישים בעולם האמיתי כולל צ'אטבוטים ויצירת תוכן
@@ -61,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **פרק 5: פיתוח AI אחראי**
 - **בטיחות מודלים של GitHub**: בדיקת סינון תוכן מובנה ומנגנוני בטיחות (חסימות קשות וסירובים רכים)
 - **דמו AI אחראי**: דוגמה מעשית שמראה כיצד מערכות בטיחות AI מודרניות פועלות בפועל
-- **שיטות עבודה מומלצות**: הנחיות חיוניות לפיתוח והטמעה אתית של AI
+- **שיטות עבודה מומלצות**: הנחיות חיוניות לפיתוח והפצה אתית של AI
 - **[→ התחילו את פרק 5](./05-ResponsibleGenAI/README.md)**
 
 ## משאבים נוספים
@@ -73,7 +75,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [בינה מלאכותית יוצרת למתחילים באמצעות JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [בינה מלאכותית יוצרת למתחילים](https://github.com/microsoft/generative-ai-for-beginners)
 - [למידת מכונה למתחילים](https://aka.ms/ml-beginners)
-- [מדעי הנתונים למתחילים](https://aka.ms/datascience-beginners)
+- [מדע נתונים למתחילים](https://aka.ms/datascience-beginners)
 - [AI למתחילים](https://aka.ms/ai-beginners)
 - [סייבר למתחילים](https://github.com/microsoft/Security-101)
 - [פיתוח אתרים למתחילים](https://aka.ms/webdev-beginners)
@@ -86,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## קבלת עזרה
 
-אם אתם נתקעים או יש לכם שאלות על בניית אפליקציות AI, הצטרפו:
+אם אתם נתקעים או יש לכם שאלות לגבי בניית אפליקציות AI, הצטרפו:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
