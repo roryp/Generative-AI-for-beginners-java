@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:17:44+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:32:04+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
@@ -12,50 +12,52 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![AI ya Kizazi kwa Kompyuta - Toleo la Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.sw.png)
 
-**Muda wa Kujitolea**: Warsha nzima inaweza kukamilishwa mtandaoni bila kuhitaji usanidi wa ndani. Usanidi wa mazingira unachukua dakika 2, huku kuchunguza mifano kunahitaji saa 1-3 kulingana na kina cha uchunguzi.
+**Muda wa Kujitolea**: Warsha nzima inaweza kukamilika mtandaoni bila mpangilio wa ndani. Mpangilio wa mazingira unachukua dakika 2, huku kuchunguza mifano kunahitaji saa 1-3 kulingana na kina cha uchunguzi.
 
-> **Anza Haraka** 
+> **Anza Haraka**
 
-1. Fork hifadhi hii kwenye akaunti yako ya GitHub
+1. Nakili hifadhi hii kwenye akaunti yako ya GitHub
 2. Bonyeza **Code** → **Kichupo cha Codespaces** → **...** → **New with options...**
 3. Tumia chaguo-msingi – hii itachagua kontena la Maendeleo lililoundwa kwa ajili ya kozi hii
 4. Bonyeza **Create codespace**
 5. Subiri ~dakika 2 kwa mazingira kuwa tayari
 6. Nenda moja kwa moja kwenye [Mfano wa kwanza](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Usaidizi wa Lugha Nyingi
+## Msaada wa Lugha Nyingi
 
-### Inayoungwa mkono kupitia GitHub Action (Imefanywa Kiotomatiki & Daima Inasasishwa)
+### Inayoungwa mkono kupitia GitHub Action (Imejiendesha & Daima Imeboreshwa)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](./README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](./README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Muundo wa Kozi & Njia ya Kujifunza
 
 ### **Sura ya 1: Utangulizi wa AI ya Kizazi**
 - **Mafunzo Muhimu**: Kuelewa Miundo Mikubwa ya Lugha, tokeni, embeddings, na uwezo wa AI
 - **Ekosistimu ya Java AI**: Muhtasari wa Spring AI na OpenAI SDKs
-- **Itifaki ya Muktadha wa Modeli**: Utangulizi wa MCP na jukumu lake katika mawasiliano ya wakala wa AI
+- **Itifaki ya Muktadha wa Mfano**: Utangulizi wa MCP na jukumu lake katika mawasiliano ya wakala wa AI
 - **Matumizi ya Kivitendo**: Matukio halisi ikiwa ni pamoja na chatbots na kizazi cha maudhui
 - **[→ Anza Sura ya 1](./01-IntroToGenAI/README.md)**
 
-### **Sura ya 2: Usanidi wa Mazingira ya Maendeleo**
+### **Sura ya 2: Mpangilio wa Mazingira ya Maendeleo**
 - **Usanidi wa Watoa Huduma Wengi**: Sanidi GitHub Models, Azure OpenAI, na OpenAI Java SDK
 - **Spring Boot + Spring AI**: Mbinu bora za maendeleo ya programu za AI za biashara
-- **GitHub Models**: Ufikiaji wa bure wa modeli za AI kwa majaribio na kujifunza (hakuna kadi ya mkopo inayohitajika)
-- **Zana za Maendeleo**: Usanidi wa kontena za Docker, VS Code, na GitHub Codespaces
+- **GitHub Models**: Upatikanaji wa bure wa modeli za AI kwa majaribio na kujifunza (hakuna kadi ya mkopo inayohitajika)
+- **Zana za Maendeleo**: Kontena za Docker, VS Code, na usanidi wa GitHub Codespaces
 - **[→ Anza Sura ya 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Sura ya 3: Mbinu Muhimu za AI ya Kizazi**
-- **Uhandisi wa Prompt**: Mbinu za kupata majibu bora kutoka kwa modeli za AI
-- **Embeddings & Operesheni za Vector**: Tekeleza utafutaji wa semantiki na kulinganisha mfanano
+- **Uhandisi wa Maelekezo**: Mbinu za kupata majibu bora kutoka kwa modeli za AI
+- **Embeddings & Operesheni za Vector**: Tekeleza utafutaji wa semantiki na kulinganisha usawa
 - **Kizazi Kilichoongezwa na Urejeshaji (RAG)**: Changanya AI na vyanzo vyako vya data
 - **Kuita Kazi**: Panua uwezo wa AI kwa zana na programu-jalizi maalum
 - **[→ Anza Sura ya 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Sura ya 4: Matumizi ya Kivitendo & Miradi**
-- **Kizazi cha Hadithi za Wanyama Kipenzi** (`petstory/`): Kizazi cha maudhui ya ubunifu kwa kutumia GitHub Models
+- **Mzalishaji wa Hadithi za Wanyama** (`petstory/`): Kizazi cha maudhui ya ubunifu kwa kutumia GitHub Models
 - **Demo ya Foundry ya Ndani** (`foundrylocal/`): Ushirikiano wa modeli za AI za ndani na OpenAI Java SDK
-- **Huduma ya MCP Calculator** (`calculator/`): Utekelezaji wa msingi wa Itifaki ya Muktadha wa Modeli kwa kutumia Spring AI
+- **Huduma ya Kikokotozi ya MCP** (`calculator/`): Utekelezaji wa msingi wa Itifaki ya Muktadha wa Mfano kwa kutumia Spring AI
 - **[→ Anza Sura ya 4](./04-PracticalSamples/README.md)**
 
 ### **Sura ya 5: Maendeleo ya AI ya Uwajibikaji**
@@ -64,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Mbinu Bora**: Miongozo muhimu kwa maendeleo ya AI ya kimaadili na utekelezaji
 - **[→ Anza Sura ya 5](./05-ResponsibleGenAI/README.md)**
 
-## Rasilimali za Ziada 
+## Rasilimali za Ziada
 
 - [Edge AI kwa Kompyuta](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP kwa Kompyuta](https://github.com/microsoft/mcp-for-beginners)
@@ -79,7 +81,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Web Dev kwa Kompyuta](https://aka.ms/webdev-beginners)
 - [IoT kwa Kompyuta](https://aka.ms/iot-beginners)
 - [Maendeleo ya XR kwa Kompyuta](https://github.com/microsoft/xr-development-for-beginners)
-- [Kumiliki GitHub Copilot kwa Uprogramu wa AI wa Pamoja](https://aka.ms/GitHubCopilotAI)
+- [Kumiliki GitHub Copilot kwa Uprogramu wa Pamoja wa AI](https://aka.ms/GitHubCopilotAI)
 - [Kumiliki GitHub Copilot kwa Waendelezaji wa C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Chagua Safari Yako ya Copilot](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App na Huduma za Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
@@ -97,4 +99,4 @@ Ikiwa una maoni ya bidhaa au makosa wakati wa kujenga tembelea:
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

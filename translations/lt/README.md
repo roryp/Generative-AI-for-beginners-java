@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:23:40+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:36:56+00:00",
   "source_file": "README.md",
   "language_code": "lt"
 }
@@ -21,20 +21,22 @@ CO_OP_TRANSLATOR_METADATA:
 3. Naudokite numatytuosius nustatymus – tai parinks šiam kursui sukurtą vystymo konteinerį
 4. Spustelėkite **Create codespace**
 5. Palaukite ~2 minutes, kol aplinka bus paruošta
-6. Pradėkite nuo [Pirmojo pavyzdžio](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Pereikite tiesiai prie [Pirmojo pavyzdžio](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Daugiakalbė palaikymas
+## Daugiakalbė parama
 
-### Palaikoma per GitHub Action (automatizuota ir visada atnaujinta)
+### Palaikoma per GitHub Action (Automatizuota ir visada atnaujinta)
 
-[Prancūzų](../fr/README.md) | [Ispanų](../es/README.md) | [Vokiečių](../de/README.md) | [Rusų](../ru/README.md) | [Arabų](../ar/README.md) | [Persų (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kinų (supaprastinta)](../zh/README.md) | [Kinų (tradicinė, Makao)](../mo/README.md) | [Kinų (tradicinė, Honkongas)](../hk/README.md) | [Kinų (tradicinė, Taivanas)](../tw/README.md) | [Japonų](../ja/README.md) | [Korėjiečių](../ko/README.md) | [Hindi](../hi/README.md) | [Bengalų](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalų](../ne/README.md) | [Pandžabi (Gurmukhi)](../pa/README.md) | [Portugalų (Portugalija)](../pt/README.md) | [Portugalų (Brazilija)](../br/README.md) | [Italų](../it/README.md) | [Lenkų](../pl/README.md) | [Turkų](../tr/README.md) | [Graikų](../el/README.md) | [Tajų](../th/README.md) | [Švedų](../sv/README.md) | [Danų](../da/README.md) | [Norvegų](../no/README.md) | [Suomių](../fi/README.md) | [Olandų](../nl/README.md) | [Hebrajų](../he/README.md) | [Vietnamiečių](../vi/README.md) | [Indoneziečių](../id/README.md) | [Malajų](../ms/README.md) | [Tagalogų (Filipinų)](../tl/README.md) | [Svahilių](../sw/README.md) | [Vengrų](../hu/README.md) | [Čekų](../cs/README.md) | [Slovakų](../sk/README.md) | [Rumunų](../ro/README.md) | [Bulgarų](../bg/README.md) | [Serbų (kirilica)](../sr/README.md) | [Kroatų](../hr/README.md) | [Slovėnų](../sl/README.md) | [Ukrainiečių](../uk/README.md) | [Birmos (Mianmaras)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabų](../ar/README.md) | [Bengalų](../bn/README.md) | [Bulgarų](../bg/README.md) | [Birmos (Mianmaras)](../my/README.md) | [Kinų (supaprastinta)](../zh/README.md) | [Kinų (tradicinė, Honkongas)](../hk/README.md) | [Kinų (tradicinė, Makao)](../mo/README.md) | [Kinų (tradicinė, Taivanas)](../tw/README.md) | [Kroatų](../hr/README.md) | [Čekų](../cs/README.md) | [Danų](../da/README.md) | [Olandų](../nl/README.md) | [Estų](../et/README.md) | [Suomių](../fi/README.md) | [Prancūzų](../fr/README.md) | [Vokiečių](../de/README.md) | [Graikų](../el/README.md) | [Hebrajų](../he/README.md) | [Hindi](../hi/README.md) | [Vengrų](../hu/README.md) | [Indoneziečių](../id/README.md) | [Italų](../it/README.md) | [Japonų](../ja/README.md) | [Korėjiečių](../ko/README.md) | [Lietuvių](./README.md) | [Malajų](../ms/README.md) | [Maratų](../mr/README.md) | [Nepalų](../ne/README.md) | [Norvegų](../no/README.md) | [Persų (Farsi)](../fa/README.md) | [Lenkų](../pl/README.md) | [Portugalų (Brazilija)](../br/README.md) | [Portugalų (Portugalija)](../pt/README.md) | [Pandžabų (Gurmukhi)](../pa/README.md) | [Rumunų](../ro/README.md) | [Rusų](../ru/README.md) | [Serbų (kirilica)](../sr/README.md) | [Slovakų](../sk/README.md) | [Slovėnų](../sl/README.md) | [Ispanų](../es/README.md) | [Svahilių](../sw/README.md) | [Švedų](../sv/README.md) | [Tagalogų (Filipinai)](../tl/README.md) | [Tamilų](../ta/README.md) | [Tajų](../th/README.md) | [Turkų](../tr/README.md) | [Ukrainiečių](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamiečių](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Kurso struktūra ir mokymosi kelias
 
-### **1 skyrius: Generatyvinio AI įvadas**
+### **1 skyrius: Įvadas į generatyvinį AI**
 - **Pagrindinės sąvokos**: Suprasti didelius kalbos modelius, tokenus, įterpimus ir AI galimybes
 - **Java AI ekosistema**: Spring AI ir OpenAI SDK apžvalga
-- **Modelio konteksto protokolas**: MCP įvadas ir jo vaidmuo AI agentų komunikacijoje
+- **Modelio konteksto protokolas**: MCP pristatymas ir jo vaidmuo AI agentų komunikacijoje
 - **Praktinės taikymo sritys**: Realūs scenarijai, įskaitant pokalbių robotus ir turinio generavimą
 - **[→ Pradėti 1 skyrių](./01-IntroToGenAI/README.md)**
 
@@ -54,13 +56,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **4 skyrius: Praktinės taikymo sritys ir projektai**
 - **Gyvūnų istorijų generatorius** (`petstory/`): Kūrybinio turinio generavimas naudojant GitHub modelius
-- **Foundry vietinis demo** (`foundrylocal/`): Vietinė AI modelių integracija su OpenAI Java SDK
+- **Foundry vietinis demonstravimas** (`foundrylocal/`): Vietinė AI modelių integracija su OpenAI Java SDK
 - **MCP skaičiuoklės paslauga** (`calculator/`): Pagrindinis Modelio konteksto protokolo įgyvendinimas su Spring AI
 - **[→ Pradėti 4 skyrių](./04-PracticalSamples/README.md)**
 
 ### **5 skyrius: Atsakingas AI vystymas**
 - **GitHub modelių saugumas**: Įmontuotų turinio filtravimo ir saugumo mechanizmų testavimas (griežti blokavimai ir švelnūs atsisakymai)
-- **Atsakingo AI demo**: Praktinis pavyzdys, kaip veikia šiuolaikinės AI saugumo sistemos
+- **Atsakingo AI demonstravimas**: Praktinis pavyzdys, kaip veikia šiuolaikinės AI saugumo sistemos
 - **Geriausios praktikos**: Esminės gairės etiniam AI vystymui ir diegimui
 - **[→ Pradėti 5 skyrių](./05-ResponsibleGenAI/README.md)**
 
@@ -90,11 +92,11 @@ Jei susiduriate su sunkumais ar turite klausimų apie AI programų kūrimą, pri
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Jei turite produktų atsiliepimų ar klaidų, apsilankykite:
+Jei turite produktų atsiliepimų ar susiduriate su klaidomis, apsilankykite:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 **Atsakomybės atsisakymas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus aiškinimus, kilusius dėl šio vertimo naudojimo.

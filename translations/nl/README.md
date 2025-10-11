@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:14:59+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:29:39+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -17,22 +17,24 @@ CO_OP_TRANSLATOR_METADATA:
 > **Snelle Start**
 
 1. Fork deze repository naar je GitHub-account
-2. Klik op **Code** → **Codespaces** tabblad → **...** → **Nieuw met opties...**
+2. Klik op **Code** → tabblad **Codespaces** → **...** → **Nieuw met opties...**
 3. Gebruik de standaardinstellingen – dit selecteert de ontwikkelcontainer die voor deze cursus is gemaakt
 4. Klik op **Codespace maken**
-5. Wacht ~2 minuten tot de omgeving gereed is
+5. Wacht ~2 minuten tot de omgeving klaar is
 6. Ga direct naar [Het eerste voorbeeld](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Meertalige Ondersteuning
+## Ondersteuning voor meerdere talen
 
 ### Ondersteund via GitHub Action (Automatisch & Altijd Actueel)
 
-[Frans](../fr/README.md) | [Spaans](../es/README.md) | [Duits](../de/README.md) | [Russisch](../ru/README.md) | [Arabisch](../ar/README.md) | [Perzisch (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinees (Vereenvoudigd)](../zh/README.md) | [Chinees (Traditioneel, Macau)](../mo/README.md) | [Chinees (Traditioneel, Hong Kong)](../hk/README.md) | [Chinees (Traditioneel, Taiwan)](../tw/README.md) | [Japans](../ja/README.md) | [Koreaans](../ko/README.md) | [Hindi](../hi/README.md) | [Bengaals](../bn/README.md) | [Marathi](../mr/README.md) | [Nepalees](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugees (Portugal)](../pt/README.md) | [Portugees (Brazilië)](../br/README.md) | [Italiaans](../it/README.md) | [Pools](../pl/README.md) | [Turks](../tr/README.md) | [Grieks](../el/README.md) | [Thais](../th/README.md) | [Zweeds](../sv/README.md) | [Deens](../da/README.md) | [Noors](../no/README.md) | [Fins](../fi/README.md) | [Nederlands](./README.md) | [Hebreeuws](../he/README.md) | [Vietnamees](../vi/README.md) | [Indonesisch](../id/README.md) | [Maleis](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hongaars](../hu/README.md) | [Tsjechisch](../cs/README.md) | [Slowaaks](../sk/README.md) | [Roemeens](../ro/README.md) | [Bulgaars](../bg/README.md) | [Servisch (Cyrillisch)](../sr/README.md) | [Kroatisch](../hr/README.md) | [Sloveens](../sl/README.md) | [Oekraïens](../uk/README.md) | [Birmaans (Myanmar)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabisch](../ar/README.md) | [Bengaals](../bn/README.md) | [Bulgaars](../bg/README.md) | [Birmaans (Myanmar)](../my/README.md) | [Chinees (Vereenvoudigd)](../zh/README.md) | [Chinees (Traditioneel, Hong Kong)](../hk/README.md) | [Chinees (Traditioneel, Macau)](../mo/README.md) | [Chinees (Traditioneel, Taiwan)](../tw/README.md) | [Kroatisch](../hr/README.md) | [Tsjechisch](../cs/README.md) | [Deens](../da/README.md) | [Nederlands](./README.md) | [Ests](../et/README.md) | [Fins](../fi/README.md) | [Frans](../fr/README.md) | [Duits](../de/README.md) | [Grieks](../el/README.md) | [Hebreeuws](../he/README.md) | [Hindi](../hi/README.md) | [Hongaars](../hu/README.md) | [Indonesisch](../id/README.md) | [Italiaans](../it/README.md) | [Japans](../ja/README.md) | [Koreaans](../ko/README.md) | [Litouws](../lt/README.md) | [Maleis](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalees](../ne/README.md) | [Noors](../no/README.md) | [Perzisch (Farsi)](../fa/README.md) | [Pools](../pl/README.md) | [Portugees (Brazilië)](../br/README.md) | [Portugees (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Roemeens](../ro/README.md) | [Russisch](../ru/README.md) | [Servisch (Cyrillisch)](../sr/README.md) | [Slowaaks](../sk/README.md) | [Sloveens](../sl/README.md) | [Spaans](../es/README.md) | [Swahili](../sw/README.md) | [Zweeds](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thais](../th/README.md) | [Turks](../tr/README.md) | [Oekraïens](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamees](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Cursusstructuur & Leerpad
 
 ### **Hoofdstuk 1: Introductie tot Generatieve AI**
-- **Kernconcepten**: Begrip van grote taalmodellen, tokens, embeddings en AI-mogelijkheden
+- **Kernconcepten**: Begrip van Large Language Models, tokens, embeddings en AI-mogelijkheden
 - **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDK's
 - **Model Context Protocol**: Introductie tot MCP en de rol ervan in AI-agentcommunicatie
 - **Praktische Toepassingen**: Toepassingen in de echte wereld, zoals chatbots en contentgeneratie
@@ -40,7 +42,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Hoofdstuk 2: Ontwikkelomgeving Instellen**
 - **Multi-Provider Configuratie**: Instellen van GitHub Models, Azure OpenAI en OpenAI Java SDK-integraties
-- **Spring Boot + Spring AI**: Best practices voor AI-applicatieontwikkeling in ondernemingen
+- **Spring Boot + Spring AI**: Best practices voor het ontwikkelen van AI-applicaties voor bedrijven
 - **GitHub Models**: Gratis toegang tot AI-modellen voor prototyping en leren (geen creditcard nodig)
 - **Ontwikkeltools**: Docker-containers, VS Code en GitHub Codespaces configuratie
 - **[→ Start Hoofdstuk 2](./02-SetupDevEnvironment/README.md)**
@@ -48,8 +50,8 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Hoofdstuk 3: Kerntechnieken van Generatieve AI**
 - **Prompt Engineering**: Technieken voor optimale AI-modelreacties
 - **Embeddings & Vectorbewerkingen**: Implementeren van semantisch zoeken en overeenkomsten
-- **Retrieval-Augmented Generation (RAG)**: AI combineren met je eigen gegevensbronnen
-- **Functieaanroepen**: AI uitbreiden met aangepaste tools en plugins
+- **Retrieval-Augmented Generation (RAG)**: Combineer AI met je eigen gegevensbronnen
+- **Functieaanroepen**: Breid AI-mogelijkheden uit met aangepaste tools en plugins
 - **[→ Start Hoofdstuk 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Hoofdstuk 4: Praktische Toepassingen & Projecten**
@@ -84,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Kies Je Eigen Copilot Avontuur](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App met Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
-## Hulp Krijgen
+## Hulp Nodig
 
 Als je vastloopt of vragen hebt over het bouwen van AI-apps, sluit je aan bij:
 

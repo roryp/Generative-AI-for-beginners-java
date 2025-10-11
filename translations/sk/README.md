@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:19:20+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:33:23+00:00",
   "source_file": "README.md",
   "language_code": "sk"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generatívna AI pre začiatočníkov - Java edícia](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.sk.png)
 
-**Časová náročnosť**: Celý workshop je možné dokončiť online bez lokálneho nastavenia. Nastavenie prostredia trvá 2 minúty, pričom preskúmanie príkladov si vyžaduje 1-3 hodiny v závislosti od hĺbky skúmania.
+**Časová náročnosť**: Celý workshop je možné dokončiť online bez lokálneho nastavenia. Nastavenie prostredia trvá 2 minúty, pričom skúmanie príkladov si vyžaduje 1-3 hodiny v závislosti od hĺbky skúmania.
 
 > **Rýchly štart**
 
@@ -27,7 +27,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Podporované cez GitHub Action (Automatizované & vždy aktuálne)
 
-[Francúzština](../fr/README.md) | [Španielčina](../es/README.md) | [Nemčina](../de/README.md) | [Ruština](../ru/README.md) | [Arabčina](../ar/README.md) | [Perzština (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Čínština (zjednodušená)](../zh/README.md) | [Čínština (tradičná, Macao)](../mo/README.md) | [Čínština (tradičná, Hongkong)](../hk/README.md) | [Čínština (tradičná, Taiwan)](../tw/README.md) | [Japončina](../ja/README.md) | [Kórejčina](../ko/README.md) | [Hindčina](../hi/README.md) | [Bengálčina](../bn/README.md) | [Maráthčina](../mr/README.md) | [Nepálčina](../ne/README.md) | [Pandžábčina (Gurmukhi)](../pa/README.md) | [Portugalčina (Portugalsko)](../pt/README.md) | [Portugalčina (Brazília)](../br/README.md) | [Taliančina](../it/README.md) | [Poľština](../pl/README.md) | [Turečtina](../tr/README.md) | [Gréčtina](../el/README.md) | [Thajčina](../th/README.md) | [Švédčina](../sv/README.md) | [Dánčina](../da/README.md) | [Nórčina](../no/README.md) | [Fínčina](../fi/README.md) | [Holandčina](../nl/README.md) | [Hebrejčina](../he/README.md) | [Vietnamčina](../vi/README.md) | [Indonézčina](../id/README.md) | [Malajčina](../ms/README.md) | [Tagalog (Filipínčina)](../tl/README.md) | [Swahilčina](../sw/README.md) | [Maďarčina](../hu/README.md) | [Čeština](../cs/README.md) | [Slovenčina](./README.md) | [Rumunčina](../ro/README.md) | [Bulharčina](../bg/README.md) | [Srbčina (cyrilika)](../sr/README.md) | [Chorvátčina](../hr/README.md) | [Slovinčina](../sl/README.md) | [Ukrajinčina](../uk/README.md) | [Barmčina (Myanmar)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabčina](../ar/README.md) | [Bengálčina](../bn/README.md) | [Bulharčina](../bg/README.md) | [Barmčina (Mjanmarsko)](../my/README.md) | [Čínština (zjednodušená)](../zh/README.md) | [Čínština (tradičná, Hongkong)](../hk/README.md) | [Čínština (tradičná, Macao)](../mo/README.md) | [Čínština (tradičná, Taiwan)](../tw/README.md) | [Chorvátčina](../hr/README.md) | [Čeština](../cs/README.md) | [Dánčina](../da/README.md) | [Holandčina](../nl/README.md) | [Estónčina](../et/README.md) | [Fínčina](../fi/README.md) | [Francúzština](../fr/README.md) | [Nemčina](../de/README.md) | [Gréčtina](../el/README.md) | [Hebrejčina](../he/README.md) | [Hindčina](../hi/README.md) | [Maďarčina](../hu/README.md) | [Indonézčina](../id/README.md) | [Taliančina](../it/README.md) | [Japončina](../ja/README.md) | [Kórejčina](../ko/README.md) | [Litovčina](../lt/README.md) | [Malajčina](../ms/README.md) | [Maráthčina](../mr/README.md) | [Nepálčina](../ne/README.md) | [Nórčina](../no/README.md) | [Perzština (Farsí)](../fa/README.md) | [Poľština](../pl/README.md) | [Portugalčina (Brazília)](../br/README.md) | [Portugalčina (Portugalsko)](../pt/README.md) | [Pandžábčina (Gurmukhi)](../pa/README.md) | [Rumunčina](../ro/README.md) | [Ruština](../ru/README.md) | [Srbčina (cyrilika)](../sr/README.md) | [Slovenčina](./README.md) | [Slovinčina](../sl/README.md) | [Španielčina](../es/README.md) | [Swahilčina](../sw/README.md) | [Švédčina](../sv/README.md) | [Tagalog (Filipínčina)](../tl/README.md) | [Tamilčina](../ta/README.md) | [Thajčina](../th/README.md) | [Turečtina](../tr/README.md) | [Ukrajinčina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamčina](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Štruktúra kurzu & učebná cesta
 
@@ -39,38 +41,38 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Začať kapitolu 1](./01-IntroToGenAI/README.md)**
 
 ### **Kapitola 2: Nastavenie vývojového prostredia**
-- **Konfigurácia viacerých poskytovateľov**: Nastavenie GitHub Models, Azure OpenAI a OpenAI Java SDK integrácií
+- **Konfigurácia viacerých poskytovateľov**: Nastavenie GitHub modelov, Azure OpenAI a OpenAI Java SDK integrácií
 - **Spring Boot + Spring AI**: Najlepšie postupy pre vývoj podnikových AI aplikácií
-- **GitHub Models**: Bezplatný prístup k AI modelom na prototypovanie a učenie (bez potreby kreditnej karty)
+- **GitHub modely**: Bezplatný prístup k AI modelom na prototypovanie a učenie (bez potreby kreditnej karty)
 - **Vývojové nástroje**: Konfigurácia Docker kontajnerov, VS Code a GitHub Codespaces
 - **[→ Začať kapitolu 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Kapitola 3: Základné techniky generatívnej AI**
-- **Prompt Engineering**: Techniky pre optimálne odpovede AI modelov
+- **Prompt Engineering**: Techniky na dosiahnutie optimálnych odpovedí AI modelov
 - **Embeddingy & vektorové operácie**: Implementácia semantického vyhľadávania a porovnávania podobnosti
-- **Generovanie s podporou vyhľadávania (RAG)**: Kombinácia AI s vlastnými zdrojmi dát
+- **Generovanie s podporou vyhľadávania (RAG)**: Kombinácia AI s vlastnými dátovými zdrojmi
 - **Volanie funkcií**: Rozšírenie schopností AI pomocou vlastných nástrojov a pluginov
 - **[→ Začať kapitolu 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kapitola 4: Praktické aplikácie & projekty**
-- **Generátor príbehov o domácich miláčikoch** (`petstory/`): Kreatívne generovanie obsahu s GitHub Models
-- **Foundry Local Demo** (`foundrylocal/`): Lokálna integrácia AI modelov s OpenAI Java SDK
+- **Generátor príbehov o domácich zvieratách** (`petstory/`): Kreatívne generovanie obsahu s GitHub modelmi
+- **Foundry lokálna ukážka** (`foundrylocal/`): Lokálna integrácia AI modelov s OpenAI Java SDK
 - **MCP kalkulačná služba** (`calculator/`): Základná implementácia protokolu kontextu modelu so Spring AI
 - **[→ Začať kapitolu 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitola 5: Zodpovedný vývoj AI**
-- **Bezpečnosť GitHub Models**: Testovanie zabudovaného filtrovania obsahu a bezpečnostných mechanizmov (tvrdé bloky a mäkké odmietnutia)
-- **Demo zodpovednej AI**: Praktický príklad ukazujúci, ako moderné bezpečnostné systémy AI fungujú v praxi
+- **Bezpečnosť GitHub modelov**: Testovanie zabudovaného filtrovania obsahu a bezpečnostných mechanizmov (tvrdé bloky a mäkké odmietnutia)
+- **Ukážka zodpovednej AI**: Praktický príklad ukazujúci, ako moderné bezpečnostné systémy AI fungujú
 - **Najlepšie postupy**: Základné pokyny pre etický vývoj a nasadenie AI
 - **[→ Začať kapitolu 5](./05-ResponsibleGenAI/README.md)**
 
-## Ďalšie zdroje
+## Dodatočné zdroje
 
 - [Edge AI pre začiatočníkov](https://github.com/microsoft/edgeai-for-beginners)
 - [MCP pre začiatočníkov](https://github.com/microsoft/mcp-for-beginners)
 - [AI agenti pre začiatočníkov](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generatívna AI pre začiatočníkov pomocou .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generatívna AI pre začiatočníkov pomocou JavaScriptu](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generatívna AI pre začiatočníkov s .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generatívna AI pre začiatočníkov s JavaScriptom](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generatívna AI pre začiatočníkov](https://github.com/microsoft/generative-ai-for-beginners)
 - [ML pre začiatočníkov](https://aka.ms/ml-beginners)
 - [Data Science pre začiatočníkov](https://aka.ms/datascience-beginners)
@@ -79,14 +81,14 @@ CO_OP_TRANSLATOR_METADATA:
 - [Webový vývoj pre začiatočníkov](https://aka.ms/webdev-beginners)
 - [IoT pre začiatočníkov](https://aka.ms/iot-beginners)
 - [XR vývoj pre začiatočníkov](https://github.com/microsoft/xr-development-for-beginners)
-- [Ovládnutie GitHub Copilot pre párové programovanie s AI](https://aka.ms/GitHubCopilotAI)
-- [Ovládnutie GitHub Copilot pre vývojárov C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Ovládnutie GitHub Copilot pre AI párové programovanie](https://aka.ms/GitHubCopilotAI)
+- [Ovládnutie GitHub Copilot pre C#/.NET vývojárov](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Vyberte si vlastné dobrodružstvo s Copilotom](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App s Azure AI službami](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 ## Získanie pomoci
 
-Ak narazíte na problémy alebo máte otázky ohľadom budovania AI aplikácií, pridajte sa:
+Ak narazíte na problémy alebo máte otázky ohľadom budovania AI aplikácií, pripojte sa:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 

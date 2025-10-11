@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4d04ae8088f6a3c3fcbab18cbdfe4002",
-  "translation_date": "2025-10-03T08:02:26+00:00",
+  "original_hash": "00950ee1a40a84676b50da356c3a964a",
+  "translation_date": "2025-10-11T10:19:11+00:00",
   "source_file": "README.md",
   "language_code": "ar"
 }
@@ -27,7 +27,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### مدعوم عبر GitHub Action (تلقائي ودائم التحديث)
 
-[الفرنسية](../fr/README.md) | [الإسبانية](../es/README.md) | [الألمانية](../de/README.md) | [الروسية](../ru/README.md) | [العربية](./README.md) | [الفارسية](../fa/README.md) | [الأردية](../ur/README.md) | [الصينية (المبسطة)](../zh/README.md) | [الصينية (التقليدية، ماكاو)](../mo/README.md) | [الصينية (التقليدية، هونغ كونغ)](../hk/README.md) | [الصينية (التقليدية، تايوان)](../tw/README.md) | [اليابانية](../ja/README.md) | [الكورية](../ko/README.md) | [الهندية](../hi/README.md) | [البنغالية](../bn/README.md) | [الماراثية](../mr/README.md) | [النيبالية](../ne/README.md) | [البنجابية (غورموخي)](../pa/README.md) | [البرتغالية (البرتغال)](../pt/README.md) | [البرتغالية (البرازيل)](../br/README.md) | [الإيطالية](../it/README.md) | [البولندية](../pl/README.md) | [التركية](../tr/README.md) | [اليونانية](../el/README.md) | [التايلاندية](../th/README.md) | [السويدية](../sv/README.md) | [الدانماركية](../da/README.md) | [النرويجية](../no/README.md) | [الفنلندية](../fi/README.md) | [الهولندية](../nl/README.md) | [العبرية](../he/README.md) | [الفيتنامية](../vi/README.md) | [الإندونيسية](../id/README.md) | [الماليزية](../ms/README.md) | [التاغالوغية (الفلبينية)](../tl/README.md) | [السواحيلية](../sw/README.md) | [الهنغارية](../hu/README.md) | [التشيكية](../cs/README.md) | [السلوفاكية](../sk/README.md) | [الرومانية](../ro/README.md) | [البلغارية](../bg/README.md) | [الصربية (السيريلية)](../sr/README.md) | [الكرواتية](../hr/README.md) | [السلوفينية](../sl/README.md) | [الأوكرانية](../uk/README.md) | [البورمية (ميانمار)](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[العربية](./README.md) | [البنغالية](../bn/README.md) | [البلغارية](../bg/README.md) | [البورمية (ميانمار)](../my/README.md) | [الصينية (المبسطة)](../zh/README.md) | [الصينية (التقليدية، هونغ كونغ)](../hk/README.md) | [الصينية (التقليدية، ماكاو)](../mo/README.md) | [الصينية (التقليدية، تايوان)](../tw/README.md) | [الكرواتية](../hr/README.md) | [التشيكية](../cs/README.md) | [الدانماركية](../da/README.md) | [الهولندية](../nl/README.md) | [الإستونية](../et/README.md) | [الفنلندية](../fi/README.md) | [الفرنسية](../fr/README.md) | [الألمانية](../de/README.md) | [اليونانية](../el/README.md) | [العبرية](../he/README.md) | [الهندية](../hi/README.md) | [الهنغارية](../hu/README.md) | [الإندونيسية](../id/README.md) | [الإيطالية](../it/README.md) | [اليابانية](../ja/README.md) | [الكورية](../ko/README.md) | [الليتوانية](../lt/README.md) | [الماليزية](../ms/README.md) | [الماراثية](../mr/README.md) | [النيبالية](../ne/README.md) | [النرويجية](../no/README.md) | [الفارسية (فارسي)](../fa/README.md) | [البولندية](../pl/README.md) | [البرتغالية (البرازيل)](../br/README.md) | [البرتغالية (البرتغال)](../pt/README.md) | [البنجابية (غورموخي)](../pa/README.md) | [الرومانية](../ro/README.md) | [الروسية](../ru/README.md) | [الصربية (السيريلية)](../sr/README.md) | [السلوفاكية](../sk/README.md) | [السلوفينية](../sl/README.md) | [الإسبانية](../es/README.md) | [السواحيلية](../sw/README.md) | [السويدية](../sv/README.md) | [التاغالوغية (الفلبينية)](../tl/README.md) | [التاميلية](../ta/README.md) | [التايلاندية](../th/README.md) | [التركية](../tr/README.md) | [الأوكرانية](../uk/README.md) | [الأردية](../ur/README.md) | [الفيتنامية](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## هيكل الدورة ومسار التعلم
 
@@ -39,14 +41,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ ابدأ الفصل الأول](./01-IntroToGenAI/README.md)**
 
 ### **الفصل الثاني: إعداد بيئة التطوير**
-- **تكوين متعدد المزودين**: إعداد نماذج GitHub، Azure OpenAI، و OpenAI Java SDK
+- **تكوين متعدد المزودين**: إعداد نماذج GitHub، Azure OpenAI، وتكامل OpenAI Java SDK
 - **Spring Boot + Spring AI**: أفضل الممارسات لتطوير تطبيقات الذكاء الاصطناعي للمؤسسات
 - **نماذج GitHub**: الوصول إلى نماذج الذكاء الاصطناعي مجانًا للتجربة والتعلم (لا حاجة لبطاقة ائتمان)
-- **أدوات التطوير**: إعداد حاويات Docker، VS Code، و GitHub Codespaces
+- **أدوات التطوير**: تكوين حاويات Docker، VS Code، و GitHub Codespaces
 - **[→ ابدأ الفصل الثاني](./02-SetupDevEnvironment/README.md)**
 
 ### **الفصل الثالث: تقنيات الذكاء الاصطناعي التوليدي الأساسية**
-- **هندسة التوجيه**: تقنيات للحصول على استجابات مثالية من نماذج الذكاء الاصطناعي
+- **هندسة التوجيه**: تقنيات للحصول على استجابات مثلى من نماذج الذكاء الاصطناعي
 - **التضمينات وعمليات المتجهات**: تنفيذ البحث الدلالي ومطابقة التشابه
 - **توليد البيانات المعزز بالاسترجاع (RAG)**: دمج الذكاء الاصطناعي مع مصادر البيانات الخاصة بك
 - **استدعاء الوظائف**: توسيع قدرات الذكاء الاصطناعي باستخدام أدوات ومكونات إضافية مخصصة
@@ -54,8 +56,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **الفصل الرابع: التطبيقات العملية والمشاريع**
 - **مولد قصص الحيوانات الأليفة** (`petstory/`): توليد محتوى إبداعي باستخدام نماذج GitHub
-- **عرض محلي لـ Foundry** (`foundrylocal/`): دمج نماذج الذكاء الاصطناعي محليًا باستخدام OpenAI Java SDK
-- **خدمة حاسبة MCP** (`calculator/`): تنفيذ بروتوكول سياق النموذج الأساسي باستخدام Spring AI
+- **عرض Foundry المحلي** (`foundrylocal/`): تكامل نماذج الذكاء الاصطناعي المحلية مع OpenAI Java SDK
+- **خدمة MCP للحسابات** (`calculator/`): تنفيذ بروتوكول سياق النموذج الأساسي باستخدام Spring AI
 - **[→ ابدأ الفصل الرابع](./04-PracticalSamples/README.md)**
 
 ### **الفصل الخامس: تطوير الذكاء الاصطناعي المسؤول**
@@ -81,7 +83,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [تطوير XR للمبتدئين](https://github.com/microsoft/xr-development-for-beginners)
 - [إتقان GitHub Copilot للبرمجة المزدوجة بالذكاء الاصطناعي](https://aka.ms/GitHubCopilotAI)
 - [إتقان GitHub Copilot لمطوري C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [اختر مغامرتك مع Copilot](https://github.com/microsoft/CopilotAdventures)
+- [اختر مغامرتك الخاصة مع Copilot](https://github.com/microsoft/CopilotAdventures)
 - [تطبيق دردشة RAG مع خدمات Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
 ## الحصول على المساعدة
@@ -90,11 +92,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-إذا كانت لديك ملاحظات حول المنتج أو أخطاء أثناء البناء، قم بزيارة:
+إذا كان لديك ملاحظات حول المنتج أو أخطاء أثناء البناء، قم بزيارة:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 **إخلاء المسؤولية**:  
-تم ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الرسمي. للحصول على معلومات حاسمة، يُوصى بالترجمة البشرية الاحترافية. نحن غير مسؤولين عن أي سوء فهم أو تفسيرات خاطئة ناتجة عن استخدام هذه الترجمة.
+تم ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو معلومات غير دقيقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الرسمي. للحصول على معلومات حاسمة، يُوصى بالاستعانة بترجمة بشرية احترافية. نحن غير مسؤولين عن أي سوء فهم أو تفسيرات خاطئة ناتجة عن استخدام هذه الترجمة.
