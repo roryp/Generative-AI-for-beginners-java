@@ -1,16 +1,16 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "00950ee1a40a84676b50da356c3a964a",
-  "translation_date": "2025-10-11T10:38:29+00:00",
+  "original_hash": "d83a4cd2f465a83b72b5a5284d3a72fd",
+  "translation_date": "2025-10-24T09:16:24+00:00",
   "source_file": "README.md",
   "language_code": "et"
 }
 -->
-# Generatiivne AI algajatele - Java versioon
+# Generatiivne tehisintellekt algajatele - Java versioon
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
 
-![Generatiivne AI algajatele - Java versioon](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.et.png)
+![Generatiivne tehisintellekt algajatele - Java versioon](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.et.png)
 
 **Ajakulu**: Kogu töötuba saab läbida veebis ilma kohalikku seadistust tegemata. Keskkonna seadistamine võtab 2 minutit, näidiste uurimine 1-3 tundi, sõltuvalt süvenemise tasemest.
 
@@ -25,66 +25,82 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Mitmekeelne tugi
 
-### Toetatud GitHub Actioni kaudu (automaatne ja alati ajakohane)
+### Toetatud GitHub Actioni kaudu (Automatiseeritud ja alati ajakohane)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Araabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaaria](../bg/README.md) | [Birma (Myanmar)](../my/README.md) | [Hiina (lihtsustatud)](../zh/README.md) | [Hiina (traditsiooniline, Hongkong)](../hk/README.md) | [Hiina (traditsiooniline, Macau)](../mo/README.md) | [Hiina (traditsiooniline, Taiwan)](../tw/README.md) | [Horvaatia](../hr/README.md) | [Tšehhi](../cs/README.md) | [Taani](../da/README.md) | [Hollandi](../nl/README.md) | [Eesti](./README.md) | [Soome](../fi/README.md) | [Prantsuse](../fr/README.md) | [Saksa](../de/README.md) | [Kreeka](../el/README.md) | [Heebrea](../he/README.md) | [Hindi](../hi/README.md) | [Ungari](../hu/README.md) | [Indoneesia](../id/README.md) | [Itaalia](../it/README.md) | [Jaapani](../ja/README.md) | [Korea](../ko/README.md) | [Leedu](../lt/README.md) | [Malai](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Norra](../no/README.md) | [Pärsia (Farsi)](../fa/README.md) | [Poola](../pl/README.md) | [Portugali (Brasiilia)](../br/README.md) | [Portugali (Portugal)](../pt/README.md) | [Pandžabi (Gurmukhi)](../pa/README.md) | [Rumeenia](../ro/README.md) | [Vene](../ru/README.md) | [Serbia (kirillitsa)](../sr/README.md) | [Slovaki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Hispaania](../es/README.md) | [Suahiili](../sw/README.md) | [Rootsi](../sv/README.md) | [Tagalogi (Filipino)](../tl/README.md) | [Tamili](../ta/README.md) | [Tai](../th/README.md) | [Türgi](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnami](../vi/README.md)
+[Araabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaaria](../bg/README.md) | [Birma (Myanmar)](../my/README.md) | [Hiina (lihtsustatud)](../zh/README.md) | [Hiina (traditsiooniline, Hongkong)](../hk/README.md) | [Hiina (traditsiooniline, Macau)](../mo/README.md) | [Hiina (traditsiooniline, Taiwan)](../tw/README.md) | [Horvaatia](../hr/README.md) | [Tšehhi](../cs/README.md) | [Taani](../da/README.md) | [Hollandi](../nl/README.md) | [Eesti](./README.md) | [Soome](../fi/README.md) | [Prantsuse](../fr/README.md) | [Saksa](../de/README.md) | [Kreeka](../el/README.md) | [Heebrea](../he/README.md) | [Hindi](../hi/README.md) | [Ungari](../hu/README.md) | [Indoneesia](../id/README.md) | [Itaalia](../it/README.md) | [Jaapani](../ja/README.md) | [Korea](../ko/README.md) | [Leedu](../lt/README.md) | [Malai](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Norra](../no/README.md) | [Pärsia (Farsi)](../fa/README.md) | [Poola](../pl/README.md) | [Portugali (Brasiilia)](../br/README.md) | [Portugali (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumeenia](../ro/README.md) | [Vene](../ru/README.md) | [Serbia (kirillitsa)](../sr/README.md) | [Slovaki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Hispaania](../es/README.md) | [Suahiili](../sw/README.md) | [Rootsi](../sv/README.md) | [Tagalogi (Filipino)](../tl/README.md) | [Tamili](../ta/README.md) | [Tai](../th/README.md) | [Türgi](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnami](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-## Kursuse struktuur ja õpiteekond
+## Kursuse struktuur ja õpitee
 
-### **1. peatükk: Generatiivse AI tutvustus**
-- **Põhimõisted**: Suurte keelemudelite, tokenite, sisendite ja AI võimekuste mõistmine
+### **1. peatükk: Sissejuhatus generatiivsesse tehisintellekti**
+- **Põhimõisted**: Suurte keelemudelite, tokenite, embeddingute ja AI võimekuste mõistmine
 - **Java AI ökosüsteem**: Ülevaade Spring AI ja OpenAI SDK-dest
 - **Model Context Protocol**: MCP tutvustus ja selle roll AI agentide suhtluses
-- **Praktilised rakendused**: Reaalsed näited, sealhulgas vestlusrobotid ja sisuloome
+- **Praktilised rakendused**: Päriselu näited, sealhulgas vestlusrobotid ja sisuloome
 - **[→ Alusta 1. peatükki](./01-IntroToGenAI/README.md)**
 
 ### **2. peatükk: Arenduskeskkonna seadistamine**
 - **Mitme pakkuja konfiguratsioon**: GitHubi mudelite, Azure OpenAI ja OpenAI Java SDK integreerimine
 - **Spring Boot + Spring AI**: Parimad tavad ettevõtte AI rakenduste arendamiseks
-- **GitHubi mudelid**: Tasuta AI mudelite kasutamine prototüüpimiseks ja õppimiseks (krediitkaarti pole vaja)
+- **GitHubi mudelid**: Tasuta AI mudelite juurdepääs prototüüpimiseks ja õppimiseks (krediitkaarti pole vaja)
 - **Arendustööriistad**: Docker konteinerid, VS Code ja GitHub Codespaces konfiguratsioon
 - **[→ Alusta 2. peatükki](./02-SetupDevEnvironment/README.md)**
 
-### **3. peatükk: Generatiivse AI põhitehnikad**
+### **3. peatükk: Generatiivse tehisintellekti põhitehnikad**
 - **Prompt Engineering**: Tehnikad AI mudelite optimaalseks vastuseks
-- **Sisendid ja vektoroperatsioonid**: Semantilise otsingu ja sarnasuse rakendamine
+- **Embeddingud ja vektorioperatsioonid**: Semantilise otsingu ja sarnasuse sobitamise rakendamine
 - **Retrieval-Augmented Generation (RAG)**: AI kombineerimine oma andmeallikatega
-- **Funktsioonide kutsumine**: AI võimekuste laiendamine kohandatud tööriistade ja pluginatega
+- **Funktsioonide kutsumine**: AI võimekuse laiendamine kohandatud tööriistade ja pluginatega
 - **[→ Alusta 3. peatükki](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **4. peatükk: Praktilised rakendused ja projektid**
-- **Lemmikloolugude generaator** (`petstory/`): Loov sisuloome GitHubi mudelitega
+- **Loomaloo generaator** (`petstory/`): Loov sisuloome GitHubi mudelitega
 - **Foundry kohalik demo** (`foundrylocal/`): Kohaliku AI mudeli integreerimine OpenAI Java SDK-ga
-- **MCP kalkulaatoriteenus** (`calculator/`): Põhiline Model Context Protocol rakendus Spring AI-ga
+- **MCP kalkulaatoriteenus** (`calculator/`): Põhiline Model Context Protocoli rakendus Spring AI-ga
 - **[→ Alusta 4. peatükki](./04-PracticalSamples/README.md)**
 
 ### **5. peatükk: Vastutustundlik AI arendus**
 - **GitHubi mudelite turvalisus**: Sisseehitatud sisufiltri ja turvamehhanismide testimine (kõvad blokeeringud ja pehmed keeldumised)
 - **Vastutustundliku AI demo**: Praktiline näide, kuidas kaasaegsed AI turvasüsteemid töötavad
-- **Parimad tavad**: Olulised juhised eetiliseks AI arenduseks ja kasutuselevõtuks
+- **Parimad tavad**: Olulised juhised eetiliseks AI arenduseks ja juurutamiseks
 - **[→ Alusta 5. peatükki](./05-ResponsibleGenAI/README.md)**
 
-## Lisamaterjalid
+## Täiendavad ressursid
 
-- [Edge AI algajatele](https://github.com/microsoft/edgeai-for-beginners)
-- [MCP algajatele](https://github.com/microsoft/mcp-for-beginners)
-- [AI agendid algajatele](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generatiivne AI algajatele .NET-i kasutades](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generatiivne AI algajatele JavaScripti kasutades](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generatiivne AI algajatele](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML algajatele](https://aka.ms/ml-beginners)
-- [Andmeteadus algajatele](https://aka.ms/datascience-beginners)
-- [AI algajatele](https://aka.ms/ai-beginners)
-- [Küberjulgeolek algajatele](https://github.com/microsoft/Security-101)
-- [Veebiarendus algajatele](https://aka.ms/webdev-beginners)
-- [IoT algajatele](https://aka.ms/iot-beginners)
-- [XR arendus algajatele](https://github.com/microsoft/xr-development-for-beginners)
-- [GitHub Copiloti meistriklass AI paarisprogrammeerimiseks](https://aka.ms/GitHubCopilotAI)
-- [GitHub Copiloti meistriklass C#/.NET arendajatele](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Vali oma Copiloti seiklus](https://github.com/microsoft/CopilotAdventures)
-- [RAG vestlusrakendus Azure AI teenustega](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
+### Azure / Edge / MCP / Agendid
+[![AZD algajatele](https://img.shields.io/badge/AZD%20algajatele-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge AI algajatele](https://img.shields.io/badge/Edge%20AI%20algajatele-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![MCP algajatele](https://img.shields.io/badge/MCP%20algajatele-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI agendid algajatele](https://img.shields.io/badge/AI%20agendid%20algajatele-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+
+---
+
+### Generatiivse AI sari
+[![Generatiivne AI algajatele](https://img.shields.io/badge/Generatiivne%20AI%20algajatele-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Generatiivne AI (.NET)](https://img.shields.io/badge/Generatiivne%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![Generatiivne AI (Java)](https://img.shields.io/badge/Generatiivne%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generatiivne AI (JavaScript)](https://img.shields.io/badge/Generatiivne%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+
+---
+
+### Põhiõpe
+[![ML algajatele](https://img.shields.io/badge/ML%20algajatele-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![Andmeteadus algajatele](https://img.shields.io/badge/Andmeteadus%20algajatele-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI algajatele](https://img.shields.io/badge/AI%20algajatele-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Küberturvalisus algajatele](https://img.shields.io/badge/Küberturvalisus%20algajatele-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Veebiarendus algajatele](https://img.shields.io/badge/Veebiarendus%20algajatele-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT algajatele](https://img.shields.io/badge/IoT%20algajatele-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR arendus algajatele](https://img.shields.io/badge/XR%20arendus%20algajatele-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+
+---
+
+### Copilot sari
+[![Copilot AI paarisprogrammeerimiseks](https://img.shields.io/badge/Copilot%20AI%20paarisprogrammeerimiseks-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Abi saamine
 
@@ -92,11 +108,11 @@ Kui jääd hätta või sul on küsimusi AI rakenduste loomise kohta, liitu:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Kui sul on tootetagasisidet või vigu arendamisel, külasta:
+Kui sul on tagasisidet toodete kohta või esineb vigu arendamisel, külasta:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 **Lahtiütlus**:  
-See dokument on tõlgitud, kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi püüame tagada täpsust, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algkeeles tuleks lugeda autoriteetseks allikaks. Olulise teabe puhul on soovitatav kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valede tõlgenduste eest.
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.

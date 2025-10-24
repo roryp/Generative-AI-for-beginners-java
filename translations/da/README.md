@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "00950ee1a40a84676b50da356c3a964a",
-  "translation_date": "2025-10-11T10:28:21+00:00",
+  "original_hash": "d83a4cd2f465a83b72b5a5284d3a72fd",
+  "translation_date": "2025-10-24T09:07:28+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -12,15 +12,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativ AI for Begyndere - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.da.png)
 
-**Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Opsætning af miljøet tager 2 minutter, og udforskning af eksemplerne kræver 1-3 timer afhængigt af, hvor dybt du går.
+**Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Opsætning af miljøet tager 2 minutter, og udforskning af eksemplerne kræver 1-3 timer afhængigt af dybden af udforskningen.
 
 > **Hurtig Start**
 
-1. Fork dette repository til din GitHub-konto
+1. Fork denne repository til din GitHub-konto
 2. Klik på **Code** → **Codespaces** fanen → **...** → **New with options...**
-3. Brug standardindstillingerne – dette vælger udviklingscontaineren, der er oprettet til dette kursus
+3. Brug standardindstillingerne – dette vil vælge udviklingscontaineren, der er oprettet til dette kursus
 4. Klik på **Create codespace**
-5. Vent ~2 minutter, indtil miljøet er klar
+5. Vent ~2 minutter på, at miljøet er klar
 6. Gå direkte til [Det første eksempel](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Understøttelse af flere sprog
@@ -42,7 +42,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Kapitel 2: Opsætning af Udviklingsmiljø**
 - **Multi-Provider Konfiguration**: Opsætning af GitHub Models, Azure OpenAI og OpenAI Java SDK integrationer
-- **Spring Boot + Spring AI**: Best practices for udvikling af AI-applikationer til virksomheder
+- **Spring Boot + Spring AI**: Bedste praksis for udvikling af AI-applikationer til virksomheder
 - **GitHub Models**: Gratis adgang til AI-modeller til prototyper og læring (ingen kreditkort påkrævet)
 - **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces konfiguration
 - **[→ Start Kapitel 2](./02-SetupDevEnvironment/README.md)**
@@ -63,40 +63,56 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapitel 5: Ansvarlig AI Udvikling**
 - **GitHub Models Sikkerhed**: Test indbyggede indholdsfiltrerings- og sikkerhedsmekanismer (hårde blokeringer og bløde afvisninger)
 - **Ansvarlig AI Demo**: Praktisk eksempel, der viser, hvordan moderne AI-sikkerhedssystemer fungerer i praksis
-- **Best Practices**: Vigtige retningslinjer for etisk AI-udvikling og implementering
+- **Bedste Praksis**: Vigtige retningslinjer for etisk AI-udvikling og implementering
 - **[→ Start Kapitel 5](./05-ResponsibleGenAI/README.md)**
 
 ## Yderligere Ressourcer
 
-- [Edge AI for Begyndere](https://github.com/microsoft/edgeai-for-beginners)
-- [MCP For Begyndere](https://github.com/microsoft/mcp-for-beginners)
-- [AI Agents For Begyndere](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generativ AI for Begyndere med .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generativ AI for Begyndere med JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generativ AI for Begyndere](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML for Begyndere](https://aka.ms/ml-beginners)
-- [Data Science for Begyndere](https://aka.ms/datascience-beginners)
-- [AI for Begyndere](https://aka.ms/ai-beginners)
-- [Cybersecurity for Begyndere](https://github.com/microsoft/Security-101)
-- [Webudvikling for Begyndere](https://aka.ms/webdev-beginners)
-- [IoT for Begyndere](https://aka.ms/iot-beginners)
-- [XR Udvikling for Begyndere](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App med Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
+### Azure / Edge / MCP / Agenter
+[![AZD for Begyndere](https://img.shields.io/badge/AZD%20for%20Begyndere-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge AI for Begyndere](https://img.shields.io/badge/Edge%20AI%20for%20Begyndere-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![MCP for Begyndere](https://img.shields.io/badge/MCP%20for%20Begyndere-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI Agenter for Begyndere](https://img.shields.io/badge/AI%20Agenter%20for%20Begyndere-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
-## Få Hjælp
+---
 
-Hvis du sidder fast eller har spørgsmål om opbygning af AI-apps, så deltag i:
+### Generativ AI Serie
+[![Generativ AI for Begyndere](https://img.shields.io/badge/Generativ%20AI%20for%20Begyndere-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Generativ AI (.NET)](https://img.shields.io/badge/Generativ%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![Generativ AI (Java)](https://img.shields.io/badge/Generativ%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generativ AI (JavaScript)](https://img.shields.io/badge/Generativ%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+
+---
+
+### Kerne Læring
+[![ML for Begyndere](https://img.shields.io/badge/ML%20for%20Begyndere-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science for Begyndere](https://img.shields.io/badge/Data%20Science%20for%20Begyndere-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI for Begyndere](https://img.shields.io/badge/AI%20for%20Begyndere-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Cybersikkerhed for Begyndere](https://img.shields.io/badge/Cybersikkerhed%20for%20Begyndere-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Webudvikling for Begyndere](https://img.shields.io/badge/Webudvikling%20for%20Begyndere-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Begyndere](https://img.shields.io/badge/IoT%20for%20Begyndere-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Udvikling for Begyndere](https://img.shields.io/badge/XR%20Udvikling%20for%20Begyndere-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+
+---
+
+### Copilot Serie
+[![Copilot for AI Parprogrammering](https://img.shields.io/badge/Copilot%20for%20AI%20Parprogrammering-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
+
+## Få hjælp
+
+Hvis du sidder fast eller har spørgsmål om at bygge AI-apps, kan du deltage i:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Hvis du har produktfeedback eller oplever fejl under opbygning, besøg:
+Hvis du har produktfeedback eller oplever fejl under udviklingen, besøg:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
