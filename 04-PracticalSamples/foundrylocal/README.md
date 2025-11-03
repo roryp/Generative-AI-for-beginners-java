@@ -51,13 +51,13 @@ This project consists of four main components:
 **File:** `src/main/resources/application.properties`
 
 ```properties
-foundry.local.base-url=http://localhost:5273
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu
+foundry.local.base-url=http://localhost:5273/v1
+foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
 **What this does:**
-- **base-url**: Specifies where Foundry Local is running. **Note**: Foundry Local dynamically assigns a port, so check your actual port using `foundry service status`
-- **model**: Names the AI model to use for text generation
+- **base-url**: Specifies where Foundry Local is running, including the `/v1` path for OpenAI API compatibility. **Note**: Foundry Local dynamically assigns a port, so check your actual port using `foundry service status`
+- **model**: Names the AI model to use for text generation, including the version number (e.g., `:1`). Use `foundry model list` to see available models with their exact IDs
 
 **Key concept:** Spring Boot automatically loads these properties and makes them available to your application using the `@Value` annotation.
 
@@ -112,10 +112,10 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 @Service
 public class FoundryLocalService {
     
-    @Value("${foundry.local.base-url:http://localhost:5273}")
+    @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu}")
+    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
     private String model;
 ```
 
@@ -129,8 +129,8 @@ public class FoundryLocalService {
 @PostConstruct
 public void init() {
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl + "/v1")        // Foundry Local uses OpenAI-compatible API
-            .apiKey("unused")                 // Local server doesn't need real API key
+            .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
+            .apiKey("not-needed")            // Local server doesn't need real API key
             .build();
 }
 ```
@@ -138,8 +138,8 @@ public void init() {
 **What this does:**
 - `@PostConstruct` runs this method after Spring creates the service
 - Creates an OpenAI client that points to your local Foundry Local instance
-- The `/v1` path is required for OpenAI API compatibility
-- API key is "unused" because local development doesn't require authentication
+- The base URL from `application.properties` already includes `/v1` for OpenAI API compatibility
+- API key is set to "not-needed" because local development doesn't require authentication
 
 #### Chat Method:
 ```java
@@ -148,7 +148,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxCompletionTokens(150)        // Limit response length
+                .maxTokens(150)                  // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -168,9 +168,9 @@ public String chat(String message) {
 
 **What this does:**
 - **ChatCompletionCreateParams**: Configures the AI request
-  - `model`: Specifies which AI model to use
+  - `model`: Specifies which AI model to use (must match the exact ID from `foundry model list`)
   - `addUserMessage`: Adds your message to the conversation
-  - `maxCompletionTokens`: Limits how long the response can be (saves resources)
+  - `maxTokens`: Limits how long the response can be (saves resources)
   - `temperature`: Controls randomness (0.0 = deterministic, 1.0 = creative)
 - **API Call**: Sends the request to Foundry Local
 - **Response Handling**: Extracts the AI's text response safely
@@ -242,7 +242,15 @@ To set up Foundry Local, follow these steps:
    foundry model run phi-3.5-mini
    ```
 
-4. **Configure the application.properties** file to match your Foundry Local settings, especially updating the base-url with the correct port from step 2.
+4. **Configure the application.properties** file to match your Foundry Local settings:
+   - Update the port in `base-url` (from step 2), ensuring it includes `/v1` at the end
+   - Update the model name to include the version number (check with `foundry model list`)
+   
+   Example:
+   ```properties
+   foundry.local.base-url=http://localhost:5273/v1
+   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   ```
 
 ## Running the Application
 
@@ -283,14 +291,20 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 **"Connection refused" or "Service unavailable"**
 - Make sure Foundry Local is running: `foundry model list`
 - Check the actual port Foundry Local is using: `foundry service status`
-- Update your `application.properties` with the correct port from the status command
+- Update your `application.properties` with the correct port, ensuring the URL ends with `/v1`
 - Alternatively, set a specific port if desired: `foundry service set --port 5273`
 - Try restarting Foundry Local: `foundry model run phi-3.5-mini`
 
-**"Model not found" errors**
-- Check available models: `foundry model list`
-- Update the model name in `application.properties` to match exactly
+**"Model not found" or "404 Not Found" errors**
+- Check available models with their exact IDs: `foundry model list`
+- Update the model name in `application.properties` to match exactly, including the version number (e.g., `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- Ensure the `base-url` includes `/v1` at the end: `http://localhost:5273/v1`
 - Download the model if needed: `foundry model run phi-3.5-mini`
+
+**"400 Bad Request" errors**
+- Verify the base URL includes `/v1`: `http://localhost:5273/v1`
+- Check that the model ID matches exactly what's shown in `foundry model list`
+- Ensure you're using `maxTokens()` instead of `maxCompletionTokens()` in your code
 
 **Maven compilation errors**
 - Ensure Java 21 or higher: `java -version`
