@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:01:12+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:41:15+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "ko"
 }
@@ -47,9 +47,9 @@ foundry model run phi-3.5-mini
 
 이 프로젝트는 네 가지 주요 구성 요소로 이루어져 있습니다:
 
-1. **Application.java** - 메인 Spring Boot 애플리케이션 진입점
+1. **Application.java** - Spring Boot 애플리케이션의 메인 진입점
 2. **FoundryLocalService.java** - AI 통신을 처리하는 서비스 계층
-3. **application.properties** - Foundry Local 연결을 위한 설정
+3. **application.properties** - Foundry Local 연결을 위한 설정 파일
 4. **pom.xml** - Maven 종속성과 프로젝트 설정
 
 ## 코드 이해하기
@@ -67,7 +67,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 - **base-url**: Foundry Local이 실행 중인 위치를 지정하며, OpenAI API 호환성을 위해 `/v1` 경로를 포함합니다. **참고**: Foundry Local은 동적으로 포트를 할당하므로 `foundry service status` 명령어를 사용하여 실제 포트를 확인하세요.
 - **model**: 텍스트 생성을 위한 AI 모델 이름과 버전 번호를 지정합니다 (예: `:1`). `foundry model list` 명령어를 사용하여 사용 가능한 모델과 정확한 ID를 확인하세요.
 
-**핵심 개념:** Spring Boot는 이 설정을 자동으로 로드하고 `@Value` 애노테이션을 사용하여 애플리케이션에서 사용할 수 있도록 합니다.
+**핵심 개념:** Spring Boot는 이 설정을 자동으로 로드하며, `@Value` 애노테이션을 사용하여 애플리케이션에서 사용할 수 있도록 합니다.
 
 ### 2. 메인 애플리케이션 클래스 (Application.java)
 
@@ -84,8 +84,8 @@ public class Application {
 ```
 
 **이 클래스의 역할:**
-- `@SpringBootApplication`은 Spring Boot 자동 설정을 활성화합니다.
-- `WebApplicationType.NONE`은 Spring이 이 애플리케이션을 웹 서버가 아닌 커맨드라인 앱으로 인식하도록 합니다.
+- `@SpringBootApplication`은 Spring Boot의 자동 설정을 활성화합니다.
+- `WebApplicationType.NONE`은 이 애플리케이션이 웹 서버가 아닌 커맨드라인 애플리케이션임을 나타냅니다.
 - 메인 메서드는 Spring 애플리케이션을 시작합니다.
 
 **데모 실행기:**
@@ -128,7 +128,7 @@ public class FoundryLocalService {
 ```
 
 **이 코드의 역할:**
-- `@Service`는 Spring에게 이 클래스가 비즈니스 로직을 제공한다고 알립니다.
+- `@Service`는 이 클래스가 비즈니스 로직을 제공한다고 Spring에 알립니다.
 - `@Value`는 application.properties에서 설정 값을 주입합니다.
 - `:default-value` 구문은 설정 값이 없을 경우 기본값을 제공합니다.
 
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -178,11 +178,11 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: AI 요청을 구성합니다.
   - `model`: 사용할 AI 모델을 지정합니다 (정확한 ID는 `foundry model list`에서 확인해야 함).
   - `addUserMessage`: 대화에 메시지를 추가합니다.
-  - `maxTokens`: 응답 길이를 제한하여 리소스를 절약합니다.
+  - `maxCompletionTokens`: 응답 길이를 제한하여 리소스를 절약합니다.
   - `temperature`: 랜덤성을 제어합니다 (0.0 = 결정적, 1.0 = 창의적).
 - **API 호출**: 요청을 Foundry Local에 보냅니다.
 - **응답 처리**: AI의 텍스트 응답을 안전하게 추출합니다.
-- **오류 처리**: 유용한 오류 메시지로 예외를 감싸줍니다.
+- **오류 처리**: 유용한 오류 메시지로 예외를 감쌉니다.
 
 ### 4. 프로젝트 종속성 (pom.xml)
 
@@ -213,7 +213,7 @@ public String chat(String message) {
 
 **이 종속성의 역할:**
 - **spring-boot-starter**: 핵심 Spring Boot 기능을 제공합니다.
-- **openai-java**: OpenAI Java SDK로 API 통신을 처리합니다.
+- **openai-java**: OpenAI Java SDK를 사용하여 API 통신을 처리합니다.
 - **jackson-databind**: API 호출을 위한 JSON 직렬화/역직렬화를 처리합니다.
 
 ## 전체 작동 방식
@@ -222,12 +222,12 @@ public String chat(String message) {
 
 1. **시작**: Spring Boot가 시작되고 `application.properties`를 읽습니다.
 2. **서비스 생성**: Spring이 `FoundryLocalService`를 생성하고 설정 값을 주입합니다.
-3. **클라이언트 설정**: `@PostConstruct`가 OpenAI 클라이언트를 초기화합니다.
+3. **클라이언트 설정**: `@PostConstruct`가 OpenAI 클라이언트를 초기화하여 Foundry Local에 연결합니다.
 4. **데모 실행**: `CommandLineRunner`가 시작 후 실행됩니다.
 5. **AI 호출**: 데모가 테스트 메시지로 `foundryLocalService.chat()`을 호출합니다.
 6. **API 요청**: 서비스가 OpenAI 호환 요청을 Foundry Local에 보냅니다.
 7. **응답 처리**: 서비스가 응답을 추출하고 반환합니다.
-8. **표시**: 애플리케이션이 응답을 출력하고 종료합니다.
+8. **출력**: 애플리케이션이 응답을 출력하고 종료합니다.
 
 ## Foundry Local 설정하기
 
@@ -235,7 +235,7 @@ Foundry Local을 설정하려면 다음 단계를 따르세요:
 
 1. **Foundry Local 설치**: [사전 준비](../../../../04-PracticalSamples/foundrylocal) 섹션의 지침을 따르세요.
 
-2. **동적으로 할당된 포트 확인**: Foundry Local은 시작 시 자동으로 포트를 할당합니다. 포트를 확인하려면:
+2. **동적으로 할당된 포트 확인**: Foundry Local은 시작 시 자동으로 포트를 할당합니다. 포트를 확인하려면 다음 명령어를 사용하세요:
    ```bash
    foundry service status
    ```
@@ -245,7 +245,7 @@ Foundry Local을 설정하려면 다음 단계를 따르세요:
    foundry service set --port 5273
    ```
 
-3. **사용할 AI 모델 다운로드**: 예를 들어 `phi-3.5-mini`를 다운로드하려면 다음 명령어를 실행하세요:
+3. **사용할 AI 모델 다운로드**: 예를 들어 `phi-3.5-mini` 모델을 다운로드하려면 다음 명령어를 사용하세요:
    ```bash
    foundry model run phi-3.5-mini
    ```
@@ -253,7 +253,7 @@ Foundry Local을 설정하려면 다음 단계를 따르세요:
 4. **application.properties 파일 구성**: Foundry Local 설정에 맞게 파일을 업데이트하세요:
    - `base-url`의 포트를 업데이트하세요 (2단계에서 확인한 포트 사용). 끝에 `/v1`을 포함해야 합니다.
    - 모델 이름을 버전 번호와 함께 업데이트하세요 (`foundry model list`로 확인).
-   
+
    예시:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
@@ -301,18 +301,18 @@ Is there something specific you'd like help with today?
 - Foundry Local이 사용하는 실제 포트를 확인하세요: `foundry service status`
 - `application.properties`를 올바른 포트로 업데이트하세요. URL 끝에 `/v1`이 포함되어야 합니다.
 - 원하는 경우 특정 포트를 설정하세요: `foundry service set --port 5273`
-- Foundry Local을 다시 시작해보세요: `foundry model run phi-3.5-mini`
+- Foundry Local을 다시 시작해 보세요: `foundry model run phi-3.5-mini`
 
 **"Model not found" 또는 "404 Not Found" 오류**
 - 사용 가능한 모델과 정확한 ID를 확인하세요: `foundry model list`
-- `application.properties`에서 모델 이름을 정확히 업데이트하세요 (버전 번호 포함, 예: `Phi-3.5-mini-instruct-cuda-gpu:1`).
-- `base-url`이 `/v1`을 포함하는지 확인하세요: `http://localhost:5273/v1`
+- `application.properties`에서 모델 이름을 정확히 업데이트하세요. 버전 번호를 포함해야 합니다 (예: `Phi-3.5-mini-instruct-cuda-gpu:1`).
+- `base-url` 끝에 `/v1`이 포함되어 있는지 확인하세요: `http://localhost:5273/v1`
 - 필요한 경우 모델을 다운로드하세요: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" 오류**
-- base URL이 `/v1`을 포함하는지 확인하세요: `http://localhost:5273/v1`
+- base URL에 `/v1`이 포함되어 있는지 확인하세요: `http://localhost:5273/v1`
 - 모델 ID가 `foundry model list`에 표시된 것과 정확히 일치하는지 확인하세요.
-- 코드에서 `maxTokens()`를 사용하고 `maxCompletionTokens()`를 사용하지 않았는지 확인하세요.
+- 코드에서 `maxCompletionTokens()`를 사용하고 있는지 확인하세요 (더 이상 사용되지 않는 `maxTokens()`를 사용하지 마세요).
 
 **Maven 컴파일 오류**
 - Java 21 이상인지 확인하세요: `java -version`
@@ -320,11 +320,11 @@ Is there something specific you'd like help with today?
 - 종속성 다운로드를 위한 인터넷 연결을 확인하세요.
 
 **애플리케이션이 시작되었지만 출력이 없음**
-- Foundry Local이 응답하는지 확인하세요: 브라우저에서 `http://localhost:5273` 열기
+- Foundry Local이 응답하는지 확인하세요: 브라우저에서 `http://localhost:5273`를 열어보세요.
 - 애플리케이션 로그에서 특정 오류 메시지를 확인하세요.
 - 모델이 완전히 로드되고 준비되었는지 확인하세요.
 
 ---
 
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어 버전을 권위 있는 출처로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어를 권위 있는 출처로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임지지 않습니다.

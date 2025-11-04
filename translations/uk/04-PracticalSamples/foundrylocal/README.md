@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:18:26+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:59:31+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "uk"
 }
 -->
-# Локальний підручник Foundry Spring Boot
+# Локальний підручник Spring Boot для Foundry
 
 ## Зміст
 
@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Запуск додатку](../../../../04-PracticalSamples/foundrylocal)
 - [Очікуваний результат](../../../../04-PracticalSamples/foundrylocal)
 - [Наступні кроки](../../../../04-PracticalSamples/foundrylocal)
-- [Усунення несправностей](../../../../04-PracticalSamples/foundrylocal)
+- [Вирішення проблем](../../../../04-PracticalSamples/foundrylocal)
 
 ## Попередні вимоги
 
@@ -43,11 +43,12 @@ winget install Microsoft.FoundryLocal
 foundry model run phi-3.5-mini
 ```
 
+
 ## Огляд проєкту
 
 Цей проєкт складається з чотирьох основних компонентів:
 
-1. **Application.java** - головна точка входу Spring Boot додатку
+1. **Application.java** - головна точка входу в додаток Spring Boot
 2. **FoundryLocalService.java** - сервісний шар, який обробляє комунікацію з AI
 3. **application.properties** - конфігурація для підключення до Foundry Local
 4. **pom.xml** - залежності Maven і конфігурація проєкту
@@ -64,10 +65,10 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
 **Що це робить:**
-- **base-url**: Вказує, де запущений Foundry Local, включаючи шлях `/v1` для сумісності з OpenAI API. **Примітка**: Foundry Local динамічно призначає порт, тому перевірте фактичний порт за допомогою `foundry service status`
-- **model**: Назва AI моделі для генерації тексту, включаючи номер версії (наприклад, `:1`). Використовуйте `foundry model list`, щоб побачити доступні моделі з їх точними ID
+- **base-url**: Вказує, де запущений Foundry Local, включаючи шлях `/v1` для сумісності з API OpenAI. **Примітка**: Foundry Local динамічно призначає порт, тому перевірте фактичний порт за допомогою `foundry service status`
+- **model**: Назва моделі AI для генерації тексту, включаючи номер версії (наприклад, `:1`). Використовуйте `foundry model list`, щоб побачити доступні моделі з їх точними ID
 
-**Основна концепція:** Spring Boot автоматично завантажує ці властивості та робить їх доступними для вашого додатку за допомогою анотації `@Value`.
+**Ключова концепція:** Spring Boot автоматично завантажує ці властивості та робить їх доступними для вашого додатку за допомогою анотації `@Value`.
 
 ### 2. Головний клас додатку (Application.java)
 
@@ -85,8 +86,8 @@ public class Application {
 
 **Що це робить:**
 - `@SpringBootApplication` активує автоматичну конфігурацію Spring Boot
-- `WebApplicationType.NONE` вказує Spring, що це консольний додаток, а не вебсервер
-- Головний метод запускає Spring додаток
+- `WebApplicationType.NONE` вказує Spring, що це консольний додаток, а не веб-сервер
+- Головний метод запускає додаток Spring
 
 **Демонстраційний запуск:**
 ```java
@@ -108,14 +109,14 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 **Що це робить:**
 - `@Bean` створює компонент, який управляється Spring
 - `CommandLineRunner` виконує код після запуску Spring Boot
-- `foundryLocalService` автоматично впроваджується Spring (ін'єкція залежностей)
-- Надсилає тестове повідомлення до AI і відображає відповідь
+- `foundryLocalService` автоматично впроваджується Spring (впровадження залежностей)
+- Надсилає тестове повідомлення AI і відображає відповідь
 
 ### 3. Сервісний шар AI (FoundryLocalService.java)
 
 **Файл:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### Ін'єкція конфігурації:
+#### Впровадження конфігурації:
 ```java
 @Service
 public class FoundryLocalService {
@@ -146,8 +147,8 @@ public void init() {
 **Що це робить:**
 - `@PostConstruct` запускає цей метод після створення сервісу Spring
 - Створює клієнт OpenAI, який підключається до вашого локального Foundry Local
-- Базовий URL з `application.properties` вже включає `/v1` для сумісності з OpenAI API
-- API ключ встановлюється як "not-needed", оскільки локальна розробка не потребує автентифікації
+- Базовий URL з `application.properties` вже включає `/v1` для сумісності з API OpenAI
+- API-ключ встановлюється як "not-needed", оскільки локальна розробка не потребує автентифікації
 
 #### Метод чату:
 ```java
@@ -156,7 +157,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -176,11 +177,11 @@ public String chat(String message) {
 
 **Що це робить:**
 - **ChatCompletionCreateParams**: Налаштовує запит до AI
-  - `model`: Вказує, яку AI модель використовувати (має точно відповідати ID з `foundry model list`)
+  - `model`: Вказує, яку модель AI використовувати (має точно відповідати ID з `foundry model list`)
   - `addUserMessage`: Додає ваше повідомлення до розмови
-  - `maxTokens`: Обмежує довжину відповіді (економить ресурси)
+  - `maxCompletionTokens`: Обмежує довжину відповіді (економить ресурси)
   - `temperature`: Контролює випадковість (0.0 = детермінованість, 1.0 = креативність)
-- **API виклик**: Надсилає запит до Foundry Local
+- **API-запит**: Надсилає запит до Foundry Local
 - **Обробка відповіді**: Безпечно витягує текстову відповідь AI
 - **Обробка помилок**: Обгортає винятки з корисними повідомленнями про помилки
 
@@ -213,8 +214,8 @@ public String chat(String message) {
 
 **Що вони роблять:**
 - **spring-boot-starter**: Забезпечує основну функціональність Spring Boot
-- **openai-java**: Офіційний Java SDK OpenAI для API комунікації
-- **jackson-databind**: Обробляє JSON серіалізацію/десеріалізацію для API викликів
+- **openai-java**: Офіційний Java SDK OpenAI для комунікації з API
+- **jackson-databind**: Обробляє JSON-серіалізацію/десеріалізацію для API-запитів
 
 ## Як усе працює разом
 
@@ -223,9 +224,9 @@ public String chat(String message) {
 1. **Запуск**: Spring Boot запускається і читає `application.properties`
 2. **Створення сервісу**: Spring створює `FoundryLocalService` і впроваджує значення конфігурації
 3. **Налаштування клієнта**: `@PostConstruct` ініціалізує клієнт OpenAI для підключення до Foundry Local
-4. **Виконання демо**: `CommandLineRunner` виконується після запуску
-5. **Виклик AI**: Демо викликає `foundryLocalService.chat()` з тестовим повідомленням
-6. **Запит API**: Сервіс створює і надсилає запит, сумісний з OpenAI, до Foundry Local
+4. **Виконання демонстрації**: `CommandLineRunner` виконується після запуску
+5. **Виклик AI**: Демонстрація викликає `foundryLocalService.chat()` з тестовим повідомленням
+6. **API-запит**: Сервіс створює і надсилає запит, сумісний з OpenAI, до Foundry Local
 7. **Обробка відповіді**: Сервіс витягує і повертає відповідь AI
 8. **Відображення**: Додаток друкує відповідь і завершує роботу
 
@@ -240,12 +241,12 @@ public String chat(String message) {
    foundry service status
    ```
    
-   **Опціонально**: Якщо ви бажаєте використовувати конкретний порт (наприклад, 5273), ви можете налаштувати його вручну:
+   **Опціонально**: Якщо ви віддаєте перевагу використовувати конкретний порт (наприклад, 5273), ви можете налаштувати його вручну:
    ```bash
    foundry service set --port 5273
    ```
 
-3. **Завантажте AI модель**, яку ви хочете використовувати, наприклад, `phi-3.5-mini`, за допомогою наступної команди:
+3. **Завантажте модель AI**, яку ви хочете використовувати, наприклад, `phi-3.5-mini`, за допомогою наступної команди:
    ```bash
    foundry model run phi-3.5-mini
    ```
@@ -260,6 +261,7 @@ public String chat(String message) {
    foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
    ```
 
+
 ## Запуск додатку
 
 ### Крок 1: Запустіть Foundry Local
@@ -272,6 +274,7 @@ foundry model run phi-3.5-mini
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
+
 
 ## Очікуваний результат
 
@@ -288,11 +291,12 @@ Is there something specific you'd like help with today?
 =========================
 ```
 
+
 ## Наступні кроки
 
 Для отримання додаткових прикладів дивіться [Розділ 04: Практичні приклади](../README.md)
 
-## Усунення несправностей
+## Вирішення проблем
 
 ### Поширені проблеми
 
@@ -303,16 +307,16 @@ Is there something specific you'd like help with today?
 - Альтернативно, встановіть конкретний порт, якщо це необхідно: `foundry service set --port 5273`
 - Спробуйте перезапустити Foundry Local: `foundry model run phi-3.5-mini`
 
-**"Model not found" або "404 Not Found" помилки**
+**"Model not found" або "404 Not Found"**
 - Перевірте доступні моделі з їх точними ID: `foundry model list`
 - Оновіть назву моделі в `application.properties`, щоб вона точно відповідала, включаючи номер версії (наприклад, `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Переконайтеся, що `base-url` включає `/v1` в кінці: `http://localhost:5273/v1`
 - Завантажте модель, якщо це необхідно: `foundry model run phi-3.5-mini`
 
-**"400 Bad Request" помилки**
+**"400 Bad Request"**
 - Переконайтеся, що базовий URL включає `/v1`: `http://localhost:5273/v1`
 - Перевірте, що ID моделі точно відповідає тому, що показано в `foundry model list`
-- Переконайтеся, що ви використовуєте `maxTokens()` замість `maxCompletionTokens()` у вашому коді
+- Переконайтеся, що ви використовуєте `maxCompletionTokens()` у вашому коді (а не застарілий `maxTokens()`)
 
 **Помилки компіляції Maven**
 - Переконайтеся, що використовується Java 21 або новіша версія: `java -version`
@@ -321,7 +325,7 @@ Is there something specific you'd like help with today?
 
 **Додаток запускається, але немає результату**
 - Переконайтеся, що Foundry Local відповідає: Відкрийте браузер на `http://localhost:5273`
-- Перевірте журнали додатку на наявність конкретних повідомлень про помилки
+- Перевірте журнали додатку на конкретні повідомлення про помилки
 - Переконайтеся, що модель повністю завантажена і готова
 
 ---

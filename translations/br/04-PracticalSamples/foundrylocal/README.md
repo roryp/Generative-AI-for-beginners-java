@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:05:50+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:46:16+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "br"
 }
@@ -43,7 +43,6 @@ winget install Microsoft.FoundryLocal
 foundry model run phi-3.5-mini
 ```
 
-
 ## Visão Geral do Projeto
 
 Este projeto consiste em quatro componentes principais:
@@ -64,10 +63,9 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
-
 **O que isso faz:**
-- **base-url**: Especifica onde o Foundry Local está em execução, incluindo o caminho `/v1` para compatibilidade com a API OpenAI. **Nota**: O Foundry Local atribui dinamicamente uma porta, então verifique sua porta real usando `foundry service status`.
-- **model**: Nomeia o modelo de IA a ser usado para geração de texto, incluindo o número da versão (ex.: `:1`). Use `foundry model list` para ver os modelos disponíveis com seus IDs exatos.
+- **base-url**: Especifica onde o Foundry Local está em execução, incluindo o caminho `/v1` para compatibilidade com a API OpenAI. **Nota**: O Foundry Local atribui dinamicamente uma porta, então verifique sua porta real usando `foundry service status`
+- **model**: Nomeia o modelo de IA a ser usado para geração de texto, incluindo o número da versão (ex.: `:1`). Use `foundry model list` para ver os modelos disponíveis com seus IDs exatos
 
 **Conceito-chave:** O Spring Boot carrega automaticamente essas propriedades e as disponibiliza para sua aplicação usando a anotação `@Value`.
 
@@ -84,7 +82,6 @@ public class Application {
         app.run(args);
     }
 ```
-
 
 **O que isso faz:**
 - `@SpringBootApplication` habilita a configuração automática do Spring Boot
@@ -108,10 +105,9 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
-
 **O que isso faz:**
 - `@Bean` cria um componente gerenciado pelo Spring
-- `CommandLineRunner` executa o código após o Spring Boot iniciar
+- `CommandLineRunner` executa o código após o Spring Boot ser iniciado
 - `foundryLocalService` é automaticamente injetado pelo Spring (injeção de dependência)
 - Envia uma mensagem de teste para a IA e exibe a resposta
 
@@ -131,7 +127,6 @@ public class FoundryLocalService {
     private String model;
 ```
 
-
 **O que isso faz:**
 - `@Service` informa ao Spring que esta classe fornece lógica de negócios
 - `@Value` injeta valores de configuração do application.properties
@@ -148,7 +143,6 @@ public void init() {
 }
 ```
 
-
 **O que isso faz:**
 - `@PostConstruct` executa este método após o Spring criar o serviço
 - Cria um cliente OpenAI que aponta para sua instância local do Foundry Local
@@ -162,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -180,15 +174,14 @@ public String chat(String message) {
 }
 ```
 
-
 **O que isso faz:**
 - **ChatCompletionCreateParams**: Configura a solicitação de IA
-  - `model`: Especifica qual modelo de IA usar (deve corresponder exatamente ao ID do `foundry model list`)
+  - `model`: Especifica qual modelo de IA usar (deve corresponder ao ID exato do `foundry model list`)
   - `addUserMessage`: Adiciona sua mensagem à conversa
-  - `maxTokens`: Limita o tamanho da resposta (economiza recursos)
+  - `maxCompletionTokens`: Limita o tamanho da resposta (economiza recursos)
   - `temperature`: Controla a aleatoriedade (0.0 = determinístico, 1.0 = criativo)
 - **Chamada de API**: Envia a solicitação para o Foundry Local
-- **Processamento de Resposta**: Extrai a resposta de texto da IA de forma segura
+- **Tratamento de Resposta**: Extrai a resposta de texto da IA de forma segura
 - **Tratamento de Erros**: Envolve exceções com mensagens de erro úteis
 
 ### 4. Dependências do Projeto (pom.xml)
@@ -218,7 +211,6 @@ public String chat(String message) {
 </dependency>
 ```
 
-
 **O que elas fazem:**
 - **spring-boot-starter**: Fornece funcionalidades principais do Spring Boot
 - **openai-java**: SDK oficial do OpenAI para comunicação com a API
@@ -229,9 +221,9 @@ public String chat(String message) {
 Aqui está o fluxo completo quando você executa a aplicação:
 
 1. **Inicialização**: O Spring Boot inicia e lê o `application.properties`
-2. **Criação do Serviço**: O Spring cria o `FoundryLocalService` e injeta valores de configuração
+2. **Criação do Serviço**: O Spring cria o `FoundryLocalService` e injeta os valores de configuração
 3. **Configuração do Cliente**: `@PostConstruct` inicializa o cliente OpenAI para conectar ao Foundry Local
-4. **Execução da Demonstração**: `CommandLineRunner` executa após a inicialização
+4. **Execução da Demonstração**: `CommandLineRunner` é executado após a inicialização
 5. **Chamada de IA**: A demonstração chama `foundryLocalService.chat()` com uma mensagem de teste
 6. **Solicitação de API**: O serviço constrói e envia uma solicitação compatível com OpenAI para o Foundry Local
 7. **Processamento de Resposta**: O serviço extrai e retorna a resposta da IA
@@ -253,12 +245,10 @@ Para configurar o Foundry Local, siga estes passos:
    foundry service set --port 5273
    ```
 
-
 3. **Baixe o modelo de IA** que deseja usar, por exemplo, `phi-3.5-mini`, com o seguinte comando:
    ```bash
    foundry model run phi-3.5-mini
    ```
-
 
 4. **Configure o arquivo application.properties** para corresponder às configurações do Foundry Local:
    - Atualize a porta em `base-url` (do passo 2), garantindo que inclua `/v1` no final
@@ -270,7 +260,6 @@ Para configurar o Foundry Local, siga estes passos:
    foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
    ```
 
-
 ## Executando a Aplicação
 
 ### Passo 1: Inicie o Foundry Local
@@ -278,13 +267,11 @@ Para configurar o Foundry Local, siga estes passos:
 foundry model run phi-3.5-mini
 ```
 
-
 ### Passo 2: Construa e Execute a Aplicação
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
-
 
 ## Saída Esperada
 
@@ -300,7 +287,6 @@ questions, helping with analysis, creative writing, coding, and general conversa
 Is there something specific you'd like help with today?
 =========================
 ```
-
 
 ## Próximos Passos
 
@@ -326,10 +312,10 @@ Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
 **Erros "400 Bad Request"**
 - Verifique se a URL base inclui `/v1`: `http://localhost:5273/v1`
 - Confirme que o ID do modelo corresponde exatamente ao mostrado em `foundry model list`
-- Certifique-se de usar `maxTokens()` em vez de `maxCompletionTokens()` no seu código
+- Certifique-se de usar `maxCompletionTokens()` no seu código (não o obsoleto `maxTokens()`)
 
 **Erros de compilação do Maven**
-- Certifique-se de que está usando Java 21 ou superior: `java -version`
+- Certifique-se de ter Java 21 ou superior: `java -version`
 - Limpe e reconstrua: `mvn clean compile`
 - Verifique a conexão com a internet para baixar dependências
 
@@ -341,4 +327,4 @@ Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
 ---
 
 **Aviso Legal**:  
-Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

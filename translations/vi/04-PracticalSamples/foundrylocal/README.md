@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:11:27+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:52:11+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "vi"
 }
@@ -16,13 +16,13 @@ CO_OP_TRANSLATOR_METADATA:
 - [Hiểu về mã nguồn](../../../../04-PracticalSamples/foundrylocal)
   - [1. Cấu hình ứng dụng (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. Lớp ứng dụng chính (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. Tầng dịch vụ AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Các phụ thuộc của dự án (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
+  - [3. Lớp dịch vụ AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [4. Các phụ thuộc dự án (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Cách hoạt động của toàn bộ hệ thống](../../../../04-PracticalSamples/foundrylocal)
 - [Cài đặt Foundry Local](../../../../04-PracticalSamples/foundrylocal)
 - [Chạy ứng dụng](../../../../04-PracticalSamples/foundrylocal)
 - [Kết quả mong đợi](../../../../04-PracticalSamples/foundrylocal)
-- [Các bước tiếp theo](../../../../04-PracticalSamples/foundrylocal)
+- [Bước tiếp theo](../../../../04-PracticalSamples/foundrylocal)
 - [Xử lý sự cố](../../../../04-PracticalSamples/foundrylocal)
 
 ## Yêu cầu trước khi bắt đầu
@@ -48,7 +48,7 @@ foundry model run phi-3.5-mini
 Dự án này bao gồm bốn thành phần chính:
 
 1. **Application.java** - Điểm khởi đầu chính của ứng dụng Spring Boot
-2. **FoundryLocalService.java** - Tầng dịch vụ xử lý giao tiếp AI
+2. **FoundryLocalService.java** - Lớp dịch vụ xử lý giao tiếp AI
 3. **application.properties** - Cấu hình kết nối với Foundry Local
 4. **pom.xml** - Các phụ thuộc Maven và cấu hình dự án
 
@@ -65,7 +65,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **Chức năng:**
 - **base-url**: Xác định nơi Foundry Local đang chạy, bao gồm đường dẫn `/v1` để tương thích với API OpenAI. **Lưu ý**: Foundry Local tự động gán cổng, vì vậy hãy kiểm tra cổng thực tế bằng `foundry service status`
-- **model**: Tên mô hình AI được sử dụng để tạo văn bản, bao gồm số phiên bản (ví dụ: `:1`). Sử dụng `foundry model list` để xem các mô hình có sẵn với ID chính xác của chúng
+- **model**: Đặt tên mô hình AI để sử dụng cho việc tạo văn bản, bao gồm số phiên bản (ví dụ: `:1`). Sử dụng `foundry model list` để xem các mô hình có sẵn với ID chính xác của chúng
 
 **Khái niệm chính:** Spring Boot tự động tải các thuộc tính này và làm cho chúng có sẵn cho ứng dụng của bạn bằng cách sử dụng chú thích `@Value`.
 
@@ -85,7 +85,7 @@ public class Application {
 
 **Chức năng:**
 - `@SpringBootApplication` kích hoạt cấu hình tự động của Spring Boot
-- `WebApplicationType.NONE` cho Spring biết đây là ứng dụng dòng lệnh, không phải máy chủ web
+- `WebApplicationType.NONE` thông báo cho Spring rằng đây là ứng dụng dòng lệnh, không phải máy chủ web
 - Phương thức chính khởi động ứng dụng Spring
 
 **Trình chạy demo:**
@@ -111,7 +111,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 - `foundryLocalService` được Spring tự động tiêm (dependency injection)
 - Gửi một tin nhắn thử nghiệm đến AI và hiển thị phản hồi
 
-### 3. Tầng dịch vụ AI (FoundryLocalService.java)
+### 3. Lớp dịch vụ AI (FoundryLocalService.java)
 
 **Tệp:** `src/main/java/com/example/FoundryLocalService.java`
 
@@ -128,9 +128,9 @@ public class FoundryLocalService {
 ```
 
 **Chức năng:**
-- `@Service` cho Spring biết lớp này cung cấp logic nghiệp vụ
+- `@Service` thông báo cho Spring rằng lớp này cung cấp logic nghiệp vụ
 - `@Value` tiêm các giá trị cấu hình từ application.properties
-- Cú pháp `:default-value` cung cấp giá trị dự phòng nếu thuộc tính không được thiết lập
+- Cú pháp `:default-value` cung cấp giá trị dự phòng nếu các thuộc tính không được đặt
 
 #### Khởi tạo client:
 ```java
@@ -147,7 +147,7 @@ public void init() {
 - `@PostConstruct` chạy phương thức này sau khi Spring tạo dịch vụ
 - Tạo một client OpenAI trỏ đến phiên bản Foundry Local của bạn
 - URL cơ sở từ `application.properties` đã bao gồm `/v1` để tương thích với API OpenAI
-- API key được đặt là "not-needed" vì phát triển cục bộ không yêu cầu xác thực
+- Khóa API được đặt là "not-needed" vì phát triển cục bộ không yêu cầu xác thực
 
 #### Phương thức chat:
 ```java
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -176,15 +176,15 @@ public String chat(String message) {
 
 **Chức năng:**
 - **ChatCompletionCreateParams**: Cấu hình yêu cầu AI
-  - `model`: Xác định mô hình AI nào sẽ sử dụng (phải khớp với ID chính xác từ `foundry model list`)
+  - `model`: Xác định mô hình AI để sử dụng (phải khớp với ID chính xác từ `foundry model list`)
   - `addUserMessage`: Thêm tin nhắn của bạn vào cuộc trò chuyện
-  - `maxTokens`: Giới hạn độ dài phản hồi (tiết kiệm tài nguyên)
-  - `temperature`: Điều chỉnh độ ngẫu nhiên (0.0 = xác định, 1.0 = sáng tạo)
+  - `maxCompletionTokens`: Giới hạn độ dài của phản hồi (tiết kiệm tài nguyên)
+  - `temperature`: Kiểm soát độ ngẫu nhiên (0.0 = xác định, 1.0 = sáng tạo)
 - **API Call**: Gửi yêu cầu đến Foundry Local
 - **Xử lý phản hồi**: Trích xuất phản hồi văn bản của AI một cách an toàn
-- **Xử lý lỗi**: Bao bọc ngoại lệ với thông báo lỗi hữu ích
+- **Xử lý lỗi**: Bao bọc các ngoại lệ với thông báo lỗi hữu ích
 
-### 4. Các phụ thuộc của dự án (pom.xml)
+### 4. Các phụ thuộc dự án (pom.xml)
 
 **Các phụ thuộc chính:**
 
@@ -214,7 +214,7 @@ public String chat(String message) {
 **Chức năng:**
 - **spring-boot-starter**: Cung cấp chức năng cốt lõi của Spring Boot
 - **openai-java**: SDK Java chính thức của OpenAI để giao tiếp API
-- **jackson-databind**: Xử lý tuần tự hóa/giải tuần tự hóa JSON cho các cuộc gọi API
+- **jackson-databind**: Xử lý tuần tự hóa/giải tuần tự hóa JSON cho các yêu cầu API
 
 ## Cách hoạt động của toàn bộ hệ thống
 
@@ -288,7 +288,7 @@ Is there something specific you'd like help with today?
 =========================
 ```
 
-## Các bước tiếp theo
+## Bước tiếp theo
 
 Để xem thêm ví dụ, hãy tham khảo [Chương 04: Các mẫu thực tế](../README.md)
 
@@ -300,7 +300,7 @@ Is there something specific you'd like help with today?
 - Đảm bảo Foundry Local đang chạy: `foundry model list`
 - Kiểm tra cổng thực tế mà Foundry Local đang sử dụng: `foundry service status`
 - Cập nhật `application.properties` của bạn với cổng chính xác, đảm bảo URL kết thúc bằng `/v1`
-- Hoặc, thiết lập một cổng cụ thể nếu muốn: `foundry service set --port 5273`
+- Hoặc, đặt một cổng cụ thể nếu muốn: `foundry service set --port 5273`
 - Thử khởi động lại Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" hoặc lỗi "404 Not Found"**
@@ -312,7 +312,7 @@ Is there something specific you'd like help with today?
 **Lỗi "400 Bad Request"**
 - Xác minh URL cơ sở bao gồm `/v1`: `http://localhost:5273/v1`
 - Kiểm tra rằng ID mô hình khớp chính xác với những gì hiển thị trong `foundry model list`
-- Đảm bảo bạn đang sử dụng `maxTokens()` thay vì `maxCompletionTokens()` trong mã của bạn
+- Đảm bảo bạn đang sử dụng `maxCompletionTokens()` trong mã của mình (không phải `maxTokens()` đã bị ngừng sử dụng)
 
 **Lỗi biên dịch Maven**
 - Đảm bảo Java 21 hoặc cao hơn: `java -version`
@@ -327,4 +327,4 @@ Is there something specific you'd like help with today?
 ---
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính xác nhất. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp của con người. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
