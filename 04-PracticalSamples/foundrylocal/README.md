@@ -86,6 +86,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -93,6 +94,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -312,6 +314,6 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 - Check internet connection for dependency downloads
 
 **Application starts but no output**
-- Verify Foundry Local is responding: Open browser to `http://localhost:5273`
+- Verify Foundry Local is responding: Check `http://localhost:5273/v1/models` or run `foundry service status`
 - Check application logs for specific error messages
 - Ensure the model is fully loaded and ready
