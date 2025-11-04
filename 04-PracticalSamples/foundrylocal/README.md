@@ -148,7 +148,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -170,7 +170,7 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: Configures the AI request
   - `model`: Specifies which AI model to use (must match the exact ID from `foundry model list`)
   - `addUserMessage`: Adds your message to the conversation
-  - `maxTokens`: Limits how long the response can be (saves resources)
+  - `maxCompletionTokens`: Limits how long the response can be (saves resources)
   - `temperature`: Controls randomness (0.0 = deterministic, 1.0 = creative)
 - **API Call**: Sends the request to Foundry Local
 - **Response Handling**: Extracts the AI's text response safely
@@ -304,7 +304,7 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 **"400 Bad Request" errors**
 - Verify the base URL includes `/v1`: `http://localhost:5273/v1`
 - Check that the model ID matches exactly what's shown in `foundry model list`
-- Ensure you're using `maxTokens()` instead of `maxCompletionTokens()` in your code
+- Ensure you're using `maxCompletionTokens()` in your code (not the deprecated `maxTokens()`)
 
 **Maven compilation errors**
 - Ensure Java 21 or higher: `java -version`

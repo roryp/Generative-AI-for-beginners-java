@@ -28,10 +28,10 @@ public class FoundryLocalService {
     
     // Configuration values injected from application.properties
     // The ":value" part provides a default if the property isn't set
-    @Value("${foundry.local.base-url:http://localhost:5273}")
+    @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;  // Where your local AI server is running
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu}")
+    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
     private String model;    // Which local AI model to use
     
     // OpenAI client configured to talk to local server instead of OpenAI's servers
@@ -53,7 +53,7 @@ public class FoundryLocalService {
         System.out.println("  Model: " + model);
         
         this.openAIClient = OpenAIOkHttpClient.builder()
-                .baseUrl(baseUrl)                   // Local server endpoint (Foundry Local handles /v1 internally)
+                .baseUrl(baseUrl)                   // Local server endpoint with /v1 path for OpenAI API compatibility
                 .apiKey("not-needed")               // Local servers usually don't need real API keys
                 .build();
         
@@ -77,7 +77,7 @@ public class FoundryLocalService {
             ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                     .model(model)                    // Which local model to use
                     .addUserMessage(message)         // Your input message
-                    .maxTokens(150)                  // Limit response length (saves processing time)
+                    .maxCompletionTokens(150)        // Limit response length (saves processing time)
                     .temperature(0.7)                // Creativity level: 0.0=focused, 1.0=creative
                     .build();
             
