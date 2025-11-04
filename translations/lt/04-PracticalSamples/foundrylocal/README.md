@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:18:46+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:59:51+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "lt"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Turinys
 
-- [Būtinos sąlygos](../../../../04-PracticalSamples/foundrylocal)
+- [Reikalavimai](../../../../04-PracticalSamples/foundrylocal)
 - [Projekto apžvalga](../../../../04-PracticalSamples/foundrylocal)
 - [Kodo supratimas](../../../../04-PracticalSamples/foundrylocal)
   - [1. Programos konfigūracija (application.properties)](../../../../04-PracticalSamples/foundrylocal)
@@ -25,15 +25,15 @@ CO_OP_TRANSLATOR_METADATA:
 - [Kiti žingsniai](../../../../04-PracticalSamples/foundrylocal)
 - [Trikčių šalinimas](../../../../04-PracticalSamples/foundrylocal)
 
-## Būtinos sąlygos
+## Reikalavimai
 
 Prieš pradedant šią pamoką, įsitikinkite, kad turite:
 
 - **Java 21 ar naujesnę versiją** įdiegtą jūsų sistemoje
-- **Maven 3.6+** projektui kurti
+- **Maven 3.6+** projekto kūrimui
 - **Foundry Local** įdiegtą ir veikiančią
 
-### **Foundry Local įdiegimas:**
+### **Įdiekite Foundry Local:**
 
 ```bash
 # Windows
@@ -48,7 +48,7 @@ foundry model run phi-3.5-mini
 Šis projektas susideda iš keturių pagrindinių komponentų:
 
 1. **Application.java** - Pagrindinis Spring Boot programos įėjimo taškas
-2. **FoundryLocalService.java** - Paslaugų sluoksnis, atsakingas už AI komunikaciją
+2. **FoundryLocalService.java** - Paslaugų sluoksnis, kuris tvarko AI komunikaciją
 3. **application.properties** - Konfigūracija Foundry Local ryšiui
 4. **pom.xml** - Maven priklausomybės ir projekto konfigūracija
 
@@ -65,7 +65,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **Ką tai daro:**
 - **base-url**: Nurodo, kur veikia Foundry Local, įskaitant `/v1` kelią OpenAI API suderinamumui. **Pastaba**: Foundry Local dinamiškai priskiria prievadą, todėl patikrinkite savo faktinį prievadą naudodami `foundry service status`
-- **model**: Nurodo AI modelį, naudojamą teksto generavimui, įskaitant versijos numerį (pvz., `:1`). Naudokite `foundry model list`, kad pamatytumėte galimus modelius su jų tiksliais ID
+- **model**: Nurodo AI modelį, kuris bus naudojamas teksto generavimui, įskaitant versijos numerį (pvz., `:1`). Naudokite `foundry model list`, kad pamatytumėte galimus modelius su jų tiksliais ID
 
 **Pagrindinė sąvoka:** Spring Boot automatiškai įkelia šias savybes ir padaro jas prieinamas jūsų programai naudojant `@Value` anotaciją.
 
@@ -85,7 +85,7 @@ public class Application {
 
 **Ką tai daro:**
 - `@SpringBootApplication` įgalina Spring Boot automatinę konfigūraciją
-- `WebApplicationType.NONE` nurodo Spring, kad tai komandų eilutės programa, o ne interneto serveris
+- `WebApplicationType.NONE` nurodo Spring, kad tai yra komandų eilutės programa, o ne interneto serveris
 - Pagrindinis metodas paleidžia Spring programą
 
 **Demo vykdytojas:**
@@ -109,7 +109,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 - `@Bean` sukuria komponentą, kurį valdo Spring
 - `CommandLineRunner` vykdo kodą po Spring Boot paleidimo
 - `foundryLocalService` automatiškai įterpiamas Spring (priklausomybių įterpimas)
-- Siunčia testinę žinutę AI ir rodo atsakymą
+- Siunčia testinę žinutę AI ir parodo atsakymą
 
 ### 3. AI paslaugų sluoksnis (FoundryLocalService.java)
 
@@ -130,7 +130,7 @@ public class FoundryLocalService {
 **Ką tai daro:**
 - `@Service` nurodo Spring, kad ši klasė teikia verslo logiką
 - `@Value` įterpia konfigūracijos reikšmes iš application.properties
-- Sintaksė `:default-value` suteikia atsargines reikšmes, jei savybės nėra nustatytos
+- `:default-value` sintaksė suteikia atsargines reikšmes, jei savybės nėra nustatytos
 
 #### Kliento inicializavimas:
 ```java
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -176,9 +176,9 @@ public String chat(String message) {
 
 **Ką tai daro:**
 - **ChatCompletionCreateParams**: Konfigūruoja AI užklausą
-  - `model`: Nurodo, kurį AI modelį naudoti (turi atitikti tikslų ID iš `foundry model list`)
+  - `model`: Nurodo, kuris AI modelis bus naudojamas (turi atitikti tikslų ID iš `foundry model list`)
   - `addUserMessage`: Prideda jūsų žinutę į pokalbį
-  - `maxTokens`: Ribojama, kiek ilgas gali būti atsakymas (taupo resursus)
+  - `maxCompletionTokens`: Ribojama atsakymo ilgis (taupo resursus)
   - `temperature`: Valdo atsitiktinumą (0.0 = deterministinis, 1.0 = kūrybiškas)
 - **API užklausa**: Siunčia užklausą Foundry Local
 - **Atsakymo apdorojimas**: Saugiai ištraukia AI teksto atsakymą
@@ -227,32 +227,32 @@ public String chat(String message) {
 5. **AI užklausa**: Demo kviečia `foundryLocalService.chat()` su testine žinute
 6. **API užklausa**: Paslauga sukuria ir siunčia OpenAI suderinamą užklausą Foundry Local
 7. **Atsakymo apdorojimas**: Paslauga ištraukia ir grąžina AI atsakymą
-8. **Rodymas**: Programa spausdina atsakymą ir baigia darbą
+8. **Rodymas**: Programa atspausdina atsakymą ir užsidaro
 
 ## Foundry Local nustatymas
 
 Norėdami nustatyti Foundry Local, atlikite šiuos veiksmus:
 
-1. **Įdiekite Foundry Local** naudodami instrukcijas iš [Būtinos sąlygos](../../../../04-PracticalSamples/foundrylocal) skyriaus.
+1. **Įdiekite Foundry Local** naudodami instrukcijas iš [Reikalavimai](../../../../04-PracticalSamples/foundrylocal) skyriaus.
 
-2. **Patikrinkite dinamiškai priskirtą prievadą**. Foundry Local automatiškai priskiria prievadą, kai jis paleidžiamas. Suraskite savo prievadą naudodami:
+2. **Patikrinkite dinamiškai priskirtą prievadą**. Foundry Local automatiškai priskiria prievadą paleidimo metu. Suraskite savo prievadą naudodami:
    ```bash
    foundry service status
    ```
    
-   **Pasirinktinai**: Jei norite naudoti konkretų prievadą (pvz., 5273), galite jį konfigūruoti rankiniu būdu:
+   **Pasirinktinai**: Jei norite naudoti konkretų prievadą (pvz., 5273), galite jį nustatyti rankiniu būdu:
    ```bash
    foundry service set --port 5273
    ```
 
-3. **Atsisiųskite AI modelį**, kurį norite naudoti, pvz., `phi-3.5-mini`, naudodami šią komandą:
+3. **Atsisiųskite AI modelį**, kurį norite naudoti, pavyzdžiui, `phi-3.5-mini`, naudodami šią komandą:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
 4. **Konfigūruokite application.properties** failą, kad atitiktų jūsų Foundry Local nustatymus:
-   - Atnaujinkite prievadą `base-url` (iš 2 žingsnio), užtikrindami, kad jis baigtųsi `/v1`
-   - Atnaujinkite modelio pavadinimą, įskaitant versijos numerį (patikrinkite su `foundry model list`)
+   - Atnaujinkite prievadą `base-url` (iš 2 žingsnio), užtikrindami, kad pabaigoje būtų `/v1`
+   - Atnaujinkite modelio pavadinimą, kad įtrauktumėte versijos numerį (patikrinkite su `foundry model list`)
    
    Pavyzdys:
    ```properties
@@ -310,9 +310,9 @@ Daugiau pavyzdžių rasite [4 skyriuje: Praktiniai pavyzdžiai](../README.md)
 - Atsisiųskite modelį, jei reikia: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" klaidos**
-- Patikrinkite, ar bazinis URL apima `/v1`: `http://localhost:5273/v1`
+- Patikrinkite, ar bazinis URL baigiasi `/v1`: `http://localhost:5273/v1`
 - Patikrinkite, ar modelio ID tiksliai atitinka tai, kas rodoma `foundry model list`
-- Užtikrinkite, kad naudojate `maxTokens()` vietoj `maxCompletionTokens()` savo kode
+- Užtikrinkite, kad naudojate `maxCompletionTokens()` savo kode (ne pasenusią `maxTokens()`)
 
 **Maven kompiliavimo klaidos**
 - Įsitikinkite, kad naudojate Java 21 ar naujesnę versiją: `java -version`
@@ -321,10 +321,10 @@ Daugiau pavyzdžių rasite [4 skyriuje: Praktiniai pavyzdžiai](../README.md)
 
 **Programa paleidžiama, bet nėra išvesties**
 - Patikrinkite, ar Foundry Local atsako: Atidarykite naršyklę adresu `http://localhost:5273`
-- Patikrinkite programos žurnalus dėl specifinių klaidų pranešimų
-- Įsitikinkite, kad modelis yra visiškai įkeltas ir paruoštas
+- Patikrinkite programos žurnalus dėl konkrečių klaidų pranešimų
+- Užtikrinkite, kad modelis būtų visiškai įkeltas ir paruoštas
 
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.

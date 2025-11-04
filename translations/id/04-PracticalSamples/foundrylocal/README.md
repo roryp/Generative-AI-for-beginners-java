@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:11:58+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:52:42+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "id"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [1. Konfigurasi Aplikasi (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. Kelas Aplikasi Utama (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. Lapisan Layanan AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Ketergantungan Proyek (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
+  - [4. Dependensi Proyek (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Bagaimana Semua Ini Bekerja Bersama](../../../../04-PracticalSamples/foundrylocal)
 - [Menyiapkan Foundry Local](../../../../04-PracticalSamples/foundrylocal)
 - [Menjalankan Aplikasi](../../../../04-PracticalSamples/foundrylocal)
@@ -29,9 +29,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 Sebelum memulai tutorial ini, pastikan Anda memiliki:
 
-- **Java 21 atau lebih tinggi** terinstal di sistem Anda
+- **Java 21 atau lebih tinggi** yang terinstal di sistem Anda
 - **Maven 3.6+** untuk membangun proyek
-- **Foundry Local** terinstal dan berjalan
+- **Foundry Local** yang sudah terinstal dan berjalan
 
 ### **Instal Foundry Local:**
 
@@ -51,7 +51,7 @@ Proyek ini terdiri dari empat komponen utama:
 1. **Application.java** - Titik masuk utama aplikasi Spring Boot
 2. **FoundryLocalService.java** - Lapisan layanan yang menangani komunikasi AI
 3. **application.properties** - Konfigurasi untuk koneksi Foundry Local
-4. **pom.xml** - Ketergantungan Maven dan konfigurasi proyek
+4. **pom.xml** - Dependensi Maven dan konfigurasi proyek
 
 ## Memahami Kode
 
@@ -88,7 +88,7 @@ public class Application {
 
 **Apa yang dilakukan:**
 - `@SpringBootApplication` mengaktifkan konfigurasi otomatis Spring Boot
-- `WebApplicationType.NONE` memberi tahu Spring bahwa ini adalah aplikasi berbasis command-line, bukan server web
+- `WebApplicationType.NONE` memberi tahu Spring bahwa ini adalah aplikasi command-line, bukan server web
 - Metode utama memulai aplikasi Spring
 
 **Demo Runner:**
@@ -162,7 +162,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -185,15 +185,15 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: Mengonfigurasi permintaan AI
   - `model`: Menentukan model AI yang digunakan (harus sesuai dengan ID yang tepat dari `foundry model list`)
   - `addUserMessage`: Menambahkan pesan Anda ke percakapan
-  - `maxTokens`: Membatasi panjang respons (menghemat sumber daya)
-  - `temperature`: Mengontrol tingkat keacakan (0.0 = deterministik, 1.0 = kreatif)
+  - `maxCompletionTokens`: Membatasi panjang respons (menghemat sumber daya)
+  - `temperature`: Mengontrol tingkat kreativitas (0.0 = deterministik, 1.0 = kreatif)
 - **Panggilan API**: Mengirim permintaan ke Foundry Local
 - **Penanganan Respons**: Mengekstrak respons teks AI dengan aman
 - **Penanganan Kesalahan**: Membungkus pengecualian dengan pesan kesalahan yang membantu
 
-### 4. Ketergantungan Proyek (pom.xml)
+### 4. Dependensi Proyek (pom.xml)
 
-**Ketergantungan Utama:**
+**Dependensi Utama:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -324,21 +324,21 @@ Untuk contoh lebih lanjut, lihat [Bab 04: Contoh Praktis](../README.md)
 - Unduh model jika diperlukan: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" errors**
-- Verifikasi bahwa URL dasar menyertakan `/v1`: `http://localhost:5273/v1`
+- Verifikasi URL dasar menyertakan `/v1`: `http://localhost:5273/v1`
 - Periksa bahwa ID model sesuai dengan yang ditampilkan di `foundry model list`
-- Pastikan Anda menggunakan `maxTokens()` daripada `maxCompletionTokens()` dalam kode Anda
+- Pastikan Anda menggunakan `maxCompletionTokens()` dalam kode Anda (bukan `maxTokens()` yang sudah usang)
 
 **Kesalahan kompilasi Maven**
 - Pastikan Java 21 atau lebih tinggi: `java -version`
 - Bersihkan dan bangun ulang: `mvn clean compile`
-- Periksa koneksi internet untuk mengunduh ketergantungan
+- Periksa koneksi internet untuk mengunduh dependensi
 
 **Aplikasi dimulai tetapi tidak ada output**
-- Verifikasi bahwa Foundry Local merespons: Buka browser ke `http://localhost:5273`
+- Verifikasi Foundry Local merespons: Buka browser ke `http://localhost:5273`
 - Periksa log aplikasi untuk pesan kesalahan spesifik
 - Pastikan model telah dimuat sepenuhnya dan siap
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.

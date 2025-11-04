@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:14:34+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:55:42+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "sk"
 }
 -->
-# Foundry Local Spring Boot Tutoriál
+# Návod na Foundry Local Spring Boot
 
 ## Obsah
 
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predpoklady
 
-Pred začatím tohto tutoriálu sa uistite, že máte:
+Pred začiatkom tohto návodu sa uistite, že máte:
 
 - **Java 21 alebo vyššiu** nainštalovanú na vašom systéme
 - **Maven 3.6+** na zostavenie projektu
@@ -42,7 +42,6 @@ winget install Microsoft.FoundryLocal
 # macOS (after installing)
 foundry model run phi-3.5-mini
 ```
-
 
 ## Prehľad projektu
 
@@ -65,7 +64,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
 **Čo to robí:**
-- **base-url**: Určuje, kde je Foundry Local spustený, vrátane cesty `/v1` pre kompatibilitu s OpenAI API. **Poznámka**: Foundry Local dynamicky priraďuje port, takže si skontrolujte aktuálny port pomocou `foundry service status`
+- **base-url**: Určuje, kde beží Foundry Local, vrátane cesty `/v1` pre kompatibilitu s OpenAI API. **Poznámka**: Foundry Local dynamicky priraďuje port, takže si skontrolujte aktuálny port pomocou `foundry service status`
 - **model**: Názov AI modelu na generovanie textu, vrátane čísla verzie (napr. `:1`). Použite `foundry model list` na zobrazenie dostupných modelov s ich presnými ID
 
 **Kľúčový koncept:** Spring Boot automaticky načíta tieto vlastnosti a sprístupní ich vašej aplikácii pomocou anotácie `@Value`.
@@ -157,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -176,12 +175,12 @@ public String chat(String message) {
 ```
 
 **Čo to robí:**
-- **ChatCompletionCreateParams**: Konfiguruje požiadavku na AI
+- **ChatCompletionCreateParams**: Konfiguruje požiadavku AI
   - `model`: Určuje, ktorý AI model sa má použiť (musí presne zodpovedať ID z `foundry model list`)
   - `addUserMessage`: Pridáva vašu správu do konverzácie
-  - `maxTokens`: Obmedzuje dĺžku odpovede (šetrenie zdrojov)
+  - `maxCompletionTokens`: Obmedzuje dĺžku odpovede (šetrenie zdrojov)
   - `temperature`: Riadi náhodnosť (0.0 = deterministické, 1.0 = kreatívne)
-- **API Call**: Posiela požiadavku na Foundry Local
+- **API volanie**: Posiela požiadavku na Foundry Local
 - **Spracovanie odpovede**: Bezpečne extrahuje textovú odpoveď AI
 - **Spracovanie chýb**: Obaluje výnimky s užitočnými chybovými správami
 
@@ -219,20 +218,20 @@ public String chat(String message) {
 
 ## Ako to všetko spolu funguje
 
-Tu je kompletný tok, keď spustíte aplikáciu:
+Tu je kompletný priebeh, keď spustíte aplikáciu:
 
 1. **Štart**: Spring Boot sa spustí a načíta `application.properties`
 2. **Vytvorenie služby**: Spring vytvorí `FoundryLocalService` a injektuje hodnoty konfigurácie
 3. **Nastavenie klienta**: `@PostConstruct` inicializuje klienta OpenAI na pripojenie k Foundry Local
 4. **Spustenie dema**: `CommandLineRunner` sa vykoná po štarte
 5. **Volanie AI**: Demo volá `foundryLocalService.chat()` s testovacou správou
-6. **Požiadavka API**: Služba zostaví a pošle požiadavku kompatibilnú s OpenAI na Foundry Local
+6. **Požiadavka API**: Služba vytvorí a pošle požiadavku kompatibilnú s OpenAI na Foundry Local
 7. **Spracovanie odpovede**: Služba extrahuje a vráti odpoveď AI
 8. **Zobrazenie**: Aplikácia vytlačí odpoveď a ukončí sa
 
 ## Nastavenie Foundry Local
 
-Na nastavenie Foundry Local postupujte podľa týchto krokov:
+Ak chcete nastaviť Foundry Local, postupujte podľa týchto krokov:
 
 1. **Nainštalujte Foundry Local** podľa pokynov v sekcii [Predpoklady](../../../../04-PracticalSamples/foundrylocal).
 
@@ -261,7 +260,6 @@ Na nastavenie Foundry Local postupujte podľa týchto krokov:
    foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
    ```
 
-
 ## Spustenie aplikácie
 
 ### Krok 1: Spustite Foundry Local
@@ -274,7 +272,6 @@ foundry model run phi-3.5-mini
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
-
 
 ## Očakávaný výstup
 
@@ -291,7 +288,6 @@ Is there something specific you'd like help with today?
 =========================
 ```
 
-
 ## Ďalšie kroky
 
 Pre viac príkladov si pozrite [Kapitolu 04: Praktické ukážky](../README.md)
@@ -301,9 +297,9 @@ Pre viac príkladov si pozrite [Kapitolu 04: Praktické ukážky](../README.md)
 ### Bežné problémy
 
 **"Connection refused" alebo "Service unavailable"**
-- Uistite sa, že Foundry Local je spustený: `foundry model list`
+- Uistite sa, že Foundry Local beží: `foundry model list`
 - Skontrolujte aktuálny port, ktorý Foundry Local používa: `foundry service status`
-- Aktualizujte váš `application.properties` so správnym portom, uistite sa, že URL končí `/v1`
+- Aktualizujte váš `application.properties` s správnym portom, uistite sa, že URL končí `/v1`
 - Alternatívne nastavte konkrétny port, ak je to potrebné: `foundry service set --port 5273`
 - Skúste reštartovať Foundry Local: `foundry model run phi-3.5-mini`
 
@@ -315,8 +311,8 @@ Pre viac príkladov si pozrite [Kapitolu 04: Praktické ukážky](../README.md)
 
 **"400 Bad Request" chyby**
 - Overte, že základná URL obsahuje `/v1`: `http://localhost:5273/v1`
-- Skontrolujte, či ID modelu presne zodpovedá tomu, čo je uvedené v `foundry model list`
-- Uistite sa, že používate `maxTokens()` namiesto `maxCompletionTokens()` vo vašom kóde
+- Skontrolujte, že ID modelu presne zodpovedá tomu, čo je uvedené v `foundry model list`
+- Uistite sa, že používate `maxCompletionTokens()` vo vašom kóde (nie zastarané `maxTokens()`)
 
 **Chyby kompilácie Maven**
 - Uistite sa, že máte Java 21 alebo vyššiu: `java -version`
@@ -324,7 +320,7 @@ Pre viac príkladov si pozrite [Kapitolu 04: Praktické ukážky](../README.md)
 - Skontrolujte internetové pripojenie pre stiahnutie závislostí
 
 **Aplikácia sa spustí, ale bez výstupu**
-- Overte, že Foundry Local odpovedá: Otvorte prehliadač na `http://localhost:5273`
+- Overte, že Foundry Local reaguje: Otvorte prehliadač na `http://localhost:5273`
 - Skontrolujte logy aplikácie pre konkrétne chybové správy
 - Uistite sa, že model je plne načítaný a pripravený
 

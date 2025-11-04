@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:15:12+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:56:23+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "ro"
 }
@@ -14,8 +14,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [Prerechizite](../../../../04-PracticalSamples/foundrylocal)
 - [Prezentarea Proiectului](../../../../04-PracticalSamples/foundrylocal)
 - [Înțelegerea Codului](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Configurarea Aplicației (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Clasa Principală a Aplicației (Application.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [1. Configurarea aplicației (application.properties)](../../../../04-PracticalSamples/foundrylocal)
+  - [2. Clasa principală a aplicației (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. Stratul de Servicii AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Dependențele Proiectului (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Cum Funcționează Totul Împreună](../../../../04-PracticalSamples/foundrylocal)
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Maven 3.6+** pentru construirea proiectului
 - **Foundry Local** instalat și funcțional
 
-### **Instalare Foundry Local:**
+### **Instalează Foundry Local:**
 
 ```bash
 # Windows
@@ -45,16 +45,16 @@ foundry model run phi-3.5-mini
 
 ## Prezentarea Proiectului
 
-Acest proiect constă din patru componente principale:
+Acest proiect constă în patru componente principale:
 
 1. **Application.java** - Punctul de intrare principal al aplicației Spring Boot
 2. **FoundryLocalService.java** - Stratul de servicii care gestionează comunicarea AI
-3. **application.properties** - Configurarea conexiunii Foundry Local
+3. **application.properties** - Configurarea conexiunii pentru Foundry Local
 4. **pom.xml** - Dependențele Maven și configurarea proiectului
 
 ## Înțelegerea Codului
 
-### 1. Configurarea Aplicației (application.properties)
+### 1. Configurarea aplicației (application.properties)
 
 **Fișier:** `src/main/resources/application.properties`
 
@@ -64,12 +64,12 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
 **Ce face:**
-- **base-url**: Specifică unde rulează Foundry Local, inclusiv calea `/v1` pentru compatibilitatea cu API-ul OpenAI. **Notă**: Foundry Local atribuie dinamic un port, așa că verifică portul real folosind `foundry service status`
-- **model**: Numește modelul AI utilizat pentru generarea textului, inclusiv numărul versiunii (ex.: `:1`). Folosește `foundry model list` pentru a vedea modelele disponibile cu ID-urile lor exacte
+- **base-url**: Specifică unde rulează Foundry Local, incluzând calea `/v1` pentru compatibilitatea cu API-ul OpenAI. **Notă**: Foundry Local atribuie dinamic un port, așa că verifică portul real folosind `foundry service status`
+- **model**: Numește modelul AI utilizat pentru generarea textului, incluzând numărul versiunii (ex.: `:1`). Folosește `foundry model list` pentru a vedea modelele disponibile cu ID-urile lor exacte.
 
 **Concept cheie:** Spring Boot încarcă automat aceste proprietăți și le face disponibile aplicației tale folosind adnotarea `@Value`.
 
-### 2. Clasa Principală a Aplicației (Application.java)
+### 2. Clasa principală a aplicației (Application.java)
 
 **Fișier:** `src/main/java/com/example/Application.java`
 
@@ -115,7 +115,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 
 **Fișier:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### Injecția Configurării:
+#### Injectarea Configurării:
 ```java
 @Service
 public class FoundryLocalService {
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -178,10 +178,10 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: Configurează cererea AI
   - `model`: Specifică modelul AI utilizat (trebuie să corespundă exact ID-ului din `foundry model list`)
   - `addUserMessage`: Adaugă mesajul tău la conversație
-  - `maxTokens`: Limitează lungimea răspunsului (economisește resurse)
+  - `maxCompletionTokens`: Limitează lungimea răspunsului (economisește resurse)
   - `temperature`: Controlează aleatoritatea (0.0 = determinist, 1.0 = creativ)
 - **Apel API**: Trimite cererea către Foundry Local
-- **Procesarea Răspunsului**: Extrage răspunsul text al AI în mod sigur
+- **Gestionarea Răspunsului**: Extrage răspunsul text al AI în siguranță
 - **Gestionarea Erorilor**: Împachetează excepțiile cu mesaje de eroare utile
 
 ### 4. Dependențele Proiectului (pom.xml)
@@ -213,12 +213,12 @@ public String chat(String message) {
 
 **Ce fac:**
 - **spring-boot-starter**: Oferă funcționalitatea de bază Spring Boot
-- **openai-java**: SDK oficial OpenAI Java pentru comunicarea API
+- **openai-java**: SDK-ul oficial OpenAI Java pentru comunicarea cu API-ul
 - **jackson-databind**: Gestionează serializarea/deserializarea JSON pentru apelurile API
 
 ## Cum Funcționează Totul Împreună
 
-Iată fluxul complet când rulezi aplicația:
+Iată fluxul complet atunci când rulezi aplicația:
 
 1. **Pornire**: Spring Boot pornește și citește `application.properties`
 2. **Crearea Serviciului**: Spring creează `FoundryLocalService` și injectează valorile de configurare
@@ -305,14 +305,14 @@ Pentru mai multe exemple, vezi [Capitolul 04: Exemple practice](../README.md)
 
 **"Model not found" sau erori "404 Not Found"**
 - Verifică modelele disponibile cu ID-urile lor exacte: `foundry model list`
-- Actualizează numele modelului în `application.properties` pentru a se potrivi exact, inclusiv numărul versiunii (ex.: `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- Actualizează numele modelului în `application.properties` pentru a se potrivi exact, incluzând numărul versiunii (ex.: `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Asigură-te că `base-url` include `/v1` la final: `http://localhost:5273/v1`
 - Descarcă modelul dacă este necesar: `foundry model run phi-3.5-mini`
 
 **Erori "400 Bad Request"**
 - Verifică dacă URL-ul de bază include `/v1`: `http://localhost:5273/v1`
-- Asigură-te că ID-ul modelului se potrivește exact cu ceea ce este afișat în `foundry model list`
-- Asigură-te că folosești `maxTokens()` în loc de `maxCompletionTokens()` în codul tău
+- Asigură-te că ID-ul modelului corespunde exact cu ceea ce este afișat în `foundry model list`
+- Asigură-te că folosești `maxCompletionTokens()` în codul tău (nu `maxTokens()` care este depreciat)
 
 **Erori de compilare Maven**
 - Asigură-te că ai Java 21 sau mai recent: `java -version`
@@ -321,10 +321,10 @@ Pentru mai multe exemple, vezi [Capitolul 04: Exemple practice](../README.md)
 
 **Aplicația pornește dar nu afișează nimic**
 - Verifică dacă Foundry Local răspunde: Deschide browserul la `http://localhost:5273`
-- Verifică jurnalele aplicației pentru mesaje de eroare specifice
+- Verifică logurile aplicației pentru mesaje de eroare specifice
 - Asigură-te că modelul este complet încărcat și gata
 
 ---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.

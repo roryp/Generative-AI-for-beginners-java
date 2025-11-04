@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:19:29+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T07:01:19+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "et"
 }
 -->
-# Foundry Local Spring Boot õpetus
+# Foundry Local Spring Booti õpetus
 
 ## Sisukord
 
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Projekti ülevaade](../../../../04-PracticalSamples/foundrylocal)
 - [Koodi mõistmine](../../../../04-PracticalSamples/foundrylocal)
   - [1. Rakenduse konfiguratsioon (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Põhirakenduse klass (Application.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [2. Peamine rakendusklass (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. AI teenuse kiht (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Projekti sõltuvused (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Kuidas kõik koos töötab](../../../../04-PracticalSamples/foundrylocal)
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Eeltingimused
 
-Enne õpetuse alustamist veendu, et sul oleks:
+Enne õpetuse alustamist veendu, et sul on:
 
 - **Java 21 või uuem** paigaldatud sinu süsteemi
 - **Maven 3.6+** projekti ehitamiseks
@@ -45,11 +45,11 @@ foundry model run phi-3.5-mini
 
 ## Projekti ülevaade
 
-Projekt koosneb neljast põhikomponendist:
+Projekt koosneb neljast peamisest komponendist:
 
-1. **Application.java** - Spring Booti rakenduse peamine käivituspunkt
+1. **Application.java** - Peamine Spring Booti rakenduse käivituspunkt
 2. **FoundryLocalService.java** - Teenuse kiht, mis haldab AI suhtlust
-3. **application.properties** - Konfiguratsioon Foundry Locali ühenduse jaoks
+3. **application.properties** - Foundry Locali ühenduse konfiguratsioon
 4. **pom.xml** - Maven sõltuvused ja projekti konfiguratsioon
 
 ## Koodi mõistmine
@@ -65,11 +65,11 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **Mida see teeb:**
 - **base-url**: Määrab, kus Foundry Local töötab, sealhulgas `/v1` tee OpenAI API ühilduvuse jaoks. **Märkus**: Foundry Local määrab dünaamiliselt pordi, seega kontrolli tegelikku porti käsuga `foundry service status`
-- **model**: Määrab AI mudeli nime, mida kasutatakse tekstigeneratsiooniks, sealhulgas versiooninumbri (nt `:1`). Kasuta `foundry model list`, et näha saadaolevaid mudeleid koos nende täpsete ID-dega
+- **model**: Määrab AI mudeli nime tekstigeneratsiooniks, sealhulgas versiooninumbri (nt `:1`). Kasuta käsku `foundry model list`, et näha saadaolevaid mudeleid ja nende täpseid ID-sid
 
-**Põhimõte:** Spring Boot laadib need omadused automaatselt ja teeb need rakendusele kättesaadavaks, kasutades annotatsiooni `@Value`.
+**Põhimõte:** Spring Boot laadib need omadused automaatselt ja teeb need rakendusele kättesaadavaks `@Value` annotatsiooni abil.
 
-### 2. Põhirakenduse klass (Application.java)
+### 2. Peamine rakendusklass (Application.java)
 
 **Fail:** `src/main/java/com/example/Application.java`
 
@@ -130,7 +130,7 @@ public class FoundryLocalService {
 **Mida see teeb:**
 - `@Service` ütleb Springile, et see klass pakub äriloogikat
 - `@Value` süstib konfiguratsiooniväärtused application.properties failist
-- Süntaks `:default-value` pakub varuväärtusi, kui omadused pole määratud
+- `:default-value` süntaks pakub varuväärtusi, kui omadused pole määratud
 
 #### Kliendi initsialiseerimine:
 ```java
@@ -146,8 +146,8 @@ public void init() {
 **Mida see teeb:**
 - `@PostConstruct` käivitab selle meetodi pärast Springi teenuse loomist
 - Loob OpenAI kliendi, mis suunab sinu kohalikule Foundry Locali instantsile
-- `application.properties` failist pärit baasaadress sisaldab juba `/v1` OpenAI API ühilduvuse jaoks
-- API võti on seatud "not-needed", kuna kohalik arendus ei nõua autentimist
+- `application.properties` failist pärit base URL sisaldab juba `/v1` OpenAI API ühilduvuse jaoks
+- API võti on seatud väärtusele "not-needed", kuna kohalik arendus ei vaja autentimist
 
 #### Vestlusmeetod:
 ```java
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -178,11 +178,11 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: Konfigureerib AI päringu
   - `model`: Määrab, millist AI mudelit kasutada (peab vastama täpsele ID-le `foundry model list` käsust)
   - `addUserMessage`: Lisab sinu sõnumi vestlusesse
-  - `maxTokens`: Piirab vastuse pikkust (säästab ressursse)
+  - `maxCompletionTokens`: Piirab vastuse pikkust (säästab ressursse)
   - `temperature`: Kontrollib juhuslikkust (0.0 = deterministlik, 1.0 = loov)
 - **API päring**: Saadab päringu Foundry Localile
 - **Vastuse töötlemine**: Ekstraheerib AI tekstivastuse turvaliselt
-- **Tõrkeotsing**: Käsitleb erandeid kasulike veateadetega
+- **Vigade käsitlemine**: Pakib erandid kasulike veateadetega
 
 ### 4. Projekti sõltuvused (pom.xml)
 
@@ -233,14 +233,14 @@ Siin on täielik voog, kui rakendust käivitatakse:
 
 Foundry Locali seadistamiseks järgi neid samme:
 
-1. **Paigalda Foundry Local** vastavalt juhistele [Eeltingimused](../../../../04-PracticalSamples/foundrylocal) jaotises.
+1. **Paigalda Foundry Local** kasutades juhiseid [Eeltingimuste](../../../../04-PracticalSamples/foundrylocal) jaotises.
 
 2. **Kontrolli dünaamiliselt määratud porti**. Foundry Local määrab automaatselt pordi käivitamisel. Leia oma port käsuga:
    ```bash
    foundry service status
    ```
    
-   **Valikuline**: Kui eelistad kasutada kindlat porti (nt 5273), saad selle käsitsi seadistada:
+   **Valikuline**: Kui eelistad kasutada kindlat porti (nt 5273), saad selle käsitsi konfigureerida:
    ```bash
    foundry service set --port 5273
    ```
@@ -252,7 +252,7 @@ Foundry Locali seadistamiseks järgi neid samme:
 
 4. **Konfigureeri application.properties** fail, et see vastaks sinu Foundry Locali seadetele:
    - Uuenda porti `base-url` (2. samm), veendudes, et see sisaldab `/v1` lõpus
-   - Uuenda mudeli nime, et see sisaldaks versiooninumbrit (kontrolli `foundry model list` käsuga)
+   - Uuenda mudeli nime, et see sisaldaks versiooninumbrit (kontrolli käsuga `foundry model list`)
    
    Näide:
    ```properties
@@ -290,7 +290,7 @@ Is there something specific you'd like help with today?
 
 ## Järgmised sammud
 
-Rohkem näiteid leiad [Peatükk 04: Praktilised näited](../README.md)
+Rohkem näiteid leiad [4. peatükk: Praktilised näited](../README.md)
 
 ## Tõrkeotsing
 
@@ -304,15 +304,15 @@ Rohkem näiteid leiad [Peatükk 04: Praktilised näited](../README.md)
 - Proovi Foundry Locali taaskäivitada: `foundry model run phi-3.5-mini`
 
 **"Model not found" või "404 Not Found" vead**
-- Kontrolli saadaolevaid mudeleid koos täpsete ID-dega: `foundry model list`
-- Uuenda mudeli nime `application.properties` failis, et see vastaks täpselt, sealhulgas versiooninumber (nt `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- Kontrolli saadaolevaid mudeleid ja nende täpseid ID-sid: `foundry model list`
+- Uuenda mudeli nime `application.properties` failis, et see täpselt vastaks, sealhulgas versiooninumber (nt `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Veendu, et `base-url` sisaldab `/v1` lõpus: `http://localhost:5273/v1`
 - Laadi mudel alla, kui vaja: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" vead**
-- Kontrolli, et baasaadress sisaldab `/v1`: `http://localhost:5273/v1`
-- Veendu, et mudeli ID vastab täpselt sellele, mis kuvatakse `foundry model list` käsus
-- Kasuta koodis `maxTokens()` asemel `maxCompletionTokens()`
+- Kontrolli, et base URL sisaldab `/v1`: `http://localhost:5273/v1`
+- Veendu, et mudeli ID vastab täpselt sellele, mis on näidatud `foundry model list` käsus
+- Veendu, et kasutad `maxCompletionTokens()` oma koodis (mitte vananenud `maxTokens()`)
 
 **Maveni kompileerimisvead**
 - Veendu, et Java 21 või uuem on paigaldatud: `java -version`
@@ -327,4 +327,4 @@ Rohkem näiteid leiad [Peatükk 04: Praktilised näited](../README.md)
 ---
 
 **Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul on soovitatav kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.

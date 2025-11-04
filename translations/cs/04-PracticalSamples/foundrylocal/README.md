@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:13:56+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:55:01+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "cs"
 }
@@ -129,7 +129,7 @@ public class FoundryLocalService {
 
 **Co to dělá:**
 - `@Service` říká Springu, že tato třída poskytuje obchodní logiku
-- `@Value` injektuje hodnoty konfigurace z application.properties
+- `@Value` injektuje konfigurační hodnoty z application.properties
 - Syntaxe `:default-value` poskytuje výchozí hodnoty, pokud vlastnosti nejsou nastaveny
 
 #### Inicializace klienta:
@@ -149,14 +149,14 @@ public void init() {
 - Základní URL z `application.properties` již obsahuje `/v1` pro kompatibilitu s OpenAI API
 - API klíč je nastaven na "not-needed", protože lokální vývoj nevyžaduje autentizaci
 
-#### Metoda Chat:
+#### Metoda pro chat:
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -176,11 +176,11 @@ public String chat(String message) {
 
 **Co to dělá:**
 - **ChatCompletionCreateParams**: Konfiguruje požadavek na AI
-  - `model`: Určuje, který AI model se má použít (musí odpovídat přesnému ID z `foundry model list`)
+  - `model`: Určuje, který AI model použít (musí odpovídat přesnému ID z `foundry model list`)
   - `addUserMessage`: Přidává vaši zprávu do konverzace
-  - `maxTokens`: Omezuje délku odpovědi (šetří zdroje)
+  - `maxCompletionTokens`: Omezuje délku odpovědi (šetří zdroje)
   - `temperature`: Řídí náhodnost (0.0 = deterministické, 1.0 = kreativní)
-- **API Call**: Posílá požadavek na Foundry Local
+- **API volání**: Posílá požadavek na Foundry Local
 - **Zpracování odpovědi**: Bezpečně extrahuje textovou odpověď AI
 - **Zpracování chyb**: Obaluje výjimky s užitečnými chybovými zprávami
 
@@ -221,9 +221,9 @@ public String chat(String message) {
 Zde je kompletní tok, když spustíte aplikaci:
 
 1. **Spuštění**: Spring Boot se spustí a načte `application.properties`
-2. **Vytvoření služby**: Spring vytvoří `FoundryLocalService` a injektuje hodnoty konfigurace
+2. **Vytvoření služby**: Spring vytvoří `FoundryLocalService` a injektuje konfigurační hodnoty
 3. **Nastavení klienta**: `@PostConstruct` inicializuje OpenAI klienta pro připojení k Foundry Local
-4. **Spuštění dema**: `CommandLineRunner` se spustí po spuštění
+4. **Provedení dema**: `CommandLineRunner` se spustí po startu
 5. **Volání AI**: Demo volá `foundryLocalService.chat()` s testovací zprávou
 6. **API požadavek**: Služba sestaví a pošle požadavek kompatibilní s OpenAI na Foundry Local
 7. **Zpracování odpovědi**: Služba extrahuje a vrátí odpověď AI
@@ -240,7 +240,7 @@ Pro nastavení Foundry Local postupujte podle těchto kroků:
    foundry service status
    ```
    
-   **Volitelné**: Pokud preferujete použití konkrétního portu (např. 5273), můžete jej nastavit manuálně:
+   **Volitelné**: Pokud preferujete použití konkrétního portu (např. 5273), můžete jej nastavit ručně:
    ```bash
    foundry service set --port 5273
    ```
@@ -252,7 +252,7 @@ Pro nastavení Foundry Local postupujte podle těchto kroků:
 
 4. **Konfigurujte soubor application.properties** tak, aby odpovídal vašemu nastavení Foundry Local:
    - Aktualizujte port v `base-url` (z kroku 2), ujistěte se, že obsahuje `/v1` na konci
-   - Aktualizujte název modelu tak, aby obsahoval číslo verze (zkontrolujte pomocí `foundry model list`)
+   - Aktualizujte název modelu, aby obsahoval číslo verze (zkontrolujte pomocí `foundry model list`)
    
    Příklad:
    ```properties
@@ -312,19 +312,19 @@ Pro více příkladů viz [Kapitola 04: Praktické ukázky](../README.md)
 **"400 Bad Request" chyby**
 - Ověřte, že základní URL obsahuje `/v1`: `http://localhost:5273/v1`
 - Zkontrolujte, že ID modelu přesně odpovídá tomu, co je uvedeno v `foundry model list`
-- Ujistěte se, že používáte `maxTokens()` místo `maxCompletionTokens()` ve vašem kódu
+- Ujistěte se, že používáte `maxCompletionTokens()` ve svém kódu (ne zastaralé `maxTokens()`)
 
 **Chyby při kompilaci Maven**
 - Ujistěte se, že máte Java 21 nebo vyšší: `java -version`
 - Vyčistěte a znovu sestavte: `mvn clean compile`
-- Zkontrolujte internetové připojení pro stažení závislostí
+- Zkontrolujte připojení k internetu pro stažení závislostí
 
 **Aplikace se spustí, ale žádný výstup**
-- Ověřte, že Foundry Local odpovídá: Otevřete prohlížeč na `http://localhost:5273`
+- Ověřte, že Foundry Local reaguje: Otevřete prohlížeč na `http://localhost:5273`
 - Zkontrolujte logy aplikace pro konkrétní chybové zprávy
 - Ujistěte se, že model je plně načtený a připravený
 
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
