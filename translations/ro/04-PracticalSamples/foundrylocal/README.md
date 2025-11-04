@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:56:23+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:34:06+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "ro"
 }
@@ -14,8 +14,8 @@ CO_OP_TRANSLATOR_METADATA:
 - [Prerechizite](../../../../04-PracticalSamples/foundrylocal)
 - [Prezentarea Proiectului](../../../../04-PracticalSamples/foundrylocal)
 - [Înțelegerea Codului](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Configurarea aplicației (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Clasa principală a aplicației (Application.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [1. Configurarea Aplicației (application.properties)](../../../../04-PracticalSamples/foundrylocal)
+  - [2. Clasa Principală a Aplicației (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. Stratul de Servicii AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Dependențele Proiectului (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Cum Funcționează Totul Împreună](../../../../04-PracticalSamples/foundrylocal)
@@ -29,11 +29,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 Înainte de a începe acest tutorial, asigură-te că ai:
 
-- **Java 21 sau mai recent** instalat pe sistemul tău
+- **Java 21 sau o versiune mai recentă** instalată pe sistemul tău
 - **Maven 3.6+** pentru construirea proiectului
 - **Foundry Local** instalat și funcțional
 
-### **Instalează Foundry Local:**
+### **Instalare Foundry Local:**
 
 ```bash
 # Windows
@@ -54,7 +54,7 @@ Acest proiect constă în patru componente principale:
 
 ## Înțelegerea Codului
 
-### 1. Configurarea aplicației (application.properties)
+### 1. Configurarea Aplicației (application.properties)
 
 **Fișier:** `src/main/resources/application.properties`
 
@@ -65,11 +65,11 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **Ce face:**
 - **base-url**: Specifică unde rulează Foundry Local, incluzând calea `/v1` pentru compatibilitatea cu API-ul OpenAI. **Notă**: Foundry Local atribuie dinamic un port, așa că verifică portul real folosind `foundry service status`
-- **model**: Numește modelul AI utilizat pentru generarea textului, incluzând numărul versiunii (ex.: `:1`). Folosește `foundry model list` pentru a vedea modelele disponibile cu ID-urile lor exacte.
+- **model**: Numește modelul AI utilizat pentru generarea textului, incluzând numărul versiunii (ex.: `:1`). Folosește `foundry model list` pentru a vedea modelele disponibile cu ID-urile lor exacte
 
 **Concept cheie:** Spring Boot încarcă automat aceste proprietăți și le face disponibile aplicației tale folosind adnotarea `@Value`.
 
-### 2. Clasa principală a aplicației (Application.java)
+### 2. Clasa Principală a Aplicației (Application.java)
 
 **Fișier:** `src/main/java/com/example/Application.java`
 
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,6 +102,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -108,7 +110,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 **Ce face:**
 - `@Bean` creează un component gestionat de Spring
 - `CommandLineRunner` rulează codul după ce Spring Boot pornește
-- `foundryLocalService` este injectat automat de Spring (injecție de dependență)
+- `foundryLocalService` este injectat automat de Spring (injection de dependențe)
 - Trimite un mesaj de test către AI și afișează răspunsul
 
 ### 3. Stratul de Servicii AI (FoundryLocalService.java)
@@ -176,7 +178,7 @@ public String chat(String message) {
 
 **Ce face:**
 - **ChatCompletionCreateParams**: Configurează cererea AI
-  - `model`: Specifică modelul AI utilizat (trebuie să corespundă exact ID-ului din `foundry model list`)
+  - `model`: Specifică modelul AI utilizat (trebuie să se potrivească exact cu ID-ul din `foundry model list`)
   - `addUserMessage`: Adaugă mesajul tău la conversație
   - `maxCompletionTokens`: Limitează lungimea răspunsului (economisește resurse)
   - `temperature`: Controlează aleatoritatea (0.0 = determinist, 1.0 = creativ)
@@ -213,12 +215,12 @@ public String chat(String message) {
 
 **Ce fac:**
 - **spring-boot-starter**: Oferă funcționalitatea de bază Spring Boot
-- **openai-java**: SDK-ul oficial OpenAI Java pentru comunicarea cu API-ul
+- **openai-java**: SDK-ul oficial OpenAI Java pentru comunicarea API
 - **jackson-databind**: Gestionează serializarea/deserializarea JSON pentru apelurile API
 
 ## Cum Funcționează Totul Împreună
 
-Iată fluxul complet atunci când rulezi aplicația:
+Iată fluxul complet când rulezi aplicația:
 
 1. **Pornire**: Spring Boot pornește și citește `application.properties`
 2. **Crearea Serviciului**: Spring creează `FoundryLocalService` și injectează valorile de configurare
@@ -311,20 +313,20 @@ Pentru mai multe exemple, vezi [Capitolul 04: Exemple practice](../README.md)
 
 **Erori "400 Bad Request"**
 - Verifică dacă URL-ul de bază include `/v1`: `http://localhost:5273/v1`
-- Asigură-te că ID-ul modelului corespunde exact cu ceea ce este afișat în `foundry model list`
-- Asigură-te că folosești `maxCompletionTokens()` în codul tău (nu `maxTokens()` care este depreciat)
+- Asigură-te că ID-ul modelului se potrivește exact cu ceea ce este afișat în `foundry model list`
+- Asigură-te că folosești `maxCompletionTokens()` în codul tău (nu metoda depreciată `maxTokens()`)
 
 **Erori de compilare Maven**
-- Asigură-te că ai Java 21 sau mai recent: `java -version`
+- Asigură-te că ai Java 21 sau o versiune mai recentă: `java -version`
 - Curăță și reconstruiește: `mvn clean compile`
 - Verifică conexiunea la internet pentru descărcarea dependențelor
 
-**Aplicația pornește dar nu afișează nimic**
-- Verifică dacă Foundry Local răspunde: Deschide browserul la `http://localhost:5273`
-- Verifică logurile aplicației pentru mesaje de eroare specifice
+**Aplicația pornește, dar nu afișează nimic**
+- Verifică dacă Foundry Local răspunde: Verifică `http://localhost:5273/v1/models` sau rulează `foundry service status`
+- Verifică jurnalele aplicației pentru mesaje de eroare specifice
 - Asigură-te că modelul este complet încărcat și gata
 
 ---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:59:51+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:38:00+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "lt"
 }
@@ -29,11 +29,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 Prieš pradedant šią pamoką, įsitikinkite, kad turite:
 
-- **Java 21 ar naujesnę versiją** įdiegtą jūsų sistemoje
+- **Java 21 ar naujesnę** versiją, įdiegtą jūsų sistemoje
 - **Maven 3.6+** projekto kūrimui
-- **Foundry Local** įdiegtą ir veikiančią
+- **Foundry Local**, įdiegtą ir veikiančią
 
-### **Įdiekite Foundry Local:**
+### **Foundry Local įdiegimas:**
 
 ```bash
 # Windows
@@ -65,7 +65,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **Ką tai daro:**
 - **base-url**: Nurodo, kur veikia Foundry Local, įskaitant `/v1` kelią OpenAI API suderinamumui. **Pastaba**: Foundry Local dinamiškai priskiria prievadą, todėl patikrinkite savo faktinį prievadą naudodami `foundry service status`
-- **model**: Nurodo AI modelį, kuris bus naudojamas teksto generavimui, įskaitant versijos numerį (pvz., `:1`). Naudokite `foundry model list`, kad pamatytumėte galimus modelius su jų tiksliais ID
+- **model**: Nurodo AI modelį, kuris bus naudojamas tekstų generavimui, įskaitant versijos numerį (pvz., `:1`). Naudokite `foundry model list`, kad pamatytumėte galimus modelius su jų tiksliais ID
 
 **Pagrindinė sąvoka:** Spring Boot automatiškai įkelia šias savybes ir padaro jas prieinamas jūsų programai naudojant `@Value` anotaciją.
 
@@ -85,7 +85,7 @@ public class Application {
 
 **Ką tai daro:**
 - `@SpringBootApplication` įgalina Spring Boot automatinę konfigūraciją
-- `WebApplicationType.NONE` nurodo Spring, kad tai yra komandų eilutės programa, o ne interneto serveris
+- `WebApplicationType.NONE` nurodo Spring, kad tai yra komandų eilutės programa, o ne žiniatinklio serveris
 - Pagrindinis metodas paleidžia Spring programą
 
 **Demo vykdytojas:**
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,6 +102,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -109,7 +111,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 - `@Bean` sukuria komponentą, kurį valdo Spring
 - `CommandLineRunner` vykdo kodą po Spring Boot paleidimo
 - `foundryLocalService` automatiškai įterpiamas Spring (priklausomybių įterpimas)
-- Siunčia testinę žinutę AI ir parodo atsakymą
+- Siunčia testinę žinutę AI ir rodo atsakymą
 
 ### 3. AI paslaugų sluoksnis (FoundryLocalService.java)
 
@@ -176,12 +178,12 @@ public String chat(String message) {
 
 **Ką tai daro:**
 - **ChatCompletionCreateParams**: Konfigūruoja AI užklausą
-  - `model`: Nurodo, kuris AI modelis bus naudojamas (turi atitikti tikslų ID iš `foundry model list`)
+  - `model`: Nurodo, kurį AI modelį naudoti (turi atitikti tikslų ID iš `foundry model list`)
   - `addUserMessage`: Prideda jūsų žinutę į pokalbį
   - `maxCompletionTokens`: Ribojama atsakymo ilgis (taupo resursus)
   - `temperature`: Valdo atsitiktinumą (0.0 = deterministinis, 1.0 = kūrybiškas)
 - **API užklausa**: Siunčia užklausą Foundry Local
-- **Atsakymo apdorojimas**: Saugiai ištraukia AI teksto atsakymą
+- **Atsakymo apdorojimas**: Saugiai ištraukia AI tekstinį atsakymą
 - **Klaidų tvarkymas**: Apgaubia išimtis su naudingomis klaidų žinutėmis
 
 ### 4. Projekto priklausomybės (pom.xml)
@@ -224,35 +226,35 @@ public String chat(String message) {
 2. **Paslaugos sukūrimas**: Spring sukuria `FoundryLocalService` ir įterpia konfigūracijos reikšmes
 3. **Kliento nustatymas**: `@PostConstruct` inicializuoja OpenAI klientą, kad prisijungtų prie Foundry Local
 4. **Demo vykdymas**: `CommandLineRunner` vykdomas po paleidimo
-5. **AI užklausa**: Demo kviečia `foundryLocalService.chat()` su testine žinute
+5. **AI užklausa**: Demo siunčia testinę žinutę į `foundryLocalService.chat()`
 6. **API užklausa**: Paslauga sukuria ir siunčia OpenAI suderinamą užklausą Foundry Local
 7. **Atsakymo apdorojimas**: Paslauga ištraukia ir grąžina AI atsakymą
-8. **Rodymas**: Programa atspausdina atsakymą ir užsidaro
+8. **Rodymas**: Programa atspausdina atsakymą ir baigia darbą
 
 ## Foundry Local nustatymas
 
 Norėdami nustatyti Foundry Local, atlikite šiuos veiksmus:
 
-1. **Įdiekite Foundry Local** naudodami instrukcijas iš [Reikalavimai](../../../../04-PracticalSamples/foundrylocal) skyriaus.
+1. **Įdiekite Foundry Local** naudodamiesi instrukcijomis iš [Reikalavimai](../../../../04-PracticalSamples/foundrylocal) skyriaus.
 
-2. **Patikrinkite dinamiškai priskirtą prievadą**. Foundry Local automatiškai priskiria prievadą paleidimo metu. Suraskite savo prievadą naudodami:
+2. **Patikrinkite dinamiškai priskirtą prievadą**. Foundry Local automatiškai priskiria prievadą, kai jis paleidžiamas. Suraskite savo prievadą naudodami:
    ```bash
    foundry service status
    ```
    
-   **Pasirinktinai**: Jei norite naudoti konkretų prievadą (pvz., 5273), galite jį nustatyti rankiniu būdu:
+   **Pasirinktinai**: Jei norite naudoti konkretų prievadą (pvz., 5273), galite jį konfigūruoti rankiniu būdu:
    ```bash
    foundry service set --port 5273
    ```
 
-3. **Atsisiųskite AI modelį**, kurį norite naudoti, pavyzdžiui, `phi-3.5-mini`, naudodami šią komandą:
+3. **Atsisiųskite AI modelį**, kurį norite naudoti, pvz., `phi-3.5-mini`, naudodami šią komandą:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
 4. **Konfigūruokite application.properties** failą, kad atitiktų jūsų Foundry Local nustatymus:
-   - Atnaujinkite prievadą `base-url` (iš 2 žingsnio), užtikrindami, kad pabaigoje būtų `/v1`
-   - Atnaujinkite modelio pavadinimą, kad įtrauktumėte versijos numerį (patikrinkite su `foundry model list`)
+   - Atnaujinkite prievadą `base-url` (iš 2 žingsnio), užtikrindami, kad jis apimtų `/v1` pabaigoje
+   - Atnaujinkite modelio pavadinimą, kad apimtų versijos numerį (patikrinkite su `foundry model list`)
    
    Pavyzdys:
    ```properties
@@ -306,25 +308,25 @@ Daugiau pavyzdžių rasite [4 skyriuje: Praktiniai pavyzdžiai](../README.md)
 **"Model not found" arba "404 Not Found" klaidos**
 - Patikrinkite galimus modelius su jų tiksliais ID: `foundry model list`
 - Atnaujinkite modelio pavadinimą `application.properties`, kad tiksliai atitiktų, įskaitant versijos numerį (pvz., `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Užtikrinkite, kad `base-url` baigtųsi `/v1`: `http://localhost:5273/v1`
+- Užtikrinkite, kad `base-url` apimtų `/v1` pabaigoje: `http://localhost:5273/v1`
 - Atsisiųskite modelį, jei reikia: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" klaidos**
-- Patikrinkite, ar bazinis URL baigiasi `/v1`: `http://localhost:5273/v1`
+- Patikrinkite, ar bazinis URL apima `/v1`: `http://localhost:5273/v1`
 - Patikrinkite, ar modelio ID tiksliai atitinka tai, kas rodoma `foundry model list`
-- Užtikrinkite, kad naudojate `maxCompletionTokens()` savo kode (ne pasenusią `maxTokens()`)
+- Užtikrinkite, kad jūsų kode naudojate `maxCompletionTokens()` (ne pasenusią `maxTokens()`)
 
 **Maven kompiliavimo klaidos**
-- Įsitikinkite, kad naudojate Java 21 ar naujesnę versiją: `java -version`
-- Išvalykite ir perkompiliuokite: `mvn clean compile`
-- Patikrinkite interneto ryšį priklausomybių atsisiuntimui
+- Įsitikinkite, kad turite Java 21 ar naujesnę versiją: `java -version`
+- Išvalykite ir iš naujo sukurkite: `mvn clean compile`
+- Patikrinkite interneto ryšį, kad atsisiųstumėte priklausomybes
 
 **Programa paleidžiama, bet nėra išvesties**
-- Patikrinkite, ar Foundry Local atsako: Atidarykite naršyklę adresu `http://localhost:5273`
-- Patikrinkite programos žurnalus dėl konkrečių klaidų pranešimų
-- Užtikrinkite, kad modelis būtų visiškai įkeltas ir paruoštas
+- Patikrinkite, ar Foundry Local atsako: Patikrinkite `http://localhost:5273/v1/models` arba paleiskite `foundry service status`
+- Patikrinkite programos žurnalus, ar nėra konkrečių klaidų pranešimų
+- Įsitikinkite, kad modelis yra visiškai įkeltas ir paruoštas
 
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus interpretavimus, atsiradusius naudojant šį vertimą.

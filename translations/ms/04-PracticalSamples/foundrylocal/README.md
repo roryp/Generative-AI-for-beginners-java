@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:52:58+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:30:31+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "ms"
 }
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [2. Kelas Aplikasi Utama (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. Lapisan Perkhidmatan AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Kebergantungan Projek (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [Bagaimana Semua Ini Berfungsi Bersama](../../../../04-PracticalSamples/foundrylocal)
+- [Bagaimana Semua Berfungsi Bersama](../../../../04-PracticalSamples/foundrylocal)
 - [Menyiapkan Foundry Tempatan](../../../../04-PracticalSamples/foundrylocal)
 - [Menjalankan Aplikasi](../../../../04-PracticalSamples/foundrylocal)
 - [Output Dijangka](../../../../04-PracticalSamples/foundrylocal)
@@ -43,6 +43,7 @@ winget install Microsoft.FoundryLocal
 foundry model run phi-3.5-mini
 ```
 
+
 ## Gambaran Projek
 
 Projek ini terdiri daripada empat komponen utama:
@@ -63,9 +64,10 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
+
 **Apa yang dilakukan:**
-- **base-url**: Menentukan lokasi Foundry Tempatan berjalan, termasuk laluan `/v1` untuk keserasian API OpenAI. **Nota**: Foundry Tempatan menetapkan port secara dinamik, jadi semak port sebenar anda menggunakan `foundry service status`
-- **model**: Menamakan model AI yang digunakan untuk penjanaan teks, termasuk nombor versi (contoh: `:1`). Gunakan `foundry model list` untuk melihat model yang tersedia dengan ID tepat mereka
+- **base-url**: Menentukan lokasi Foundry Tempatan berjalan, termasuk laluan `/v1` untuk keserasian API OpenAI. **Nota**: Foundry Tempatan menetapkan port secara dinamik, jadi periksa port sebenar anda menggunakan `foundry service status`
+- **model**: Menamakan model AI yang akan digunakan untuk penjanaan teks, termasuk nombor versi (contohnya, `:1`). Gunakan `foundry model list` untuk melihat model yang tersedia dengan ID tepat mereka
 
 **Konsep utama:** Spring Boot secara automatik memuatkan sifat-sifat ini dan menjadikannya tersedia untuk aplikasi anda menggunakan anotasi `@Value`.
 
@@ -83,17 +85,19 @@ public class Application {
     }
 ```
 
+
 **Apa yang dilakukan:**
 - `@SpringBootApplication` mengaktifkan konfigurasi automatik Spring Boot
 - `WebApplicationType.NONE` memberitahu Spring bahawa ini adalah aplikasi baris perintah, bukan pelayan web
 - Kaedah utama memulakan aplikasi Spring
 
-**Pelari Demo:**
+**Demo Runner:**
 ```java
 @Bean
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,9 +105,11 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
+
 
 **Apa yang dilakukan:**
 - `@Bean` mencipta komponen yang diuruskan oleh Spring
@@ -127,10 +133,11 @@ public class FoundryLocalService {
     private String model;
 ```
 
+
 **Apa yang dilakukan:**
 - `@Service` memberitahu Spring bahawa kelas ini menyediakan logik perniagaan
 - `@Value` menyuntik nilai konfigurasi daripada application.properties
-- Sintaks `:default-value` menyediakan nilai sandaran jika sifat tidak ditetapkan
+- Sintaks `:default-value` menyediakan nilai sandaran jika sifat-sifat tidak ditetapkan
 
 #### Inisialisasi Klien:
 ```java
@@ -142,6 +149,7 @@ public void init() {
             .build();
 }
 ```
+
 
 **Apa yang dilakukan:**
 - `@PostConstruct` menjalankan kaedah ini selepas Spring mencipta perkhidmatan
@@ -174,9 +182,10 @@ public String chat(String message) {
 }
 ```
 
+
 **Apa yang dilakukan:**
 - **ChatCompletionCreateParams**: Mengkonfigurasi permintaan AI
-  - `model`: Menentukan model AI yang digunakan (mesti sepadan dengan ID tepat daripada `foundry model list`)
+  - `model`: Menentukan model AI yang akan digunakan (mesti sepadan dengan ID tepat daripada `foundry model list`)
   - `addUserMessage`: Menambah mesej anda kepada perbualan
   - `maxCompletionTokens`: Mengehadkan panjang respons (menjimatkan sumber)
   - `temperature`: Mengawal kebarangkalian (0.0 = deterministik, 1.0 = kreatif)
@@ -211,16 +220,17 @@ public String chat(String message) {
 </dependency>
 ```
 
+
 **Apa yang dilakukan:**
-- **spring-boot-starter**: Menyediakan fungsi teras Spring Boot
+- **spring-boot-starter**: Menyediakan fungsi utama Spring Boot
 - **openai-java**: SDK Java rasmi OpenAI untuk komunikasi API
 - **jackson-databind**: Mengendalikan serialisasi/deserialisasi JSON untuk panggilan API
 
-## Bagaimana Semua Ini Berfungsi Bersama
+## Bagaimana Semua Berfungsi Bersama
 
 Berikut adalah aliran lengkap apabila anda menjalankan aplikasi:
 
-1. **Permulaan**: Spring Boot dimulakan dan membaca `application.properties`
+1. **Permulaan**: Spring Boot bermula dan membaca `application.properties`
 2. **Penciptaan Perkhidmatan**: Spring mencipta `FoundryLocalService` dan menyuntik nilai konfigurasi
 3. **Persediaan Klien**: `@PostConstruct` menginisialisasi klien OpenAI untuk menyambung ke Foundry Tempatan
 4. **Pelaksanaan Demo**: `CommandLineRunner` dilaksanakan selepas permulaan
@@ -231,34 +241,37 @@ Berikut adalah aliran lengkap apabila anda menjalankan aplikasi:
 
 ## Menyiapkan Foundry Tempatan
 
-Untuk menyiapkan Foundry Tempatan, ikuti langkah-langkah ini:
+Untuk menyiapkan Foundry Tempatan, ikuti langkah-langkah berikut:
 
 1. **Pasang Foundry Tempatan** menggunakan arahan dalam bahagian [Prasyarat](../../../../04-PracticalSamples/foundrylocal).
 
-2. **Semak port yang ditetapkan secara dinamik**. Foundry Tempatan secara automatik menetapkan port apabila ia dimulakan. Cari port anda dengan:
+2. **Periksa port yang ditetapkan secara dinamik**. Foundry Tempatan secara automatik menetapkan port apabila ia bermula. Cari port anda dengan:
    ```bash
    foundry service status
    ```
    
-   **Pilihan**: Jika anda lebih suka menggunakan port tertentu (contoh: 5273), anda boleh mengkonfigurasinya secara manual:
+   **Pilihan**: Jika anda lebih suka menggunakan port tertentu (contohnya, 5273), anda boleh mengkonfigurasinya secara manual:
    ```bash
    foundry service set --port 5273
    ```
+
 
 3. **Muat turun model AI** yang anda ingin gunakan, contohnya, `phi-3.5-mini`, dengan arahan berikut:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
+
 4. **Konfigurasikan fail application.properties** untuk sepadan dengan tetapan Foundry Tempatan anda:
    - Kemas kini port dalam `base-url` (daripada langkah 2), pastikan ia termasuk `/v1` di hujungnya
-   - Kemas kini nama model untuk memasukkan nombor versi (semak dengan `foundry model list`)
+   - Kemas kini nama model untuk termasuk nombor versi (periksa dengan `foundry model list`)
    
    Contoh:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
    foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
    ```
+
 
 ## Menjalankan Aplikasi
 
@@ -267,11 +280,13 @@ Untuk menyiapkan Foundry Tempatan, ikuti langkah-langkah ini:
 foundry model run phi-3.5-mini
 ```
 
+
 ### Langkah 2: Bina dan Jalankan Aplikasi
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
+
 
 ## Output Dijangka
 
@@ -288,6 +303,7 @@ Is there something specific you'd like help with today?
 =========================
 ```
 
+
 ## Langkah Seterusnya
 
 Untuk lebih banyak contoh, lihat [Bab 04: Contoh Praktikal](../README.md)
@@ -297,34 +313,34 @@ Untuk lebih banyak contoh, lihat [Bab 04: Contoh Praktikal](../README.md)
 ### Masalah Biasa
 
 **"Connection refused" atau "Service unavailable"**
-- Pastikan Foundry Tempatan berjalan: `foundry model list`
-- Semak port sebenar yang digunakan oleh Foundry Tempatan: `foundry service status`
+- Pastikan Foundry Tempatan sedang berjalan: `foundry model list`
+- Periksa port sebenar yang digunakan oleh Foundry Tempatan: `foundry service status`
 - Kemas kini `application.properties` anda dengan port yang betul, pastikan URL berakhir dengan `/v1`
 - Sebagai alternatif, tetapkan port tertentu jika diinginkan: `foundry service set --port 5273`
 - Cuba mulakan semula Foundry Tempatan: `foundry model run phi-3.5-mini`
 
 **"Model not found" atau "404 Not Found" errors**
-- Semak model yang tersedia dengan ID tepat mereka: `foundry model list`
-- Kemas kini nama model dalam `application.properties` agar sepadan dengan tepat, termasuk nombor versi (contoh: `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- Periksa model yang tersedia dengan ID tepat mereka: `foundry model list`
+- Kemas kini nama model dalam `application.properties` untuk sepadan dengan tepat, termasuk nombor versi (contohnya, `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Pastikan `base-url` termasuk `/v1` di hujungnya: `http://localhost:5273/v1`
 - Muat turun model jika diperlukan: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" errors**
 - Sahkan URL asas termasuk `/v1`: `http://localhost:5273/v1`
-- Semak bahawa ID model sepadan dengan tepat seperti yang ditunjukkan dalam `foundry model list`
-- Pastikan anda menggunakan `maxCompletionTokens()` dalam kod anda (bukan `maxTokens()` yang telah usang)
+- Periksa bahawa ID model sepadan dengan tepat apa yang ditunjukkan dalam `foundry model list`
+- Pastikan anda menggunakan `maxCompletionTokens()` dalam kod anda (bukan `maxTokens()` yang sudah tidak digunakan)
 
-**Ralat kompilasi Maven**
+**Kesalahan kompilasi Maven**
 - Pastikan Java 21 atau lebih tinggi: `java -version`
 - Bersihkan dan bina semula: `mvn clean compile`
-- Semak sambungan internet untuk muat turun kebergantungan
+- Periksa sambungan internet untuk muat turun kebergantungan
 
-**Aplikasi dimulakan tetapi tiada output**
-- Sahkan Foundry Tempatan memberi respons: Buka pelayar ke `http://localhost:5273`
-- Semak log aplikasi untuk mesej ralat tertentu
-- Pastikan model dimuat sepenuhnya dan sedia
+**Aplikasi bermula tetapi tiada output**
+- Sahkan Foundry Tempatan memberikan respons: Periksa `http://localhost:5273/v1/models` atau jalankan `foundry service status`
+- Periksa log aplikasi untuk mesej ralat tertentu
+- Pastikan model dimuatkan sepenuhnya dan sedia
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

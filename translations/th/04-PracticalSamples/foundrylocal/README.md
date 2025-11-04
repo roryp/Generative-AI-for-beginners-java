@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:48:58+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:25:52+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "th"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [ข้อกำหนดเบื้องต้น](../../../../04-PracticalSamples/foundrylocal)
 - [ภาพรวมของโปรเจกต์](../../../../04-PracticalSamples/foundrylocal)
 - [การทำความเข้าใจโค้ด](../../../../04-PracticalSamples/foundrylocal)
-  - [1. การตั้งค่าของแอปพลิเคชัน (application.properties)](../../../../04-PracticalSamples/foundrylocal)
+  - [1. การตั้งค่าการใช้งาน (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. คลาสแอปพลิเคชันหลัก (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. ชั้นบริการ AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. การพึ่งพาโปรเจกต์ (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
@@ -43,6 +43,7 @@ winget install Microsoft.FoundryLocal
 foundry model run phi-3.5-mini
 ```
 
+
 ## ภาพรวมของโปรเจกต์
 
 โปรเจกต์นี้ประกอบด้วย 4 ส่วนหลัก:
@@ -54,7 +55,7 @@ foundry model run phi-3.5-mini
 
 ## การทำความเข้าใจโค้ด
 
-### 1. การตั้งค่าของแอปพลิเคชัน (application.properties)
+### 1. การตั้งค่าการใช้งาน (application.properties)
 
 **ไฟล์:** `src/main/resources/application.properties`
 
@@ -63,9 +64,10 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
-**สิ่งที่ทำ:**
+
+**สิ่งที่ไฟล์นี้ทำ:**
 - **base-url**: ระบุที่อยู่ที่ Foundry Local กำลังทำงาน รวมถึงเส้นทาง `/v1` เพื่อความเข้ากันได้กับ OpenAI API **หมายเหตุ**: Foundry Local กำหนดพอร์ตแบบไดนามิก ดังนั้นตรวจสอบพอร์ตจริงของคุณโดยใช้ `foundry service status`
-- **model**: ระบุชื่อโมเดล AI ที่จะใช้สำหรับการสร้างข้อความ รวมถึงหมายเลขเวอร์ชัน (เช่น `:1`) ใช้ `foundry model list` เพื่อดูโมเดลที่มีอยู่พร้อม ID ที่แน่นอน
+- **model**: ระบุชื่อโมเดล AI ที่จะใช้ในการสร้างข้อความ รวมถึงหมายเลขเวอร์ชัน (เช่น `:1`) ใช้ `foundry model list` เพื่อดูโมเดลที่มีอยู่พร้อม ID ที่ถูกต้อง
 
 **แนวคิดสำคัญ:** Spring Boot โหลดคุณสมบัติเหล่านี้โดยอัตโนมัติและทำให้พร้อมใช้งานในแอปพลิเคชันของคุณโดยใช้คำสั่ง `@Value`
 
@@ -83,17 +85,19 @@ public class Application {
     }
 ```
 
-**สิ่งที่ทำ:**
+
+**สิ่งที่ไฟล์นี้ทำ:**
 - `@SpringBootApplication` เปิดใช้งานการตั้งค่าอัตโนมัติของ Spring Boot
-- `WebApplicationType.NONE` บอก Spring ว่านี่คือแอปพลิเคชันแบบบรรทัดคำสั่ง ไม่ใช่เซิร์ฟเวอร์เว็บ
+- `WebApplicationType.NONE` บอก Spring ว่านี่เป็นแอปพลิเคชันแบบบรรทัดคำสั่ง ไม่ใช่เซิร์ฟเวอร์เว็บ
 - เมธอดหลักเริ่มต้นแอปพลิเคชัน Spring
 
-**ตัวรันเดโม:**
+**ตัวอย่างการทำงาน:**
 ```java
 @Bean
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,14 +105,16 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
 
-**สิ่งที่ทำ:**
+
+**สิ่งที่ไฟล์นี้ทำ:**
 - `@Bean` สร้างคอมโพเนนต์ที่ Spring จัดการ
 - `CommandLineRunner` รันโค้ดหลังจาก Spring Boot เริ่มต้น
-- `foundryLocalService` ถูกฉีดโดยอัตโนมัติด้วย Spring (dependency injection)
+- `foundryLocalService` ถูกฉีดโดย Spring โดยอัตโนมัติ (dependency injection)
 - ส่งข้อความทดสอบไปยัง AI และแสดงผลลัพธ์
 
 ### 3. ชั้นบริการ AI (FoundryLocalService.java)
@@ -127,12 +133,13 @@ public class FoundryLocalService {
     private String model;
 ```
 
-**สิ่งที่ทำ:**
-- `@Service` บอก Spring ว่าคลาสนี้ให้บริการตรรกะทางธุรกิจ
-- `@Value` ฉีดค่าการตั้งค่าจาก application.properties
-- ไวยากรณ์ `:default-value` ให้ค่าตกลงหากไม่มีการตั้งค่า
 
-#### การเริ่มต้นไคลเอนต์:
+**สิ่งที่ไฟล์นี้ทำ:**
+- `@Service` บอก Spring ว่าคลาสนี้ให้บริการด้านตรรกะธุรกิจ
+- `@Value` ฉีดค่าการตั้งค่าจาก application.properties
+- ไวยากรณ์ `:default-value` ให้ค่าตั้งต้นหากไม่มีการตั้งค่า
+
+#### การตั้งค่าคลายเอนต์:
 ```java
 @PostConstruct
 public void init() {
@@ -143,13 +150,14 @@ public void init() {
 }
 ```
 
-**สิ่งที่ทำ:**
-- `@PostConstruct` รันเมธอดนี้หลังจาก Spring สร้างบริการ
-- สร้างไคลเอนต์ OpenAI ที่ชี้ไปยัง Foundry Local ในเครื่องของคุณ
-- URL พื้นฐานจาก `application.properties` รวมถึง `/v1` เพื่อความเข้ากันได้กับ OpenAI API
-- คีย์ API ถูกตั้งค่าเป็น "not-needed" เพราะการพัฒนาในเครื่องไม่ต้องการการตรวจสอบสิทธิ์
 
-#### เมธอดแชท:
+**สิ่งที่ไฟล์นี้ทำ:**
+- `@PostConstruct` รันเมธอดนี้หลังจาก Spring สร้างบริการ
+- สร้าง OpenAI client ที่ชี้ไปยัง Foundry Local ในเครื่องของคุณ
+- URL พื้นฐานจาก `application.properties` รวมถึง `/v1` เพื่อความเข้ากันได้กับ OpenAI API
+- ตั้งค่า API key เป็น "not-needed" เพราะการพัฒนาในเครื่องไม่ต้องการการตรวจสอบสิทธิ์
+
+#### เมธอด Chat:
 ```java
 public String chat(String message) {
     try {
@@ -174,13 +182,14 @@ public String chat(String message) {
 }
 ```
 
-**สิ่งที่ทำ:**
+
+**สิ่งที่ไฟล์นี้ทำ:**
 - **ChatCompletionCreateParams**: กำหนดค่าคำขอ AI
-  - `model`: ระบุโมเดล AI ที่จะใช้ (ต้องตรงกับ ID ที่แน่นอนจาก `foundry model list`)
+  - `model`: ระบุโมเดล AI ที่จะใช้ (ต้องตรงกับ ID ที่ถูกต้องจาก `foundry model list`)
   - `addUserMessage`: เพิ่มข้อความของคุณในบทสนทนา
   - `maxCompletionTokens`: จำกัดความยาวของผลลัพธ์ (ประหยัดทรัพยากร)
   - `temperature`: ควบคุมความสุ่ม (0.0 = กำหนดแน่นอน, 1.0 = สร้างสรรค์)
-- **การเรียก API**: ส่งคำขอไปยัง Foundry Local
+- **API Call**: ส่งคำขอไปยัง Foundry Local
 - **การจัดการผลลัพธ์**: ดึงข้อความตอบกลับของ AI อย่างปลอดภัย
 - **การจัดการข้อผิดพลาด**: ห่อข้อยกเว้นด้วยข้อความแนะนำที่เป็นประโยชน์
 
@@ -211,23 +220,24 @@ public String chat(String message) {
 </dependency>
 ```
 
-**สิ่งที่ทำ:**
+
+**สิ่งที่ไฟล์นี้ทำ:**
 - **spring-boot-starter**: ให้ฟังก์ชันการทำงานหลักของ Spring Boot
 - **openai-java**: SDK Java อย่างเป็นทางการของ OpenAI สำหรับการสื่อสาร API
-- **jackson-databind**: จัดการการแปลง JSON สำหรับการเรียก API
+- **jackson-databind**: จัดการการแปลง JSON สำหรับคำขอ API
 
 ## การทำงานร่วมกันทั้งหมด
 
 นี่คือกระบวนการทั้งหมดเมื่อคุณรันแอปพลิเคชัน:
 
 1. **เริ่มต้น**: Spring Boot เริ่มต้นและอ่าน `application.properties`
-2. **การสร้างบริการ**: Spring สร้าง `FoundryLocalService` และฉีดค่าการตั้งค่า
-3. **การตั้งค่าไคลเอนต์**: `@PostConstruct` เริ่มต้นไคลเอนต์ OpenAI เพื่อเชื่อมต่อกับ Foundry Local
-4. **การรันเดโม**: `CommandLineRunner` รันหลังจากเริ่มต้น
-5. **การเรียก AI**: เดโมเรียก `foundryLocalService.chat()` พร้อมข้อความทดสอบ
+2. **สร้างบริการ**: Spring สร้าง `FoundryLocalService` และฉีดค่าการตั้งค่า
+3. **ตั้งค่าคลายเอนต์**: `@PostConstruct` เริ่มต้น OpenAI client เพื่อเชื่อมต่อกับ Foundry Local
+4. **การทำงานตัวอย่าง**: `CommandLineRunner` รันหลังจากเริ่มต้น
+5. **เรียก AI**: ตัวอย่างเรียก `foundryLocalService.chat()` พร้อมข้อความทดสอบ
 6. **คำขอ API**: บริการสร้างและส่งคำขอที่เข้ากันได้กับ OpenAI ไปยัง Foundry Local
-7. **การประมวลผลผลลัพธ์**: บริการดึงและส่งคืนผลลัพธ์ของ AI
-8. **การแสดงผล**: แอปพลิเคชันพิมพ์ผลลัพธ์และออกจากระบบ
+7. **การจัดการผลลัพธ์**: บริการดึงและส่งคืนผลลัพธ์ของ AI
+8. **แสดงผล**: แอปพลิเคชันพิมพ์ผลลัพธ์และออกจากระบบ
 
 ## การตั้งค่า Foundry Local
 
@@ -240,15 +250,17 @@ public String chat(String message) {
    foundry service status
    ```
    
-   **ตัวเลือก**: หากคุณต้องการใช้พอร์ตเฉพาะ (เช่น 5273) คุณสามารถตั้งค่าด้วยตนเอง:
+   **ตัวเลือกเพิ่มเติม**: หากคุณต้องการใช้พอร์ตเฉพาะ (เช่น 5273) คุณสามารถตั้งค่าด้วยตนเอง:
    ```bash
    foundry service set --port 5273
    ```
+
 
 3. **ดาวน์โหลดโมเดล AI** ที่คุณต้องการใช้ เช่น `phi-3.5-mini` ด้วยคำสั่งต่อไปนี้:
    ```bash
    foundry model run phi-3.5-mini
    ```
+
 
 4. **ตั้งค่าไฟล์ application.properties** ให้ตรงกับการตั้งค่า Foundry Local ของคุณ:
    - อัปเดตพอร์ตใน `base-url` (จากขั้นตอนที่ 2) โดยตรวจสอบให้แน่ใจว่ามี `/v1` ที่ท้าย
@@ -260,6 +272,7 @@ public String chat(String message) {
    foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
    ```
 
+
 ## การรันแอปพลิเคชัน
 
 ### ขั้นตอนที่ 1: เริ่มต้น Foundry Local
@@ -267,11 +280,13 @@ public String chat(String message) {
 foundry model run phi-3.5-mini
 ```
 
+
 ### ขั้นตอนที่ 2: สร้างและรันแอปพลิเคชัน
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
+
 
 ## ผลลัพธ์ที่คาดหวัง
 
@@ -287,6 +302,7 @@ questions, helping with analysis, creative writing, coding, and general conversa
 Is there something specific you'd like help with today?
 =========================
 ```
+
 
 ## ขั้นตอนถัดไป
 
@@ -304,25 +320,25 @@ Is there something specific you'd like help with today?
 - ลองรีสตาร์ท Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" หรือ "404 Not Found"**
-- ตรวจสอบโมเดลที่มีอยู่พร้อม ID ที่แน่นอน: `foundry model list`
+- ตรวจสอบโมเดลที่มีอยู่พร้อม ID ที่ถูกต้อง: `foundry model list`
 - อัปเดตชื่อโมเดลใน `application.properties` ให้ตรงกับ ID รวมถึงหมายเลขเวอร์ชัน (เช่น `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- ตรวจสอบให้แน่ใจว่า `base-url` ลงท้ายด้วย `/v1`: `http://localhost:5273/v1`
+- ตรวจสอบให้แน่ใจว่า `base-url` รวม `/v1` ที่ท้าย: `http://localhost:5273/v1`
 - ดาวน์โหลดโมเดลหากจำเป็น: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request"**
-- ตรวจสอบว่า URL พื้นฐานลงท้ายด้วย `/v1`: `http://localhost:5273/v1`
+- ตรวจสอบให้แน่ใจว่า URL พื้นฐานรวม `/v1`: `http://localhost:5273/v1`
 - ตรวจสอบว่า ID โมเดลตรงกับที่แสดงใน `foundry model list`
 - ตรวจสอบให้แน่ใจว่าคุณใช้ `maxCompletionTokens()` ในโค้ดของคุณ (ไม่ใช่ `maxTokens()` ที่เลิกใช้แล้ว)
 
-**ข้อผิดพลาดการคอมไพล์ Maven**
-- ตรวจสอบ Java 21 หรือสูงกว่า: `java -version`
+**ข้อผิดพลาดในการคอมไพล์ Maven**
+- ตรวจสอบว่าใช้ Java 21 หรือสูงกว่า: `java -version`
 - ล้างและสร้างใหม่: `mvn clean compile`
 - ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตสำหรับการดาวน์โหลดการพึ่งพา
 
 **แอปพลิเคชันเริ่มต้นแต่ไม่มีผลลัพธ์**
-- ตรวจสอบว่า Foundry Local ตอบสนอง: เปิดเบราว์เซอร์ไปที่ `http://localhost:5273`
-- ตรวจสอบบันทึกของแอปพลิเคชันสำหรับข้อความแสดงข้อผิดพลาดเฉพาะ
-- ตรวจสอบว่าโมเดลโหลดเสร็จและพร้อมใช้งาน
+- ตรวจสอบว่า Foundry Local ตอบสนอง: ตรวจสอบ `http://localhost:5273/v1/models` หรือรัน `foundry service status`
+- ตรวจสอบบันทึกของแอปพลิเคชันสำหรับข้อความข้อผิดพลาดเฉพาะ
+- ตรวจสอบว่าโมเดลโหลดเสร็จสมบูรณ์และพร้อมใช้งาน
 
 ---
 

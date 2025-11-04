@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:45:44+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:22:36+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "pt"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - [Pré-requisitos](../../../../04-PracticalSamples/foundrylocal)
 - [Visão Geral do Projeto](../../../../04-PracticalSamples/foundrylocal)
-- [Compreendendo o Código](../../../../04-PracticalSamples/foundrylocal)
+- [Entendendo o Código](../../../../04-PracticalSamples/foundrylocal)
   - [1. Configuração da Aplicação (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. Classe Principal da Aplicação (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. Camada de Serviço de IA (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Como Tudo Funciona Junto](../../../../04-PracticalSamples/foundrylocal)
 - [Configurando o Foundry Local](../../../../04-PracticalSamples/foundrylocal)
 - [Executando a Aplicação](../../../../04-PracticalSamples/foundrylocal)
-- [Resultado Esperado](../../../../04-PracticalSamples/foundrylocal)
+- [Saída Esperada](../../../../04-PracticalSamples/foundrylocal)
 - [Próximos Passos](../../../../04-PracticalSamples/foundrylocal)
 - [Resolução de Problemas](../../../../04-PracticalSamples/foundrylocal)
 
@@ -49,11 +49,11 @@ foundry model run phi-3.5-mini
 Este projeto consiste em quatro componentes principais:
 
 1. **Application.java** - O ponto de entrada principal da aplicação Spring Boot
-2. **FoundryLocalService.java** - Camada de serviço que gerencia a comunicação com a IA
+2. **FoundryLocalService.java** - Camada de serviço que lida com a comunicação de IA
 3. **application.properties** - Configuração para conexão com o Foundry Local
 4. **pom.xml** - Dependências do Maven e configuração do projeto
 
-## Compreendendo o Código
+## Entendendo o Código
 
 ### 1. Configuração da Aplicação (application.properties)
 
@@ -97,6 +97,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,6 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -183,12 +185,12 @@ public String chat(String message) {
 
 **O que isso faz:**
 - **ChatCompletionCreateParams**: Configura a solicitação de IA.
-  - `model`: Especifica qual modelo de IA usar (deve corresponder exatamente ao ID exibido em `foundry model list`).
+  - `model`: Especifica qual modelo de IA usar (deve corresponder exatamente ao ID do `foundry model list`).
   - `addUserMessage`: Adiciona sua mensagem à conversa.
   - `maxCompletionTokens`: Limita o tamanho da resposta (economiza recursos).
   - `temperature`: Controla a aleatoriedade (0.0 = determinístico, 1.0 = criativo).
 - **Chamada de API**: Envia a solicitação para o Foundry Local.
-- **Processamento de Resposta**: Extrai a resposta de texto da IA de forma segura.
+- **Tratamento de Resposta**: Extrai a resposta de texto da IA de forma segura.
 - **Tratamento de Erros**: Envolve exceções com mensagens de erro úteis.
 
 ### 4. Dependências do Projeto (pom.xml)
@@ -221,8 +223,8 @@ public String chat(String message) {
 
 **O que elas fazem:**
 - **spring-boot-starter**: Fornece funcionalidades principais do Spring Boot.
-- **openai-java**: SDK oficial da OpenAI para comunicação com a API.
-- **jackson-databind**: Gerencia a serialização/deserialização de JSON para chamadas de API.
+- **openai-java**: SDK oficial do OpenAI para comunicação com a API.
+- **jackson-databind**: Lida com a serialização/deserialização de JSON para chamadas de API.
 
 ## Como Tudo Funciona Junto
 
@@ -233,7 +235,7 @@ Aqui está o fluxo completo quando você executa a aplicação:
 3. **Configuração do Cliente**: `@PostConstruct` inicializa o cliente OpenAI para conectar ao Foundry Local.
 4. **Execução da Demonstração**: `CommandLineRunner` é executado após a inicialização.
 5. **Chamada de IA**: A demonstração chama `foundryLocalService.chat()` com uma mensagem de teste.
-6. **Solicitação de API**: O serviço constrói e envia uma solicitação compatível com a OpenAI para o Foundry Local.
+6. **Solicitação de API**: O serviço constrói e envia uma solicitação compatível com OpenAI para o Foundry Local.
 7. **Processamento de Resposta**: O serviço extrai e retorna a resposta da IA.
 8. **Exibição**: A aplicação imprime a resposta e encerra.
 
@@ -279,14 +281,14 @@ foundry model run phi-3.5-mini
 ```
 
 
-### Passo 2: Compile e Execute a Aplicação
+### Passo 2: Construa e Execute a Aplicação
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
 
 
-## Resultado Esperado
+## Saída Esperada
 
 ```
 === Foundry Local Demo ===
@@ -304,7 +306,7 @@ Is there something specific you'd like help with today?
 
 ## Próximos Passos
 
-Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
+Para mais exemplos, veja [Capítulo 04: Exemplos Práticos](../README.md)
 
 ## Resolução de Problemas
 
@@ -314,7 +316,7 @@ Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
 - Certifique-se de que o Foundry Local está em execução: `foundry model list`.
 - Verifique a porta real que o Foundry Local está usando: `foundry service status`.
 - Atualize seu `application.properties` com a porta correta, garantindo que a URL termine com `/v1`.
-- Alternativamente, configure uma porta específica, se desejar: `foundry service set --port 5273`.
+- Alternativamente, defina uma porta específica, se desejar: `foundry service set --port 5273`.
 - Tente reiniciar o Foundry Local: `foundry model run phi-3.5-mini`.
 
 **"Model not found" ou erros "404 Not Found"**
@@ -325,7 +327,7 @@ Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
 
 **Erros "400 Bad Request"**
 - Verifique se a URL base inclui `/v1`: `http://localhost:5273/v1`.
-- Certifique-se de que o ID do modelo corresponde exatamente ao exibido em `foundry model list`.
+- Confirme que o ID do modelo corresponde exatamente ao exibido em `foundry model list`.
 - Certifique-se de estar usando `maxCompletionTokens()` no seu código (não o obsoleto `maxTokens()`).
 
 **Erros de compilação no Maven**
@@ -333,12 +335,12 @@ Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
 - Limpe e reconstrua: `mvn clean compile`.
 - Verifique a conexão com a internet para download de dependências.
 
-**A aplicação inicia, mas não há saída**
-- Verifique se o Foundry Local está respondendo: Abra o navegador em `http://localhost:5273`.
+**Aplicação inicia, mas não há saída**
+- Verifique se o Foundry Local está respondendo: Confira `http://localhost:5273/v1/models` ou execute `foundry service status`.
 - Verifique os logs da aplicação para mensagens de erro específicas.
 - Certifique-se de que o modelo está totalmente carregado e pronto.
 
 ---
 
-**Aviso**:  
+**Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

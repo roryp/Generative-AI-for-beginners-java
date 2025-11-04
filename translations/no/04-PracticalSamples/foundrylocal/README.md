@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:49:55+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:27:03+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "no"
 }
@@ -64,7 +64,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
 **Hva dette gjør:**
-- **base-url**: Angir hvor Foundry Local kjører, inkludert `/v1`-banen for OpenAI API-kompatibilitet. **Merk**: Foundry Local tildeler dynamisk en port, så sjekk den faktiske porten med `foundry service status`
+- **base-url**: Angir hvor Foundry Local kjører, inkludert `/v1`-stien for OpenAI API-kompatibilitet. **Merk**: Foundry Local tildeler dynamisk en port, så sjekk den faktiske porten med `foundry service status`
 - **model**: Navngir AI-modellen som skal brukes for tekstgenerering, inkludert versjonsnummeret (f.eks. `:1`). Bruk `foundry model list` for å se tilgjengelige modeller med deres eksakte ID-er
 
 **Viktig konsept:** Spring Boot laster automatisk inn disse egenskapene og gjør dem tilgjengelige for applikasjonen din ved hjelp av `@Value`-annotasjonen.
@@ -84,7 +84,7 @@ public class Application {
 ```
 
 **Hva dette gjør:**
-- `@SpringBootApplication` aktiverer Spring Boot auto-konfigurasjon
+- `@SpringBootApplication` aktiverer Spring Boot-autokonfigurasjon
 - `WebApplicationType.NONE` forteller Spring at dette er en kommandolinjeapplikasjon, ikke en webserver
 - Hovedmetoden starter Spring-applikasjonen
 
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,13 +102,14 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
 
 **Hva dette gjør:**
 - `@Bean` oppretter en komponent som Spring administrerer
-- `CommandLineRunner` kjører kode etter at Spring Boot har startet opp
+- `CommandLineRunner` kjører kode etter at Spring Boot har startet
 - `foundryLocalService` injiseres automatisk av Spring (avhengighetsinjeksjon)
 - Sender en testmelding til AI og viser responsen
 
@@ -130,7 +132,7 @@ public class FoundryLocalService {
 **Hva dette gjør:**
 - `@Service` forteller Spring at denne klassen gir forretningslogikk
 - `@Value` injiserer konfigurasjonsverdier fra application.properties
-- `:default-value`-syntaksen gir fallback-verdier hvis egenskaper ikke er satt
+- `:default-value`-syntaksen gir reserveverdier hvis egenskaper ikke er satt
 
 #### Klientinitialisering:
 ```java
@@ -250,7 +252,7 @@ For å sette opp Foundry Local, følg disse stegene:
    foundry model run phi-3.5-mini
    ```
 
-4. **Konfigurer application.properties**-filen for å matche dine Foundry Local-innstillinger:
+4. **Konfigurer application.properties**-filen til å samsvare med innstillingene for Foundry Local:
    - Oppdater porten i `base-url` (fra steg 2), og sørg for at den inkluderer `/v1` på slutten
    - Oppdater modellnavnet til å inkludere versjonsnummeret (sjekk med `foundry model list`)
    
@@ -320,11 +322,11 @@ For flere eksempler, se [Kapittel 04: Praktiske eksempler](../README.md)
 - Sjekk internettforbindelsen for nedlasting av avhengigheter
 
 **Applikasjonen starter, men ingen output**
-- Verifiser at Foundry Local svarer: Åpne nettleseren til `http://localhost:5273`
+- Verifiser at Foundry Local svarer: Sjekk `http://localhost:5273/v1/models` eller kjør `foundry service status`
 - Sjekk applikasjonslogger for spesifikke feilmeldinger
 - Sørg for at modellen er fullstendig lastet og klar
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

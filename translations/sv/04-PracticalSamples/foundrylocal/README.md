@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:49:20+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:26:13+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "sv"
 }
@@ -47,7 +47,7 @@ foundry model run phi-3.5-mini
 
 Detta projekt består av fyra huvudkomponenter:
 
-1. **Application.java** - Huvudstartpunkt för Spring Boot-applikationen
+1. **Application.java** - Huvudstartpunkten för Spring Boot-applikationen
 2. **FoundryLocalService.java** - Tjänstelager som hanterar AI-kommunikation
 3. **application.properties** - Konfiguration för anslutning till Foundry Local
 4. **pom.xml** - Maven-beroenden och projektkonfiguration
@@ -65,7 +65,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **Vad detta gör:**
 - **base-url**: Anger var Foundry Local körs, inklusive `/v1`-sökvägen för OpenAI API-kompatibilitet. **Obs:** Foundry Local tilldelar dynamiskt en port, så kontrollera din faktiska port med `foundry service status`
-- **model**: Namnger AI-modellen som ska användas för textgenerering, inklusive versionsnumret (t.ex. `:1`). Använd `foundry model list` för att se tillgängliga modeller med deras exakta ID:n
+- **model**: Namnger AI-modellen som ska användas för textgenerering, inklusive versionsnummer (t.ex. `:1`). Använd `foundry model list` för att se tillgängliga modeller med deras exakta ID:n
 
 **Nyckelkoncept:** Spring Boot laddar automatiskt dessa egenskaper och gör dem tillgängliga för din applikation med hjälp av `@Value`-annoteringen.
 
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,6 +102,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -147,7 +149,7 @@ public void init() {
 - `@PostConstruct` kör denna metod efter att Spring har skapat tjänsten
 - Skapar en OpenAI-klient som pekar på din lokala Foundry Local-instans
 - Bas-URL från `application.properties` inkluderar redan `/v1` för OpenAI API-kompatibilitet
-- API-nyckeln sätts till "not-needed" eftersom lokal utveckling inte kräver autentisering
+- API-nyckeln är inställd på "not-needed" eftersom lokal utveckling inte kräver autentisering
 
 #### Chatmetod:
 ```java
@@ -182,7 +184,7 @@ public String chat(String message) {
   - `temperature`: Styr slumpmässighet (0.0 = deterministisk, 1.0 = kreativ)
 - **API-anrop**: Skickar förfrågan till Foundry Local
 - **Svarshantering**: Extraherar AI:s textrespons säkert
-- **Felkorrigering**: Hanterar undantag med hjälpsamma felmeddelanden
+- **Felkodning**: Omger undantag med hjälpsamma felmeddelanden
 
 ### 4. Projektberoenden (pom.xml)
 
@@ -218,14 +220,14 @@ public String chat(String message) {
 
 ## Hur allt fungerar tillsammans
 
-Så här fungerar hela flödet när du kör applikationen:
+Här är det kompletta flödet när du kör applikationen:
 
 1. **Start**: Spring Boot startar och läser `application.properties`
 2. **Tjänstskapande**: Spring skapar `FoundryLocalService` och injicerar konfigurationsvärden
 3. **Klientinställning**: `@PostConstruct` initierar OpenAI-klienten för att ansluta till Foundry Local
 4. **Demoexekvering**: `CommandLineRunner` körs efter start
 5. **AI-anrop**: Demon anropar `foundryLocalService.chat()` med ett testmeddelande
-6. **API-förfrågan**: Tjänsten bygger och skickar en OpenAI-kompatibel förfrågan till Foundry Local
+6. **API-förfrågan**: Tjänsten bygger och skickar OpenAI-kompatibel förfrågan till Foundry Local
 7. **Svarshantering**: Tjänsten extraherar och returnerar AI:s svar
 8. **Visning**: Applikationen skriver ut svaret och avslutas
 
@@ -233,9 +235,9 @@ Så här fungerar hela flödet när du kör applikationen:
 
 För att ställa in Foundry Local, följ dessa steg:
 
-1. **Installera Foundry Local** enligt instruktionerna i avsnittet [Förutsättningar](../../../../04-PracticalSamples/foundrylocal).
+1. **Installera Foundry Local** med instruktionerna i avsnittet [Förutsättningar](../../../../04-PracticalSamples/foundrylocal).
 
-2. **Kontrollera den dynamiskt tilldelade porten**. Foundry Local tilldelar automatiskt en port när det startar. Hitta din port med:
+2. **Kontrollera den dynamiskt tilldelade porten**. Foundry Local tilldelar automatiskt en port när den startar. Hitta din port med:
    ```bash
    foundry service status
    ```
@@ -250,7 +252,7 @@ För att ställa in Foundry Local, följ dessa steg:
    foundry model run phi-3.5-mini
    ```
 
-4. **Konfigurera filen application.properties** för att matcha dina Foundry Local-inställningar:
+4. **Konfigurera application.properties**-filen för att matcha dina Foundry Local-inställningar:
    - Uppdatera porten i `base-url` (från steg 2), och se till att den inkluderar `/v1` i slutet
    - Uppdatera modellnamnet för att inkludera versionsnumret (kontrollera med `foundry model list`)
    
@@ -320,7 +322,7 @@ För fler exempel, se [Kapitel 04: Praktiska exempel](../README.md)
 - Kontrollera internetanslutningen för att ladda ner beroenden
 
 **Applikationen startar men ingen output**
-- Kontrollera att Foundry Local svarar: Öppna webbläsaren på `http://localhost:5273`
+- Kontrollera att Foundry Local svarar: Kontrollera `http://localhost:5273/v1/models` eller kör `foundry service status`
 - Kontrollera applikationsloggar för specifika felmeddelanden
 - Se till att modellen är fullt laddad och redo
 

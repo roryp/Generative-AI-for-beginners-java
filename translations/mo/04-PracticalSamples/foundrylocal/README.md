@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:39:09+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:16:12+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "mo"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [理解程式碼](../../../../04-PracticalSamples/foundrylocal)
   - [1. 應用程式配置 (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. 主應用程式類別 (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. AI 服務層 (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [3. AI服務層 (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. 專案依賴項 (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [整體運作方式](../../../../04-PracticalSamples/foundrylocal)
 - [設置 Foundry Local](../../../../04-PracticalSamples/foundrylocal)
@@ -29,9 +29,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 在開始本教學之前，請確保您已經：
 
-- 在系統上安裝 **Java 21 或更高版本**
-- 安裝 **Maven 3.6+** 用於建置專案
-- 安裝並運行 **Foundry Local**
+- 在系統上安裝了 **Java 21 或更高版本**
+- 安裝了 **Maven 3.6+** 用於建置專案
+- 安裝並運行了 **Foundry Local**
 
 ### **安裝 Foundry Local:**
 
@@ -51,13 +51,13 @@ foundry model run phi-3.5-mini
 1. **Application.java** - Spring Boot 應用程式的主要入口點
 2. **FoundryLocalService.java** - 處理 AI 通訊的服務層
 3. **application.properties** - Foundry Local 連接的配置
-4. **pom.xml** - Maven 依賴項及專案配置
+4. **pom.xml** - Maven 依賴項和專案配置
 
 ## 理解程式碼
 
 ### 1. 應用程式配置 (application.properties)
 
-**檔案位置:** `src/main/resources/application.properties`
+**檔案:** `src/main/resources/application.properties`
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
@@ -66,14 +66,14 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 
 **此功能的作用:**
-- **base-url**: 指定 Foundry Local 的運行位置，包括 `/v1` 路徑以兼容 OpenAI API。**注意**: Foundry Local 動態分配端口，因此請使用 `foundry service status` 檢查實際端口。
-- **model**: 指定用於文本生成的 AI 模型名稱及版本號（例如 `:1`）。使用 `foundry model list` 查看可用模型及其精確 ID。
+- **base-url**: 指定 Foundry Local 的運行位置，包括 `/v1` 路徑以兼容 OpenAI API。**注意**: Foundry Local 會動態分配端口，因此請使用 `foundry service status` 檢查實際端口。
+- **model**: 指定用於文本生成的 AI 模型名稱，包括版本號（例如，`:1`）。使用 `foundry model list` 查看可用模型及其精確 ID。
 
-**關鍵概念:** Spring Boot 自動載入這些屬性，並通過 `@Value` 註解使其在應用程式中可用。
+**關鍵概念:** Spring Boot 會自動載入這些屬性，並通過 `@Value` 註解使其在應用程式中可用。
 
 ### 2. 主應用程式類別 (Application.java)
 
-**檔案位置:** `src/main/java/com/example/Application.java`
+**檔案:** `src/main/java/com/example/Application.java`
 
 ```java
 @SpringBootApplication
@@ -97,6 +97,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,6 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -115,9 +117,9 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 - `foundryLocalService` 由 Spring 自動注入（依賴注入）
 - 向 AI 發送測試訊息並顯示回應
 
-### 3. AI 服務層 (FoundryLocalService.java)
+### 3. AI服務層 (FoundryLocalService.java)
 
-**檔案位置:** `src/main/java/com/example/FoundryLocalService.java`
+**檔案:** `src/main/java/com/example/FoundryLocalService.java`
 
 #### 配置注入:
 ```java
@@ -133,7 +135,7 @@ public class FoundryLocalService {
 
 
 **此功能的作用:**
-- `@Service` 告訴 Spring 此類別提供業務邏輯
+- `@Service` 告訴 Spring 此類提供業務邏輯
 - `@Value` 從 application.properties 注入配置值
 - `:default-value` 語法提供屬性未設置時的備選值
 
@@ -189,7 +191,7 @@ public String chat(String message) {
   - `temperature`: 控制隨機性（0.0 = 確定性，1.0 = 創造性）
 - **API 呼叫**: 將請求發送到 Foundry Local
 - **回應處理**: 安全地提取 AI 的文本回應
-- **錯誤處理**: 包裝例外並提供有用的錯誤訊息
+- **錯誤處理**: 包裝異常並提供有用的錯誤訊息
 
 ### 4. 專案依賴項 (pom.xml)
 
@@ -233,7 +235,7 @@ public String chat(String message) {
 3. **客戶端設置**: `@PostConstruct` 初始化 OpenAI 客戶端以連接到 Foundry Local
 4. **示範執行**: `CommandLineRunner` 在啟動後執行
 5. **AI 呼叫**: 示範使用測試訊息調用 `foundryLocalService.chat()`
-6. **API 請求**: 服務構建並發送 OpenAI 兼容請求到 Foundry Local
+6. **API 請求**: 服務構建並發送與 OpenAI 兼容的請求到 Foundry Local
 7. **回應處理**: 服務提取並返回 AI 的回應
 8. **顯示**: 應用程式打印回應並退出
 
@@ -241,9 +243,9 @@ public String chat(String message) {
 
 按照以下步驟設置 Foundry Local：
 
-1. **安裝 Foundry Local**，請參考 [先決條件](../../../../04-PracticalSamples/foundrylocal) 部分的指示。
+1. **安裝 Foundry Local**，請參考 [先決條件](../../../../04-PracticalSamples/foundrylocal) 部分的指導。
 
-2. **檢查動態分配的端口**。Foundry Local 啟動時會自動分配端口。使用以下命令查找您的端口：
+2. **檢查動態分配的端口**。Foundry Local 啟動時會自動分配端口。使用以下命令找到您的端口：
    ```bash
    foundry service status
    ```
@@ -261,7 +263,7 @@ public String chat(String message) {
 
 
 4. **配置 application.properties** 文件以匹配您的 Foundry Local 設置：
-   - 更新 `base-url` 中的端口（來自步驟 2），確保其末尾包含 `/v1`
+   - 更新 `base-url` 中的端口（來自步驟2），確保其末尾包含 `/v1`
    - 更新模型名稱以包含版本號（使用 `foundry model list` 檢查）
 
    範例:
@@ -304,7 +306,7 @@ Is there something specific you'd like help with today?
 
 ## 下一步
 
-更多範例請參考 [第 04 章: 實用範例](../README.md)
+更多範例請參考 [第4章: 實用範例](../README.md)
 
 ## 故障排除
 
@@ -313,20 +315,20 @@ Is there something specific you'd like help with today?
 **"Connection refused" 或 "Service unavailable"**
 - 確保 Foundry Local 正在運行: `foundry model list`
 - 檢查 Foundry Local 使用的實際端口: `foundry service status`
-- 更新您的 `application.properties`，使用正確的端口並確保 URL 以 `/v1` 結尾
+- 更新您的 `application.properties`，使用正確的端口，確保 URL 以 `/v1` 結尾
 - 或者，如果需要，可以設置特定端口: `foundry service set --port 5273`
 - 嘗試重新啟動 Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" 或 "404 Not Found" 錯誤**
 - 使用 `foundry model list` 檢查可用模型及其精確 ID
-- 更新 `application.properties` 中的模型名稱以完全匹配，包括版本號（例如 `Phi-3.5-mini-instruct-cuda-gpu:1`）
+- 更新 `application.properties` 中的模型名稱以完全匹配，包括版本號（例如，`Phi-3.5-mini-instruct-cuda-gpu:1`）
 - 確保 `base-url` 包含 `/v1` 結尾: `http://localhost:5273/v1`
 - 如果需要，下載模型: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" 錯誤**
 - 確認 base URL 包含 `/v1`: `http://localhost:5273/v1`
 - 檢查模型 ID 是否完全匹配 `foundry model list` 中顯示的內容
-- 確保程式碼中使用 `maxCompletionTokens()`（而不是已棄用的 `maxTokens()`）
+- 確保您在程式碼中使用 `maxCompletionTokens()`（而不是已棄用的 `maxTokens()`）
 
 **Maven 編譯錯誤**
 - 確保 Java 21 或更高版本: `java -version`
@@ -334,11 +336,11 @@ Is there something specific you'd like help with today?
 - 檢查網路連接以下載依賴項
 
 **應用程式啟動但無輸出**
-- 確認 Foundry Local 正在回應: 在瀏覽器中打開 `http://localhost:5273`
+- 確認 Foundry Local 正在回應: 檢查 `http://localhost:5273/v1/models` 或運行 `foundry service status`
 - 檢查應用程式日誌以獲取具體錯誤訊息
 - 確保模型已完全加載並準備好使用
 
 ---
 
 **免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。

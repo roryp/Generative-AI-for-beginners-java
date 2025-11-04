@@ -1,28 +1,28 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:54:40+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:32:45+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "hu"
 }
 -->
-# Foundry Local Spring Boot Oktatóanyag
+# Foundry Local Spring Boot oktatóanyag
 
 ## Tartalomjegyzék
 
 - [Előfeltételek](../../../../04-PracticalSamples/foundrylocal)
-- [Projekt Áttekintés](../../../../04-PracticalSamples/foundrylocal)
-- [A Kód Megértése](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Alkalmazás Konfiguráció (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Fő Alkalmazás Osztály (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. AI Szolgáltatási Réteg (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Projekt Függőségek (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [Hogyan Működik Együtt Minden](../../../../04-PracticalSamples/foundrylocal)
-- [Foundry Local Beállítása](../../../../04-PracticalSamples/foundrylocal)
-- [Az Alkalmazás Futtatása](../../../../04-PracticalSamples/foundrylocal)
-- [Várható Kimenet](../../../../04-PracticalSamples/foundrylocal)
-- [Következő Lépések](../../../../04-PracticalSamples/foundrylocal)
+- [Projekt áttekintése](../../../../04-PracticalSamples/foundrylocal)
+- [A kód megértése](../../../../04-PracticalSamples/foundrylocal)
+  - [1. Alkalmazás konfiguráció (application.properties)](../../../../04-PracticalSamples/foundrylocal)
+  - [2. Fő alkalmazás osztály (Application.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [3. AI szolgáltatási réteg (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [4. Projektfüggőségek (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
+- [Hogyan működik együtt minden](../../../../04-PracticalSamples/foundrylocal)
+- [Foundry Local beállítása](../../../../04-PracticalSamples/foundrylocal)
+- [Az alkalmazás futtatása](../../../../04-PracticalSamples/foundrylocal)
+- [Várható kimenet](../../../../04-PracticalSamples/foundrylocal)
+- [Következő lépések](../../../../04-PracticalSamples/foundrylocal)
 - [Hibaelhárítás](../../../../04-PracticalSamples/foundrylocal)
 
 ## Előfeltételek
@@ -33,7 +33,7 @@ Mielőtt elkezdenéd az oktatóanyagot, győződj meg róla, hogy rendelkezel:
 - **Maven 3.6+** a projekt felépítéséhez
 - **Foundry Local** telepítve és futtatva
 
-### **Foundry Local Telepítése:**
+### **Foundry Local telepítése:**
 
 ```bash
 # Windows
@@ -43,7 +43,8 @@ winget install Microsoft.FoundryLocal
 foundry model run phi-3.5-mini
 ```
 
-## Projekt Áttekintés
+
+## Projekt áttekintése
 
 Ez a projekt négy fő komponensből áll:
 
@@ -52,9 +53,9 @@ Ez a projekt négy fő komponensből áll:
 3. **application.properties** - Konfiguráció a Foundry Local kapcsolat számára
 4. **pom.xml** - Maven függőségek és projekt konfiguráció
 
-## A Kód Megértése
+## A kód megértése
 
-### 1. Alkalmazás Konfiguráció (application.properties)
+### 1. Alkalmazás konfiguráció (application.properties)
 
 **Fájl:** `src/main/resources/application.properties`
 
@@ -63,13 +64,14 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
+
 **Mit csinál ez:**
-- **base-url**: Meghatározza, hol fut a Foundry Local, beleértve a `/v1` útvonalat az OpenAI API kompatibilitás érdekében. **Megjegyzés**: A Foundry Local dinamikusan oszt ki egy portot, ezért ellenőrizd az aktuális portot a `foundry service status` paranccsal.
-- **model**: Az AI modell nevét adja meg szöveg generálásra, beleértve a verziószámot (pl. `:1`). Használd a `foundry model list` parancsot az elérhető modellek pontos azonosítóinak megtekintéséhez.
+- **base-url**: Meghatározza, hol fut a Foundry Local, beleértve a `/v1` útvonalat az OpenAI API kompatibilitás érdekében. **Megjegyzés**: A Foundry Local dinamikusan oszt ki egy portot, ezért ellenőrizd az aktuális portot a `foundry service status` parancs segítségével.
+- **model**: Az AI modell nevét adja meg szöveg generálásához, beleértve a verziószámot (pl. `:1`). Használd a `foundry model list` parancsot az elérhető modellek pontos azonosítóinak megtekintéséhez.
 
 **Kulcsfogalom:** A Spring Boot automatikusan betölti ezeket a tulajdonságokat, és elérhetővé teszi az alkalmazásod számára az `@Value` annotációval.
 
-### 2. Fő Alkalmazás Osztály (Application.java)
+### 2. Fő alkalmazás osztály (Application.java)
 
 **Fájl:** `src/main/java/com/example/Application.java`
 
@@ -83,17 +85,19 @@ public class Application {
     }
 ```
 
-**Mit csinál ez:**
-- `@SpringBootApplication` engedélyezi a Spring Boot automatikus konfigurációját
-- `WebApplicationType.NONE` megmondja a Spring-nek, hogy ez egy parancssori alkalmazás, nem egy webszerver
-- A fő metódus elindítja a Spring alkalmazást
 
-**A Demo Futtató:**
+**Mit csinál ez:**
+- Az `@SpringBootApplication` engedélyezi a Spring Boot automatikus konfigurációját.
+- A `WebApplicationType.NONE` megmondja a Spring-nek, hogy ez egy parancssori alkalmazás, nem pedig webes szerver.
+- A fő metódus elindítja a Spring alkalmazást.
+
+**A demó futtató:**
 ```java
 @Bean
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,21 +105,23 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
 
-**Mit csinál ez:**
-- `@Bean` létrehoz egy komponenst, amelyet a Spring kezel
-- `CommandLineRunner` kódot futtat, miután a Spring Boot elindult
-- A `foundryLocalService` automatikusan injektálva van a Spring által (függőség injektálás)
-- Küld egy tesztüzenetet az AI-nak, és megjeleníti a választ
 
-### 3. AI Szolgáltatási Réteg (FoundryLocalService.java)
+**Mit csinál ez:**
+- Az `@Bean` létrehoz egy komponenst, amelyet a Spring kezel.
+- A `CommandLineRunner` kódot futtat, miután a Spring Boot elindult.
+- A `foundryLocalService` automatikusan injektálva van a Spring által (függőség injektálás).
+- Küld egy tesztüzenetet az AI-nak, és megjeleníti a választ.
+
+### 3. AI szolgáltatási réteg (FoundryLocalService.java)
 
 **Fájl:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### Konfiguráció Injektálás:
+#### Konfiguráció injektálása:
 ```java
 @Service
 public class FoundryLocalService {
@@ -127,12 +133,13 @@ public class FoundryLocalService {
     private String model;
 ```
 
-**Mit csinál ez:**
-- `@Service` megmondja a Spring-nek, hogy ez az osztály üzleti logikát biztosít
-- `@Value` injektálja a konfigurációs értékeket az application.properties fájlból
-- A `:default-value` szintaxis tartalék értékeket biztosít, ha a tulajdonságok nincsenek beállítva
 
-#### Ügyfél Inicializálás:
+**Mit csinál ez:**
+- Az `@Service` megmondja a Spring-nek, hogy ez az osztály üzleti logikát biztosít.
+- Az `@Value` injektálja a konfigurációs értékeket az application.properties fájlból.
+- A `:default-value` szintaxis tartalék értékeket biztosít, ha a tulajdonságok nincsenek beállítva.
+
+#### Ügyfél inicializálása:
 ```java
 @PostConstruct
 public void init() {
@@ -143,13 +150,14 @@ public void init() {
 }
 ```
 
-**Mit csinál ez:**
-- `@PostConstruct` futtatja ezt a metódust, miután a Spring létrehozta a szolgáltatást
-- Létrehoz egy OpenAI ügyfelet, amely a helyi Foundry Local példányra mutat
-- Az application.properties fájlból származó alap URL már tartalmazza a `/v1`-et az OpenAI API kompatibilitás érdekében
-- Az API kulcs "not-needed" értékre van állítva, mivel a helyi fejlesztés nem igényel hitelesítést
 
-#### Chat Metódus:
+**Mit csinál ez:**
+- Az `@PostConstruct` futtatja ezt a metódust, miután a Spring létrehozta a szolgáltatást.
+- Létrehoz egy OpenAI ügyfelet, amely a helyi Foundry Local példányra mutat.
+- Az application.properties fájlból származó alap URL már tartalmazza a `/v1` útvonalat az OpenAI API kompatibilitás érdekében.
+- Az API kulcs "not-needed" értékre van állítva, mivel a helyi fejlesztés nem igényel hitelesítést.
+
+#### Chat metódus:
 ```java
 public String chat(String message) {
     try {
@@ -174,19 +182,20 @@ public String chat(String message) {
 }
 ```
 
+
 **Mit csinál ez:**
 - **ChatCompletionCreateParams**: Konfigurálja az AI kérést
-  - `model`: Meghatározza, melyik AI modellt kell használni (meg kell egyeznie a pontos azonosítóval a `foundry model list` alapján)
-  - `addUserMessage`: Hozzáadja az üzenetedet a beszélgetéshez
-  - `maxCompletionTokens`: Korlátozza a válasz hosszát (erőforrásokat takarít meg)
-  - `temperature`: Szabályozza a véletlenszerűséget (0.0 = determinisztikus, 1.0 = kreatív)
-- **API Hívás**: Elküldi a kérést a Foundry Local-nak
-- **Válasz Feldolgozás**: Biztonságosan kinyeri az AI szöveges válaszát
-- **Hiba Kezelés**: Hasznos hibaüzenetekkel csomagolja az esetleges kivételeket
+  - `model`: Meghatározza, melyik AI modellt kell használni (meg kell egyeznie a pontos azonosítóval a `foundry model list` alapján).
+  - `addUserMessage`: Hozzáadja az üzenetedet a beszélgetéshez.
+  - `maxCompletionTokens`: Korlátozza a válasz hosszát (erőforrásokat takarít meg).
+  - `temperature`: Szabályozza a véletlenszerűséget (0.0 = determinisztikus, 1.0 = kreatív).
+- **API hívás**: Küldi a kérést a Foundry Local-nak.
+- **Válasz feldolgozása**: Biztonságosan kinyeri az AI szöveges válaszát.
+- **Hibakezelés**: Hasznos hibaüzenetekkel csomagolja az esetleges kivételeket.
 
-### 4. Projekt Függőségek (pom.xml)
+### 4. Projektfüggőségek (pom.xml)
 
-**Kulcs Függőségek:**
+**Kulcsfüggőségek:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -211,25 +220,26 @@ public String chat(String message) {
 </dependency>
 ```
 
-**Mit csinálnak ezek:**
-- **spring-boot-starter**: Alapvető Spring Boot funkciókat biztosít
-- **openai-java**: Hivatalos OpenAI Java SDK az API kommunikációhoz
-- **jackson-databind**: JSON szerializáció/deszerializáció kezelése az API hívásokhoz
 
-## Hogyan Működik Együtt Minden
+**Mit csinálnak ezek:**
+- **spring-boot-starter**: Alapvető Spring Boot funkciókat biztosít.
+- **openai-java**: Hivatalos OpenAI Java SDK az API kommunikációhoz.
+- **jackson-databind**: JSON szerializáció/deszerializáció kezelésére API hívásokhoz.
+
+## Hogyan működik együtt minden
 
 Íme a teljes folyamat, amikor futtatod az alkalmazást:
 
-1. **Indítás**: A Spring Boot elindul, és beolvassa az application.properties fájlt
-2. **Szolgáltatás Létrehozás**: A Spring létrehozza a `FoundryLocalService`-t, és injektálja a konfigurációs értékeket
-3. **Ügyfél Beállítás**: A `@PostConstruct` inicializálja az OpenAI ügyfelet, hogy csatlakozzon a Foundry Local-hoz
-4. **Demo Végrehajtás**: A `CommandLineRunner` végrehajtódik az indítás után
-5. **AI Hívás**: A demo meghívja a `foundryLocalService.chat()` metódust egy tesztüzenettel
-6. **API Kérés**: A szolgáltatás OpenAI-kompatibilis kérést épít és küld a Foundry Local-nak
-7. **Válasz Feldolgozás**: A szolgáltatás kinyeri és visszaadja az AI válaszát
-8. **Megjelenítés**: Az alkalmazás kinyomtatja a választ, majd kilép
+1. **Indítás**: A Spring Boot elindul, és beolvassa az application.properties fájlt.
+2. **Szolgáltatás létrehozása**: A Spring létrehozza a `FoundryLocalService`-t, és injektálja a konfigurációs értékeket.
+3. **Ügyfél beállítása**: Az `@PostConstruct` inicializálja az OpenAI ügyfelet, hogy csatlakozzon a Foundry Local-hoz.
+4. **Demó végrehajtása**: A `CommandLineRunner` futtatja az indítás után.
+5. **AI hívás**: A demó meghívja a `foundryLocalService.chat()` metódust egy tesztüzenettel.
+6. **API kérés**: A szolgáltatás OpenAI-kompatibilis kérést épít és küld a Foundry Local-nak.
+7. **Válasz feldolgozása**: A szolgáltatás kinyeri és visszaadja az AI válaszát.
+8. **Megjelenítés**: Az alkalmazás kinyomtatja a választ, majd kilép.
 
-## Foundry Local Beállítása
+## Foundry Local beállítása
 
 A Foundry Local beállításához kövesd az alábbi lépéseket:
 
@@ -245,35 +255,40 @@ A Foundry Local beállításához kövesd az alábbi lépéseket:
    foundry service set --port 5273
    ```
 
+
 3. **Töltsd le az AI modellt**, amelyet használni szeretnél, például `phi-3.5-mini`, az alábbi paranccsal:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
+
 4. **Konfiguráld az application.properties** fájlt, hogy illeszkedjen a Foundry Local beállításaihoz:
-   - Frissítsd a portot a `base-url`-ben (a 2. lépésből), ügyelve arra, hogy a végén szerepeljen a `/v1`
-   - Frissítsd a modell nevét, hogy tartalmazza a verziószámot (ellenőrizd a `foundry model list` paranccsal)
-   
+   - Frissítsd a portot a `base-url`-ben (a 2. lépésből), ügyelve arra, hogy `/v1` legyen a végén.
+   - Frissítsd a modell nevét, hogy tartalmazza a verziószámot (ellenőrizd a `foundry model list` paranccsal).
+
    Példa:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
    foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
    ```
 
-## Az Alkalmazás Futtatása
 
-### 1. Lépés: Indítsd el a Foundry Local-t
+## Az alkalmazás futtatása
+
+### 1. lépés: Indítsd el a Foundry Local-t
 ```bash
 foundry model run phi-3.5-mini
 ```
 
-### 2. Lépés: Építsd fel és futtasd az alkalmazást
+
+### 2. lépés: Építsd fel és futtasd az alkalmazást
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
 
-## Várható Kimenet
+
+## Várható kimenet
 
 ```
 === Foundry Local Demo ===
@@ -288,43 +303,44 @@ Is there something specific you'd like help with today?
 =========================
 ```
 
-## Következő Lépések
+
+## Következő lépések
 
 További példákért lásd: [4. fejezet: Gyakorlati minták](../README.md)
 
 ## Hibaelhárítás
 
-### Gyakori Problémák
+### Gyakori problémák
 
 **"Connection refused" vagy "Service unavailable"**
 - Győződj meg róla, hogy a Foundry Local fut: `foundry model list`
-- Ellenőrizd, hogy a Foundry Local melyik portot használ: `foundry service status`
-- Frissítsd az `application.properties` fájlt a megfelelő porttal, ügyelve arra, hogy az URL végén `/v1` szerepeljen
+- Ellenőrizd, hogy melyik portot használja a Foundry Local: `foundry service status`
+- Frissítsd az `application.properties` fájlt a megfelelő porttal, ügyelve arra, hogy az URL `/v1`-re végződjön.
 - Alternatívaként állíts be egy konkrét portot, ha szükséges: `foundry service set --port 5273`
 - Próbáld újraindítani a Foundry Local-t: `foundry model run phi-3.5-mini`
 
 **"Model not found" vagy "404 Not Found" hibák**
-- Ellenőrizd az elérhető modelleket és azok pontos azonosítóit: `foundry model list`
-- Frissítsd a modell nevét az application.properties fájlban, hogy pontosan egyezzen, beleértve a verziószámot (pl. `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Győződj meg róla, hogy a `base-url` végén `/v1` szerepel: `http://localhost:5273/v1`
+- Ellenőrizd az elérhető modelleket a pontos azonosítóikkal: `foundry model list`
+- Frissítsd a modell nevét az application.properties fájlban, hogy pontosan egyezzen, beleértve a verziószámot (pl. `Phi-3.5-mini-instruct-cuda-gpu:1`).
+- Győződj meg róla, hogy a `base-url` tartalmazza a `/v1`-et a végén: `http://localhost:5273/v1`
 - Töltsd le a modellt, ha szükséges: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" hibák**
 - Ellenőrizd, hogy az alap URL tartalmazza-e a `/v1`-et: `http://localhost:5273/v1`
-- Győződj meg róla, hogy a modell azonosítója pontosan megegyezik azzal, amit a `foundry model list` mutat
-- Biztosítsd, hogy a kódodban a `maxCompletionTokens()`-t használod (ne a régi `maxTokens()`-t)
+- Győződj meg róla, hogy a modell azonosítója pontosan egyezik azzal, amit a `foundry model list` mutat.
+- Biztosítsd, hogy a kódban a `maxCompletionTokens()`-t használd (ne a régi `maxTokens()`-t).
 
 **Maven fordítási hibák**
 - Győződj meg róla, hogy Java 21 vagy újabb van telepítve: `java -version`
 - Tisztítsd meg és építsd újra: `mvn clean compile`
-- Ellenőrizd az internetkapcsolatot a függőségek letöltéséhez
+- Ellenőrizd az internetkapcsolatot a függőségek letöltéséhez.
 
 **Az alkalmazás elindul, de nincs kimenet**
-- Ellenőrizd, hogy a Foundry Local válaszol-e: Nyisd meg a böngészőt a `http://localhost:5273` címen
-- Ellenőrizd az alkalmazás naplóit konkrét hibaüzenetekért
-- Győződj meg róla, hogy a modell teljesen betöltődött és készen áll
+- Ellenőrizd, hogy a Foundry Local válaszol-e: Nézd meg `http://localhost:5273/v1/models` vagy futtasd a `foundry service status` parancsot.
+- Ellenőrizd az alkalmazás naplóit konkrét hibaüzenetekért.
+- Győződj meg róla, hogy a modell teljesen betöltődött és készen áll.
 
 ---
 
 **Felelősség kizárása**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

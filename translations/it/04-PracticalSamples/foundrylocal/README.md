@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:46:49+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:23:26+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "it"
 }
@@ -33,7 +33,7 @@ Prima di iniziare questo tutorial, assicurati di avere:
 - **Maven 3.6+** per costruire il progetto
 - **Foundry Local** installato e in esecuzione
 
-### **Installare Foundry Local:**
+### **Installa Foundry Local:**
 
 ```bash
 # Windows
@@ -66,8 +66,8 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 
 **Cosa fa:**
-- **base-url**: Specifica dove Foundry Local è in esecuzione, incluso il percorso `/v1` per la compatibilità con l'API OpenAI. **Nota**: Foundry Local assegna dinamicamente una porta, quindi verifica la porta effettiva utilizzando `foundry service status`
-- **model**: Indica il nome del modello AI da utilizzare per la generazione di testo, inclusa la versione (es. `:1`). Usa `foundry model list` per vedere i modelli disponibili con i loro ID esatti
+- **base-url**: Specifica dove Foundry Local è in esecuzione, incluso il percorso `/v1` per la compatibilità con l'API OpenAI. **Nota**: Foundry Local assegna dinamicamente una porta, quindi controlla la porta effettiva utilizzando `foundry service status`
+- **model**: Indica il nome del modello AI da utilizzare per la generazione di testo, incluso il numero di versione (es. `:1`). Usa `foundry model list` per vedere i modelli disponibili con i loro ID esatti
 
 **Concetto chiave:** Spring Boot carica automaticamente queste proprietà e le rende disponibili alla tua applicazione utilizzando l'annotazione `@Value`.
 
@@ -97,6 +97,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,6 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -113,7 +115,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 - `@Bean` crea un componente gestito da Spring
 - `CommandLineRunner` esegue il codice dopo l'avvio di Spring Boot
 - `foundryLocalService` viene automaticamente iniettato da Spring (iniezione di dipendenze)
-- Invia un messaggio di prova all'AI e visualizza la risposta
+- Invia un messaggio di test all'AI e visualizza la risposta
 
 ### 3. Livello di Servizio AI (FoundryLocalService.java)
 
@@ -189,7 +191,7 @@ public String chat(String message) {
   - `temperature`: Controlla la casualità (0.0 = deterministico, 1.0 = creativo)
 - **Chiamata API**: Invia la richiesta a Foundry Local
 - **Gestione della Risposta**: Estrae in modo sicuro la risposta testuale dell'AI
-- **Gestione degli Errori**: Avvolge le eccezioni con messaggi di errore utili
+- **Gestione degli Errori**: Gestisce le eccezioni con messaggi di errore utili
 
 ### 4. Dipendenze del Progetto (pom.xml)
 
@@ -231,8 +233,8 @@ Ecco il flusso completo quando esegui l'applicazione:
 1. **Avvio**: Spring Boot si avvia e legge `application.properties`
 2. **Creazione del Servizio**: Spring crea `FoundryLocalService` e inietta i valori di configurazione
 3. **Configurazione del Client**: `@PostConstruct` inizializza il client OpenAI per connettersi a Foundry Local
-4. **Esecuzione del Demo**: `CommandLineRunner` viene eseguito dopo l'avvio
-5. **Chiamata AI**: Il demo chiama `foundryLocalService.chat()` con un messaggio di prova
+4. **Esecuzione Demo**: `CommandLineRunner` viene eseguito dopo l'avvio
+5. **Chiamata AI**: La demo chiama `foundryLocalService.chat()` con un messaggio di test
 6. **Richiesta API**: Il servizio costruisce e invia una richiesta compatibile con OpenAI a Foundry Local
 7. **Elaborazione della Risposta**: Il servizio estrae e restituisce la risposta dell'AI
 8. **Visualizzazione**: L'applicazione stampa la risposta e si chiude
@@ -254,7 +256,7 @@ Per configurare Foundry Local, segui questi passaggi:
    ```
 
 
-3. **Scarica il modello AI** che desideri utilizzare, ad esempio `phi-3.5-mini`, con il seguente comando:
+3. **Scarica il modello AI** che vuoi utilizzare, ad esempio `phi-3.5-mini`, con il seguente comando:
    ```bash
    foundry model run phi-3.5-mini
    ```
@@ -262,7 +264,7 @@ Per configurare Foundry Local, segui questi passaggi:
 
 4. **Configura il file application.properties** per adattarlo alle impostazioni di Foundry Local:
    - Aggiorna la porta in `base-url` (dal passaggio 2), assicurandoti che includa `/v1` alla fine
-   - Aggiorna il nome del modello per includere il numero di versione (verifica con `foundry model list`)
+   - Aggiorna il nome del modello per includere il numero di versione (controlla con `foundry model list`)
    
    Esempio:
    ```properties
@@ -273,13 +275,13 @@ Per configurare Foundry Local, segui questi passaggi:
 
 ## Eseguire l'Applicazione
 
-### Passo 1: Avvia Foundry Local
+### Passaggio 1: Avvia Foundry Local
 ```bash
 foundry model run phi-3.5-mini
 ```
 
 
-### Passo 2: Compila ed Esegui l'Applicazione
+### Passaggio 2: Compila ed Esegui l'Applicazione
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
@@ -319,7 +321,7 @@ Per ulteriori esempi, consulta [Capitolo 04: Esempi pratici](../README.md)
 
 **"Modello non trovato" o errori "404 Not Found"**
 - Controlla i modelli disponibili con i loro ID esatti: `foundry model list`
-- Aggiorna il nome del modello in `application.properties` per corrispondere esattamente, inclusa la versione (es. `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- Aggiorna il nome del modello in `application.properties` per corrispondere esattamente, incluso il numero di versione (es. `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Assicurati che l'`base-url` includa `/v1` alla fine: `http://localhost:5273/v1`
 - Scarica il modello se necessario: `foundry model run phi-3.5-mini`
 
@@ -334,7 +336,7 @@ Per ulteriori esempi, consulta [Capitolo 04: Esempi pratici](../README.md)
 - Controlla la connessione internet per il download delle dipendenze
 
 **L'applicazione si avvia ma non produce output**
-- Verifica che Foundry Local stia rispondendo: Apri il browser su `http://localhost:5273`
+- Verifica che Foundry Local stia rispondendo: Controlla `http://localhost:5273/v1/models` o esegui `foundry service status`
 - Controlla i log dell'applicazione per messaggi di errore specifici
 - Assicurati che il modello sia completamente caricato e pronto
 
