@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:13:14+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:54:18+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "sw"
 }
@@ -43,12 +43,11 @@ winget install Microsoft.FoundryLocal
 foundry model run phi-3.5-mini
 ```
 
-
 ## Muhtasari wa Mradi
 
 Mradi huu una sehemu kuu nne:
 
-1. **Application.java** - Sehemu kuu ya kuanzia programu ya Spring Boot
+1. **Application.java** - Kituo kikuu cha kuingia kwenye programu ya Spring Boot
 2. **FoundryLocalService.java** - Tabaka la huduma linaloshughulikia mawasiliano ya AI
 3. **application.properties** - Usanidi wa muunganisho wa Foundry Local
 4. **pom.xml** - Utegemezi wa Maven na usanidi wa mradi
@@ -64,12 +63,11 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
-
 **Kazi ya hii:**
-- **base-url**: Inaonyesha mahali Foundry Local inaendesha, ikijumuisha njia ya `/v1` kwa ulinganifu wa API ya OpenAI. **Kumbuka**: Foundry Local inatoa bandari kwa njia ya kiotomatiki, kwa hivyo angalia bandari halisi kwa kutumia `foundry service status`
+- **base-url**: Inaonyesha mahali Foundry Local inaendesha, ikijumuisha njia ya `/v1` kwa ulinganifu wa API ya OpenAI. **Kumbuka**: Foundry Local inatoa bandari kwa njia ya kiotomatiki, kwa hivyo angalia bandari yako halisi kwa kutumia `foundry service status`
 - **model**: Inaonyesha jina la mfano wa AI wa kutumia kwa kizazi cha maandishi, ikijumuisha namba ya toleo (mfano, `:1`). Tumia `foundry model list` kuona mifano inayopatikana na vitambulisho vyake halisi
 
-**Dhana kuu:** Spring Boot inasoma moja kwa moja mali hizi na kuzifanya zipatikane kwa programu yako kwa kutumia anotesheni ya `@Value`.
+**Dhana kuu:** Spring Boot inasoma kiotomatiki mali hizi na kuzifanya zipatikane kwa programu yako kwa kutumia `@Value`.
 
 ### 2. Darasa Kuu la Programu (Application.java)
 
@@ -84,7 +82,6 @@ public class Application {
         app.run(args);
     }
 ```
-
 
 **Kazi ya hii:**
 - `@SpringBootApplication` inawezesha usanidi wa kiotomatiki wa Spring Boot
@@ -108,9 +105,8 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
-
 **Kazi ya hii:**
-- `@Bean` huunda sehemu ambayo Spring inasimamia
+- `@Bean` inaunda sehemu inayosimamiwa na Spring
 - `CommandLineRunner` inaendesha msimbo baada ya Spring Boot kuanza
 - `foundryLocalService` inaingizwa kiotomatiki na Spring (utegemezi wa sindano)
 - Inatuma ujumbe wa majaribio kwa AI na kuonyesha majibu
@@ -131,11 +127,10 @@ public class FoundryLocalService {
     private String model;
 ```
 
-
 **Kazi ya hii:**
 - `@Service` inaambia Spring kuwa darasa hili linatoa mantiki ya biashara
-- `@Value` huingiza maadili ya usanidi kutoka application.properties
-- Sintaksia ya `:default-value` hutoa maadili ya akiba ikiwa mali hazijawekwa
+- `@Value` inaingiza maadili ya usanidi kutoka application.properties
+- Sintaksia ya `:default-value` inatoa maadili ya akiba ikiwa mali hazijawekwa
 
 #### Uanzishaji wa Mteja:
 ```java
@@ -148,10 +143,9 @@ public void init() {
 }
 ```
 
-
 **Kazi ya hii:**
 - `@PostConstruct` inaendesha njia hii baada ya Spring kuunda huduma
-- Inaunda mteja wa OpenAI anayeelekeza kwa Foundry Local yako ya ndani
+- Inaunda mteja wa OpenAI anayeelekea kwenye Foundry Local yako ya ndani
 - URL ya msingi kutoka `application.properties` tayari inajumuisha `/v1` kwa ulinganifu wa API ya OpenAI
 - Funguo ya API imewekwa kuwa "not-needed" kwa sababu maendeleo ya ndani hayahitaji uthibitisho
 
@@ -162,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -180,16 +174,15 @@ public String chat(String message) {
 }
 ```
 
-
 **Kazi ya hii:**
 - **ChatCompletionCreateParams**: Inasanidi ombi la AI
-  - `model`: Inaonyesha mfano wa AI wa kutumia (lazima ulingane na ID halisi kutoka `foundry model list`)
+  - `model`: Inaonyesha ni mfano gani wa AI wa kutumia (lazima ulingane na kitambulisho halisi kutoka `foundry model list`)
   - `addUserMessage`: Inaongeza ujumbe wako kwenye mazungumzo
-  - `maxTokens`: Inapunguza urefu wa majibu (inaokoa rasilimali)
+  - `maxCompletionTokens`: Inapunguza urefu wa majibu (inaokoa rasilimali)
   - `temperature`: Inadhibiti nasibu (0.0 = ya uhakika, 1.0 = ya ubunifu)
 - **API Call**: Inatuma ombi kwa Foundry Local
-- **Response Handling**: Inatoa majibu ya maandishi ya AI kwa usalama
-- **Error Handling**: Inafunika makosa na ujumbe wa kusaidia
+- **Response Handling**: Inachukua majibu ya maandishi ya AI kwa usalama
+- **Error Handling**: Inafunga makosa na ujumbe wa msaada
 
 ### 4. Utegemezi wa Mradi (pom.xml)
 
@@ -218,7 +211,6 @@ public String chat(String message) {
 </dependency>
 ```
 
-
 **Kazi ya hizi:**
 - **spring-boot-starter**: Inatoa utendaji wa msingi wa Spring Boot
 - **openai-java**: SDK rasmi ya OpenAI Java kwa mawasiliano ya API
@@ -226,16 +218,16 @@ public String chat(String message) {
 
 ## Jinsi Vyote Vinavyofanya Kazi Pamoja
 
-Hivi ndivyo mtiririko mzima unavyofanya kazi unapokimbia programu:
+Hivi ndivyo mtiririko mzima unavyokuwa unapoendesha programu:
 
 1. **Kuanza**: Spring Boot inaanza na kusoma `application.properties`
 2. **Uundaji wa Huduma**: Spring inaunda `FoundryLocalService` na kuingiza maadili ya usanidi
 3. **Usanidi wa Mteja**: `@PostConstruct` inaanzisha mteja wa OpenAI kuunganishwa na Foundry Local
-4. **Utekelezaji wa Demo**: `CommandLineRunner` inaendesha baada ya kuanza
+4. **Utekelezaji wa Demo**: `CommandLineRunner` inaendeshwa baada ya kuanza
 5. **Mwito wa AI**: Demo inaita `foundryLocalService.chat()` na ujumbe wa majaribio
 6. **Ombi la API**: Huduma inajenga na kutuma ombi linalolingana na OpenAI kwa Foundry Local
-7. **Usindikaji wa Majibu**: Huduma inatoa na kurudisha majibu ya AI
-8. **Onyesho**: Programu inaonyesha majibu na kuacha
+7. **Usindikaji wa Majibu**: Huduma inachukua na kurudisha majibu ya AI
+8. **Kuonyesha**: Programu inachapisha majibu na kuacha
 
 ## Kuweka Foundry Local
 
@@ -243,33 +235,30 @@ Ili kuweka Foundry Local, fuata hatua hizi:
 
 1. **Weka Foundry Local** kwa kutumia maelekezo katika sehemu ya [Mahitaji ya Awali](../../../../04-PracticalSamples/foundrylocal).
 
-2. **Angalia bandari iliyotolewa kiotomatiki**. Foundry Local inatoa bandari kiotomatiki inapowashwa. Tafuta bandari yako kwa:
+2. **Angalia bandari iliyotolewa kiotomatiki**. Foundry Local inatoa bandari kiotomatiki inapoanza. Tafuta bandari yako kwa:
    ```bash
    foundry service status
    ```
    
-   **Hiari**: Ikiwa unapendelea kutumia bandari maalum (mfano, 5273), unaweza kuisanidi kwa mikono:
+   **Hiari**: Ikiwa unapendelea kutumia bandari maalum (mfano, 5273), unaweza kuisanidi mwenyewe:
    ```bash
    foundry service set --port 5273
    ```
-
 
 3. **Pakua mfano wa AI** unaotaka kutumia, kwa mfano, `phi-3.5-mini`, kwa amri ifuatayo:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
-
-4. **Sanidi faili ya application.properties** ili kulingana na mipangilio yako ya Foundry Local:
+4. **Sanidi faili ya application.properties** ili iendane na mipangilio yako ya Foundry Local:
    - Sasisha bandari katika `base-url` (kutoka hatua ya 2), ukihakikisha inajumuisha `/v1` mwishoni
-   - Sasisha jina la mfano ili kujumuisha namba ya toleo (angalia kwa `foundry model list`)
+   - Sasisha jina la mfano ili lijumuishe namba ya toleo (angalia kwa `foundry model list`)
    
    Mfano:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
    foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
    ```
-
 
 ## Kuendesha Programu
 
@@ -278,13 +267,11 @@ Ili kuweka Foundry Local, fuata hatua hizi:
 foundry model run phi-3.5-mini
 ```
 
-
 ### Hatua ya 2: Jenga na Endesha Programu
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
-
 
 ## Matokeo Yanayotarajiwa
 
@@ -301,7 +288,6 @@ Is there something specific you'd like help with today?
 =========================
 ```
 
-
 ## Hatua Zifuatazo
 
 Kwa mifano zaidi, angalia [Sura ya 04: Sampuli za vitendo](../README.md)
@@ -312,23 +298,23 @@ Kwa mifano zaidi, angalia [Sura ya 04: Sampuli za vitendo](../README.md)
 
 **"Connection refused" au "Service unavailable"**
 - Hakikisha Foundry Local inaendesha: `foundry model list`
-- Angalia bandari halisi inayotumiwa na Foundry Local: `foundry service status`
+- Angalia bandari halisi Foundry Local inatumia: `foundry service status`
 - Sasisha `application.properties` yako na bandari sahihi, ukihakikisha URL inaishia na `/v1`
 - Vinginevyo, weka bandari maalum ikiwa unataka: `foundry service set --port 5273`
-- Jaribu kuwasha upya Foundry Local: `foundry model run phi-3.5-mini`
+- Jaribu kuanzisha upya Foundry Local: `foundry model run phi-3.5-mini`
 
-**"Model not found" au "404 Not Found" errors**
+**"Model not found" au "404 Not Found" makosa**
 - Angalia mifano inayopatikana na vitambulisho vyake halisi: `foundry model list`
 - Sasisha jina la mfano katika `application.properties` ili lilingane kabisa, ikijumuisha namba ya toleo (mfano, `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Hakikisha `base-url` inajumuisha `/v1` mwishoni: `http://localhost:5273/v1`
 - Pakua mfano ikiwa inahitajika: `foundry model run phi-3.5-mini`
 
-**"400 Bad Request" errors**
-- Thibitisha kuwa URL ya msingi inajumuisha `/v1`: `http://localhost:5273/v1`
-- Angalia kuwa ID ya mfano inalingana kabisa na inayoonyeshwa katika `foundry model list`
-- Hakikisha unatumia `maxTokens()` badala ya `maxCompletionTokens()` katika msimbo wako
+**"400 Bad Request" makosa**
+- Thibitisha URL ya msingi inajumuisha `/v1`: `http://localhost:5273/v1`
+- Angalia kuwa kitambulisho cha mfano kinalingana kabisa na kinachoonyeshwa katika `foundry model list`
+- Hakikisha unatumia `maxCompletionTokens()` katika msimbo wako (si `maxTokens()` ambayo imepitwa na wakati)
 
-**Makosa ya ujumuishaji wa Maven**
+**Makosa ya uundaji wa Maven**
 - Hakikisha Java 21 au zaidi: `java -version`
 - Safisha na ujenge upya: `mvn clean compile`
 - Angalia muunganisho wa intaneti kwa upakuaji wa utegemezi
@@ -336,9 +322,9 @@ Kwa mifano zaidi, angalia [Sura ya 04: Sampuli za vitendo](../README.md)
 **Programu inaanza lakini hakuna matokeo**
 - Thibitisha Foundry Local inajibu: Fungua kivinjari kwa `http://localhost:5273`
 - Angalia magogo ya programu kwa ujumbe maalum wa makosa
-- Hakikisha mfano umepakiwa kikamilifu na uko tayari
+- Hakikisha mfano umejaa kikamilifu na uko tayari
 
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

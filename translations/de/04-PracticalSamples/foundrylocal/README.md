@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T19:55:46+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:35:50+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "de"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [3. AI-Service-Schicht (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Projektabhängigkeiten (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Wie alles zusammen funktioniert](../../../../04-PracticalSamples/foundrylocal)
-- [Einrichtung von Foundry Local](../../../../04-PracticalSamples/foundrylocal)
+- [Foundry Local einrichten](../../../../04-PracticalSamples/foundrylocal)
 - [Anwendung ausführen](../../../../04-PracticalSamples/foundrylocal)
 - [Erwartete Ausgabe](../../../../04-PracticalSamples/foundrylocal)
 - [Nächste Schritte](../../../../04-PracticalSamples/foundrylocal)
@@ -63,7 +63,7 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
-**Was das bewirkt:**
+**Was das macht:**
 - **base-url**: Gibt an, wo Foundry Local läuft, einschließlich des `/v1`-Pfads für die Kompatibilität mit der OpenAI-API. **Hinweis**: Foundry Local weist dynamisch einen Port zu, überprüfen Sie Ihren tatsächlichen Port mit `foundry service status`
 - **model**: Gibt den Namen des KI-Modells für die Textgenerierung an, einschließlich der Versionsnummer (z. B. `:1`). Verwenden Sie `foundry model list`, um verfügbare Modelle mit ihren genauen IDs zu sehen.
 
@@ -83,9 +83,9 @@ public class Application {
     }
 ```
 
-**Was das bewirkt:**
+**Was das macht:**
 - `@SpringBootApplication` aktiviert die automatische Konfiguration von Spring Boot
-- `WebApplicationType.NONE` weist Spring an, dass es sich um eine Kommandozeilenanwendung und keinen Webserver handelt
+- `WebApplicationType.NONE` teilt Spring mit, dass es sich um eine Kommandozeilenanwendung handelt und keinen Webserver benötigt
 - Die main-Methode startet die Spring-Anwendung
 
 **Der Demo-Runner:**
@@ -105,7 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
-**Was das bewirkt:**
+**Was das macht:**
 - `@Bean` erstellt eine Komponente, die von Spring verwaltet wird
 - `CommandLineRunner` führt Code aus, nachdem Spring Boot gestartet wurde
 - `foundryLocalService` wird von Spring automatisch injiziert (Dependency Injection)
@@ -127,8 +127,8 @@ public class FoundryLocalService {
     private String model;
 ```
 
-**Was das bewirkt:**
-- `@Service` zeigt an, dass diese Klasse Geschäftslogik bereitstellt
+**Was das macht:**
+- `@Service` teilt Spring mit, dass diese Klasse Geschäftslogik bereitstellt
 - `@Value` injiziert Konfigurationswerte aus application.properties
 - Die Syntax `:default-value` bietet Standardwerte, falls Eigenschaften nicht gesetzt sind
 
@@ -143,7 +143,7 @@ public void init() {
 }
 ```
 
-**Was das bewirkt:**
+**Was das macht:**
 - `@PostConstruct` führt diese Methode aus, nachdem Spring den Service erstellt hat
 - Erstellt einen OpenAI-Client, der auf Ihre lokale Foundry Local-Instanz verweist
 - Die Basis-URL aus `application.properties` enthält bereits `/v1` für die Kompatibilität mit der OpenAI-API
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -174,14 +174,14 @@ public String chat(String message) {
 }
 ```
 
-**Was das bewirkt:**
+**Was das macht:**
 - **ChatCompletionCreateParams**: Konfiguriert die KI-Anfrage
   - `model`: Gibt an, welches KI-Modell verwendet werden soll (muss mit der genauen ID aus `foundry model list` übereinstimmen)
   - `addUserMessage`: Fügt Ihre Nachricht zur Konversation hinzu
-  - `maxTokens`: Begrenzt die Länge der Antwort (spart Ressourcen)
-  - `temperature`: Kontrolliert die Zufälligkeit (0.0 = deterministisch, 1.0 = kreativ)
+  - `maxCompletionTokens`: Begrenzt die Länge der Antwort (spart Ressourcen)
+  - `temperature`: Steuert die Zufälligkeit (0.0 = deterministisch, 1.0 = kreativ)
 - **API-Aufruf**: Sendet die Anfrage an Foundry Local
-- **Antwortverarbeitung**: Extrahiert sicher die Textantwort der KI
+- **Antwortverarbeitung**: Extrahiert sicher den Text der KI-Antwort
 - **Fehlerbehandlung**: Verpackt Ausnahmen mit hilfreichen Fehlermeldungen
 
 ### 4. Projektabhängigkeiten (pom.xml)
@@ -211,14 +211,14 @@ public String chat(String message) {
 </dependency>
 ```
 
-**Was diese bewirken:**
+**Was diese machen:**
 - **spring-boot-starter**: Bietet grundlegende Spring Boot-Funktionalität
 - **openai-java**: Offizielles OpenAI Java SDK für die API-Kommunikation
 - **jackson-databind**: Handhabt JSON-Serialisierung/Deserialisierung für API-Aufrufe
 
 ## Wie alles zusammen funktioniert
 
-So funktioniert der Ablauf, wenn Sie die Anwendung ausführen:
+So funktioniert der komplette Ablauf, wenn Sie die Anwendung ausführen:
 
 1. **Start**: Spring Boot startet und liest `application.properties`
 2. **Service-Erstellung**: Spring erstellt `FoundryLocalService` und injiziert Konfigurationswerte
@@ -229,13 +229,13 @@ So funktioniert der Ablauf, wenn Sie die Anwendung ausführen:
 7. **Antwortverarbeitung**: Der Service extrahiert und gibt die Antwort der KI zurück
 8. **Anzeige**: Die Anwendung druckt die Antwort und beendet sich
 
-## Einrichtung von Foundry Local
+## Foundry Local einrichten
 
 Um Foundry Local einzurichten, folgen Sie diesen Schritten:
 
 1. **Foundry Local installieren** gemäß den Anweisungen im Abschnitt [Voraussetzungen](../../../../04-PracticalSamples/foundrylocal).
 
-2. **Dynamisch zugewiesenen Port überprüfen**. Foundry Local weist beim Start automatisch einen Port zu. Finden Sie Ihren Port mit:
+2. **Den dynamisch zugewiesenen Port überprüfen**. Foundry Local weist beim Start automatisch einen Port zu. Finden Sie Ihren Port mit:
    ```bash
    foundry service status
    ```
@@ -307,12 +307,12 @@ Für weitere Beispiele siehe [Kapitel 04: Praktische Beispiele](../README.md)
 - Überprüfen Sie verfügbare Modelle mit ihren genauen IDs: `foundry model list`
 - Aktualisieren Sie den Modellnamen in `application.properties`, sodass er genau übereinstimmt, einschließlich der Versionsnummer (z. B. `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Stellen Sie sicher, dass die `base-url` mit `/v1` endet: `http://localhost:5273/v1`
-- Laden Sie das Modell bei Bedarf herunter: `foundry model run phi-3.5-mini`
+- Laden Sie das Modell herunter, falls erforderlich: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request"-Fehler**
 - Überprüfen Sie, ob die Basis-URL `/v1` enthält: `http://localhost:5273/v1`
 - Stellen Sie sicher, dass die Modell-ID genau mit der aus `foundry model list` übereinstimmt
-- Vergewissern Sie sich, dass Sie `maxTokens()` anstelle von `maxCompletionTokens()` in Ihrem Code verwenden
+- Vergewissern Sie sich, dass Sie `maxCompletionTokens()` in Ihrem Code verwenden (nicht das veraltete `maxTokens()`)
 
 **Maven-Kompilierungsfehler**
 - Stellen Sie sicher, dass Java 21 oder höher installiert ist: `java -version`

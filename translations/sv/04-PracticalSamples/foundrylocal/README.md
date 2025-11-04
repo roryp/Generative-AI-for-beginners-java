@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:08:22+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:49:20+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "sv"
 }
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -178,15 +178,15 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: Konfigurerar AI-förfrågan
   - `model`: Anger vilken AI-modell som ska användas (måste matcha det exakta ID:t från `foundry model list`)
   - `addUserMessage`: Lägger till ditt meddelande i konversationen
-  - `maxTokens`: Begränsar hur långt svaret kan vara (sparar resurser)
-  - `temperature`: Styr slumpmässigheten (0.0 = deterministisk, 1.0 = kreativ)
+  - `maxCompletionTokens`: Begränsar hur långt svaret kan vara (sparar resurser)
+  - `temperature`: Styr slumpmässighet (0.0 = deterministisk, 1.0 = kreativ)
 - **API-anrop**: Skickar förfrågan till Foundry Local
-- **Svarshantering**: Extraherar AI:s textrespons på ett säkert sätt
+- **Svarshantering**: Extraherar AI:s textrespons säkert
 - **Felkorrigering**: Hanterar undantag med hjälpsamma felmeddelanden
 
 ### 4. Projektberoenden (pom.xml)
 
-**Nyckelberoenden:**
+**Viktiga beroenden:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -233,9 +233,9 @@ Så här fungerar hela flödet när du kör applikationen:
 
 För att ställa in Foundry Local, följ dessa steg:
 
-1. **Installera Foundry Local** med instruktionerna i avsnittet [Förutsättningar](../../../../04-PracticalSamples/foundrylocal).
+1. **Installera Foundry Local** enligt instruktionerna i avsnittet [Förutsättningar](../../../../04-PracticalSamples/foundrylocal).
 
-2. **Kontrollera den dynamiskt tilldelade porten**. Foundry Local tilldelar automatiskt en port när den startar. Hitta din port med:
+2. **Kontrollera den dynamiskt tilldelade porten**. Foundry Local tilldelar automatiskt en port när det startar. Hitta din port med:
    ```bash
    foundry service status
    ```
@@ -297,7 +297,7 @@ För fler exempel, se [Kapitel 04: Praktiska exempel](../README.md)
 ### Vanliga problem
 
 **"Connection refused" eller "Service unavailable"**
-- Kontrollera att Foundry Local körs: `foundry model list`
+- Se till att Foundry Local körs: `foundry model list`
 - Kontrollera den faktiska porten som Foundry Local använder: `foundry service status`
 - Uppdatera din `application.properties` med rätt port, och se till att URL:en slutar med `/v1`
 - Alternativt, ställ in en specifik port om så önskas: `foundry service set --port 5273`
@@ -312,10 +312,10 @@ För fler exempel, se [Kapitel 04: Praktiska exempel](../README.md)
 **"400 Bad Request"-fel**
 - Kontrollera att bas-URL:en inkluderar `/v1`: `http://localhost:5273/v1`
 - Kontrollera att modell-ID:t matchar exakt vad som visas i `foundry model list`
-- Se till att du använder `maxTokens()` istället för `maxCompletionTokens()` i din kod
+- Se till att du använder `maxCompletionTokens()` i din kod (inte den föråldrade `maxTokens()`)
 
 **Maven-kompilationsfel**
-- Kontrollera att Java 21 eller högre är installerat: `java -version`
+- Se till att Java 21 eller högre är installerat: `java -version`
 - Rensa och bygg om: `mvn clean compile`
 - Kontrollera internetanslutningen för att ladda ner beroenden
 
@@ -327,4 +327,4 @@ För fler exempel, se [Kapitel 04: Praktiska exempel](../README.md)
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

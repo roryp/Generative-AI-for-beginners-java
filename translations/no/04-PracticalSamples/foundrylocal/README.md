@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:09:15+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:49:55+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "no"
 }
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -178,10 +178,10 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: Konfigurerer AI-forespørselen
   - `model`: Angir hvilken AI-modell som skal brukes (må samsvare med den eksakte ID-en fra `foundry model list`)
   - `addUserMessage`: Legger til meldingen din i samtalen
-  - `maxTokens`: Begrenser hvor lang responsen kan være (spar ressurser)
+  - `maxCompletionTokens`: Begrenser hvor lang responsen kan være (spar ressurser)
   - `temperature`: Kontrollerer tilfeldighet (0.0 = deterministisk, 1.0 = kreativ)
 - **API-kall**: Sender forespørselen til Foundry Local
-- **Responshåndtering**: Henter AI-ens tekstrespons på en sikker måte
+- **Responshåndtering**: Henter AI-ens tekstrespons trygt
 - **Feilhåndtering**: Pakker inn unntak med nyttige feilmeldinger
 
 ### 4. Prosjektavhengigheter (pom.xml)
@@ -225,13 +225,13 @@ Her er den komplette flyten når du kjører applikasjonen:
 3. **Klientoppsett**: `@PostConstruct` initialiserer OpenAI-klienten for å koble til Foundry Local
 4. **Demoeksekvering**: `CommandLineRunner` kjører etter oppstart
 5. **AI-kall**: Demoen kaller `foundryLocalService.chat()` med en testmelding
-6. **API-forespørsel**: Tjenesten bygger og sender en OpenAI-kompatibel forespørsel til Foundry Local
+6. **API-forespørsel**: Tjenesten bygger og sender OpenAI-kompatibel forespørsel til Foundry Local
 7. **Responsbehandling**: Tjenesten henter og returnerer AI-ens respons
 8. **Visning**: Applikasjonen skriver ut responsen og avslutter
 
 ## Sette opp Foundry Local
 
-For å sette opp Foundry Local, følg disse trinnene:
+For å sette opp Foundry Local, følg disse stegene:
 
 1. **Installer Foundry Local** ved å følge instruksjonene i [Forutsetninger](../../../../04-PracticalSamples/foundrylocal)-seksjonen.
 
@@ -245,13 +245,13 @@ For å sette opp Foundry Local, følg disse trinnene:
    foundry service set --port 5273
    ```
 
-3. **Last ned AI-modellen** du ønsker å bruke, for eksempel `phi-3.5-mini`, med følgende kommando:
+3. **Last ned AI-modellen** du vil bruke, for eksempel `phi-3.5-mini`, med følgende kommando:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
-4. **Konfigurer application.properties**-filen for å matche innstillingene dine for Foundry Local:
-   - Oppdater porten i `base-url` (fra trinn 2), og sørg for at den inkluderer `/v1` på slutten
+4. **Konfigurer application.properties**-filen for å matche dine Foundry Local-innstillinger:
+   - Oppdater porten i `base-url` (fra steg 2), og sørg for at den inkluderer `/v1` på slutten
    - Oppdater modellnavnet til å inkludere versjonsnummeret (sjekk med `foundry model list`)
    
    Eksempel:
@@ -262,12 +262,12 @@ For å sette opp Foundry Local, følg disse trinnene:
 
 ## Kjøre applikasjonen
 
-### Trinn 1: Start Foundry Local
+### Steg 1: Start Foundry Local
 ```bash
 foundry model run phi-3.5-mini
 ```
 
-### Trinn 2: Bygg og kjør applikasjonen
+### Steg 2: Bygg og kjør applikasjonen
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
@@ -310,9 +310,9 @@ For flere eksempler, se [Kapittel 04: Praktiske eksempler](../README.md)
 - Last ned modellen hvis nødvendig: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request"-feil**
-- Bekreft at base-URL-en inkluderer `/v1`: `http://localhost:5273/v1`
+- Verifiser at base-URL-en inkluderer `/v1`: `http://localhost:5273/v1`
 - Sjekk at modell-ID-en samsvarer nøyaktig med det som vises i `foundry model list`
-- Sørg for at du bruker `maxTokens()` i stedet for `maxCompletionTokens()` i koden din
+- Sørg for at du bruker `maxCompletionTokens()` i koden din (ikke den utgåtte `maxTokens()`)
 
 **Maven-kompileringsfeil**
 - Sørg for Java 21 eller nyere: `java -version`
@@ -320,11 +320,11 @@ For flere eksempler, se [Kapittel 04: Praktiske eksempler](../README.md)
 - Sjekk internettforbindelsen for nedlasting av avhengigheter
 
 **Applikasjonen starter, men ingen output**
-- Bekreft at Foundry Local svarer: Åpne nettleseren på `http://localhost:5273`
+- Verifiser at Foundry Local svarer: Åpne nettleseren til `http://localhost:5273`
 - Sjekk applikasjonslogger for spesifikke feilmeldinger
 - Sørg for at modellen er fullstendig lastet og klar
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

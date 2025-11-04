@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:06:37+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:47:10+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "pl"
 }
 -->
-# Samouczek Foundry Local Spring Boot
+# Lokalny Samouczek Spring Boot Foundry
 
-## Spis treści
+## Spis Treści
 
 - [Wymagania wstępne](../../../../04-PracticalSamples/foundrylocal)
 - [Przegląd projektu](../../../../04-PracticalSamples/foundrylocal)
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [3. Warstwa usług AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Zależności projektu (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Jak to wszystko działa razem](../../../../04-PracticalSamples/foundrylocal)
-- [Konfiguracja Foundry Local](../../../../04-PracticalSamples/foundrylocal)
+- [Konfigurowanie Foundry Local](../../../../04-PracticalSamples/foundrylocal)
 - [Uruchamianie aplikacji](../../../../04-PracticalSamples/foundrylocal)
 - [Oczekiwany wynik](../../../../04-PracticalSamples/foundrylocal)
 - [Kolejne kroki](../../../../04-PracticalSamples/foundrylocal)
@@ -29,9 +29,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 Przed rozpoczęciem tego samouczka upewnij się, że masz:
 
-- **Java 21 lub nowszą** zainstalowaną na swoim systemie
+- **Java 21 lub wyższą** zainstalowaną na swoim systemie
 - **Maven 3.6+** do budowania projektu
-- **Foundry Local** zainstalowany i uruchomiony
+- **Foundry Local** zainstalowane i uruchomione
 
 ### **Instalacja Foundry Local:**
 
@@ -47,7 +47,7 @@ foundry model run phi-3.5-mini
 
 Projekt składa się z czterech głównych komponentów:
 
-1. **Application.java** - Główne wejście aplikacji Spring Boot
+1. **Application.java** - Główny punkt wejścia aplikacji Spring Boot
 2. **FoundryLocalService.java** - Warstwa usług obsługująca komunikację AI
 3. **application.properties** - Konfiguracja połączenia z Foundry Local
 4. **pom.xml** - Zależności Maven i konfiguracja projektu
@@ -64,7 +64,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
 **Co to robi:**
-- **base-url**: Określa, gdzie działa Foundry Local, w tym ścieżkę `/v1` dla zgodności z API OpenAI. **Uwaga**: Foundry Local dynamicznie przypisuje port, więc sprawdź rzeczywisty port za pomocą `foundry service status`
+- **base-url**: Określa, gdzie działa Foundry Local, w tym ścieżkę `/v1` dla kompatybilności z API OpenAI. **Uwaga**: Foundry Local dynamicznie przypisuje port, więc sprawdź rzeczywisty port za pomocą `foundry service status`
 - **model**: Nazwa modelu AI używanego do generowania tekstu, w tym numer wersji (np. `:1`). Użyj `foundry model list`, aby zobaczyć dostępne modele z ich dokładnymi identyfikatorami
 
 **Kluczowa koncepcja:** Spring Boot automatycznie ładuje te właściwości i udostępnia je aplikacji za pomocą adnotacji `@Value`.
@@ -86,7 +86,7 @@ public class Application {
 **Co to robi:**
 - `@SpringBootApplication` umożliwia automatyczną konfigurację Spring Boot
 - `WebApplicationType.NONE` informuje Spring, że jest to aplikacja wiersza poleceń, a nie serwer WWW
-- Główna metoda uruchamia aplikację Spring
+- Metoda main uruchamia aplikację Spring
 
 **Uruchamianie demonstracyjne:**
 ```java
@@ -146,7 +146,7 @@ public void init() {
 **Co to robi:**
 - `@PostConstruct` uruchamia tę metodę po utworzeniu usługi przez Spring
 - Tworzy klienta OpenAI wskazującego na lokalną instancję Foundry Local
-- URL bazowy z `application.properties` już zawiera `/v1` dla zgodności z API OpenAI
+- URL bazowy z `application.properties` już zawiera `/v1` dla kompatybilności z API OpenAI
 - Klucz API jest ustawiony na "not-needed", ponieważ lokalny rozwój nie wymaga uwierzytelnienia
 
 #### Metoda czatu:
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -178,7 +178,7 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: Konfiguruje żądanie AI
   - `model`: Określa, który model AI ma być używany (musi dokładnie pasować do identyfikatora z `foundry model list`)
   - `addUserMessage`: Dodaje wiadomość użytkownika do rozmowy
-  - `maxTokens`: Ogranicza długość odpowiedzi (oszczędza zasoby)
+  - `maxCompletionTokens`: Ogranicza długość odpowiedzi (oszczędza zasoby)
   - `temperature`: Kontroluje losowość (0.0 = deterministyczne, 1.0 = kreatywne)
 - **Wywołanie API**: Wysyła żądanie do Foundry Local
 - **Obsługa odpowiedzi**: Bezpiecznie wyodrębnia tekstową odpowiedź AI
@@ -225,11 +225,11 @@ Oto pełny przepływ, gdy uruchamiasz aplikację:
 3. **Konfiguracja klienta**: `@PostConstruct` inicjalizuje klienta OpenAI do połączenia z Foundry Local
 4. **Wykonanie demonstracji**: `CommandLineRunner` wykonuje się po uruchomieniu
 5. **Wywołanie AI**: Demonstracja wywołuje `foundryLocalService.chat()` z wiadomością testową
-6. **Żądanie API**: Usługa buduje i wysyła żądanie zgodne z OpenAI do Foundry Local
+6. **Żądanie API**: Usługa buduje i wysyła żądanie kompatybilne z OpenAI do Foundry Local
 7. **Przetwarzanie odpowiedzi**: Usługa wyodrębnia i zwraca odpowiedź AI
 8. **Wyświetlanie**: Aplikacja drukuje odpowiedź i kończy działanie
 
-## Konfiguracja Foundry Local
+## Konfigurowanie Foundry Local
 
 Aby skonfigurować Foundry Local, wykonaj następujące kroki:
 
@@ -250,7 +250,7 @@ Aby skonfigurować Foundry Local, wykonaj następujące kroki:
    foundry model run phi-3.5-mini
    ```
 
-4. **Skonfiguruj plik application.properties**, aby dopasować ustawienia Foundry Local:
+4. **Skonfiguruj plik application.properties**, aby pasował do ustawień Foundry Local:
    - Zaktualizuj port w `base-url` (z kroku 2), upewniając się, że zawiera `/v1` na końcu
    - Zaktualizuj nazwę modelu, aby zawierała numer wersji (sprawdź za pomocą `foundry model list`)
    
@@ -300,7 +300,7 @@ Więcej przykładów znajdziesz w [Rozdziale 04: Praktyczne przykłady](../READM
 - Upewnij się, że Foundry Local działa: `foundry model list`
 - Sprawdź rzeczywisty port używany przez Foundry Local: `foundry service status`
 - Zaktualizuj swój `application.properties` z poprawnym portem, upewniając się, że URL kończy się na `/v1`
-- Alternatywnie ustaw konkretny port, jeśli jest to wymagane: `foundry service set --port 5273`
+- Alternatywnie ustaw konkretny port, jeśli chcesz: `foundry service set --port 5273`
 - Spróbuj ponownie uruchomić Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" lub błędy "404 Not Found"**
@@ -310,12 +310,12 @@ Więcej przykładów znajdziesz w [Rozdziale 04: Praktyczne przykłady](../READM
 - Pobierz model, jeśli to konieczne: `foundry model run phi-3.5-mini`
 
 **Błędy "400 Bad Request"**
-- Zweryfikuj, czy URL bazowy zawiera `/v1`: `http://localhost:5273/v1`
-- Sprawdź, czy identyfikator modelu dokładnie pasuje do tego, co jest pokazane w `foundry model list`
-- Upewnij się, że używasz `maxTokens()` zamiast `maxCompletionTokens()` w swoim kodzie
+- Zweryfikuj, że URL bazowy zawiera `/v1`: `http://localhost:5273/v1`
+- Sprawdź, czy identyfikator modelu dokładnie pasuje do tego, co pokazuje `foundry model list`
+- Upewnij się, że używasz `maxCompletionTokens()` w swoim kodzie (nie przestarzałego `maxTokens()`)
 
 **Błędy kompilacji Maven**
-- Upewnij się, że masz Java 21 lub nowszą: `java -version`
+- Upewnij się, że masz Java 21 lub wyższą: `java -version`
 - Wyczyść i zbuduj ponownie: `mvn clean compile`
 - Sprawdź połączenie internetowe dla pobierania zależności
 
@@ -327,4 +327,4 @@ Więcej przykładów znajdziesz w [Rozdziale 04: Praktyczne przykłady](../READM
 ---
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, należy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

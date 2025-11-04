@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:12:14+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:52:58+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "ms"
 }
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [2. Kelas Aplikasi Utama (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. Lapisan Perkhidmatan AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Kebergantungan Projek (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [Bagaimana Semua Berfungsi Bersama](../../../../04-PracticalSamples/foundrylocal)
+- [Bagaimana Semua Ini Berfungsi Bersama](../../../../04-PracticalSamples/foundrylocal)
 - [Menyiapkan Foundry Tempatan](../../../../04-PracticalSamples/foundrylocal)
 - [Menjalankan Aplikasi](../../../../04-PracticalSamples/foundrylocal)
 - [Output Dijangka](../../../../04-PracticalSamples/foundrylocal)
@@ -145,7 +145,7 @@ public void init() {
 
 **Apa yang dilakukan:**
 - `@PostConstruct` menjalankan kaedah ini selepas Spring mencipta perkhidmatan
-- Mencipta klien OpenAI yang menunjuk kepada instans Foundry Tempatan anda
+- Mencipta klien OpenAI yang menunjuk kepada instance Foundry Tempatan anda
 - URL asas daripada `application.properties` sudah termasuk `/v1` untuk keserasian API OpenAI
 - Kunci API ditetapkan kepada "not-needed" kerana pembangunan tempatan tidak memerlukan pengesahan
 
@@ -156,7 +156,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -178,8 +178,8 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: Mengkonfigurasi permintaan AI
   - `model`: Menentukan model AI yang digunakan (mesti sepadan dengan ID tepat daripada `foundry model list`)
   - `addUserMessage`: Menambah mesej anda kepada perbualan
-  - `maxTokens`: Mengehadkan panjang respons (menjimatkan sumber)
-  - `temperature`: Mengawal keacakan (0.0 = deterministik, 1.0 = kreatif)
+  - `maxCompletionTokens`: Mengehadkan panjang respons (menjimatkan sumber)
+  - `temperature`: Mengawal kebarangkalian (0.0 = deterministik, 1.0 = kreatif)
 - **Panggilan API**: Menghantar permintaan kepada Foundry Tempatan
 - **Pengendalian Respons**: Mengekstrak respons teks AI dengan selamat
 - **Pengendalian Ralat**: Membungkus pengecualian dengan mesej ralat yang berguna
@@ -212,11 +212,11 @@ public String chat(String message) {
 ```
 
 **Apa yang dilakukan:**
-- **spring-boot-starter**: Menyediakan fungsi utama Spring Boot
+- **spring-boot-starter**: Menyediakan fungsi teras Spring Boot
 - **openai-java**: SDK Java rasmi OpenAI untuk komunikasi API
-- **jackson-databind**: Mengendalikan penukaran JSON untuk panggilan API
+- **jackson-databind**: Mengendalikan serialisasi/deserialisasi JSON untuk panggilan API
 
-## Bagaimana Semua Berfungsi Bersama
+## Bagaimana Semua Ini Berfungsi Bersama
 
 Berikut adalah aliran lengkap apabila anda menjalankan aplikasi:
 
@@ -240,18 +240,18 @@ Untuk menyiapkan Foundry Tempatan, ikuti langkah-langkah ini:
    foundry service status
    ```
    
-   **Pilihan**: Jika anda lebih suka menggunakan port tertentu (contohnya, 5273), anda boleh mengkonfigurasinya secara manual:
+   **Pilihan**: Jika anda lebih suka menggunakan port tertentu (contoh: 5273), anda boleh mengkonfigurasinya secara manual:
    ```bash
    foundry service set --port 5273
    ```
 
-3. **Muat turun model AI** yang ingin anda gunakan, contohnya, `phi-3.5-mini`, dengan arahan berikut:
+3. **Muat turun model AI** yang anda ingin gunakan, contohnya, `phi-3.5-mini`, dengan arahan berikut:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
 4. **Konfigurasikan fail application.properties** untuk sepadan dengan tetapan Foundry Tempatan anda:
-   - Kemas kini port dalam `base-url` (daripada langkah 2), pastikan ia termasuk `/v1` di hujung
+   - Kemas kini port dalam `base-url` (daripada langkah 2), pastikan ia termasuk `/v1` di hujungnya
    - Kemas kini nama model untuk memasukkan nombor versi (semak dengan `foundry model list`)
    
    Contoh:
@@ -297,7 +297,7 @@ Untuk lebih banyak contoh, lihat [Bab 04: Contoh Praktikal](../README.md)
 ### Masalah Biasa
 
 **"Connection refused" atau "Service unavailable"**
-- Pastikan Foundry Tempatan sedang berjalan: `foundry model list`
+- Pastikan Foundry Tempatan berjalan: `foundry model list`
 - Semak port sebenar yang digunakan oleh Foundry Tempatan: `foundry service status`
 - Kemas kini `application.properties` anda dengan port yang betul, pastikan URL berakhir dengan `/v1`
 - Sebagai alternatif, tetapkan port tertentu jika diinginkan: `foundry service set --port 5273`
@@ -305,24 +305,24 @@ Untuk lebih banyak contoh, lihat [Bab 04: Contoh Praktikal](../README.md)
 
 **"Model not found" atau "404 Not Found" errors**
 - Semak model yang tersedia dengan ID tepat mereka: `foundry model list`
-- Kemas kini nama model dalam `application.properties` untuk sepadan dengan tepat, termasuk nombor versi (contoh: `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Pastikan `base-url` termasuk `/v1` di hujung: `http://localhost:5273/v1`
+- Kemas kini nama model dalam `application.properties` agar sepadan dengan tepat, termasuk nombor versi (contoh: `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- Pastikan `base-url` termasuk `/v1` di hujungnya: `http://localhost:5273/v1`
 - Muat turun model jika diperlukan: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" errors**
 - Sahkan URL asas termasuk `/v1`: `http://localhost:5273/v1`
 - Semak bahawa ID model sepadan dengan tepat seperti yang ditunjukkan dalam `foundry model list`
-- Pastikan anda menggunakan `maxTokens()` dan bukannya `maxCompletionTokens()` dalam kod anda
+- Pastikan anda menggunakan `maxCompletionTokens()` dalam kod anda (bukan `maxTokens()` yang telah usang)
 
 **Ralat kompilasi Maven**
 - Pastikan Java 21 atau lebih tinggi: `java -version`
 - Bersihkan dan bina semula: `mvn clean compile`
 - Semak sambungan internet untuk muat turun kebergantungan
 
-**Aplikasi bermula tetapi tiada output**
+**Aplikasi dimulakan tetapi tiada output**
 - Sahkan Foundry Tempatan memberi respons: Buka pelayar ke `http://localhost:5273`
 - Semak log aplikasi untuk mesej ralat tertentu
-- Pastikan model dimuatkan sepenuhnya dan sedia
+- Pastikan model dimuat sepenuhnya dan sedia
 
 ---
 

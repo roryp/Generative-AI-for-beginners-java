@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T19:57:13+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:37:18+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "fa"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## فهرست مطالب
 
 - [پیش‌نیازها](../../../../04-PracticalSamples/foundrylocal)
-- [بررسی پروژه](../../../../04-PracticalSamples/foundrylocal)
+- [بررسی کلی پروژه](../../../../04-PracticalSamples/foundrylocal)
 - [درک کد](../../../../04-PracticalSamples/foundrylocal)
   - [1. تنظیمات برنامه (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. کلاس اصلی برنامه (Application.java)](../../../../04-PracticalSamples/foundrylocal)
@@ -44,7 +44,7 @@ foundry model run phi-3.5-mini
 ```
 
 
-## بررسی پروژه
+## بررسی کلی پروژه
 
 این پروژه شامل چهار بخش اصلی است:
 
@@ -151,7 +151,7 @@ public void init() {
 
 **این چه کاری انجام می‌دهد:**
 - `@PostConstruct` این متد را پس از ایجاد سرویس توسط Spring اجرا می‌کند.
-- یک کلاینت OpenAI ایجاد می‌کند که به نمونه محلی Foundry Local شما اشاره دارد.
+- یک کلاینت OpenAI ایجاد می‌کند که به نمونه Foundry Local شما اشاره دارد.
 - URL پایه از application.properties شامل `/v1` برای سازگاری با API OpenAI است.
 - کلید API به "not-needed" تنظیم شده زیرا توسعه محلی نیازی به احراز هویت ندارد.
 
@@ -162,7 +162,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -182,14 +182,14 @@ public String chat(String message) {
 
 
 **این چه کاری انجام می‌دهد:**
-- **ChatCompletionCreateParams**: درخواست هوش مصنوعی را پیکربندی می‌کند.
-  - `model`: مشخص می‌کند که از کدام مدل هوش مصنوعی استفاده شود (باید با شناسه دقیق از `foundry model list` مطابقت داشته باشد).
-  - `addUserMessage`: پیام شما را به مکالمه اضافه می‌کند.
-  - `maxTokens`: طول پاسخ را محدود می‌کند (صرفه‌جویی در منابع).
-  - `temperature`: کنترل تصادفی بودن (0.0 = تعیین‌کننده، 1.0 = خلاقانه).
-- **API Call**: درخواست را به Foundry Local ارسال می‌کند.
-- **Response Handling**: پاسخ متنی هوش مصنوعی را به صورت ایمن استخراج می‌کند.
-- **Error Handling**: استثناها را با پیام‌های خطای مفید بسته‌بندی می‌کند.
+- **ChatCompletionCreateParams**: درخواست هوش مصنوعی را پیکربندی می‌کند
+  - `model`: مشخص می‌کند که کدام مدل هوش مصنوعی استفاده شود (باید با شناسه دقیق از `foundry model list` مطابقت داشته باشد)
+  - `addUserMessage`: پیام شما را به مکالمه اضافه می‌کند
+  - `maxCompletionTokens`: طول پاسخ را محدود می‌کند (صرفه‌جویی در منابع)
+  - `temperature`: میزان تصادفی بودن را کنترل می‌کند (0.0 = تعیین‌کننده، 1.0 = خلاقانه)
+- **API Call**: درخواست را به Foundry Local ارسال می‌کند
+- **Response Handling**: پاسخ متنی هوش مصنوعی را به صورت ایمن استخراج می‌کند
+- **Error Handling**: استثناها را با پیام‌های خطای مفید مدیریت می‌کند
 
 ### 4. وابستگی‌های پروژه (pom.xml)
 
@@ -221,18 +221,18 @@ public String chat(String message) {
 
 **این چه کاری انجام می‌دهند:**
 - **spring-boot-starter**: قابلیت‌های اصلی Spring Boot را فراهم می‌کند.
-- **openai-java**: SDK رسمی OpenAI برای ارتباط با API.
-- **jackson-databind**: مدیریت سریال‌سازی/دی‌سریال‌سازی JSON برای درخواست‌های API.
+- **openai-java**: SDK رسمی OpenAI برای ارتباط با API
+- **jackson-databind**: مدیریت سریال‌سازی/دی‌سریال‌سازی JSON برای درخواست‌های API
 
 ## چگونگی عملکرد کلی
 
 در اینجا جریان کامل زمانی که برنامه را اجرا می‌کنید:
 
-1. **راه‌اندازی**: Spring Boot شروع به کار کرده و فایل `application.properties` را می‌خواند.
-2. **ایجاد سرویس**: Spring کلاس `FoundryLocalService` را ایجاد کرده و مقادیر تنظیمات را تزریق می‌کند.
+1. **راه‌اندازی**: Spring Boot شروع به کار کرده و `application.properties` را می‌خواند.
+2. **ایجاد سرویس**: Spring سرویس `FoundryLocalService` را ایجاد کرده و مقادیر تنظیمات را تزریق می‌کند.
 3. **تنظیم کلاینت**: `@PostConstruct` کلاینت OpenAI را برای اتصال به Foundry Local مقداردهی اولیه می‌کند.
 4. **اجرای دمو**: `CommandLineRunner` پس از راه‌اندازی اجرا می‌شود.
-5. **تماس با هوش مصنوعی**: دمو با یک پیام آزمایشی متد `foundryLocalService.chat()` را فراخوانی می‌کند.
+5. **تماس هوش مصنوعی**: دمو متد `foundryLocalService.chat()` را با یک پیام آزمایشی فراخوانی می‌کند.
 6. **درخواست API**: سرویس درخواست سازگار با OpenAI را به Foundry Local ارسال می‌کند.
 7. **پردازش پاسخ**: سرویس پاسخ هوش مصنوعی را استخراج کرده و برمی‌گرداند.
 8. **نمایش**: برنامه پاسخ را چاپ کرده و خاتمه می‌یابد.
@@ -254,7 +254,7 @@ public String chat(String message) {
    ```
 
 
-3. **مدل هوش مصنوعی مورد نظر خود را دانلود کنید**، برای مثال `phi-3.5-mini`، با دستور زیر:
+3. **مدل هوش مصنوعی مورد نظر خود را دانلود کنید**، برای مثال، `phi-3.5-mini`، با دستور زیر:
    ```bash
    foundry model run phi-3.5-mini
    ```
@@ -273,13 +273,13 @@ public String chat(String message) {
 
 ## اجرای برنامه
 
-### مرحله 1: راه‌اندازی Foundry Local
+### مرحله 1: Foundry Local را راه‌اندازی کنید
 ```bash
 foundry model run phi-3.5-mini
 ```
 
 
-### مرحله 2: ساخت و اجرای برنامه
+### مرحله 2: برنامه را بسازید و اجرا کنید
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
@@ -313,20 +313,20 @@ Is there something specific you'd like help with today?
 **"Connection refused" یا "Service unavailable"**
 - مطمئن شوید که Foundry Local در حال اجرا است: `foundry model list`
 - پورت واقعی Foundry Local را بررسی کنید: `foundry service status`
-- فایل `application.properties` خود را با پورت صحیح به‌روزرسانی کنید، مطمئن شوید که URL با `/v1` خاتمه می‌یابد.
-- به صورت اختیاری، یک پورت خاص تنظیم کنید: `foundry service set --port 5273`
-- Foundry Local را مجدداً راه‌اندازی کنید: `foundry model run phi-3.5-mini`
+- `application.properties` خود را با پورت صحیح به‌روزرسانی کنید، مطمئن شوید که URL با `/v1` خاتمه می‌یابد.
+- به‌صورت جایگزین، یک پورت خاص تنظیم کنید: `foundry service set --port 5273`
+- سعی کنید Foundry Local را مجدداً راه‌اندازی کنید: `foundry model run phi-3.5-mini`
 
 **"Model not found" یا خطاهای "404 Not Found"**
 - مدل‌های موجود را با شناسه‌های دقیق بررسی کنید: `foundry model list`
-- نام مدل را در `application.properties` به‌روزرسانی کنید تا دقیقاً مطابقت داشته باشد، شامل شماره نسخه (مثلاً `Phi-3.5-mini-instruct-cuda-gpu:1`).
+- نام مدل را در `application.properties` به‌روزرسانی کنید تا دقیقاً مطابقت داشته باشد، شامل شماره نسخه (مثلاً `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - مطمئن شوید که `base-url` شامل `/v1` در انتها است: `http://localhost:5273/v1`
 - در صورت نیاز مدل را دانلود کنید: `foundry model run phi-3.5-mini`
 
 **خطاهای "400 Bad Request"**
 - مطمئن شوید که URL پایه شامل `/v1` است: `http://localhost:5273/v1`
 - بررسی کنید که شناسه مدل دقیقاً با آنچه در `foundry model list` نشان داده شده مطابقت دارد.
-- مطمئن شوید که از `maxTokens()` به جای `maxCompletionTokens()` در کد خود استفاده می‌کنید.
+- مطمئن شوید که از `maxCompletionTokens()` در کد خود استفاده می‌کنید (نه `maxTokens()` که منسوخ شده است).
 
 **خطاهای کامپایل Maven**
 - مطمئن شوید که Java 21 یا بالاتر نصب شده است: `java -version`
@@ -334,11 +334,11 @@ Is there something specific you'd like help with today?
 - اتصال اینترنت را برای دانلود وابستگی‌ها بررسی کنید.
 
 **برنامه اجرا می‌شود اما خروجی ندارد**
-- مطمئن شوید که Foundry Local پاسخ می‌دهد: مرورگر را به `http://localhost:5273` باز کنید.
+- مطمئن شوید که Foundry Local پاسخ می‌دهد: مرورگر را باز کرده و به `http://localhost:5273` بروید.
 - لاگ‌های برنامه را برای پیام‌های خطای خاص بررسی کنید.
 - مطمئن شوید که مدل به طور کامل بارگذاری شده و آماده است.
 
 ---
 
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.

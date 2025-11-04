@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T20:06:57+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:47:52+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "tr"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Ön Koşullar](../../../../04-PracticalSamples/foundrylocal)
 - [Proje Genel Bakış](../../../../04-PracticalSamples/foundrylocal)
 - [Kodun Anlaşılması](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Uygulama Konfigürasyonu (application.properties)](../../../../04-PracticalSamples/foundrylocal)
+  - [1. Uygulama Yapılandırması (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. Ana Uygulama Sınıfı (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. AI Servis Katmanı (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Proje Bağımlılıkları (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
@@ -27,11 +27,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ön Koşullar
 
-Bu eğitime başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
+Bu eğitime başlamadan önce aşağıdaki gereksinimlere sahip olduğunuzdan emin olun:
 
-- Sisteminizde **Java 21 veya üstü** yüklü
-- Projeyi derlemek için **Maven 3.6+**
-- **Foundry Local** yüklü ve çalışır durumda
+- Sisteminizde **Java 21 veya üstü** yüklü olmalı
+- Projeyi derlemek için **Maven 3.6+** gerekli
+- **Foundry Local** yüklü ve çalışıyor olmalı
 
 ### **Foundry Local Kurulumu:**
 
@@ -43,18 +43,19 @@ winget install Microsoft.FoundryLocal
 foundry model run phi-3.5-mini
 ```
 
+
 ## Proje Genel Bakış
 
 Bu proje dört ana bileşenden oluşur:
 
 1. **Application.java** - Ana Spring Boot uygulama giriş noktası
 2. **FoundryLocalService.java** - AI iletişimini yöneten servis katmanı
-3. **application.properties** - Foundry Local bağlantı konfigürasyonu
-4. **pom.xml** - Maven bağımlılıkları ve proje konfigürasyonu
+3. **application.properties** - Foundry Local bağlantısı için yapılandırma
+4. **pom.xml** - Maven bağımlılıkları ve proje yapılandırması
 
 ## Kodun Anlaşılması
 
-### 1. Uygulama Konfigürasyonu (application.properties)
+### 1. Uygulama Yapılandırması (application.properties)
 
 **Dosya:** `src/main/resources/application.properties`
 
@@ -63,11 +64,12 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
+
 **Ne yapar:**
-- **base-url**: Foundry Local'ın çalıştığı yeri belirtir, `/v1` yolu OpenAI API uyumluluğu için dahildir. **Not**: Foundry Local dinamik olarak bir port atar, bu yüzden `foundry service status` komutuyla gerçek portunuzu kontrol edin.
+- **base-url**: Foundry Local'ın çalıştığı yeri belirtir, OpenAI API uyumluluğu için `/v1` yolunu içerir. **Not**: Foundry Local dinamik olarak bir port atar, bu yüzden gerçek portunuzu `foundry service status` komutuyla kontrol edin.
 - **model**: Metin üretimi için kullanılacak AI modelinin adını ve sürüm numarasını belirtir (örneğin, `:1`). Kullanılabilir modelleri ve tam kimliklerini görmek için `foundry model list` komutunu kullanın.
 
-**Anahtar kavram:** Spring Boot bu özellikleri otomatik olarak yükler ve `@Value` anotasyonu kullanılarak uygulamanıza erişilebilir hale getirir.
+**Anahtar kavram:** Spring Boot bu özellikleri otomatik olarak yükler ve `@Value` anotasyonu ile uygulamanıza erişilebilir hale getirir.
 
 ### 2. Ana Uygulama Sınıfı (Application.java)
 
@@ -83,12 +85,14 @@ public class Application {
     }
 ```
 
+
 **Ne yapar:**
 - `@SpringBootApplication` Spring Boot otomatik yapılandırmasını etkinleştirir.
 - `WebApplicationType.NONE` Spring'e bunun bir komut satırı uygulaması olduğunu, bir web sunucusu olmadığını söyler.
-- Ana metot Spring uygulamasını başlatır.
+- Ana metot, Spring uygulamasını başlatır.
 
 **Demo Çalıştırıcı:**
+
 ```java
 @Bean
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
@@ -105,9 +109,10 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
+
 **Ne yapar:**
 - `@Bean` Spring'in yönettiği bir bileşen oluşturur.
-- `CommandLineRunner` Spring Boot başlatıldıktan sonra kodu çalıştırır.
+- `CommandLineRunner` Spring Boot başlatıldıktan sonra kod çalıştırır.
 - `foundryLocalService` Spring tarafından otomatik olarak enjekte edilir (bağımlılık enjeksiyonu).
 - AI'ya bir test mesajı gönderir ve yanıtı görüntüler.
 
@@ -115,7 +120,8 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 
 **Dosya:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### Konfigürasyon Enjeksiyonu:
+#### Yapılandırma Enjeksiyonu:
+
 ```java
 @Service
 public class FoundryLocalService {
@@ -127,12 +133,14 @@ public class FoundryLocalService {
     private String model;
 ```
 
+
 **Ne yapar:**
 - `@Service` Spring'e bu sınıfın iş mantığı sağladığını söyler.
-- `@Value` application.properties dosyasından konfigürasyon değerlerini enjekte eder.
+- `@Value` application.properties dosyasından yapılandırma değerlerini enjekte eder.
 - `:default-value` sözdizimi, özellikler ayarlanmadığında yedek değerler sağlar.
 
 #### İstemci Başlatma:
+
 ```java
 @PostConstruct
 public void init() {
@@ -143,20 +151,22 @@ public void init() {
 }
 ```
 
+
 **Ne yapar:**
 - `@PostConstruct` bu metodu Spring servisi oluşturduktan sonra çalıştırır.
 - Yerel Foundry Local instance'ına işaret eden bir OpenAI istemcisi oluşturur.
 - `application.properties` dosyasındaki base URL zaten OpenAI API uyumluluğu için `/v1` içerir.
-- API anahtarı "not-needed" olarak ayarlanır çünkü yerel geliştirme kimlik doğrulama gerektirmez.
+- Yerel geliştirme kimlik doğrulama gerektirmediği için API anahtarı "not-needed" olarak ayarlanır.
 
 #### Sohbet Metodu:
+
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -174,11 +184,12 @@ public String chat(String message) {
 }
 ```
 
+
 **Ne yapar:**
 - **ChatCompletionCreateParams**: AI isteğini yapılandırır
   - `model`: Kullanılacak AI modelini belirtir (tam kimlik `foundry model list` ile eşleşmelidir)
   - `addUserMessage`: Mesajınızı konuşmaya ekler
-  - `maxTokens`: Yanıtın uzunluğunu sınırlar (kaynakları korur)
+  - `maxCompletionTokens`: Yanıtın uzunluğunu sınırlar (kaynakları korur)
   - `temperature`: Rastgeleliği kontrol eder (0.0 = deterministik, 1.0 = yaratıcı)
 - **API Çağrısı**: İsteği Foundry Local'a gönderir.
 - **Yanıt İşleme**: AI'nın metin yanıtını güvenli bir şekilde çıkarır.
@@ -186,7 +197,7 @@ public String chat(String message) {
 
 ### 4. Proje Bağımlılıkları (pom.xml)
 
-**Anahtar Bağımlılıklar:**
+**Ana Bağımlılıklar:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -211,18 +222,19 @@ public String chat(String message) {
 </dependency>
 ```
 
+
 **Ne yapar:**
 - **spring-boot-starter**: Temel Spring Boot işlevselliğini sağlar.
-- **openai-java**: OpenAI Java SDK'sı ile API iletişimi sağlar.
-- **jackson-databind**: API çağrıları için JSON serileştirme/deserileştirme işlemlerini yönetir.
+- **openai-java**: OpenAI Java SDK'sı ile API iletişimini sağlar.
+- **jackson-databind**: API çağrıları için JSON serileştirme/deserileştirme işlemlerini gerçekleştirir.
 
 ## Her Şeyin Birlikte Çalışması
 
-Uygulamayı çalıştırdığınızda işleyiş şu şekildedir:
+Uygulamayı çalıştırdığınızda gerçekleşen tam akış:
 
 1. **Başlangıç**: Spring Boot başlar ve `application.properties` dosyasını okur.
-2. **Servis Oluşturma**: Spring `FoundryLocalService` oluşturur ve konfigürasyon değerlerini enjekte eder.
-3. **İstemci Ayarı**: `@PostConstruct` OpenAI istemcisini Foundry Local'a bağlanacak şekilde başlatır.
+2. **Servis Oluşturma**: Spring, `FoundryLocalService` oluşturur ve yapılandırma değerlerini enjekte eder.
+3. **İstemci Kurulumu**: `@PostConstruct`, OpenAI istemcisini Foundry Local'a bağlanacak şekilde başlatır.
 4. **Demo Çalıştırma**: `CommandLineRunner` başlangıçtan sonra çalışır.
 5. **AI Çağrısı**: Demo, `foundryLocalService.chat()` ile bir test mesajı gönderir.
 6. **API İsteği**: Servis, OpenAI uyumlu isteği Foundry Local'a gönderir.
@@ -233,25 +245,27 @@ Uygulamayı çalıştırdığınızda işleyiş şu şekildedir:
 
 Foundry Local'ı kurmak için şu adımları izleyin:
 
-1. **Foundry Local'ı yükleyin** [Ön Koşullar](../../../../04-PracticalSamples/foundrylocal) bölümündeki talimatları izleyerek.
+1. **Foundry Local'ı yükleyin** [Ön Koşullar](../../../../04-PracticalSamples/foundrylocal) bölümündeki talimatları kullanarak.
 
 2. **Dinamik olarak atanan portu kontrol edin**. Foundry Local başlatıldığında otomatik olarak bir port atar. Portunuzu şu komutla bulun:
    ```bash
    foundry service status
    ```
    
-   **Opsiyonel**: Belirli bir port kullanmayı tercih ederseniz (örneğin, 5273), bunu manuel olarak yapılandırabilirsiniz:
+   **Opsiyonel**: Belirli bir port kullanmayı tercih ediyorsanız (örneğin, 5273), bunu manuel olarak yapılandırabilirsiniz:
    ```bash
    foundry service set --port 5273
    ```
+
 
 3. **Kullanmak istediğiniz AI modelini indirin**, örneğin `phi-3.5-mini`, şu komutla:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
+
 4. **application.properties** dosyasını Foundry Local ayarlarınıza uygun şekilde yapılandırın:
-   - `base-url` içindeki portu güncelleyin (adım 2'den), `/v1` sonunda olduğundan emin olun.
+   - `base-url` içindeki portu (adım 2'den) güncelleyin, `/v1` ile bittiğinden emin olun.
    - Model adını sürüm numarasını içerecek şekilde güncelleyin (`foundry model list` ile kontrol edin).
 
    Örnek:
@@ -260,6 +274,7 @@ Foundry Local'ı kurmak için şu adımları izleyin:
    foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
    ```
 
+
 ## Uygulamayı Çalıştırma
 
 ### Adım 1: Foundry Local'ı Başlatın
@@ -267,11 +282,13 @@ Foundry Local'ı kurmak için şu adımları izleyin:
 foundry model run phi-3.5-mini
 ```
 
+
 ### Adım 2: Uygulamayı Derleyin ve Çalıştırın
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
+
 
 ## Beklenen Çıktı
 
@@ -287,6 +304,7 @@ questions, helping with analysis, creative writing, coding, and general conversa
 Is there something specific you'd like help with today?
 =========================
 ```
+
 
 ## Sonraki Adımlar
 
@@ -305,14 +323,14 @@ Daha fazla örnek için [Bölüm 04: Pratik örnekler](../README.md) bölümüne
 
 **"Model bulunamadı" veya "404 Not Found" hataları**
 - Kullanılabilir modelleri ve tam kimliklerini kontrol edin: `foundry model list`
-- `application.properties` dosyasındaki model adını tam olarak eşleşecek şekilde güncelleyin, sürüm numarasını dahil ederek (örneğin, `Phi-3.5-mini-instruct-cuda-gpu:1`).
+- `application.properties` dosyasındaki model adını tam olarak eşleşecek şekilde güncelleyin, sürüm numarasını da ekleyin (örneğin, `Phi-3.5-mini-instruct-cuda-gpu:1`).
 - `base-url`'ün `/v1` ile bittiğinden emin olun: `http://localhost:5273/v1`
 - Gerekirse modeli indirin: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" hataları**
 - Base URL'nin `/v1` içerdiğinden emin olun: `http://localhost:5273/v1`
 - Model kimliğinin `foundry model list` ile tam olarak eşleştiğini kontrol edin.
-- Kodunuzda `maxTokens()` yerine `maxCompletionTokens()` kullandığınızdan emin olun.
+- Kodunuzda `maxCompletionTokens()` kullandığınızdan emin olun (eski `maxTokens()` yerine).
 
 **Maven derleme hataları**
 - Java 21 veya üstü olduğundan emin olun: `java -version`
@@ -327,4 +345,4 @@ Daha fazla örnek için [Bölüm 04: Pratik örnekler](../README.md) bölümüne
 ---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumlama durumunda sorumluluk kabul edilmez.

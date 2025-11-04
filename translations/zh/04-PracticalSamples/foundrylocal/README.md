@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "713d81fd7d28a865068df047e26c8f12",
-  "translation_date": "2025-11-03T19:58:32+00:00",
+  "original_hash": "fe08a184d8a753a0f497673921f77759",
+  "translation_date": "2025-11-04T06:38:36+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "zh"
 }
@@ -29,8 +29,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 在开始本教程之前，请确保您已完成以下准备工作：
 
-- 在系统上安装了 **Java 21 或更高版本**
-- 安装了 **Maven 3.6+** 用于构建项目
+- 系统已安装 **Java 21 或更高版本**
+- 使用 **Maven 3.6+** 构建项目
 - 已安装并运行 **Foundry Local**
 
 ### **安装 Foundry Local:**
@@ -67,7 +67,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **功能说明:**
 - **base-url**: 指定 Foundry Local 的运行地址，包括 `/v1` 路径以兼容 OpenAI API。**注意**: Foundry Local 会动态分配端口，因此请使用 `foundry service status` 检查实际端口。
-- **model**: 指定用于文本生成的 AI 模型名称及版本号（例如 `:1`）。使用 `foundry model list` 查看可用模型及其准确的 ID。
+- **model**: 指定用于文本生成的 AI 模型名称及版本号（例如 `:1`）。使用 `foundry model list` 查看可用模型及其准确 ID。
 
 **关键概念:** Spring Boot 会自动加载这些配置，并通过 `@Value` 注解在应用中使用。
 
@@ -87,8 +87,8 @@ public class Application {
 
 
 **功能说明:**
-- `@SpringBootApplication` 启用 Spring Boot 的自动配置功能
-- `WebApplicationType.NONE` 告诉 Spring 这是一个命令行应用，而不是 Web 服务器
+- `@SpringBootApplication` 启用 Spring Boot 自动配置
+- `WebApplicationType.NONE` 指定这是一个命令行应用，而不是 Web 服务器
 - 主方法启动 Spring 应用
 
 **演示运行器:**
@@ -110,7 +110,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 
 
 **功能说明:**
-- `@Bean` 创建一个由 Spring 管理的组件
+- `@Bean` 创建由 Spring 管理的组件
 - `CommandLineRunner` 在 Spring Boot 启动后运行代码
 - `foundryLocalService` 通过 Spring 自动注入（依赖注入）
 - 向 AI 发送测试消息并显示响应
@@ -162,7 +162,7 @@ public String chat(String message) {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
                 .model(model)                    // Which AI model to use
                 .addUserMessage(message)         // Your question/prompt
-                .maxTokens(150)                  // Limit response length
+                .maxCompletionTokens(150)        // Limit response length
                 .temperature(0.7)                // Control creativity (0.0-1.0)
                 .build();
         
@@ -185,7 +185,7 @@ public String chat(String message) {
 - **ChatCompletionCreateParams**: 配置 AI 请求
   - `model`: 指定使用的 AI 模型（必须与 `foundry model list` 中的 ID 完全匹配）
   - `addUserMessage`: 将用户消息添加到对话中
-  - `maxTokens`: 限制响应的最大长度（节省资源）
+  - `maxCompletionTokens`: 限制响应长度（节省资源）
   - `temperature`: 控制随机性（0.0 = 确定性，1.0 = 创造性）
 - **API 调用**: 将请求发送到 Foundry Local
 - **响应处理**: 安全提取 AI 的文本响应
@@ -220,8 +220,8 @@ public String chat(String message) {
 
 
 **功能说明:**
-- **spring-boot-starter**: 提供核心的 Spring Boot 功能
-- **openai-java**: 用于 API 通信的官方 OpenAI Java SDK
+- **spring-boot-starter**: 提供核心 Spring Boot 功能
+- **openai-java**: 官方 OpenAI Java SDK，用于 API 通信
 - **jackson-databind**: 处理 API 调用的 JSON 序列化/反序列化
 
 ## 整体工作流程
@@ -230,39 +230,39 @@ public String chat(String message) {
 
 1. **启动**: Spring Boot 启动并读取 `application.properties`
 2. **服务创建**: Spring 创建 `FoundryLocalService` 并注入配置值
-3. **客户端设置**: `@PostConstruct` 初始化 OpenAI 客户端以连接到 Foundry Local
+3. **客户端设置**: `@PostConstruct` 初始化 OpenAI 客户端以连接 Foundry Local
 4. **演示执行**: `CommandLineRunner` 在启动后执行
-5. **AI 调用**: 演示通过 `foundryLocalService.chat()` 发送测试消息
-6. **API 请求**: 服务构建并发送与 OpenAI 兼容的请求到 Foundry Local
+5. **AI 调用**: 演示调用 `foundryLocalService.chat()` 并发送测试消息
+6. **API 请求**: 服务构建并发送 OpenAI 兼容请求到 Foundry Local
 7. **响应处理**: 服务提取并返回 AI 的响应
 8. **显示结果**: 应用打印响应并退出
 
 ## 设置 Foundry Local
 
-按照以下步骤设置 Foundry Local:
+按照以下步骤设置 Foundry Local：
 
-1. **安装 Foundry Local**，请参考 [前置条件](../../../../04-PracticalSamples/foundrylocal) 部分的说明。
+1. **安装 Foundry Local**，参考 [前置条件](../../../../04-PracticalSamples/foundrylocal) 部分的说明。
 
-2. **检查动态分配的端口**。Foundry Local 启动时会自动分配端口。使用以下命令查找端口:
+2. **检查动态分配的端口**。Foundry Local 启动时会自动分配端口。使用以下命令查看端口：
    ```bash
    foundry service status
    ```
    
-   **可选**: 如果您希望使用特定端口（例如 5273），可以手动配置:
+   **可选**: 如果您希望使用特定端口（例如 5273），可以手动配置：
    ```bash
    foundry service set --port 5273
    ```
 
 
-3. **下载您想使用的 AI 模型**，例如 `phi-3.5-mini`，使用以下命令:
+3. **下载所需的 AI 模型**，例如 `phi-3.5-mini`，使用以下命令：
    ```bash
    foundry model run phi-3.5-mini
    ```
 
 
 4. **配置 application.properties** 文件以匹配您的 Foundry Local 设置:
-   - 更新 `base-url` 中的端口（根据步骤 2），确保以 `/v1` 结尾
-   - 更新模型名称以包含版本号（使用 `foundry model list` 检查）
+   - 更新 `base-url` 中的端口（步骤 2 中获取），确保以 `/v1` 结尾
+   - 更新模型名称并包含版本号（使用 `foundry model list` 检查）
 
    示例:
    ```properties
@@ -304,7 +304,7 @@ Is there something specific you'd like help with today?
 
 ## 下一步
 
-有关更多示例，请参阅 [第 04 章: 实用示例](../README.md)
+更多示例请参阅 [第 04 章: 实用样例](../README.md)
 
 ## 故障排除
 
@@ -313,20 +313,20 @@ Is there something specific you'd like help with today?
 **"连接被拒绝" 或 "服务不可用"**
 - 确保 Foundry Local 正在运行: `foundry model list`
 - 检查 Foundry Local 使用的实际端口: `foundry service status`
-- 使用正确的端口更新您的 `application.properties`，确保 URL 以 `/v1` 结尾
-- 或者，如果需要，可以设置特定端口: `foundry service set --port 5273`
-- 尝试重新启动 Foundry Local: `foundry model run phi-3.5-mini`
+- 更新 `application.properties` 中的端口，确保 URL 以 `/v1` 结尾
+- 或者，设置特定端口: `foundry service set --port 5273`
+- 尝试重启 Foundry Local: `foundry model run phi-3.5-mini`
 
 **"模型未找到" 或 "404 未找到" 错误**
 - 使用 `foundry model list` 检查可用模型及其准确 ID
-- 在 `application.properties` 中更新模型名称，确保完全匹配，包括版本号（例如 `Phi-3.5-mini-instruct-cuda-gpu:1`）
+- 更新 `application.properties` 中的模型名称，确保完全匹配，包括版本号（例如 `Phi-3.5-mini-instruct-cuda-gpu:1`）
 - 确保 `base-url` 包含 `/v1` 结尾: `http://localhost:5273/v1`
 - 如果需要，下载模型: `foundry model run phi-3.5-mini`
 
 **"400 错误请求" 错误**
 - 确认 base URL 包含 `/v1`: `http://localhost:5273/v1`
 - 检查模型 ID 是否与 `foundry model list` 中显示的完全匹配
-- 确保代码中使用的是 `maxTokens()` 而不是 `maxCompletionTokens()`
+- 确保代码中使用 `maxCompletionTokens()`（而不是已弃用的 `maxTokens()`）
 
 **Maven 编译错误**
 - 确保 Java 版本为 21 或更高: `java -version`
@@ -334,11 +334,11 @@ Is there something specific you'd like help with today?
 - 检查网络连接以下载依赖项
 
 **应用启动但无输出**
-- 确认 Foundry Local 正常响应: 在浏览器中打开 `http://localhost:5273`
+- 确认 Foundry Local 响应正常: 在浏览器中打开 `http://localhost:5273`
 - 检查应用日志以获取具体错误信息
 - 确保模型已完全加载并准备好使用
 
 ---
 
 **免责声明**：  
-本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于重要信息，建议使用专业人工翻译。我们对因使用此翻译而产生的任何误解或误读不承担责任。
+本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于重要信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。
