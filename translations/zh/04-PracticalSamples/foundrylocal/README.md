@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:38:36+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:15:41+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "zh"
 }
@@ -46,7 +46,7 @@ foundry model run phi-3.5-mini
 
 ## 项目概述
 
-该项目由以下四个主要组件组成：
+该项目主要由以下四个组件组成：
 
 1. **Application.java** - Spring Boot 应用的主入口
 2. **FoundryLocalService.java** - 处理 AI 通信的服务层
@@ -66,7 +66,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 
 **功能说明:**
-- **base-url**: 指定 Foundry Local 的运行地址，包括 `/v1` 路径以兼容 OpenAI API。**注意**: Foundry Local 会动态分配端口，因此请使用 `foundry service status` 检查实际端口。
+- **base-url**: 指定 Foundry Local 的运行地址，包括 `/v1` 路径以兼容 OpenAI API。**注意**: Foundry Local 会动态分配端口，请使用 `foundry service status` 检查实际端口。
 - **model**: 指定用于文本生成的 AI 模型名称及版本号（例如 `:1`）。使用 `foundry model list` 查看可用模型及其准确 ID。
 
 **关键概念:** Spring Boot 会自动加载这些配置，并通过 `@Value` 注解在应用中使用。
@@ -97,6 +97,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,6 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -133,8 +135,8 @@ public class FoundryLocalService {
 
 
 **功能说明:**
-- `@Service` 告诉 Spring 该类提供业务逻辑
-- `@Value` 从 application.properties 中注入配置值
+- `@Service` 表示该类提供业务逻辑
+- `@Value` 从 application.properties 注入配置值
 - `:default-value` 语法提供默认值，以防配置未设置
 
 #### 客户端初始化:
@@ -151,8 +153,8 @@ public void init() {
 
 **功能说明:**
 - `@PostConstruct` 在 Spring 创建服务后运行此方法
-- 创建一个指向本地 Foundry Local 实例的 OpenAI 客户端
-- `application.properties` 中的 base URL 已包含 `/v1`，以兼容 OpenAI API
+- 创建指向本地 Foundry Local 实例的 OpenAI 客户端
+- `application.properties` 中的 base URL 已包含 `/v1` 以兼容 OpenAI API
 - API 密钥设置为 "not-needed"，因为本地开发不需要认证
 
 #### 聊天方法:
@@ -230,9 +232,9 @@ public String chat(String message) {
 
 1. **启动**: Spring Boot 启动并读取 `application.properties`
 2. **服务创建**: Spring 创建 `FoundryLocalService` 并注入配置值
-3. **客户端设置**: `@PostConstruct` 初始化 OpenAI 客户端以连接 Foundry Local
+3. **客户端设置**: `@PostConstruct` 初始化 OpenAI 客户端以连接到 Foundry Local
 4. **演示执行**: `CommandLineRunner` 在启动后执行
-5. **AI 调用**: 演示调用 `foundryLocalService.chat()` 并发送测试消息
+5. **AI 调用**: 演示调用 `foundryLocalService.chat()` 发送测试消息
 6. **API 请求**: 服务构建并发送 OpenAI 兼容请求到 Foundry Local
 7. **响应处理**: 服务提取并返回 AI 的响应
 8. **显示结果**: 应用打印响应并退出
@@ -254,15 +256,15 @@ public String chat(String message) {
    ```
 
 
-3. **下载所需的 AI 模型**，例如 `phi-3.5-mini`，使用以下命令：
+3. **下载您想使用的 AI 模型**，例如 `phi-3.5-mini`，使用以下命令：
    ```bash
    foundry model run phi-3.5-mini
    ```
 
 
-4. **配置 application.properties** 文件以匹配您的 Foundry Local 设置:
-   - 更新 `base-url` 中的端口（步骤 2 中获取），确保以 `/v1` 结尾
-   - 更新模型名称并包含版本号（使用 `foundry model list` 检查）
+4. **配置 application.properties** 文件以匹配您的 Foundry Local 设置：
+   - 更新 `base-url` 中的端口（步骤 2 中获取），确保末尾包含 `/v1`
+   - 更新模型名称以包含版本号（使用 `foundry model list` 检查）
 
    示例:
    ```properties
@@ -304,26 +306,26 @@ Is there something specific you'd like help with today?
 
 ## 下一步
 
-更多示例请参阅 [第 04 章: 实用样例](../README.md)
+更多示例，请参阅 [第 04 章: 实用样例](../README.md)
 
 ## 故障排除
 
 ### 常见问题
 
-**"连接被拒绝" 或 "服务不可用"**
+**"Connection refused" 或 "Service unavailable"**
 - 确保 Foundry Local 正在运行: `foundry model list`
 - 检查 Foundry Local 使用的实际端口: `foundry service status`
 - 更新 `application.properties` 中的端口，确保 URL 以 `/v1` 结尾
-- 或者，设置特定端口: `foundry service set --port 5273`
+- 如果需要，可以设置特定端口: `foundry service set --port 5273`
 - 尝试重启 Foundry Local: `foundry model run phi-3.5-mini`
 
-**"模型未找到" 或 "404 未找到" 错误**
+**"Model not found" 或 "404 Not Found" 错误**
 - 使用 `foundry model list` 检查可用模型及其准确 ID
 - 更新 `application.properties` 中的模型名称，确保完全匹配，包括版本号（例如 `Phi-3.5-mini-instruct-cuda-gpu:1`）
 - 确保 `base-url` 包含 `/v1` 结尾: `http://localhost:5273/v1`
 - 如果需要，下载模型: `foundry model run phi-3.5-mini`
 
-**"400 错误请求" 错误**
+**"400 Bad Request" 错误**
 - 确认 base URL 包含 `/v1`: `http://localhost:5273/v1`
 - 检查模型 ID 是否与 `foundry model list` 中显示的完全匹配
 - 确保代码中使用 `maxCompletionTokens()`（而不是已弃用的 `maxTokens()`）
@@ -334,11 +336,11 @@ Is there something specific you'd like help with today?
 - 检查网络连接以下载依赖项
 
 **应用启动但无输出**
-- 确认 Foundry Local 响应正常: 在浏览器中打开 `http://localhost:5273`
+- 确认 Foundry Local 响应正常: 检查 `http://localhost:5273/v1/models` 或运行 `foundry service status`
 - 检查应用日志以获取具体错误信息
 - 确保模型已完全加载并准备好使用
 
 ---
 
 **免责声明**：  
-本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于重要信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。
+本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。应以原始语言的文档作为权威来源。对于关键信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。

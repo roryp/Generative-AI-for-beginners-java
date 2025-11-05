@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:37:18+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:14:25+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "fa"
 }
@@ -50,7 +50,7 @@ foundry model run phi-3.5-mini
 
 1. **Application.java** - نقطه ورود اصلی برنامه Spring Boot
 2. **FoundryLocalService.java** - لایه سرویس که ارتباط با هوش مصنوعی را مدیریت می‌کند
-3. **application.properties** - تنظیمات مربوط به اتصال Foundry Local
+3. **application.properties** - تنظیمات اتصال به Foundry Local
 4. **pom.xml** - وابستگی‌های Maven و تنظیمات پروژه
 
 ## درک کد
@@ -67,9 +67,9 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **این چه کاری انجام می‌دهد:**
 - **base-url**: مشخص می‌کند که Foundry Local کجا اجرا می‌شود، شامل مسیر `/v1` برای سازگاری با API OpenAI. **توجه:** Foundry Local به صورت پویا یک پورت اختصاص می‌دهد، بنابراین پورت واقعی خود را با استفاده از `foundry service status` بررسی کنید.
-- **model**: نام مدل هوش مصنوعی برای تولید متن را مشخص می‌کند، شامل شماره نسخه (مثلاً `:1`). برای مشاهده مدل‌های موجود و شناسه‌های دقیق آن‌ها از `foundry model list` استفاده کنید.
+- **model**: نام مدل هوش مصنوعی برای تولید متن را مشخص می‌کند، شامل شماره نسخه (مثلاً `:1`). از `foundry model list` برای مشاهده مدل‌های موجود با شناسه‌های دقیق آن‌ها استفاده کنید.
 
-**مفهوم کلیدی:** Spring Boot این تنظیمات را به صورت خودکار بارگذاری کرده و با استفاده از annotation `@Value` در دسترس برنامه شما قرار می‌دهد.
+**مفهوم کلیدی:** Spring Boot این تنظیمات را به صورت خودکار بارگذاری کرده و آن‌ها را با استفاده از annotation `@Value` در دسترس برنامه شما قرار می‌دهد.
 
 ### 2. کلاس اصلی برنامه (Application.java)
 
@@ -97,6 +97,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,6 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -137,7 +139,7 @@ public class FoundryLocalService {
 - `@Value` مقادیر تنظیمات را از application.properties تزریق می‌کند.
 - نحو `:default-value` مقادیر پیش‌فرض را در صورت عدم تنظیم فراهم می‌کند.
 
-#### مقداردهی اولیه کلاینت:
+#### راه‌اندازی کلاینت:
 ```java
 @PostConstruct
 public void init() {
@@ -182,14 +184,14 @@ public String chat(String message) {
 
 
 **این چه کاری انجام می‌دهد:**
-- **ChatCompletionCreateParams**: درخواست هوش مصنوعی را پیکربندی می‌کند
-  - `model`: مشخص می‌کند که کدام مدل هوش مصنوعی استفاده شود (باید با شناسه دقیق از `foundry model list` مطابقت داشته باشد)
-  - `addUserMessage`: پیام شما را به مکالمه اضافه می‌کند
-  - `maxCompletionTokens`: طول پاسخ را محدود می‌کند (صرفه‌جویی در منابع)
-  - `temperature`: میزان تصادفی بودن را کنترل می‌کند (0.0 = تعیین‌کننده، 1.0 = خلاقانه)
-- **API Call**: درخواست را به Foundry Local ارسال می‌کند
-- **Response Handling**: پاسخ متنی هوش مصنوعی را به صورت ایمن استخراج می‌کند
-- **Error Handling**: استثناها را با پیام‌های خطای مفید مدیریت می‌کند
+- **ChatCompletionCreateParams**: درخواست هوش مصنوعی را پیکربندی می‌کند.
+  - `model`: مشخص می‌کند که کدام مدل هوش مصنوعی استفاده شود (باید با شناسه دقیق از `foundry model list` مطابقت داشته باشد).
+  - `addUserMessage`: پیام شما را به مکالمه اضافه می‌کند.
+  - `maxCompletionTokens`: طول پاسخ را محدود می‌کند (صرفه‌جویی در منابع).
+  - `temperature`: کنترل تصادفی بودن (0.0 = تعیین‌کننده، 1.0 = خلاقانه).
+- **API Call**: درخواست را به Foundry Local ارسال می‌کند.
+- **Response Handling**: پاسخ متنی هوش مصنوعی را به صورت ایمن استخراج می‌کند.
+- **Error Handling**: استثناها را با پیام‌های خطای مفید بسته‌بندی می‌کند.
 
 ### 4. وابستگی‌های پروژه (pom.xml)
 
@@ -219,10 +221,10 @@ public String chat(String message) {
 ```
 
 
-**این چه کاری انجام می‌دهند:**
+**این‌ها چه کاری انجام می‌دهند:**
 - **spring-boot-starter**: قابلیت‌های اصلی Spring Boot را فراهم می‌کند.
-- **openai-java**: SDK رسمی OpenAI برای ارتباط با API
-- **jackson-databind**: مدیریت سریال‌سازی/دی‌سریال‌سازی JSON برای درخواست‌های API
+- **openai-java**: SDK رسمی OpenAI برای ارتباط با API.
+- **jackson-databind**: مدیریت سریال‌سازی/دی‌سریال‌سازی JSON برای درخواست‌های API.
 
 ## چگونگی عملکرد کلی
 
@@ -230,12 +232,12 @@ public String chat(String message) {
 
 1. **راه‌اندازی**: Spring Boot شروع به کار کرده و `application.properties` را می‌خواند.
 2. **ایجاد سرویس**: Spring سرویس `FoundryLocalService` را ایجاد کرده و مقادیر تنظیمات را تزریق می‌کند.
-3. **تنظیم کلاینت**: `@PostConstruct` کلاینت OpenAI را برای اتصال به Foundry Local مقداردهی اولیه می‌کند.
+3. **تنظیم کلاینت**: `@PostConstruct` کلاینت OpenAI را برای اتصال به Foundry Local راه‌اندازی می‌کند.
 4. **اجرای دمو**: `CommandLineRunner` پس از راه‌اندازی اجرا می‌شود.
-5. **تماس هوش مصنوعی**: دمو متد `foundryLocalService.chat()` را با یک پیام آزمایشی فراخوانی می‌کند.
+5. **تماس با هوش مصنوعی**: دمو متد `foundryLocalService.chat()` را با یک پیام آزمایشی فراخوانی می‌کند.
 6. **درخواست API**: سرویس درخواست سازگار با OpenAI را به Foundry Local ارسال می‌کند.
 7. **پردازش پاسخ**: سرویس پاسخ هوش مصنوعی را استخراج کرده و برمی‌گرداند.
-8. **نمایش**: برنامه پاسخ را چاپ کرده و خاتمه می‌یابد.
+8. **نمایش**: برنامه پاسخ را چاپ کرده و خارج می‌شود.
 
 ## راه‌اندازی Foundry Local
 
@@ -247,14 +249,15 @@ public String chat(String message) {
    ```bash
    foundry service status
    ```
-   
+
+
    **اختیاری**: اگر ترجیح می‌دهید از یک پورت خاص (مثلاً 5273) استفاده کنید، می‌توانید آن را به صورت دستی تنظیم کنید:
    ```bash
    foundry service set --port 5273
    ```
 
 
-3. **مدل هوش مصنوعی مورد نظر خود را دانلود کنید**، برای مثال، `phi-3.5-mini`، با دستور زیر:
+3. **مدل هوش مصنوعی مورد نظر خود را دانلود کنید**، برای مثال `phi-3.5-mini`، با دستور زیر:
    ```bash
    foundry model run phi-3.5-mini
    ```
@@ -262,7 +265,7 @@ public String chat(String message) {
 
 4. **فایل application.properties را تنظیم کنید** تا با تنظیمات Foundry Local شما مطابقت داشته باشد:
    - پورت را در `base-url` به‌روزرسانی کنید (از مرحله 2)، مطمئن شوید که شامل `/v1` در انتها باشد.
-   - نام مدل را به همراه شماره نسخه به‌روزرسانی کنید (با استفاده از `foundry model list` بررسی کنید).
+   - نام مدل را به‌روزرسانی کنید تا شماره نسخه را شامل شود (با استفاده از `foundry model list` بررسی کنید).
 
    مثال:
    ```properties
@@ -311,17 +314,17 @@ Is there something specific you'd like help with today?
 ### مشکلات رایج
 
 **"Connection refused" یا "Service unavailable"**
-- مطمئن شوید که Foundry Local در حال اجرا است: `foundry model list`
+- مطمئن شوید Foundry Local در حال اجرا است: `foundry model list`
 - پورت واقعی Foundry Local را بررسی کنید: `foundry service status`
-- `application.properties` خود را با پورت صحیح به‌روزرسانی کنید، مطمئن شوید که URL با `/v1` خاتمه می‌یابد.
-- به‌صورت جایگزین، یک پورت خاص تنظیم کنید: `foundry service set --port 5273`
+- `application.properties` خود را با پورت صحیح به‌روزرسانی کنید، مطمئن شوید که URL با `/v1` پایان می‌یابد.
+- به صورت جایگزین، یک پورت خاص تنظیم کنید اگر مورد نظر است: `foundry service set --port 5273`
 - سعی کنید Foundry Local را مجدداً راه‌اندازی کنید: `foundry model run phi-3.5-mini`
 
 **"Model not found" یا خطاهای "404 Not Found"**
 - مدل‌های موجود را با شناسه‌های دقیق بررسی کنید: `foundry model list`
-- نام مدل را در `application.properties` به‌روزرسانی کنید تا دقیقاً مطابقت داشته باشد، شامل شماره نسخه (مثلاً `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- نام مدل را در `application.properties` به‌روزرسانی کنید تا دقیقاً مطابقت داشته باشد، شامل شماره نسخه (مثلاً `Phi-3.5-mini-instruct-cuda-gpu:1`).
 - مطمئن شوید که `base-url` شامل `/v1` در انتها است: `http://localhost:5273/v1`
-- در صورت نیاز مدل را دانلود کنید: `foundry model run phi-3.5-mini`
+- مدل را در صورت نیاز دانلود کنید: `foundry model run phi-3.5-mini`
 
 **خطاهای "400 Bad Request"**
 - مطمئن شوید که URL پایه شامل `/v1` است: `http://localhost:5273/v1`
@@ -329,16 +332,16 @@ Is there something specific you'd like help with today?
 - مطمئن شوید که از `maxCompletionTokens()` در کد خود استفاده می‌کنید (نه `maxTokens()` که منسوخ شده است).
 
 **خطاهای کامپایل Maven**
-- مطمئن شوید که Java 21 یا بالاتر نصب شده است: `java -version`
+- مطمئن شوید Java 21 یا بالاتر نصب شده است: `java -version`
 - پاکسازی و بازسازی کنید: `mvn clean compile`
 - اتصال اینترنت را برای دانلود وابستگی‌ها بررسی کنید.
 
 **برنامه اجرا می‌شود اما خروجی ندارد**
-- مطمئن شوید که Foundry Local پاسخ می‌دهد: مرورگر را باز کرده و به `http://localhost:5273` بروید.
+- مطمئن شوید Foundry Local پاسخ می‌دهد: `http://localhost:5273/v1/models` را بررسی کنید یا دستور `foundry service status` را اجرا کنید.
 - لاگ‌های برنامه را برای پیام‌های خطای خاص بررسی کنید.
 - مطمئن شوید که مدل به طور کامل بارگذاری شده و آماده است.
 
 ---
 
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.

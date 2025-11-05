@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:55:01+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:33:09+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "cs"
 }
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,6 +102,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -145,11 +147,11 @@ public void init() {
 
 **Co to dělá:**
 - `@PostConstruct` spouští tuto metodu po vytvoření služby Springem
-- Vytváří OpenAI klienta, který se připojuje k vaší lokální instanci Foundry Local
+- Vytváří klienta OpenAI, který se připojuje k vaší lokální instanci Foundry Local
 - Základní URL z `application.properties` již obsahuje `/v1` pro kompatibilitu s OpenAI API
 - API klíč je nastaven na "not-needed", protože lokální vývoj nevyžaduje autentizaci
 
-#### Metoda pro chat:
+#### Metoda Chat:
 ```java
 public String chat(String message) {
     try {
@@ -175,7 +177,7 @@ public String chat(String message) {
 ```
 
 **Co to dělá:**
-- **ChatCompletionCreateParams**: Konfiguruje požadavek na AI
+- **ChatCompletionCreateParams**: Konfiguruje požadavek AI
   - `model`: Určuje, který AI model použít (musí odpovídat přesnému ID z `foundry model list`)
   - `addUserMessage`: Přidává vaši zprávu do konverzace
   - `maxCompletionTokens`: Omezuje délku odpovědi (šetří zdroje)
@@ -222,10 +224,10 @@ Zde je kompletní tok, když spustíte aplikaci:
 
 1. **Spuštění**: Spring Boot se spustí a načte `application.properties`
 2. **Vytvoření služby**: Spring vytvoří `FoundryLocalService` a injektuje konfigurační hodnoty
-3. **Nastavení klienta**: `@PostConstruct` inicializuje OpenAI klienta pro připojení k Foundry Local
-4. **Provedení dema**: `CommandLineRunner` se spustí po startu
+3. **Nastavení klienta**: `@PostConstruct` inicializuje klienta OpenAI pro připojení k Foundry Local
+4. **Spuštění dema**: `CommandLineRunner` se spustí po spuštění
 5. **Volání AI**: Demo volá `foundryLocalService.chat()` s testovací zprávou
-6. **API požadavek**: Služba sestaví a pošle požadavek kompatibilní s OpenAI na Foundry Local
+6. **API požadavek**: Služba sestaví a odešle požadavek kompatibilní s OpenAI na Foundry Local
 7. **Zpracování odpovědi**: Služba extrahuje a vrátí odpověď AI
 8. **Zobrazení**: Aplikace vytiskne odpověď a ukončí se
 
@@ -252,7 +254,7 @@ Pro nastavení Foundry Local postupujte podle těchto kroků:
 
 4. **Konfigurujte soubor application.properties** tak, aby odpovídal vašemu nastavení Foundry Local:
    - Aktualizujte port v `base-url` (z kroku 2), ujistěte se, že obsahuje `/v1` na konci
-   - Aktualizujte název modelu, aby obsahoval číslo verze (zkontrolujte pomocí `foundry model list`)
+   - Aktualizujte název modelu tak, aby obsahoval číslo verze (zkontrolujte pomocí `foundry model list`)
    
    Příklad:
    ```properties
@@ -312,19 +314,19 @@ Pro více příkladů viz [Kapitola 04: Praktické ukázky](../README.md)
 **"400 Bad Request" chyby**
 - Ověřte, že základní URL obsahuje `/v1`: `http://localhost:5273/v1`
 - Zkontrolujte, že ID modelu přesně odpovídá tomu, co je uvedeno v `foundry model list`
-- Ujistěte se, že používáte `maxCompletionTokens()` ve svém kódu (ne zastaralé `maxTokens()`)
+- Ujistěte se, že používáte `maxCompletionTokens()` ve vašem kódu (ne zastaralé `maxTokens()`)
 
 **Chyby při kompilaci Maven**
 - Ujistěte se, že máte Java 21 nebo vyšší: `java -version`
 - Vyčistěte a znovu sestavte: `mvn clean compile`
-- Zkontrolujte připojení k internetu pro stažení závislostí
+- Zkontrolujte internetové připojení pro stahování závislostí
 
-**Aplikace se spustí, ale žádný výstup**
-- Ověřte, že Foundry Local reaguje: Otevřete prohlížeč na `http://localhost:5273`
+**Aplikace se spustí, ale bez výstupu**
+- Ověřte, že Foundry Local reaguje: Zkontrolujte `http://localhost:5273/v1/models` nebo spusťte `foundry service status`
 - Zkontrolujte logy aplikace pro konkrétní chybové zprávy
 - Ujistěte se, že model je plně načtený a připravený
 
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

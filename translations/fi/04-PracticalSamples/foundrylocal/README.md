@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:50:34+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:27:38+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "fi"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Edellytykset](../../../../04-PracticalSamples/foundrylocal)
 - [Projektin yleiskatsaus](../../../../04-PracticalSamples/foundrylocal)
 - [Koodin ymmärtäminen](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Sovelluksen konfigurointi (application.properties)](../../../../04-PracticalSamples/foundrylocal)
+  - [1. Sovelluksen konfiguraatio (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. Pääsovellusluokka (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. AI-palvelukerros (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Projektin riippuvuudet (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
@@ -23,11 +23,11 @@ CO_OP_TRANSLATOR_METADATA:
 - [Sovelluksen suorittaminen](../../../../04-PracticalSamples/foundrylocal)
 - [Odotettu tulos](../../../../04-PracticalSamples/foundrylocal)
 - [Seuraavat askeleet](../../../../04-PracticalSamples/foundrylocal)
-- [Vianmääritys](../../../../04-PracticalSamples/foundrylocal)
+- [Vianetsintä](../../../../04-PracticalSamples/foundrylocal)
 
 ## Edellytykset
 
-Ennen kuin aloitat tämän oppaan, varmista että sinulla on:
+Ennen kuin aloitat tämän oppaan, varmista, että sinulla on:
 
 - **Java 21 tai uudempi** asennettuna järjestelmääsi
 - **Maven 3.6+** projektin rakentamiseen
@@ -49,13 +49,13 @@ foundry model run phi-3.5-mini
 Tämä projekti koostuu neljästä pääkomponentista:
 
 1. **Application.java** - Spring Boot -sovelluksen pääpiste
-2. **FoundryLocalService.java** - Palvelukerros, joka käsittelee AI-kommunikointia
-3. **application.properties** - Konfiguraatio Foundry Local -yhteyttä varten
-4. **pom.xml** - Maven-riippuvuudet ja projektin asetukset
+2. **FoundryLocalService.java** - Palvelukerros, joka hoitaa AI-kommunikoinnin
+3. **application.properties** - Foundry Local -yhteyden konfiguraatio
+4. **pom.xml** - Maven-riippuvuudet ja projektin konfiguraatio
 
 ## Koodin ymmärtäminen
 
-### 1. Sovelluksen konfigurointi (application.properties)
+### 1. Sovelluksen konfiguraatio (application.properties)
 
 **Tiedosto:** `src/main/resources/application.properties`
 
@@ -66,10 +66,10 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 
 **Mitä tämä tekee:**
-- **base-url**: Määrittää, missä Foundry Local toimii, mukaan lukien `/v1`-polku OpenAI API -yhteensopivuutta varten. **Huom:** Foundry Local määrittää portin dynaamisesti, joten tarkista todellinen portti komennolla `foundry service status`.
-- **model**: Nimeää AI-mallin, jota käytetään tekstin generointiin, mukaan lukien versionumero (esim. `:1`). Käytä komentoa `foundry model list` nähdäksesi saatavilla olevat mallit ja niiden tarkat tunnukset.
+- **base-url**: Määrittää, missä Foundry Local on käynnissä, mukaan lukien `/v1`-polku OpenAI API -yhteensopivuuden vuoksi. **Huom:** Foundry Local määrittää portin dynaamisesti, joten tarkista todellinen portti komennolla `foundry service status`.
+- **model**: Määrittää käytettävän AI-mallin nimen tekstin generointiin, mukaan lukien versionumeron (esim. `:1`). Käytä komentoa `foundry model list` nähdäksesi saatavilla olevat mallit ja niiden tarkat tunnukset.
 
-**Keskeinen käsite:** Spring Boot lataa nämä ominaisuudet automaattisesti ja tekee ne saataville sovelluksellesi `@Value`-annotaation avulla.
+**Keskeinen käsite:** Spring Boot lataa nämä asetukset automaattisesti ja tekee ne saataville sovelluksessasi `@Value`-annotaation avulla.
 
 ### 2. Pääsovellusluokka (Application.java)
 
@@ -97,6 +97,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,6 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -135,7 +137,7 @@ public class FoundryLocalService {
 **Mitä tämä tekee:**
 - `@Service` kertoo Springille, että tämä luokka tarjoaa liiketoimintalogiikkaa
 - `@Value` injektoi konfiguraatioarvot application.properties-tiedostosta
-- `:default-value`-syntaksi tarjoaa varmuusarvot, jos ominaisuuksia ei ole asetettu
+- `:default-value`-syntaksi tarjoaa oletusarvot, jos asetuksia ei ole määritetty
 
 #### Asiakkaan alustaminen:
 ```java
@@ -152,7 +154,7 @@ public void init() {
 **Mitä tämä tekee:**
 - `@PostConstruct` suorittaa tämän metodin sen jälkeen, kun Spring on luonut palvelun
 - Luo OpenAI-asiakkaan, joka osoittaa paikalliseen Foundry Local -instanssiin
-- Base URL application.properties-tiedostosta sisältää jo `/v1` OpenAI API -yhteensopivuutta varten
+- application.properties-tiedoston base URL sisältää jo `/v1` OpenAI API -yhteensopivuuden vuoksi
 - API-avain asetetaan "not-needed", koska paikallinen kehitys ei vaadi autentikointia
 
 #### Chat-metodi:
@@ -183,13 +185,13 @@ public String chat(String message) {
 
 **Mitä tämä tekee:**
 - **ChatCompletionCreateParams**: Konfiguroi AI-pyynnön
-  - `model`: Määrittää, mitä AI-mallia käytetään (täytyy vastata tarkasti tunnusta `foundry model list` -komennosta)
+  - `model`: Määrittää käytettävän AI-mallin (tunnuksen täytyy vastata tarkasti `foundry model list` -komennon tulosta)
   - `addUserMessage`: Lisää viestisi keskusteluun
   - `maxCompletionTokens`: Rajoittaa vastauksen pituutta (säästää resursseja)
   - `temperature`: Kontrolloi satunnaisuutta (0.0 = deterministinen, 1.0 = luova)
 - **API-kutsu**: Lähettää pyynnön Foundry Localille
 - **Vastauksen käsittely**: Poimii AI:n tekstivastauksen turvallisesti
-- **Virheenkäsittely**: Käärii poikkeukset hyödyllisiin virheilmoituksiin
+- **Virheenkäsittely**: Käsittelee poikkeukset hyödyllisten virheilmoitusten avulla
 
 ### 4. Projektin riippuvuudet (pom.xml)
 
@@ -220,17 +222,17 @@ public String chat(String message) {
 
 
 **Mitä nämä tekevät:**
-- **spring-boot-starter**: Tarjoaa Spring Bootin ydintoiminnallisuuden
-- **openai-java**: Virallinen OpenAI Java SDK API-kommunikointia varten
+- **spring-boot-starter**: Tarjoaa Spring Bootin ydintoiminnallisuudet
+- **openai-java**: Virallinen OpenAI Java SDK API-kommunikointiin
 - **jackson-databind**: Käsittelee JSON-sarjoitusta/desarjoitusta API-kutsuille
 
 ## Miten kaikki toimii yhdessä
 
-Näin sovellus toimii, kun se suoritetaan:
+Näin sovellus toimii, kun se käynnistetään:
 
 1. **Käynnistys**: Spring Boot käynnistyy ja lukee `application.properties`-tiedoston
-2. **Palvelun luominen**: Spring luo `FoundryLocalService`-palvelun ja injektoi konfiguraatioarvot
-3. **Asiakkaan asetukset**: `@PostConstruct` alustaa OpenAI-asiakkaan yhteyden Foundry Localiin
+2. **Palvelun luonti**: Spring luo `FoundryLocalService`-palvelun ja injektoi konfiguraatioarvot
+3. **Asiakkaan asetukset**: `@PostConstruct` alustaa OpenAI-asiakkaan yhteyden muodostamiseksi Foundry Localiin
 4. **Demon suoritus**: `CommandLineRunner` suoritetaan käynnistyksen jälkeen
 5. **AI-kutsu**: Demo kutsuu `foundryLocalService.chat()`-metodia testiviestillä
 6. **API-pyyntö**: Palvelu rakentaa ja lähettää OpenAI-yhteensopivan pyynnön Foundry Localille
@@ -239,11 +241,11 @@ Näin sovellus toimii, kun se suoritetaan:
 
 ## Foundry Localin asennus
 
-Noudata näitä vaiheita asentaaksesi Foundry Localin:
+Seuraa näitä vaiheita asentaaksesi Foundry Localin:
 
 1. **Asenna Foundry Local** käyttämällä ohjeita [Edellytykset](../../../../04-PracticalSamples/foundrylocal)-osiossa.
 
-2. **Tarkista dynaamisesti määritetty portti**. Foundry Local määrittää portin automaattisesti käynnistyessään. Löydä porttisi komennolla:
+2. **Tarkista dynaamisesti määritetty portti**. Foundry Local määrittää portin automaattisesti käynnistyessään. Löydät portin seuraavalla komennolla:
    ```bash
    foundry service status
    ```
@@ -254,15 +256,15 @@ Noudata näitä vaiheita asentaaksesi Foundry Localin:
    ```
 
 
-3. **Lataa AI-malli**, jota haluat käyttää, esimerkiksi `phi-3.5-mini`, seuraavalla komennolla:
+3. **Lataa haluamasi AI-malli**, esimerkiksi `phi-3.5-mini`, seuraavalla komennolla:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
 
 4. **Konfiguroi application.properties**-tiedosto vastaamaan Foundry Local -asetuksiasi:
-   - Päivitä portti `base-url`-kohtaan (vaiheesta 2), varmistaen että se sisältää `/v1` lopussa
-   - Päivitä mallin nimi sisältämään versionumero (tarkista komennolla `foundry model list`)
+   - Päivitä portti `base-url`-kohtaan (vaiheesta 2), varmistaen, että se sisältää `/v1` lopussa
+   - Päivitä mallin nimi sisältämään versionumero (tarkista `foundry model list` -komennolla)
 
    Esimerkki:
    ```properties
@@ -306,14 +308,14 @@ Is there something specific you'd like help with today?
 
 Lisää esimerkkejä löydät [Luku 04: Käytännön esimerkit](../README.md)
 
-## Vianmääritys
+## Vianetsintä
 
 ### Yleiset ongelmat
 
 **"Yhteys kielletty" tai "Palvelu ei käytettävissä"**
 - Varmista, että Foundry Local on käynnissä: `foundry model list`
 - Tarkista, mitä porttia Foundry Local käyttää: `foundry service status`
-- Päivitä `application.properties` oikealla portilla, varmistaen että URL päättyy `/v1`
+- Päivitä `application.properties` oikealla portilla, varmistaen, että URL päättyy `/v1`
 - Vaihtoehtoisesti määritä tietty portti, jos haluat: `foundry service set --port 5273`
 - Kokeile käynnistää Foundry Local uudelleen: `foundry model run phi-3.5-mini`
 
@@ -333,12 +335,12 @@ Lisää esimerkkejä löydät [Luku 04: Käytännön esimerkit](../README.md)
 - Puhdista ja rakenna uudelleen: `mvn clean compile`
 - Tarkista internet-yhteys riippuvuuksien lataamista varten
 
-**Sovellus käynnistyy mutta ei tuota tulosta**
-- Varmista, että Foundry Local vastaa: Avaa selain osoitteeseen `http://localhost:5273`
+**Sovellus käynnistyy, mutta ei tuota tulosta**
+- Varmista, että Foundry Local vastaa: Tarkista `http://localhost:5273/v1/models` tai suorita `foundry service status`
 - Tarkista sovelluksen lokit tarkempien virheilmoitusten varalta
 - Varmista, että malli on täysin ladattu ja valmis
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

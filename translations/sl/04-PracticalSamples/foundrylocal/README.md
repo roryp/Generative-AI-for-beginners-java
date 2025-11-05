@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:57:59+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:36:23+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "sl"
 }
 -->
-# Vadnica za Foundry Local Spring Boot
+# Foundry Local Spring Boot Vadnica
 
 ## Kazalo
 
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Razumevanje kode](../../../../04-PracticalSamples/foundrylocal)
   - [1. Konfiguracija aplikacije (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. Glavni razred aplikacije (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. Plast storitev AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [3. Plast storitve AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Odvisnosti projekta (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Kako vse deluje skupaj](../../../../04-PracticalSamples/foundrylocal)
 - [Nastavitev Foundry Local](../../../../04-PracticalSamples/foundrylocal)
@@ -49,7 +49,7 @@ foundry model run phi-3.5-mini
 Ta projekt vsebuje štiri glavne komponente:
 
 1. **Application.java** - Glavna vstopna točka aplikacije Spring Boot
-2. **FoundryLocalService.java** - Plast storitev, ki upravlja komunikacijo z AI
+2. **FoundryLocalService.java** - Plast storitve, ki upravlja komunikacijo z AI
 3. **application.properties** - Konfiguracija za povezavo s Foundry Local
 4. **pom.xml** - Maven odvisnosti in konfiguracija projekta
 
@@ -64,10 +64,9 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
-
 **Kaj to počne:**
-- **base-url**: Določa, kje teče Foundry Local, vključno s potjo `/v1` za združljivost z OpenAI API. **Opomba**: Foundry Local dinamično dodeli vrata, zato preverite dejanska vrata z ukazom `foundry service status`.
-- **model**: Ime AI modela za generiranje besedila, vključno s številko različice (npr. `:1`). Uporabite `foundry model list`, da vidite razpoložljive modele z njihovimi natančnimi ID-ji.
+- **base-url**: Določa, kje teče Foundry Local, vključno s potjo `/v1` za združljivost z OpenAI API. **Opomba**: Foundry Local dinamično dodeli vrata, zato preverite dejanska vrata z ukazom `foundry service status`
+- **model**: Ime AI modela za generiranje besedila, vključno s številko različice (npr. `:1`). Uporabite `foundry model list`, da vidite razpoložljive modele z njihovimi natančnimi ID-ji
 
 **Ključni koncept:** Spring Boot samodejno naloži te lastnosti in jih naredi dostopne vaši aplikaciji z uporabo oznake `@Value`.
 
@@ -85,18 +84,18 @@ public class Application {
     }
 ```
 
-
 **Kaj to počne:**
 - `@SpringBootApplication` omogoča samodejno konfiguracijo Spring Boot
 - `WebApplicationType.NONE` pove Springu, da gre za aplikacijo ukazne vrstice, ne za spletni strežnik
-- Glavna metoda zažene aplikacijo Spring
+- Glavna metoda zažene Spring aplikacijo
 
-**Demo zaganjalnik:**
+**Demo Runner:**
 ```java
 @Bean
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,10 +103,10 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
-
 
 **Kaj to počne:**
 - `@Bean` ustvari komponento, ki jo upravlja Spring
@@ -115,7 +114,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 - `foundryLocalService` je samodejno vbrizgan s strani Springa (odvisnostna injekcija)
 - Pošlje testno sporočilo AI-ju in prikaže odgovor
 
-### 3. Plast storitev AI (FoundryLocalService.java)
+### 3. Plast storitve AI (FoundryLocalService.java)
 
 **Datoteka:** `src/main/java/com/example/FoundryLocalService.java`
 
@@ -130,7 +129,6 @@ public class FoundryLocalService {
     @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
     private String model;
 ```
-
 
 **Kaj to počne:**
 - `@Service` pove Springu, da ta razred zagotavlja poslovno logiko
@@ -147,7 +145,6 @@ public void init() {
             .build();
 }
 ```
-
 
 **Kaj to počne:**
 - `@PostConstruct` zažene to metodo po tem, ko Spring ustvari storitev
@@ -180,10 +177,9 @@ public String chat(String message) {
 }
 ```
 
-
 **Kaj to počne:**
 - **ChatCompletionCreateParams**: Konfigurira zahtevo AI
-  - `model`: Določa, kateri AI model uporabiti (mora se ujemati z natančnim ID-jem iz `foundry model list`)
+  - `model`: Določa, kateri AI model uporabiti (mora ustrezati natančnemu ID-ju iz `foundry model list`)
   - `addUserMessage`: Doda vaše sporočilo v pogovor
   - `maxCompletionTokens`: Omeji dolžino odgovora (prihrani vire)
   - `temperature`: Nadzoruje naključnost (0.0 = deterministično, 1.0 = kreativno)
@@ -218,18 +214,17 @@ public String chat(String message) {
 </dependency>
 ```
 
-
 **Kaj te počnejo:**
 - **spring-boot-starter**: Zagotavlja osnovno funkcionalnost Spring Boot
-- **openai-java**: Uradni OpenAI Java SDK za komunikacijo z API
-- **jackson-databind**: Upravlja JSON serializacijo/deserializacijo za API klice
+- **openai-java**: Uradni OpenAI Java SDK za komunikacijo z API-jem
+- **jackson-databind**: Upravljanje JSON serializacije/deserializacije za API klice
 
 ## Kako vse deluje skupaj
 
 Tukaj je celoten potek, ko zaženete aplikacijo:
 
 1. **Zagon**: Spring Boot se zažene in prebere `application.properties`
-2. **Ustvarjanje storitve**: Spring ustvari `FoundryLocalService` in vbrizga konfiguracijske vrednosti
+2. **Ustvarjanje storitve**: Spring ustvari `FoundryLocalService` in vbrizga vrednosti konfiguracije
 3. **Nastavitev odjemalca**: `@PostConstruct` inicializira OpenAI odjemalca za povezavo s Foundry Local
 4. **Izvedba demo**: `CommandLineRunner` se zažene po zagonu
 5. **Klic AI**: Demo pokliče `foundryLocalService.chat()` s testnim sporočilom
@@ -253,17 +248,15 @@ Za nastavitev Foundry Local sledite tem korakom:
    foundry service set --port 5273
    ```
 
-
 3. **Prenesite AI model**, ki ga želite uporabiti, na primer `phi-3.5-mini`, z naslednjim ukazom:
    ```bash
    foundry model run phi-3.5-mini
    ```
 
-
-4. **Konfigurirajte datoteko application.properties**, da ustreza vašim nastavitvam Foundry Local:
-   - Posodobite vrata v `base-url` (iz koraka 2), pri čemer poskrbite, da vključuje `/v1` na koncu
+4. **Konfigurirajte datoteko application.properties**, da ustreza nastavitvam Foundry Local:
+   - Posodobite vrata v `base-url` (iz koraka 2), pri čemer zagotovite, da vključuje `/v1` na koncu
    - Posodobite ime modela, da vključuje številko različice (preverite z `foundry model list`)
-
+   
    Primer:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
@@ -277,7 +270,6 @@ Za nastavitev Foundry Local sledite tem korakom:
 ```bash
 foundry model run phi-3.5-mini
 ```
-
 
 ### Korak 2: Zgradite in zaženite aplikacijo
 ```bash
@@ -313,20 +305,20 @@ Za več primerov si oglejte [Poglavje 04: Praktični primeri](../README.md)
 **"Connection refused" ali "Service unavailable"**
 - Prepričajte se, da Foundry Local deluje: `foundry model list`
 - Preverite dejanska vrata, ki jih uporablja Foundry Local: `foundry service status`
-- Posodobite svoj `application.properties` s pravilnimi vrati, pri čemer poskrbite, da URL konča z `/v1`
+- Posodobite svoj `application.properties` z ustreznimi vrati, pri čemer zagotovite, da URL konča z `/v1`
 - Alternativno nastavite določena vrata, če želite: `foundry service set --port 5273`
 - Poskusite znova zagnati Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" ali "404 Not Found" napake**
 - Preverite razpoložljive modele z njihovimi natančnimi ID-ji: `foundry model list`
 - Posodobite ime modela v `application.properties`, da se natančno ujema, vključno s številko različice (npr. `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Poskrbite, da `base-url` vključuje `/v1` na koncu: `http://localhost:5273/v1`
+- Prepričajte se, da `base-url` vključuje `/v1` na koncu: `http://localhost:5273/v1`
 - Prenesite model, če je potrebno: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" napake**
 - Preverite, da osnovni URL vključuje `/v1`: `http://localhost:5273/v1`
 - Preverite, da se ID modela natančno ujema s tistim, ki je prikazan v `foundry model list`
-- Poskrbite, da uporabljate `maxCompletionTokens()` v svoji kodi (ne zastareli `maxTokens()`)
+- Prepričajte se, da uporabljate `maxCompletionTokens()` v svoji kodi (ne zastareli `maxTokens()`)
 
 **Napake pri Maven kompilaciji**
 - Prepričajte se, da imate Java 21 ali novejšo: `java -version`
@@ -334,11 +326,11 @@ Za več primerov si oglejte [Poglavje 04: Praktični primeri](../README.md)
 - Preverite internetno povezavo za prenos odvisnosti
 
 **Aplikacija se zažene, vendar ni izhoda**
-- Preverite, ali Foundry Local odgovarja: Odprite brskalnik na `http://localhost:5273`
-- Preverite dnevniške zapise aplikacije za specifična sporočila o napakah
-- Poskrbite, da je model popolnoma naložen in pripravljen
+- Preverite, ali Foundry Local odgovarja: Preverite `http://localhost:5273/v1/models` ali zaženite `foundry service status`
+- Preverite dnevniške datoteke aplikacije za specifična sporočila o napakah
+- Prepričajte se, da je model popolnoma naložen in pripravljen
 
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatski prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku naj se šteje za avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne odgovarjamo za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

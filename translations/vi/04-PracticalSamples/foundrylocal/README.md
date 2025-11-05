@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:52:11+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:29:19+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "vi"
 }
@@ -11,13 +11,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Mục lục
 
-- [Yêu cầu trước khi bắt đầu](../../../../04-PracticalSamples/foundrylocal)
+- [Yêu cầu trước](../../../../04-PracticalSamples/foundrylocal)
 - [Tổng quan dự án](../../../../04-PracticalSamples/foundrylocal)
 - [Hiểu về mã nguồn](../../../../04-PracticalSamples/foundrylocal)
   - [1. Cấu hình ứng dụng (application.properties)](../../../../04-PracticalSamples/foundrylocal)
   - [2. Lớp ứng dụng chính (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. Lớp dịch vụ AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Các phụ thuộc dự án (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
+  - [3. Tầng dịch vụ AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
+  - [4. Các phụ thuộc của dự án (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
 - [Cách hoạt động của toàn bộ hệ thống](../../../../04-PracticalSamples/foundrylocal)
 - [Cài đặt Foundry Local](../../../../04-PracticalSamples/foundrylocal)
 - [Chạy ứng dụng](../../../../04-PracticalSamples/foundrylocal)
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Bước tiếp theo](../../../../04-PracticalSamples/foundrylocal)
 - [Xử lý sự cố](../../../../04-PracticalSamples/foundrylocal)
 
-## Yêu cầu trước khi bắt đầu
+## Yêu cầu trước
 
 Trước khi bắt đầu hướng dẫn này, hãy đảm bảo bạn đã:
 
@@ -48,7 +48,7 @@ foundry model run phi-3.5-mini
 Dự án này bao gồm bốn thành phần chính:
 
 1. **Application.java** - Điểm khởi đầu chính của ứng dụng Spring Boot
-2. **FoundryLocalService.java** - Lớp dịch vụ xử lý giao tiếp AI
+2. **FoundryLocalService.java** - Tầng dịch vụ xử lý giao tiếp AI
 3. **application.properties** - Cấu hình kết nối với Foundry Local
 4. **pom.xml** - Các phụ thuộc Maven và cấu hình dự án
 
@@ -65,7 +65,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **Chức năng:**
 - **base-url**: Xác định nơi Foundry Local đang chạy, bao gồm đường dẫn `/v1` để tương thích với API OpenAI. **Lưu ý**: Foundry Local tự động gán cổng, vì vậy hãy kiểm tra cổng thực tế bằng `foundry service status`
-- **model**: Đặt tên mô hình AI để sử dụng cho việc tạo văn bản, bao gồm số phiên bản (ví dụ: `:1`). Sử dụng `foundry model list` để xem các mô hình có sẵn với ID chính xác của chúng
+- **model**: Tên mô hình AI được sử dụng để tạo văn bản, bao gồm số phiên bản (ví dụ: `:1`). Sử dụng `foundry model list` để xem các mô hình có sẵn với ID chính xác của chúng
 
 **Khái niệm chính:** Spring Boot tự động tải các thuộc tính này và làm cho chúng có sẵn cho ứng dụng của bạn bằng cách sử dụng chú thích `@Value`.
 
@@ -85,7 +85,7 @@ public class Application {
 
 **Chức năng:**
 - `@SpringBootApplication` kích hoạt cấu hình tự động của Spring Boot
-- `WebApplicationType.NONE` thông báo cho Spring rằng đây là ứng dụng dòng lệnh, không phải máy chủ web
+- `WebApplicationType.NONE` cho Spring biết đây là ứng dụng dòng lệnh, không phải máy chủ web
 - Phương thức chính khởi động ứng dụng Spring
 
 **Trình chạy demo:**
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,6 +102,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -111,7 +113,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 - `foundryLocalService` được Spring tự động tiêm (dependency injection)
 - Gửi một tin nhắn thử nghiệm đến AI và hiển thị phản hồi
 
-### 3. Lớp dịch vụ AI (FoundryLocalService.java)
+### 3. Tầng dịch vụ AI (FoundryLocalService.java)
 
 **Tệp:** `src/main/java/com/example/FoundryLocalService.java`
 
@@ -128,9 +130,9 @@ public class FoundryLocalService {
 ```
 
 **Chức năng:**
-- `@Service` thông báo cho Spring rằng lớp này cung cấp logic nghiệp vụ
+- `@Service` cho Spring biết lớp này cung cấp logic nghiệp vụ
 - `@Value` tiêm các giá trị cấu hình từ application.properties
-- Cú pháp `:default-value` cung cấp giá trị dự phòng nếu các thuộc tính không được đặt
+- Cú pháp `:default-value` cung cấp giá trị mặc định nếu thuộc tính không được đặt
 
 #### Khởi tạo client:
 ```java
@@ -147,9 +149,9 @@ public void init() {
 - `@PostConstruct` chạy phương thức này sau khi Spring tạo dịch vụ
 - Tạo một client OpenAI trỏ đến phiên bản Foundry Local của bạn
 - URL cơ sở từ `application.properties` đã bao gồm `/v1` để tương thích với API OpenAI
-- Khóa API được đặt là "not-needed" vì phát triển cục bộ không yêu cầu xác thực
+- API key được đặt là "not-needed" vì phát triển cục bộ không yêu cầu xác thực
 
-#### Phương thức chat:
+#### Phương thức Chat:
 ```java
 public String chat(String message) {
     try {
@@ -176,15 +178,15 @@ public String chat(String message) {
 
 **Chức năng:**
 - **ChatCompletionCreateParams**: Cấu hình yêu cầu AI
-  - `model`: Xác định mô hình AI để sử dụng (phải khớp với ID chính xác từ `foundry model list`)
+  - `model`: Xác định mô hình AI nào sẽ sử dụng (phải khớp với ID chính xác từ `foundry model list`)
   - `addUserMessage`: Thêm tin nhắn của bạn vào cuộc trò chuyện
   - `maxCompletionTokens`: Giới hạn độ dài của phản hồi (tiết kiệm tài nguyên)
-  - `temperature`: Kiểm soát độ ngẫu nhiên (0.0 = xác định, 1.0 = sáng tạo)
+  - `temperature`: Điều chỉnh độ ngẫu nhiên (0.0 = xác định, 1.0 = sáng tạo)
 - **API Call**: Gửi yêu cầu đến Foundry Local
 - **Xử lý phản hồi**: Trích xuất phản hồi văn bản của AI một cách an toàn
-- **Xử lý lỗi**: Bao bọc các ngoại lệ với thông báo lỗi hữu ích
+- **Xử lý lỗi**: Bao bọc ngoại lệ với thông báo lỗi hữu ích
 
-### 4. Các phụ thuộc dự án (pom.xml)
+### 4. Các phụ thuộc của dự án (pom.xml)
 
 **Các phụ thuộc chính:**
 
@@ -233,9 +235,9 @@ Dưới đây là luồng hoàn chỉnh khi bạn chạy ứng dụng:
 
 Để cài đặt Foundry Local, hãy làm theo các bước sau:
 
-1. **Cài đặt Foundry Local** theo hướng dẫn trong phần [Yêu cầu trước khi bắt đầu](../../../../04-PracticalSamples/foundrylocal).
+1. **Cài đặt Foundry Local** theo hướng dẫn trong phần [Yêu cầu trước](../../../../04-PracticalSamples/foundrylocal).
 
-2. **Kiểm tra cổng được gán động**. Foundry Local tự động gán cổng khi khởi động. Tìm cổng của bạn bằng:
+2. **Kiểm tra cổng được gán động**. Foundry Local tự động gán một cổng khi khởi động. Tìm cổng của bạn bằng:
    ```bash
    foundry service status
    ```
@@ -245,7 +247,7 @@ Dưới đây là luồng hoàn chỉnh khi bạn chạy ứng dụng:
    foundry service set --port 5273
    ```
 
-3. **Tải xuống mô hình AI** bạn muốn sử dụng, ví dụ, `phi-3.5-mini`, với lệnh sau:
+3. **Tải xuống mô hình AI** bạn muốn sử dụng, ví dụ, `phi-3.5-mini`, bằng lệnh sau:
    ```bash
    foundry model run phi-3.5-mini
    ```
@@ -290,7 +292,7 @@ Is there something specific you'd like help with today?
 
 ## Bước tiếp theo
 
-Để xem thêm ví dụ, hãy tham khảo [Chương 04: Các mẫu thực tế](../README.md)
+Để xem thêm ví dụ, hãy xem [Chương 04: Các mẫu thực tế](../README.md)
 
 ## Xử lý sự cố
 
@@ -312,7 +314,7 @@ Is there something specific you'd like help with today?
 **Lỗi "400 Bad Request"**
 - Xác minh URL cơ sở bao gồm `/v1`: `http://localhost:5273/v1`
 - Kiểm tra rằng ID mô hình khớp chính xác với những gì hiển thị trong `foundry model list`
-- Đảm bảo bạn đang sử dụng `maxCompletionTokens()` trong mã của mình (không phải `maxTokens()` đã bị ngừng sử dụng)
+- Đảm bảo bạn đang sử dụng `maxCompletionTokens()` trong mã của mình (không phải `maxTokens()` đã lỗi thời)
 
 **Lỗi biên dịch Maven**
 - Đảm bảo Java 21 hoặc cao hơn: `java -version`
@@ -320,8 +322,8 @@ Is there something specific you'd like help with today?
 - Kiểm tra kết nối internet để tải xuống các phụ thuộc
 
 **Ứng dụng khởi động nhưng không có đầu ra**
-- Xác minh Foundry Local đang phản hồi: Mở trình duyệt đến `http://localhost:5273`
-- Kiểm tra nhật ký ứng dụng để tìm thông báo lỗi cụ thể
+- Xác minh Foundry Local đang phản hồi: Kiểm tra `http://localhost:5273/v1/models` hoặc chạy `foundry service status`
+- Kiểm tra nhật ký ứng dụng để biết thông báo lỗi cụ thể
 - Đảm bảo mô hình đã được tải đầy đủ và sẵn sàng
 
 ---

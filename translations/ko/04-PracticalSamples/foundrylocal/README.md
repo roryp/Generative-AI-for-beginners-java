@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:41:15+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:18:12+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "ko"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [전체 작동 방식](../../../../04-PracticalSamples/foundrylocal)
 - [Foundry Local 설정하기](../../../../04-PracticalSamples/foundrylocal)
 - [애플리케이션 실행하기](../../../../04-PracticalSamples/foundrylocal)
-- [예상 출력](../../../../04-PracticalSamples/foundrylocal)
+- [예상 출력 결과](../../../../04-PracticalSamples/foundrylocal)
 - [다음 단계](../../../../04-PracticalSamples/foundrylocal)
 - [문제 해결](../../../../04-PracticalSamples/foundrylocal)
 
@@ -83,9 +83,9 @@ public class Application {
     }
 ```
 
-**이 클래스의 역할:**
+**이 코드의 역할:**
 - `@SpringBootApplication`은 Spring Boot의 자동 설정을 활성화합니다.
-- `WebApplicationType.NONE`은 이 애플리케이션이 웹 서버가 아닌 커맨드라인 애플리케이션임을 나타냅니다.
+- `WebApplicationType.NONE`은 Spring이 이 애플리케이션을 웹 서버가 아닌 커맨드라인 앱으로 인식하도록 합니다.
 - 메인 메서드는 Spring 애플리케이션을 시작합니다.
 
 **데모 실행기:**
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,6 +102,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -128,7 +130,7 @@ public class FoundryLocalService {
 ```
 
 **이 코드의 역할:**
-- `@Service`는 이 클래스가 비즈니스 로직을 제공한다고 Spring에 알립니다.
+- `@Service`는 Spring에게 이 클래스가 비즈니스 로직을 제공한다고 알립니다.
 - `@Value`는 application.properties에서 설정 값을 주입합니다.
 - `:default-value` 구문은 설정 값이 없을 경우 기본값을 제공합니다.
 
@@ -179,10 +181,10 @@ public String chat(String message) {
   - `model`: 사용할 AI 모델을 지정합니다 (정확한 ID는 `foundry model list`에서 확인해야 함).
   - `addUserMessage`: 대화에 메시지를 추가합니다.
   - `maxCompletionTokens`: 응답 길이를 제한하여 리소스를 절약합니다.
-  - `temperature`: 랜덤성을 제어합니다 (0.0 = 결정적, 1.0 = 창의적).
+  - `temperature`: 무작위성을 제어합니다 (0.0 = 결정적, 1.0 = 창의적).
 - **API 호출**: 요청을 Foundry Local에 보냅니다.
 - **응답 처리**: AI의 텍스트 응답을 안전하게 추출합니다.
-- **오류 처리**: 유용한 오류 메시지로 예외를 감쌉니다.
+- **오류 처리**: 유용한 오류 메시지로 예외를 감싸서 처리합니다.
 
 ### 4. 프로젝트 종속성 (pom.xml)
 
@@ -227,7 +229,7 @@ public String chat(String message) {
 5. **AI 호출**: 데모가 테스트 메시지로 `foundryLocalService.chat()`을 호출합니다.
 6. **API 요청**: 서비스가 OpenAI 호환 요청을 Foundry Local에 보냅니다.
 7. **응답 처리**: 서비스가 응답을 추출하고 반환합니다.
-8. **출력**: 애플리케이션이 응답을 출력하고 종료합니다.
+8. **표시**: 애플리케이션이 응답을 출력하고 종료합니다.
 
 ## Foundry Local 설정하기
 
@@ -273,7 +275,7 @@ mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
 
-## 예상 출력
+## 예상 출력 결과
 
 ```
 === Foundry Local Demo ===
@@ -320,11 +322,11 @@ Is there something specific you'd like help with today?
 - 종속성 다운로드를 위한 인터넷 연결을 확인하세요.
 
 **애플리케이션이 시작되었지만 출력이 없음**
-- Foundry Local이 응답하는지 확인하세요: 브라우저에서 `http://localhost:5273`를 열어보세요.
-- 애플리케이션 로그에서 특정 오류 메시지를 확인하세요.
+- Foundry Local이 응답하는지 확인하세요: `http://localhost:5273/v1/models`를 확인하거나 `foundry service status`를 실행하세요.
+- 특정 오류 메시지를 확인하려면 애플리케이션 로그를 확인하세요.
 - 모델이 완전히 로드되고 준비되었는지 확인하세요.
 
 ---
 
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어를 권위 있는 출처로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서의 원어 버전을 권위 있는 출처로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임지지 않습니다.
