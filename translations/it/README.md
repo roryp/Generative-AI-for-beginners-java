@@ -1,18 +1,18 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d83a4cd2f465a83b72b5a5284d3a72fd",
-  "translation_date": "2025-10-24T09:04:58+00:00",
+  "original_hash": "ff595bec5b6294cb68860d540eae6302",
+  "translation_date": "2025-11-18T17:14:03+00:00",
   "source_file": "README.md",
   "language_code": "it"
 }
 -->
 # AI Generativa per Principianti - Edizione Java
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 ![AI Generativa per Principianti - Edizione Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.it.png)
 
-**Impegno di Tempo**: L'intero workshop può essere completato online senza configurazione locale. L'impostazione dell'ambiente richiede 2 minuti, mentre l'esplorazione degli esempi richiede 1-3 ore a seconda della profondità di esplorazione.
+**Impegno di Tempo**: L'intero workshop può essere completato online senza configurazione locale. L'impostazione dell'ambiente richiede 2 minuti, mentre l'esplorazione degli esempi richiede da 1 a 3 ore a seconda della profondità di esplorazione.
 
 > **Avvio Rapido**
 
@@ -27,36 +27,34 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Supportato tramite GitHub Action (Automatizzato e Sempre Aggiornato)
 
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabo](../ar/README.md) | [Bengalese](../bn/README.md) | [Bulgaro](../bg/README.md) | [Birmano (Myanmar)](../my/README.md) | [Cinese (Semplificato)](../zh/README.md) | [Cinese (Tradizionale, Hong Kong)](../hk/README.md) | [Cinese (Tradizionale, Macao)](../mo/README.md) | [Cinese (Tradizionale, Taiwan)](../tw/README.md) | [Croato](../hr/README.md) | [Ceco](../cs/README.md) | [Danese](../da/README.md) | [Olandese](../nl/README.md) | [Estone](../et/README.md) | [Finlandese](../fi/README.md) | [Francese](../fr/README.md) | [Tedesco](../de/README.md) | [Greco](../el/README.md) | [Ebraico](../he/README.md) | [Hindi](../hi/README.md) | [Ungherese](../hu/README.md) | [Indonesiano](../id/README.md) | [Italiano](./README.md) | [Giapponese](../ja/README.md) | [Coreano](../ko/README.md) | [Lituano](../lt/README.md) | [Malese](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalese](../ne/README.md) | [Norvegese](../no/README.md) | [Persiano (Farsi)](../fa/README.md) | [Polacco](../pl/README.md) | [Portoghese (Brasile)](../br/README.md) | [Portoghese (Portogallo)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumeno](../ro/README.md) | [Russo](../ru/README.md) | [Serbo (Cirillico)](../sr/README.md) | [Slovacco](../sk/README.md) | [Sloveno](../sl/README.md) | [Spagnolo](../es/README.md) | [Swahili](../sw/README.md) | [Svedese](../sv/README.md) | [Tagalog (Filippino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thailandese](../th/README.md) | [Turco](../tr/README.md) | [Ucraino](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamita](../vi/README.md)
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](./README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
 ## Struttura del Corso e Percorso di Apprendimento
 
 ### **Capitolo 1: Introduzione all'AI Generativa**
-- **Concetti Fondamentali**: Comprendere i Modelli Linguistici di Grandi Dimensioni, i token, gli embeddings e le capacità dell'AI
-- **Ecosistema AI in Java**: Panoramica su Spring AI e SDK OpenAI
+- **Concetti Fondamentali**: Comprendere i modelli linguistici di grandi dimensioni, i token, gli embeddings e le capacità dell'AI
+- **Ecosistema AI in Java**: Panoramica su Spring AI e OpenAI SDK
 - **Protocollo di Contesto del Modello**: Introduzione al MCP e al suo ruolo nella comunicazione degli agenti AI
-- **Applicazioni Pratiche**: Scenari reali tra cui chatbot e generazione di contenuti
+- **Applicazioni Pratiche**: Scenari reali come chatbot e generazione di contenuti
 - **[→ Inizia il Capitolo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capitolo 2: Configurazione dell'Ambiente di Sviluppo**
-- **Configurazione Multi-Provider**: Configura modelli GitHub, Azure OpenAI e integrazioni SDK OpenAI Java
+- **Configurazione Multi-Provider**: Configura modelli GitHub, Azure OpenAI e integrazioni OpenAI Java SDK
 - **Spring Boot + Spring AI**: Best practice per lo sviluppo di applicazioni AI aziendali
 - **Modelli GitHub**: Accesso gratuito ai modelli AI per prototipazione e apprendimento (senza carta di credito)
 - **Strumenti di Sviluppo**: Configurazione di container Docker, VS Code e GitHub Codespaces
 - **[→ Inizia il Capitolo 2](./02-SetupDevEnvironment/README.md)**
 
-### **Capitolo 3: Tecniche Fondamentali dell'AI Generativa**
-- **Prompt Engineering**: Tecniche per risposte ottimali dai modelli AI
+### **Capitolo 3: Tecniche Fondamentali di AI Generativa**
+- **Prompt Engineering**: Tecniche per ottenere risposte ottimali dai modelli AI
 - **Embeddings e Operazioni sui Vettori**: Implementa ricerca semantica e corrispondenza di similarità
-- **Generazione Augmentata da Recupero (RAG)**: Combina AI con le tue fonti di dati
+- **Generazione Arricchita dal Recupero (RAG)**: Combina AI con le tue fonti di dati
 - **Chiamata di Funzioni**: Estendi le capacità dell'AI con strumenti e plugin personalizzati
 - **[→ Inizia il Capitolo 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capitolo 4: Applicazioni Pratiche e Progetti**
 - **Generatore di Storie per Animali Domestici** (`petstory/`): Generazione creativa di contenuti con i modelli GitHub
-- **Demo Locale Foundry** (`foundrylocal/`): Integrazione locale di modelli AI con SDK OpenAI Java
+- **Demo Locale Foundry** (`foundrylocal/`): Integrazione locale di modelli AI con OpenAI Java SDK
 - **Servizio Calcolatrice MCP** (`calculator/`): Implementazione base del Protocollo di Contesto del Modello con Spring AI
 - **[→ Inizia il Capitolo 4](./04-PracticalSamples/README.md)**
 
@@ -68,7 +66,6 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Risorse Aggiuntive
 
-<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### Azure / Edge / MCP / Agenti
 [![AZD per Principianti](https://img.shields.io/badge/AZD%20per%20Principianti-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI per Principianti](https://img.shields.io/badge/Edge%20AI%20per%20Principianti-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -104,15 +101,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ottenere Aiuto
 
-Se ti trovi bloccato o hai domande sulla creazione di app AI, unisciti a:
+Se ti blocchi o hai domande sulla creazione di app AI, unisciti ad altri studenti e sviluppatori esperti nelle discussioni su MCP. È una comunità di supporto dove le domande sono benvenute e la conoscenza viene condivisa liberamente.
 
-[![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Se hai feedback sui prodotti o riscontri errori durante la creazione, visita:
+Se hai feedback sul prodotto o riscontri errori durante la creazione, visita:
 
-[![Forum degli Sviluppatori Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Forum Sviluppatori Microsoft Foundry](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
-**Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Clausola di esclusione della responsabilità**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

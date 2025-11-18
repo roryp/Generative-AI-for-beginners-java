@@ -1,22 +1,22 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d83a4cd2f465a83b72b5a5284d3a72fd",
-  "translation_date": "2025-10-24T09:08:15+00:00",
+  "original_hash": "ff595bec5b6294cb68860d540eae6302",
+  "translation_date": "2025-11-18T17:24:17+00:00",
   "source_file": "README.md",
   "language_code": "fi"
 }
 -->
 # Generatiivinen AI aloittelijoille - Java-versio
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 ![Generatiivinen AI aloittelijoille - Java-versio](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.fi.png)
 
-**Aikavaatimukset**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Ympäristön asennus vie 2 minuuttia, ja esimerkkien tutkiminen kestää 1-3 tuntia riippuen tutkimuksen syvyydestä.
+**Aikavaatimukset**: Koko työpaja voidaan suorittaa verkossa ilman paikallista asennusta. Ympäristön asennus vie 2 minuuttia, ja esimerkkien tutkiminen kestää 1–3 tuntia riippuen tutkimuksen syvyydestä.
 
-> **Pikakäynnistys** 
+> **Pikakäynnistys**
 
-1. Haaroita tämä repositorio GitHub-tilillesi
+1. Haaroita tämä arkisto GitHub-tilillesi
 2. Klikkaa **Code** → **Codespaces**-välilehti → **...** → **New with options...**
 3. Käytä oletusasetuksia – tämä valitsee kurssille luodun kehityskontin
 4. Klikkaa **Create codespace**
@@ -28,41 +28,41 @@ CO_OP_TRANSLATOR_METADATA:
 ### Tuettu GitHub Actionin kautta (automaattinen ja aina ajan tasalla)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaria](../bg/README.md) | [Burma (Myanmar)](../my/README.md) | [Kiina (yksinkertaistettu)](../zh/README.md) | [Kiina (perinteinen, Hongkong)](../hk/README.md) | [Kiina (perinteinen, Macao)](../mo/README.md) | [Kiina (perinteinen, Taiwan)](../tw/README.md) | [Kroatia](../hr/README.md) | [Tšekki](../cs/README.md) | [Tanska](../da/README.md) | [Hollanti](../nl/README.md) | [Viro](../et/README.md) | [Suomi](./README.md) | [Ranska](../fr/README.md) | [Saksa](../de/README.md) | [Kreikka](../el/README.md) | [Heprea](../he/README.md) | [Hindi](../hi/README.md) | [Unkari](../hu/README.md) | [Indonesia](../id/README.md) | [Italia](../it/README.md) | [Japani](../ja/README.md) | [Korea](../ko/README.md) | [Liettua](../lt/README.md) | [Malaiji](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Norja](../no/README.md) | [Persia (Farsi)](../fa/README.md) | [Puola](../pl/README.md) | [Portugali (Brasilia)](../br/README.md) | [Portugali (Portugali)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romania](../ro/README.md) | [Venäjä](../ru/README.md) | [Serbia (kyrillinen)](../sr/README.md) | [Slovakki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Espanja](../es/README.md) | [Swahili](../sw/README.md) | [Ruotsi](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamili](../ta/README.md) | [Thai](../th/README.md) | [Turkki](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnam](../vi/README.md)
+[Arabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaria](../bg/README.md) | [Burma (Myanmar)](../my/README.md) | [Kiina (yksinkertaistettu)](../zh/README.md) | [Kiina (perinteinen, Hongkong)](../hk/README.md) | [Kiina (perinteinen, Macao)](../mo/README.md) | [Kiina (perinteinen, Taiwan)](../tw/README.md) | [Kroatia](../hr/README.md) | [Tšekki](../cs/README.md) | [Tanska](../da/README.md) | [Hollanti](../nl/README.md) | [Viro](../et/README.md) | [Suomi](./README.md) | [Ranska](../fr/README.md) | [Saksa](../de/README.md) | [Kreikka](../el/README.md) | [Heprea](../he/README.md) | [Hindi](../hi/README.md) | [Unkari](../hu/README.md) | [Indonesia](../id/README.md) | [Italia](../it/README.md) | [Japani](../ja/README.md) | [Korea](../ko/README.md) | [Liettua](../lt/README.md) | [Malaiji](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian pidgin](../pcm/README.md) | [Norja](../no/README.md) | [Persia (farsi)](../fa/README.md) | [Puola](../pl/README.md) | [Portugali (Brasilia)](../br/README.md) | [Portugali (Portugali)](../pt/README.md) | [Punjabi (gurmukhi)](../pa/README.md) | [Romania](../ro/README.md) | [Venäjä](../ru/README.md) | [Serbia (kyrillinen)](../sr/README.md) | [Slovakki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Espanja](../es/README.md) | [Swahili](../sw/README.md) | [Ruotsi](../sv/README.md) | [Tagalog (filippiinit)](../tl/README.md) | [Tamili](../ta/README.md) | [Thai](../th/README.md) | [Turkki](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnam](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Kurssin rakenne ja oppimispolku
 
 ### **Luku 1: Johdatus generatiiviseen tekoälyyn**
-- **Peruskäsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyominaisuuksien ymmärtäminen
-- **Java AI -ekosysteemi**: Katsaus Spring AI:hin ja OpenAI SDK:ihin
+- **Keskeiset käsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyn kykyjen ymmärtäminen
+- **Java AI -ekosysteemi**: Katsaus Spring AI- ja OpenAI SDK:ihin
 - **Model Context Protocol**: Johdatus MCP:hen ja sen rooliin tekoälyagenttien viestinnässä
-- **Käytännön sovellukset**: Todelliset esimerkit, kuten chatbotit ja sisällöntuotanto
+- **Käytännön sovellukset**: Todellisia esimerkkejä, kuten chatbotit ja sisällön luominen
 - **[→ Aloita luku 1](./01-IntroToGenAI/README.md)**
 
 ### **Luku 2: Kehitysympäristön asennus**
-- **Monipalveluntarjoajan konfigurointi**: GitHub-mallien, Azure OpenAI:n ja OpenAI Java SDK:n integrointien asennus
+- **Monen tarjoajan konfiguraatio**: GitHub-mallien, Azure OpenAI:n ja OpenAI Java SDK:n integrointi
 - **Spring Boot + Spring AI**: Parhaat käytännöt yritystason tekoälysovellusten kehittämiseen
 - **GitHub-mallit**: Ilmainen tekoälymallien käyttö prototyyppien ja oppimisen tueksi (ei luottokorttia vaadita)
-- **Kehitystyökalut**: Docker-kontit, VS Code ja GitHub Codespaces -konfigurointi
+- **Kehitystyökalut**: Docker-kontit, VS Code ja GitHub Codespaces -konfiguraatio
 - **[→ Aloita luku 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Luku 3: Generatiivisen tekoälyn ydintekniikat**
-- **Prompt Engineering**: Tekniikat optimaalisten tekoälyvastausten saamiseksi
+- **Prompt-suunnittelu**: Tekniikat optimaalisten tekoälymallivastausten saamiseksi
 - **Upotukset ja vektoritoiminnot**: Semanttisen haun ja samankaltaisuuden toteuttaminen
 - **Retrieval-Augmented Generation (RAG)**: Tekoälyn yhdistäminen omiin tietolähteisiin
-- **Funktiokutsut**: Tekoälyn laajentaminen omilla työkaluilla ja lisäosilla
+- **Funktiokutsut**: Tekoälyn laajentaminen mukautetuilla työkaluilla ja lisäosilla
 - **[→ Aloita luku 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Luku 4: Käytännön sovellukset ja projektit**
 - **Lemmikkitarinageneraattori** (`petstory/`): Luova sisällöntuotanto GitHub-malleilla
-- **Foundry Local Demo** (`foundrylocal/`): Paikallinen tekoälymallien integrointi OpenAI Java SDK:lla
+- **Foundry-paikallinen demo** (`foundrylocal/`): Paikallisen tekoälymallin integrointi OpenAI Java SDK:lla
 - **MCP-laskinpalvelu** (`calculator/`): Perus Model Context Protocol -toteutus Spring AI:lla
 - **[→ Aloita luku 4](./04-PracticalSamples/README.md)**
 
 ### **Luku 5: Vastuullinen tekoälyn kehitys**
-- **GitHub-mallien turvallisuus**: Sisäänrakennettujen sisällönsuodatus- ja turvallisuusmekanismien testaus (kovat estot ja pehmeät kieltäytymiset)
-- **Vastuullinen tekoälydemo**: Käytännön esimerkki siitä, miten modernit tekoälyturvajärjestelmät toimivat
+- **GitHub-mallien turvallisuus**: Sisäänrakennetun sisällön suodatuksen ja turvallisuusmekanismien testaaminen (kovat estot ja pehmeät kieltäytymiset)
+- **Vastuullinen tekoälydemo**: Käytännön esimerkki siitä, miten modernit tekoälyn turvallisuusjärjestelmät toimivat
 - **Parhaat käytännöt**: Keskeiset ohjeet eettiseen tekoälyn kehittämiseen ja käyttöönottoon
 - **[→ Aloita luku 5](./05-ResponsibleGenAI/README.md)**
 
@@ -78,17 +78,17 @@ CO_OP_TRANSLATOR_METADATA:
 ---
  
 ### Generatiivisen tekoälyn sarja
-[![Generatiivinen AI aloittelijoille](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Generatiivinen AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![Generatiivinen AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
-[![Generatiivinen AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+[![Generatiivinen tekoäly aloittelijoille](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Generatiivinen tekoäly (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![Generatiivinen tekoäly (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generatiivinen tekoäly (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Perusoppiminen
+### Keskeinen oppiminen
 [![ML aloittelijoille](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science aloittelijoille](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI aloittelijoille](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Tekoäly aloittelijoille](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Kyberturvallisuus aloittelijoille](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web-kehitys aloittelijoille](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT aloittelijoille](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
@@ -104,15 +104,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Apua saatavilla
 
-Jos jäät jumiin tai sinulla on kysymyksiä tekoälysovellusten rakentamisesta, liity:
+Jos jäät jumiin tai sinulla on kysymyksiä tekoälysovellusten rakentamisesta, liity muiden oppijoiden ja kokeneiden kehittäjien keskusteluihin MCP:stä. Se on tukevainen yhteisö, jossa kysymykset ovat tervetulleita ja tietoa jaetaan avoimesti.
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Jos sinulla on palautetta tuotteesta tai kohtaat virheitä rakentamisen aikana, vieraile:
+Jos sinulla on palautetta tuotteesta tai kohtaat virheitä rakentamisen aikana, käy osoitteessa:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty AI-käännöspalvelulla [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinkäsityksistä tai virhetulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
