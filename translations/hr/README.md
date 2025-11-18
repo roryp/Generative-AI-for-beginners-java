@@ -1,71 +1,74 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d83a4cd2f465a83b72b5a5284d3a72fd",
-  "translation_date": "2025-10-24T09:13:55+00:00",
+  "original_hash": "ff595bec5b6294cb68860d540eae6302",
+  "translation_date": "2025-11-18T17:42:37+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
 -->
-# Generativna umjetna inteligencija za početnike - Java izdanje
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+# Generativna AI za početnike - Java izdanje
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-![Generativna umjetna inteligencija za početnike - Java izdanje](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.hr.png)
+![Generativna AI za početnike - Java izdanje](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.hr.png)
 
-**Vrijeme potrebno**: Cijeli radionica može se završiti online bez lokalne instalacije. Postavljanje okruženja traje 2 minute, dok istraživanje primjera zahtijeva 1-3 sata, ovisno o dubini istraživanja.
+**Vrijeme potrebno**: Cijeli radionica može se završiti online bez lokalne postavke. Postavljanje okruženja traje 2 minute, dok istraživanje primjera zahtijeva 1-3 sata, ovisno o dubini istraživanja.
 
-> **Brzi početak** 
+> **Brzi početak**
 
 1. Forkajte ovaj repozitorij na svoj GitHub račun
-2. Kliknite **Code** → **Codespaces** tab → **...** → **New with options...**
+2. Kliknite **Code** → kartica **Codespaces** → **...** → **New with options...**
 3. Koristite zadane postavke – ovo će odabrati razvojni kontejner kreiran za ovaj tečaj
 4. Kliknite **Create codespace**
-5. Pričekajte ~2 minute da se okruženje pripremi
-6. Odmah započnite s [Prvim primjerom](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Pričekajte ~2 minute da okruženje bude spremno
+6. Odmah krenite na [Prvi primjer](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Podrška za više jezika
 
-### Podržano putem GitHub Action (Automatski & uvijek ažurirano)
+### Podržano putem GitHub Action (Automatizirano i uvijek ažurirano)
 
-[Arapski](../ar/README.md) | [Bengalski](../bn/README.md) | [Bugarski](../bg/README.md) | [Burmanski (Mjanmar)](../my/README.md) | [Kineski (pojednostavljeni)](../zh/README.md) | [Kineski (tradicionalni, Hong Kong)](../hk/README.md) | [Kineski (tradicionalni, Macau)](../mo/README.md) | [Kineski (tradicionalni, Tajvan)](../tw/README.md) | [Hrvatski](./README.md) | [Češki](../cs/README.md) | [Danski](../da/README.md) | [Nizozemski](../nl/README.md) | [Estonski](../et/README.md) | [Finski](../fi/README.md) | [Francuski](../fr/README.md) | [Njemački](../de/README.md) | [Grčki](../el/README.md) | [Hebrejski](../he/README.md) | [Hindski](../hi/README.md) | [Mađarski](../hu/README.md) | [Indonezijski](../id/README.md) | [Talijanski](../it/README.md) | [Japanski](../ja/README.md) | [Korejski](../ko/README.md) | [Litvanski](../lt/README.md) | [Malajski](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalski](../ne/README.md) | [Norveški](../no/README.md) | [Perzijski (Farsi)](../fa/README.md) | [Poljski](../pl/README.md) | [Portugalski (Brazil)](../br/README.md) | [Portugalski (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumunjski](../ro/README.md) | [Ruski](../ru/README.md) | [Srpski (ćirilica)](../sr/README.md) | [Slovački](../sk/README.md) | [Slovenski](../sl/README.md) | [Španjolski](../es/README.md) | [Svahili](../sw/README.md) | [Švedski](../sv/README.md) | [Tagalog (Filipinski)](../tl/README.md) | [Tamilski](../ta/README.md) | [Tajlandski](../th/README.md) | [Turski](../tr/README.md) | [Ukrajinski](../uk/README.md) | [Urdu](../ur/README.md) | [Vijetnamski](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arapski](../ar/README.md) | [Bengalski](../bn/README.md) | [Bugarski](../bg/README.md) | [Burmanski (Mjanmar)](../my/README.md) | [Kineski (pojednostavljeni)](../zh/README.md) | [Kineski (tradicionalni, Hong Kong)](../hk/README.md) | [Kineski (tradicionalni, Macau)](../mo/README.md) | [Kineski (tradicionalni, Tajvan)](../tw/README.md) | [Hrvatski](./README.md) | [Češki](../cs/README.md) | [Danski](../da/README.md) | [Nizozemski](../nl/README.md) | [Estonski](../et/README.md) | [Finski](../fi/README.md) | [Francuski](../fr/README.md) | [Njemački](../de/README.md) | [Grčki](../el/README.md) | [Hebrejski](../he/README.md) | [Hindski](../hi/README.md) | [Mađarski](../hu/README.md) | [Indonezijski](../id/README.md) | [Talijanski](../it/README.md) | [Japanski](../ja/README.md) | [Korejski](../ko/README.md) | [Litvanski](../lt/README.md) | [Malajski](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalski](../ne/README.md) | [Nigerijski pidgin](../pcm/README.md) | [Norveški](../no/README.md) | [Perzijski (Farsi)](../fa/README.md) | [Poljski](../pl/README.md) | [Portugalski (Brazil)](../br/README.md) | [Portugalski (Portugal)](../pt/README.md) | [Pandžapski (Gurmukhi)](../pa/README.md) | [Rumunjski](../ro/README.md) | [Ruski](../ru/README.md) | [Srpski (ćirilica)](../sr/README.md) | [Slovački](../sk/README.md) | [Slovenski](../sl/README.md) | [Španjolski](../es/README.md) | [Svahili](../sw/README.md) | [Švedski](../sv/README.md) | [Tagalog (Filipinski)](../tl/README.md) | [Tamilski](../ta/README.md) | [Tajlandski](../th/README.md) | [Turski](../tr/README.md) | [Ukrajinski](../uk/README.md) | [Urdu](../ur/README.md) | [Vijetnamski](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Struktura tečaja i put učenja
 
-### **Poglavlje 1: Uvod u generativnu umjetnu inteligenciju**
-- **Osnovni pojmovi**: Razumijevanje velikih jezičnih modela, tokena, ugrađivanja i sposobnosti umjetne inteligencije
+### **Poglavlje 1: Uvod u generativnu AI**
+- **Osnovni koncepti**: Razumijevanje velikih jezičnih modela, tokena, ugrađivanja i AI sposobnosti
 - **Java AI ekosustav**: Pregled Spring AI i OpenAI SDK-ova
 - **Protokol konteksta modela**: Uvod u MCP i njegovu ulogu u komunikaciji AI agenata
-- **Praktične primjene**: Primjeri iz stvarnog svijeta, uključujući chatbotove i generiranje sadržaja
-- **[→ Započni Poglavlje 1](./01-IntroToGenAI/README.md)**
+- **Praktične primjene**: Scenariji iz stvarnog svijeta, uključujući chatbotove i generiranje sadržaja
+- **[→ Započnite Poglavlje 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavlje 2: Postavljanje razvojnog okruženja**
-- **Konfiguracija za više pružatelja usluga**: Postavljanje GitHub modela, Azure OpenAI i OpenAI Java SDK integracija
+- **Konfiguracija za više pružatelja usluga**: Postavite GitHub modele, Azure OpenAI i OpenAI Java SDK integracije
 - **Spring Boot + Spring AI**: Najbolje prakse za razvoj AI aplikacija za poduzeća
 - **GitHub modeli**: Besplatan pristup AI modelima za prototipiranje i učenje (nije potrebna kreditna kartica)
 - **Razvojni alati**: Konfiguracija Docker kontejnera, VS Code-a i GitHub Codespaces-a
-- **[→ Započni Poglavlje 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Započnite Poglavlje 2](./02-SetupDevEnvironment/README.md)**
 
-### **Poglavlje 3: Osnovne tehnike generativne umjetne inteligencije**
+### **Poglavlje 3: Osnovne tehnike generativne AI**
 - **Inženjering upita**: Tehnike za optimalne odgovore AI modela
-- **Ugrađivanja i vektorske operacije**: Implementacija semantičke pretrage i podudaranja sličnosti
-- **Generiranje uz pomoć pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
-- **Pozivanje funkcija**: Proširenje sposobnosti AI-a prilagođenim alatima i dodacima
-- **[→ Započni Poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
+- **Ugrađivanja i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
+- **Generacija uz pomoć pretraživanja (RAG)**: Kombiniranje AI-a s vlastitim izvorima podataka
+- **Pozivanje funkcija**: Proširenje AI sposobnosti prilagođenim alatima i dodacima
+- **[→ Započnite Poglavlje 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavlje 4: Praktične primjene i projekti**
 - **Generator priča o kućnim ljubimcima** (`petstory/`): Kreativno generiranje sadržaja s GitHub modelima
-- **Foundry lokalna demonstracija** (`foundrylocal/`): Integracija lokalnih AI modela s OpenAI Java SDK-om
-- **MCP kalkulator usluga** (`calculator/`): Osnovna implementacija Protokola konteksta modela sa Spring AI-jem
-- **[→ Započni Poglavlje 4](./04-PracticalSamples/README.md)**
+- **Foundry lokalna demonstracija** (`foundrylocal/`): Lokalna integracija AI modela s OpenAI Java SDK-om
+- **MCP kalkulator usluga** (`calculator/`): Osnovna implementacija Protokola konteksta modela sa Spring AI
+- **[→ Započnite Poglavlje 4](./04-PracticalSamples/README.md)**
 
-### **Poglavlje 5: Razvoj odgovorne umjetne inteligencije**
-- **Sigurnost GitHub modela**: Testiranje ugrađenog filtriranja sadržaja i sigurnosnih mehanizama (čvrste blokade i mekana odbijanja)
-- **Demonstracija odgovorne AI**: Praktični primjer koji pokazuje kako moderni AI sigurnosni sustavi funkcioniraju u praksi
-- **Najbolje prakse**: Ključne smjernice za etički razvoj i implementaciju AI-a
-- **[→ Započni Poglavlje 5](./05-ResponsibleGenAI/README.md)**
+### **Poglavlje 5: Razvoj odgovorne AI**
+- **Sigurnost GitHub modela**: Testiranje ugrađenog filtriranja sadržaja i sigurnosnih mehanizama (tvrde blokade i mekana odbijanja)
+- **Demonstracija odgovorne AI**: Praktični primjer koji pokazuje kako moderni AI sigurnosni sustavi rade u praksi
+- **Najbolje prakse**: Osnovne smjernice za etički razvoj i implementaciju AI-a
+- **[→ Započnite Poglavlje 5](./05-ResponsibleGenAI/README.md)**
 
 ## Dodatni resursi
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### Azure / Edge / MCP / Agenti
 [![AZD za početnike](https://img.shields.io/badge/AZD%20za%20početnike-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI za početnike](https://img.shields.io/badge/Edge%20AI%20za%20početnike-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -74,7 +77,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
 
-### Serija o generativnoj umjetnoj inteligenciji
+### Serija generativne AI
 [![Generativna AI za početnike](https://img.shields.io/badge/Generativna%20AI%20za%20početnike-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generativna AI (.NET)](https://img.shields.io/badge/Generativna%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generativna AI (Java)](https://img.shields.io/badge/Generativna%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -101,15 +104,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Dobivanje pomoći
 
-Ako zapnete ili imate pitanja o izradi AI aplikacija, pridružite se:
+Ako zapnete ili imate pitanja o izradi AI aplikacija, pridružite se kolegama učenicima i iskusnim programerima u raspravama o MCP-u. To je podržavajuća zajednica gdje su pitanja dobrodošla, a znanje se slobodno dijeli.
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 Ako imate povratne informacije o proizvodu ili naiđete na greške tijekom izrade, posjetite:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako težimo točnosti, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

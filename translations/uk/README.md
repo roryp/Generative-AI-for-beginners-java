@@ -1,14 +1,14 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d83a4cd2f465a83b72b5a5284d3a72fd",
-  "translation_date": "2025-10-24T09:15:09+00:00",
+  "original_hash": "ff595bec5b6294cb68860d540eae6302",
+  "translation_date": "2025-11-18T17:47:28+00:00",
   "source_file": "README.md",
   "language_code": "uk"
 }
 -->
 # Генеративний AI для початківців - Java Edition
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 ![Генеративний AI для початківців - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.uk.png)
 
@@ -25,10 +25,10 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Підтримка багатомовності
 
-### Підтримується через GitHub Action (автоматично та завжди актуально)
+### Підтримується через GitHub Action (Автоматично та завжди актуально)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Арабська](../ar/README.md) | [Бенгальська](../bn/README.md) | [Болгарська](../bg/README.md) | [Бірманська (М'янма)](../my/README.md) | [Китайська (спрощена)](../zh/README.md) | [Китайська (традиційна, Гонконг)](../hk/README.md) | [Китайська (традиційна, Макао)](../mo/README.md) | [Китайська (традиційна, Тайвань)](../tw/README.md) | [Хорватська](../hr/README.md) | [Чеська](../cs/README.md) | [Данська](../da/README.md) | [Нідерландська](../nl/README.md) | [Естонська](../et/README.md) | [Фінська](../fi/README.md) | [Французька](../fr/README.md) | [Німецька](../de/README.md) | [Грецька](../el/README.md) | [Іврит](../he/README.md) | [Гінді](../hi/README.md) | [Угорська](../hu/README.md) | [Індонезійська](../id/README.md) | [Італійська](../it/README.md) | [Японська](../ja/README.md) | [Корейська](../ko/README.md) | [Литовська](../lt/README.md) | [Малайська](../ms/README.md) | [Маратхі](../mr/README.md) | [Непальська](../ne/README.md) | [Норвезька](../no/README.md) | [Перська (фарсі)](../fa/README.md) | [Польська](../pl/README.md) | [Португальська (Бразилія)](../br/README.md) | [Португальська (Португалія)](../pt/README.md) | [Панджабі (Гурмухі)](../pa/README.md) | [Румунська](../ro/README.md) | [Російська](../ru/README.md) | [Сербська (кирилиця)](../sr/README.md) | [Словацька](../sk/README.md) | [Словенська](../sl/README.md) | [Іспанська](../es/README.md) | [Суахілі](../sw/README.md) | [Шведська](../sv/README.md) | [Тагальська (Філіппіни)](../tl/README.md) | [Тамільська](../ta/README.md) | [Тайська](../th/README.md) | [Турецька](../tr/README.md) | [Українська](./README.md) | [Урду](../ur/README.md) | [В'єтнамська](../vi/README.md)
+[Арабська](../ar/README.md) | [Бенгальська](../bn/README.md) | [Болгарська](../bg/README.md) | [Бірманська (М'янма)](../my/README.md) | [Китайська (спрощена)](../zh/README.md) | [Китайська (традиційна, Гонконг)](../hk/README.md) | [Китайська (традиційна, Макао)](../mo/README.md) | [Китайська (традиційна, Тайвань)](../tw/README.md) | [Хорватська](../hr/README.md) | [Чеська](../cs/README.md) | [Данська](../da/README.md) | [Нідерландська](../nl/README.md) | [Естонська](../et/README.md) | [Фінська](../fi/README.md) | [Французька](../fr/README.md) | [Німецька](../de/README.md) | [Грецька](../el/README.md) | [Іврит](../he/README.md) | [Гінді](../hi/README.md) | [Угорська](../hu/README.md) | [Індонезійська](../id/README.md) | [Італійська](../it/README.md) | [Японська](../ja/README.md) | [Корейська](../ko/README.md) | [Литовська](../lt/README.md) | [Малайська](../ms/README.md) | [Маратхі](../mr/README.md) | [Непальська](../ne/README.md) | [Нігерійський піджин](../pcm/README.md) | [Норвезька](../no/README.md) | [Перська (фарсі)](../fa/README.md) | [Польська](../pl/README.md) | [Португальська (Бразилія)](../br/README.md) | [Португальська (Португалія)](../pt/README.md) | [Панджабі (Гурмухі)](../pa/README.md) | [Румунська](../ro/README.md) | [Російська](../ru/README.md) | [Сербська (кирилиця)](../sr/README.md) | [Словацька](../sk/README.md) | [Словенська](../sl/README.md) | [Іспанська](../es/README.md) | [Суахілі](../sw/README.md) | [Шведська](../sv/README.md) | [Тагальська (Філіппіни)](../tl/README.md) | [Тамільська](../ta/README.md) | [Тайська](../th/README.md) | [Турецька](../tr/README.md) | [Українська](./README.md) | [Урду](../ur/README.md) | [В'єтнамська](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Структура курсу та навчальний шлях
@@ -36,35 +36,35 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Розділ 1: Вступ до Генеративного AI**
 - **Основні концепції**: Розуміння великих мовних моделей, токенів, вбудовувань та можливостей AI
 - **Екосистема Java AI**: Огляд Spring AI та OpenAI SDK
-- **Протокол контексту моделі**: Вступ до MCP та його ролі у комунікації AI-агентів
+- **Протокол контексту моделі**: Вступ до MCP та його роль у комунікації AI агентів
 - **Практичні застосування**: Реальні сценарії, включаючи чат-ботів та генерацію контенту
-- **[→ Почати розділ 1](./01-IntroToGenAI/README.md)**
+- **[→ Почати Розділ 1](./01-IntroToGenAI/README.md)**
 
 ### **Розділ 2: Налаштування середовища розробки**
-- **Конфігурація для кількох провайдерів**: Налаштування інтеграції GitHub Models, Azure OpenAI та OpenAI Java SDK
-- **Spring Boot + Spring AI**: Найкращі практики для розробки корпоративних AI-додатків
+- **Конфігурація для кількох провайдерів**: Налаштування інтеграцій GitHub Models, Azure OpenAI та OpenAI Java SDK
+- **Spring Boot + Spring AI**: Найкращі практики для розробки корпоративних AI додатків
 - **GitHub Models**: Безкоштовний доступ до AI моделей для прототипування та навчання (без необхідності кредитної картки)
-- **Інструменти розробки**: Конфігурація Docker-контейнерів, VS Code та GitHub Codespaces
-- **[→ Почати розділ 2](./02-SetupDevEnvironment/README.md)**
+- **Інструменти розробки**: Конфігурація Docker контейнерів, VS Code та GitHub Codespaces
+- **[→ Почати Розділ 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Розділ 3: Основні техніки Генеративного AI**
 - **Інженерія запитів**: Техніки для отримання оптимальних відповідей від AI моделей
 - **Вбудовування та операції з векторами**: Реалізація семантичного пошуку та порівняння схожості
-- **Генерація з підкріпленням (RAG)**: Поєднання AI з вашими власними джерелами даних
+- **Генерація з доповненням даних (RAG)**: Поєднання AI з вашими власними джерелами даних
 - **Виклик функцій**: Розширення можливостей AI за допомогою власних інструментів та плагінів
-- **[→ Почати розділ 3](./03-CoreGenerativeAITechniques/README.md)**
+- **[→ Почати Розділ 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Розділ 4: Практичні застосування та проєкти**
-- **Генератор історій про домашніх тварин** (`petstory/`): Творче генерування контенту за допомогою GitHub Models
+### **Розділ 4: Практичні застосування та проекти**
+- **Генератор історій про домашніх улюбленців** (`petstory/`): Творче генерування контенту з GitHub Models
 - **Локальна демонстрація Foundry** (`foundrylocal/`): Інтеграція локальної AI моделі з OpenAI Java SDK
 - **Сервіс калькулятора MCP** (`calculator/`): Базова реалізація протоколу контексту моделі з Spring AI
-- **[→ Почати розділ 4](./04-PracticalSamples/README.md)**
+- **[→ Почати Розділ 4](./04-PracticalSamples/README.md)**
 
 ### **Розділ 5: Відповідальна розробка AI**
 - **Безпека GitHub Models**: Тестування вбудованих механізмів фільтрації контенту та безпеки (жорсткі блокування та м'які відмови)
-- **Демонстрація відповідального AI**: Практичний приклад, що показує, як сучасні системи безпеки AI працюють на практиці
+- **Демонстрація відповідального AI**: Практичний приклад, що показує, як працюють сучасні системи безпеки AI
 - **Найкращі практики**: Основні рекомендації для етичної розробки та впровадження AI
-- **[→ Почати розділ 5](./05-ResponsibleGenAI/README.md)**
+- **[→ Почати Розділ 5](./05-ResponsibleGenAI/README.md)**
 
 ## Додаткові ресурси
 
@@ -87,7 +87,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Основне навчання
 [![ML для початківців](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![Data Science для початківців](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![Наука про дані для початківців](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI для початківців](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Кібербезпека для початківців](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Веб-розробка для початківців](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
@@ -104,15 +104,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Отримання допомоги
 
-Якщо ви зіткнулися з труднощами або маєте запитання щодо створення AI-додатків, приєднуйтесь:
+Якщо ви застрягли або маєте запитання щодо створення AI-додатків, приєднуйтесь до обговорень MCP з іншими учасниками та досвідченими розробниками. Це підтримуюча спільнота, де запитання вітаються, а знання діляться вільно.
 
-[![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 Якщо у вас є відгуки про продукт або виникають помилки під час створення, відвідайте:
 
-[![Форум розробників Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Форум розробників Microsoft Foundry](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Відмова від відповідальності**:  
-Цей документ був перекладений за допомогою сервісу автоматичного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, майте на увазі, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ на його рідній мові слід вважати авторитетним джерелом. Для критичної інформації рекомендується професійний людський переклад. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникають внаслідок використання цього перекладу.
+Цей документ було перекладено за допомогою сервісу автоматичного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, звертаємо вашу увагу, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ на його рідній мові слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується професійний людський переклад. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

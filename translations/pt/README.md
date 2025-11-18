@@ -1,18 +1,18 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d83a4cd2f465a83b72b5a5284d3a72fd",
-  "translation_date": "2025-10-24T09:04:11+00:00",
+  "original_hash": "ff595bec5b6294cb68860d540eae6302",
+  "translation_date": "2025-11-18T17:12:08+00:00",
   "source_file": "README.md",
   "language_code": "pt"
 }
 -->
 # IA Generativa para Iniciantes - Edição Java
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 ![IA Generativa para Iniciantes - Edição Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.pt.png)
 
-**Tempo Necessário**: Todo o workshop pode ser concluído online sem necessidade de configuração local. A configuração do ambiente leva 2 minutos, e explorar os exemplos requer de 1 a 3 horas, dependendo da profundidade de exploração.
+**Tempo Necessário**: O workshop completo pode ser realizado online sem necessidade de configuração local. A configuração do ambiente leva 2 minutos, e explorar os exemplos pode levar de 1 a 3 horas, dependendo da profundidade da exploração.
 
 > **Início Rápido**
 
@@ -27,9 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Suportado via GitHub Action (Automatizado e Sempre Atualizado)
 
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Árabe](../ar/README.md) | [Bengali](../bn/README.md) | [Búlgaro](../bg/README.md) | [Birmanês (Myanmar)](../my/README.md) | [Chinês (Simplificado)](../zh/README.md) | [Chinês (Tradicional, Hong Kong)](../hk/README.md) | [Chinês (Tradicional, Macau)](../mo/README.md) | [Chinês (Tradicional, Taiwan)](../tw/README.md) | [Croata](../hr/README.md) | [Checo](../cs/README.md) | [Dinamarquês](../da/README.md) | [Holandês](../nl/README.md) | [Estoniano](../et/README.md) | [Finlandês](../fi/README.md) | [Francês](../fr/README.md) | [Alemão](../de/README.md) | [Grego](../el/README.md) | [Hebraico](../he/README.md) | [Hindi](../hi/README.md) | [Húngaro](../hu/README.md) | [Indonésio](../id/README.md) | [Italiano](../it/README.md) | [Japonês](../ja/README.md) | [Coreano](../ko/README.md) | [Lituano](../lt/README.md) | [Malaio](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalês](../ne/README.md) | [Norueguês](../no/README.md) | [Persa (Farsi)](../fa/README.md) | [Polaco](../pl/README.md) | [Português (Brasil)](../br/README.md) | [Português (Portugal)](./README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romeno](../ro/README.md) | [Russo](../ru/README.md) | [Sérvio (Cirílico)](../sr/README.md) | [Eslovaco](../sk/README.md) | [Esloveno](../sl/README.md) | [Espanhol](../es/README.md) | [Suaíli](../sw/README.md) | [Sueco](../sv/README.md) | [Tagalo (Filipino)](../tl/README.md) | [Tâmil](../ta/README.md) | [Tailandês](../th/README.md) | [Turco](../tr/README.md) | [Ucraniano](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamita](../vi/README.md)
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+[Árabe](../ar/README.md) | [Bengali](../bn/README.md) | [Búlgaro](../bg/README.md) | [Birmanês (Myanmar)](../my/README.md) | [Chinês (Simplificado)](../zh/README.md) | [Chinês (Tradicional, Hong Kong)](../hk/README.md) | [Chinês (Tradicional, Macau)](../mo/README.md) | [Chinês (Tradicional, Taiwan)](../tw/README.md) | [Croata](../hr/README.md) | [Checo](../cs/README.md) | [Dinamarquês](../da/README.md) | [Holandês](../nl/README.md) | [Estoniano](../et/README.md) | [Finlandês](../fi/README.md) | [Francês](../fr/README.md) | [Alemão](../de/README.md) | [Grego](../el/README.md) | [Hebraico](../he/README.md) | [Hindi](../hi/README.md) | [Húngaro](../hu/README.md) | [Indonésio](../id/README.md) | [Italiano](../it/README.md) | [Japonês](../ja/README.md) | [Coreano](../ko/README.md) | [Lituano](../lt/README.md) | [Malaio](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalês](../ne/README.md) | [Pidgin Nigeriano](../pcm/README.md) | [Norueguês](../no/README.md) | [Persa (Farsi)](../fa/README.md) | [Polaco](../pl/README.md) | [Português (Brasil)](../br/README.md) | [Português (Portugal)](./README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romeno](../ro/README.md) | [Russo](../ru/README.md) | [Sérvio (Cirílico)](../sr/README.md) | [Eslovaco](../sk/README.md) | [Esloveno](../sl/README.md) | [Espanhol](../es/README.md) | [Suaíli](../sw/README.md) | [Sueco](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tâmil](../ta/README.md) | [Tailandês](../th/README.md) | [Turco](../tr/README.md) | [Ucraniano](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamita](../vi/README.md)
 
 ## Estrutura do Curso e Caminho de Aprendizagem
 
@@ -38,40 +36,39 @@ CO_OP_TRANSLATOR_METADATA:
 - **Ecossistema de IA em Java**: Visão geral do Spring AI e SDKs OpenAI
 - **Protocolo de Contexto de Modelo**: Introdução ao MCP e seu papel na comunicação de agentes de IA
 - **Aplicações Práticas**: Cenários reais, incluindo chatbots e geração de conteúdo
-- **[→ Começar Capítulo 1](./01-IntroToGenAI/README.md)**
+- **[→ Começar o Capítulo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capítulo 2: Configuração do Ambiente de Desenvolvimento**
-- **Configuração Multi-Provedor**: Configurar Modelos GitHub, Azure OpenAI e integrações do SDK OpenAI Java
+- **Configuração Multi-Provedor**: Integrações com GitHub Models, Azure OpenAI e OpenAI Java SDK
 - **Spring Boot + Spring AI**: Melhores práticas para desenvolvimento de aplicações empresariais de IA
-- **Modelos GitHub**: Acesso gratuito a modelos de IA para prototipagem e aprendizado (sem necessidade de cartão de crédito)
+- **GitHub Models**: Acesso gratuito a modelos de IA para prototipagem e aprendizado (sem necessidade de cartão de crédito)
 - **Ferramentas de Desenvolvimento**: Configuração de containers Docker, VS Code e GitHub Codespaces
-- **[→ Começar Capítulo 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Começar o Capítulo 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capítulo 3: Técnicas Fundamentais de IA Generativa**
 - **Engenharia de Prompts**: Técnicas para respostas ideais de modelos de IA
-- **Embeddings e Operações com Vetores**: Implementar busca semântica e correspondência de similaridade
-- **Geração com Recuperação (RAG)**: Combinar IA com suas próprias fontes de dados
-- **Chamadas de Função**: Expandir capacidades de IA com ferramentas e plugins personalizados
-- **[→ Começar Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**
+- **Embeddings e Operações com Vetores**: Implementação de busca semântica e correspondência de similaridade
+- **Geração Aumentada por Recuperação (RAG)**: Combinar IA com suas próprias fontes de dados
+- **Chamadas de Função**: Expandir as capacidades da IA com ferramentas e plugins personalizados
+- **[→ Começar o Capítulo 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capítulo 4: Aplicações Práticas e Projetos**
-- **Gerador de Histórias de Animais de Estimação** (`petstory/`): Geração criativa de conteúdo com Modelos GitHub
-- **Demo Local Foundry** (`foundrylocal/`): Integração de modelos de IA locais com SDK OpenAI Java
+- **Gerador de Histórias de Animais de Estimação** (`petstory/`): Geração criativa de conteúdo com GitHub Models
+- **Demo Local Foundry** (`foundrylocal/`): Integração de modelos de IA locais com OpenAI Java SDK
 - **Serviço de Calculadora MCP** (`calculator/`): Implementação básica do Protocolo de Contexto de Modelo com Spring AI
-- **[→ Começar Capítulo 4](./04-PracticalSamples/README.md)**
+- **[→ Começar o Capítulo 4](./04-PracticalSamples/README.md)**
 
 ### **Capítulo 5: Desenvolvimento de IA Responsável**
-- **Segurança dos Modelos GitHub**: Testar filtragem de conteúdo integrada e mecanismos de segurança (bloqueios rígidos e recusas suaves)
-- **Demo de IA Responsável**: Exemplo prático mostrando como sistemas modernos de segurança de IA funcionam na prática
-- **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implantação ética de IA
-- **[→ Começar Capítulo 5](./05-ResponsibleGenAI/README.md)**
+- **Segurança dos GitHub Models**: Teste de filtragem de conteúdo integrada e mecanismos de segurança (bloqueios rígidos e recusas suaves)
+- **Demo de IA Responsável**: Exemplo prático mostrando como os sistemas modernos de segurança de IA funcionam
+- **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implementação ética de IA
+- **[→ Começar o Capítulo 5](./05-ResponsibleGenAI/README.md)**
 
 ## Recursos Adicionais
 
-<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### Azure / Edge / MCP / Agentes
 [![AZD para Iniciantes](https://img.shields.io/badge/AZD%20para%20Iniciantes-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![IA de Borda para Iniciantes](https://img.shields.io/badge/IA%20de%20Borda%20para%20Iniciantes-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge AI para Iniciantes](https://img.shields.io/badge/Edge%20AI%20para%20Iniciantes-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP para Iniciantes](https://img.shields.io/badge/MCP%20para%20Iniciantes-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Agentes de IA para Iniciantes](https://img.shields.io/badge/Agentes%20de%20IA%20para%20Iniciantes-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
@@ -98,21 +95,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Série Copilot
 [![Copilot para Programação em Parceria com IA](https://img.shields.io/badge/Copilot%20para%20Programação%20em%20Parceria%20com%20IA-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot para C#/.NET](https://img.shields.io/badge/Copilot%20para%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
-[![Aventura Copilot](https://img.shields.io/badge/Aventura%20Copilot-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
+[![Copilot para C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
+[![Aventura Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Obter Ajuda
 
-Se ficar bloqueado ou tiver dúvidas sobre como criar aplicações de IA, junte-se a:
+Se ficar com dúvidas ou tiver perguntas sobre como criar aplicações de IA, junte-se a outros aprendizes e programadores experientes em discussões sobre MCP. É uma comunidade de apoio onde as perguntas são bem-vindas e o conhecimento é partilhado livremente.
 
-[![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Comunidade_Azure_AI_Foundry_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 Se tiver feedback sobre o produto ou encontrar erros durante o desenvolvimento, visite:
 
-[![Fórum de Desenvolvedores Azure AI Foundry](https://img.shields.io/badge/GitHub-Fórum_de_Desenvolvedores_Azure_AI_Foundry-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Fórum de Programadores Microsoft Foundry](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
-**Aviso**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Aviso Legal**:  
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
