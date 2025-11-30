@@ -7,7 +7,6 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ja"
 }
 -->
-5,000 / 5,000
 # Java 向け Generative AI 開発環境のセットアップ
 
 > **クイックスタート**: 2 分でクラウドでコードを作成 - [GitHub Codespaces セットアップ](#option-a-github-codespaces-recommended) へジャンプ - ローカルインストールは不要で、GitHub モデルを使用します！
