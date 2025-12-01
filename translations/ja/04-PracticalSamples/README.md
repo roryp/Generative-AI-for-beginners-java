@@ -39,7 +39,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### MCP電卓サービス（初心者向けMCPデモ）
 
-**[MCP電卓サービス](calculator/README.md)**は、Spring AIを使用した**Model Context Protocol (MCP)**の簡単なデモです。基本的なMCPサーバーを作成し、MCPクライアントとやり取りする方法を示す初心者向けのMCP概念の導入を提供します。
+**[MCP電卓サービス](calculator/README.md)** は、Spring AIを使用した **Model Context Protocol (MCP)** の簡単なデモです。基本的なMCPサーバーを作成し、MCPクライアントとやり取りする方法を示す初心者向けのMCP概念の導入を提供します。
 
 ## 学習の進行
 
