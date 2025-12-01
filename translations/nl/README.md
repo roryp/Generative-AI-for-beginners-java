@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff595bec5b6294cb68860d540eae6302",
-  "translation_date": "2025-11-18T17:26:04+00:00",
+  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
+  "translation_date": "2025-12-01T08:43:05+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Tijdsinvestering**: De hele workshop kan online worden voltooid zonder lokale installatie. Het opzetten van de omgeving duurt 2 minuten, en het verkennen van de voorbeelden neemt 1-3 uur in beslag, afhankelijk van de diepgang.
 
-> **Snel Starten** 
+> **Snelle Start**
 
 1. Fork deze repository naar je GitHub-account
 2. Klik op **Code** → **Codespaces** tabblad → **...** → **Nieuw met opties...**
@@ -23,12 +23,12 @@ CO_OP_TRANSLATOR_METADATA:
 5. Wacht ~2 minuten tot de omgeving klaar is
 6. Ga direct naar [Het eerste voorbeeld](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Ondersteuning voor Meerdere Talen
+## Ondersteuning voor meerdere talen
 
 ### Ondersteund via GitHub Action (Automatisch & Altijd Actueel)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabisch](../ar/README.md) | [Bengaals](../bn/README.md) | [Bulgaars](../bg/README.md) | [Birmaans (Myanmar)](../my/README.md) | [Chinees (Vereenvoudigd)](../zh/README.md) | [Chinees (Traditioneel, Hongkong)](../hk/README.md) | [Chinees (Traditioneel, Macau)](../mo/README.md) | [Chinees (Traditioneel, Taiwan)](../tw/README.md) | [Kroatisch](../hr/README.md) | [Tsjechisch](../cs/README.md) | [Deens](../da/README.md) | [Nederlands](./README.md) | [Ests](../et/README.md) | [Fins](../fi/README.md) | [Frans](../fr/README.md) | [Duits](../de/README.md) | [Grieks](../el/README.md) | [Hebreeuws](../he/README.md) | [Hindi](../hi/README.md) | [Hongaars](../hu/README.md) | [Indonesisch](../id/README.md) | [Italiaans](../it/README.md) | [Japans](../ja/README.md) | [Koreaans](../ko/README.md) | [Litouws](../lt/README.md) | [Maleis](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalees](../ne/README.md) | [Nigeriaans Pidgin](../pcm/README.md) | [Noors](../no/README.md) | [Perzisch (Farsi)](../fa/README.md) | [Pools](../pl/README.md) | [Portugees (Brazilië)](../br/README.md) | [Portugees (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Roemeens](../ro/README.md) | [Russisch](../ru/README.md) | [Servisch (Cyrillisch)](../sr/README.md) | [Slowaaks](../sk/README.md) | [Sloveens](../sl/README.md) | [Spaans](../es/README.md) | [Swahili](../sw/README.md) | [Zweeds](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thais](../th/README.md) | [Turks](../tr/README.md) | [Oekraïens](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamees](../vi/README.md)
+[Arabisch](../ar/README.md) | [Bengaals](../bn/README.md) | [Bulgaars](../bg/README.md) | [Birmaans (Myanmar)](../my/README.md) | [Chinees (Vereenvoudigd)](../zh/README.md) | [Chinees (Traditioneel, Hong Kong)](../hk/README.md) | [Chinees (Traditioneel, Macau)](../mo/README.md) | [Chinees (Traditioneel, Taiwan)](../tw/README.md) | [Kroatisch](../hr/README.md) | [Tsjechisch](../cs/README.md) | [Deens](../da/README.md) | [Nederlands](./README.md) | [Ests](../et/README.md) | [Fins](../fi/README.md) | [Frans](../fr/README.md) | [Duits](../de/README.md) | [Grieks](../el/README.md) | [Hebreeuws](../he/README.md) | [Hindi](../hi/README.md) | [Hongaars](../hu/README.md) | [Indonesisch](../id/README.md) | [Italiaans](../it/README.md) | [Japans](../ja/README.md) | [Kannada](../kn/README.md) | [Koreaans](../ko/README.md) | [Litouws](../lt/README.md) | [Maleis](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalees](../ne/README.md) | [Nigeriaans Pidgin](../pcm/README.md) | [Noors](../no/README.md) | [Perzisch (Farsi)](../fa/README.md) | [Pools](../pl/README.md) | [Portugees (Brazilië)](../br/README.md) | [Portugees (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Roemeens](../ro/README.md) | [Russisch](../ru/README.md) | [Servisch (Cyrillisch)](../sr/README.md) | [Slowaaks](../sk/README.md) | [Sloveens](../sl/README.md) | [Spaans](../es/README.md) | [Swahili](../sw/README.md) | [Zweeds](../sv/README.md) | [Tagalog (Filipijns)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thais](../th/README.md) | [Turks](../tr/README.md) | [Oekraïens](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamees](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Cursusstructuur & Leerpad
@@ -37,12 +37,12 @@ CO_OP_TRANSLATOR_METADATA:
 - **Kernconcepten**: Begrip van Large Language Models, tokens, embeddings en AI-mogelijkheden
 - **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDK's
 - **Model Context Protocol**: Introductie tot MCP en de rol ervan in AI-agentcommunicatie
-- **Praktische Toepassingen**: Realistische scenario's zoals chatbots en contentgeneratie
+- **Praktische Toepassingen**: Toepassingen in de echte wereld, zoals chatbots en contentgeneratie
 - **[→ Start Hoofdstuk 1](./01-IntroToGenAI/README.md)**
 
 ### **Hoofdstuk 2: Ontwikkelomgeving Instellen**
 - **Multi-Provider Configuratie**: GitHub Models, Azure OpenAI en OpenAI Java SDK-integraties instellen
-- **Spring Boot + Spring AI**: Best practices voor AI-toepassingen in ondernemingen
+- **Spring Boot + Spring AI**: Best practices voor AI-applicatieontwikkeling in bedrijven
 - **GitHub Models**: Gratis toegang tot AI-modellen voor prototyping en leren (geen creditcard nodig)
 - **Ontwikkeltools**: Docker-containers, VS Code en GitHub Codespaces configuratie
 - **[→ Start Hoofdstuk 2](./02-SetupDevEnvironment/README.md)**
@@ -108,7 +108,7 @@ Als je vastloopt of vragen hebt over het bouwen van AI-apps, sluit je dan aan bi
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Als je feedback over producten hebt of fouten tegenkomt tijdens het bouwen, bezoek dan:
+Als je feedback hebt over producten of fouten tegenkomt tijdens het bouwen, bezoek dan:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -116,5 +116,5 @@ Als je feedback over producten hebt of fouten tegenkomt tijdens het bouwen, bezo
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

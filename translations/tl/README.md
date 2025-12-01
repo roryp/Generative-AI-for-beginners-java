@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff595bec5b6294cb68860d540eae6302",
-  "translation_date": "2025-11-18T17:32:20+00:00",
+  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
+  "translation_date": "2025-12-01T08:48:12+00:00",
   "source_file": "README.md",
   "language_code": "tl"
 }
@@ -12,9 +12,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative AI para sa mga Baguhan - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.tl.png)
 
-**Oras na Kakailanganin**: Ang buong workshop ay maaaring matapos online nang walang lokal na setup. Ang pag-setup ng environment ay tumatagal ng 2 minuto, at ang pag-explore ng mga halimbawa ay nangangailangan ng 1-3 oras depende sa lalim ng pag-aaral.
+**Oras na Kailangan**: Ang buong workshop ay maaaring kumpletuhin online nang walang lokal na setup. Ang pag-set up ng environment ay tumatagal ng 2 minuto, habang ang pag-explore ng mga sample ay maaaring umabot ng 1-3 oras depende sa lalim ng pag-aaral.
 
-> **Mabilisang Simula**
+> **Mabilis na Simula**
 
 1. I-fork ang repository na ito sa iyong GitHub account
 2. I-click ang **Code** → **Codespaces** tab → **...** → **New with options...**
@@ -23,46 +23,46 @@ CO_OP_TRANSLATOR_METADATA:
 5. Maghintay ng ~2 minuto para maging handa ang environment
 6. Tumungo agad sa [Unang Halimbawa](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Suporta sa Iba't Ibang Wika
+## Suporta sa Multi-Language
 
 ### Sinusuportahan sa pamamagitan ng GitHub Action (Automated at Laging Napapanahon)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](./README.md) | [Tamil](../ta/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](./README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-## Estruktura ng Kurso at Landas ng Pagkatuto
+## Estruktura ng Kurso at Landas ng Pag-aaral
 
 ### **Kabanata 1: Panimula sa Generative AI**
-- **Pangunahing Konsepto**: Pag-unawa sa Large Language Models, tokens, embeddings, at kakayahan ng AI
-- **Java AI Ecosystem**: Pangkalahatang ideya ng Spring AI at OpenAI SDKs
+- **Mga Pangunahing Konsepto**: Pag-unawa sa Large Language Models, tokens, embeddings, at kakayahan ng AI
+- **Java AI Ecosystem**: Pangkalahatang-ideya ng Spring AI at OpenAI SDKs
 - **Model Context Protocol**: Panimula sa MCP at ang papel nito sa komunikasyon ng AI agent
-- **Praktikal na Aplikasyon**: Mga totoong halimbawa tulad ng chatbots at content generation
+- **Praktikal na Aplikasyon**: Mga totoong halimbawa tulad ng chatbots at paglikha ng nilalaman
 - **[→ Simulan ang Kabanata 1](./01-IntroToGenAI/README.md)**
 
-### **Kabanata 2: Pag-setup ng Development Environment**
-- **Multi-Provider Configuration**: I-setup ang GitHub Models, Azure OpenAI, at OpenAI Java SDK integrations
+### **Kabanata 2: Pag-set up ng Development Environment**
+- **Multi-Provider Configuration**: I-set up ang GitHub Models, Azure OpenAI, at OpenAI Java SDK integrations
 - **Spring Boot + Spring AI**: Mga pinakamahusay na kasanayan para sa enterprise AI application development
-- **GitHub Models**: Libreng access sa AI models para sa prototyping at pag-aaral (walang kinakailangang credit card)
-- **Mga Kagamitang Pang-develop**: Docker containers, VS Code, at GitHub Codespaces configuration
+- **GitHub Models**: Libreng access sa AI model para sa prototyping at pag-aaral (walang kinakailangang credit card)
+- **Mga Kasangkapan sa Pag-develop**: Docker containers, VS Code, at GitHub Codespaces configuration
 - **[→ Simulan ang Kabanata 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Kabanata 3: Mga Pangunahing Teknik sa Generative AI**
-- **Prompt Engineering**: Mga teknik para sa pinakamainam na tugon ng AI model
-- **Embeddings at Vector Operations**: Pag-implement ng semantic search at similarity matching
+- **Prompt Engineering**: Mga teknik para sa optimal na tugon ng AI model
+- **Embeddings & Vector Operations**: Pagpapatupad ng semantic search at similarity matching
 - **Retrieval-Augmented Generation (RAG)**: Pagsasama ng AI sa sarili mong data sources
 - **Function Calling**: Palawakin ang kakayahan ng AI gamit ang custom tools at plugins
 - **[→ Simulan ang Kabanata 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Kabanata 4: Praktikal na Aplikasyon at mga Proyekto**
-- **Pet Story Generator** (`petstory/`): Paglikha ng malikhaing content gamit ang GitHub Models
+### **Kabanata 4: Praktikal na Aplikasyon at Mga Proyekto**
+- **Pet Story Generator** (`petstory/`): Paglikha ng malikhaing nilalaman gamit ang GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Lokal na integrasyon ng AI model gamit ang OpenAI Java SDK
 - **MCP Calculator Service** (`calculator/`): Pangunahing implementasyon ng Model Context Protocol gamit ang Spring AI
 - **[→ Simulan ang Kabanata 4](./04-PracticalSamples/README.md)**
 
-### **Kabanata 5: Responsableng Pag-develop ng AI**
+### **Kabanata 5: Responsable na Pag-develop ng AI**
 - **GitHub Models Safety**: Subukan ang built-in na content filtering at safety mechanisms (hard blocks at soft refusals)
-- **Responsible AI Demo**: Hands-on na halimbawa kung paano gumagana ang modernong AI safety systems
+- **Responsible AI Demo**: Hands-on na halimbawa kung paano gumagana ang modernong AI safety systems sa praktika
 - **Mga Pinakamahusay na Kasanayan**: Mahahalagang gabay para sa etikal na pag-develop at pag-deploy ng AI
 - **[→ Simulan ang Kabanata 5](./05-ResponsibleGenAI/README.md)**
 
@@ -85,7 +85,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
 
-### Pangunahing Pagkatuto
+### Core Learning
 [![ML para sa mga Baguhan](https://img.shields.io/badge/ML%20para%20sa%20mga%20Baguhan-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science para sa mga Baguhan](https://img.shields.io/badge/Data%20Science%20para%20sa%20mga%20Baguhan-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI para sa mga Baguhan](https://img.shields.io/badge/AI%20para%20sa%20mga%20Baguhan-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pagkuha ng Tulong
 
-Kung ikaw ay nahihirapan o may mga tanong tungkol sa paggawa ng mga AI apps, sumali sa mga kapwa mag-aaral at mga bihasang developer sa mga talakayan tungkol sa MCP. Ito ay isang suportadong komunidad kung saan ang mga tanong ay malugod na tinatanggap at ang kaalaman ay malayang ibinabahagi.
+Kung ikaw ay nahihirapan o may mga tanong tungkol sa paggawa ng AI apps, sumali sa mga kapwa mag-aaral at mga bihasang developer sa mga talakayan tungkol sa MCP. Isa itong suportadong komunidad kung saan malugod na tinatanggap ang mga tanong at malayang ibinabahagi ang kaalaman.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -116,5 +116,5 @@ Kung mayroon kang feedback tungkol sa produkto o nakakaranas ng mga error habang
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

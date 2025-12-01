@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff595bec5b6294cb68860d540eae6302",
-  "translation_date": "2025-11-18T17:48:13+00:00",
+  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
+  "translation_date": "2025-12-01T08:59:08+00:00",
   "source_file": "README.md",
   "language_code": "lt"
 }
@@ -16,26 +16,26 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **Greitas startas**
 
-1. Sukurkite šio saugyklos šaką savo GitHub paskyroje
+1. Sukurkite šio saugyklos kopiją savo GitHub paskyroje
 2. Spustelėkite **Code** → **Codespaces** skirtuką → **...** → **New with options...**
 3. Naudokite numatytuosius nustatymus – tai parinks šiam kursui sukurtą vystymo konteinerį
 4. Spustelėkite **Create codespace**
 5. Palaukite ~2 minutes, kol aplinka bus paruošta
-6. Pereikite tiesiai prie [Pirmojo pavyzdžio](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Pradėkite nuo [Pirmo pavyzdžio](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Daugiakalbė parama
 
 ### Palaikoma per GitHub Action (Automatizuota ir visada atnaujinta)
 
-[Arabų](../ar/README.md) | [Bengalų](../bn/README.md) | [Bulgarų](../bg/README.md) | [Birmos (Mianmaras)](../my/README.md) | [Kinų (supaprastinta)](../zh/README.md) | [Kinų (tradicinė, Honkongas)](../hk/README.md) | [Kinų (tradicinė, Makao)](../mo/README.md) | [Kinų (tradicinė, Taivanas)](../tw/README.md) | [Kroatų](../hr/README.md) | [Čekų](../cs/README.md) | [Danų](../da/README.md) | [Olandų](../nl/README.md) | [Estų](../et/README.md) | [Suomių](../fi/README.md) | [Prancūzų](../fr/README.md) | [Vokiečių](../de/README.md) | [Graikų](../el/README.md) | [Hebrajų](../he/README.md) | [Hindi](../hi/README.md) | [Vengrų](../hu/README.md) | [Indoneziečių](../id/README.md) | [Italų](../it/README.md) | [Japonų](../ja/README.md) | [Korėjiečių](../ko/README.md) | [Lietuvių](./README.md) | [Malajų](../ms/README.md) | [Maratų](../mr/README.md) | [Nepalų](../ne/README.md) | [Nigerijos pidžinas](../pcm/README.md) | [Norvegų](../no/README.md) | [Persų (farsi)](../fa/README.md) | [Lenkų](../pl/README.md) | [Portugalų (Brazilija)](../br/README.md) | [Portugalų (Portugalija)](../pt/README.md) | [Pandžabų (Gurmukhi)](../pa/README.md) | [Rumunų](../ro/README.md) | [Rusų](../ru/README.md) | [Serbų (kirilica)](../sr/README.md) | [Slovakų](../sk/README.md) | [Slovėnų](../sl/README.md) | [Ispanų](../es/README.md) | [Svahilių](../sw/README.md) | [Švedų](../sv/README.md) | [Tagalogų (Filipinai)](../tl/README.md) | [Tamilų](../ta/README.md) | [Tajų](../th/README.md) | [Turkų](../tr/README.md) | [Ukrainiečių](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamiečių](../vi/README.md)
+[Arabų](../ar/README.md) | [Bengalų](../bn/README.md) | [Bulgarų](../bg/README.md) | [Birmos (Mianmaras)](../my/README.md) | [Kinų (supaprastinta)](../zh/README.md) | [Kinų (tradicinė, Honkongas)](../hk/README.md) | [Kinų (tradicinė, Makao)](../mo/README.md) | [Kinų (tradicinė, Taivanas)](../tw/README.md) | [Kroatų](../hr/README.md) | [Čekų](../cs/README.md) | [Danų](../da/README.md) | [Olandų](../nl/README.md) | [Estų](../et/README.md) | [Suomių](../fi/README.md) | [Prancūzų](../fr/README.md) | [Vokiečių](../de/README.md) | [Graikų](../el/README.md) | [Hebrajų](../he/README.md) | [Hindi](../hi/README.md) | [Vengrų](../hu/README.md) | [Indoneziečių](../id/README.md) | [Italų](../it/README.md) | [Japonų](../ja/README.md) | [Kanadų](../kn/README.md) | [Korėjiečių](../ko/README.md) | [Lietuvių](./README.md) | [Malajų](../ms/README.md) | [Malajalių](../ml/README.md) | [Maratų](../mr/README.md) | [Nepalų](../ne/README.md) | [Nigerijos pidžinas](../pcm/README.md) | [Norvegų](../no/README.md) | [Persų (farsi)](../fa/README.md) | [Lenkų](../pl/README.md) | [Portugalų (Brazilija)](../br/README.md) | [Portugalų (Portugalija)](../pt/README.md) | [Pandžabų (gurmukhi)](../pa/README.md) | [Rumunų](../ro/README.md) | [Rusų](../ru/README.md) | [Serbų (kirilica)](../sr/README.md) | [Slovakų](../sk/README.md) | [Slovėnų](../sl/README.md) | [Ispanų](../es/README.md) | [Svahilių](../sw/README.md) | [Švedų](../sv/README.md) | [Tagalogų (filipiniečių)](../tl/README.md) | [Tamilų](../ta/README.md) | [Telugų](../te/README.md) | [Tajų](../th/README.md) | [Turkų](../tr/README.md) | [Ukrainiečių](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamiečių](../vi/README.md)
 
 ## Kurso struktūra ir mokymosi kelias
 
-### **1 skyrius: Generatyvinės AI įvadas**
-- **Pagrindinės sąvokos**: Dideli kalbos modeliai, tokenai, įterpimai ir AI galimybės
+### **1 skyrius: Įvadas į generatyvinę AI**
+- **Pagrindinės sąvokos**: Suprasti didelius kalbos modelius, tokenus, įterpimus ir AI galimybes
 - **Java AI ekosistema**: Spring AI ir OpenAI SDK apžvalga
 - **Modelio konteksto protokolas**: MCP pristatymas ir jo vaidmuo AI agentų komunikacijoje
-- **Praktinės taikymo sritys**: Realūs scenarijai, tokie kaip pokalbių robotai ir turinio generavimas
+- **Praktiniai pritaikymai**: Realūs scenarijai, įskaitant pokalbių robotus ir turinio generavimą
 - **[→ Pradėti 1 skyrių](./01-IntroToGenAI/README.md)**
 
 ### **2 skyrius: Vystymo aplinkos paruošimas**
@@ -52,15 +52,15 @@ CO_OP_TRANSLATOR_METADATA:
 - **Funkcijų kvietimas**: AI galimybių plėtra naudojant pasirinktus įrankius ir papildinius
 - **[→ Pradėti 3 skyrių](./03-CoreGenerativeAITechniques/README.md)**
 
-### **4 skyrius: Praktinės taikymo sritys ir projektai**
+### **4 skyrius: Praktiniai pritaikymai ir projektai**
 - **Gyvūnų istorijų generatorius** (`petstory/`): Kūrybinio turinio generavimas su GitHub modeliais
-- **Foundry vietinis demonstravimas** (`foundrylocal/`): Vietinė AI modelių integracija su OpenAI Java SDK
+- **Foundry vietinis demo** (`foundrylocal/`): Vietinė AI modelių integracija su OpenAI Java SDK
 - **MCP skaičiuoklės paslauga** (`calculator/`): Pagrindinis Modelio konteksto protokolo įgyvendinimas su Spring AI
 - **[→ Pradėti 4 skyrių](./04-PracticalSamples/README.md)**
 
 ### **5 skyrius: Atsakingas AI vystymas**
 - **GitHub modelių saugumas**: Įmontuotų turinio filtravimo ir saugumo mechanizmų testavimas (griežti blokavimai ir švelnūs atsisakymai)
-- **Atsakingo AI demonstravimas**: Praktinis pavyzdys, kaip veikia šiuolaikinės AI saugumo sistemos
+- **Atsakingo AI demo**: Praktinis pavyzdys, kaip veikia šiuolaikinės AI saugumo sistemos
 - **Geriausios praktikos**: Esminės gairės etiniam AI vystymui ir diegimui
 - **[→ Pradėti 5 skyrių](./05-ResponsibleGenAI/README.md)**
 
@@ -94,14 +94,14 @@ CO_OP_TRANSLATOR_METADATA:
 ---
 
 ### Copilot serija
-[![Copilot AI poriniam programavimui](https://img.shields.io/badge/Copilot%20AI%20poriniam%20programavimui-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot AI porinis programavimas](https://img.shields.io/badge/Copilot%20AI%20porinis%20programavimas-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Pagalbos gavimas
 
-Jei susiduriate su sunkumais ar turite klausimų apie AI programų kūrimą, prisijunkite prie kitų mokinių ir patyrusių kūrėjų diskusijų apie MCP. Tai palaikanti bendruomenė, kurioje laukiami klausimai ir laisvai dalijamasi žiniomis.
+Jei susiduriate su sunkumais ar turite klausimų apie AI programų kūrimą, prisijunkite prie kitų mokinių ir patyrusių kūrėjų diskusijų apie MCP. Tai palaikanti bendruomenė, kurioje klausimai yra laukiami, o žinios dalijamos laisvai.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -113,5 +113,5 @@ Jei turite atsiliepimų apie produktą ar susiduriate su klaidomis kūrimo metu,
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipkite dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, kylančius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

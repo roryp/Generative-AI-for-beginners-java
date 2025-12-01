@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff595bec5b6294cb68860d540eae6302",
-  "translation_date": "2025-11-18T17:51:30+00:00",
+  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
+  "translation_date": "2025-12-01T09:02:00+00:00",
   "source_file": "README.md",
   "language_code": "et"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Ajakulu**: Kogu töötuba saab läbida veebis ilma kohalikku seadistust tegemata. Keskkonna seadistamine võtab 2 minutit, näidete uurimine 1-3 tundi, sõltuvalt süvenemise tasemest.
 
-> **Kiire algus**
+> **Kiire alustamine** 
 
 1. Forki see repositoorium oma GitHubi kontole
 2. Klõpsa **Code** → **Codespaces** vahekaart → **...** → **New with options...**
@@ -28,13 +28,13 @@ CO_OP_TRANSLATOR_METADATA:
 ### Toetatud GitHub Actioni kaudu (Automatiseeritud ja alati ajakohane)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Araabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaaria](../bg/README.md) | [Birma (Myanmar)](../my/README.md) | [Hiina (lihtsustatud)](../zh/README.md) | [Hiina (traditsiooniline, Hongkong)](../hk/README.md) | [Hiina (traditsiooniline, Macau)](../mo/README.md) | [Hiina (traditsiooniline, Taiwan)](../tw/README.md) | [Horvaatia](../hr/README.md) | [Tšehhi](../cs/README.md) | [Taani](../da/README.md) | [Hollandi](../nl/README.md) | [Eesti](./README.md) | [Soome](../fi/README.md) | [Prantsuse](../fr/README.md) | [Saksa](../de/README.md) | [Kreeka](../el/README.md) | [Heebrea](../he/README.md) | [Hindi](../hi/README.md) | [Ungari](../hu/README.md) | [Indoneesia](../id/README.md) | [Itaalia](../it/README.md) | [Jaapani](../ja/README.md) | [Korea](../ko/README.md) | [Leedu](../lt/README.md) | [Malai](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigeeria pidgin](../pcm/README.md) | [Norra](../no/README.md) | [Pärsia (Farsi)](../fa/README.md) | [Poola](../pl/README.md) | [Portugali (Brasiilia)](../br/README.md) | [Portugali (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumeenia](../ro/README.md) | [Vene](../ru/README.md) | [Serbia (kirillitsa)](../sr/README.md) | [Slovaki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Hispaania](../es/README.md) | [Suahiili](../sw/README.md) | [Rootsi](../sv/README.md) | [Tagalogi (Filipiinid)](../tl/README.md) | [Tamili](../ta/README.md) | [Tai](../th/README.md) | [Türgi](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnami](../vi/README.md)
+[Araabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaaria](../bg/README.md) | [Birma (Myanmar)](../my/README.md) | [Hiina (lihtsustatud)](../zh/README.md) | [Hiina (traditsiooniline, Hongkong)](../hk/README.md) | [Hiina (traditsiooniline, Macau)](../mo/README.md) | [Hiina (traditsiooniline, Taiwan)](../tw/README.md) | [Horvaatia](../hr/README.md) | [Tšehhi](../cs/README.md) | [Taani](../da/README.md) | [Hollandi](../nl/README.md) | [Eesti](./README.md) | [Soome](../fi/README.md) | [Prantsuse](../fr/README.md) | [Saksa](../de/README.md) | [Kreeka](../el/README.md) | [Heebrea](../he/README.md) | [Hindi](../hi/README.md) | [Ungari](../hu/README.md) | [Indoneesia](../id/README.md) | [Itaalia](../it/README.md) | [Jaapani](../ja/README.md) | [Kannada](../kn/README.md) | [Korea](../ko/README.md) | [Leedu](../lt/README.md) | [Malai](../ms/README.md) | [Malajalami](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigeeria pidžin](../pcm/README.md) | [Norra](../no/README.md) | [Pärsia (Farsi)](../fa/README.md) | [Poola](../pl/README.md) | [Portugali (Brasiilia)](../br/README.md) | [Portugali (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumeenia](../ro/README.md) | [Vene](../ru/README.md) | [Serbia (kirillitsa)](../sr/README.md) | [Slovaki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Hispaania](../es/README.md) | [Suahiili](../sw/README.md) | [Rootsi](../sv/README.md) | [Tagalogi (Filipino)](../tl/README.md) | [Tamili](../ta/README.md) | [Telugu](../te/README.md) | [Tai](../th/README.md) | [Türgi](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnami](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Kursuse struktuur ja õpitee
 
 ### **1. peatükk: Sissejuhatus generatiivsesse tehisintellekti**
-- **Põhimõisted**: Suurte keelemudelite, tokenite, sisendite ja tehisintellekti võimekuste mõistmine
+- **Põhimõisted**: Suurte keelemudelite, tokenite, vektorite ja AI võimekuste mõistmine
 - **Java AI ökosüsteem**: Ülevaade Spring AI ja OpenAI SDK-dest
 - **Model Context Protocol**: MCP tutvustus ja selle roll AI agentide suhtluses
 - **Praktilised rakendused**: Reaalsed näited, sealhulgas vestlusrobotid ja sisuloome
@@ -44,14 +44,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **Mitme pakkuja konfiguratsioon**: GitHubi mudelite, Azure OpenAI ja OpenAI Java SDK integreerimine
 - **Spring Boot + Spring AI**: Parimad tavad ettevõtte AI rakenduste arendamiseks
 - **GitHubi mudelid**: Tasuta AI mudelite juurdepääs prototüüpimiseks ja õppimiseks (krediitkaarti pole vaja)
-- **Arendustööriistad**: Docker konteinerid, VS Code ja GitHub Codespaces konfiguratsioon
+- **Arendustööriistad**: Docker konteinerid, VS Code ja GitHub Codespaces seadistamine
 - **[→ Alusta 2. peatükki](./02-SetupDevEnvironment/README.md)**
 
 ### **3. peatükk: Generatiivse tehisintellekti põhitehnikad**
 - **Prompt Engineering**: Tehnikad AI mudelite optimaalseks vastamiseks
-- **Sisendid ja vektoroperatsioonid**: Semantilise otsingu ja sarnasuse sobitamise rakendamine
-- **Retrieval-Augmented Generation (RAG)**: AI kombineerimine oma andmeallikatega
-- **Funktsioonide kutsumine**: AI võimekuse laiendamine kohandatud tööriistade ja pluginatega
+- **Vektorid ja vektoroperatsioonid**: Semantilise otsingu ja sarnasuse sobitamise rakendamine
+- **Retrieval-Augmented Generation (RAG)**: AI ühendamine oma andmeallikatega
+- **Funktsioonide kutsumine**: AI võimekuse laiendamine kohandatud tööriistade ja pistikprogrammidega
 - **[→ Alusta 3. peatükki](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **4. peatükk: Praktilised rakendused ja projektid**
@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **5. peatükk: Vastutustundlik AI arendus**
 - **GitHubi mudelite turvalisus**: Sisseehitatud sisufiltreerimise ja turvamehhanismide testimine (karmid blokeeringud ja pehmed keeldumised)
 - **Vastutustundliku AI demo**: Praktiline näide, kuidas kaasaegsed AI turvasüsteemid töötavad
-- **Parimad tavad**: Olulised juhised eetiliseks AI arendamiseks ja kasutuselevõtuks
+- **Parimad tavad**: Olulised juhised eetiliseks AI arendamiseks ja juurutamiseks
 - **[→ Alusta 5. peatükki](./05-ResponsibleGenAI/README.md)**
 
 ## Täiendavad ressursid
@@ -77,7 +77,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Generatiivse tehisintellekti sari
+### Generatiivse AI sari
 [![Generatiivne AI algajatele](https://img.shields.io/badge/Generatiivne%20AI%20algajatele-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generatiivne AI (.NET)](https://img.shields.io/badge/Generatiivne%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generatiivne AI (Java)](https://img.shields.io/badge/Generatiivne%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -108,7 +108,7 @@ Kui jääd hätta või sul on küsimusi AI rakenduste loomise kohta, liitu teist
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Kui sul on tagasisidet toodete kohta või esineb vigu arendamise ajal, külasta:
+Kui sul on tagasisidet toodete kohta või esineb vigu arendamisel, külasta:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -116,5 +116,5 @@ Kui sul on tagasisidet toodete kohta või esineb vigu arendamise ajal, külasta:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algkeeles tuleks lugeda autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valede tõlgenduste eest.
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
