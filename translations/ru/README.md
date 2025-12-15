@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff595bec5b6294cb68860d540eae6302",
-  "translation_date": "2025-11-18T16:52:45+00:00",
+  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
+  "translation_date": "2025-12-01T08:16:02+00:00",
   "source_file": "README.md",
   "language_code": "ru"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Генеративный ИИ для начинающих - версия на Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ru.png)
 
-**Временные затраты**: Весь воркшоп можно пройти онлайн без локальной настройки. Настройка окружения занимает 2 минуты, а изучение примеров требует от 1 до 3 часов в зависимости от глубины изучения.
+**Время выполнения**: Весь воркшоп можно пройти онлайн без локальной настройки. Настройка окружения занимает 2 минуты, а изучение примеров требует от 1 до 3 часов в зависимости от глубины изучения.
 
 > **Быстрый старт**
 
@@ -20,7 +20,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. Нажмите **Code** → вкладка **Codespaces** → **...** → **New with options...**
 3. Используйте настройки по умолчанию – это выберет контейнер разработки, созданный для этого курса
 4. Нажмите **Create codespace**
-5. Подождите ~2 минуты, пока окружение будет готово
+5. Подождите около 2 минут, пока окружение будет готово
 6. Перейдите сразу к [Первому примеру](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Поддержка нескольких языков
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### Поддерживается через GitHub Action (автоматически и всегда актуально)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Арабский](../ar/README.md) | [Бенгальский](../bn/README.md) | [Болгарский](../bg/README.md) | [Бирманский (Мьянма)](../my/README.md) | [Китайский (упрощенный)](../zh/README.md) | [Китайский (традиционный, Гонконг)](../hk/README.md) | [Китайский (традиционный, Макао)](../mo/README.md) | [Китайский (традиционный, Тайвань)](../tw/README.md) | [Хорватский](../hr/README.md) | [Чешский](../cs/README.md) | [Датский](../da/README.md) | [Голландский](../nl/README.md) | [Эстонский](../et/README.md) | [Финский](../fi/README.md) | [Французский](../fr/README.md) | [Немецкий](../de/README.md) | [Греческий](../el/README.md) | [Иврит](../he/README.md) | [Хинди](../hi/README.md) | [Венгерский](../hu/README.md) | [Индонезийский](../id/README.md) | [Итальянский](../it/README.md) | [Японский](../ja/README.md) | [Корейский](../ko/README.md) | [Литовский](../lt/README.md) | [Малайский](../ms/README.md) | [Маратхи](../mr/README.md) | [Непальский](../ne/README.md) | [Нигерийский пиджин](../pcm/README.md) | [Норвежский](../no/README.md) | [Персидский (фарси)](../fa/README.md) | [Польский](../pl/README.md) | [Португальский (Бразилия)](../br/README.md) | [Португальский (Португалия)](../pt/README.md) | [Панджаби (Гурмукхи)](../pa/README.md) | [Румынский](../ro/README.md) | [Русский](./README.md) | [Сербский (кириллица)](../sr/README.md) | [Словацкий](../sk/README.md) | [Словенский](../sl/README.md) | [Испанский](../es/README.md) | [Суахили](../sw/README.md) | [Шведский](../sv/README.md) | [Тагальский (Филиппины)](../tl/README.md) | [Тамильский](../ta/README.md) | [Тайский](../th/README.md) | [Турецкий](../tr/README.md) | [Украинский](../uk/README.md) | [Урду](../ur/README.md) | [Вьетнамский](../vi/README.md)
+[Арабский](../ar/README.md) | [Бенгальский](../bn/README.md) | [Болгарский](../bg/README.md) | [Бирманский (Мьянма)](../my/README.md) | [Китайский (упрощенный)](../zh/README.md) | [Китайский (традиционный, Гонконг)](../hk/README.md) | [Китайский (традиционный, Макао)](../mo/README.md) | [Китайский (традиционный, Тайвань)](../tw/README.md) | [Хорватский](../hr/README.md) | [Чешский](../cs/README.md) | [Датский](../da/README.md) | [Нидерландский](../nl/README.md) | [Эстонский](../et/README.md) | [Финский](../fi/README.md) | [Французский](../fr/README.md) | [Немецкий](../de/README.md) | [Греческий](../el/README.md) | [Иврит](../he/README.md) | [Хинди](../hi/README.md) | [Венгерский](../hu/README.md) | [Индонезийский](../id/README.md) | [Итальянский](../it/README.md) | [Японский](../ja/README.md) | [Каннада](../kn/README.md) | [Корейский](../ko/README.md) | [Литовский](../lt/README.md) | [Малайский](../ms/README.md) | [Малаялам](../ml/README.md) | [Маратхи](../mr/README.md) | [Непальский](../ne/README.md) | [Нигерийский пиджин](../pcm/README.md) | [Норвежский](../no/README.md) | [Персидский (фарси)](../fa/README.md) | [Польский](../pl/README.md) | [Португальский (Бразилия)](../br/README.md) | [Португальский (Португалия)](../pt/README.md) | [Панджаби (гурмукхи)](../pa/README.md) | [Румынский](../ro/README.md) | [Русский](./README.md) | [Сербский (кириллица)](../sr/README.md) | [Словацкий](../sk/README.md) | [Словенский](../sl/README.md) | [Испанский](../es/README.md) | [Суахили](../sw/README.md) | [Шведский](../sv/README.md) | [Тагальский (филиппинский)](../tl/README.md) | [Тамильский](../ta/README.md) | [Телугу](../te/README.md) | [Тайский](../th/README.md) | [Турецкий](../tr/README.md) | [Украинский](../uk/README.md) | [Урду](../ur/README.md) | [Вьетнамский](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Структура курса и учебный путь
@@ -44,26 +44,26 @@ CO_OP_TRANSLATOR_METADATA:
 - **Конфигурация для нескольких провайдеров**: Настройка GitHub Models, Azure OpenAI и OpenAI Java SDK
 - **Spring Boot + Spring AI**: Лучшие практики для разработки корпоративных приложений ИИ
 - **GitHub Models**: Бесплатный доступ к моделям ИИ для прототипирования и обучения (без необходимости кредитной карты)
-- **Инструменты разработки**: Настройка Docker-контейнеров, VS Code и GitHub Codespaces
+- **Инструменты разработки**: Конфигурация Docker-контейнеров, VS Code и GitHub Codespaces
 - **[→ Начать главу 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Глава 3: Основные техники генеративного ИИ**
 - **Инженерия запросов**: Техники для получения оптимальных ответов от моделей ИИ
-- **Эмбеддинги и векторные операции**: Реализация семантического поиска и сопоставления по схожести
-- **Генерация с дополнением извлечений (RAG)**: Комбинирование ИИ с вашими собственными источниками данных
+- **Эмбеддинги и операции с векторами**: Реализация семантического поиска и сопоставления по схожести
+- **Генерация с дополнением данных (RAG)**: Комбинирование ИИ с вашими собственными источниками данных
 - **Вызов функций**: Расширение возможностей ИИ с помощью пользовательских инструментов и плагинов
 - **[→ Начать главу 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Глава 4: Практическое применение и проекты**
-- **Генератор историй о питомцах** (`petstory/`): Создание креативного контента с помощью GitHub Models
-- **Локальная демонстрация Foundry** (`foundrylocal/`): Интеграция локальной модели ИИ с OpenAI Java SDK
-- **Сервис калькулятора MCP** (`calculator/`): Базовая реализация протокола контекста модели с использованием Spring AI
+- **Генератор историй о питомцах** (`petstory/`): Творческая генерация контента с использованием GitHub Models
+- **Локальная демонстрация Foundry** (`foundrylocal/`): Локальная интеграция моделей ИИ с OpenAI Java SDK
+- **Сервис калькулятора MCP** (`calculator/`): Базовая реализация протокола контекста модели с Spring AI
 - **[→ Начать главу 4](./04-PracticalSamples/README.md)**
 
-### **Глава 5: Ответственная разработка ИИ**
+### **Глава 5: Разработка ответственного ИИ**
 - **Безопасность GitHub Models**: Тестирование встроенной фильтрации контента и механизмов безопасности (жесткие блокировки и мягкие отказы)
 - **Демонстрация ответственного ИИ**: Практический пример работы современных систем безопасности ИИ
-- **Лучшие практики**: Основные рекомендации для этичной разработки и развертывания ИИ
+- **Лучшие практики**: Основные рекомендации для этичной разработки и внедрения ИИ
 - **[→ Начать главу 5](./05-ResponsibleGenAI/README.md)**
 
 ## Дополнительные ресурсы
@@ -77,7 +77,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
 
-### Серия по генеративному ИИ
+### Серия Генеративного ИИ
 [![Генеративный ИИ для начинающих](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Генеративный ИИ (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Генеративный ИИ (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -91,7 +91,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![ИИ для начинающих](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Кибербезопасность для начинающих](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Веб-разработка для начинающих](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![Интернет вещей для начинающих](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT для начинающих](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![Разработка XR для начинающих](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
@@ -104,11 +104,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Получение помощи
 
-Если вы застряли или у вас есть вопросы о создании приложений с ИИ, присоединяйтесь к обсуждениям о MCP с другими учащимися и опытными разработчиками. Это поддерживающее сообщество, где приветствуются вопросы и свободно делятся знаниями.
+Если вы столкнулись с трудностями или у вас есть вопросы о создании приложений с ИИ, присоединяйтесь к обсуждениям о MCP с другими учащимися и опытными разработчиками. Это поддерживающее сообщество, где приветствуются вопросы и свободно делится знаниями.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Если у вас есть отзывы о продукте или вы столкнулись с ошибками при разработке, посетите:
+Если у вас есть отзывы о продукте или возникли ошибки при разработке, посетите:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -116,5 +116,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Отказ от ответственности**:  
-Этот документ был переведен с использованием сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия обеспечить точность, автоматический перевод может содержать ошибки или неточности. Оригинальный документ на его родном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неправильные толкования, возникшие в результате использования данного перевода.
+Этот документ был переведен с помощью сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия обеспечить точность, автоматические переводы могут содержать ошибки или неточности. Оригинальный документ на его родном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неправильные интерпретации, возникшие в результате использования данного перевода.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

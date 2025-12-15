@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff595bec5b6294cb68860d540eae6302",
-  "translation_date": "2025-11-18T17:38:36+00:00",
+  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
+  "translation_date": "2025-12-01T08:52:59+00:00",
   "source_file": "README.md",
   "language_code": "ro"
 }
@@ -12,29 +12,29 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Inteligența Artificială Generativă pentru Începători - Ediția Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ro.png)
 
-**Timp necesar**: Întregul atelier poate fi finalizat online fără configurare locală. Configurarea mediului durează 2 minute, iar explorarea exemplelor necesită între 1-3 ore, în funcție de profunzimea explorării.
+**Durata estimată**: Atelierul poate fi finalizat online fără configurare locală. Configurarea mediului durează 2 minute, iar explorarea exemplelor necesită între 1-3 ore, în funcție de profunzimea explorării.
 
-> **Start rapid** 
+> **Început rapid**
 
 1. Clonează acest depozit în contul tău GitHub
 2. Click pe **Code** → fila **Codespaces** → **...** → **New with options...**
 3. Folosește setările implicite – acestea vor selecta containerul de dezvoltare creat pentru acest curs
 4. Click pe **Create codespace**
-5. Așteaptă ~2 minute pentru ca mediul să fie gata
+5. Așteaptă aproximativ 2 minute pentru ca mediul să fie gata
 6. Treci direct la [Primul exemplu](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Suport pentru mai multe limbi
 
-### Suportat prin GitHub Action (Automatizat & Mereu Actualizat)
+### Suportat prin GitHub Action (Automatizat și mereu actualizat)
 
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](./README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](./README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-## Structura cursului & Parcursul de învățare
+## Structura cursului și traseul de învățare
 
 ### **Capitolul 1: Introducere în Inteligența Artificială Generativă**
 - **Concepte de bază**: Înțelegerea modelelor lingvistice mari, token-urilor, embedding-urilor și capacităților AI
-- **Ecosistemul AI în Java**: Prezentare generală a Spring AI și SDK-urilor OpenAI
-- **Protocolul Contextului Modelului**: Introducere în MCP și rolul său în comunicarea agenților AI
+- **Ecosistemul AI Java**: Prezentare generală a Spring AI și SDK-urilor OpenAI
+- **Protocolul de Context al Modelului**: Introducere în MCP și rolul său în comunicarea agenților AI
 - **Aplicații practice**: Scenarii reale, inclusiv chatbot-uri și generarea de conținut
 - **[→ Începe Capitolul 1](./01-IntroToGenAI/README.md)**
 
@@ -47,15 +47,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Capitolul 3: Tehnici de bază în Inteligența Artificială Generativă**
 - **Ingineria prompturilor**: Tehnici pentru răspunsuri optime ale modelelor AI
-- **Embedding-uri & Operații pe vectori**: Implementarea căutării semantice și potrivirii similitudinii
+- **Embedding-uri și operațiuni vectoriale**: Implementarea căutării semantice și potrivirii similitudinii
 - **Generare augmentată prin recuperare (RAG)**: Combinarea AI cu sursele proprii de date
 - **Apelarea funcțiilor**: Extinderea capacităților AI cu instrumente și plugin-uri personalizate
 - **[→ Începe Capitolul 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Capitolul 4: Aplicații practice & Proiecte**
-- **Generator de povești pentru animale de companie** (`petstory/`): Generarea creativă de conținut cu Modele GitHub
-- **Demo local Foundry** (`foundrylocal/`): Integrarea modelelor AI locale cu SDK-ul OpenAI Java
-- **Serviciul Calculator MCP** (`calculator/`): Implementarea de bază a Protocolului Contextului Modelului cu Spring AI
+### **Capitolul 4: Aplicații practice și proiecte**
+- **Generator de povești pentru animale de companie** (`petstory/`): Generarea creativă de conținut cu Modelele GitHub
+- **Demo local Foundry** (`foundrylocal/`): Integrarea locală a modelelor AI cu SDK-ul OpenAI Java
+- **Serviciul de calcul MCP** (`calculator/`): Implementarea de bază a Protocolului de Context al Modelului cu Spring AI
 - **[→ Începe Capitolul 4](./04-PracticalSamples/README.md)**
 
 ### **Capitolul 5: Dezvoltarea responsabilă a AI**
@@ -94,7 +94,7 @@ CO_OP_TRANSLATOR_METADATA:
 ---
 
 ### Seria Copilot
-[![Copilot pentru Programare AI în Echipe](https://img.shields.io/badge/Copilot%20pentru%20Programare%20AI%20în%20Echipe-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot pentru Programare în Pereche AI](https://img.shields.io/badge/Copilot%20pentru%20Programare%20în%20Pereche%20AI-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot pentru C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
 [![Aventura Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
@@ -112,6 +112,6 @@ Dacă ai feedback despre produs sau întâmpini erori în timpul dezvoltării, v
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

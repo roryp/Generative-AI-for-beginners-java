@@ -157,8 +157,8 @@ AIアプリケーションを構築する際には、以下の重要なプラク
 - **責任あるAI開発と展開のベストプラクティスの学習**  
 
 **責任あるAIリソース:**  
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Microsoftのセキュリティ、プライバシー、コンプライアンスへの取り組みを学ぶ  
-- [Microsoft の責任ある AI](https://www.microsoft.com/ai/responsible-ai) - Microsoftの責任あるAI開発の原則と実践を探る  
+- [Microsoft トラスト センター](https://www.microsoft.com/trust-center) - Microsoftのセキュリティ、プライバシー、コンプライアンスへの取り組みを学ぶ  
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Microsoftの責任あるAI開発の原則と実践を探る  
 
 ## コース修了
 

@@ -129,7 +129,7 @@ GPT-4o-mini モデルからの応答が表示されるはずです！
 - ローカルの .env ファイル構成
 - Java 開発環境
 
-**次に進む** [Chapter 3: Core Generative AI Techniques](../03-CoreGenerativeAITechniques/README.md) で AI アプリケーションの構築を開始してください！
+**次に進む** [第3章 コア生成AI技術](../03-CoreGenerativeAITechniques/README.md) で AI アプリケーションの構築を開始してください！
 
 ## リソース
 

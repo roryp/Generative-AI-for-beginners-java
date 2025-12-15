@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff595bec5b6294cb68860d540eae6302",
-  "translation_date": "2025-11-18T17:41:17+00:00",
+  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
+  "translation_date": "2025-12-01T08:54:45+00:00",
   "source_file": "README.md",
   "language_code": "sr"
 }
@@ -17,9 +17,9 @@ CO_OP_TRANSLATOR_METADATA:
 > **Брзи почетак**
 
 1. Форкујте овај репозиторијум на свој GitHub налог
-2. Кликните **Code** → **Codespaces** таб → **...** → **New with options...**
+2. Кликните на **Code** → **Codespaces** таб → **...** → **New with options...**
 3. Користите подразумеване опције – ово ће изабрати Development container креиран за овај курс
-4. Кликните **Create codespace**
+4. Кликните на **Create codespace**
 5. Сачекајте ~2 минута да окружење буде спремно
 6. Пређите директно на [Први пример](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### Подржано преко GitHub Action (Аутоматски и увек ажурно)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Арапски](../ar/README.md) | [Бенгалски](../bn/README.md) | [Бугарски](../bg/README.md) | [Бирмански (Мјанмар)](../my/README.md) | [Кинески (поједностављени)](../zh/README.md) | [Кинески (традиционални, Хонг Конг)](../hk/README.md) | [Кинески (традиционални, Макао)](../mo/README.md) | [Кинески (традиционални, Тајван)](../tw/README.md) | [Хрватски](../hr/README.md) | [Чешки](../cs/README.md) | [Дански](../da/README.md) | [Холандски](../nl/README.md) | [Естонски](../et/README.md) | [Фински](../fi/README.md) | [Француски](../fr/README.md) | [Немачки](../de/README.md) | [Грчки](../el/README.md) | [Хебрејски](../he/README.md) | [Хинди](../hi/README.md) | [Мађарски](../hu/README.md) | [Индонежански](../id/README.md) | [Италијански](../it/README.md) | [Јапански](../ja/README.md) | [Корејски](../ko/README.md) | [Литвански](../lt/README.md) | [Малајски](../ms/README.md) | [Марати](../mr/README.md) | [Непалски](../ne/README.md) | [Нигеријски Пиџин](../pcm/README.md) | [Норвешки](../no/README.md) | [Персијски (Фарси)](../fa/README.md) | [Пољски](../pl/README.md) | [Португалски (Бразил)](../br/README.md) | [Португалски (Португал)](../pt/README.md) | [Пенџабски (Гурмуки)](../pa/README.md) | [Румунски](../ro/README.md) | [Руски](../ru/README.md) | [Српски (Ћирилица)](./README.md) | [Словачки](../sk/README.md) | [Словеначки](../sl/README.md) | [Шпански](../es/README.md) | [Свахили](../sw/README.md) | [Шведски](../sv/README.md) | [Тагалог (Филипински)](../tl/README.md) | [Тамилски](../ta/README.md) | [Тајландски](../th/README.md) | [Турски](../tr/README.md) | [Украјински](../uk/README.md) | [Урду](../ur/README.md) | [Вијетнамски](../vi/README.md)
+[Арапски](../ar/README.md) | [Бенгалски](../bn/README.md) | [Бугарски](../bg/README.md) | [Бирмански (Мјанмар)](../my/README.md) | [Кинески (поједностављени)](../zh/README.md) | [Кинески (традиционални, Хонг Конг)](../hk/README.md) | [Кинески (традиционални, Макао)](../mo/README.md) | [Кинески (традиционални, Тајван)](../tw/README.md) | [Хрватски](../hr/README.md) | [Чешки](../cs/README.md) | [Дански](../da/README.md) | [Холандски](../nl/README.md) | [Естонски](../et/README.md) | [Фински](../fi/README.md) | [Француски](../fr/README.md) | [Немачки](../de/README.md) | [Грчки](../el/README.md) | [Хебрејски](../he/README.md) | [Хинди](../hi/README.md) | [Мађарски](../hu/README.md) | [Индонежански](../id/README.md) | [Италијански](../it/README.md) | [Јапански](../ja/README.md) | [Каннада](../kn/README.md) | [Корејски](../ko/README.md) | [Литвански](../lt/README.md) | [Малајски](../ms/README.md) | [Малајалам](../ml/README.md) | [Марати](../mr/README.md) | [Непалски](../ne/README.md) | [Нигеријски Пиџин](../pcm/README.md) | [Норвешки](../no/README.md) | [Персијски (Фарси)](../fa/README.md) | [Пољски](../pl/README.md) | [Португалски (Бразил)](../br/README.md) | [Португалски (Португал)](../pt/README.md) | [Пенџабски (Гурмуки)](../pa/README.md) | [Румунски](../ro/README.md) | [Руски](../ru/README.md) | [Српски (ћирилица)](./README.md) | [Словачки](../sk/README.md) | [Словеначки](../sl/README.md) | [Шпански](../es/README.md) | [Свахили](../sw/README.md) | [Шведски](../sv/README.md) | [Тагалог (Филипински)](../tl/README.md) | [Тамилски](../ta/README.md) | [Телугу](../te/README.md) | [Тајландски](../th/README.md) | [Турски](../tr/README.md) | [Украјински](../uk/README.md) | [Урду](../ur/README.md) | [Вијетнамски](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Структура курса и пут учења
@@ -42,22 +42,22 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Поглавље 2: Постављање развојног окружења**
 - **Конфигурација за више провајдера**: Подешавање GitHub модела, Azure OpenAI и OpenAI Java SDK интеграција
-- **Spring Boot + Spring AI**: Најбоље праксе за развој предузетничких ВИ апликација
-- **GitHub модели**: Бесплатан приступ ВИ моделима за прототипирање и учење (није потребна кредитна картица)
+- **Spring Boot + Spring AI**: Најбоље праксе за развој ВИ апликација за предузећа
+- **GitHub модели**: Бесплатан приступ ВИ моделима за прототипе и учење (није потребна кредитна картица)
 - **Развојни алати**: Docker контејнери, VS Code и GitHub Codespaces конфигурација
 - **[→ Почните Поглавље 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Поглавље 3: Основне технике Генеративне ВИ**
 - **Инжењеринг упита**: Технике за оптималне одговоре ВИ модела
-- **Уграђивања и векторске операције**: Имплементација семантичке претраге и подударања сличности
-- **Генерација уз помоћ претраживања (RAG)**: Комбинујте ВИ са сопственим изворима података
+- **Уграђивања и векторске операције**: Имплементација семантичке претраге и упоређивања сличности
+- **Генерација уз помоћ претраживања (RAG)**: Комбинација ВИ са вашим изворима података
 - **Позивање функција**: Проширите могућности ВИ са прилагођеним алатима и додацима
 - **[→ Почните Поглавље 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Поглавље 4: Практичне примене и пројекти**
 - **Генератор прича о кућним љубимцима** (`petstory/`): Креативно генерисање садржаја са GitHub моделима
 - **Foundry локална демонстрација** (`foundrylocal/`): Локална интеграција ВИ модела са OpenAI Java SDK
-- **MCP калкулатор сервис** (`calculator/`): Основна имплементација Протокола контекста модела са Spring AI
+- **MCP калкулатор услуга** (`calculator/`): Основна имплементација Протокола контекста модела са Spring AI
 - **[→ Почните Поглавље 4](./04-PracticalSamples/README.md)**
 
 ### **Поглавље 5: Одговорни развој ВИ**
@@ -99,7 +99,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### Copilot серија
 [![Copilot за парно програмирање са ВИ](https://img.shields.io/badge/Copilot%20за%20парно%20програмирање%20са%20ВИ-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot за C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
+[![Copilot авантура](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
 <!-- КРАЈ ОСТАЛИХ КУРСЕВА CO-OP TRANSLATOR -->
 
 ## Добијање помоћи
@@ -108,7 +108,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Ако имате повратне информације о производу или наиђете на грешке током израде, посетите:
+Ако имате повратне информације о производу или наиђете на грешке током прављења, посетите:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -116,5 +116,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Одрицање од одговорности**:  
-Овај документ је преведен коришћењем услуге за превођење помоћу вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на изворном језику треба сматрати меродавним извором. За критичне информације препоручује се професионални превод од стране људи. Не сносимо одговорност за било каква погрешна тумачења или неспоразуме који могу произаћи из коришћења овог превода.
+Овај документ је преведен коришћењем услуге за превођење помоћу вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати меродавним извором. За критичне информације препоручује се професионални превод од стране људи. Не преузимамо одговорност за било каква погрешна тумачења или неспоразуме који могу настати услед коришћења овог превода.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

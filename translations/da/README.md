@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ff595bec5b6294cb68860d540eae6302",
-  "translation_date": "2025-11-18T17:22:08+00:00",
+  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
+  "translation_date": "2025-12-01T08:39:38+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -12,29 +12,29 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativ AI for Begyndere - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.da.png)
 
-**Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Opsætning af miljøet tager 2 minutter, og det tager 1-3 timer at udforske eksemplerne, afhængigt af hvor dybt man går.
+**Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Opsætning af miljøet tager 2 minutter, og det tager 1-3 timer at udforske eksemplerne, afhængigt af hvor dybt du går.
 
-> **Hurtig Start** 
+> **Hurtig Start**
 
 1. Fork dette repository til din GitHub-konto
 2. Klik på **Code** → **Codespaces** fanen → **...** → **New with options...**
-3. Brug standardindstillingerne – dette vælger den udviklingscontainer, der er oprettet til dette kursus
+3. Brug standardindstillingerne – dette vælger udviklingscontaineren, der er oprettet til dette kursus
 4. Klik på **Create codespace**
 5. Vent ca. 2 minutter, indtil miljøet er klar
 6. Gå direkte til [Det første eksempel](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Understøttelse af flere sprog
+## Flersproget Support
 
-### Understøttet via GitHub Action (Automatisk & Altid Opdateret)
+### Understøttet via GitHub Action (Automatiseret & Altid Opdateret)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabisk](../ar/README.md) | [Bengalsk](../bn/README.md) | [Bulgarsk](../bg/README.md) | [Burmesisk (Myanmar)](../my/README.md) | [Kinesisk (Forenklet)](../zh/README.md) | [Kinesisk (Traditionelt, Hongkong)](../hk/README.md) | [Kinesisk (Traditionelt, Macau)](../mo/README.md) | [Kinesisk (Traditionelt, Taiwan)](../tw/README.md) | [Kroatisk](../hr/README.md) | [Tjekkisk](../cs/README.md) | [Dansk](./README.md) | [Hollandsk](../nl/README.md) | [Estisk](../et/README.md) | [Finsk](../fi/README.md) | [Fransk](../fr/README.md) | [Tysk](../de/README.md) | [Græsk](../el/README.md) | [Hebraisk](../he/README.md) | [Hindi](../hi/README.md) | [Ungarsk](../hu/README.md) | [Indonesisk](../id/README.md) | [Italiensk](../it/README.md) | [Japansk](../ja/README.md) | [Koreansk](../ko/README.md) | [Litauisk](../lt/README.md) | [Malay](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalesisk](../ne/README.md) | [Nigeriansk Pidgin](../pcm/README.md) | [Norsk](../no/README.md) | [Persisk (Farsi)](../fa/README.md) | [Polsk](../pl/README.md) | [Portugisisk (Brasilien)](../br/README.md) | [Portugisisk (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumænsk](../ro/README.md) | [Russisk](../ru/README.md) | [Serbisk (Kyrillisk)](../sr/README.md) | [Slovakisk](../sk/README.md) | [Slovensk](../sl/README.md) | [Spansk](../es/README.md) | [Swahili](../sw/README.md) | [Svensk](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thai](../th/README.md) | [Tyrkisk](../tr/README.md) | [Ukrainsk](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamesisk](../vi/README.md)
+[Arabisk](../ar/README.md) | [Bengalsk](../bn/README.md) | [Bulgarsk](../bg/README.md) | [Burmesisk (Myanmar)](../my/README.md) | [Kinesisk (Forenklet)](../zh/README.md) | [Kinesisk (Traditionelt, Hongkong)](../hk/README.md) | [Kinesisk (Traditionelt, Macau)](../mo/README.md) | [Kinesisk (Traditionelt, Taiwan)](../tw/README.md) | [Kroatisk](../hr/README.md) | [Tjekkisk](../cs/README.md) | [Dansk](./README.md) | [Hollandsk](../nl/README.md) | [Estisk](../et/README.md) | [Finsk](../fi/README.md) | [Fransk](../fr/README.md) | [Tysk](../de/README.md) | [Græsk](../el/README.md) | [Hebraisk](../he/README.md) | [Hindi](../hi/README.md) | [Ungarsk](../hu/README.md) | [Indonesisk](../id/README.md) | [Italiensk](../it/README.md) | [Japansk](../ja/README.md) | [Kannada](../kn/README.md) | [Koreansk](../ko/README.md) | [Litauisk](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalesisk](../ne/README.md) | [Nigeriansk Pidgin](../pcm/README.md) | [Norsk](../no/README.md) | [Persisk (Farsi)](../fa/README.md) | [Polsk](../pl/README.md) | [Portugisisk (Brasilien)](../br/README.md) | [Portugisisk (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumænsk](../ro/README.md) | [Russisk](../ru/README.md) | [Serbisk (Kyrillisk)](../sr/README.md) | [Slovakisk](../sk/README.md) | [Slovensk](../sl/README.md) | [Spansk](../es/README.md) | [Swahili](../sw/README.md) | [Svensk](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Tyrkisk](../tr/README.md) | [Ukrainsk](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamesisk](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Kursusstruktur & Læringssti
 
 ### **Kapitel 1: Introduktion til Generativ AI**
-- **Kernebegreber**: Forståelse af store sprogmodeller, tokens, embeddings og AI-funktioner
+- **Kernebegreber**: Forståelse af store sprogmodeller, tokens, embeddings og AI-muligheder
 - **Java AI Økosystem**: Oversigt over Spring AI og OpenAI SDK'er
 - **Model Context Protocol**: Introduktion til MCP og dens rolle i AI-agentkommunikation
 - **Praktiske Anvendelser**: Virkelige scenarier, herunder chatbots og indholdsgenerering
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapitel 2: Opsætning af Udviklingsmiljø**
 - **Multi-Provider Konfiguration**: Opsætning af GitHub-modeller, Azure OpenAI og OpenAI Java SDK-integrationer
 - **Spring Boot + Spring AI**: Bedste praksis for udvikling af AI-applikationer til virksomheder
-- **GitHub-modeller**: Gratis adgang til AI-modeller til prototyper og læring (ingen kreditkort påkrævet)
+- **GitHub Modeller**: Gratis adgang til AI-modeller til prototyper og læring (ingen kreditkort påkrævet)
 - **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces-konfiguration
 - **[→ Start Kapitel 2](./02-SetupDevEnvironment/README.md)**
 
@@ -51,7 +51,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Prompt Engineering**: Teknikker til optimale AI-modelsvar
 - **Embeddings & Vektoroperationer**: Implementer semantisk søgning og lighedsmatching
 - **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
-- **Function Calling**: Udvid AI-funktioner med brugerdefinerede værktøjer og plugins
+- **Function Calling**: Udvid AI-muligheder med brugerdefinerede værktøjer og plugins
 - **[→ Start Kapitel 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kapitel 4: Praktiske Anvendelser & Projekter**
@@ -61,9 +61,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Kapitel 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitel 5: Ansvarlig AI-udvikling**
-- **GitHub-modellers Sikkerhed**: Test indbyggede indholdsfiltrerings- og sikkerhedsmekanismer (hårde blokeringer og bløde afvisninger)
+- **GitHub Modellers Sikkerhed**: Test indbyggede indholdsfiltrerings- og sikkerhedsmekanismer (hårde blokeringer og bløde afvisninger)
 - **Ansvarlig AI Demo**: Praktisk eksempel, der viser, hvordan moderne AI-sikkerhedssystemer fungerer i praksis
-- **Bedste Praksis**: Vigtige retningslinjer for etisk AI-udvikling og implementering
+- **Bedste Praksis**: Væsentlige retningslinjer for etisk AI-udvikling og implementering
 - **[→ Start Kapitel 5](./05-ResponsibleGenAI/README.md)**
 
 ## Yderligere Ressourcer
@@ -85,7 +85,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Kerne Læring
+### Grundlæggende Læring
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -98,17 +98,17 @@ CO_OP_TRANSLATOR_METADATA:
  
 ### Copilot Serie
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Få hjælp
 
-Hvis du sidder fast eller har spørgsmål om at bygge AI-apps, kan du deltage i diskussioner med andre lærende og erfarne udviklere om MCP. Det er et støttende fællesskab, hvor spørgsmål er velkomne, og viden deles frit.
+Hvis du sidder fast eller har spørgsmål om at bygge AI-apps, kan du deltage i diskussioner om MCP med andre lærende og erfarne udviklere. Det er et støttende fællesskab, hvor spørgsmål er velkomne, og viden deles frit.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Hvis du har produktfeedback eller oplever fejl under udviklingen, besøg:
+Hvis du har produktfeedback eller oplever fejl under udviklingen, kan du besøge:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

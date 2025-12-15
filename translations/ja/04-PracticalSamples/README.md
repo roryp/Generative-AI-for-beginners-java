@@ -37,9 +37,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 **[ペットストーリー生成器](petstory/README.md)**は、創造的なペットストーリーを生成する**マルチモーダルAI処理**を示す魅力的なSpring Bootウェブアプリケーションです。このアプリケーションは、ブラウザベースのAIインタラクションにtransformer.jsを使用し、サーバー側処理にOpenAI SDKを組み合わせています。
 
-### MCP電卓サービス（初心者向けMCPデモ）
+### MCP計算機サービス（初心者向けMCPデモ）
 
-**[MCP電卓サービス](calculator/README.md)** は、Spring AIを使用した **Model Context Protocol (MCP)** の簡単なデモです。基本的なMCPサーバーを作成し、MCPクライアントとやり取りする方法を示す初心者向けのMCP概念の導入を提供します。
+**[MCP計算機サービス](calculator/README.md)** は、Spring AIを使用した **Model Context Protocol (MCP)** の簡単なデモです。基本的なMCPサーバーを作成し、MCPクライアントとやり取りする方法を示す初心者向けのMCP概念の導入を提供します。
 
 ## 学習の進行
 
@@ -59,7 +59,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 次のステップ
 
-[第5章: 責任ある生成型AI](../05-ResponsibleGenAI/README.md)
+[第5章: 責任ある生成AI](../05-ResponsibleGenAI/README.md)
 
 **免責事項**:  
 この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書が正式な情報源と見なされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤訳について、当社は一切の責任を負いません。
