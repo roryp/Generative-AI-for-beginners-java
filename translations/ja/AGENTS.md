@@ -331,7 +331,7 @@ server.port=8081
 - 翻訳はGitHub Actionsワークフローで管理
 
 ### 学習パス
-1. [02-SetupDevEnvironment](02-SetupDevEnvironment/README.md)から始める
+1. [02-開発環境のセットアップ](02-SetupDevEnvironment/README.md)から始める
 2. 章を順番に進める（01 → 05）
 3. 各章の実践例を完了する
 4. 第4章のサンプルプロジェクトを探索する
