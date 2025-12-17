@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0efa90a880213da0aeb35e43ec717e98",
-  "translation_date": "2025-12-01T08:12:24+00:00",
+  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
+  "translation_date": "2025-12-17T11:42:11+00:00",
   "source_file": "README.md",
   "language_code": "en"
 }
@@ -12,15 +12,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.en.png)
 
-**Time Commitment**: This workshop can be completed entirely online without requiring local setup. Setting up the environment takes about 2 minutes, and exploring the examples can take 1-3 hours depending on how deeply you dive into them.
+**Time Commitment**: The entire workshop can be completed online without local setup. The environment setup takes 2 minutes, with exploring the samples requiring 1-3 hours depending on exploration depth.
 
 > **Quick Start** 
 
 1. Fork this repository to your GitHub account
 2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
-3. Use the default settings – this will select the Development container created for this course
+3. Use the defaults – this will select the Development container created for this course
 4. Click **Create codespace**
-5. Wait approximately 2 minutes for the environment to be ready
+5. Wait ~2 minutes for the environment to be ready
 6. Jump straight to [The first example](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Multi-Language Support
@@ -34,41 +34,47 @@ CO_OP_TRANSLATOR_METADATA:
 ## Course Structure & Learning Path
 
 ### **Chapter 1: Introduction to Generative AI**
-- **Core Concepts**: Learn about Large Language Models, tokens, embeddings, and AI capabilities
+- **Core Concepts**: Understanding Large Language Models, tokens, embeddings, and AI capabilities
 - **Java AI Ecosystem**: Overview of Spring AI and OpenAI SDKs
-- **Model Context Protocol**: Understand MCP and its role in AI agent communication
-- **Practical Applications**: Explore real-world use cases like chatbots and content generation
+- **Model Context Protocol**: Introduction to MCP and its role in AI agent communication
+- **Practical Applications**: Real-world scenarios including chatbots and content generation
 - **[→ Start Chapter 1](./01-IntroToGenAI/README.md)**
 
 ### **Chapter 2: Development Environment Setup**
 - **Multi-Provider Configuration**: Set up GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
-- **Spring Boot + Spring AI**: Best practices for developing enterprise AI applications
+- **Spring Boot + Spring AI**: Best practices for enterprise AI application development
 - **GitHub Models**: Free AI model access for prototyping and learning (no credit card required)
-- **Development Tools**: Configure Docker containers, VS Code, and GitHub Codespaces
+- **Development Tools**: Docker containers, VS Code, and GitHub Codespaces configuration
 - **[→ Start Chapter 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chapter 3: Core Generative AI Techniques**
-- **Prompt Engineering**: Learn techniques for getting optimal responses from AI models
+- **Prompt Engineering**: Techniques for optimal AI model responses
 - **Embeddings & Vector Operations**: Implement semantic search and similarity matching
 - **Retrieval-Augmented Generation (RAG)**: Combine AI with your own data sources
 - **Function Calling**: Extend AI capabilities with custom tools and plugins
 - **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapter 4: Practical Applications & Projects**
-- **Pet Story Generator** (`petstory/`): Generate creative content using GitHub Models
-- **Foundry Local Demo** (`foundrylocal/`): Integrate local AI models with OpenAI Java SDK
-- **MCP Calculator Service** (`calculator/`): Implement a basic Model Context Protocol with Spring AI
+- **Pet Story Generator** (`petstory/`): Creative content generation with GitHub Models
+- **Foundry Local Demo** (`foundrylocal/`): Local AI model integration with OpenAI Java SDK
+- **MCP Calculator Service** (`calculator/`): Basic Model Context Protocol implementation with Spring AI
 - **[→ Start Chapter 4](./04-PracticalSamples/README.md)**
 
 ### **Chapter 5: Responsible AI Development**
 - **GitHub Models Safety**: Test built-in content filtering and safety mechanisms (hard blocks and soft refusals)
-- **Responsible AI Demo**: Hands-on example demonstrating modern AI safety systems
-- **Best Practices**: Learn essential guidelines for ethical AI development and deployment
+- **Responsible AI Demo**: Hands-on example showing how modern AI safety systems work in practice
+- **Best Practices**: Essential guidelines for ethical AI development and deployment
 - **[→ Start Chapter 5](./05-ResponsibleGenAI/README.md)**
 
 ## Additional Resources
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
+### LangChain
+[![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
+[![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
+
+---
+
 ### Azure / Edge / MCP / Agents
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -98,23 +104,23 @@ CO_OP_TRANSLATOR_METADATA:
  
 ### Copilot Series
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Getting Help
 
-If you get stuck or have any questions about building AI apps, join fellow learners and experienced developers in discussions about MCP. It's a supportive community where questions are welcome and knowledge is shared freely.
+If you get stuck or have any questions about building AI apps. Join fellow learners and experienced developers in discussions about MCP. It's a supportive community where questions are welcome and knowledge is shared freely.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-If you have product feedback or encounter errors while building, visit:
+If you have product feedback or errors while building visit:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+**Disclaimer**:
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
