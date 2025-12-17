@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:34:14+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:32:37+00:00",
   "source_file": "README.md",
   "language_code": "tl"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Oras na Kailangan**: Ang buong workshop ay maaaring matapos online nang walang lokal na setup. Ang pag-setup ng kapaligiran ay tumatagal ng 2 minuto, habang ang pag-explore sa mga halimbawa ay nangangailangan ng 1-3 oras depende sa lalim ng pag-aaral.
 
-> **Mabilis na Simula** 
+> **Mabilis na Simula**
 
 1. I-fork ang repositoryong ito sa iyong GitHub account
 2. I-click ang **Code** → tab na **Codespaces** → **...** → **New with options...**
@@ -37,7 +37,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Pangunahing Konsepto**: Pag-unawa sa Malalaking Modelo ng Wika, mga token, embeddings, at kakayahan ng AI
 - **Java AI Ecosystem**: Pangkalahatang-ideya ng Spring AI at OpenAI SDKs
 - **Model Context Protocol**: Panimula sa MCP at ang papel nito sa komunikasyon ng AI agent
-- **Praktikal na Aplikasyon**: Mga totoong senaryo kabilang ang chatbots at paglikha ng nilalaman
+- **Praktikal na Aplikasyon**: Mga totoong senaryo kabilang ang chatbots at pagbuo ng nilalaman
 - **[→ Simulan ang Kabanata 1](./01-IntroToGenAI/README.md)**
 
 ### **Kabanata 2: Pag-setup ng Development Environment**
@@ -55,7 +55,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Simulan ang Kabanata 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Kabanata 4: Praktikal na Aplikasyon at mga Proyekto**
-- **Pet Story Generator** (`petstory/`): Malikhaing paglikha ng nilalaman gamit ang GitHub Models
+- **Pet Story Generator** (`petstory/`): Malikhaing pagbuo ng nilalaman gamit ang GitHub Models
 - **Foundry Local Demo** (`foundrylocal/`): Lokal na integrasyon ng AI model gamit ang OpenAI Java SDK
 - **MCP Calculator Service** (`calculator/`): Pangunahing implementasyon ng Model Context Protocol gamit ang Spring AI
 - **[→ Simulan ang Kabanata 4](./04-PracticalSamples/README.md)**
@@ -110,7 +110,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pagkuha ng Tulong
 
-Kung ikaw ay na-stuck o may mga tanong tungkol sa paggawa ng mga AI app. Sumali sa mga kapwa nag-aaral at mga bihasang developer sa mga talakayan tungkol sa MCP. Ito ay isang sumusuportang komunidad kung saan malugod ang pagtatanong at malayang ibinabahagi ang kaalaman.
+Kung ikaw ay na-stuck o may mga tanong tungkol sa paggawa ng mga AI app. Sumali sa mga kapwa nag-aaral at mga bihasang developer sa mga talakayan tungkol sa MCP. Ito ay isang sumusuportang komunidad kung saan malugod ang pagtatanong at malayang pagbabahagi ng kaalaman.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 

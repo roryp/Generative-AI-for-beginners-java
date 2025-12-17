@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T11:59:38+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T13:56:28+00:00",
   "source_file": "README.md",
   "language_code": "ja"
 }
@@ -16,12 +16,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **クイックスタート**
 
-1. このリポジトリをあなたのGitHubアカウントにフォークする
-2. **Code** → **Codespaces** タブ → **...** → **New with options...** をクリック
-3. デフォルトを使用 – これにより本コース用に作成された開発コンテナが選択されます
-4. **Create codespace** をクリック
-5. 環境が準備されるまで約2分待つ
-6. すぐに[最初の例](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に進む
+1. このリポジトリをあなたのGitHubアカウントにフォークします
+2. **Code** → **Codespaces** タブ → **...** → **New with options...** をクリックします
+3. デフォルトを使用します – これにより本コース用に作成された開発コンテナが選択されます
+4. **Create codespace** をクリックします
+5. 環境が準備されるまで約2分待ちます
+6. すぐに[最初の例](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に進みます
 
 ## 多言語サポート
 
@@ -50,19 +50,19 @@ CO_OP_TRANSLATOR_METADATA:
 ### **第3章：生成AIのコア技術**
 - **プロンプトエンジニアリング**: 最適なAIモデル応答のための技術
 - **埋め込みとベクトル操作**: セマンティック検索と類似度マッチングの実装
-- **検索拡張生成（RAG）**: AIと独自データソースの組み合わせ
+- **検索強化生成（RAG）**: AIと独自データソースの組み合わせ
 - **関数呼び出し**: カスタムツールやプラグインでAI機能を拡張
 - **[→ 第3章を始める](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **第4章：実践的応用とプロジェクト**
-- **ペットストーリー生成器** (`petstory/`): GitHub Modelsを使ったクリエイティブなコンテンツ生成
+- **ペットストーリージェネレーター** (`petstory/`): GitHub Modelsを使ったクリエイティブなコンテンツ生成
 - **Foundryローカルデモ** (`foundrylocal/`): OpenAI Java SDKを使ったローカルAIモデル統合
 - **MCP計算サービス** (`calculator/`): Spring AIを使った基本的なモデルコンテキストプロトコル実装
 - **[→ 第4章を始める](./04-PracticalSamples/README.md)**
 
 ### **第5章：責任あるAI開発**
-- **GitHub Modelsの安全性**: 組み込みのコンテンツフィルタリングと安全機構（ハードブロックとソフト拒否）のテスト
-- **責任あるAIデモ**: 現代のAI安全システムの実践例
+- **GitHub Modelsの安全性**: 組み込みのコンテンツフィルタリングと安全機構のテスト（ハードブロックとソフト拒否）
+- **責任あるAIデモ**: 現代のAI安全システムの実践的な動作例
 - **ベストプラクティス**: 倫理的なAI開発と展開のための必須ガイドライン
 - **[→ 第5章を始める](./05-ResponsibleGenAI/README.md)**
 
@@ -82,7 +82,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![初心者向けAIエージェント](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
-
+ 
 ### 生成AIシリーズ
 [![初心者向け生成AI](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![生成AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
@@ -90,7 +90,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![生成AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
-
+ 
 ### コア学習
 [![初心者向けML](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![初心者向けデータサイエンス](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
@@ -98,19 +98,19 @@ CO_OP_TRANSLATOR_METADATA:
 [![初心者向けサイバーセキュリティ](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![初心者向けWeb開発](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![初心者向けIoT](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向けXR開発](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Copilot シリーズ
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+### Copilotシリーズ
+[![AIペアプログラミング用Copilot](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![C#/.NET用Copilot](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilotアドベンチャー](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## ヘルプを得る
 
-AIアプリの構築で行き詰まったり質問がある場合は、MCPについての議論に参加してください。質問が歓迎され、知識が自由に共有される支援的なコミュニティです。
+AIアプリの構築で行き詰まったり質問がある場合は、MCPに関する議論に参加してください。質問が歓迎され、知識が自由に共有される支援的なコミュニティです。
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -122,5 +122,5 @@ AIアプリの構築で行き詰まったり質問がある場合は、MCPにつ
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**：  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性を期しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じた誤解や誤訳について、当方は一切の責任を負いかねます。
+本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は一切責任を負いかねます。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

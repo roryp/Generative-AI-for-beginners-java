@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:38:53+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:37:22+00:00",
   "source_file": "README.md",
   "language_code": "cs"
 }
@@ -12,9 +12,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativní AI pro začátečníky - Java edice](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.cs.png)
 
-**Časová náročnost**: Celý workshop lze dokončit online bez lokálního nastavení. Nastavení prostředí trvá 2 minuty, prozkoumání ukázek zabere 1-3 hodiny v závislosti na hloubce průzkumu.
+**Časová náročnost**: Celý workshop lze dokončit online bez lokálního nastavení. Nastavení prostředí trvá 2 minuty, prozkoumání ukázek vyžaduje 1-3 hodiny v závislosti na hloubce průzkumu.
 
-> **Rychlý start** 
+> **Rychlý start**
 
 1. Vytvořte fork tohoto repozitáře na svůj GitHub účet
 2. Klikněte na **Code** → záložka **Codespaces** → **...** → **New with options...**
@@ -91,7 +91,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Základní vzdělávání
+### Základní učení
 [![Strojové učení pro začátečníky](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science pro začátečníky](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI pro začátečníky](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)

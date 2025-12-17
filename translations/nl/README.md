@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:27:10+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:25:11+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -34,10 +34,10 @@ CO_OP_TRANSLATOR_METADATA:
 ## Cursusstructuur & Leerpad
 
 ### **Hoofdstuk 1: Introductie tot Generatieve AI**
-- **Kernconcepten**: Begrip van grote taalmodellen, tokens, embeddings en AI-capaciteiten
+- **Kernconcepten**: Begrip van Grote Taalmodellen, tokens, embeddings en AI-mogelijkheden
 - **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDK's
 - **Model Context Protocol**: Introductie tot MCP en de rol ervan in AI-agentcommunicatie
-- **Praktische Toepassingen**: Praktijksituaties zoals chatbots en contentgeneratie
+- **Praktische Toepassingen**: Praktijkvoorbeelden zoals chatbots en contentgeneratie
 - **[→ Start Hoofdstuk 1](./01-IntroToGenAI/README.md)**
 
 ### **Hoofdstuk 2: Ontwikkelomgeving Opzetten**
@@ -51,7 +51,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Prompt Engineering**: Technieken voor optimale AI-modelantwoorden
 - **Embeddings & Vectorbewerkingen**: Implementeer semantisch zoeken en gelijkenisvergelijking
 - **Retrieval-Augmented Generation (RAG)**: Combineer AI met je eigen databronnen
-- **Function Calling**: Breid AI-capaciteiten uit met aangepaste tools en plugins
+- **Function Calling**: Breid AI-mogelijkheden uit met aangepaste tools en plugins
 - **[→ Start Hoofdstuk 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Hoofdstuk 4: Praktische Toepassingen & Projecten**
@@ -121,6 +121,6 @@ Als je productfeedback hebt of fouten tegenkomt tijdens het bouwen, bezoek dan:
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
+**Disclaimer**:
 Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

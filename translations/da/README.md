@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:22:07+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:20:49+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -23,50 +23,50 @@ CO_OP_TRANSLATOR_METADATA:
 5. Vent ca. 2 minutter på, at miljøet er klar
 6. Gå direkte til [Det første eksempel](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Multisprog Support
+## Multisprogunderstøttelse
 
 ### Understøttet via GitHub Action (Automatiseret & Altid Opdateret)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](./README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arabisk](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarsk](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Kinesisk (Forenklet)](../zh/README.md) | [Kinesisk (Traditionelt, Hong Kong)](../hk/README.md) | [Kinesisk (Traditionelt, Macau)](../mo/README.md) | [Kinesisk (Traditionelt, Taiwan)](../tw/README.md) | [Kroatisk](../hr/README.md) | [Tjekkisk](../cs/README.md) | [Dansk](./README.md) | [Hollandsk](../nl/README.md) | [Estisk](../et/README.md) | [Finsk](../fi/README.md) | [Fransk](../fr/README.md) | [Tysk](../de/README.md) | [Græsk](../el/README.md) | [Hebraisk](../he/README.md) | [Hindi](../hi/README.md) | [Ungarsk](../hu/README.md) | [Indonesisk](../id/README.md) | [Italiensk](../it/README.md) | [Japansk](../ja/README.md) | [Kannada](../kn/README.md) | [Koreansk](../ko/README.md) | [Litauisk](../lt/README.md) | [Malayisk](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalesisk](../ne/README.md) | [Nigeriansk Pidgin](../pcm/README.md) | [Norsk](../no/README.md) | [Persisk (Farsi)](../fa/README.md) | [Polsk](../pl/README.md) | [Portugisisk (Brasilien)](../br/README.md) | [Portugisisk (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumænsk](../ro/README.md) | [Russisk](../ru/README.md) | [Serbisk (Kyrillisk)](../sr/README.md) | [Slovakisk](../sk/README.md) | [Slovensk](../sl/README.md) | [Spansk](../es/README.md) | [Swahili](../sw/README.md) | [Svensk](../sv/README.md) | [Tagalog (Filippinsk)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Tyrkisk](../tr/README.md) | [Ukrainsk](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamesisk](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-## Kursusstruktur & Læringsvej
+## Kursusstruktur & Læringssti
 
 ### **Kapitel 1: Introduktion til Generativ AI**
 - **Kernebegreber**: Forståelse af store sprogmodeller, tokens, embeddings og AI-kapaciteter
-- **Java AI Økosystem**: Oversigt over Spring AI og OpenAI SDK'er
-- **Model Context Protocol**: Introduktion til MCP og dets rolle i AI-agent kommunikation
-- **Praktiske Anvendelser**: Virkelige scenarier inklusive chatbots og indholdsgenerering
+- **Java AI-økosystem**: Oversigt over Spring AI og OpenAI SDK'er
+- **Model Context Protocol**: Introduktion til MCP og dets rolle i AI-agentkommunikation
+- **Praktiske anvendelser**: Virkelige scenarier inklusive chatbots og indholdsgenerering
 - **[→ Start Kapitel 1](./01-IntroToGenAI/README.md)**
 
-### **Kapitel 2: Opsætning af Udviklingsmiljø**
-- **Multi-udbyder Konfiguration**: Opsæt GitHub Models, Azure OpenAI og OpenAI Java SDK integrationer
-- **Spring Boot + Spring AI**: Bedste praksis for enterprise AI applikationsudvikling
-- **GitHub Models**: Gratis AI-model adgang til prototyping og læring (ingen kreditkort krævet)
-- **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces konfiguration
+### **Kapitel 2: Opsætning af udviklingsmiljø**
+- **Multi-udbyder konfiguration**: Opsæt GitHub Models, Azure OpenAI og OpenAI Java SDK-integrationer
+- **Spring Boot + Spring AI**: Bedste praksis for udvikling af AI-applikationer til virksomheder
+- **GitHub Models**: Gratis AI-modeladgang til prototyping og læring (ingen kreditkort krævet)
+- **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces-konfiguration
 - **[→ Start Kapitel 2](./02-SetupDevEnvironment/README.md)**
 
-### **Kapitel 3: Kerne Generative AI Teknikker**
+### **Kapitel 3: Kerne teknikker inden for generativ AI**
 - **Prompt Engineering**: Teknikker til optimale AI-modelsvar
-- **Embeddings & Vektoroperationer**: Implementer semantisk søgning og lighedsmatchning
+- **Embeddings & vektoroperationer**: Implementer semantisk søgning og lighedsmatchning
 - **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
-- **Function Calling**: Udvid AI-kapaciteter med brugerdefinerede værktøjer og plugins
+- **Funktionskald**: Udvid AI-kapaciteter med brugerdefinerede værktøjer og plugins
 - **[→ Start Kapitel 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Kapitel 4: Praktiske Anvendelser & Projekter**
+### **Kapitel 4: Praktiske anvendelser & projekter**
 - **Pet Story Generator** (`petstory/`): Kreativ indholdsgenerering med GitHub Models
-- **Foundry Local Demo** (`foundrylocal/`): Lokal AI-model integration med OpenAI Java SDK
-- **MCP Calculator Service** (`calculator/`): Grundlæggende Model Context Protocol implementering med Spring AI
+- **Foundry Local Demo** (`foundrylocal/`): Lokal AI-modelintegration med OpenAI Java SDK
+- **MCP Calculator Service** (`calculator/`): Grundlæggende Model Context Protocol-implementering med Spring AI
 - **[→ Start Kapitel 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitel 5: Ansvarlig AI-udvikling**
-- **GitHub Models Sikkerhed**: Test indbyggede indholdsfiltreringer og sikkerhedsmekanismer (hårde blokeringer og bløde afvisninger)
-- **Ansvarlig AI Demo**: Praktisk eksempel der viser, hvordan moderne AI-sikkerhedssystemer fungerer i praksis
-- **Bedste Praksis**: Vigtige retningslinjer for etisk AI-udvikling og implementering
+- **GitHub Models sikkerhed**: Test indbyggede indholdsfiltrerings- og sikkerhedsmekanismer (hårde blokeringer og bløde afvisninger)
+- **Ansvarlig AI-demo**: Praktisk eksempel, der viser, hvordan moderne AI-sikkerhedssystemer fungerer i praksis
+- **Bedste praksis**: Vigtige retningslinjer for etisk AI-udvikling og implementering
 - **[→ Start Kapitel 5](./05-ResponsibleGenAI/README.md)**
 
-## Yderligere Ressourcer
+## Yderligere ressourcer
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -83,7 +83,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Generativ AI Serie
+### Generativ AI-serie
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -91,7 +91,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Kerne Læring
+### Kerne-læring
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)

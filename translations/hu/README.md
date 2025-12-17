@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:37:31+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:35:53+00:00",
   "source_file": "README.md",
   "language_code": "hu"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 3. Használd az alapértelmezetteket – ez kiválasztja a tanfolyamhoz létrehozott fejlesztői konténert
 4. Kattints a **Codespace létrehozása** gombra
 5. Várj kb. 2 percet, amíg a környezet készen áll
-6. Ugorj közvetlenül az [Első példához](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Ugorj egyenesen az [Első példához](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Többnyelvű támogatás
 
@@ -41,9 +41,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Kezdje az 1. fejezettel](./01-IntroToGenAI/README.md)**
 
 ### **2. fejezet: Fejlesztői környezet beállítása**
-- **Több szolgáltató konfigurációja**: GitHub Modellek, Azure OpenAI és OpenAI Java SDK integrációk beállítása
+- **Több szolgáltató konfigurációja**: GitHub modellek, Azure OpenAI és OpenAI Java SDK integrációk beállítása
 - **Spring Boot + Spring AI**: Legjobb gyakorlatok vállalati MI alkalmazások fejlesztéséhez
-- **GitHub Modellek**: Ingyenes MI modell hozzáférés prototípus készítéshez és tanuláshoz (bankkártya nem szükséges)
+- **GitHub modellek**: Ingyenes MI modell hozzáférés prototípus készítéshez és tanuláshoz (bankkártya nem szükséges)
 - **Fejlesztői eszközök**: Docker konténerek, VS Code és GitHub Codespaces konfiguráció
 - **[→ Kezdje a 2. fejezettel](./02-SetupDevEnvironment/README.md)**
 
@@ -51,17 +51,17 @@ CO_OP_TRANSLATOR_METADATA:
 - **Prompt tervezés**: Technikák az optimális MI modell válaszokhoz
 - **Beágyazások és vektor műveletek**: Szemantikus keresés és hasonlóság alapú egyeztetés megvalósítása
 - **Retrieval-Augmented Generation (RAG)**: MI kombinálása saját adatforrásaiddal
-- **Funkcióhívás**: MI képességek bővítése egyedi eszközökkel és bővítményekkel
+- **Funkcióhívás**: Az MI képességek bővítése egyedi eszközökkel és bővítményekkel
 - **[→ Kezdje a 3. fejezettel](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **4. fejezet: Gyakorlati alkalmazások és projektek**
-- **Háziállat történet generátor** (`petstory/`): Kreatív tartalomgenerálás GitHub Modellekkel
+- **Háziállat történet generátor** (`petstory/`): Kreatív tartalomgenerálás GitHub modellekkel
 - **Foundry helyi demó** (`foundrylocal/`): Helyi MI modell integráció OpenAI Java SDK-val
 - **MCP kalkulátor szolgáltatás** (`calculator/`): Alap Model Context Protocol megvalósítás Spring AI-val
 - **[→ Kezdje a 4. fejezettel](./04-PracticalSamples/README.md)**
 
 ### **5. fejezet: Felelős MI fejlesztés**
-- **GitHub Modellek biztonsága**: Beépített tartalomszűrés és biztonsági mechanizmusok tesztelése (kemény blokkok és lágy elutasítások)
+- **GitHub modellek biztonsága**: Beépített tartalomszűrés és biztonsági mechanizmusok tesztelése (kemény blokkok és lágy elutasítások)
 - **Felelős MI demó**: Gyakorlati példa arra, hogyan működnek a modern MI biztonsági rendszerek
 - **Legjobb gyakorlatok**: Alapvető irányelvek az etikus MI fejlesztéshez és bevezetéshez
 - **[→ Kezdje az 5. fejezettel](./05-ResponsibleGenAI/README.md)**
@@ -110,7 +110,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Segítségkérés
 
-Ha elakadnál vagy kérdésed van az AI alkalmazások fejlesztésével kapcsolatban, csatlakozz a többi tanulóhoz és tapasztalt fejlesztőhöz az MCP-ről szóló beszélgetésekben. Ez egy támogató közösség, ahol a kérdések szívesen látottak, és a tudás szabadon megosztott.
+Ha elakadsz vagy kérdéseid vannak az AI alkalmazások fejlesztésével kapcsolatban, csatlakozz más tanulókhoz és tapasztalt fejlesztőkhöz az MCP-ről szóló beszélgetésekben. Ez egy támogató közösség, ahol a kérdések szívesen látottak, és a tudás szabadon megosztott.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -122,5 +122,5 @@ Ha termék visszajelzésed vagy hibákba ütközöl a fejlesztés során, látog
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Jogi nyilatkozat**:
-Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

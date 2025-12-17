@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:04:17+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:01:16+00:00",
   "source_file": "README.md",
   "language_code": "bn"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.bn.png)
 
-**সময় ব্যয়**: পুরো কর্মশালা অনলাইনে সম্পন্ন করা যায় স্থানীয় সেটআপ ছাড়াই। পরিবেশ সেটআপ করতে ২ মিনিট লাগে, নমুনাগুলি অন্বেষণ করতে ১-৩ ঘণ্টা সময় লাগতে পারে অন্বেষণের গভীরতার উপর নির্ভর করে।
+**সময় ব্যয়**: পুরো কর্মশালা অনলাইনে সম্পন্ন করা যায় স্থানীয় সেটআপ ছাড়াই। পরিবেশ সেটআপ করতে ২ মিনিট লাগে, নমুনাগুলো অন্বেষণ করতে ১-৩ ঘণ্টা সময় লাগতে পারে অন্বেষণের গভীরতার উপর নির্ভর করে।
 
 > **দ্রুত শুরু**
 
@@ -31,37 +31,37 @@ CO_OP_TRANSLATOR_METADATA:
 [Arabic](../ar/README.md) | [Bengali](./README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-## কোর্স কাঠামো ও শেখার পথ
+## কোর্সের কাঠামো ও শেখার পথ
 
-### **অধ্যায় ১: জেনারেটিভ AI পরিচিতি**
+### **অধ্যায় ১: জেনারেটিভ AI এর পরিচিতি**
 - **মূল ধারণা**: বড় ভাষা মডেল, টোকেন, এমবেডিংস, এবং AI ক্ষমতা বোঝা
 - **জাভা AI ইকোসিস্টেম**: Spring AI এবং OpenAI SDK এর ওভারভিউ
 - **মডেল কনটেক্সট প্রোটোকল**: MCP পরিচিতি এবং AI এজেন্ট যোগাযোগে এর ভূমিকা
-- **প্রায়োগিক ব্যবহার**: চ্যাটবট এবং বিষয়বস্তু উৎপাদনসহ বাস্তব জীবনের পরিস্থিতি
+- **প্রায়োগিক ব্যবহার**: চ্যাটবট এবং বিষয়বস্তু সৃষ্টিসহ বাস্তব জীবনের পরিস্থিতি
 - **[→ অধ্যায় ১ শুরু করুন](./01-IntroToGenAI/README.md)**
 
 ### **অধ্যায় ২: ডেভেলপমেন্ট পরিবেশ সেটআপ**
-- **বহু-প্রোভাইডার কনফিগারেশন**: GitHub মডেল, Azure OpenAI, এবং OpenAI Java SDK ইন্টিগ্রেশন সেটআপ
+- **মাল্টি-প্রোভাইডার কনফিগারেশন**: GitHub Models, Azure OpenAI, এবং OpenAI Java SDK ইন্টিগ্রেশন সেটআপ
 - **Spring Boot + Spring AI**: এন্টারপ্রাইজ AI অ্যাপ্লিকেশন ডেভেলপমেন্টের সেরা অনুশীলন
-- **GitHub মডেল**: প্রোটোটাইপিং এবং শেখার জন্য ফ্রি AI মডেল অ্যাক্সেস (ক্রেডিট কার্ডের প্রয়োজন নেই)
+- **GitHub Models**: প্রোটোটাইপিং এবং শেখার জন্য ফ্রি AI মডেল অ্যাক্সেস (ক্রেডিট কার্ডের প্রয়োজন নেই)
 - **ডেভেলপমেন্ট টুলস**: ডকার কন্টেইনার, VS কোড, এবং GitHub Codespaces কনফিগারেশন
 - **[→ অধ্যায় ২ শুরু করুন](./02-SetupDevEnvironment/README.md)**
 
 ### **অধ্যায় ৩: মূল জেনারেটিভ AI কৌশল**
-- **প্রম্পট ইঞ্জিনিয়ারিং**: AI মডেলের সর্বোত্তম প্রতিক্রিয়া পাওয়ার কৌশল
+- **প্রম্পট ইঞ্জিনিয়ারিং**: AI মডেলের সর্বোত্তম প্রতিক্রিয়ার কৌশল
 - **এম্বেডিংস ও ভেক্টর অপারেশন**: সেমান্টিক সার্চ এবং সাদৃশ্য মিলানো বাস্তবায়ন
 - **রিট্রিভাল-অগমেন্টেড জেনারেশন (RAG)**: AI কে আপনার নিজস্ব ডেটা সোর্সের সাথে সংযুক্ত করা
 - **ফাংশন কলিং**: কাস্টম টুলস এবং প্লাগইন দিয়ে AI ক্ষমতা বাড়ানো
 - **[→ অধ্যায় ৩ শুরু করুন](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **অধ্যায় ৪: ব্যবহারিক অ্যাপ্লিকেশন ও প্রকল্প**
-- **পেট স্টোরি জেনারেটর** (`petstory/`): GitHub মডেল দিয়ে সৃজনশীল বিষয়বস্তু উৎপাদন
-- **Foundry Local ডেমো** (`foundrylocal/`): OpenAI Java SDK সহ স্থানীয় AI মডেল ইন্টিগ্রেশন
+- **পেট স্টোরি জেনারেটর** (`petstory/`): GitHub Models দিয়ে সৃজনশীল বিষয়বস্তু তৈরি
+- **Foundry Local Demo** (`foundrylocal/`): OpenAI Java SDK দিয়ে স্থানীয় AI মডেল ইন্টিগ্রেশন
 - **MCP ক্যালকুলেটর সার্ভিস** (`calculator/`): Spring AI দিয়ে মৌলিক মডেল কনটেক্সট প্রোটোকল বাস্তবায়ন
 - **[→ অধ্যায় ৪ শুরু করুন](./04-PracticalSamples/README.md)**
 
 ### **অধ্যায় ৫: দায়িত্বশীল AI ডেভেলপমেন্ট**
-- **GitHub মডেল নিরাপত্তা**: বিল্ট-ইন বিষয়বস্তু ফিল্টারিং এবং নিরাপত্তা ব্যবস্থা পরীক্ষা (হার্ড ব্লক এবং সফট প্রত্যাখ্যান)
+- **GitHub Models নিরাপত্তা**: বিল্ট-ইন বিষয়বস্তু ফিল্টারিং এবং নিরাপত্তা ব্যবস্থা পরীক্ষা (হার্ড ব্লক এবং সফট রিফিউজাল)
 - **দায়িত্বশীল AI ডেমো**: আধুনিক AI নিরাপত্তা সিস্টেম কিভাবে কাজ করে তার হাতে-কলমে উদাহরণ
 - **সেরা অনুশীলন**: নৈতিক AI ডেভেলপমেন্ট ও ডিপ্লয়মেন্টের জন্য অপরিহার্য নির্দেশিকা
 - **[→ অধ্যায় ৫ শুরু করুন](./05-ResponsibleGenAI/README.md)**

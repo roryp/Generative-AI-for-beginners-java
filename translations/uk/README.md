@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:51:22+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:50:21+00:00",
   "source_file": "README.md",
   "language_code": "uk"
 }
@@ -20,12 +20,12 @@ CO_OP_TRANSLATOR_METADATA:
 2. Натисніть **Code** → вкладка **Codespaces** → **...** → **New with options...**
 3. Використайте налаштування за замовчуванням – це вибере контейнер розробки, створений для цього курсу
 4. Натисніть **Create codespace**
-5. Зачекайте приблизно 2 хвилини, поки середовище буде готове
+5. Почекайте приблизно 2 хвилини, поки середовище буде готове
 6. Перейдіть безпосередньо до [Першого прикладу](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 ## Підтримка багатьох мов
 
-### Підтримується через GitHub Action (Автоматично та Завжди Актуально)
+### Підтримується через GitHub Action (Автоматично та Завжди Оновлено)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Арабська](../ar/README.md) | [Бенгальська](../bn/README.md) | [Болгарська](../bg/README.md) | [Бірманська (М’янма)](../my/README.md) | [Китайська (спрощена)](../zh/README.md) | [Китайська (традиційна, Гонконг)](../hk/README.md) | [Китайська (традиційна, Макао)](../mo/README.md) | [Китайська (традиційна, Тайвань)](../tw/README.md) | [Хорватська](../hr/README.md) | [Чеська](../cs/README.md) | [Данська](../da/README.md) | [Голландська](../nl/README.md) | [Естонська](../et/README.md) | [Фінська](../fi/README.md) | [Французька](../fr/README.md) | [Німецька](../de/README.md) | [Грецька](../el/README.md) | [Іврит](../he/README.md) | [Гінді](../hi/README.md) | [Угорська](../hu/README.md) | [Індонезійська](../id/README.md) | [Італійська](../it/README.md) | [Японська](../ja/README.md) | [Каннада](../kn/README.md) | [Корейська](../ko/README.md) | [Литовська](../lt/README.md) | [Малайська](../ms/README.md) | [Малаялам](../ml/README.md) | [Маратхі](../mr/README.md) | [Непальська](../ne/README.md) | [Нігерійський Піджин](../pcm/README.md) | [Норвезька](../no/README.md) | [Перська (Фарсі)](../fa/README.md) | [Польська](../pl/README.md) | [Португальська (Бразилія)](../br/README.md) | [Португальська (Португалія)](../pt/README.md) | [Пенджабі (Гурмухі)](../pa/README.md) | [Румунська](../ro/README.md) | [Російська](../ru/README.md) | [Сербська (кирилиця)](../sr/README.md) | [Словацька](../sk/README.md) | [Словенська](../sl/README.md) | [Іспанська](../es/README.md) | [Свахілі](../sw/README.md) | [Шведська](../sv/README.md) | [Тагальська (філіппінська)](../tl/README.md) | [Тамільська](../ta/README.md) | [Телугу](../te/README.md) | [Тайська](../th/README.md) | [Турецька](../tr/README.md) | [Українська](./README.md) | [Урду](../ur/README.md) | [В’єтнамська](../vi/README.md)
@@ -48,14 +48,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Почати Розділ 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Розділ 3: Основні техніки генеративного ШІ**
-- **Інженерія підказок**: Техніки для оптимальних відповідей AI-моделей
+- **Інженерія підказок**: Техніки для оптимальних відповідей моделей ШІ
 - **Вбудовування та векторні операції**: Реалізація семантичного пошуку та пошуку за схожістю
 - **Retrieval-Augmented Generation (RAG)**: Поєднання ШІ з власними джерелами даних
 - **Виклики функцій**: Розширення можливостей ШІ за допомогою власних інструментів і плагінів
 - **[→ Почати Розділ 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Розділ 4: Практичні застосування та проєкти**
-- **Генератор історій про домашніх тварин** (`petstory/`): Креативна генерація контенту з GitHub Models
+- **Генератор історій про домашніх улюбленців** (`petstory/`): Креативна генерація контенту з GitHub Models
 - **Локальна демонстрація Foundry** (`foundrylocal/`): Локальна інтеграція AI-моделі з OpenAI Java SDK
 - **Сервіс калькулятора MCP** (`calculator/`): Базова реалізація Model Context Protocol з Spring AI
 - **[→ Почати Розділ 4](./04-PracticalSamples/README.md)**
@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Розділ 5: Відповідальна розробка ШІ**
 - **Безпека GitHub Models**: Тестування вбудованих механізмів фільтрації контенту та безпеки (жорсткі блокування та м’які відмови)
 - **Демонстрація відповідального ШІ**: Практичний приклад роботи сучасних систем безпеки ШІ
-- **Кращі практики**: Основні рекомендації для етичної розробки та впровадження ШІ
+- **Кращі практики**: Важливі рекомендації для етичної розробки та впровадження ШІ
 - **[→ Почати Розділ 5](./05-ResponsibleGenAI/README.md)**
 
 ## Додаткові ресурси
@@ -79,7 +79,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![AZD для початківців](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI для початківців](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP для початківців](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI агенти для початківців](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI Агенти для початківців](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
@@ -91,7 +91,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Основи навчання
+### Основне навчання
 [![Машинне навчання для початківців](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science для початківців](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![ШІ для початківців](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)

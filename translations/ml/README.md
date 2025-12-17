@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T13:00:32+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T15:01:03+00:00",
   "source_file": "README.md",
   "language_code": "ml"
 }
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ബഹുഭാഷാ പിന്തുണ
 
-### GitHub ആക്ഷൻ വഴി പിന്തുണ (സ്വയം പ്രവർത്തിക്കുന്നതും എല്ലായ്പ്പോഴും അപ്‌ടുഡേറ്റും)
+### GitHub Action വഴി പിന്തുണ (സ്വയം പ്രവർത്തിക്കുന്നതും എല്ലായ്പ്പോഴും അപ്‌ടുഡേറ്റും)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](./README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
@@ -47,7 +47,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **ഡെവലപ്പ്മെന്റ് ടൂളുകൾ**: Docker കണ്ടെയ്‌നറുകൾ, VS കോഡ്, GitHub Codespaces കോൺഫിഗറേഷൻ
 - **[→ അധ്യായം 2 ആരംഭിക്കുക](./02-SetupDevEnvironment/README.md)**
 
-### **അധ്യായം 3: കോർ ജനറേറ്റീവ് എഐ സാങ്കേതിക വിദ്യകൾ**
+### **അധ്യായം 3: കോർ ജനറേറ്റീവ് എഐ സാങ്കേതികവിദ്യകൾ**
 - **പ്രോംപ്റ്റ് എഞ്ചിനീയറിംഗ്**: മികച്ച എഐ മോഡൽ പ്രതികരണങ്ങൾക്കുള്ള സാങ്കേതിക വിദ്യകൾ
 - **എംബെഡ്ഡിംഗുകളും വെക്ടർ ഓപ്പറേഷനുകളും**: സെമാന്റിക് സെർച്ച്, സമാനതാ മാച്ചിംഗ് നടപ്പിലാക്കൽ
 - **റിട്രീവൽ-ഓഗ്മെന്റഡ് ജനറേഷൻ (RAG)**: നിങ്ങളുടെ സ്വന്തം ഡാറ്റാ സ്രോതസുകളുമായി എഐ സംയോജനം
@@ -56,12 +56,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **അധ്യായം 4: പ്രായോഗിക ഉപയോഗങ്ങളും പ്രോജക്ടുകളും**
 - **പെറ്റ് സ്റ്റോറി ജനറേറ്റർ** (`petstory/`): GitHub മോഡലുകളുമായി സൃഷ്ടിപരമായ ഉള്ളടക്ക സൃഷ്ടി
-- **ഫൗണ്ട്രി ലോക്കൽ ഡെമോ** (`foundrylocal/`): OpenAI ജാവ SDK ഉപയോഗിച്ച് ലോക്കൽ എഐ മോഡൽ സംയോജനം
+- **ഫൗണ്ടറി ലോക്കൽ ഡെമോ** (`foundrylocal/`): OpenAI ജാവ SDK ഉപയോഗിച്ച് ലോക്കൽ എഐ മോഡൽ സംയോജനം
 - **MCP കാൽക്കുലേറ്റർ സർവീസ്** (`calculator/`): Spring AI ഉപയോഗിച്ച് അടിസ്ഥാന മോഡൽ കോൺടെക്സ്റ്റ് പ്രോട്ടോക്കോൾ നടപ്പാക്കൽ
 - **[→ അധ്യായം 4 ആരംഭിക്കുക](./04-PracticalSamples/README.md)**
 
 ### **അധ്യായം 5: ഉത്തരവാദിത്വമുള്ള എഐ വികസനം**
-- **GitHub മോഡലുകളുടെ സുരക്ഷ**: ഇൻബിൽറ്റ് ഉള്ളടക്ക ഫിൽറ്ററിംഗ്, സുരക്ഷാ സംവിധാനങ്ങൾ (ഹാർഡ് ബ്ലോക്കുകളും സോഫ്റ്റ് നിരസനങ്ങളും) പരീക്ഷിക്കുക
+- **GitHub മോഡലുകളുടെ സുരക്ഷ**: ഇൻബിൽറ്റ് ഉള്ളടക്ക ഫിൽറ്ററിംഗ്, സുരക്ഷാ സംവിധാനങ്ങൾ (ഹാർഡ് ബ്ലോക്കുകളും സോഫ്റ്റ് നിരസിക്കലുകളും) പരീക്ഷിക്കുക
 - **ഉത്തരവാദിത്വമുള്ള എഐ ഡെമോ**: ആധുനിക എഐ സുരക്ഷാ സംവിധാനങ്ങൾ പ്രായോഗികമായി കാണിക്കുന്ന ഹാൻഡ്‌സ്-ഓൺ ഉദാഹരണം
 - **മികച്ച രീതികൾ**: നൈതിക എഐ വികസനത്തിനും വിനിയോഗത്തിനും ആവശ്യമായ മാർഗ്ഗനിർദ്ദേശങ്ങൾ
 - **[→ അധ്യായം 5 ആരംഭിക്കുക](./05-ResponsibleGenAI/README.md)**
@@ -98,19 +98,19 @@ CO_OP_TRANSLATOR_METADATA:
 [![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![ആരംഭക്കാർക്കുള്ള XR വികസനം](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### കോപൈലറ്റ് സീരീസ്
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![AI കൂട്ടായ പ്രോഗ്രാമിംഗിനുള്ള കോപൈലറ്റ്](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![C#/.NET-നുള്ള കോപൈലറ്റ്](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![കോപൈലറ്റ് അഡ്വഞ്ചർ](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## സഹായം നേടുക
 
-നിങ്ങൾ കുടുങ്ങുകയോ AI ആപ്പുകൾ നിർമ്മിക്കുന്നതിനെക്കുറിച്ച് എന്തെങ്കിലും ചോദ്യങ്ങളുണ്ടോ? MCP-യെക്കുറിച്ചുള്ള ചർച്ചകളിൽ അനുഭവസമ്പന്നരായ ഡെവലപ്പർമാരും പഠനാർത്ഥികളും ചേർന്ന് പങ്കെടുക്കുക. ചോദ്യങ്ങൾ സ്വാഗതം ചെയ്യപ്പെടുന്ന, അറിവ് സ്വതന്ത്രമായി പങ്കുവെക്കുന്ന ഒരു പിന്തുണയുള്ള സമൂഹമാണ് ഇത്.
+AI ആപ്പുകൾ നിർമ്മിക്കുന്നതിൽ നിങ്ങൾക്ക് തടസ്സം നേരിടുകയാണെങ്കിൽ അല്ലെങ്കിൽ എന്തെങ്കിലും ചോദ്യങ്ങളുണ്ടെങ്കിൽ, MCP-യെക്കുറിച്ചുള്ള ചർച്ചകളിൽ അനുഭവസമ്പന്നരായ ഡെവലപ്പർമാരും പഠിക്കുന്നവരും ചേർന്ന് പങ്കെടുക്കുക. ചോദ്യങ്ങൾ സ്വാഗതം ചെയ്യപ്പെടുന്ന, അറിവ് സ്വതന്ത്രമായി പങ്കുവെക്കുന്ന ഒരു പിന്തുണയുള്ള സമൂഹമാണ് ഇത്.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 

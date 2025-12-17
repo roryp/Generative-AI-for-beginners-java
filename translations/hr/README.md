@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:46:48+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:45:25+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Podrška za više jezika
 
-### Podržano putem GitHub akcije (Automatski i uvijek ažurno)
+### Podržano putem GitHub Action (Automatski i uvijek ažurirano)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arapski](../ar/README.md) | [Bengalski](../bn/README.md) | [Bugarski](../bg/README.md) | [Burmanski (Myanmar)](../my/README.md) | [Kineski (pojednostavljeni)](../zh/README.md) | [Kineski (tradicionalni, Hong Kong)](../hk/README.md) | [Kineski (tradicionalni, Makao)](../mo/README.md) | [Kineski (tradicionalni, Tajvan)](../tw/README.md) | [Hrvatski](./README.md) | [Češki](../cs/README.md) | [Danski](../da/README.md) | [Nizozemski](../nl/README.md) | [Estonski](../et/README.md) | [Finski](../fi/README.md) | [Francuski](../fr/README.md) | [Njemački](../de/README.md) | [Grčki](../el/README.md) | [Hebrejski](../he/README.md) | [Hindi](../hi/README.md) | [Mađarski](../hu/README.md) | [Indonezijski](../id/README.md) | [Talijanski](../it/README.md) | [Japanski](../ja/README.md) | [Kannada](../kn/README.md) | [Korejski](../ko/README.md) | [Litvanski](../lt/README.md) | [Malajski](../ms/README.md) | [Malajalamski](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalski](../ne/README.md) | [Nigerijski pidžin](../pcm/README.md) | [Norveški](../no/README.md) | [Perzijski (Farsi)](../fa/README.md) | [Poljski](../pl/README.md) | [Portugalski (Brazil)](../br/README.md) | [Portugalski (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumunjski](../ro/README.md) | [Ruski](../ru/README.md) | [Srpski (ćirilica)](../sr/README.md) | [Slovački](../sk/README.md) | [Slovenski](../sl/README.md) | [Španjolski](../es/README.md) | [Svahili](../sw/README.md) | [Švedski](../sv/README.md) | [Tagalog (Filipinski)](../tl/README.md) | [Tamilski](../ta/README.md) | [Telugu](../te/README.md) | [Tajlandski](../th/README.md) | [Turski](../tr/README.md) | [Ukrajinski](../uk/README.md) | [Urdu](../ur/README.md) | [Vijetnamski](../vi/README.md)
@@ -34,14 +34,14 @@ CO_OP_TRANSLATOR_METADATA:
 ## Struktura tečaja i put učenja
 
 ### **Poglavlje 1: Uvod u generativnu AI**
-- **Osnovni pojmovi**: Razumijevanje velikih jezičnih modela, tokena, ugradnji i AI sposobnosti
+- **Osnovni pojmovi**: Razumijevanje velikih jezičnih modela, tokena, ugradnji i AI mogućnosti
 - **Java AI ekosustav**: Pregled Spring AI i OpenAI SDK-ova
 - **Protokol konteksta modela**: Uvod u MCP i njegovu ulogu u komunikaciji AI agenata
 - **Praktične primjene**: Stvarni scenariji uključujući chatbote i generiranje sadržaja
 - **[→ Početak poglavlja 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavlje 2: Postavljanje razvojne okoline**
-- **Konfiguracija više pružatelja usluga**: Postavljanje GitHub modela, Azure OpenAI i OpenAI Java SDK integracija
+- **Konfiguracija više pružatelja**: Postavljanje GitHub modela, Azure OpenAI i OpenAI Java SDK integracija
 - **Spring Boot + Spring AI**: Najbolje prakse za razvoj AI aplikacija u poduzećima
 - **GitHub modeli**: Besplatan pristup AI modelima za prototipiranje i učenje (nije potrebna kreditna kartica)
 - **Razvojni alati**: Docker kontejneri, VS Code i konfiguracija GitHub Codespaces
@@ -51,17 +51,17 @@ CO_OP_TRANSLATOR_METADATA:
 - **Inženjering upita (prompt engineering)**: Tehnike za optimalne odgovore AI modela
 - **Ugradnje i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
 - **Retrieval-Augmented Generation (RAG)**: Kombiniranje AI s vlastitim izvorima podataka
-- **Pozivanje funkcija**: Proširenje AI sposobnosti prilagođenim alatima i dodacima
+- **Pozivanje funkcija**: Proširenje AI mogućnosti prilagođenim alatima i dodacima
 - **[→ Početak poglavlja 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Poglavlje 4: Praktične primjene i projekti**
 - **Generator priča o kućnim ljubimcima** (`petstory/`): Kreativno generiranje sadržaja s GitHub modelima
 - **Foundry lokalna demonstracija** (`foundrylocal/`): Lokalna integracija AI modela s OpenAI Java SDK-om
-- **MCP kalkulator servis** (`calculator/`): Osnovna implementacija Protokola konteksta modela sa Spring AI
+- **MCP kalkulator servis** (`calculator/`): Osnovna implementacija Model Context Protocola sa Spring AI
 - **[→ Početak poglavlja 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavlje 5: Odgovorni razvoj AI**
-- **Sigurnost GitHub modela**: Testiranje ugrađenih mehanizama filtriranja sadržaja i sigurnosnih mjera (čvrste blokade i mekani odbijanja)
+- **Sigurnost GitHub modela**: Testiranje ugrađenih mehanizama filtriranja sadržaja i sigurnosti (čvrste blokade i mekani odbijanja)
 - **Demo odgovorne AI**: Praktični primjer kako suvremeni sigurnosni sustavi AI funkcioniraju u praksi
 - **Najbolje prakse**: Osnovne smjernice za etički razvoj i implementaciju AI
 - **[→ Početak poglavlja 5](./05-ResponsibleGenAI/README.md)**
@@ -110,7 +110,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Dobivanje pomoći
 
-Ako zapnete ili imate bilo kakvih pitanja o izradi AI aplikacija. Pridružite se kolegama učenicima i iskusnim programerima u raspravama o MCP-u. To je podržavajuća zajednica gdje su pitanja dobrodošla i znanje se slobodno dijeli.
+Ako zapnete ili imate bilo kakvih pitanja o izradi AI aplikacija. Pridružite se drugim učenicima i iskusnim programerima u raspravama o MCP-u. To je podržavajuća zajednica gdje su pitanja dobrodošla i znanje se slobodno dijeli.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -122,5 +122,5 @@ Ako imate povratne informacije o proizvodu ili pogreške tijekom izrade, posjeti
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Odricanje od odgovornosti**:
-Ovaj dokument preveden je pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

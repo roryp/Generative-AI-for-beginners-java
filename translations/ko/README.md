@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:01:00+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T13:58:06+00:00",
   "source_file": "README.md",
   "language_code": "ko"
 }
@@ -41,9 +41,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ 1장 시작하기](./01-IntroToGenAI/README.md)**
 
 ### **2장: 개발 환경 설정**
-- **다중 공급자 구성**: GitHub Models, Azure OpenAI, OpenAI Java SDK 통합 설정
+- **다중 공급자 구성**: GitHub 모델, Azure OpenAI, OpenAI 자바 SDK 통합 설정
 - **Spring Boot + Spring AI**: 엔터프라이즈 AI 애플리케이션 개발 모범 사례
-- **GitHub Models**: 프로토타입 및 학습용 무료 AI 모델 액세스 (신용카드 불필요)
+- **GitHub 모델**: 프로토타입 및 학습용 무료 AI 모델 액세스 (신용카드 불필요)
 - **개발 도구**: Docker 컨테이너, VS Code, GitHub Codespaces 구성
 - **[→ 2장 시작하기](./02-SetupDevEnvironment/README.md)**
 
@@ -55,13 +55,13 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ 3장 시작하기](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **4장: 실용 응용 및 프로젝트**
-- **반려동물 이야기 생성기** (`petstory/`): GitHub Models를 활용한 창의적 콘텐츠 생성
-- **Foundry 로컬 데모** (`foundrylocal/`): OpenAI Java SDK와 로컬 AI 모델 통합
+- **반려동물 이야기 생성기** (`petstory/`): GitHub 모델을 활용한 창의적 콘텐츠 생성
+- **Foundry 로컬 데모** (`foundrylocal/`): OpenAI 자바 SDK와 로컬 AI 모델 통합
 - **MCP 계산기 서비스** (`calculator/`): Spring AI를 이용한 기본 모델 컨텍스트 프로토콜 구현
 - **[→ 4장 시작하기](./04-PracticalSamples/README.md)**
 
 ### **5장: 책임 있는 AI 개발**
-- **GitHub Models 안전성**: 내장된 콘텐츠 필터링 및 안전 메커니즘 테스트 (강제 차단 및 부드러운 거부)
+- **GitHub 모델 안전성**: 내장된 콘텐츠 필터링 및 안전 메커니즘 테스트 (강제 차단 및 부드러운 거부)
 - **책임 있는 AI 데모**: 최신 AI 안전 시스템 작동 방식 실습 예제
 - **모범 사례**: 윤리적 AI 개발 및 배포를 위한 필수 지침
 - **[→ 5장 시작하기](./05-ResponsibleGenAI/README.md)**
@@ -86,8 +86,8 @@ CO_OP_TRANSLATOR_METADATA:
 ### 생성 AI 시리즈
 [![초보자를 위한 생성 AI](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![생성 AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![생성 AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
-[![생성 AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+[![생성 AI (자바)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![생성 AI (자바스크립트)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
@@ -116,11 +116,11 @@ AI 앱 개발 중 막히거나 질문이 있으면 MCP에 대해 배우는 동�
 
 제품 피드백이나 빌드 중 오류가 있으면 다음을 방문하세요:
 
-[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Microsoft Foundry 개발자 포럼](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있으나, 자동 번역에는 오류나 부정확한 부분이 있을 수 있음을 유의하시기 바랍니다. 원문은 해당 언어의 원본 문서가 권위 있는 출처로 간주되어야 합니다. 중요한 정보의 경우 전문적인 인간 번역을 권장합니다. 본 번역 사용으로 인한 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있으나, 자동 번역에는 오류나 부정확한 부분이 있을 수 있음을 유의하시기 바랍니다. 원문 문서가 권위 있는 출처로 간주되어야 합니다. 중요한 정보의 경우 전문적인 인간 번역을 권장합니다. 본 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

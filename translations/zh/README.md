@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T11:53:34+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T13:50:05+00:00",
   "source_file": "README.md",
   "language_code": "zh"
 }
@@ -34,16 +34,16 @@ CO_OP_TRANSLATOR_METADATA:
 ## 课程结构与学习路径
 
 ### **第 1 章：生成式 AI 介绍**
-- **核心概念**：理解大型语言模型、token、嵌入和 AI 能力
+- **核心概念**：理解大型语言模型、标记、嵌入和 AI 能力
 - **Java AI 生态系统**：Spring AI 和 OpenAI SDK 概览
 - **模型上下文协议**：MCP 介绍及其在 AI 代理通信中的作用
 - **实际应用**：包括聊天机器人和内容生成的真实场景
 - **[→ 开始第 1 章](./01-IntroToGenAI/README.md)**
 
 ### **第 2 章：开发环境设置**
-- **多提供商配置**：设置 GitHub Models、Azure OpenAI 和 OpenAI Java SDK 集成
+- **多提供商配置**：设置 GitHub 模型、Azure OpenAI 和 OpenAI Java SDK 集成
 - **Spring Boot + Spring AI**：企业级 AI 应用开发最佳实践
-- **GitHub Models**：免费 AI 模型访问，用于原型设计和学习（无需信用卡）
+- **GitHub 模型**：免费 AI 模型访问，用于原型设计和学习（无需信用卡）
 - **开发工具**：Docker 容器、VS Code 和 GitHub Codespaces 配置
 - **[→ 开始第 2 章](./02-SetupDevEnvironment/README.md)**
 
@@ -55,18 +55,18 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ 开始第 3 章](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **第 4 章：实际应用与项目**
-- **宠物故事生成器** (`petstory/`)：使用 GitHub Models 进行创意内容生成
+- **宠物故事生成器** (`petstory/`)：使用 GitHub 模型进行创意内容生成
 - **Foundry 本地演示** (`foundrylocal/`)：使用 OpenAI Java SDK 集成本地 AI 模型
-- **MCP 计算器服务** (`calculator/`)：基于 Spring AI 的基础模型上下文协议实现
+- **MCP 计算器服务** (`calculator/`)：使用 Spring AI 实现基础模型上下文协议
 - **[→ 开始第 4 章](./04-PracticalSamples/README.md)**
 
 ### **第 5 章：负责任的 AI 开发**
-- **GitHub Models 安全性**：测试内置内容过滤和安全机制（硬阻断和软拒绝）
-- **负责任的 AI 演示**：展示现代 AI 安全系统实际工作方式的动手示例
+- **GitHub 模型安全性**：测试内置内容过滤和安全机制（硬阻断和软拒绝）
+- **负责任的 AI 演示**：实践示例展示现代 AI 安全系统的工作原理
 - **最佳实践**：伦理 AI 开发和部署的基本指南
 - **[→ 开始第 5 章](./05-ResponsibleGenAI/README.md)**
 
-## 其他资源
+## 额外资源
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -110,7 +110,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 获取帮助
 
-如果您遇到困难或对构建 AI 应用有任何疑问。加入其他学习者和经验丰富的开发者的讨论，共同探讨 MCP。这是一个支持性的社区，欢迎提问并自由分享知识。
+如果您遇到困难或对构建 AI 应用有任何疑问。加入其他学习者和经验丰富的开发者，参与 MCP 讨论。这是一个支持性的社区，欢迎提问并自由分享知识。
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -122,5 +122,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免责声明**：  
-本文件由人工智能翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻译。虽然我们力求准确，但请注意自动翻译可能存在错误或不准确之处。原始文件的母语版本应被视为权威来源。对于重要信息，建议使用专业人工翻译。因使用本翻译而产生的任何误解或误释，我们概不负责。
+本文件由 AI 翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻译而成。虽然我们力求准确，但请注意自动翻译可能存在错误或不准确之处。原始文件的母语版本应被视为权威来源。对于重要信息，建议使用专业人工翻译。因使用本翻译而产生的任何误解或误释，我们概不负责。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

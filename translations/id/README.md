@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:31:32+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:29:47+00:00",
   "source_file": "README.md",
   "language_code": "id"
 }
@@ -49,9 +49,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Bab 3: Teknik Inti Generative AI**
 - **Prompt Engineering**: Teknik untuk respons model AI yang optimal
-- **Embeddings & Operasi Vektor**: Implementasi pencarian semantik dan pencocokan kesamaan
+- **Embeddings & Operasi Vektor**: Terapkan pencarian semantik dan pencocokan kesamaan
 - **Retrieval-Augmented Generation (RAG)**: Gabungkan AI dengan sumber data Anda sendiri
-- **Pemanggilan Fungsi**: Perluas kemampuan AI dengan alat dan plugin kustom
+- **Pemanggilan Fungsi**: Perluas kemampuan AI dengan alat dan plugin khusus
 - **[→ Mulai Bab 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Bab 4: Aplikasi Praktis & Proyek**
@@ -62,7 +62,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Bab 5: Pengembangan AI yang Bertanggung Jawab**
 - **Keamanan GitHub Models**: Uji penyaringan konten bawaan dan mekanisme keamanan (blok keras dan penolakan lunak)
-- **Demo AI Bertanggung Jawab**: Contoh langsung menunjukkan cara kerja sistem keamanan AI modern
+- **Demo AI Bertanggung Jawab**: Contoh langsung menunjukkan cara kerja sistem keamanan AI modern dalam praktik
 - **Praktik Terbaik**: Pedoman penting untuk pengembangan dan penerapan AI yang etis
 - **[→ Mulai Bab 5](./05-ResponsibleGenAI/README.md)**
 
@@ -96,7 +96,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![Data Science untuk Pemula](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI untuk Pemula](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Keamanan Siber untuk Pemula](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![Web Dev untuk Pemula](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![Pengembangan Web untuk Pemula](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT untuk Pemula](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![Pengembangan XR untuk Pemula](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
@@ -110,11 +110,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Mendapatkan Bantuan
 
-Jika Anda mengalami kesulitan atau memiliki pertanyaan tentang membangun aplikasi AI. Bergabunglah dengan sesama pelajar dan pengembang berpengalaman dalam diskusi tentang MCP. Ini adalah komunitas yang mendukung di mana pertanyaan disambut dan pengetahuan dibagikan secara bebas.
+Jika Anda mengalami kebuntuan atau memiliki pertanyaan tentang membangun aplikasi AI. Bergabunglah dengan sesama pelajar dan pengembang berpengalaman dalam diskusi tentang MCP. Ini adalah komunitas yang mendukung di mana pertanyaan disambut dan pengetahuan dibagikan secara bebas.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Jika Anda memiliki umpan balik produk atau kesalahan saat membangun kunjungi:
+Jika Anda memiliki umpan balik produk atau kesalahan saat membangun, kunjungi:
 
 [![Forum Pengembang Microsoft Foundry](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -122,5 +122,5 @@ Jika Anda memiliki umpan balik produk atau kesalahan saat membangun kunjungi:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk akurasi, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau salah tafsir yang timbul dari penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

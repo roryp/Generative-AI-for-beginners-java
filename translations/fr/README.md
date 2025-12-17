@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T11:43:45+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T13:38:50+00:00",
   "source_file": "README.md",
   "language_code": "fr"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![IA générative pour débutants - Édition Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.fr.png)
 
-**Engagement en temps** : L’atelier complet peut être réalisé en ligne sans configuration locale. La mise en place de l’environnement prend 2 minutes, l’exploration des exemples nécessite 1 à 3 heures selon la profondeur d’exploration.
+**Engagement en temps** : L’atelier complet peut être réalisé en ligne sans configuration locale. La mise en place de l’environnement prend 2 minutes, l’exploration des exemples nécessite de 1 à 3 heures selon la profondeur d’exploration.
 
 > **Démarrage rapide** 
 
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### Pris en charge via GitHub Action (Automatisé & Toujours à jour)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabe](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgare](../bg/README.md) | [Birman (Myanmar)](../my/README.md) | [Chinois (Simplifié)](../zh/README.md) | [Chinois (Traditionnel, Hong Kong)](../hk/README.md) | [Chinois (Traditionnel, Macao)](../mo/README.md) | [Chinois (Traditionnel, Taïwan)](../tw/README.md) | [Croate](../hr/README.md) | [Tchèque](../cs/README.md) | [Danois](../da/README.md) | [Néerlandais](../nl/README.md) | [Estonien](../et/README.md) | [Finnois](../fi/README.md) | [Français](./README.md) | [Allemand](../de/README.md) | [Grec](../el/README.md) | [Hébreu](../he/README.md) | [Hindi](../hi/README.md) | [Hongrois](../hu/README.md) | [Indonésien](../id/README.md) | [Italien](../it/README.md) | [Japonais](../ja/README.md) | [Kannada](../kn/README.md) | [Coréen](../ko/README.md) | [Lituanien](../lt/README.md) | [Malais](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Népalais](../ne/README.md) | [Pidgin nigérian](../pcm/README.md) | [Norvégien](../no/README.md) | [Persan (Farsi)](../fa/README.md) | [Polonais](../pl/README.md) | [Portugais (Brésil)](../br/README.md) | [Portugais (Portugal)](../pt/README.md) | [Pendjabi (Gurmukhi)](../pa/README.md) | [Roumain](../ro/README.md) | [Russe](../ru/README.md) | [Serbe (Cyrillique)](../sr/README.md) | [Slovaque](../sk/README.md) | [Slovène](../sl/README.md) | [Espagnol](../es/README.md) | [Swahili](../sw/README.md) | [Suédois](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamoul](../ta/README.md) | [Télougou](../te/README.md) | [Thaï](../th/README.md) | [Turc](../tr/README.md) | [Ukrainien](../uk/README.md) | [Ourdou](../ur/README.md) | [Vietnamien](../vi/README.md)
+[Arabe](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgare](../bg/README.md) | [Birman (Myanmar)](../my/README.md) | [Chinois (Simplifié)](../zh/README.md) | [Chinois (Traditionnel, Hong Kong)](../hk/README.md) | [Chinois (Traditionnel, Macao)](../mo/README.md) | [Chinois (Traditionnel, Taïwan)](../tw/README.md) | [Croate](../hr/README.md) | [Tchèque](../cs/README.md) | [Danois](../da/README.md) | [Néerlandais](../nl/README.md) | [Estonien](../et/README.md) | [Finnois](../fi/README.md) | [Français](./README.md) | [Allemand](../de/README.md) | [Grec](../el/README.md) | [Hébreu](../he/README.md) | [Hindi](../hi/README.md) | [Hongrois](../hu/README.md) | [Indonésien](../id/README.md) | [Italien](../it/README.md) | [Japonais](../ja/README.md) | [Kannada](../kn/README.md) | [Coréen](../ko/README.md) | [Lituanien](../lt/README.md) | [Malais](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Népalais](../ne/README.md) | [Pidgin nigérian](../pcm/README.md) | [Norvégien](../no/README.md) | [Persan (Farsi)](../fa/README.md) | [Polonais](../pl/README.md) | [Portugais (Brésil)](../br/README.md) | [Portugais (Portugal)](../pt/README.md) | [Pendjabi (Gurmukhi)](../pa/README.md) | [Roumain](../ro/README.md) | [Russe](../ru/README.md) | [Serbe (Cyrillique)](../sr/README.md) | [Slovaque](../sk/README.md) | [Slovène](../sl/README.md) | [Espagnol](../es/README.md) | [Swahili](../sw/README.md) | [Suédois](../sv/README.md) | [Tagalog (Philippin)](../tl/README.md) | [Tamoul](../ta/README.md) | [Télougou](../te/README.md) | [Thaï](../th/README.md) | [Turc](../tr/README.md) | [Ukrainien](../uk/README.md) | [Ourdou](../ur/README.md) | [Vietnamien](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Structure du cours & Parcours d’apprentissage
@@ -47,21 +47,21 @@ CO_OP_TRANSLATOR_METADATA:
 - **Outils de développement** : Conteneurs Docker, VS Code et configuration GitHub Codespaces
 - **[→ Commencer le Chapitre 2](./02-SetupDevEnvironment/README.md)**
 
-### **Chapitre 3 : Techniques fondamentales de l’IA générative**
+### **Chapitre 3 : Techniques fondamentales d’IA générative**
 - **Ingénierie des prompts** : Techniques pour des réponses optimales des modèles IA
 - **Embeddings & opérations vectorielles** : Implémenter la recherche sémantique et la correspondance de similarité
-- **Retrieval-Augmented Generation (RAG)** : Combiner l’IA avec vos propres sources de données
+- **Génération augmentée par récupération (RAG)** : Combiner l’IA avec vos propres sources de données
 - **Appel de fonctions** : Étendre les capacités de l’IA avec des outils et plugins personnalisés
 - **[→ Commencer le Chapitre 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapitre 4 : Applications pratiques & projets**
 - **Générateur d’histoires d’animaux** (`petstory/`) : Génération créative de contenu avec GitHub Models
 - **Démo Foundry locale** (`foundrylocal/`) : Intégration locale de modèle IA avec OpenAI Java SDK
-- **Service calculateur MCP** (`calculator/`) : Implémentation basique du protocole de contexte de modèle avec Spring AI
+- **Service calculatrice MCP** (`calculator/`) : Implémentation basique du protocole de contexte de modèle avec Spring AI
 - **[→ Commencer le Chapitre 4](./04-PracticalSamples/README.md)**
 
 ### **Chapitre 5 : Développement responsable de l’IA**
-- **Sécurité GitHub Models** : Tester les filtres de contenu intégrés et mécanismes de sécurité (blocages stricts et refus souples)
+- **Sécurité GitHub Models** : Tester les mécanismes intégrés de filtrage de contenu et de sécurité (blocages stricts et refus souples)
 - **Démo IA responsable** : Exemple pratique montrant le fonctionnement des systèmes modernes de sécurité IA
 - **Bonnes pratiques** : Directives essentielles pour un développement et un déploiement éthiques de l’IA
 - **[→ Commencer le Chapitre 5](./05-ResponsibleGenAI/README.md)**
