@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:58:49+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:58:59+00:00",
   "source_file": "README.md",
   "language_code": "te"
 }
@@ -20,8 +20,8 @@ CO_OP_TRANSLATOR_METADATA:
 2. **Code** → **Codespaces** ట్యాబ్ → **...** → **New with options...** క్లిక్ చేయండి
 3. డిఫాల్ట్స్ ఉపయోగించండి – ఇది ఈ కోర్సు కోసం సృష్టించిన డెవలప్‌మెంట్ కంటైనర్‌ను ఎంచుకుంటుంది
 4. **Create codespace** క్లిక్ చేయండి
-5. వాతావరణం సిద్ధంగా ఉండేందుకు సుమారు 2 నిమిషాలు వేచి ఉండండి
-6. నేరుగా [మొదటి ఉదాహరణ](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)కి వెళ్లండి
+5. వాతావరణం సిద్ధంగా ఉండడానికి సుమారు 2 నిమిషాలు వేచి ఉండండి
+6. నేరుగా [మొదటి ఉదాహరణ](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token) కు వెళ్లండి
 
 ## బహుభాషా మద్దతు
 
@@ -35,9 +35,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **అధ్యాయం 1: జనరేటివ్ AI పరిచయం**
 - **ప్రధాన భావనలు**: పెద్ద భాషా మోడల్స్, టోకెన్లు, ఎంబెడ్డింగ్స్, మరియు AI సామర్థ్యాల అవగాహన
-- **జావా AI ఎకోసిస్టమ్**: Spring AI మరియు OpenAI SDKల అవలోకనం
+- **జావా AI ఎకోసిస్టమ్**: Spring AI మరియు OpenAI SDKs అవలోకనం
 - **మోడల్ కాంటెక్స్ట్ ప్రోటోకాల్**: MCP పరిచయం మరియు AI ఏజెంట్ కమ్యూనికేషన్‌లో దాని పాత్ర
-- **ప్రాయోగిక అనువర్తనాలు**: చాట్‌బాట్లు మరియు కంటెంట్ జనరేషన్ వంటి వాస్తవ ప్రపంచ పరిస్థితులు
+- **ప్రయోజనాత్మక అనువర్తనాలు**: చాట్‌బాట్లు మరియు కంటెంట్ జనరేషన్ వంటి వాస్తవ ప్రపంచ సన్నివేశాలు
 - **[→ అధ్యాయం 1 ప్రారంభించండి](./01-IntroToGenAI/README.md)**
 
 ### **అధ్యాయం 2: డెవలప్‌మెంట్ వాతావరణ సెటప్**
@@ -50,14 +50,14 @@ CO_OP_TRANSLATOR_METADATA:
 ### **అధ్యాయం 3: ప్రధాన జనరేటివ్ AI సాంకేతికతలు**
 - **ప్రాంప్ట్ ఇంజనీరింగ్**: ఉత్తమ AI మోడల్ ప్రతిస్పందనల కోసం సాంకేతికతలు
 - **ఎంబెడ్డింగ్స్ & వెక్టర్ ఆపరేషన్స్**: సేమాంటిక్ సెర్చ్ మరియు సారూప్యత మ్యాచ్ చేయడం అమలు చేయండి
-- **రిట్రీవల్-ఆగ్మెంటెడ్ జనరేషన్ (RAG)**: మీ స్వంత డేటా మూలాలతో AIని కలపండి
+- **రిట్రీవల్-ఆగ్మెంటెడ్ జనరేషన్ (RAG)**: మీ స్వంత డేటా మూలాలతో AI కలపండి
 - **ఫంక్షన్ కాలింగ్**: కస్టమ్ టూల్స్ మరియు ప్లగిన్లతో AI సామర్థ్యాలను విస్తరించండి
 - **[→ అధ్యాయం 3 ప్రారంభించండి](./03-CoreGenerativeAITechniques/README.md)**
 
-### **అధ్యాయం 4: ప్రాయోగిక అనువర్తనాలు & ప్రాజెక్టులు**
+### **అధ్యాయం 4: ప్రయోగాత్మక అనువర్తనాలు & ప్రాజెక్టులు**
 - **పెట్ స్టోరీ జనరేటర్** (`petstory/`): GitHub Models తో సృజనాత్మక కంటెంట్ జనరేషన్
-- **Foundry Local డెమో** (`foundrylocal/`): OpenAI Java SDKతో స్థానిక AI మోడల్ ఇంటిగ్రేషన్
-- **MCP క్యాల్క్యులేటర్ సర్వీస్** (`calculator/`): Spring AIతో ప్రాథమిక మోడల్ కాంటెక్స్ట్ ప్రోటోకాల్ అమలు
+- **Foundry Local డెమో** (`foundrylocal/`): OpenAI Java SDK తో స్థానిక AI మోడల్ ఇంటిగ్రేషన్
+- **MCP క్యాల్క్యులేటర్ సర్వీస్** (`calculator/`): Spring AI తో ప్రాథమిక మోడల్ కాంటెక్స్ట్ ప్రోటోకాల్ అమలు
 - **[→ అధ్యాయం 4 ప్రారంభించండి](./04-PracticalSamples/README.md)**
 
 ### **అధ్యాయం 5: బాధ్యతాయుత AI అభివృద్ధి**
@@ -75,7 +75,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
 
-### Azure / ఎడ్జ్ / MCP / ఏజెంట్లు
+### Azure / Edge / MCP / ఏజెంట్లు
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -122,5 +122,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **అస్పష్టత**:  
-ఈ పత్రాన్ని AI అనువాద సేవ [Co-op Translator](https://github.com/Azure/co-op-translator) ఉపయోగించి అనువదించబడింది. మేము ఖచ్చితత్వానికి ప్రయత్నించినప్పటికీ, ఆటోమేటెడ్ అనువాదాల్లో పొరపాట్లు లేదా తప్పిదాలు ఉండవచ్చు. అసలు పత్రం దాని స్వదేశీ భాషలోనే అధికారిక మూలంగా పరిగణించాలి. ముఖ్యమైన సమాచారానికి, ప్రొఫెషనల్ మానవ అనువాదం సిఫార్సు చేయబడుతుంది. ఈ అనువాదం వాడకంలో ఏర్పడిన ఏవైనా అపార్థాలు లేదా తప్పుదారుల కోసం మేము బాధ్యత వహించము.
+ఈ పత్రాన్ని AI అనువాద సేవ [Co-op Translator](https://github.com/Azure/co-op-translator) ఉపయోగించి అనువదించబడింది. మేము ఖచ్చితత్వానికి ప్రయత్నించినప్పటికీ, ఆటోమేటెడ్ అనువాదాల్లో పొరపాట్లు లేదా తప్పిదాలు ఉండవచ్చు. మూల పత్రం దాని స్వదేశీ భాషలో అధికారిక మూలంగా పరిగణించాలి. ముఖ్యమైన సమాచారానికి, ప్రొఫెషనల్ మానవ అనువాదం సిఫార్సు చేయబడుతుంది. ఈ అనువాదం వాడకంలో ఏర్పడిన ఏవైనా అపార్థాలు లేదా తప్పుదారితీసే అర్థాలు కోసం మేము బాధ్యత వహించము.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

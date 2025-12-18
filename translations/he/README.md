@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:28:26+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:26:37+00:00",
   "source_file": "README.md",
   "language_code": "he"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **התחלה מהירה**
 
-1. בצע Fork למאגר זה לחשבון ה-GitHub שלך
+1. פצל את המאגר הזה לחשבון ה-GitHub שלך
 2. לחץ על **Code** → לשונית **Codespaces** → **...** → **New with options...**
 3. השתמש בהגדרות ברירת המחדל – זה יבחר את מיכל הפיתוח שנוצר לקורס זה
 4. לחץ על **Create codespace**
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### נתמך באמצעות GitHub Action (אוטומטי ותמיד מעודכן)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[ערבית](../ar/README.md) | [בנגלית](../bn/README.md) | [בולגרית](../bg/README.md) | [בורמזית (מיאנמר)](../my/README.md) | [סינית (מפושטת)](../zh/README.md) | [סינית (מסורתית, הונג קונג)](../hk/README.md) | [סינית (מסורתית, מקאו)](../mo/README.md) | [סינית (מסורתית, טייוואן)](../tw/README.md) | [קרואטית](../hr/README.md) | [צ'כית](../cs/README.md) | [דנית](../da/README.md) | [הולנדית](../nl/README.md) | [אסטונית](../et/README.md) | [פינית](../fi/README.md) | [צרפתית](../fr/README.md) | [גרמנית](../de/README.md) | [יוונית](../el/README.md) | [עברית](./README.md) | [הינדי](../hi/README.md) | [הונגרית](../hu/README.md) | [אינדונזית](../id/README.md) | [איטלקית](../it/README.md) | [יפנית](../ja/README.md) | [קנדה](../kn/README.md) | [קוריאנית](../ko/README.md) | [ליטאית](../lt/README.md) | [מלאית](../ms/README.md) | [מלאיאלאם](../ml/README.md) | [מרטהית](../mr/README.md) | [נפאלית](../ne/README.md) | [פידג'ין ניגרי](../pcm/README.md) | [נורווגית](../no/README.md) | [פרסית (פארסי)](../fa/README.md) | [פולנית](../pl/README.md) | [פורטוגזית (ברזיל)](../br/README.md) | [פורטוגזית (פורטוגל)](../pt/README.md) | [פונג'אבית (גורמוכי)](../pa/README.md) | [רומנית](../ro/README.md) | [רוסית](../ru/README.md) | [סרבית (קירילית)](../sr/README.md) | [סלובקית](../sk/README.md) | [סלובנית](../sl/README.md) | [ספרדית](../es/README.md) | [סווהילית](../sw/README.md) | [שוודית](../sv/README.md) | [טגלוג (פיליפינית)](../tl/README.md) | [טמילית](../ta/README.md) | [טלוגו](../te/README.md) | [תאית](../th/README.md) | [טורקית](../tr/README.md) | [אוקראינית](../uk/README.md) | [אורדו](../ur/README.md) | [וייטנאמית](../vi/README.md)
+[ערבית](../ar/README.md) | [בנגלית](../bn/README.md) | [בולגרית](../bg/README.md) | [בורמזית (מיאנמר)](../my/README.md) | [סינית (מפושטת)](../zh/README.md) | [סינית (מסורתית, הונג קונג)](../hk/README.md) | [סינית (מסורתית, מקאו)](../mo/README.md) | [סינית (מסורתית, טייוואן)](../tw/README.md) | [קרואטית](../hr/README.md) | [צ'כית](../cs/README.md) | [דנית](../da/README.md) | [הולנדית](../nl/README.md) | [אסטונית](../et/README.md) | [פינית](../fi/README.md) | [צרפתית](../fr/README.md) | [גרמנית](../de/README.md) | [יוונית](../el/README.md) | [עברית](./README.md) | [הינדי](../hi/README.md) | [הונגרית](../hu/README.md) | [אינדונזית](../id/README.md) | [איטלקית](../it/README.md) | [יפנית](../ja/README.md) | [קנדה](../kn/README.md) | [קוריאנית](../ko/README.md) | [ליטאית](../lt/README.md) | [מלאית](../ms/README.md) | [מלאיאלאם](../ml/README.md) | [מרטהית](../mr/README.md) | [נפאלית](../ne/README.md) | [פידג'ין ניגרי](../pcm/README.md) | [נורווגית](../no/README.md) | [פרסית (פארסי)](../fa/README.md) | [פולנית](../pl/README.md) | [פורטוגזית (ברזיל)](../br/README.md) | [פורטוגזית (פורטוגל)](../pt/README.md) | [פונג'בית (גורמוכי)](../pa/README.md) | [רומנית](../ro/README.md) | [רוסית](../ru/README.md) | [סרבית (קירילית)](../sr/README.md) | [סלובקית](../sk/README.md) | [סלובנית](../sl/README.md) | [ספרדית](../es/README.md) | [סוואהילי](../sw/README.md) | [שוודית](../sv/README.md) | [טגלוג (פיליפינית)](../tl/README.md) | [טמילית](../ta/README.md) | [טלוגו](../te/README.md) | [תאית](../th/README.md) | [טורקית](../tr/README.md) | [אוקראינית](../uk/README.md) | [אורדו](../ur/README.md) | [וייטנאמית](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## מבנה הקורס ונתיב הלמידה
@@ -49,9 +49,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **פרק 3: טכניקות מרכזיות בבינה מלאכותית גנרטיבית**
 - **הנדסת פרומפטים**: טכניקות לתגובות מיטביות של מודלי AI
-- **אמבדינגים ופעולות וקטוריות**: יישום חיפוש סמנטי והתאמת דמיון
+- **אמבדינגים ופעולות וקטור**: יישום חיפוש סמנטי והתאמת דמיון
 - **Retrieval-Augmented Generation (RAG)**: שילוב AI עם מקורות הנתונים שלך
-- **קריאת פונקציות**: הרחבת יכולות ה-AI עם כלים ותוספים מותאמים אישית
+- **קריאת פונקציות**: הרחבת יכולות AI עם כלים ותוספים מותאמים אישית
 - **[→ התחלת פרק 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **פרק 4: יישומים מעשיים ופרויקטים**
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ התחלת פרק 4](./04-PracticalSamples/README.md)**
 
 ### **פרק 5: פיתוח בינה מלאכותית אחראית**
-- **בטיחות במודלים של GitHub**: בדיקת סינון תוכן מובנה ומנגנוני בטיחות (חסימות קשות וסירובים רכים)
+- **בטיחות מודלים של GitHub**: בדיקת סינון תוכן מובנה ומנגנוני בטיחות (חסימות קשות וסירובים רכים)
 - **הדגמת בינה מלאכותית אחראית**: דוגמה מעשית המראה כיצד מערכות בטיחות מודרניות עובדות בפועל
 - **שיטות עבודה מומלצות**: קווים מנחים חיוניים לפיתוח והטמעת AI אתי
 - **[→ התחלת פרק 5](./05-ResponsibleGenAI/README.md)**
@@ -91,7 +91,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### למידה מרכזית
+### למידה בסיסית
 [![למידת מכונה למתחילים](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![מדעי הנתונים למתחילים](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![בינה מלאכותית למתחילים](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)

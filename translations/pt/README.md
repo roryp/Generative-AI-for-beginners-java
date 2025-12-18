@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:10:27+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:08:31+00:00",
   "source_file": "README.md",
   "language_code": "pt"
 }
@@ -12,14 +12,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![IA Generativa para Iniciantes - Edição Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.pt.png)
 
-**Compromisso de Tempo**: O workshop completo pode ser realizado online sem configuração local. A configuração do ambiente leva 2 minutos, com a exploração dos exemplos a requerer entre 1 a 3 horas, dependendo da profundidade da exploração.
+**Compromisso de Tempo**: O workshop completo pode ser realizado online sem configuração local. A configuração do ambiente leva 2 minutos, com a exploração dos exemplos a requerer entre 1 a 3 horas dependendo da profundidade da exploração.
 
 > **Início Rápido** 
 
 1. Faça um fork deste repositório para a sua conta GitHub
-2. Clique em **Code** → separador **Codespaces** → **...** → **Novo com opções...**
+2. Clique em **Code** → separador **Codespaces** → **...** → **New with options...**
 3. Use as predefinições – isto selecionará o contentor de Desenvolvimento criado para este curso
-4. Clique em **Criar codespace**
+4. Clique em **Create codespace**
 5. Aguarde cerca de 2 minutos para o ambiente estar pronto
 6. Vá diretamente para [O primeiro exemplo](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
@@ -36,7 +36,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Capítulo 1: Introdução à IA Generativa**
 - **Conceitos Fundamentais**: Compreensão dos Modelos de Linguagem Grande, tokens, embeddings e capacidades da IA
 - **Ecossistema Java AI**: Visão geral dos SDKs Spring AI e OpenAI
-- **Protocolo de Contexto do Modelo**: Introdução ao MCP e o seu papel na comunicação de agentes de IA
+- **Protocolo de Contexto do Modelo**: Introdução ao MCP e o seu papel na comunicação de agentes IA
 - **Aplicações Práticas**: Cenários do mundo real incluindo chatbots e geração de conteúdo
 - **[→ Começar Capítulo 1](./01-IntroToGenAI/README.md)**
 
@@ -56,13 +56,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Capítulo 4: Aplicações Práticas & Projetos**
 - **Gerador de Histórias de Animais de Estimação** (`petstory/`): Geração criativa de conteúdo com GitHub Models
-- **Demonstração Local Foundry** (`foundrylocal/`): Integração local de modelo de IA com OpenAI Java SDK
+- **Demonstração Local Foundry** (`foundrylocal/`): Integração local de modelo IA com OpenAI Java SDK
 - **Serviço Calculadora MCP** (`calculator/`): Implementação básica do Protocolo de Contexto do Modelo com Spring AI
 - **[→ Começar Capítulo 4](./04-PracticalSamples/README.md)**
 
 ### **Capítulo 5: Desenvolvimento Responsável de IA**
 - **Segurança dos GitHub Models**: Testar filtragem de conteúdo incorporada e mecanismos de segurança (bloqueios rígidos e recusas suaves)
-- **Demonstração de IA Responsável**: Exemplo prático mostrando como funcionam os sistemas modernos de segurança de IA
+- **Demonstração de IA Responsável**: Exemplo prático mostrando como funcionam os sistemas modernos de segurança IA
 - **Melhores Práticas**: Diretrizes essenciais para desenvolvimento e implementação ética de IA
 - **[→ Começar Capítulo 5](./05-ResponsibleGenAI/README.md)**
 
@@ -79,7 +79,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![AZD para Iniciantes](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI para Iniciantes](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP para Iniciantes](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Agentes de IA para Iniciantes](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Agentes IA para Iniciantes](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  

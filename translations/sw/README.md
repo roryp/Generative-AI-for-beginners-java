@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:35:51+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:34:12+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.sw.png)
 
-**Muda wa Kujitolea**: Warsha nzima inaweza kukamilika mtandaoni bila usanidi wa eneo la ndani. Usanidi wa mazingira unachukua dakika 2, na kuchunguza sampuli kunahitaji saa 1-3 kulingana na kina cha uchunguzi.
+**Muda wa Kujitolea**: Warsha nzima inaweza kukamilika mtandaoni bila usanidi wa eneo la ndani. Usanidi wa mazingira huchukua dakika 2, na kuchunguza sampuli kunahitaji saa 1-3 kulingana na kina cha uchunguzi.
 
 > **Anza Haraka**
 
@@ -33,38 +33,38 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Muundo wa Kozi & Njia ya Kujifunza
 
-### **Sura 1: Utangulizi wa AI Inayozalisha**
+### **Sura ya 1: Utangulizi wa AI Inayozalisha**
 - **Mafundisho Muhimu**: Kuelewa Modeli Kubwa za Lugha, tokeni, embeddings, na uwezo wa AI
 - **Ecosystem ya AI ya Java**: Muhtasari wa Spring AI na OpenAI SDKs
 - **Itifaki ya Muktadha wa Modeli**: Utangulizi wa MCP na jukumu lake katika mawasiliano ya mawakala wa AI
 - **Matumizi ya Kivitendo**: Mifano halisi ikijumuisha chatbots na uzalishaji wa maudhui
-- **[→ Anza Sura 1](./01-IntroToGenAI/README.md)**
+- **[→ Anza Sura ya 1](./01-IntroToGenAI/README.md)**
 
-### **Sura 2: Usanidi wa Mazingira ya Maendeleo**
+### **Sura ya 2: Usanidi wa Mazingira ya Maendeleo**
 - **Usanidi wa Watoa Huduma Wengi**: Weka GitHub Models, Azure OpenAI, na OpenAI Java SDK
 - **Spring Boot + Spring AI**: Mbinu bora za maendeleo ya programu za AI za biashara
-- **GitHub Models**: Upatikanaji wa bure wa modeli za AI kwa majaribio na kujifunza (hakuna kadi ya mkopo inahitajika)
+- **GitHub Models**: Upatikanaji wa bure wa modeli za AI kwa ajili ya prototyping na kujifunza (hakuna kadi ya mkopo inahitajika)
 - **Zana za Maendeleo**: Kontena za Docker, VS Code, na usanidi wa GitHub Codespaces
-- **[→ Anza Sura 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Anza Sura ya 2](./02-SetupDevEnvironment/README.md)**
 
-### **Sura 3: Mbinu Muhimu za AI Inayozalisha**
+### **Sura ya 3: Mbinu Muhimu za AI Inayozalisha**
 - **Uhandisi wa Prompt**: Mbinu za kupata majibu bora kutoka kwa modeli za AI
 - **Embeddings & Operesheni za Vector**: Tekeleza utafutaji wa maana na ulinganishaji wa usawa
 - **Uzalishaji Ulioboreshwa kwa Kupata Taarifa (RAG)**: Changanya AI na vyanzo vyako vya data
-- **Kupiga Simu za Kazi**: Panua uwezo wa AI kwa zana na viendelezi maalum
-- **[→ Anza Sura 3](./03-CoreGenerativeAITechniques/README.md)**
+- **Kupiga Simu za Kazi**: Panua uwezo wa AI kwa zana na plugins maalum
+- **[→ Anza Sura ya 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Sura 4: Matumizi ya Kivitendo & Miradi**
+### **Sura ya 4: Matumizi ya Kivitendo & Miradi**
 - **Mzalishaji wa Hadithi za Wanyama wa Kifugo** (`petstory/`): Uzalishaji wa maudhui ya ubunifu kwa GitHub Models
-- **Onyesho la Foundry Local** (`foundrylocal/`): Uunganisho wa modeli ya AI ya eneo la ndani na OpenAI Java SDK
+- **Demo ya Foundry Local** (`foundrylocal/`): Uunganisho wa modeli ya AI ya eneo la ndani na OpenAI Java SDK
 - **Huduma ya Kihesabu ya MCP** (`calculator/`): Utekelezaji wa msingi wa Itifaki ya Muktadha wa Modeli na Spring AI
-- **[→ Anza Sura 4](./04-PracticalSamples/README.md)**
+- **[→ Anza Sura ya 4](./04-PracticalSamples/README.md)**
 
-### **Sura 5: Maendeleo ya AI kwa Uwajibikaji**
+### **Sura ya 5: Maendeleo ya AI kwa Uwajibikaji**
 - **Usalama wa GitHub Models**: Jaribu vichujio vya maudhui vilivyojengwa na mifumo ya usalama (vizuizi ngumu na kukataa kwa upole)
-- **Onyesho la AI Inayowajibika**: Mfano wa vitendo unaoonyesha jinsi mifumo ya usalama ya AI ya kisasa inavyofanya kazi
+- **Demo ya AI Inayowajibika**: Mfano wa vitendo unaoonyesha jinsi mifumo ya usalama ya AI ya kisasa inavyofanya kazi
 - **Mbinu Bora**: Miongozo muhimu kwa maendeleo na utekelezaji wa AI kwa maadili
-- **[→ Anza Sura 5](./05-ResponsibleGenAI/README.md)**
+- **[→ Anza Sura ya 5](./05-ResponsibleGenAI/README.md)**
 
 ## Rasilimali Zaidi
 
@@ -98,29 +98,29 @@ CO_OP_TRANSLATOR_METADATA:
 [![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![Maendeleo ya XR kwa Waanzilishi](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Mfululizo wa Copilot
-[![Copilot kwa Uandishi wa Pamoja wa AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot kwa C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Kupata Msaada
 
-Ikiwa unakumbwa na shida au una maswali yoyote kuhusu kujenga programu za AI. Jiunge na wanafunzi wenzako na waendelezaji wenye uzoefu katika mijadala kuhusu MCP. Ni jamii yenye msaada ambapo maswali yanakaribishwa na maarifa yanashirikiwa kwa uhuru.
+Kama unakumbwa na shida au una maswali yoyote kuhusu kujenga programu za AI. Jiunge na wanafunzi wenzako na waendelezaji wenye uzoefu katika mijadala kuhusu MCP. Ni jamii inayounga mkono ambapo maswali yanakaribishwa na maarifa yanashirikiwa kwa uhuru.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Ikiwa una maoni kuhusu bidhaa au makosa wakati wa kujenga tembelea:
+Kama una maoni kuhusu bidhaa au makosa wakati wa kujenga tembelea:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kiarifu cha Msamaha**:
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+**Kiarifa cha Kukataa**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna wajibu wowote kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

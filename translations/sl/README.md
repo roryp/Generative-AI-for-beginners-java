@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6710490579e4bb2e3ec9409a3c1b1ec0",
-  "translation_date": "2025-12-17T12:48:10+00:00",
+  "original_hash": "8c5788d166402261b1133c3b3865eb79",
+  "translation_date": "2025-12-17T14:47:00+00:00",
   "source_file": "README.md",
   "language_code": "sl"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativna umetna inteligenca za začetnike - Java izdaja](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.sl.png)
 
-**Časovna zaveza**: Celoten delavnico je mogoče dokončati na spletu brez lokalne namestitve. Nastavitev okolja traja 2 minuti, raziskovanje primerov pa zahteva 1-3 ure, odvisno od globine raziskovanja.
+**Časovna zaveza**: Celoten delavnico je mogoče opraviti na spletu brez lokalne namestitve. Nastavitev okolja traja 2 minuti, raziskovanje primerov pa 1-3 ure, odvisno od globine raziskovanja.
 
 > **Hiter začetek** 
 
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### Podprto preko GitHub Action (avtomatizirano in vedno posodobljeno)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabščina](../ar/README.md) | [Bengalščina](../bn/README.md) | [Bolgarščina](../bg/README.md) | [Burmanski (Mjanmar)](../my/README.md) | [Kitajščina (poenostavljena)](../zh/README.md) | [Kitajščina (tradicionalna, Hong Kong)](../hk/README.md) | [Kitajščina (tradicionalna, Macau)](../mo/README.md) | [Kitajščina (tradicionalna, Tajvan)](../tw/README.md) | [Hrvaščina](../hr/README.md) | [Češčina](../cs/README.md) | [Danščina](../da/README.md) | [Nizozemščina](../nl/README.md) | [Estonščina](../et/README.md) | [Finščina](../fi/README.md) | [Francoščina](../fr/README.md) | [Nemščina](../de/README.md) | [Grščina](../el/README.md) | [Hebrejščina](../he/README.md) | [Hindijščina](../hi/README.md) | [Madžarščina](../hu/README.md) | [Indonezijščina](../id/README.md) | [Italijanščina](../it/README.md) | [Japonščina](../ja/README.md) | [Kannada](../kn/README.md) | [Korejščina](../ko/README.md) | [Litovščina](../lt/README.md) | [Malajščina](../ms/README.md) | [Malajalščina](../ml/README.md) | [Maratščina](../mr/README.md) | [Nepalščina](../ne/README.md) | [Nigerijski pidžin](../pcm/README.md) | [Norveščina](../no/README.md) | [Perzijščina (Farsi)](../fa/README.md) | [Poljščina](../pl/README.md) | [Portugalščina (Brazilija)](../br/README.md) | [Portugalščina (Portugalska)](../pt/README.md) | [Pandžabščina (Gurmukhi)](../pa/README.md) | [Romunščina](../ro/README.md) | [Ruščina](../ru/README.md) | [Srbščina (cirilica)](../sr/README.md) | [Slovaščina](../sk/README.md) | [Slovenščina](./README.md) | [Španščina](../es/README.md) | [Svahili](../sw/README.md) | [Švedščina](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamilščina](../ta/README.md) | [Telugu](../te/README.md) | [Tajščina](../th/README.md) | [Turščina](../tr/README.md) | [Ukrajinščina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamščina](../vi/README.md)
+[Arabščina](../ar/README.md) | [Bengalščina](../bn/README.md) | [Bolgarščina](../bg/README.md) | [Burmanščina (Mjanmar)](../my/README.md) | [Kitajščina (poenostavljena)](../zh/README.md) | [Kitajščina (tradicionalna, Hong Kong)](../hk/README.md) | [Kitajščina (tradicionalna, Macau)](../mo/README.md) | [Kitajščina (tradicionalna, Tajvan)](../tw/README.md) | [Hrvaščina](../hr/README.md) | [Češčina](../cs/README.md) | [Danščina](../da/README.md) | [Nizozemščina](../nl/README.md) | [Estonščina](../et/README.md) | [Finščina](../fi/README.md) | [Francoščina](../fr/README.md) | [Nemščina](../de/README.md) | [Grščina](../el/README.md) | [Hebrejščina](../he/README.md) | [Hindijščina](../hi/README.md) | [Madžarščina](../hu/README.md) | [Indonezijščina](../id/README.md) | [Italijanščina](../it/README.md) | [Japonščina](../ja/README.md) | [Kannada](../kn/README.md) | [Korejščina](../ko/README.md) | [Litovščina](../lt/README.md) | [Malajščina](../ms/README.md) | [Malajalščina](../ml/README.md) | [Maratščina](../mr/README.md) | [Nepalščina](../ne/README.md) | [Nigerijski pidžin](../pcm/README.md) | [Norveščina](../no/README.md) | [Perzijščina (Farsi)](../fa/README.md) | [Poljščina](../pl/README.md) | [Portugalščina (Brazilija)](../br/README.md) | [Portugalščina (Portugalska)](../pt/README.md) | [Pandžabščina (Gurmukhi)](../pa/README.md) | [Romunščina](../ro/README.md) | [Ruščina](../ru/README.md) | [Srbščina (cirilica)](../sr/README.md) | [Slovaščina](../sk/README.md) | [Slovenščina](./README.md) | [Španščina](../es/README.md) | [Svahili](../sw/README.md) | [Švedščina](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamilščina](../ta/README.md) | [Telugu](../te/README.md) | [Tajščina](../th/README.md) | [Turščina](../tr/README.md) | [Ukrajinščina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamščina](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Struktura tečaja in učna pot
@@ -50,7 +50,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Poglavje 3: Osnovne tehnike generativne umetne inteligence**
 - **Inženiring pozivov**: Tehnike za optimalne odzive AI modelov
 - **Vdelave in vektorske operacije**: Implementacija semantičnega iskanja in ujemanja podobnosti
-- **Generiranje z nadgradnjo iskanja (RAG)**: Združevanje AI z lastnimi podatkovnimi viri
+- **Generiranje z nadgradnjo pridobivanja (RAG)**: Združevanje AI z lastnimi podatkovnimi viri
 - **Klic funkcij**: Razširitev zmogljivosti AI z lastnimi orodji in vtičniki
 - **[→ Začni poglavje 3](./03-CoreGenerativeAITechniques/README.md)**
 
@@ -62,7 +62,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Poglavje 5: Odgovoren razvoj umetne inteligence**
 - **Varnost GitHub modelov**: Testiranje vgrajenih mehanizmov filtriranja vsebin in varnosti (trdi bloki in mehki zavrnitve)
-- **Demonstracija odgovorne AI**: Praktičen primer, ki prikazuje, kako delujejo sodobni varnostni sistemi AI
+- **Demo odgovorne AI**: Praktičen primer, ki prikazuje, kako delujejo sodobni varnostni sistemi AI
 - **Najboljše prakse**: Ključna navodila za etični razvoj in uvajanje AI
 - **[→ Začni poglavje 5](./05-ResponsibleGenAI/README.md)**
 
