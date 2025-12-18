@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:47:10+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:24:03+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "pl"
 }
 -->
-# Lokalny Samouczek Spring Boot Foundry
+# Samouczek Foundry Local Spring Boot
 
-## Spis Treści
+## Spis treści
 
 - [Wymagania wstępne](../../../../04-PracticalSamples/foundrylocal)
 - [Przegląd projektu](../../../../04-PracticalSamples/foundrylocal)
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [2. Główna klasa aplikacji (Application.java)](../../../../04-PracticalSamples/foundrylocal)
   - [3. Warstwa usług AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
   - [4. Zależności projektu (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [Jak to wszystko działa razem](../../../../04-PracticalSamples/foundrylocal)
+- [Jak wszystko działa razem](../../../../04-PracticalSamples/foundrylocal)
 - [Konfigurowanie Foundry Local](../../../../04-PracticalSamples/foundrylocal)
 - [Uruchamianie aplikacji](../../../../04-PracticalSamples/foundrylocal)
 - [Oczekiwany wynik](../../../../04-PracticalSamples/foundrylocal)
@@ -29,9 +29,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 Przed rozpoczęciem tego samouczka upewnij się, że masz:
 
-- **Java 21 lub wyższą** zainstalowaną na swoim systemie
+- **Java 21 lub nowszą** zainstalowaną na swoim systemie
 - **Maven 3.6+** do budowania projektu
-- **Foundry Local** zainstalowane i uruchomione
+- **Foundry Local** zainstalowany i uruchomiony
 
 ### **Instalacja Foundry Local:**
 
@@ -47,7 +47,7 @@ foundry model run phi-3.5-mini
 
 Projekt składa się z czterech głównych komponentów:
 
-1. **Application.java** - Główny punkt wejścia aplikacji Spring Boot
+1. **Application.java** - Główne wejście aplikacji Spring Boot
 2. **FoundryLocalService.java** - Warstwa usług obsługująca komunikację AI
 3. **application.properties** - Konfiguracja połączenia z Foundry Local
 4. **pom.xml** - Zależności Maven i konfiguracja projektu
@@ -63,8 +63,8 @@ foundry.local.base-url=http://localhost:5273/v1
 foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 ```
 
-**Co to robi:**
-- **base-url**: Określa, gdzie działa Foundry Local, w tym ścieżkę `/v1` dla kompatybilności z API OpenAI. **Uwaga**: Foundry Local dynamicznie przypisuje port, więc sprawdź rzeczywisty port za pomocą `foundry service status`
+**Co robi:**
+- **base-url**: Określa, gdzie działa Foundry Local, w tym ścieżkę `/v1` dla zgodności z API OpenAI. **Uwaga**: Foundry Local dynamicznie przypisuje port, więc sprawdź rzeczywisty port za pomocą `foundry service status`
 - **model**: Nazwa modelu AI używanego do generowania tekstu, w tym numer wersji (np. `:1`). Użyj `foundry model list`, aby zobaczyć dostępne modele z ich dokładnymi identyfikatorami
 
 **Kluczowa koncepcja:** Spring Boot automatycznie ładuje te właściwości i udostępnia je aplikacji za pomocą adnotacji `@Value`.
@@ -83,10 +83,10 @@ public class Application {
     }
 ```
 
-**Co to robi:**
+**Co robi:**
 - `@SpringBootApplication` umożliwia automatyczną konfigurację Spring Boot
 - `WebApplicationType.NONE` informuje Spring, że jest to aplikacja wiersza poleceń, a nie serwer WWW
-- Metoda main uruchamia aplikację Spring
+- Główna metoda uruchamia aplikację Spring
 
 **Uruchamianie demonstracyjne:**
 ```java
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,11 +102,12 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
 
-**Co to robi:**
+**Co robi:**
 - `@Bean` tworzy komponent zarządzany przez Spring
 - `CommandLineRunner` uruchamia kod po uruchomieniu Spring Boot
 - `foundryLocalService` jest automatycznie wstrzykiwany przez Spring (wstrzykiwanie zależności)
@@ -127,7 +129,7 @@ public class FoundryLocalService {
     private String model;
 ```
 
-**Co to robi:**
+**Co robi:**
 - `@Service` informuje Spring, że ta klasa dostarcza logikę biznesową
 - `@Value` wstrzykuje wartości konfiguracji z application.properties
 - Składnia `:default-value` zapewnia wartości domyślne, jeśli właściwości nie są ustawione
@@ -143,10 +145,10 @@ public void init() {
 }
 ```
 
-**Co to robi:**
+**Co robi:**
 - `@PostConstruct` uruchamia tę metodę po utworzeniu usługi przez Spring
 - Tworzy klienta OpenAI wskazującego na lokalną instancję Foundry Local
-- URL bazowy z `application.properties` już zawiera `/v1` dla kompatybilności z API OpenAI
+- URL bazowy z `application.properties` już zawiera `/v1` dla zgodności z API OpenAI
 - Klucz API jest ustawiony na "not-needed", ponieważ lokalny rozwój nie wymaga uwierzytelnienia
 
 #### Metoda czatu:
@@ -174,9 +176,9 @@ public String chat(String message) {
 }
 ```
 
-**Co to robi:**
+**Co robi:**
 - **ChatCompletionCreateParams**: Konfiguruje żądanie AI
-  - `model`: Określa, który model AI ma być używany (musi dokładnie pasować do identyfikatora z `foundry model list`)
+  - `model`: Określa, który model AI ma być używany (musi dokładnie odpowiadać identyfikatorowi z `foundry model list`)
   - `addUserMessage`: Dodaje wiadomość użytkownika do rozmowy
   - `maxCompletionTokens`: Ogranicza długość odpowiedzi (oszczędza zasoby)
   - `temperature`: Kontroluje losowość (0.0 = deterministyczne, 1.0 = kreatywne)
@@ -212,11 +214,11 @@ public String chat(String message) {
 ```
 
 **Co robią:**
-- **spring-boot-starter**: Zapewnia podstawową funkcjonalność Spring Boot
-- **openai-java**: Oficjalny SDK OpenAI dla komunikacji z API
+- **spring-boot-starter**: Dostarcza podstawową funkcjonalność Spring Boot
+- **openai-java**: Oficjalny SDK OpenAI Java do komunikacji z API
 - **jackson-databind**: Obsługuje serializację/deserializację JSON dla wywołań API
 
-## Jak to wszystko działa razem
+## Jak wszystko działa razem
 
 Oto pełny przepływ, gdy uruchamiasz aplikację:
 
@@ -225,7 +227,7 @@ Oto pełny przepływ, gdy uruchamiasz aplikację:
 3. **Konfiguracja klienta**: `@PostConstruct` inicjalizuje klienta OpenAI do połączenia z Foundry Local
 4. **Wykonanie demonstracji**: `CommandLineRunner` wykonuje się po uruchomieniu
 5. **Wywołanie AI**: Demonstracja wywołuje `foundryLocalService.chat()` z wiadomością testową
-6. **Żądanie API**: Usługa buduje i wysyła żądanie kompatybilne z OpenAI do Foundry Local
+6. **Żądanie API**: Usługa buduje i wysyła żądanie zgodne z OpenAI do Foundry Local
 7. **Przetwarzanie odpowiedzi**: Usługa wyodrębnia i zwraca odpowiedź AI
 8. **Wyświetlanie**: Aplikacja drukuje odpowiedź i kończy działanie
 
@@ -300,7 +302,7 @@ Więcej przykładów znajdziesz w [Rozdziale 04: Praktyczne przykłady](../READM
 - Upewnij się, że Foundry Local działa: `foundry model list`
 - Sprawdź rzeczywisty port używany przez Foundry Local: `foundry service status`
 - Zaktualizuj swój `application.properties` z poprawnym portem, upewniając się, że URL kończy się na `/v1`
-- Alternatywnie ustaw konkretny port, jeśli chcesz: `foundry service set --port 5273`
+- Alternatywnie ustaw konkretny port, jeśli jest to pożądane: `foundry service set --port 5273`
 - Spróbuj ponownie uruchomić Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" lub błędy "404 Not Found"**
@@ -311,20 +313,20 @@ Więcej przykładów znajdziesz w [Rozdziale 04: Praktyczne przykłady](../READM
 
 **Błędy "400 Bad Request"**
 - Zweryfikuj, że URL bazowy zawiera `/v1`: `http://localhost:5273/v1`
-- Sprawdź, czy identyfikator modelu dokładnie pasuje do tego, co pokazuje `foundry model list`
+- Sprawdź, czy identyfikator modelu dokładnie odpowiada temu, co pokazuje `foundry model list`
 - Upewnij się, że używasz `maxCompletionTokens()` w swoim kodzie (nie przestarzałego `maxTokens()`)
 
 **Błędy kompilacji Maven**
-- Upewnij się, że masz Java 21 lub wyższą: `java -version`
+- Upewnij się, że masz Java 21 lub nowszą: `java -version`
 - Wyczyść i zbuduj ponownie: `mvn clean compile`
 - Sprawdź połączenie internetowe dla pobierania zależności
 
 **Aplikacja uruchamia się, ale brak wyników**
-- Zweryfikuj, czy Foundry Local odpowiada: Otwórz przeglądarkę na `http://localhost:5273`
+- Zweryfikuj, czy Foundry Local odpowiada: Sprawdź `http://localhost:5273/v1/models` lub uruchom `foundry service status`
 - Sprawdź logi aplikacji pod kątem konkretnych komunikatów o błędach
 - Upewnij się, że model jest w pełni załadowany i gotowy
 
 ---
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, należy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

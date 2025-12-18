@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:52:42+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:29:54+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "id"
 }
 -->
-# Tutorial Foundry Local Spring Boot
+# Tutorial Spring Boot Foundry Local
 
 ## Daftar Isi
 
@@ -67,7 +67,7 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 **Apa yang dilakukan:**
 - **base-url**: Menentukan lokasi Foundry Local berjalan, termasuk path `/v1` untuk kompatibilitas API OpenAI. **Catatan**: Foundry Local secara dinamis menetapkan port, jadi periksa port aktual Anda menggunakan `foundry service status`
-- **model**: Menentukan nama model AI yang digunakan untuk menghasilkan teks, termasuk nomor versinya (misalnya, `:1`). Gunakan `foundry model list` untuk melihat model yang tersedia dengan ID yang tepat
+- **model**: Menentukan nama model AI yang digunakan untuk menghasilkan teks, termasuk nomor versinya (misalnya, `:1`). Gunakan `foundry model list` untuk melihat model yang tersedia dengan ID lengkapnya
 
 **Konsep utama:** Spring Boot secara otomatis memuat properti ini dan membuatnya tersedia untuk aplikasi Anda menggunakan anotasi `@Value`.
 
@@ -88,7 +88,7 @@ public class Application {
 
 **Apa yang dilakukan:**
 - `@SpringBootApplication` mengaktifkan konfigurasi otomatis Spring Boot
-- `WebApplicationType.NONE` memberi tahu Spring bahwa ini adalah aplikasi command-line, bukan server web
+- `WebApplicationType.NONE` memberi tahu Spring bahwa ini adalah aplikasi berbasis command-line, bukan server web
 - Metode utama memulai aplikasi Spring
 
 **Demo Runner:**
@@ -97,6 +97,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,6 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -111,7 +113,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 
 **Apa yang dilakukan:**
 - `@Bean` membuat komponen yang dikelola oleh Spring
-- `CommandLineRunner` menjalankan kode setelah Spring Boot dimulai
+- `CommandLineRunner` menjalankan kode setelah Spring Boot selesai memulai
 - `foundryLocalService` secara otomatis disuntikkan oleh Spring (dependency injection)
 - Mengirim pesan uji ke AI dan menampilkan responsnya
 
@@ -183,7 +185,7 @@ public String chat(String message) {
 
 **Apa yang dilakukan:**
 - **ChatCompletionCreateParams**: Mengonfigurasi permintaan AI
-  - `model`: Menentukan model AI yang digunakan (harus sesuai dengan ID yang tepat dari `foundry model list`)
+  - `model`: Menentukan model AI yang digunakan (harus sesuai dengan ID lengkap dari `foundry model list`)
   - `addUserMessage`: Menambahkan pesan Anda ke percakapan
   - `maxCompletionTokens`: Membatasi panjang respons (menghemat sumber daya)
   - `temperature`: Mengontrol tingkat kreativitas (0.0 = deterministik, 1.0 = kreatif)
@@ -228,7 +230,7 @@ public String chat(String message) {
 
 Berikut alur lengkap saat Anda menjalankan aplikasi:
 
-1. **Startup**: Spring Boot dimulai dan membaca `application.properties`
+1. **Startup**: Spring Boot memulai dan membaca `application.properties`
 2. **Pembuatan Layanan**: Spring membuat `FoundryLocalService` dan menyuntikkan nilai konfigurasi
 3. **Pengaturan Klien**: `@PostConstruct` menginisialisasi klien OpenAI untuk terhubung ke Foundry Local
 4. **Eksekusi Demo**: `CommandLineRunner` dijalankan setelah startup
@@ -313,32 +315,32 @@ Untuk contoh lebih lanjut, lihat [Bab 04: Contoh Praktis](../README.md)
 **"Connection refused" atau "Service unavailable"**
 - Pastikan Foundry Local berjalan: `foundry model list`
 - Periksa port aktual yang digunakan Foundry Local: `foundry service status`
-- Perbarui `application.properties` Anda dengan port yang benar, pastikan URL diakhiri dengan `/v1`
+- Perbarui `application.properties` Anda dengan port yang benar, pastikan URL berakhir dengan `/v1`
 - Sebagai alternatif, tetapkan port tertentu jika diinginkan: `foundry service set --port 5273`
 - Coba mulai ulang Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" atau "404 Not Found" errors**
-- Periksa model yang tersedia dengan ID yang tepat: `foundry model list`
+- Periksa model yang tersedia dengan ID lengkapnya: `foundry model list`
 - Perbarui nama model di `application.properties` agar sesuai dengan tepat, termasuk nomor versi (misalnya, `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Pastikan `base-url` menyertakan `/v1` di akhir: `http://localhost:5273/v1`
 - Unduh model jika diperlukan: `foundry model run phi-3.5-mini`
 
 **"400 Bad Request" errors**
-- Verifikasi URL dasar menyertakan `/v1`: `http://localhost:5273/v1`
+- Verifikasi bahwa URL dasar menyertakan `/v1`: `http://localhost:5273/v1`
 - Periksa bahwa ID model sesuai dengan yang ditampilkan di `foundry model list`
-- Pastikan Anda menggunakan `maxCompletionTokens()` dalam kode Anda (bukan `maxTokens()` yang sudah usang)
+- Pastikan Anda menggunakan `maxCompletionTokens()` dalam kode Anda (bukan `maxTokens()` yang sudah tidak digunakan)
 
 **Kesalahan kompilasi Maven**
 - Pastikan Java 21 atau lebih tinggi: `java -version`
 - Bersihkan dan bangun ulang: `mvn clean compile`
 - Periksa koneksi internet untuk mengunduh dependensi
 
-**Aplikasi dimulai tetapi tidak ada output**
-- Verifikasi Foundry Local merespons: Buka browser ke `http://localhost:5273`
+**Aplikasi berjalan tetapi tidak ada output**
+- Verifikasi Foundry Local merespons: Periksa `http://localhost:5273/v1/models` atau jalankan `foundry service status`
 - Periksa log aplikasi untuk pesan kesalahan spesifik
-- Pastikan model telah dimuat sepenuhnya dan siap
+- Pastikan model sudah sepenuhnya dimuat dan siap
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.

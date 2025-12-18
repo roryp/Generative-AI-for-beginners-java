@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:46:16+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:22:52+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "br"
 }
@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 - [Executando a Aplicação](../../../../04-PracticalSamples/foundrylocal)
 - [Saída Esperada](../../../../04-PracticalSamples/foundrylocal)
 - [Próximos Passos](../../../../04-PracticalSamples/foundrylocal)
-- [Solução de Problemas](../../../../04-PracticalSamples/foundrylocal)
+- [Resolução de Problemas](../../../../04-PracticalSamples/foundrylocal)
 
 ## Pré-requisitos
 
@@ -94,6 +94,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -101,6 +102,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -176,7 +178,7 @@ public String chat(String message) {
 
 **O que isso faz:**
 - **ChatCompletionCreateParams**: Configura a solicitação de IA
-  - `model`: Especifica qual modelo de IA usar (deve corresponder ao ID exato do `foundry model list`)
+  - `model`: Especifica qual modelo de IA usar (deve corresponder exatamente ao ID exibido em `foundry model list`)
   - `addUserMessage`: Adiciona sua mensagem à conversa
   - `maxCompletionTokens`: Limita o tamanho da resposta (economiza recursos)
   - `temperature`: Controla a aleatoriedade (0.0 = determinístico, 1.0 = criativo)
@@ -292,7 +294,7 @@ Is there something specific you'd like help with today?
 
 Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
 
-## Solução de Problemas
+## Resolução de Problemas
 
 ### Problemas Comuns
 
@@ -300,27 +302,27 @@ Para mais exemplos, veja [Capítulo 04: Exemplos práticos](../README.md)
 - Certifique-se de que o Foundry Local está em execução: `foundry model list`
 - Verifique a porta real que o Foundry Local está usando: `foundry service status`
 - Atualize seu `application.properties` com a porta correta, garantindo que a URL termine com `/v1`
-- Alternativamente, configure uma porta específica, se desejar: `foundry service set --port 5273`
+- Alternativamente, configure uma porta específica se desejar: `foundry service set --port 5273`
 - Tente reiniciar o Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" ou erros "404 Not Found"**
 - Verifique os modelos disponíveis com seus IDs exatos: `foundry model list`
-- Atualize o nome do modelo no `application.properties` para corresponder exatamente, incluindo o número da versão (ex.: `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- Atualize o nome do modelo em `application.properties` para corresponder exatamente, incluindo o número da versão (ex.: `Phi-3.5-mini-instruct-cuda-gpu:1`)
 - Certifique-se de que o `base-url` inclua `/v1` no final: `http://localhost:5273/v1`
 - Baixe o modelo, se necessário: `foundry model run phi-3.5-mini`
 
 **Erros "400 Bad Request"**
 - Verifique se a URL base inclui `/v1`: `http://localhost:5273/v1`
-- Confirme que o ID do modelo corresponde exatamente ao mostrado em `foundry model list`
-- Certifique-se de usar `maxCompletionTokens()` no seu código (não o obsoleto `maxTokens()`)
+- Certifique-se de que o ID do modelo corresponde exatamente ao exibido em `foundry model list`
+- Garanta que você está usando `maxCompletionTokens()` no seu código (não o obsoleto `maxTokens()`)
 
 **Erros de compilação do Maven**
-- Certifique-se de ter Java 21 ou superior: `java -version`
+- Certifique-se de que está usando Java 21 ou superior: `java -version`
 - Limpe e reconstrua: `mvn clean compile`
 - Verifique a conexão com a internet para baixar dependências
 
 **Aplicação inicia, mas não há saída**
-- Verifique se o Foundry Local está respondendo: Abra o navegador em `http://localhost:5273`
+- Verifique se o Foundry Local está respondendo: Confira `http://localhost:5273/v1/models` ou execute `foundry service status`
 - Verifique os logs da aplicação para mensagens de erro específicas
 - Certifique-se de que o modelo está totalmente carregado e pronto
 

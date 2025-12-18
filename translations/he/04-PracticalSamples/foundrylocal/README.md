@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:51:49+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:28:58+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "he"
 }
@@ -66,10 +66,10 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 
 
 **מה זה עושה:**
-- **base-url**: מציין היכן Foundry Local פועל, כולל הנתיב `/v1` לצורך תאימות ל-OpenAI API. **הערה**: Foundry Local מקצה פורט באופן דינמי, לכן בדקו את הפורט בפועל באמצעות `foundry service status`
-- **model**: שם מודל ה-AI לשימוש ביצירת טקסט, כולל מספר גרסה (לדוגמה, `:1`). השתמשו ב-`foundry model list` כדי לראות את המודלים הזמינים עם מזהי המודל המדויקים שלהם
+- **base-url**: מציין היכן Foundry Local פועל, כולל הנתיב `/v1` לתאימות עם OpenAI API. **הערה**: Foundry Local מקצה פורט באופן דינמי, לכן בדקו את הפורט בפועל באמצעות `foundry service status`
+- **model**: שם המודל של AI לשימוש ביצירת טקסט, כולל מספר הגרסה (לדוגמה, `:1`). השתמשו ב-`foundry model list` כדי לראות את המודלים הזמינים עם מזהי המודל המדויקים שלהם
 
-**רעיון מרכזי:** Spring Boot טוען את ההגדרות הללו באופן אוטומטי ומאפשר גישה אליהן באפליקציה באמצעות האנטציה `@Value`.
+**מושג מרכזי:** Spring Boot טוען את ההגדרות הללו באופן אוטומטי ומאפשר גישה אליהן באפליקציה באמצעות האנוטציה `@Value`.
 
 ### 2. מחלקת האפליקציה הראשית (Application.java)
 
@@ -97,6 +97,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -104,6 +105,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -112,7 +114,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 **מה זה עושה:**
 - `@Bean` יוצרת רכיב שמנוהל על ידי Spring
 - `CommandLineRunner` מריץ קוד לאחר ש-Spring Boot מופעל
-- `foundryLocalService` מוזרק באופן אוטומטי על ידי Spring (הזרקת תלות)
+- `foundryLocalService` מוזרק אוטומטית על ידי Spring (הזרקת תלות)
 - שולח הודעת בדיקה ל-AI ומציג את התגובה
 
 ### 3. שכבת שירות AI (FoundryLocalService.java)
@@ -151,8 +153,8 @@ public void init() {
 
 **מה זה עושה:**
 - `@PostConstruct` מריץ את המתודה הזו לאחר ש-Spring יוצר את השירות
-- יוצר לקוח OpenAI שמצביע על מופע Foundry Local המקומי שלכם
-- ה-URL הבסיסי מתוך `application.properties` כבר כולל `/v1` לצורך תאימות ל-OpenAI API
+- יוצר לקוח OpenAI שמצביע על המופע המקומי של Foundry Local
+- ה-URL הבסיסי מתוך `application.properties` כבר כולל `/v1` לתאימות עם OpenAI API
 - מפתח API מוגדר כ-"not-needed" מכיוון שפיתוח מקומי לא דורש אימות
 
 #### מתודת צ'אט:
@@ -193,7 +195,7 @@ public String chat(String message) {
 
 ### 4. תלות בפרויקט (pom.xml)
 
-**תלויות עיקריות:**
+**תלויות מרכזיות:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -219,19 +221,19 @@ public String chat(String message) {
 ```
 
 
-**מה זה עושה:**
-- **spring-boot-starter**: מספק פונקציונליות ליבה של Spring Boot
+**מה הן עושות:**
+- **spring-boot-starter**: מספקת פונקציונליות ליבה של Spring Boot
 - **openai-java**: SDK Java רשמי של OpenAI לתקשורת עם API
 - **jackson-databind**: מטפל בסריאליזציה/דסיריאליזציה של JSON עבור קריאות API
 
 ## איך הכל עובד יחד
 
-כך מתבצע הזרימה המלאה כאשר אתם מריצים את האפליקציה:
+כך מתבצע הזרימה המלאה כאשר מריצים את האפליקציה:
 
 1. **הפעלה**: Spring Boot מופעל וקורא את `application.properties`
 2. **יצירת שירות**: Spring יוצר את `FoundryLocalService` ומזריק ערכי קונפיגורציה
 3. **הגדרת לקוח**: `@PostConstruct` מאתחל את לקוח OpenAI להתחבר ל-Foundry Local
-4. **הרצת דמו**: `CommandLineRunner` מופעל לאחר ההפעלה
+4. **הרצת דמו**: `CommandLineRunner` מבוצע לאחר ההפעלה
 5. **קריאת AI**: הדמו קורא ל-`foundryLocalService.chat()` עם הודעת בדיקה
 6. **בקשת API**: השירות בונה ושולח בקשה תואמת OpenAI ל-Foundry Local
 7. **עיבוד תגובה**: השירות שולף ומחזיר את תגובת ה-AI
@@ -243,7 +245,7 @@ public String chat(String message) {
 
 1. **התקינו את Foundry Local** לפי ההוראות בסעיף [דרישות מקדימות](../../../../04-PracticalSamples/foundrylocal).
 
-2. **בדקו את הפורט שהוקצה באופן דינמי**. Foundry Local מקצה פורט באופן אוטומטי כאשר הוא מופעל. מצאו את הפורט שלכם באמצעות:
+2. **בדקו את הפורט שהוקצה באופן דינמי**. Foundry Local מקצה פורט באופן אוטומטי כאשר הוא מופעל. מצאו את הפורט באמצעות:
    ```bash
    foundry service status
    ```
@@ -326,7 +328,7 @@ Is there something specific you'd like help with today?
 **שגיאות "400 Bad Request"**
 - ודאו שה-URL הבסיסי כולל `/v1`: `http://localhost:5273/v1`
 - בדקו שהמזהה של המודל תואם בדיוק למה שמוצג ב-`foundry model list`
-- ודאו שאתם משתמשים ב-`maxCompletionTokens()` בקוד שלכם (ולא ב-`maxTokens()` המיושן)
+- ודאו שאתם משתמשים ב-`maxCompletionTokens()` בקוד שלכם (ולא ב-`maxTokens()` שהופסק)
 
 **שגיאות קומפילציה ב-Maven**
 - ודאו ש-Java 21 או גרסה גבוהה יותר מותקנת: `java -version`
@@ -334,11 +336,11 @@ Is there something specific you'd like help with today?
 - בדקו חיבור לאינטרנט להורדת תלות
 
 **האפליקציה מופעלת אך אין פלט**
-- ודאו ש-Foundry Local מגיב: פתחו דפדפן ל-`http://localhost:5273`
+- ודאו ש-Foundry Local מגיב: בדקו `http://localhost:5273/v1/models` או הריצו `foundry service status`
 - בדקו את לוגי האפליקציה להודעות שגיאה ספציפיות
 - ודאו שהמודל נטען במלואו ומוכן
 
 ---
 
 **הצהרת אחריות**:  
-מסמך זה תורגם באמצעות שירות תרגום AI [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נושאים באחריות לאי הבנות או פירושים שגויים הנובעים משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום AI [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נושאים באחריות לכל אי הבנות או פרשנויות שגויות הנובעות משימוש בתרגום זה.

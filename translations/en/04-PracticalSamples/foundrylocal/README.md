@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fe08a184d8a753a0f497673921f77759",
-  "translation_date": "2025-11-04T06:34:16+00:00",
+  "original_hash": "f787307400de59adc25a1404466a35f3",
+  "translation_date": "2025-11-04T07:11:01+00:00",
   "source_file": "04-PracticalSamples/foundrylocal/README.md",
   "language_code": "en"
 }
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Prerequisites
 
-Before starting this tutorial, ensure you have:
+Before starting this tutorial, make sure you have:
 
 - **Java 21 or higher** installed on your system
 - **Maven 3.6+** for building the project
@@ -95,6 +95,7 @@ public class Application {
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
     return args -> {
         System.out.println("=== Foundry Local Demo ===");
+        System.out.println("Calling Foundry Local service...");
         
         String testMessage = "Hello! Can you tell me what you are and what model you're running?";
         System.out.println("Sending message: " + testMessage);
@@ -102,6 +103,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
         String response = foundryLocalService.chat(testMessage);
         System.out.println("Response from Foundry Local:");
         System.out.println(response);
+        System.out.println("=========================");
     };
 }
 ```
@@ -321,7 +323,7 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 - Check internet connection for dependency downloads
 
 **Application starts but no output**
-- Verify Foundry Local is responding: Open browser to `http://localhost:5273`
+- Verify Foundry Local is responding: Check `http://localhost:5273/v1/models` or run `foundry service status`
 - Check application logs for specific error messages
 - Ensure the model is fully loaded and ready
 
