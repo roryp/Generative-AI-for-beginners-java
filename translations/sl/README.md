@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T14:47:00+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T10:33:25+00:00",
   "source_file": "README.md",
   "language_code": "sl"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativna umetna inteligenca za začetnike - Java izdaja](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.sl.png)
 
-**Časovna zaveza**: Celoten delavnico je mogoče opraviti na spletu brez lokalne namestitve. Nastavitev okolja traja 2 minuti, raziskovanje primerov pa 1-3 ure, odvisno od globine raziskovanja.
+**Časovna zaveza**: Celoten delavnico je mogoče dokončati na spletu brez lokalne namestitve. Nastavitev okolja traja 2 minuti, raziskovanje primerov pa zahteva 1-3 ure, odvisno od globine raziskovanja.
 
 > **Hiter začetek** 
 
@@ -22,6 +22,17 @@ CO_OP_TRANSLATOR_METADATA:
 4. Klikni **Create codespace**
 5. Počakaj približno 2 minuti, da je okolje pripravljeno
 6. Pojdi neposredno na [Prvi primer](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+
+> **Raje kloniraš lokalno?**
+>
+> Ta repozitorij vključuje več kot 50 jezikovnih prevodov, kar znatno poveča velikost prenosa. Če želiš klonirati brez prevodov, uporabi sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Tako dobiš vse, kar potrebuješ za dokončanje tečaja, z veliko hitrejšim prenosom.
+
 
 ## Podpora za več jezikov
 
@@ -50,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Poglavje 3: Osnovne tehnike generativne umetne inteligence**
 - **Inženiring pozivov**: Tehnike za optimalne odzive AI modelov
 - **Vdelave in vektorske operacije**: Implementacija semantičnega iskanja in ujemanja podobnosti
-- **Generiranje z nadgradnjo pridobivanja (RAG)**: Združevanje AI z lastnimi podatkovnimi viri
+- **Generiranje z nadgradnjo iskanja (RAG)**: Združevanje AI z lastnimi podatkovnimi viri
 - **Klic funkcij**: Razširitev zmogljivosti AI z lastnimi orodji in vtičniki
 - **[→ Začni poglavje 3](./03-CoreGenerativeAITechniques/README.md)**
 
@@ -61,8 +72,8 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Začni poglavje 4](./04-PracticalSamples/README.md)**
 
 ### **Poglavje 5: Odgovoren razvoj umetne inteligence**
-- **Varnost GitHub modelov**: Testiranje vgrajenih mehanizmov filtriranja vsebin in varnosti (trdi bloki in mehki zavrnitve)
-- **Demo odgovorne AI**: Praktičen primer, ki prikazuje, kako delujejo sodobni varnostni sistemi AI
+- **Varnost GitHub modelov**: Testiranje vgrajenih filtrov vsebin in varnostnih mehanizmov (trdi bloki in mehki zavrnitve)
+- **Demonstracija odgovorne AI**: Praktičen primer, ki prikazuje, kako delujejo sodobni varnostni sistemi AI
 - **Najboljše prakse**: Ključna navodila za etični razvoj in uvajanje AI
 - **[→ Začni poglavje 5](./05-ResponsibleGenAI/README.md)**
 
@@ -98,14 +109,14 @@ CO_OP_TRANSLATOR_METADATA:
 [![Kibernetska varnost za začetnike](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Spletni razvoj za začetnike](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT za začetnike](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR razvoj za začetnike](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Serija Copilot
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot za AI programiranje v paru](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot za C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot avantura](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Pridobivanje pomoči
@@ -122,5 +133,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

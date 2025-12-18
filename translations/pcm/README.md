@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T14:57:00+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T10:41:15+00:00",
   "source_file": "README.md",
   "language_code": "pcm"
 }
@@ -23,6 +23,16 @@ CO_OP_TRANSLATOR_METADATA:
 5. Wait ~2 minutes make environment ready
 6. Jump straight go [The first example](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
+> **Prefer to Clone Locally?**
+>
+> Dis repository get 50+ language translations wey dey increase di download size well well. To clone without translations, use sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Dis one go give you everything wey you need to complete di course with faster download.
+
 ## Multi-Language Support
 
 ### Supported via GitHub Action (Automated & Always Up-to-Date)
@@ -42,16 +52,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Chapter 2: Development Environment Setup**
 - **Multi-Provider Configuration**: Setup GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
-- **Spring Boot + Spring AI**: Best way dem dey use for enterprise AI app development
-- **GitHub Models**: Free AI model access for prototyping and learning (no need credit card)
+- **Spring Boot + Spring AI**: Best ways to develop enterprise AI applications
+- **GitHub Models**: Free AI model access for prototyping and learning (no credit card needed)
 - **Development Tools**: Docker containers, VS Code, and GitHub Codespaces setup
 - **[→ Start Chapter 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chapter 3: Core Generative AI Techniques**
-- **Prompt Engineering**: Ways to get better AI model answers
+- **Prompt Engineering**: Ways to get best AI model responses
 - **Embeddings & Vector Operations**: How to do semantic search and similarity matching
-- **Retrieval-Augmented Generation (RAG)**: Join AI with your own data sources
-- **Function Calling**: Add more power to AI with custom tools and plugins
+- **Retrieval-Augmented Generation (RAG)**: Combine AI with your own data sources
+- **Function Calling**: Extend AI power with custom tools and plugins
 - **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapter 4: Practical Applications & Projects**
@@ -110,7 +120,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Getting Help
 
-If you jam or get any question about how to build AI apps. Join other learners and beta developers for talk about MCP. Na community wey dey support, where questions dey welcome and knowledge dey share freely.
+If you get stuck or get any question about how to build AI apps. Join other learners and experienced developers for talk about MCP. Na supportive community wey questions dey welcome and knowledge dey shared freely.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -122,5 +132,5 @@ If you get product feedback or errors while you dey build, visit:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make e correct, abeg sabi say automated translation fit get some errors or mistakes. Di original document wey dey im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any misunderstanding or wrong meaning wey fit come from dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or wrong tins. Di original document wey dey im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any misunderstanding or wrong meaning wey fit come from dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
