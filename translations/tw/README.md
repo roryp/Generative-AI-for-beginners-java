@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:41:29+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T09:55:01+00:00",
   "source_file": "README.md",
   "language_code": "tw"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **快速開始**
 
-1. 將此存放庫分叉到您的 GitHub 帳戶
+1. 將此存儲庫分叉到您的 GitHub 帳戶
 2. 點擊 **Code** → **Codespaces** 標籤 → **...** → **New with options...**
 3. 使用預設值 – 這將選擇為本課程建立的開發容器
 4. 點擊 **Create codespace**
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **偏好本地克隆？**
 >
-> 此存放庫包含 50 多種語言翻譯，顯著增加下載大小。若要不含翻譯克隆，請使用稀疏檢出：
+> 本存儲庫包含 50 多種語言翻譯，顯著增加下載大小。若要不含翻譯克隆，請使用稀疏檢出：
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **提示工程**：優化 AI 模型回應的技巧
 - **嵌入向量與向量運算**：實作語義搜尋與相似度匹配
 - **檢索增強生成 (RAG)**：結合 AI 與您自己的資料來源
-- **函數呼叫**：使用自訂工具與插件擴展 AI 能力
+- **函式呼叫**：使用自訂工具與插件擴展 AI 功能
 - **[→ 開始第 3 章](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **第 4 章：實務應用與專案**
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **第 5 章：負責任的 AI 開發**
 - **GitHub Models 安全性**：測試內建內容過濾與安全機制（硬性封鎖與軟性拒絕）
-- **負責任 AI 示範**：實作範例展示現代 AI 安全系統的運作
+- **負責任 AI 示範**：實作現代 AI 安全系統的實務範例
 - **最佳實務**：倫理 AI 開發與部署的必要指引
 - **[→ 開始第 5 章](./05-ResponsibleGenAI/README.md)**
 
@@ -120,7 +120,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 尋求協助
 
-如果您在建立 AI 應用程式時遇到困難或有任何問題，歡迎加入其他學習者和經驗豐富的開發者，一同參與 MCP 的討論。這是一個支持性的社群，歡迎提問並自由分享知識。
+如果您遇到困難或對建立 AI 應用程式有任何疑問，歡迎加入其他學習者和經驗豐富的開發者，一同參與 MCP 的討論。這是一個支持性的社群，歡迎提問並自由分享知識。
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -132,5 +132,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責聲明**：  
-本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保翻譯的準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋負責。
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤譯負責。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

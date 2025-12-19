@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:29:18+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T09:43:54+00:00",
   "source_file": "README.md",
   "language_code": "fr"
 }
@@ -68,11 +68,11 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Chapitre 4 : Applications pratiques & projets**
 - **Générateur d’histoires pour animaux** (`petstory/`) : Génération créative de contenu avec GitHub Models
 - **Démo Foundry locale** (`foundrylocal/`) : Intégration locale de modèle IA avec OpenAI Java SDK
-- **Service calculatrice MCP** (`calculator/`) : Implémentation basique du protocole de contexte de modèle avec Spring AI
+- **Service calculateur MCP** (`calculator/`) : Implémentation basique du protocole de contexte de modèle avec Spring AI
 - **[→ Commencer le Chapitre 4](./04-PracticalSamples/README.md)**
 
 ### **Chapitre 5 : Développement responsable de l’IA**
-- **Sécurité GitHub Models** : Tester le filtrage de contenu intégré et les mécanismes de sécurité (blocages stricts et refus souples)
+- **Sécurité GitHub Models** : Tester les filtres de contenu intégrés et mécanismes de sécurité (blocages stricts et refus souples)
 - **Démo IA responsable** : Exemple pratique montrant le fonctionnement des systèmes modernes de sécurité IA
 - **Bonnes pratiques** : Directives essentielles pour un développement et un déploiement éthiques de l’IA
 - **[→ Commencer le Chapitre 5](./05-ResponsibleGenAI/README.md)**

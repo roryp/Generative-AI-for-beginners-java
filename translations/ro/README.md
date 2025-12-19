@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:26:18+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:38:04+00:00",
   "source_file": "README.md",
   "language_code": "ro"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Inteligență Artificială Generativă pentru Începători - Ediția Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ro.png)
 
-**Timp necesar**: Întregul atelier poate fi finalizat online fără configurare locală. Configurarea mediului durează 2 minute, iar explorarea exemplelor necesită 1-3 ore în funcție de adâncimea explorării.
+**Timp necesar**: Întregul atelier poate fi finalizat online fără configurare locală. Configurarea mediului durează 2 minute, iar explorarea exemplelor necesită 1-3 ore, în funcție de adâncimea explorării.
 
 > **Pornire rapidă** 
 
@@ -48,7 +48,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Concepte de bază**: Înțelegerea modelelor mari de limbaj, token-urilor, embedding-urilor și capabilităților AI
 - **Ecosistemul AI Java**: Prezentare generală a SDK-urilor Spring AI și OpenAI
 - **Protocolul Contextului Modelului**: Introducere în MCP și rolul său în comunicarea agenților AI
-- **Aplicații practice**: Scenarii reale, inclusiv chatboți și generare de conținut
+- **Aplicații practice**: Scenarii din lumea reală, inclusiv chatboți și generare de conținut
 - **[→ Începe Capitolul 1](./01-IntroToGenAI/README.md)**
 
 ### **Capitolul 2: Configurarea Mediului de Dezvoltare**
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Începe Capitolul 4](./04-PracticalSamples/README.md)**
 
 ### **Capitolul 5: Dezvoltare responsabilă a AI**
-- **Siguranța GitHub Models**: Testarea filtrării conținutului și mecanismelor de siguranță încorporate (blocări dure și refuzuri blânde)
+- **Siguranța GitHub Models**: Testarea filtrării conținutului încorporate și a mecanismelor de siguranță (blocări dure și refuzuri blânde)
 - **Demo AI responsabil**: Exemplu practic care arată cum funcționează sistemele moderne de siguranță AI
 - **Cele mai bune practici**: Ghiduri esențiale pentru dezvoltarea și implementarea etică a AI
 - **[→ Începe Capitolul 5](./05-ResponsibleGenAI/README.md)**

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:57:04+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:11:28+00:00",
   "source_file": "README.md",
   "language_code": "pl"
 }
@@ -59,7 +59,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Rozpocznij rozdział 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Rozdział 3: Podstawowe techniki generatywnej AI**
-- **Inżynieria promptów**: Techniki optymalizacji odpowiedzi modeli AI
+- **Inżynieria promptów**: Techniki optymalnych odpowiedzi modeli AI
 - **Osadzenia i operacje na wektorach**: Implementacja wyszukiwania semantycznego i dopasowania podobieństwa
 - **Retrieval-Augmented Generation (RAG)**: Połączenie AI z własnymi źródłami danych
 - **Wywoływanie funkcji**: Rozszerzanie możliwości AI za pomocą niestandardowych narzędzi i wtyczek
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Rozdział 5: Odpowiedzialny rozwój AI**
 - **Bezpieczeństwo GitHub Models**: Testowanie wbudowanych mechanizmów filtrowania treści i bezpieczeństwa (twarde blokady i miękkie odmowy)
 - **Demo odpowiedzialnej AI**: Praktyczny przykład pokazujący działanie nowoczesnych systemów bezpieczeństwa AI
-- **Najlepsze praktyki**: Podstawowe wytyczne dotyczące etycznego rozwoju i wdrażania AI
+- **Najlepsze praktyki**: Podstawowe wytyczne etycznego rozwoju i wdrażania AI
 - **[→ Rozpocznij rozdział 5](./05-ResponsibleGenAI/README.md)**
 
 ## Dodatkowe zasoby

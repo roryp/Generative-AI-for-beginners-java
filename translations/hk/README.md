@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:40:30+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T09:54:15+00:00",
   "source_file": "README.md",
   "language_code": "hk"
 }
@@ -16,35 +16,35 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **快速開始**
 
-1. 將此存儲庫分叉到您的 GitHub 帳戶
+1. 將此儲存庫分叉到你的 GitHub 帳戶
 2. 點擊 **Code** → **Codespaces** 標籤 → **...** → **New with options...**
-3. 使用預設值 – 這將選擇為本課程創建的開發容器
+3. 使用預設值 – 這將選擇為本課程建立的開發容器
 4. 點擊 **Create codespace**
 5. 等待約2分鐘，環境即準備就緒
 6. 直接跳至 [第一個範例](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 > **想本地克隆？**
 >
-> 此存儲庫包含50多種語言翻譯，顯著增加下載大小。若想不含翻譯克隆，請使用稀疏檢出：
+> 此儲存庫包含50多種語言翻譯，顯著增加下載大小。若想不含翻譯克隆，請使用稀疏檢出：
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> 這樣您將獲得完成課程所需的一切，且下載速度更快。
+> 這樣你將獲得完成課程所需的一切，且下載速度更快。
 
 ## 多語言支援
 
 ### 透過 GitHub Action 支援（自動且始終保持最新）
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[阿拉伯語](../ar/README.md) | [孟加拉語](../bn/README.md) | [保加利亞語](../bg/README.md) | [緬甸語 (Myanmar)](../my/README.md) | [中文 (簡體)](../zh/README.md) | [中文 (繁體，香港)](./README.md) | [中文 (繁體，澳門)](../mo/README.md) | [中文 (繁體，台灣)](../tw/README.md) | [克羅地亞語](../hr/README.md) | [捷克語](../cs/README.md) | [丹麥語](../da/README.md) | [荷蘭語](../nl/README.md) | [愛沙尼亞語](../et/README.md) | [芬蘭語](../fi/README.md) | [法語](../fr/README.md) | [德語](../de/README.md) | [希臘語](../el/README.md) | [希伯來語](../he/README.md) | [印地語](../hi/README.md) | [匈牙利語](../hu/README.md) | [印尼語](../id/README.md) | [意大利語](../it/README.md) | [日語](../ja/README.md) | [坎納達語](../kn/README.md) | [韓語](../ko/README.md) | [立陶宛語](../lt/README.md) | [馬來語](../ms/README.md) | [馬拉雅拉姆語](../ml/README.md) | [馬拉地語](../mr/README.md) | [尼泊爾語](../ne/README.md) | [尼日利亞皮欽語](../pcm/README.md) | [挪威語](../no/README.md) | [波斯語 (法爾西語)](../fa/README.md) | [波蘭語](../pl/README.md) | [葡萄牙語 (巴西)](../br/README.md) | [葡萄牙語 (葡萄牙)](../pt/README.md) | [旁遮普語 (Gurmukhi)](../pa/README.md) | [羅馬尼亞語](../ro/README.md) | [俄語](../ru/README.md) | [塞爾維亞語 (西里爾字母)](../sr/README.md) | [斯洛伐克語](../sk/README.md) | [斯洛文尼亞語](../sl/README.md) | [西班牙語](../es/README.md) | [斯瓦希里語](../sw/README.md) | [瑞典語](../sv/README.md) | [他加祿語 (菲律賓語)](../tl/README.md) | [泰米爾語](../ta/README.md) | [泰盧固語](../te/README.md) | [泰語](../th/README.md) | [土耳其語](../tr/README.md) | [烏克蘭語](../uk/README.md) | [烏爾都語](../ur/README.md) | [越南語](../vi/README.md)
+[阿拉伯語](../ar/README.md) | [孟加拉語](../bn/README.md) | [保加利亞語](../bg/README.md) | [緬甸語 (Myanmar)](../my/README.md) | [中文 (簡體)](../zh/README.md) | [中文 (繁體，香港)](./README.md) | [中文 (繁體，澳門)](../mo/README.md) | [中文 (繁體，台灣)](../tw/README.md) | [克羅地亞語](../hr/README.md) | [捷克語](../cs/README.md) | [丹麥語](../da/README.md) | [荷蘭語](../nl/README.md) | [愛沙尼亞語](../et/README.md) | [芬蘭語](../fi/README.md) | [法語](../fr/README.md) | [德語](../de/README.md) | [希臘語](../el/README.md) | [希伯來語](../he/README.md) | [印地語](../hi/README.md) | [匈牙利語](../hu/README.md) | [印尼語](../id/README.md) | [意大利語](../it/README.md) | [日語](../ja/README.md) | [坎納達語](../kn/README.md) | [韓語](../ko/README.md) | [立陶宛語](../lt/README.md) | [馬來語](../ms/README.md) | [馬拉雅拉姆語](../ml/README.md) | [馬拉地語](../mr/README.md) | [尼泊爾語](../ne/README.md) | [奈及利亞皮欽語](../pcm/README.md) | [挪威語](../no/README.md) | [波斯語 (法爾西語)](../fa/README.md) | [波蘭語](../pl/README.md) | [葡萄牙語 (巴西)](../br/README.md) | [葡萄牙語 (葡萄牙)](../pt/README.md) | [旁遮普語 (Gurmukhi)](../pa/README.md) | [羅馬尼亞語](../ro/README.md) | [俄語](../ru/README.md) | [塞爾維亞語 (西里爾字母)](../sr/README.md) | [斯洛伐克語](../sk/README.md) | [斯洛文尼亞語](../sl/README.md) | [西班牙語](../es/README.md) | [斯瓦希里語](../sw/README.md) | [瑞典語](../sv/README.md) | [他加祿語 (菲律賓語)](../tl/README.md) | [泰米爾語](../ta/README.md) | [泰盧固語](../te/README.md) | [泰語](../th/README.md) | [土耳其語](../tr/README.md) | [烏克蘭語](../uk/README.md) | [烏爾都語](../ur/README.md) | [越南語](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## 課程結構與學習路徑
 
 ### **第一章：生成式 AI 簡介**
-- **核心概念**：了解大型語言模型、標記、嵌入及 AI 能力
+- **核心概念**：理解大型語言模型、標記、嵌入及 AI 能力
 - **Java AI 生態系統**：Spring AI 與 OpenAI SDK 概覽
 - **模型上下文協議**：介紹 MCP 及其在 AI 代理通訊中的角色
 - **實際應用**：包括聊天機器人與內容生成的真實場景
@@ -52,21 +52,21 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **第二章：開發環境設置**
 - **多供應商配置**：設置 GitHub Models、Azure OpenAI 與 OpenAI Java SDK 整合
-- **Spring Boot + Spring AI**：企業級 AI 應用開發最佳實踐
+- **Spring Boot + Spring AI**：企業 AI 應用開發最佳實踐
 - **GitHub Models**：免費 AI 模型存取，用於原型設計與學習（無需信用卡）
 - **開發工具**：Docker 容器、VS Code 與 GitHub Codespaces 配置
 - **[→ 開始第二章](./02-SetupDevEnvironment/README.md)**
 
 ### **第三章：核心生成式 AI 技術**
 - **提示工程**：優化 AI 模型回應的技巧
-- **嵌入與向量操作**：實現語義搜尋與相似度匹配
-- **檢索增強生成 (RAG)**：結合 AI 與您自己的數據來源
-- **函數調用**：使用自訂工具與插件擴展 AI 能力
+- **嵌入與向量操作**：實作語義搜尋與相似度匹配
+- **檢索增強生成 (RAG)**：結合 AI 與自有資料來源
+- **函數調用**：以自訂工具與插件擴展 AI 能力
 - **[→ 開始第三章](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **第四章：實際應用與專案**
 - **寵物故事生成器** (`petstory/`)：使用 GitHub Models 進行創意內容生成
-- **Foundry 本地示範** (`foundrylocal/`)：本地 AI 模型與 OpenAI Java SDK 整合
+- **Foundry 本地示範** (`foundrylocal/`)：OpenAI Java SDK 的本地 AI 模型整合
 - **MCP 計算器服務** (`calculator/`)：使用 Spring AI 實作基本模型上下文協議
 - **[→ 開始第四章](./04-PracticalSamples/README.md)**
 
@@ -120,7 +120,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 尋求協助
 
-如果你遇到困難或對建立 AI 應用程式有任何疑問，歡迎加入其他學習者和經驗豐富的開發者一起討論 MCP。這是一個支持性的社群，歡迎提問並自由分享知識。
+如果你遇到困難或對建立 AI 應用程式有任何疑問，歡迎加入其他學習者和經驗豐富的開發者，一同參與 MCP 的討論。這是一個支持性的社群，歡迎提問並自由分享知識。
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 

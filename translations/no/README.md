@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:06:23+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:19:55+00:00",
   "source_file": "README.md",
   "language_code": "no"
 }
@@ -12,26 +12,26 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativ AI for nybegynnere - Java-utgave](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.no.png)
 
-**Tidsbruk**: Hele workshoppen kan fullføres online uten lokal oppsett. Miljøoppsettet tar 2 minutter, med utforsking av eksemplene som krever 1-3 timer avhengig av utforskningsdybde.
+**Tidsbruk**: Hele verkstedet kan fullføres online uten lokal oppsett. Miljøoppsettet tar 2 minutter, med utforsking av eksemplene som krever 1-3 timer avhengig av utforskningsdybde.
 
 > **Rask start**
 
 1. Fork dette depotet til din GitHub-konto
 2. Klikk **Code** → **Codespaces**-fanen → **...** → **New with options...**
-3. Bruk standardinnstillingene – dette velger utviklingscontaineren laget for dette kurset
+3. Bruk standardinnstillingene – dette vil velge utviklingscontaineren opprettet for dette kurset
 4. Klikk **Create codespace**
 5. Vent ~2 minutter til miljøet er klart
 6. Gå direkte til [Det første eksempelet](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 > **Foretrekker du å klone lokalt?**
 >
-> Dette depotet inkluderer 50+ språkoversettelser som øker nedlastingsstørrelsen betydelig. For å klone uten oversettelser, bruk sparse checkout:
+> Dette depotet inkluderer 50+ språkoversettelser som betydelig øker nedlastingsstørrelsen. For å klone uten oversettelser, bruk sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dette gir deg alt du trenger for å fullføre kurset med mye raskere nedlasting.
+> Dette gir deg alt du trenger for å fullføre kurset med en mye raskere nedlasting.
 
 
 ## Flerspråklig støtte
@@ -54,7 +54,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Kapittel 2: Oppsett av utviklingsmiljø**
 - **Multi-leverandørkonfigurasjon**: Sett opp GitHub Models, Azure OpenAI og OpenAI Java SDK-integrasjoner
 - **Spring Boot + Spring AI**: Beste praksis for utvikling av AI-applikasjoner i bedrift
-- **GitHub Models**: Gratis AI-modelltilgang for prototyping og læring (ingen kredittkort kreves)
+- **GitHub Models**: Gratis AI-modelltilgang for prototyping og læring (krever ikke kredittkort)
 - **Utviklingsverktøy**: Docker-containere, VS Code og GitHub Codespaces-konfigurasjon
 - **[→ Start kapittel 2](./02-SetupDevEnvironment/README.md)**
 
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start kapittel 4](./04-PracticalSamples/README.md)**
 
 ### **Kapittel 5: Ansvarlig AI-utvikling**
-- **GitHub Models sikkerhet**: Test innebygd innholdsfiltrering og sikkerhetsmekanismer (harde blokker og myke avslag)
+- **GitHub Models sikkerhet**: Test innebygde innholdsfiltre og sikkerhetsmekanismer (harde blokker og myke avslag)
 - **Ansvarlig AI-demo**: Praktisk eksempel som viser hvordan moderne AI-sikkerhetssystemer fungerer i praksis
 - **Beste praksis**: Viktige retningslinjer for etisk AI-utvikling og distribusjon
 - **[→ Start kapittel 5](./05-ResponsibleGenAI/README.md)**

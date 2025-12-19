@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:24:35+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:36:23+00:00",
   "source_file": "README.md",
   "language_code": "sk"
 }
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Začať kapitolu 4](./04-PracticalSamples/README.md)**
 
 ### **Kapitola 5: Zodpovedný vývoj AI**
-- **Bezpečnosť GitHub Models**: Testovanie vstavaných filtrov obsahu a bezpečnostných mechanizmov (tvrdé bloky a mäkké odmietnutia)
+- **Bezpečnosť GitHub Models**: Testovanie vstavaného filtrovania obsahu a bezpečnostných mechanizmov (tvrdé bloky a mäkké odmietnutia)
 - **Demo zodpovednej AI**: Praktický príklad ukazujúci, ako fungujú moderné bezpečnostné systémy AI
 - **Najlepšie postupy**: Základné usmernenia pre etický vývoj a nasadenie AI
 - **[→ Začať kapitolu 5](./05-ResponsibleGenAI/README.md)**

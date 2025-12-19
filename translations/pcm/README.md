@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:41:15+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:51:38+00:00",
   "source_file": "README.md",
   "language_code": "pcm"
 }
@@ -33,6 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 > ```
 > Dis one go give you everything wey you need to complete di course with faster download.
 
+
 ## Multi-Language Support
 
 ### Supported via GitHub Action (Automated & Always Up-to-Date)
@@ -52,13 +53,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Chapter 2: Development Environment Setup**
 - **Multi-Provider Configuration**: Setup GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
-- **Spring Boot + Spring AI**: Best ways to develop enterprise AI applications
+- **Spring Boot + Spring AI**: Best ways for enterprise AI app development
 - **GitHub Models**: Free AI model access for prototyping and learning (no credit card needed)
 - **Development Tools**: Docker containers, VS Code, and GitHub Codespaces setup
 - **[→ Start Chapter 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chapter 3: Core Generative AI Techniques**
-- **Prompt Engineering**: Ways to get best AI model responses
+- **Prompt Engineering**: Ways to get better AI model responses
 - **Embeddings & Vector Operations**: How to do semantic search and similarity matching
 - **Retrieval-Augmented Generation (RAG)**: Combine AI with your own data sources
 - **Function Calling**: Extend AI power with custom tools and plugins
@@ -120,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Getting Help
 
-If you get stuck or get any question about how to build AI apps. Join other learners and experienced developers for talk about MCP. Na supportive community wey questions dey welcome and knowledge dey shared freely.
+If you get stuck or get any questions about how to build AI apps. Join other learners and experienced developers for talk about MCP. Na supportive community wey questions dey welcome and knowledge dey shared freely.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -132,5 +133,5 @@ If you get product feedback or errors while you dey build, visit:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or wrong tins. Di original document wey dey im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any misunderstanding or wrong meaning wey fit come from dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any misunderstanding or wrong meaning wey fit come from dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

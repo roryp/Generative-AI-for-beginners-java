@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:16:01+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:28:45+00:00",
   "source_file": "README.md",
   "language_code": "ms"
 }
@@ -20,7 +20,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. Klik **Code** → tab **Codespaces** → **...** → **New with options...**
 3. Gunakan tetapan lalai – ini akan memilih kontena Pembangunan yang dibuat untuk kursus ini
 4. Klik **Create codespace**
-5. Tunggu ~2 minit untuk persekitaran bersedia
+5. Tunggu ~2 minit untuk persekitaran sedia
 6. Teruskan ke [Contoh pertama](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 > **Lebih Suka Clone Secara Tempatan?**
@@ -31,7 +31,7 @@ CO_OP_TRANSLATOR_METADATA:
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Ini memberikan anda segala yang anda perlukan untuk menyelesaikan kursus dengan muat turun yang lebih pantas.
+> Ini memberikan anda segala yang anda perlukan untuk menyelesaikan kursus dengan muat turun yang jauh lebih pantas.
 
 
 ## Sokongan Pelbagai Bahasa
@@ -47,14 +47,14 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Bab 1: Pengenalan kepada Generative AI**
 - **Konsep Teras**: Memahami Model Bahasa Besar, token, embeddings, dan keupayaan AI
 - **Ekosistem AI Java**: Gambaran keseluruhan Spring AI dan OpenAI SDK
-- **Protokol Konteks Model**: Pengenalan kepada MCP dan peranannya dalam komunikasi agen AI
+- **Protokol Konteks Model**: Pengenalan MCP dan peranannya dalam komunikasi agen AI
 - **Aplikasi Praktikal**: Senario dunia sebenar termasuk chatbot dan penjanaan kandungan
 - **[→ Mula Bab 1](./01-IntroToGenAI/README.md)**
 
 ### **Bab 2: Persediaan Persekitaran Pembangunan**
 - **Konfigurasi Multi-Penyedia**: Sediakan GitHub Models, Azure OpenAI, dan integrasi OpenAI Java SDK
 - **Spring Boot + Spring AI**: Amalan terbaik untuk pembangunan aplikasi AI perusahaan
-- **GitHub Models**: Akses model AI percuma untuk prototaip dan pembelajaran (tidak perlu kad kredit)
+- **GitHub Models**: Akses model AI percuma untuk prototaip dan pembelajaran (tiada kad kredit diperlukan)
 - **Alat Pembangunan**: Kontena Docker, VS Code, dan konfigurasi GitHub Codespaces
 - **[→ Mula Bab 2](./02-SetupDevEnvironment/README.md)**
 
@@ -127,11 +127,11 @@ Jika anda tersekat atau mempunyai sebarang soalan tentang membina aplikasi AI. S
 
 Jika anda mempunyai maklum balas produk atau ralat semasa membina, lawati:
 
-[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Forum Pembangun Microsoft Foundry](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

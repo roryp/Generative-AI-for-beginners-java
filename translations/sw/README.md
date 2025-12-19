@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:18:57+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:31:54+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
@@ -39,43 +39,43 @@ CO_OP_TRANSLATOR_METADATA:
 ### Inasaidiwa kupitia GitHub Action (Moja kwa Moja & Daima Imeboreshwa)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Kiarabu](../ar/README.md) | [Kibengali](../bn/README.md) | [Kibulgaria](../bg/README.md) | [Kiburma (Myanmar)](../my/README.md) | [Kichina (Rahisi)](../zh/README.md) | [Kichina (Mila, Hong Kong)](../hk/README.md) | [Kichina (Mila, Macau)](../mo/README.md) | [Kichina (Mila, Taiwan)](../tw/README.md) | [Kroeshia](../hr/README.md) | [Kicheki](../cs/README.md) | [Kidenmaki](../da/README.md) | [Kiholanzi](../nl/README.md) | [Kiestonia](../et/README.md) | [Kifini](../fi/README.md) | [Kifaransa](../fr/README.md) | [Kijerumani](../de/README.md) | [Kigiriki](../el/README.md) | [Kiebrania](../he/README.md) | [Kihindi](../hi/README.md) | [Kihungari](../hu/README.md) | [Kiindonesia](../id/README.md) | [Kiitaliano](../it/README.md) | [Kijapani](../ja/README.md) | [Kikannada](../kn/README.md) | [Kikorea](../ko/README.md) | [Kilithuania](../lt/README.md) | [Kimelayu](../ms/README.md) | [Kimalayalam](../ml/README.md) | [Kimarathi](../mr/README.md) | [Kinepali](../ne/README.md) | [Kipidgin cha Nigeria](../pcm/README.md) | [Kinorwe](../no/README.md) | [Kiajemi (Farsi)](../fa/README.md) | [Kipolandi](../pl/README.md) | [Kireno (Brazil)](../br/README.md) | [Kireno (Portugal)](../pt/README.md) | [Kipunjabi (Gurmukhi)](../pa/README.md) | [Kiromania](../ro/README.md) | [Kirusi](../ru/README.md) | [Kiserbia (Cyrillic)](../sr/README.md) | [Kislovakia](../sk/README.md) | [Kislovenia](../sl/README.md) | [Kihispania](../es/README.md) | [Kiswahili](./README.md) | [Kiswidi](../sv/README.md) | [Kitagalog (Filipino)](../tl/README.md) | [Kitamili](../ta/README.md) | [Kitelugu](../te/README.md) | [Kithai](../th/README.md) | [Kituruki](../tr/README.md) | [Kiukraini](../uk/README.md) | [Kiurdu](../ur/README.md) | [Kivietinamu](../vi/README.md)
+[Kiarabu](../ar/README.md) | [Kibengali](../bn/README.md) | [Kibulgaria](../bg/README.md) | [Kiburma (Myanmar)](../my/README.md) | [Kichina (Rahisi)](../zh/README.md) | [Kichina (Mila, Hong Kong)](../hk/README.md) | [Kichina (Mila, Macau)](../mo/README.md) | [Kichina (Mila, Taiwan)](../tw/README.md) | [Kroeshia](../hr/README.md) | [Kicheki](../cs/README.md) | [Kidenmaki](../da/README.md) | [Kiholanzi](../nl/README.md) | [Kiestonia](../et/README.md) | [Kifini](../fi/README.md) | [Kifaransa](../fr/README.md) | [Kijerumani](../de/README.md) | [Kigiriki](../el/README.md) | [Kiebrania](../he/README.md) | [Kihindi](../hi/README.md) | [Kihungari](../hu/README.md) | [Kiindonesia](../id/README.md) | [Kiitaliano](../it/README.md) | [Kijapani](../ja/README.md) | [Kikannada](../kn/README.md) | [Kikorea](../ko/README.md) | [Kilithuania](../lt/README.md) | [Kimelayu](../ms/README.md) | [Kimalayalam](../ml/README.md) | [Kimarathi](../mr/README.md) | [Kinepali](../ne/README.md) | [Kipidgin cha Nigeria](../pcm/README.md) | [Kinorwe](../no/README.md) | [Kiajemi (Farsi)](../fa/README.md) | [Kipolandi](../pl/README.md) | [Kireno (Brazil)](../br/README.md) | [Kireno (Portugal)](../pt/README.md) | [Kipunja (Gurmukhi)](../pa/README.md) | [Kiromania](../ro/README.md) | [Kirusi](../ru/README.md) | [Kiserbia (Cyrillic)](../sr/README.md) | [Kislovakia](../sk/README.md) | [Kislovenia](../sl/README.md) | [Kihispania](../es/README.md) | [Kiswahili](./README.md) | [Kiswidi](../sv/README.md) | [Kitagalog (Filipino)](../tl/README.md) | [Kitamili](../ta/README.md) | [Kitelugu](../te/README.md) | [Kithai](../th/README.md) | [Kituruki](../tr/README.md) | [Kiukraini](../uk/README.md) | [Kiurdu](../ur/README.md) | [Kivietinamu](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Muundo wa Kozi & Njia ya Kujifunza
 
-### **Sura ya 1: Utangulizi wa AI Inayozalisha**
+### **Sura 1: Utangulizi wa AI Inayozalisha**
 - **Mafundisho Muhimu**: Kuelewa Modeli Kubwa za Lugha, tokeni, embeddings, na uwezo wa AI
 - **Ecosystem ya AI ya Java**: Muhtasari wa Spring AI na OpenAI SDKs
 - **Itifaki ya Muktadha wa Modeli**: Utangulizi wa MCP na jukumu lake katika mawasiliano ya mawakala wa AI
 - **Matumizi ya Kivitendo**: Hali halisi ikijumuisha chatbots na uzalishaji wa maudhui
-- **[→ Anza Sura ya 1](./01-IntroToGenAI/README.md)**
+- **[→ Anza Sura 1](./01-IntroToGenAI/README.md)**
 
-### **Sura ya 2: Usanidi wa Mazingira ya Maendeleo**
-- **Usanidi wa Watoa Huduma Wengi**: Weka GitHub Models, Azure OpenAI, na OpenAI Java SDK
+### **Sura 2: Usanidi wa Mazingira ya Maendeleo**
+- **Usanidi wa Watoa Huduma Wengi**: Sanidi GitHub Models, Azure OpenAI, na OpenAI Java SDK
 - **Spring Boot + Spring AI**: Mbinu bora za maendeleo ya programu za AI za biashara
-- **GitHub Models**: Upatikanaji wa bure wa modeli za AI kwa majaribio na kujifunza (hakuna kadi ya mkopo inahitajika)
+- **GitHub Models**: Upatikanaji wa bure wa modeli za AI kwa ajili ya prototyping na kujifunza (hakuna kadi ya mkopo inahitajika)
 - **Zana za Maendeleo**: Kontena za Docker, VS Code, na usanidi wa GitHub Codespaces
-- **[→ Anza Sura ya 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Anza Sura 2](./02-SetupDevEnvironment/README.md)**
 
-### **Sura ya 3: Mbinu Muhimu za AI Inayozalisha**
-- **Uhandisi wa Prompt**: Mbinu za majibu bora ya modeli za AI
+### **Sura 3: Mbinu Muhimu za AI Inayozalisha**
+- **Uhandisi wa Prompt**: Mbinu za kupata majibu bora kutoka kwa modeli za AI
 - **Embeddings & Operesheni za Vector**: Tekeleza utafutaji wa maana na ulinganishaji wa usawa
-- **Uzalishaji Ulioboreshwa kwa Kupata (RAG)**: Changanya AI na vyanzo vyako vya data
+- **Uzalishaji Ulioboreshwa kwa Kupata Taarifa (RAG)**: Changanya AI na vyanzo vyako vya data
 - **Kupiga Simu za Kazi**: Panua uwezo wa AI kwa zana na plugins maalum
-- **[→ Anza Sura ya 3](./03-CoreGenerativeAITechniques/README.md)**
+- **[→ Anza Sura 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Sura ya 4: Matumizi ya Kivitendo & Miradi**
+### **Sura 4: Matumizi ya Kivitendo & Miradi**
 - **Mzalishaji wa Hadithi za Wanyama wa Kifugo** (`petstory/`): Uzalishaji wa maudhui ya ubunifu kwa GitHub Models
-- **Demo ya Foundry Local** (`foundrylocal/`): Muunganisho wa modeli ya AI ya eneo la kazi na OpenAI Java SDK
+- **Onyesho la Foundry Local** (`foundrylocal/`): Uunganisho wa modeli ya AI ya eneo la kazi na OpenAI Java SDK
 - **Huduma ya Kihesabu ya MCP** (`calculator/`): Utekelezaji wa msingi wa Itifaki ya Muktadha wa Modeli na Spring AI
-- **[→ Anza Sura ya 4](./04-PracticalSamples/README.md)**
+- **[→ Anza Sura 4](./04-PracticalSamples/README.md)**
 
-### **Sura ya 5: Maendeleo ya AI kwa Uwajibikaji**
+### **Sura 5: Maendeleo ya AI kwa Uwajibikaji**
 - **Usalama wa GitHub Models**: Jaribu vichujio vya maudhui vilivyojengwa na mifumo ya usalama (vizuizi ngumu na kukataa kwa upole)
-- **Demo ya AI Inayowajibika**: Mfano wa vitendo unaoonyesha jinsi mifumo ya usalama ya AI ya kisasa inavyofanya kazi
+- **Onyesho la AI Inayowajibika**: Mfano wa vitendo unaoonyesha jinsi mifumo ya usalama ya AI ya kisasa inavyofanya kazi
 - **Mbinu Bora**: Miongozo muhimu kwa maendeleo na utekelezaji wa AI kwa maadili
-- **[→ Anza Sura ya 5](./05-ResponsibleGenAI/README.md)**
+- **[→ Anza Sura 5](./05-ResponsibleGenAI/README.md)**
 
 ## Rasilimali Zaidi
 
@@ -121,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kupata Msaada
 
-Ikiwa unakumbwa na shida au una maswali yoyote kuhusu kujenga programu za AI. Jiunge na wanafunzi wenzako na waendelezaji wenye uzoefu katika mijadala kuhusu MCP. Ni jamii inayounga mkono ambapo maswali yanakaribishwa na maarifa yanashirikiwa kwa uhuru.
+Ikiwa unakumbwa na shida au una maswali yoyote kuhusu kujenga programu za AI. Jiunge na wanafunzi wenzako na waendelezaji wenye uzoefu katika mijadala kuhusu MCP. Ni jamii yenye msaada ambapo maswali yanakaribishwa na maarifa yanashirikiwa kwa uhuru.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -132,6 +132,6 @@ Ikiwa una maoni kuhusu bidhaa au makosa wakati wa kujenga tembelea:
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kiarifu cha Kutotegemea**:
+**Kiarifa cha Kukataa**:
 Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

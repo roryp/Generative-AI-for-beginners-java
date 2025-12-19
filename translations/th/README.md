@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:02:02+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:16:22+00:00",
   "source_file": "README.md",
   "language_code": "th"
 }
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. Fork ที่เก็บนี้ไปยังบัญชี GitHub ของคุณ
 2. คลิก **Code** → แท็บ **Codespaces** → **...** → **New with options...**
-3. ใช้ค่าปริยาย – ซึ่งจะเลือก Development container ที่สร้างขึ้นสำหรับคอร์สนี้
+3. ใช้ค่าปริยาย – ซึ่งจะเลือก Development container ที่สร้างขึ้นสำหรับหลักสูตรนี้
 4. คลิก **Create codespace**
 5. รอประมาณ 2 นาทีจนกว่าสภาพแวดล้อมจะพร้อมใช้งาน
 6. ไปที่ [ตัวอย่างแรก](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token) ได้เลย
@@ -31,7 +31,7 @@ CO_OP_TRANSLATOR_METADATA:
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> วิธีนี้จะให้ทุกอย่างที่คุณต้องการเพื่อทำคอร์สนี้ให้เสร็จอย่างรวดเร็วขึ้นมาก
+> วิธีนี้จะให้ทุกอย่างที่คุณต้องการเพื่อทำหลักสูตรให้เสร็จอย่างรวดเร็วขึ้นมาก
 
 
 ## การรองรับหลายภาษา
@@ -42,17 +42,17 @@ CO_OP_TRANSLATOR_METADATA:
 [อาหรับ](../ar/README.md) | [เบงกาลี](../bn/README.md) | [บัลแกเรีย](../bg/README.md) | [พม่า (เมียนมา)](../my/README.md) | [จีน (ตัวย่อ)](../zh/README.md) | [จีน (ตัวเต็ม, ฮ่องกง)](../hk/README.md) | [จีน (ตัวเต็ม, มาเก๊า)](../mo/README.md) | [จีน (ตัวเต็ม, ไต้หวัน)](../tw/README.md) | [โครเอเชีย](../hr/README.md) | [เช็ก](../cs/README.md) | [เดนมาร์ก](../da/README.md) | [ดัตช์](../nl/README.md) | [เอสโตเนีย](../et/README.md) | [ฟินแลนด์](../fi/README.md) | [ฝรั่งเศส](../fr/README.md) | [เยอรมัน](../de/README.md) | [กรีก](../el/README.md) | [ฮีบรู](../he/README.md) | [ฮินดี](../hi/README.md) | [ฮังการี](../hu/README.md) | [อินโดนีเซีย](../id/README.md) | [อิตาลี](../it/README.md) | [ญี่ปุ่น](../ja/README.md) | [กันนาดา](../kn/README.md) | [เกาหลี](../ko/README.md) | [ลิทัวเนีย](../lt/README.md) | [มาเลย์](../ms/README.md) | [มาลายาลัม](../ml/README.md) | [มราฐี](../mr/README.md) | [เนปาล](../ne/README.md) | [ไนจีเรีย พิดจิน](../pcm/README.md) | [นอร์เวย์](../no/README.md) | [เปอร์เซีย (ฟาร์ซี)](../fa/README.md) | [โปแลนด์](../pl/README.md) | [โปรตุเกส (บราซิล)](../br/README.md) | [โปรตุเกส (โปรตุเกส)](../pt/README.md) | [ปัญจาบี (กูรมุขี)](../pa/README.md) | [โรมาเนีย](../ro/README.md) | [รัสเซีย](../ru/README.md) | [เซอร์เบีย (ซีริลลิก)](../sr/README.md) | [สโลวัก](../sk/README.md) | [สโลวีเนีย](../sl/README.md) | [สเปน](../es/README.md) | [สวาฮิลี](../sw/README.md) | [สวีเดน](../sv/README.md) | [ตากาล็อก (ฟิลิปปินส์)](../tl/README.md) | [ทมิฬ](../ta/README.md) | [เทลูกู](../te/README.md) | [ไทย](./README.md) | [ตุรกี](../tr/README.md) | [ยูเครน](../uk/README.md) | [อูรดู](../ur/README.md) | [เวียดนาม](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-## โครงสร้างคอร์ส & เส้นทางการเรียนรู้
+## โครงสร้างหลักสูตร & เส้นทางการเรียนรู้
 
 ### **บทที่ 1: บทนำสู่ปัญญาประดิษฐ์เชิงสร้างสรรค์**
 - **แนวคิดหลัก**: ทำความเข้าใจโมเดลภาษาใหญ่, โทเค็น, embeddings และความสามารถของ AI
-- **ระบบนิเวศ AI ใน Java**: ภาพรวมของ Spring AI และ OpenAI SDKs
+- **ระบบนิเวศ AI ของ Java**: ภาพรวมของ Spring AI และ OpenAI SDKs
 - **โปรโตคอลบริบทโมเดล**: แนะนำ MCP และบทบาทในการสื่อสารของเอเจนต์ AI
-- **การใช้งานจริง**: กรณีใช้งานจริง เช่น แชทบอทและการสร้างเนื้อหา
+- **การประยุกต์ใช้งานจริง**: กรณีใช้งานจริง เช่น แชทบอทและการสร้างเนื้อหา
 - **[→ เริ่มบทที่ 1](./01-IntroToGenAI/README.md)**
 
 ### **บทที่ 2: การตั้งค่าสภาพแวดล้อมการพัฒนา**
-- **การตั้งค่าผู้ให้บริการหลายราย**: ตั้งค่า GitHub Models, Azure OpenAI และ OpenAI Java SDK
+- **การกำหนดค่าผู้ให้บริการหลายราย**: ตั้งค่า GitHub Models, Azure OpenAI และ OpenAI Java SDK
 - **Spring Boot + Spring AI**: แนวทางปฏิบัติที่ดีที่สุดสำหรับการพัฒนาแอป AI ระดับองค์กร
 - **GitHub Models**: เข้าถึงโมเดล AI ฟรีสำหรับการสร้างต้นแบบและการเรียนรู้ (ไม่ต้องใช้บัตรเครดิต)
 - **เครื่องมือพัฒนา**: คอนเทนเนอร์ Docker, VS Code และการตั้งค่า GitHub Codespaces
@@ -62,18 +62,18 @@ CO_OP_TRANSLATOR_METADATA:
 - **การออกแบบคำสั่ง (Prompt Engineering)**: เทคนิคสำหรับการตอบสนองที่ดีที่สุดของโมเดล AI
 - **Embeddings & การดำเนินการเวกเตอร์**: นำไปใช้การค้นหาเชิงความหมายและการจับคู่ความคล้ายคลึง
 - **การสร้างเนื้อหาที่เสริมด้วยการดึงข้อมูล (RAG)**: ผสมผสาน AI กับแหล่งข้อมูลของคุณเอง
-- **การเรียกใช้ฟังก์ชัน**: ขยายความสามารถ AI ด้วยเครื่องมือและปลั๊กอินที่กำหนดเอง
+- **การเรียกใช้ฟังก์ชัน**: ขยายความสามารถของ AI ด้วยเครื่องมือและปลั๊กอินที่กำหนดเอง
 - **[→ เริ่มบทที่ 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **บทที่ 4: การใช้งานจริง & โครงการ**
+### **บทที่ 4: การประยุกต์ใช้งานจริง & โครงการ**
 - **เครื่องสร้างเรื่องราวสัตว์เลี้ยง** (`petstory/`): การสร้างเนื้อหาสร้างสรรค์ด้วย GitHub Models
-- **เดโม Foundry Local** (`foundrylocal/`): การรวมโมเดล AI ในเครื่องด้วย OpenAI Java SDK
+- **เดโม Foundry Local** (`foundrylocal/`): การผสานโมเดล AI ในเครื่องด้วย OpenAI Java SDK
 - **บริการเครื่องคิดเลข MCP** (`calculator/`): การใช้งาน Model Context Protocol เบื้องต้นกับ Spring AI
 - **[→ เริ่มบทที่ 4](./04-PracticalSamples/README.md)**
 
-### **บทที่ 5: การพัฒนา AI อย่างรับผิดชอบ**
+### **บทที่ 5: การพัฒนาปัญญาประดิษฐ์อย่างรับผิดชอบ**
 - **ความปลอดภัยของ GitHub Models**: ทดสอบการกรองเนื้อหาและกลไกความปลอดภัยในตัว (บล็อกแข็งและการปฏิเสธแบบนุ่มนวล)
-- **เดโม AI อย่างรับผิดชอบ**: ตัวอย่างใช้งานจริงแสดงให้เห็นว่าระบบความปลอดภัย AI สมัยใหม่ทำงานอย่างไร
+- **เดโม AI อย่างรับผิดชอบ**: ตัวอย่างปฏิบัติแสดงให้เห็นว่าระบบความปลอดภัย AI สมัยใหม่ทำงานอย่างไร
 - **แนวทางปฏิบัติที่ดีที่สุด**: แนวทางสำคัญสำหรับการพัฒนาและใช้งาน AI อย่างมีจริยธรรม
 - **[→ เริ่มบทที่ 5](./05-ResponsibleGenAI/README.md)**
 
@@ -94,7 +94,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### ชุดปัญญาประดิษฐ์เชิงสร้างสรรค์
+### Generative AI Series
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -113,7 +113,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### ชุด Copilot
+### Copilot Series
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:03:24+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:17:47+00:00",
   "source_file": "README.md",
   "language_code": "sv"
 }
@@ -45,8 +45,8 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kursstruktur & Lärväg
 
 ### **Kapitel 1: Introduktion till Generativ AI**
-- **Grundläggande begrepp**: Förstå stora språkmodeller, tokens, inbäddningar och AI-förmågor
-- **Java AI-ekosystemet**: Översikt av Spring AI och OpenAI SDK:er
+- **Kärnkoncept**: Förstå stora språkmodeller, tokens, inbäddningar och AI-förmågor
+- **Java AI-ekosystem**: Översikt av Spring AI och OpenAI SDK:er
 - **Model Context Protocol**: Introduktion till MCP och dess roll i AI-agentkommunikation
 - **Praktiska tillämpningar**: Verkliga scenarier inklusive chattbotar och innehållsgenerering
 - **[→ Starta Kapitel 1](./01-IntroToGenAI/README.md)**
@@ -133,5 +133,5 @@ Om du har produktfeedback eller fel under byggandet, besök:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Ansvarsfriskrivning**:
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen observera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen var medveten om att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår till följd av användningen av denna översättning.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
