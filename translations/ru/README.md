@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T13:43:08+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T09:34:35+00:00",
   "source_file": "README.md",
   "language_code": "ru"
 }
@@ -12,16 +12,27 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Генеративный ИИ для начинающих - версия на Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ru.png)
 
-**Время на выполнение**: Весь воркшоп можно пройти онлайн без локальной настройки. Настройка окружения занимает 2 минуты, изучение примеров требует от 1 до 3 часов в зависимости от глубины изучения.
+**Время на выполнение**: Весь воркшоп можно пройти онлайн без локальной настройки. Настройка окружения занимает 2 минуты, изучение примеров — от 1 до 3 часов в зависимости от глубины изучения.
 
-> **Быстрый старт**
+> **Быстрый старт** 
 
 1. Форкните этот репозиторий в свой аккаунт GitHub
 2. Нажмите **Code** → вкладка **Codespaces** → **...** → **New with options...**
 3. Используйте настройки по умолчанию – будет выбран контейнер разработки, созданный для этого курса
 4. Нажмите **Create codespace**
-5. Подождите около 2 минут, пока окружение будет готово
+5. Подождите ~2 минуты, пока окружение будет готово
 6. Перейдите сразу к [первому примеру](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+
+> **Предпочитаете клонировать локально?**
+>
+> В этом репозитории содержится более 50 языковых переводов, что значительно увеличивает размер загрузки. Чтобы клонировать без переводов, используйте sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Это даст вам всё необходимое для прохождения курса с гораздо более быстрой загрузкой.
+
 
 ## Поддержка нескольких языков
 
@@ -41,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Начать главу 1](./01-IntroToGenAI/README.md)**
 
 ### **Глава 2: Настройка среды разработки**
-- **Конфигурация нескольких провайдеров**: настройка GitHub Models, Azure OpenAI и OpenAI Java SDK
+- **Конфигурация с несколькими провайдерами**: настройка GitHub Models, Azure OpenAI и интеграций OpenAI Java SDK
 - **Spring Boot + Spring AI**: лучшие практики разработки корпоративных AI-приложений
 - **GitHub Models**: бесплатный доступ к AI-моделям для прототипирования и обучения (без необходимости кредитной карты)
 - **Инструменты разработки**: Docker-контейнеры, VS Code и настройка GitHub Codespaces
@@ -97,7 +108,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![ИИ для начинающих](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Кибербезопасность для начинающих](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Веб-разработка для начинающих](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT для начинающих](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
@@ -122,5 +133,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Отказ от ответственности**:  
-Этот документ был переведен с помощью сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия обеспечить точность, имейте в виду, что автоматический перевод может содержать ошибки или неточности. Оригинальный документ на его исходном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется обращаться к профессиональному переводу, выполненному человеком. Мы не несем ответственности за любые недоразумения или неправильные толкования, возникшие в результате использования данного перевода.
+Этот документ был переведен с помощью сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия по обеспечению точности, имейте в виду, что автоматический перевод может содержать ошибки или неточности. Оригинальный документ на его исходном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется использовать профессиональный перевод, выполненный человеком. Мы не несем ответственности за любые недоразумения или неправильные толкования, возникшие в результате использования данного перевода.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

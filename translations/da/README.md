@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T14:20:49+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T10:04:59+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -14,16 +14,27 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Tidsforbrug**: Hele workshoppen kan gennemføres online uden lokal opsætning. Miljøopsætningen tager 2 minutter, og udforskning af eksemplerne kræver 1-3 timer afhængigt af udforskningsdybden.
 
-> **Hurtig start** 
+> **Hurtig Start** 
 
 1. Fork dette repository til din GitHub-konto
-2. Klik på **Code** → fanen **Codespaces** → **...** → **New with options...**
+2. Klik **Code** → **Codespaces** fanen → **...** → **New with options...**
 3. Brug standardindstillingerne – dette vælger udviklingscontaineren oprettet til dette kursus
-4. Klik på **Create codespace**
-5. Vent ca. 2 minutter på, at miljøet er klar
+4. Klik **Create codespace**
+5. Vent ~2 minutter på at miljøet er klar
 6. Gå direkte til [Det første eksempel](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Multisprogunderstøttelse
+> **Foretrækker du at klone lokalt?**
+>
+> Dette repository inkluderer 50+ sprogoversættelser, som væsentligt øger downloadstørrelsen. For at klone uden oversættelser, brug sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Dette giver dig alt, hvad du behøver for at gennemføre kurset med en meget hurtigere download.
+
+
+## Multisprog Support
 
 ### Understøttet via GitHub Action (Automatiseret & Altid Opdateret)
 
@@ -34,39 +45,39 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kursusstruktur & Læringssti
 
 ### **Kapitel 1: Introduktion til Generativ AI**
-- **Kernebegreber**: Forståelse af store sprogmodeller, tokens, embeddings og AI-kapaciteter
-- **Java AI-økosystem**: Oversigt over Spring AI og OpenAI SDK'er
-- **Model Context Protocol**: Introduktion til MCP og dets rolle i AI-agentkommunikation
-- **Praktiske anvendelser**: Virkelige scenarier inklusive chatbots og indholdsgenerering
+- **Kernebegreber**: Forståelse af store sprogmodeller, tokens, embeddings og AI kapabiliteter
+- **Java AI Økosystem**: Oversigt over Spring AI og OpenAI SDK'er
+- **Model Context Protocol**: Introduktion til MCP og dets rolle i AI-agent kommunikation
+- **Praktiske Anvendelser**: Virkelige scenarier inklusive chatbots og indholdsgenerering
 - **[→ Start Kapitel 1](./01-IntroToGenAI/README.md)**
 
-### **Kapitel 2: Opsætning af udviklingsmiljø**
-- **Multi-udbyder konfiguration**: Opsæt GitHub Models, Azure OpenAI og OpenAI Java SDK-integrationer
-- **Spring Boot + Spring AI**: Bedste praksis for udvikling af AI-applikationer til virksomheder
-- **GitHub Models**: Gratis AI-modeladgang til prototyping og læring (ingen kreditkort krævet)
-- **Udviklingsværktøjer**: Docker-containere, VS Code og GitHub Codespaces-konfiguration
+### **Kapitel 2: Opsætning af Udviklingsmiljø**
+- **Multi-udbyder Konfiguration**: Opsæt GitHub Models, Azure OpenAI og OpenAI Java SDK integrationer
+- **Spring Boot + Spring AI**: Bedste praksis for enterprise AI applikationsudvikling
+- **GitHub Models**: Gratis AI model adgang til prototyping og læring (ingen kreditkort krævet)
+- **Udviklingsværktøjer**: Docker containere, VS Code og GitHub Codespaces konfiguration
 - **[→ Start Kapitel 2](./02-SetupDevEnvironment/README.md)**
 
-### **Kapitel 3: Kerne teknikker inden for generativ AI**
-- **Prompt Engineering**: Teknikker til optimale AI-modelsvar
-- **Embeddings & vektoroperationer**: Implementer semantisk søgning og lighedsmatchning
+### **Kapitel 3: Kerne Generative AI Teknikker**
+- **Prompt Engineering**: Teknikker til optimale AI model svar
+- **Embeddings & Vektoroperationer**: Implementer semantisk søgning og lighedsmatchning
 - **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
-- **Funktionskald**: Udvid AI-kapaciteter med brugerdefinerede værktøjer og plugins
+- **Funktionskald**: Udvid AI kapabiliteter med brugerdefinerede værktøjer og plugins
 - **[→ Start Kapitel 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Kapitel 4: Praktiske anvendelser & projekter**
+### **Kapitel 4: Praktiske Anvendelser & Projekter**
 - **Pet Story Generator** (`petstory/`): Kreativ indholdsgenerering med GitHub Models
-- **Foundry Local Demo** (`foundrylocal/`): Lokal AI-modelintegration med OpenAI Java SDK
-- **MCP Calculator Service** (`calculator/`): Grundlæggende Model Context Protocol-implementering med Spring AI
+- **Foundry Local Demo** (`foundrylocal/`): Lokal AI model integration med OpenAI Java SDK
+- **MCP Calculator Service** (`calculator/`): Grundlæggende Model Context Protocol implementering med Spring AI
 - **[→ Start Kapitel 4](./04-PracticalSamples/README.md)**
 
-### **Kapitel 5: Ansvarlig AI-udvikling**
-- **GitHub Models sikkerhed**: Test indbyggede indholdsfiltrerings- og sikkerhedsmekanismer (hårde blokeringer og bløde afvisninger)
-- **Ansvarlig AI-demo**: Praktisk eksempel, der viser, hvordan moderne AI-sikkerhedssystemer fungerer i praksis
-- **Bedste praksis**: Vigtige retningslinjer for etisk AI-udvikling og implementering
+### **Kapitel 5: Ansvarlig AI Udvikling**
+- **GitHub Models Sikkerhed**: Test indbyggede indholdsfiltrering og sikkerhedsmekanismer (hårde blokeringer og bløde afvisninger)
+- **Ansvarlig AI Demo**: Praktisk eksempel der viser, hvordan moderne AI sikkerhedssystemer fungerer i praksis
+- **Bedste Praksis**: Vigtige retningslinjer for etisk AI udvikling og implementering
 - **[→ Start Kapitel 5](./05-ResponsibleGenAI/README.md)**
 
-## Yderligere ressourcer
+## Yderligere Ressourcer
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -83,7 +94,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Generativ AI-serie
+### Generativ AI Serie
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -91,7 +102,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Kerne-læring
+### Kerne Læring
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -110,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Få hjælp
 
-Hvis du sidder fast eller har spørgsmål om at bygge AI-apps. Deltag i diskussioner med andre lærende og erfarne udviklere om MCP. Det er et støttende fællesskab, hvor spørgsmål er velkomne, og viden deles frit.
+Hvis du sidder fast eller har spørgsmål om at bygge AI-apps. Deltag sammen med andre lærende og erfarne udviklere i diskussioner om MCP. Det er et støttende fællesskab, hvor spørgsmål er velkomne, og viden deles frit.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 

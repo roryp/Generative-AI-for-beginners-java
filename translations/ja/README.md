@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T13:56:28+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T09:42:59+00:00",
   "source_file": "README.md",
   "language_code": "ja"
 }
@@ -18,10 +18,21 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. このリポジトリをあなたのGitHubアカウントにフォークします
 2. **Code** → **Codespaces** タブ → **...** → **New with options...** をクリックします
-3. デフォルトを使用します – これにより本コース用に作成された開発コンテナが選択されます
+3. デフォルトを使用します – これによりこのコース用に作成された開発コンテナが選択されます
 4. **Create codespace** をクリックします
 5. 環境が準備されるまで約2分待ちます
 6. すぐに[最初の例](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に進みます
+
+> **ローカルでクローンしたいですか？**
+>
+> このリポジトリには50以上の言語翻訳が含まれており、ダウンロードサイズが大幅に増加します。翻訳なしでクローンするには、スパースチェックアウトを使用してください：
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> これにより、コースを完了するために必要なすべてがより高速にダウンロードできます。
+
 
 ## 多言語サポート
 
@@ -50,19 +61,19 @@ CO_OP_TRANSLATOR_METADATA:
 ### **第3章：生成AIのコア技術**
 - **プロンプトエンジニアリング**: 最適なAIモデル応答のための技術
 - **埋め込みとベクトル操作**: セマンティック検索と類似度マッチングの実装
-- **検索強化生成（RAG）**: AIと独自データソースの組み合わせ
+- **検索拡張生成（RAG）**: AIと独自データソースの組み合わせ
 - **関数呼び出し**: カスタムツールやプラグインでAI機能を拡張
 - **[→ 第3章を始める](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **第4章：実践的応用とプロジェクト**
-- **ペットストーリージェネレーター** (`petstory/`): GitHub Modelsを使ったクリエイティブなコンテンツ生成
+- **ペットストーリー生成器** (`petstory/`): GitHub Modelsを使ったクリエイティブなコンテンツ生成
 - **Foundryローカルデモ** (`foundrylocal/`): OpenAI Java SDKを使ったローカルAIモデル統合
 - **MCP計算サービス** (`calculator/`): Spring AIを使った基本的なモデルコンテキストプロトコル実装
 - **[→ 第4章を始める](./04-PracticalSamples/README.md)**
 
 ### **第5章：責任あるAI開発**
 - **GitHub Modelsの安全性**: 組み込みのコンテンツフィルタリングと安全機構のテスト（ハードブロックとソフト拒否）
-- **責任あるAIデモ**: 現代のAI安全システムの実践的な動作例
+- **責任あるAIデモ**: 現代のAI安全システムが実際にどのように機能するかのハンズオン例
 - **ベストプラクティス**: 倫理的なAI開発と展開のための必須ガイドライン
 - **[→ 第5章を始める](./05-ResponsibleGenAI/README.md)**
 
@@ -122,5 +133,5 @@ AIアプリの構築で行き詰まったり質問がある場合は、MCPに関
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**：  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は一切責任を負いかねます。
+本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の確保に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は責任を負いかねます。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

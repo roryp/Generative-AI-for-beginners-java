@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T14:25:11+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T10:09:34+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Tijdsinvestering**: De hele workshop kan online worden voltooid zonder lokale installatie. Het opzetten van de omgeving duurt 2 minuten, het verkennen van de voorbeelden kost 1-3 uur afhankelijk van de diepgang van de verkenning.
 
-> **Snelstart**
+> **Snel aan de slag**
 
 1. Fork deze repository naar je GitHub-account
 2. Klik op **Code** → tabblad **Codespaces** → **...** → **Nieuw met opties...**
@@ -22,6 +22,17 @@ CO_OP_TRANSLATOR_METADATA:
 4. Klik op **Codespace maken**
 5. Wacht ~2 minuten tot de omgeving klaar is
 6. Ga direct naar [Het eerste voorbeeld](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+
+> **Liever lokaal klonen?**
+>
+> Deze repository bevat meer dan 50 taalvertalingen, wat de downloadgrootte aanzienlijk vergroot. Om te klonen zonder vertalingen, gebruik sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Dit geeft je alles wat je nodig hebt om de cursus te voltooien met een veel snellere download.
+
 
 ## Meertalige Ondersteuning
 
@@ -34,10 +45,10 @@ CO_OP_TRANSLATOR_METADATA:
 ## Cursusstructuur & Leerpad
 
 ### **Hoofdstuk 1: Introductie tot Generatieve AI**
-- **Kernconcepten**: Begrip van Grote Taalmodellen, tokens, embeddings en AI-mogelijkheden
+- **Kernconcepten**: Begrip van grote taalmodellen, tokens, embeddings en AI-mogelijkheden
 - **Java AI Ecosysteem**: Overzicht van Spring AI en OpenAI SDK's
 - **Model Context Protocol**: Introductie tot MCP en de rol ervan in AI-agentcommunicatie
-- **Praktische Toepassingen**: Praktijkvoorbeelden zoals chatbots en contentgeneratie
+- **Praktische Toepassingen**: Praktijksituaties zoals chatbots en contentgeneratie
 - **[→ Start Hoofdstuk 1](./01-IntroToGenAI/README.md)**
 
 ### **Hoofdstuk 2: Ontwikkelomgeving Opzetten**
@@ -60,9 +71,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **MCP Calculator Service** (`calculator/`): Basisimplementatie van Model Context Protocol met Spring AI
 - **[→ Start Hoofdstuk 4](./04-PracticalSamples/README.md)**
 
-### **Hoofdstuk 5: Verantwoorde AI-ontwikkeling**
+### **Hoofdstuk 5: Verantwoordelijke AI-ontwikkeling**
 - **GitHub Models Veiligheid**: Test ingebouwde contentfiltering en veiligheidsmechanismen (harde blokkades en zachte weigeringen)
-- **Verantwoorde AI Demo**: Praktijkvoorbeeld dat laat zien hoe moderne AI-veiligheidssystemen werken
+- **Verantwoordelijke AI Demo**: Praktijkvoorbeeld dat laat zien hoe moderne AI-veiligheidssystemen werken
 - **Best Practices**: Essentiële richtlijnen voor ethische AI-ontwikkeling en -implementatie
 - **[→ Start Hoofdstuk 5](./05-ResponsibleGenAI/README.md)**
 
@@ -97,7 +108,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![AI voor Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Cybersecurity voor Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Webontwikkeling voor Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT voor Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
@@ -108,9 +119,9 @@ CO_OP_TRANSLATOR_METADATA:
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## Hulp Krijgen
+## Hulp krijgen
 
-Als je vastloopt of vragen hebt over het bouwen van AI-apps. Doe mee met medeleerlingen en ervaren ontwikkelaars in discussies over MCP. Het is een ondersteunende gemeenschap waar vragen welkom zijn en kennis vrijelijk wordt gedeeld.
+Als je vastloopt of vragen hebt over het bouwen van AI-apps. Doe mee met medeleerlingen en ervaren ontwikkelaars in discussies over MCP. Het is een ondersteunende gemeenschap waar vragen welkom zijn en kennis vrij wordt gedeeld.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 

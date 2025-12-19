@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T14:58:59+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T10:42:52+00:00",
   "source_file": "README.md",
   "language_code": "te"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.te.png)
 
-**సమయ కేటాయింపు**: మొత్తం వర్క్‌షాప్‌ను స్థానిక సెటప్ లేకుండా ఆన్‌లైన్‌లో పూర్తి చేయవచ్చు. వాతావరణ సెటప్‌కు 2 నిమిషాలు పడుతుంది, నమూనాలను అన్వేషించడానికి అన్వేషణ లోతు ఆధారంగా 1-3 గంటలు అవసరం.
+**సమయ కట్టుబాటు**: మొత్తం వర్క్‌షాప్‌ను స్థానిక సెటప్ లేకుండా ఆన్‌లైన్‌లో పూర్తి చేయవచ్చు. వాతావరణ సెటప్‌కు 2 నిమిషాలు పడుతుంది, నమూనాలను అన్వేషించడానికి అన్వేషణ లోతు ఆధారంగా 1-3 గంటలు అవసరం.
 
 > **త్వరిత ప్రారంభం**
 
@@ -20,44 +20,55 @@ CO_OP_TRANSLATOR_METADATA:
 2. **Code** → **Codespaces** ట్యాబ్ → **...** → **New with options...** క్లిక్ చేయండి
 3. డిఫాల్ట్స్ ఉపయోగించండి – ఇది ఈ కోర్సు కోసం సృష్టించిన డెవలప్‌మెంట్ కంటైనర్‌ను ఎంచుకుంటుంది
 4. **Create codespace** క్లిక్ చేయండి
-5. వాతావరణం సిద్ధంగా ఉండడానికి సుమారు 2 నిమిషాలు వేచి ఉండండి
-6. నేరుగా [మొదటి ఉదాహరణ](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token) కు వెళ్లండి
+5. వాతావరణం సిద్ధంగా ఉండేందుకు సుమారు 2 నిమిషాలు వేచి ఉండండి
+6. నేరుగా [మొదటి ఉదాహరణ](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)కి వెళ్లండి
+
+> **స్థానికంగా క్లోన్ చేయాలనుకుంటున్నారా?**
+>
+> ఈ రిపోజిటరీ 50+ భాషా అనువాదాలను కలిగి ఉంది, ఇది డౌన్లోడ్ పరిమాణాన్ని గణనీయంగా పెంచుతుంది. అనువాదాలు లేకుండా క్లోన్ చేయడానికి, స్పార్స్ చెకౌట్ ఉపయోగించండి:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> ఇది కోర్సును పూర్తి చేయడానికి అవసరమైన అన్ని విషయాలను చాలా వేగంగా డౌన్లోడ్ చేస్తుంది.
+
 
 ## బహుభాషా మద్దతు
 
 ### GitHub Action ద్వారా మద్దతు (ఆటోమేటెడ్ & ఎప్పుడూ తాజా)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](./README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[అరబిక్](../ar/README.md) | [బెంగాలీ](../bn/README.md) | [బల్గేరియన్](../bg/README.md) | [బర్మీస్ (మయన్మార్)](../my/README.md) | [చైనీస్ (సింప్లిఫైడ్)](../zh/README.md) | [చైనీస్ (ట్రాడిషనల్, హాంకాంగ్)](../hk/README.md) | [చైనీస్ (ట్రాడిషనల్, మకావు)](../mo/README.md) | [చైనీస్ (ట్రాడిషనల్, తైవాన్)](../tw/README.md) | [క్రొయేషియన్](../hr/README.md) | [చెక్](../cs/README.md) | [డానిష్](../da/README.md) | [డచ్](../nl/README.md) | [ఎస్టోనియన్](../et/README.md) | [ఫిన్నిష్](../fi/README.md) | [ఫ్రెంచ్](../fr/README.md) | [జర్మన్](../de/README.md) | [గ్రీకు](../el/README.md) | [హీబ్రూ](../he/README.md) | [హిందీ](../hi/README.md) | [హంగేరియన్](../hu/README.md) | [ఇండోనేషియన్](../id/README.md) | [ఇటాలియన్](../it/README.md) | [జపనీస్](../ja/README.md) | [కన్నడ](../kn/README.md) | [కొరియన్](../ko/README.md) | [లిథువేనియన్](../lt/README.md) | [మలయ్](../ms/README.md) | [మలయాళం](../ml/README.md) | [మరాఠీ](../mr/README.md) | [నేపాలి](../ne/README.md) | [నైజీరియన్ పిడ్జిన్](../pcm/README.md) | [నార్వేజియన్](../no/README.md) | [పర్షియన్ (ఫార్సీ)](../fa/README.md) | [పోలిష్](../pl/README.md) | [పోర్చుగీస్ (బ్రెజిల్)](../br/README.md) | [పోర్చుగీస్ (పోర్చుగల్)](../pt/README.md) | [పంజాబీ (గుర్ముఖీ)](../pa/README.md) | [రోమానియన్](../ro/README.md) | [రష్యన్](../ru/README.md) | [సెర్బియన్ (సిరిలిక్)](../sr/README.md) | [స్లోవాక్](../sk/README.md) | [స్లోవేనియన్](../sl/README.md) | [స్పానిష్](../es/README.md) | [స్వాహిలి](../sw/README.md) | [స్వీడిష్](../sv/README.md) | [టాగాలాగ్ (ఫిలిపినో)](../tl/README.md) | [తమిళ్](../ta/README.md) | [తెలుగు](./README.md) | [థాయ్](../th/README.md) | [టర్కిష్](../tr/README.md) | [ఉక్రెయిన్](../uk/README.md) | [ఉర్దూ](../ur/README.md) | [వియత్నామీస్](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## కోర్సు నిర్మాణం & నేర్చుకునే మార్గం
 
 ### **అధ్యాయం 1: జనరేటివ్ AI పరిచయం**
-- **ప్రధాన భావనలు**: పెద్ద భాషా మోడల్స్, టోకెన్లు, ఎంబెడ్డింగ్స్, మరియు AI సామర్థ్యాల అవగాహన
-- **జావా AI ఎకోసిస్టమ్**: Spring AI మరియు OpenAI SDKs అవలోకనం
+- **మూల భావనలు**: పెద్ద భాషా నమూనాలు, టోకెన్లు, ఎంబెడ్డింగ్స్, మరియు AI సామర్థ్యాలను అర్థం చేసుకోవడం
+- **జావా AI ఎకోసిస్టమ్**: Spring AI మరియు OpenAI SDKల అవలోకనం
 - **మోడల్ కాంటెక్స్ట్ ప్రోటోకాల్**: MCP పరిచయం మరియు AI ఏజెంట్ కమ్యూనికేషన్‌లో దాని పాత్ర
-- **ప్రయోజనాత్మక అనువర్తనాలు**: చాట్‌బాట్లు మరియు కంటెంట్ జనరేషన్ వంటి వాస్తవ ప్రపంచ సన్నివేశాలు
+- **ప్రాయోగిక అనువర్తనాలు**: చాట్‌బాట్లు మరియు కంటెంట్ జనరేషన్ వంటి వాస్తవ ప్రపంచ పరిస్థితులు
 - **[→ అధ్యాయం 1 ప్రారంభించండి](./01-IntroToGenAI/README.md)**
 
 ### **అధ్యాయం 2: డెవలప్‌మెంట్ వాతావరణ సెటప్**
-- **బహు-ప్రొవైడర్ కాన్ఫిగరేషన్**: GitHub Models, Azure OpenAI, మరియు OpenAI Java SDK ఇంటిగ్రేషన్లు సెటప్ చేయండి
+- **బహు-ప్రొవైడర్ కాన్ఫిగరేషన్**: GitHub Models, Azure OpenAI, మరియు OpenAI Java SDK ఇంటిగ్రేషన్ల సెటప్
 - **Spring Boot + Spring AI**: ఎంటర్ప్రైజ్ AI అప్లికేషన్ అభివృద్ధి కోసం ఉత్తమ పద్ధతులు
 - **GitHub Models**: ప్రోటోటైపింగ్ మరియు నేర్చుకోవడానికి ఉచిత AI మోడల్ యాక్సెస్ (క్రెడిట్ కార్డు అవసరం లేదు)
-- **డెవలప్‌మెంట్ టూల్స్**: Docker కంటైనర్లు, VS Code, మరియు GitHub Codespaces కాన్ఫిగరేషన్
+- **డెవలప్‌మెంట్ టూల్స్**: Docker కంటైనర్లు, VS కోడ్, మరియు GitHub Codespaces కాన్ఫిగరేషన్
 - **[→ అధ్యాయం 2 ప్రారంభించండి](./02-SetupDevEnvironment/README.md)**
 
-### **అధ్యాయం 3: ప్రధాన జనరేటివ్ AI సాంకేతికతలు**
+### **అధ్యాయం 3: కోర్ జనరేటివ్ AI సాంకేతికతలు**
 - **ప్రాంప్ట్ ఇంజనీరింగ్**: ఉత్తమ AI మోడల్ ప్రతిస్పందనల కోసం సాంకేతికతలు
 - **ఎంబెడ్డింగ్స్ & వెక్టర్ ఆపరేషన్స్**: సేమాంటిక్ సెర్చ్ మరియు సారూప్యత మ్యాచ్ చేయడం అమలు చేయండి
-- **రిట్రీవల్-ఆగ్మెంటెడ్ జనరేషన్ (RAG)**: మీ స్వంత డేటా మూలాలతో AI కలపండి
+- **రిట్రీవల్-ఆగ్మెంటెడ్ జనరేషన్ (RAG)**: మీ స్వంత డేటా మూలాలతో AIని కలపండి
 - **ఫంక్షన్ కాలింగ్**: కస్టమ్ టూల్స్ మరియు ప్లగిన్లతో AI సామర్థ్యాలను విస్తరించండి
 - **[→ అధ్యాయం 3 ప్రారంభించండి](./03-CoreGenerativeAITechniques/README.md)**
 
-### **అధ్యాయం 4: ప్రయోగాత్మక అనువర్తనాలు & ప్రాజెక్టులు**
+### **అధ్యాయం 4: ప్రాయోగిక అనువర్తనాలు & ప్రాజెక్టులు**
 - **పెట్ స్టోరీ జనరేటర్** (`petstory/`): GitHub Models తో సృజనాత్మక కంటెంట్ జనరేషన్
-- **Foundry Local డెమో** (`foundrylocal/`): OpenAI Java SDK తో స్థానిక AI మోడల్ ఇంటిగ్రేషన్
-- **MCP క్యాల్క్యులేటర్ సర్వీస్** (`calculator/`): Spring AI తో ప్రాథమిక మోడల్ కాంటెక్స్ట్ ప్రోటోకాల్ అమలు
+- **Foundry Local డెమో** (`foundrylocal/`): OpenAI Java SDKతో స్థానిక AI మోడల్ ఇంటిగ్రేషన్
+- **MCP క్యాల్క్యులేటర్ సర్వీస్** (`calculator/`): Spring AIతో ప్రాథమిక మోడల్ కాంటెక్స్ట్ ప్రోటోకాల్ అమలు
 - **[→ అధ్యాయం 4 ప్రారంభించండి](./04-PracticalSamples/README.md)**
 
 ### **అధ్యాయం 5: బాధ్యతాయుత AI అభివృద్ధి**
@@ -75,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
 
-### Azure / Edge / MCP / ఏజెంట్లు
+### Azure / ఎడ్జ్ / MCP / ఏజెంట్లు
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -91,7 +102,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### ప్రాథమిక అభ్యాసం
+### కోర్ లెర్నింగ్
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -110,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## సహాయం పొందడం
 
-మీరు అడ్డుకుపోయినట్లయితే లేదా AI యాప్స్ నిర్మాణం గురించి ఏవైనా ప్రశ్నలు ఉంటే. MCP గురించి చర్చల్లో సహచర అభ్యాసకులు మరియు అనుభవజ్ఞులైన డెవలపర్లతో చేరండి. ఇది ప్రశ్నలు స్వాగతించబడే మరియు జ్ఞానం స్వేచ్ఛగా పంచుకునే మద్దతు సమాజం.
+మీరు అడ్డుకుపోయినట్లయితే లేదా AI యాప్స్ నిర్మాణం గురించి ఏవైనా ప్రశ్నలు ఉంటే. MCP గురించి చర్చల్లో ఇతర అభ్యాసకులు మరియు అనుభవజ్ఞులైన డెవలపర్లతో చేరండి. ఇది ప్రశ్నలు స్వాగతించబడే మరియు జ్ఞానం స్వేచ్ఛగా పంచుకునే మద్దతు సమాజం.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -122,5 +133,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **అస్పష్టత**:  
-ఈ పత్రాన్ని AI అనువాద సేవ [Co-op Translator](https://github.com/Azure/co-op-translator) ఉపయోగించి అనువదించబడింది. మేము ఖచ్చితత్వానికి ప్రయత్నించినప్పటికీ, ఆటోమేటెడ్ అనువాదాల్లో పొరపాట్లు లేదా తప్పిదాలు ఉండవచ్చు. మూల పత్రం దాని స్వదేశీ భాషలో అధికారిక మూలంగా పరిగణించాలి. ముఖ్యమైన సమాచారానికి, ప్రొఫెషనల్ మానవ అనువాదం సిఫార్సు చేయబడుతుంది. ఈ అనువాదం వాడకంలో ఏర్పడిన ఏవైనా అపార్థాలు లేదా తప్పుదారితీసే అర్థాలు కోసం మేము బాధ్యత వహించము.
+ఈ పత్రాన్ని AI అనువాద సేవ [Co-op Translator](https://github.com/Azure/co-op-translator) ఉపయోగించి అనువదించబడింది. మేము ఖచ్చితత్వానికి ప్రయత్నించినప్పటికీ, ఆటోమేటెడ్ అనువాదాల్లో పొరపాట్లు లేదా తప్పిదాలు ఉండవచ్చు. అసలు పత్రం దాని స్వదేశీ భాషలోనే అధికారిక మూలంగా పరిగణించాలి. ముఖ్యమైన సమాచారానికి, ప్రొఫెషనల్ మానవ అనువాదం సిఫార్సు చేయబడుతుంది. ఈ అనువాదం వాడకంలో ఏర్పడిన ఏవైనా అపార్థాలు లేదా తప్పుదారితీసే అర్థాలు కోసం మేము బాధ్యత వహించము.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

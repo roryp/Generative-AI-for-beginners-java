@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T14:40:29+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T10:26:18+00:00",
   "source_file": "README.md",
   "language_code": "ro"
 }
@@ -12,20 +12,31 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Inteligență Artificială Generativă pentru Începători - Ediția Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ro.png)
 
-**Timp necesar**: Întregul atelier poate fi finalizat online fără configurare locală. Configurarea mediului durează 2 minute, iar explorarea exemplelor necesită 1-3 ore, în funcție de adâncimea explorării.
+**Timp necesar**: Întregul atelier poate fi finalizat online fără configurare locală. Configurarea mediului durează 2 minute, iar explorarea exemplelor necesită 1-3 ore în funcție de adâncimea explorării.
 
 > **Pornire rapidă** 
 
-1. Fă fork acestui depozit în contul tău GitHub
+1. Fă fork la acest depozit în contul tău GitHub
 2. Apasă pe **Code** → fila **Codespaces** → **...** → **New with options...**
 3. Folosește setările implicite – acestea vor selecta containerul de dezvoltare creat pentru acest curs
 4. Apasă pe **Create codespace**
 5. Așteaptă ~2 minute pentru ca mediul să fie gata
 6. Mergi direct la [Primul exemplu](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
+> **Preferi să clonezi local?**
+>
+> Acest depozit include peste 50 de traduceri în limbi diferite, ceea ce crește semnificativ dimensiunea descărcării. Pentru a clona fără traduceri, folosește sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Acest lucru îți oferă tot ce ai nevoie pentru a finaliza cursul cu o descărcare mult mai rapidă.
+
+
 ## Suport Multilingv
 
-### Suportat prin GitHub Action (Automatizat & Întotdeauna Actualizat)
+### Suportat prin GitHub Action (Automatizat și Întotdeauna Actualizat)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabă](../ar/README.md) | [Bengaleză](../bn/README.md) | [Bulgară](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chineză (Simplificată)](../zh/README.md) | [Chineză (Tradițională, Hong Kong)](../hk/README.md) | [Chineză (Tradițională, Macau)](../mo/README.md) | [Chineză (Tradițională, Taiwan)](../tw/README.md) | [Croată](../hr/README.md) | [Cehă](../cs/README.md) | [Daneză](../da/README.md) | [Olandeză](../nl/README.md) | [Estonă](../et/README.md) | [Finlandeză](../fi/README.md) | [Franceză](../fr/README.md) | [Germană](../de/README.md) | [Greacă](../el/README.md) | [Ebraică](../he/README.md) | [Hindi](../hi/README.md) | [Maghiară](../hu/README.md) | [Indoneziană](../id/README.md) | [Italiană](../it/README.md) | [Japoneză](../ja/README.md) | [Kannada](../kn/README.md) | [Coreeană](../ko/README.md) | [Lituaniană](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepaleză](../ne/README.md) | [Pidgin Nigerian](../pcm/README.md) | [Norvegiană](../no/README.md) | [Persană (Farsi)](../fa/README.md) | [Poloneză](../pl/README.md) | [Portugheză (Brazilia)](../br/README.md) | [Portugheză (Portugalia)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Română](./README.md) | [Rusă](../ru/README.md) | [Sârbă (Chirilică)](../sr/README.md) | [Slovacă](../sk/README.md) | [Slovenă](../sl/README.md) | [Spaniolă](../es/README.md) | [Swahili](../sw/README.md) | [Suedeză](../sv/README.md) | [Tagalog (Filipineză)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thailandeză](../th/README.md) | [Turcă](../tr/README.md) | [Ucraineană](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnameză](../vi/README.md)
@@ -34,7 +45,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Structura Cursului & Parcursul de Învățare
 
 ### **Capitolul 1: Introducere în Inteligența Artificială Generativă**
-- **Concepte de bază**: Înțelegerea modelelor mari de limbaj, tokenilor, embedding-urilor și capabilităților AI
+- **Concepte de bază**: Înțelegerea modelelor mari de limbaj, token-urilor, embedding-urilor și capabilităților AI
 - **Ecosistemul AI Java**: Prezentare generală a SDK-urilor Spring AI și OpenAI
 - **Protocolul Contextului Modelului**: Introducere în MCP și rolul său în comunicarea agenților AI
 - **Aplicații practice**: Scenarii reale, inclusiv chatboți și generare de conținut
@@ -51,7 +62,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Ingineria prompturilor**: Tehnici pentru răspunsuri optime ale modelelor AI
 - **Embedding-uri & operații vectoriale**: Implementarea căutării semantice și potrivirii similitudinii
 - **Generare augmentată prin recuperare (RAG)**: Combină AI cu propriile surse de date
-- **Apelarea funcțiilor**: Extinde capabilitățile AI cu unelte și pluginuri personalizate
+- **Apelarea funcțiilor**: Extinde capabilitățile AI cu unelte și plugin-uri personalizate
 - **[→ Începe Capitolul 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Capitolul 4: Aplicații practice & Proiecte**
@@ -93,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
  
 ### Învățare de bază
 [![ML pentru Începători](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![Știința datelor pentru Începători](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science pentru Începători](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI pentru Începători](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Securitate cibernetică pentru Începători](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Dezvoltare web pentru Începători](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
@@ -114,7 +125,7 @@ Dacă întâmpini dificultăți sau ai întrebări despre construirea aplicații
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Dacă ai feedback despre produs sau erori în timpul dezvoltării, vizitează:
+Dacă ai feedback despre produs sau erori în timpul construirii, vizitează:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -122,5 +133,5 @@ Dacă ai feedback despre produs sau erori în timpul dezvoltării, vizitează:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

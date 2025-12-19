@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T14:35:53+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T10:20:45+00:00",
   "source_file": "README.md",
   "language_code": "hu"
 }
@@ -21,7 +21,18 @@ CO_OP_TRANSLATOR_METADATA:
 3. Használd az alapértelmezetteket – ez kiválasztja a tanfolyamhoz létrehozott fejlesztői konténert
 4. Kattints a **Codespace létrehozása** gombra
 5. Várj kb. 2 percet, amíg a környezet készen áll
-6. Ugorj egyenesen az [Első példához](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+6. Ugorj közvetlenül az [Első példához](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+
+> **Inkább helyileg klónoznád?**
+>
+> Ez a tároló több mint 50 nyelvi fordítást tartalmaz, ami jelentősen megnöveli a letöltési méretet. Ha fordítások nélkül szeretnéd klónozni, használj sparse checkout-ot:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Ez mindent megad, amire szükséged van a tanfolyam elvégzéséhez, sokkal gyorsabb letöltéssel.
+
 
 ## Többnyelvű támogatás
 
@@ -34,37 +45,37 @@ CO_OP_TRANSLATOR_METADATA:
 ## Tanfolyam felépítése és tanulási útvonal
 
 ### **1. fejezet: Bevezetés a generatív mesterséges intelligenciába**
-- **Alapfogalmak**: Nagy nyelvi modellek, tokenek, beágyazások és az MI képességeinek megértése
+- **Alapfogalmak**: Nagy nyelvi modellek, tokenek, beágyazások és MI képességek megértése
 - **Java MI ökoszisztéma**: Áttekintés a Spring AI és OpenAI SDK-król
 - **Model Context Protocol**: Bevezetés az MCP-be és szerepe az MI ügynökök közötti kommunikációban
 - **Gyakorlati alkalmazások**: Valós példák, beleértve chatbotokat és tartalomgenerálást
-- **[→ Kezdje az 1. fejezettel](./01-IntroToGenAI/README.md)**
+- **[→ Kezdés az 1. fejezettel](./01-IntroToGenAI/README.md)**
 
 ### **2. fejezet: Fejlesztői környezet beállítása**
-- **Több szolgáltató konfigurációja**: GitHub modellek, Azure OpenAI és OpenAI Java SDK integrációk beállítása
+- **Többszolgáltatós konfiguráció**: GitHub modellek, Azure OpenAI és OpenAI Java SDK integrációk beállítása
 - **Spring Boot + Spring AI**: Legjobb gyakorlatok vállalati MI alkalmazások fejlesztéséhez
 - **GitHub modellek**: Ingyenes MI modell hozzáférés prototípus készítéshez és tanuláshoz (bankkártya nem szükséges)
 - **Fejlesztői eszközök**: Docker konténerek, VS Code és GitHub Codespaces konfiguráció
-- **[→ Kezdje a 2. fejezettel](./02-SetupDevEnvironment/README.md)**
+- **[→ Kezdés a 2. fejezettel](./02-SetupDevEnvironment/README.md)**
 
 ### **3. fejezet: Alapvető generatív MI technikák**
 - **Prompt tervezés**: Technikák az optimális MI modell válaszokhoz
-- **Beágyazások és vektor műveletek**: Szemantikus keresés és hasonlóság alapú egyeztetés megvalósítása
+- **Beágyazások és vektorműveletek**: Szemantikus keresés és hasonlóság alapú egyeztetés megvalósítása
 - **Retrieval-Augmented Generation (RAG)**: MI kombinálása saját adatforrásaiddal
-- **Funkcióhívás**: Az MI képességek bővítése egyedi eszközökkel és bővítményekkel
-- **[→ Kezdje a 3. fejezettel](./03-CoreGenerativeAITechniques/README.md)**
+- **Funkcióhívás**: MI képességek bővítése egyedi eszközökkel és bővítményekkel
+- **[→ Kezdés a 3. fejezettel](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **4. fejezet: Gyakorlati alkalmazások és projektek**
 - **Háziállat történet generátor** (`petstory/`): Kreatív tartalomgenerálás GitHub modellekkel
 - **Foundry helyi demó** (`foundrylocal/`): Helyi MI modell integráció OpenAI Java SDK-val
-- **MCP kalkulátor szolgáltatás** (`calculator/`): Alap Model Context Protocol megvalósítás Spring AI-val
-- **[→ Kezdje a 4. fejezettel](./04-PracticalSamples/README.md)**
+- **MCP számológép szolgáltatás** (`calculator/`): Alap Model Context Protocol megvalósítás Spring AI-val
+- **[→ Kezdés a 4. fejezettel](./04-PracticalSamples/README.md)**
 
 ### **5. fejezet: Felelős MI fejlesztés**
 - **GitHub modellek biztonsága**: Beépített tartalomszűrés és biztonsági mechanizmusok tesztelése (kemény blokkok és lágy elutasítások)
 - **Felelős MI demó**: Gyakorlati példa arra, hogyan működnek a modern MI biztonsági rendszerek
-- **Legjobb gyakorlatok**: Alapvető irányelvek az etikus MI fejlesztéshez és bevezetéshez
-- **[→ Kezdje az 5. fejezettel](./05-ResponsibleGenAI/README.md)**
+- **Legjobb gyakorlatok**: Alapvető irányelvek etikus MI fejlesztéshez és bevezetéshez
+- **[→ Kezdés az 5. fejezettel](./05-ResponsibleGenAI/README.md)**
 
 ## További források
 
@@ -97,7 +108,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![MI kezdőknek](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Kiberbiztonság kezdőknek](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Webfejlesztés kezdőknek](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT kezdőknek](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
@@ -110,17 +121,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Segítségkérés
 
-Ha elakadsz vagy kérdéseid vannak az AI alkalmazások fejlesztésével kapcsolatban, csatlakozz más tanulókhoz és tapasztalt fejlesztőkhöz az MCP-ről szóló beszélgetésekben. Ez egy támogató közösség, ahol a kérdések szívesen látottak, és a tudás szabadon megosztott.
+Ha elakad vagy kérdése van az AI alkalmazások fejlesztésével kapcsolatban, csatlakozzon a többi tanulóhoz és tapasztalt fejlesztőhöz az MCP-vel kapcsolatos beszélgetésekben. Ez egy támogató közösség, ahol a kérdések szívesen látottak és a tudás szabadon megosztott.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Ha termék visszajelzésed vagy hibákba ütközöl a fejlesztés során, látogass el ide:
+Ha termék visszajelzése vagy hibák vannak a fejlesztés során, látogasson el ide:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Jogi nyilatkozat**:
-Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+**Jogi nyilatkozat**:  
+Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

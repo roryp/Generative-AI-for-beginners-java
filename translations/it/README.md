@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c5788d166402261b1133c3b3865eb79",
-  "translation_date": "2025-12-17T14:11:16+00:00",
+  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
+  "translation_date": "2025-12-18T09:55:23+00:00",
   "source_file": "README.md",
   "language_code": "it"
 }
@@ -17,11 +17,22 @@ CO_OP_TRANSLATOR_METADATA:
 > **Avvio Rapido** 
 
 1. Fai il fork di questo repository sul tuo account GitHub
-2. Clicca su **Code** → scheda **Codespaces** → **...** → **Nuovo con opzioni...**
+2. Clicca su **Code** → scheda **Codespaces** → **...** → **New with options...**
 3. Usa le impostazioni predefinite – questo selezionerà il contenitore di sviluppo creato per questo corso
-4. Clicca su **Crea codespace**
+4. Clicca su **Create codespace**
 5. Attendi circa 2 minuti che l'ambiente sia pronto
 6. Vai direttamente a [Il primo esempio](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+
+> **Preferisci Clonare Localmente?**
+>
+> Questo repository include oltre 50 traduzioni linguistiche che aumentano significativamente la dimensione del download. Per clonare senza traduzioni, usa il checkout sparso:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Questo ti fornisce tutto il necessario per completare il corso con un download molto più veloce.
+
 
 ## Supporto Multilingue
 
@@ -34,28 +45,28 @@ CO_OP_TRANSLATOR_METADATA:
 ## Struttura del Corso e Percorso di Apprendimento
 
 ### **Capitolo 1: Introduzione all'Intelligenza Artificiale Generativa**
-- **Concetti Fondamentali**: Comprendere i Modelli di Linguaggio di Grandi Dimensioni, token, embeddings e capacità dell'IA
-- **Ecosistema Java AI**: Panoramica di Spring AI e SDK OpenAI
-- **Protocollo del Contesto del Modello**: Introduzione a MCP e al suo ruolo nella comunicazione degli agenti AI
+- **Concetti Fondamentali**: Comprendere i Large Language Models, token, embeddings e capacità dell'IA
+- **Ecosistema AI Java**: Panoramica di Spring AI e SDK OpenAI
+- **Protocollo Model Context**: Introduzione a MCP e il suo ruolo nella comunicazione degli agenti AI
 - **Applicazioni Pratiche**: Scenari reali inclusi chatbot e generazione di contenuti
 - **[→ Inizia Capitolo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capitolo 2: Configurazione dell'Ambiente di Sviluppo**
 - **Configurazione Multi-Provider**: Configura GitHub Models, Azure OpenAI e integrazioni OpenAI Java SDK
-- **Spring Boot + Spring AI**: Best practice per lo sviluppo di applicazioni AI aziendali
-- **GitHub Models**: Accesso gratuito ai modelli AI per prototipazione e apprendimento (non è richiesta carta di credito)
+- **Spring Boot + Spring AI**: Best practice per lo sviluppo di applicazioni AI enterprise
+- **GitHub Models**: Accesso gratuito a modelli AI per prototipazione e apprendimento (non serve carta di credito)
 - **Strumenti di Sviluppo**: Contenitori Docker, VS Code e configurazione GitHub Codespaces
 - **[→ Inizia Capitolo 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capitolo 3: Tecniche Fondamentali di Intelligenza Artificiale Generativa**
 - **Prompt Engineering**: Tecniche per risposte ottimali dai modelli AI
-- **Embeddings e Operazioni Vettoriali**: Implementa ricerca semantica e matching di similarità
-- **Retrieval-Augmented Generation (RAG)**: Combina l'IA con le tue fonti di dati
+- **Embeddings & Operazioni Vettoriali**: Implementa ricerca semantica e matching di similarità
+- **Retrieval-Augmented Generation (RAG)**: Combina AI con le tue fonti di dati
 - **Function Calling**: Estendi le capacità AI con strumenti e plugin personalizzati
 - **[→ Inizia Capitolo 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Capitolo 4: Applicazioni Pratiche e Progetti**
-- **Generatore di Storie per Animali Domestici** (`petstory/`): Generazione creativa di contenuti con GitHub Models
+### **Capitolo 4: Applicazioni Pratiche & Progetti**
+- **Generatore di Storie per Animali** (`petstory/`): Generazione creativa di contenuti con GitHub Models
 - **Demo Locale Foundry** (`foundrylocal/`): Integrazione locale di modelli AI con OpenAI Java SDK
 - **Servizio Calcolatore MCP** (`calculator/`): Implementazione base del Model Context Protocol con Spring AI
 - **[→ Inizia Capitolo 4](./04-PracticalSamples/README.md)**
@@ -63,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Capitolo 5: Sviluppo Responsabile dell'IA**
 - **Sicurezza GitHub Models**: Testa i filtri di contenuto integrati e i meccanismi di sicurezza (blocchi rigidi e rifiuti soft)
 - **Demo di IA Responsabile**: Esempio pratico che mostra come funzionano i moderni sistemi di sicurezza AI
-- **Best Practice**: Linee guida essenziali per uno sviluppo e un deployment etici dell'IA
+- **Best Practice**: Linee guida essenziali per uno sviluppo e deployment etico dell'IA
 - **[→ Inizia Capitolo 5](./05-ResponsibleGenAI/README.md)**
 
 ## Risorse Aggiuntive
@@ -97,15 +108,15 @@ CO_OP_TRANSLATOR_METADATA:
 [![IA per Principianti](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Cybersecurity per Principianti](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Sviluppo Web per Principianti](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT per Principianti](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![Sviluppo XR per Principianti](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Serie Copilot
-[![Copilot per Programmazione Affiancata AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot per C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Avventura Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Ottenere Aiuto
