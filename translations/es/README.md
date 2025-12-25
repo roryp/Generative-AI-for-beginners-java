@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:31:03+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T09:45:39+00:00",
   "source_file": "README.md",
   "language_code": "es"
 }
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **¿Prefieres Clonar Localmente?**
 >
-> Este repositorio incluye más de 50 traducciones de idiomas que aumentan significativamente el tamaño de la descarga. Para clonar sin traducciones, usa sparse checkout:
+> Este repositorio incluye más de 50 traducciones de idiomas, lo que aumenta significativamente el tamaño de la descarga. Para clonar sin traducciones, usa sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Comenzar Capítulo 4](./04-PracticalSamples/README.md)**
 
 ### **Capítulo 5: Desarrollo Responsable de IA**
-- **Seguridad en GitHub Models**: Prueba filtros de contenido integrados y mecanismos de seguridad (bloqueos estrictos y rechazos suaves)
+- **Seguridad en GitHub Models**: Prueba los filtros de contenido y mecanismos de seguridad integrados (bloqueos duros y rechazos suaves)
 - **Demo de IA Responsable**: Ejemplo práctico que muestra cómo funcionan los sistemas modernos de seguridad en IA
 - **Mejores Prácticas**: Directrices esenciales para el desarrollo y despliegue ético de IA
 - **[→ Comenzar Capítulo 5](./05-ResponsibleGenAI/README.md)**

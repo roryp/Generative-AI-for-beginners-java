@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:36:33+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T09:50:10+00:00",
   "source_file": "README.md",
   "language_code": "ar"
 }
@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **مدة الالتزام**: يمكن إكمال الورشة بأكملها عبر الإنترنت دون إعداد محلي. يستغرق إعداد البيئة دقيقتين، مع استكشاف العينات الذي يتطلب من 1 إلى 3 ساعات حسب عمق الاستكشاف.
 
-> **البدء السريع**
+> **بدء سريع**
 
 1. قم بعمل فورك لهذا المستودع إلى حساب GitHub الخاص بك
 2. انقر على **Code** → علامة التبويب **Codespaces** → **...** → **New with options...**
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **تفضل الاستنساخ محليًا؟**
 >
-> يتضمن هذا المستودع أكثر من 50 ترجمة للغات مما يزيد بشكل كبير من حجم التنزيل. للاستنساخ بدون الترجمات، استخدم السحب الانتقائي:
+> يتضمن هذا المستودع أكثر من 50 ترجمة للغات مما يزيد بشكل كبير من حجم التنزيل. للاستنساخ بدون الترجمات، استخدم السحب الجزئي:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
@@ -54,21 +54,21 @@ CO_OP_TRANSLATOR_METADATA:
 ### **الفصل 2: إعداد بيئة التطوير**
 - **تكوين متعدد المزودين**: إعداد نماذج GitHub، Azure OpenAI، و OpenAI Java SDK
 - **Spring Boot + Spring AI**: أفضل الممارسات لتطوير تطبيقات الذكاء الاصطناعي للمؤسسات
-- **نماذج GitHub**: وصول مجاني لنماذج الذكاء الاصطناعي للنمذجة الأولية والتعلم (لا يتطلب بطاقة ائتمان)
+- **نماذج GitHub**: وصول مجاني لنماذج الذكاء الاصطناعي للنمذجة والتعلم (لا يتطلب بطاقة ائتمان)
 - **أدوات التطوير**: حاويات Docker، VS Code، وتكوين GitHub Codespaces
 - **[→ ابدأ الفصل 2](./02-SetupDevEnvironment/README.md)**
 
 ### **الفصل 3: تقنيات الذكاء الاصطناعي التوليدي الأساسية**
-- **هندسة المطالبات**: تقنيات للحصول على استجابات مثلى من نماذج الذكاء الاصطناعي
+- **هندسة المطالبات**: تقنيات للحصول على استجابات مثالية من نماذج الذكاء الاصطناعي
 - **التضمينات وعمليات المتجهات**: تنفيذ البحث الدلالي ومطابقة التشابه
 - **التوليد المعزز بالاسترجاع (RAG)**: دمج الذكاء الاصطناعي مع مصادر بياناتك الخاصة
-- **استدعاء الوظائف**: توسيع قدرات الذكاء الاصطناعي بالأدوات والإضافات المخصصة
+- **استدعاء الوظائف**: توسيع قدرات الذكاء الاصطناعي بأدوات وإضافات مخصصة
 - **[→ ابدأ الفصل 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **الفصل 4: التطبيقات العملية والمشاريع**
 - **مولد قصص الحيوانات الأليفة** (`petstory/`): توليد محتوى إبداعي باستخدام نماذج GitHub
-- **عرض Foundry المحلي** (`foundrylocal/`): دمج نموذج الذكاء الاصطناعي محليًا مع OpenAI Java SDK
-- **خدمة حاسبة MCP** (`calculator/`): تنفيذ أساسي لبروتوكول سياق النموذج مع Spring AI
+- **عرض Foundry المحلي** (`foundrylocal/`): دمج نموذج الذكاء الاصطناعي المحلي مع OpenAI Java SDK
+- **خدمة حاسبة MCP** (`calculator/`): تنفيذ أساسي لبروتوكول سياق النموذج باستخدام Spring AI
 - **[→ ابدأ الفصل 4](./04-PracticalSamples/README.md)**
 
 ### **الفصل 5: تطوير الذكاء الاصطناعي المسؤول**
@@ -109,7 +109,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![الأمن السيبراني للمبتدئين](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![تطوير الويب للمبتدئين](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![إنترنت الأشياء للمبتدئين](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![تطوير الواقع الممتد للمبتدئين](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![تطوير XR للمبتدئين](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
@@ -133,5 +133,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **إخلاء المسؤولية**:  
-تمت ترجمة هذا المستند باستخدام خدمة الترجمة الآلية [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الموثوق به. للمعلومات الهامة، يُنصح بالاعتماد على الترجمة البشرية المهنية. نحن غير مسؤولين عن أي سوء فهم أو تفسير ناتج عن استخدام هذه الترجمة.
+تمت ترجمة هذا المستند باستخدام خدمة الترجمة الآلية [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الموثوق به. للمعلومات الهامة، يُنصح بالاستعانة بترجمة بشرية محترفة. نحن غير مسؤولين عن أي سوء فهم أو تفسير ناتج عن استخدام هذه الترجمة.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

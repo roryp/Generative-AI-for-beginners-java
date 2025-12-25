@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:48:08+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:01:31+00:00",
   "source_file": "README.md",
   "language_code": "mr"
 }
@@ -47,12 +47,12 @@ CO_OP_TRANSLATOR_METADATA:
 ### **अध्याय १: जनरेटिव AI परिचय**
 - **मूलभूत संकल्पना**: मोठ्या भाषा मॉडेल्स, टोकन्स, एम्बेडिंग्ज आणि AI क्षमता समजून घेणे
 - **जावा AI परिसंस्था**: Spring AI आणि OpenAI SDKs चे आढावा
-- **मॉडेल संदर्भ प्रोटोकॉल**: MCP ची ओळख आणि AI एजंट संवादातील त्याची भूमिका
+- **मॉडेल संदर्भ प्रोटोकॉल**: MCP परिचय आणि AI एजंट संवादातील त्याची भूमिका
 - **व्यावहारिक अनुप्रयोग**: चॅटबॉट्स आणि सामग्री निर्मितीसह वास्तविक जगातील परिस्थिती
 - **[→ अध्याय १ सुरू करा](./01-IntroToGenAI/README.md)**
 
 ### **अध्याय २: विकास पर्यावरण सेटअप**
-- **मल्टी-प्रोव्हायडर कॉन्फिगरेशन**: GitHub Models, Azure OpenAI, आणि OpenAI Java SDK एकत्रीकरण सेट करा
+- **मल्टी-प्रोव्हायडर कॉन्फिगरेशन**: GitHub Models, Azure OpenAI, आणि OpenAI Java SDK एकत्रीकरण सेटअप करा
 - **Spring Boot + Spring AI**: एंटरप्राइझ AI अनुप्रयोग विकासासाठी सर्वोत्तम पद्धती
 - **GitHub Models**: प्रोटोटायपिंग आणि शिकण्यासाठी मोफत AI मॉडेल प्रवेश (क्रेडिट कार्ड आवश्यक नाही)
 - **विकास साधने**: Docker कंटेनर्स, VS Code, आणि GitHub Codespaces कॉन्फिगरेशन
@@ -125,7 +125,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-जर तुम्हाला उत्पादनाबाबत अभिप्राय किंवा त्रुटी आढळल्यास, तर येथे भेट द्या:
+जर तुम्हाला उत्पादनाबाबत अभिप्राय किंवा त्रुटी आढळल्यास, कृपया भेट द्या:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:28:04+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:39:37+00:00",
   "source_file": "README.md",
   "language_code": "bg"
 }
@@ -54,8 +54,8 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Глава 2: Настройка на средата за разработка**
 - **Конфигурация с множество доставчици**: Настройка на GitHub Models, Azure OpenAI и OpenAI Java SDK интеграции
 - **Spring Boot + Spring AI**: Най-добри практики за разработка на корпоративни AI приложения
-- **GitHub Models**: Безплатен достъп до AI модели за прототипиране и учене (без нужда от кредитна карта)
-- **Инструменти за разработка**: Docker контейнери, VS Code и GitHub Codespaces конфигурация
+- **GitHub Models**: Безплатен достъп до AI модели за прототипиране и обучение (без нужда от кредитна карта)
+- **Инструменти за разработка**: Docker контейнери, VS Code и конфигурация на GitHub Codespaces
 - **[→ Започнете Глава 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Глава 3: Основни техники за генеративен AI**
@@ -67,7 +67,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Глава 4: Практически приложения и проекти**
 - **Генератор на истории за домашни любимци** (`petstory/`): Креативно генериране на съдържание с GitHub Models
-- **Foundry локално демо** (`foundrylocal/`): Локална интеграция на AI модел с OpenAI Java SDK
+- **Локално демо на Foundry** (`foundrylocal/`): Локална интеграция на AI модел с OpenAI Java SDK
 - **MCP калкулатор услуга** (`calculator/`): Основна имплементация на Model Context Protocol със Spring AI
 - **[→ Започнете Глава 4](./04-PracticalSamples/README.md)**
 
@@ -116,7 +116,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### Серия Copilot
 [![Copilot за AI съвместно програмиране](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot за C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot приключение](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot Приключение](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Получаване на помощ

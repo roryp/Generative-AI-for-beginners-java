@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:42:59+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T09:56:38+00:00",
   "source_file": "README.md",
   "language_code": "ja"
 }
@@ -16,16 +16,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **クイックスタート**
 
-1. このリポジトリをあなたのGitHubアカウントにフォークします
-2. **Code** → **Codespaces** タブ → **...** → **New with options...** をクリックします
-3. デフォルトを使用します – これによりこのコース用に作成された開発コンテナが選択されます
-4. **Create codespace** をクリックします
-5. 環境が準備されるまで約2分待ちます
-6. すぐに[最初の例](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に進みます
+1. このリポジトリをあなたのGitHubアカウントにフォークする
+2. **Code** → **Codespaces** タブ → **...** → **New with options...** をクリック
+3. デフォルトを使用 – これにより本コース用に作成された開発コンテナが選択されます
+4. **Create codespace** をクリック
+5. 環境が準備されるまで約2分待つ
+6. すぐに[最初の例](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)に進む
 
 > **ローカルでクローンしたいですか？**
 >
-> このリポジトリには50以上の言語翻訳が含まれており、ダウンロードサイズが大幅に増加します。翻訳なしでクローンするには、スパースチェックアウトを使用してください：
+> このリポジトリには50以上の言語翻訳が含まれており、ダウンロードサイズが大幅に増加します。翻訳なしでクローンするにはスパースチェックアウトを使用してください：
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
@@ -72,8 +72,8 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ 第4章を始める](./04-PracticalSamples/README.md)**
 
 ### **第5章：責任あるAI開発**
-- **GitHub Modelsの安全性**: 組み込みのコンテンツフィルタリングと安全機構のテスト（ハードブロックとソフト拒否）
-- **責任あるAIデモ**: 現代のAI安全システムが実際にどのように機能するかのハンズオン例
+- **GitHub Modelsの安全性**: 組み込みのコンテンツフィルタリングと安全機構（ハードブロックとソフト拒否）のテスト
+- **責任あるAIデモ**: 現代のAI安全システムの実践的な動作例
 - **ベストプラクティス**: 倫理的なAI開発と展開のための必須ガイドライン
 - **[→ 第5章を始める](./05-ResponsibleGenAI/README.md)**
 
@@ -108,20 +108,20 @@ CO_OP_TRANSLATOR_METADATA:
 [![初心者向けAI](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![初心者向けサイバーセキュリティ](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![初心者向けWeb開発](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けIoT](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けXR開発](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Copilotシリーズ
-[![AIペアプログラミング用Copilot](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![C#/.NET用Copilot](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilotアドベンチャー](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+### Copilot シリーズ
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## ヘルプを得る
 
-AIアプリの構築で行き詰まったり質問がある場合は、MCPに関する議論に参加してください。質問が歓迎され、知識が自由に共有される支援的なコミュニティです。
+AIアプリの構築で行き詰まったり質問がある場合は、MCPについての議論に参加してください。質問が歓迎され、知識が自由に共有される支援的なコミュニティです。
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -133,5 +133,5 @@ AIアプリの構築で行き詰まったり質問がある場合は、MCPに関
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**：  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の確保に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は責任を負いかねます。
+本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じた誤解や誤訳について、当方は一切の責任を負いかねます。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

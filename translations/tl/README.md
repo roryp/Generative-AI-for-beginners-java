@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:17:26+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:30:19+00:00",
   "source_file": "README.md",
   "language_code": "tl"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **Mabilis na Simula** 
 
-1. I-fork ang repositoryong ito sa iyong GitHub account
+1. I-fork ang repository na ito sa iyong GitHub account
 2. I-click ang **Code** → tab na **Codespaces** → **...** → **New with options...**
 3. Gamitin ang mga default – pipiliin nito ang Development container na ginawa para sa kursong ito
 4. I-click ang **Create codespace**
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **Mas Gusto Mo Bang I-clone Lokal?**
 >
-> Kasama sa repositoryong ito ang 50+ na pagsasalin ng wika na malaki ang dagdag sa laki ng download. Para mag-clone nang walang mga pagsasalin, gamitin ang sparse checkout:
+> Kasama sa repository na ito ang 50+ na pagsasalin ng wika na malaki ang dagdag sa laki ng download. Para mag-clone nang walang mga pagsasalin, gamitin ang sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
@@ -45,7 +45,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Estruktura ng Kurso at Landas ng Pagkatuto
 
 ### **Kabanata 1: Panimula sa Generative AI**
-- **Pangunahing Konsepto**: Pag-unawa sa Malalaking Modelo ng Wika, mga token, embeddings, at kakayahan ng AI
+- **Pangunahing Konsepto**: Pag-unawa sa Malalaking Modelo ng Wika, tokens, embeddings, at kakayahan ng AI
 - **Java AI Ecosystem**: Pangkalahatang-ideya ng Spring AI at OpenAI SDKs
 - **Model Context Protocol**: Panimula sa MCP at ang papel nito sa komunikasyon ng AI agent
 - **Praktikal na Aplikasyon**: Mga totoong senaryo kabilang ang chatbots at paglikha ng nilalaman
@@ -132,6 +132,6 @@ Kung mayroon kang puna tungkol sa produkto o mga error habang nagtatayo, bisitah
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Paalala**:
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa kanyang sariling wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+**Paunawa**:
+Ang dokumentong ito ay isinalin gamit ang serbisyong AI na pagsasalin [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

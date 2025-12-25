@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:40:27+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:50:09+00:00",
   "source_file": "README.md",
   "language_code": "et"
 }
@@ -12,20 +12,20 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generatiivne tehisintellekt algajatele - Java väljaanne](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.et.png)
 
-**Aja nõudlus**: Terve töötuba saab lõpule viia veebis ilma kohalikku seadistust tegemata. Keskkonna seadistamine võtab 2 minutit, proovide uurimine nõuab 1-3 tundi, sõltuvalt uurimise sügavusest.
+**Aja nõudlus**: Kogu töötuba saab lõpule viia veebis ilma kohalikku seadistust tegemata. Keskkonna seadistamine võtab 2 minutit, proovide uurimine nõuab 1–3 tundi, sõltuvalt uurimise sügavusest.
 
 > **Kiire algus**
 
-1. Forki see hoidla oma GitHubi kontole
+1. Tee selle hoidla fork oma GitHubi kontole
 2. Klõpsa **Code** → **Codespaces** vahekaart → **...** → **New with options...**
 3. Kasuta vaikeseadeid – see valib selle kursuse jaoks loodud arenduskonteineri
 4. Klõpsa **Create codespace**
 5. Oota ~2 minutit, kuni keskkond on valmis
 6. Liigu otse [Esimese näite juurde](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-> **Eelistad kloonida lokaalselt?**
+> **Eelistad kloonida kohalikult?**
 >
-> See hoidla sisaldab üle 50 keele tõlke, mis suurendab oluliselt allalaadimise mahtu. Tõlgeteta kloonimiseks kasuta sparse checkouti:
+> See hoidla sisaldab üle 50 keele tõlget, mis suurendab oluliselt allalaadimise mahtu. Tõlgeteta kloonimiseks kasuta sparse checkout'i:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
@@ -47,7 +47,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Põhikontseptsioonid**: Suurte keelemudelite, tokenite, manuste ja tehisintellekti võimete mõistmine
 - **Java AI ökosüsteem**: Ülevaade Spring AI ja OpenAI SDK-dest
 - **Mudeli konteksti protokoll**: MCP tutvustus ja selle roll AI agentide suhtluses
-- **Praktilised rakendused**: Reaalsed stsenaariumid, sealhulgas vestlusrobotid ja sisuloome
+- **Praktilised rakendused**: Reaalmaailma stsenaariumid, sealhulgas vestlusrobotid ja sisuloomine
 - **[→ Alusta 1. peatükist](./01-IntroToGenAI/README.md)**
 
 ### **2. peatükk: Arenduskeskkonna seadistamine**
@@ -60,19 +60,19 @@ CO_OP_TRANSLATOR_METADATA:
 ### **3. peatükk: Põhilised generatiivse AI tehnikad**
 - **Promptide inseneriteadus**: Tehnikad AI mudelite optimaalseks vastamiseks
 - **Manused ja vektoroperatsioonid**: Semantilise otsingu ja sarnasuse sobitamise rakendamine
-- **Taastamisega rikastatud genereerimine (RAG)**: AI ühendamine oma andmeallikatega
-- **Funktsioonikõned**: AI võimendamine kohandatud tööriistade ja pistikprogrammidega
+- **Taastamisega täiustatud genereerimine (RAG)**: AI ühendamine oma andmeallikatega
+- **Funktsioonikõned**: AI võimete laiendamine kohandatud tööriistade ja pistikprogrammidega
 - **[→ Alusta 3. peatükist](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **4. peatükk: Praktilised rakendused ja projektid**
-- **Lemmiklooma loo generaator** (`petstory/`): Loov sisuloome GitHubi mudelitega
-- **Foundry lokaalne demo** (`foundrylocal/`): Kohalik AI mudeli integratsioon OpenAI Java SDK-ga
+- **Lemmiklooma loo generaator** (`petstory/`): Loov sisuloomine GitHubi mudelitega
+- **Foundry kohalik demo** (`foundrylocal/`): Kohalik AI mudeli integratsioon OpenAI Java SDK-ga
 - **MCP kalkulaatori teenus** (`calculator/`): Mudeli konteksti protokolli põhiline rakendus Spring AI-ga
 - **[→ Alusta 4. peatükist](./04-PracticalSamples/README.md)**
 
 ### **5. peatükk: Vastutustundlik AI arendus**
 - **GitHubi mudelite turvalisus**: Sisseehitatud sisufiltri ja turvamehhanismide testimine (rasked blokeeringud ja pehmed keeldumised)
-- **Vastutustundliku AI demo**: Praktiline näide, kuidas kaasaegsed AI turvasüsteemid töötavad
+- **Vastutustundliku AI demo**: Käed-külge näide, mis näitab, kuidas kaasaegsed AI turvasüsteemid praktikas toimivad
 - **Parimad tavad**: Eetilise AI arenduse ja juurutamise olulised juhised
 - **[→ Alusta 5. peatükist](./05-ResponsibleGenAI/README.md)**
 
@@ -93,7 +93,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Generatiivse AI seeria
+### Generatiivse AI sari
 [![Generatiivne AI algajatele](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generatiivne AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generatiivne AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -120,11 +120,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Abi saamine
 
-Kui jääd hätta või sul on küsimusi AI-rakenduste loomise kohta, liitu teiste õppijate ja kogenud arendajatega MCP aruteludes. See on toetav kogukond, kus küsimused on teretulnud ja teadmisi jagatakse vabalt.
+Kui jääd hätta või sul on küsimusi tehisintellekti rakenduste loomise kohta, liitu teiste õppijate ja kogenud arendajatega MCP aruteludes. See on toetav kogukond, kus küsimused on teretulnud ja teadmisi jagatakse vabalt.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Kui sul on toote tagasisidet või ehitamise ajal vigu, külasta:
+Kui sul on toote tagasisidet või ehitamise ajal esineb vigu, külasta:
 
 [![Microsoft Foundry arendajate foorum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

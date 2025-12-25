@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:31:37+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:42:25+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -12,7 +12,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Generativna AI za početnike - Java izdanje](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.hr.png)
 
-**Vrijeme potrebno**: Cijeli radionicu možete završiti online bez lokalne instalacije. Postavljanje okruženja traje 2 minute, a istraživanje primjera zahtijeva 1-3 sata, ovisno o dubini istraživanja.
+**Vrijeme potrebno**: Cijeli radionicu možete završiti online bez lokalne instalacije. Postavljanje okruženja traje 2 minute, a istraživanje primjera zahtijeva 1-3 sata ovisno o dubini istraživanja.
 
 > **Brzi početak** 
 
@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Početak poglavlja 1](./01-IntroToGenAI/README.md)**
 
 ### **Poglavlje 2: Postavljanje razvojne okoline**
-- **Konfiguracija više pružatelja**: Postavljanje GitHub modela, Azure OpenAI i OpenAI Java SDK integracija
+- **Konfiguracija više pružatelja usluga**: Postavljanje GitHub modela, Azure OpenAI i OpenAI Java SDK integracija
 - **Spring Boot + Spring AI**: Najbolje prakse za razvoj AI aplikacija u poduzećima
 - **GitHub modeli**: Besplatan pristup AI modelima za prototipiranje i učenje (nije potrebna kreditna kartica)
 - **Razvojni alati**: Docker kontejneri, VS Code i konfiguracija GitHub Codespaces
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Poglavlje 3: Osnovne tehnike generativne AI**
 - **Inženjering upita (prompt engineering)**: Tehnike za optimalne odgovore AI modela
 - **Ugradnje i vektorske operacije**: Implementacija semantičkog pretraživanja i podudaranja sličnosti
-- **Generiranje s podrškom pretraživanja (RAG)**: Kombiniranje AI s vlastitim izvorima podataka
+- **Generiranje uz podršku pretraživanja (RAG)**: Kombiniranje AI s vlastitim izvorima podataka
 - **Pozivanje funkcija**: Proširenje AI mogućnosti prilagođenim alatima i dodacima
 - **[→ Početak poglavlja 3](./03-CoreGenerativeAITechniques/README.md)**
 
@@ -114,14 +114,14 @@ CO_OP_TRANSLATOR_METADATA:
 ---
  
 ### Serija Copilot
-[![Copilot za AI u paru programiranje](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot za AI programsko uparivanje](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot za C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot avantura](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Dobivanje pomoći
 
-Ako zapnete ili imate bilo kakvih pitanja o izradi AI aplikacija. Pridružite se drugim učenicima i iskusnim programerima u raspravama o MCP-u. To je podržavajuća zajednica gdje su pitanja dobrodošla i znanje se slobodno dijeli.
+Ako zapnete ili imate pitanja o izradi AI aplikacija. Pridružite se drugim učenicima i iskusnim programerima u raspravama o MCP-u. To je podržavajuća zajednica gdje su pitanja dobrodošla i znanje se slobodno dijeli.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 

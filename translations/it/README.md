@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T09:55:23+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:09:46+00:00",
   "source_file": "README.md",
   "language_code": "it"
 }
@@ -17,9 +17,9 @@ CO_OP_TRANSLATOR_METADATA:
 > **Avvio Rapido** 
 
 1. Fai il fork di questo repository sul tuo account GitHub
-2. Clicca su **Code** → scheda **Codespaces** → **...** → **New with options...**
+2. Clicca su **Code** → scheda **Codespaces** → **...** → **Nuovo con opzioni...**
 3. Usa le impostazioni predefinite – questo selezionerà il contenitore di sviluppo creato per questo corso
-4. Clicca su **Create codespace**
+4. Clicca su **Crea codespace**
 5. Attendi circa 2 minuti che l'ambiente sia pronto
 6. Vai direttamente a [Il primo esempio](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
@@ -45,27 +45,27 @@ CO_OP_TRANSLATOR_METADATA:
 ## Struttura del Corso e Percorso di Apprendimento
 
 ### **Capitolo 1: Introduzione all'Intelligenza Artificiale Generativa**
-- **Concetti Fondamentali**: Comprendere i Large Language Models, token, embeddings e capacità dell'IA
+- **Concetti Fondamentali**: Comprendere i Modelli Linguistici di Grandi Dimensioni, token, embeddings e capacità dell'IA
 - **Ecosistema AI Java**: Panoramica di Spring AI e SDK OpenAI
-- **Protocollo Model Context**: Introduzione a MCP e il suo ruolo nella comunicazione degli agenti AI
+- **Protocollo del Contesto del Modello**: Introduzione a MCP e al suo ruolo nella comunicazione degli agenti AI
 - **Applicazioni Pratiche**: Scenari reali inclusi chatbot e generazione di contenuti
 - **[→ Inizia Capitolo 1](./01-IntroToGenAI/README.md)**
 
 ### **Capitolo 2: Configurazione dell'Ambiente di Sviluppo**
 - **Configurazione Multi-Provider**: Configura GitHub Models, Azure OpenAI e integrazioni OpenAI Java SDK
-- **Spring Boot + Spring AI**: Best practice per lo sviluppo di applicazioni AI enterprise
-- **GitHub Models**: Accesso gratuito a modelli AI per prototipazione e apprendimento (non serve carta di credito)
+- **Spring Boot + Spring AI**: Best practice per lo sviluppo di applicazioni AI aziendali
+- **GitHub Models**: Accesso gratuito ai modelli AI per prototipazione e apprendimento (non è richiesta carta di credito)
 - **Strumenti di Sviluppo**: Contenitori Docker, VS Code e configurazione GitHub Codespaces
 - **[→ Inizia Capitolo 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Capitolo 3: Tecniche Fondamentali di Intelligenza Artificiale Generativa**
 - **Prompt Engineering**: Tecniche per risposte ottimali dai modelli AI
-- **Embeddings & Operazioni Vettoriali**: Implementa ricerca semantica e matching di similarità
-- **Retrieval-Augmented Generation (RAG)**: Combina AI con le tue fonti di dati
+- **Embeddings e Operazioni Vettoriali**: Implementa ricerca semantica e matching di similarità
+- **Retrieval-Augmented Generation (RAG)**: Combina l'IA con le tue fonti di dati
 - **Function Calling**: Estendi le capacità AI con strumenti e plugin personalizzati
 - **[→ Inizia Capitolo 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Capitolo 4: Applicazioni Pratiche & Progetti**
+### **Capitolo 4: Applicazioni Pratiche e Progetti**
 - **Generatore di Storie per Animali** (`petstory/`): Generazione creativa di contenuti con GitHub Models
 - **Demo Locale Foundry** (`foundrylocal/`): Integrazione locale di modelli AI con OpenAI Java SDK
 - **Servizio Calcolatore MCP** (`calculator/`): Implementazione base del Model Context Protocol con Spring AI
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Capitolo 5: Sviluppo Responsabile dell'IA**
 - **Sicurezza GitHub Models**: Testa i filtri di contenuto integrati e i meccanismi di sicurezza (blocchi rigidi e rifiuti soft)
 - **Demo di IA Responsabile**: Esempio pratico che mostra come funzionano i moderni sistemi di sicurezza AI
-- **Best Practice**: Linee guida essenziali per uno sviluppo e deployment etico dell'IA
+- **Best Practice**: Linee guida essenziali per uno sviluppo e un deployment etici dell'IA
 - **[→ Inizia Capitolo 5](./05-ResponsibleGenAI/README.md)**
 
 ## Risorse Aggiuntive
@@ -133,5 +133,5 @@ Se hai feedback sul prodotto o errori durante la creazione visita:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per garantire l’accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non ci assumiamo alcuna responsabilità per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per garantire l’accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un umano. Non ci assumiamo alcuna responsabilità per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:08:09+00:00",
+  "original_hash": "eaa2dc75d2cf5083d071e3c84aa4b955",
+  "translation_date": "2025-12-19T10:21:31+00:00",
   "source_file": "README.md",
   "language_code": "fi"
 }
@@ -25,13 +25,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **Haluatko mieluummin kloonata paikallisesti?**
 >
-> Tämä repositorio sisältää yli 50 kielen käännöksiä, mikä lisää merkittävästi latauskokoa. Jos haluat kloonata ilman käännöksiä, käytä sparse checkout -toimintoa:
+> Tämä repositorio sisältää yli 50 kielen käännöksiä, mikä kasvattaa merkittävästi latauskokoa. Jos haluat kloonata ilman käännöksiä, käytä sparse checkoutia:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Tämä antaa sinulle kaiken tarvittavan kurssin suorittamiseen huomattavasti nopeammalla latauksella.
+> Tämä antaa sinulle kaiken tarvittavan kurssin suorittamiseen paljon nopeammalla latauksella.
 
 
 ## Monikielinen tuki
@@ -47,7 +47,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Luku 1: Johdatus generatiiviseen tekoälyyn**
 - **Keskeiset käsitteet**: Suurten kielimallien, tokenien, upotusten ja tekoälyn kykyjen ymmärtäminen
 - **Java AI -ekosysteemi**: Yleiskatsaus Spring AI:hin ja OpenAI SDK:hin
-- **Mallin kontekstiprotokolla**: Johdatus MCP:hen ja sen rooli tekoälyagenttien viestinnässä
+- **Mallin kontekstiprotokolla**: Johdatus MCP:hen ja sen rooliin tekoälyagenttien viestinnässä
 - **Käytännön sovellukset**: Todelliset käyttötapaukset, kuten chatbotit ja sisällön generointi
 - **[→ Aloita luku 1](./01-IntroToGenAI/README.md)**
 
@@ -59,7 +59,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Aloita luku 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Luku 3: Keskeiset generatiivisen tekoälyn tekniikat**
-- **Promptin suunnittelu**: Tekniikat optimaalisiin tekoälymallin vastauksiin
+- **Prompt-tekniikat**: Menetelmät optimaalisiin tekoälymallin vastauksiin
 - **Upotukset ja vektoritoiminnot**: Semanttisen haun ja samankaltaisuuden toteutus
 - **Hakuun perustuva generointi (RAG)**: Yhdistä tekoäly omiin tietolähteisiisi
 - **Funktiokutsut**: Laajenna tekoälyn kykyjä omilla työkaluilla ja lisäosilla
@@ -133,5 +133,5 @@ Jos sinulla on palautetta tuotteesta tai kohtaat virheitä rakentamisen aikana, 
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
