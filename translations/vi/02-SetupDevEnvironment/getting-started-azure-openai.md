@@ -75,7 +75,7 @@ Hướng dẫn này sẽ giúp bạn thiết lập các mô hình Azure AI Found
    > **Lưu ý**: Nếu bạn muốn chỉnh sửa cấu hình cơ bản, hãy xem [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Trong repo đã fork, nhấp vào **Code** → tab **Codespaces**
 3. Nhấp vào **...** → **New with options...**
-![tạo codespace với tùy chọn](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.vi.png)
+![tạo codespace với tùy chọn](../../../translated_images/codespaces.9945ded8ceb431a5.vi.png)
 4. Chọn **Cấu hình container phát triển**: 
    - **Môi Trường Phát Triển Generative AI Java**
 5. Nhấp vào **Create codespace**
