@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "64843fea021344d8e889dae94f46a9be",
-  "translation_date": "2025-12-25T06:22:15+00:00",
+  "original_hash": "459109e7c925f3a7b94440ad61c596a0",
+  "translation_date": "2026-01-05T09:37:07+00:00",
   "source_file": "README.md",
   "language_code": "ms"
 }
@@ -10,71 +10,81 @@ CO_OP_TRANSLATOR_METADATA:
 # AI Generatif untuk Pemula - Edisi Java
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-![AI Generatif untuk Pemula - Edisi Java](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.ms.png)
+![AI Generatif untuk Pemula - Edisi Java](../../translated_images/beg-genai-series.8b48be9951cc574c.ms.png)
 
-**Komitmen Masa**: Keseluruhan bengkel boleh diselesaikan secara dalam talian tanpa persediaan tempatan. Persediaan persekitaran mengambil masa 2 minit, dengan penerokaan contoh memerlukan 1-3 jam bergantung pada tahap penerokaan.
+**Komitmen Masa**: Keseluruhan bengkel boleh diselesaikan secara dalam talian tanpa persediaan tempatan. Persediaan persekitaran mengambil masa 2 minit, dengan meneroka contoh memerlukan 1-3 jam bergantung kepada kedalaman penerokaan.
 
-> **Mula Pantas** 
+> **Mula Cepat**
 
 1. Fork repositori ini ke akaun GitHub anda
-2. Klik **Code** → **Codespaces** tab → **...** → **New with options...**
-3. Gunakan tetapan lalai – ini akan memilih kontena Pembangunan yang dicipta untuk kursus ini
+2. Klik **Code** → tab **Codespaces** → **...** → **New with options...**
+3. Gunakan nilai lalai – ini akan memilih bekas Pembangunan yang dibuat untuk kursus ini
 4. Klik **Create codespace**
-5. Tunggu ~2 minit untuk persekitaran bersedia
-6. Terus ke [Contoh pertama](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Tunggu kira-kira 2 minit untuk persekitaran bersedia
+6. Teruskan ke [Contoh pertama](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-> **Lebih suka Mengklon Secara Tempatan?**
->
-> Repositori ini mengandungi 50+ terjemahan bahasa yang secara ketara meningkatkan saiz muat turun. Untuk mengklon tanpa terjemahan, gunakan sparse checkout:
+> **Lebih Suka Clone Secara Tempatan?**
+
+> Repositori ini termasuk lebih 50 terjemahan bahasa yang meningkatkan saiz muat turun dengan ketara. Untuk clone tanpa terjemahan, gunakan sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Ini memberi anda segala yang anda perlukan untuk melengkapkan kursus dengan muat turun yang jauh lebih pantas.
+> Ini memberikan semua yang anda perlukan untuk menyelesaikan kursus dengan muat turun yang jauh lebih pantas.
 
 
-## Sokongan Pelbagai Bahasa
+## Sokongan Multi-Bahasa
 
-### Disokong melalui GitHub Action (Automatik & Sentiasa Terkini)
+### Disokong melalui Tindakan GitHub (Automatik & Sentiasa Terkini)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](./README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arab](../ar/README.md) | [Benggali](../bn/README.md) | [Bulgaria](../bg/README.md) | [Burma (Myanmar)](../my/README.md) | [Cina (Ringkas)](../zh/README.md) | [Cina (Tradisional, Hong Kong)](../hk/README.md) | [Cina (Tradisional, Macau)](../mo/README.md) | [Cina (Tradisional, Taiwan)](../tw/README.md) | [Kroasia](../hr/README.md) | [Ceko](../cs/README.md) | [Denmark](../da/README.md) | [Belanda](../nl/README.md) | [Estonia](../et/README.md) | [Finland](../fi/README.md) | [Perancis](../fr/README.md) | [Jerman](../de/README.md) | [Greek](../el/README.md) | [Ibrani](../he/README.md) | [Hindi](../hi/README.md) | [Hungary](../hu/README.md) | [Indonesia](../id/README.md) | [Itali](../it/README.md) | [Jepun](../ja/README.md) | [Kannada](../kn/README.md) | [Korea](../ko/README.md) | [Lithuania](../lt/README.md) | [Melayu](./README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Pidgin Nigeria](../pcm/README.md) | [Norwegia](../no/README.md) | [Parsi (Farsi)](../fa/README.md) | [Poland](../pl/README.md) | [Portugis (Brazil)](../br/README.md) | [Portugis (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romania](../ro/README.md) | [Rusia](../ru/README.md) | [Serbia (Sirilik)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenia](../sl/README.md) | [Sepanyol](../es/README.md) | [Swahili](../sw/README.md) | [Sweden](../sv/README.md) | [Tagalog (Filipina)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turki](../tr/README.md) | [Ukraine](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnam](../vi/README.md)
+
+> **Lebih Suka Clone Secara Tempatan?**
+
+> Repositori ini termasuk lebih 50 terjemahan bahasa yang meningkatkan saiz muat turun dengan ketara. Untuk clone tanpa terjemahan, gunakan sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Ini memberikan semua yang anda perlukan untuk menyelesaikan kursus dengan muat turun yang jauh lebih pantas.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Struktur Kursus & Laluan Pembelajaran
 
 ### **Bab 1: Pengenalan kepada AI Generatif**
-- **Konsep Teras**: Memahami Large Language Models, token, embeddings, dan kebolehan AI
-- **Ekosistem AI Java**: Gambaran keseluruhan Spring AI dan OpenAI SDKs
-- **Protokol Konteks Model**: Pengenalan kepada MCP dan perannya dalam komunikasi agen AI
+- **Konsep Teras**: Memahami Model Bahasa Besar, token, embeddings, dan kebolehan AI
+- **Ekosistem AI Java**: Gambaran keseluruhan Spring AI dan OpenAI SDK
+- **Protokol Konteks Model**: Pengenalan MCP dan peranannya dalam komunikasi agen AI
 - **Aplikasi Praktikal**: Senario dunia sebenar termasuk chatbot dan penjanaan kandungan
 - **[→ Mula Bab 1](./01-IntroToGenAI/README.md)**
 
 ### **Bab 2: Persediaan Persekitaran Pembangunan**
-- **Konfigurasi Multi-Pembekal**: Sediakan integrasi GitHub Models, Azure OpenAI, dan OpenAI Java SDK
+- **Konfigurasi Multi-Penyedia**: Sediakan Model GitHub, Azure OpenAI, dan integrasi OpenAI Java SDK
 - **Spring Boot + Spring AI**: Amalan terbaik untuk pembangunan aplikasi AI perusahaan
-- **GitHub Models**: Akses model AI percuma untuk prototaip dan pembelajaran (no credit card required)
-- **Alat Pembangunan**: Docker containers, VS Code, dan konfigurasi GitHub Codespaces
+- **Model GitHub**: Akses model AI percuma untuk prototaip dan pembelajaran (tidak memerlukan kad kredit)
+- **Alat Pembangunan**: Bekas Docker, VS Code, dan konfigurasi GitHub Codespaces
 - **[→ Mula Bab 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Bab 3: Teknik Teras AI Generatif**
-- **Prompt Engineering**: Teknik untuk respons model AI yang optimum
-- **Embeddings & Operasi Vektor**: Laksana carian semantik dan padanan kesamaan
+- **Reka Bentuk Prompt**: Teknik untuk respons model AI yang optimum
+- **Embeddings & Operasi Vektor**: Laksanakan carian semantik dan pemadanan kesamaan
 - **Retrieval-Augmented Generation (RAG)**: Gabungkan AI dengan sumber data anda sendiri
-- **Function Calling**: Luaskan kebolehan AI dengan alat dan pemalam tersuai
+- **Panggilan Fungsi**: Luaskan keupayaan AI dengan alat tersuai dan plugin
 - **[→ Mula Bab 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Bab 4: Aplikasi Praktikal & Projek**
-- **Penjana Cerita Haiwan Peliharaan** (`petstory/`): Penjanaan kandungan kreatif dengan GitHub Models
+### **Bab 4: Aplikasi & Projek Praktikal**
+- **Penjana Cerita Haiwan Peliharaan** (`petstory/`): Penjanaan kandungan kreatif dengan Model GitHub
 - **Demo Foundry Tempatan** (`foundrylocal/`): Integrasi model AI tempatan dengan OpenAI Java SDK
 - **Perkhidmatan Kalkulator MCP** (`calculator/`): Pelaksanaan asas Model Context Protocol dengan Spring AI
 - **[→ Mula Bab 4](./04-PracticalSamples/README.md)**
 
 ### **Bab 5: Pembangunan AI Bertanggungjawab**
-- **Keselamatan GitHub Models**: Uji penapisan kandungan terbina dan mekanisme keselamatan (hard blocks dan soft refusals)
-- **Demo AI Bertanggungjawab**: Contoh praktikal menunjukkan bagaimana sistem keselamatan AI moden berfungsi dalam amalan
-- **Amalan Terbaik**: Garis panduan penting untuk pembangunan dan penyebaran AI yang beretika
+- **Keselamatan Model GitHub**: Uji penapisan kandungan terbina dalam dan mekanisme keselamatan (blok keras dan penolakan lembut)
+- **Demo AI Bertanggungjawab**: Contoh praktikal menunjukkan bagaimana sistem keselamatan AI moden berfungsi
+- **Amalan Terbaik**: Garis panduan penting untuk pembangunan dan penyebaran AI yang etikal
 - **[→ Mula Bab 5](./05-ResponsibleGenAI/README.md)**
 
 ## Sumber Tambahan
@@ -86,11 +96,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
 
-### Azure / Edge / MCP / Ejen
+### Azure / Edge / MCP / Agen
 [![AZD untuk Pemula](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI untuk Pemula](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP untuk Pemula](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Ejen AI untuk Pemula](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Agen AI untuk Pemula](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
@@ -108,30 +118,30 @@ CO_OP_TRANSLATOR_METADATA:
 [![AI untuk Pemula](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Keselamatan Siber untuk Pemula](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Pembangunan Web untuk Pemula](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT untuk Pemula](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![Pembangunan XR untuk Pemula](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Siri Copilot
-[![Copilot untuk Pengaturcaraan Berpasangan AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot untuk C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Pengembaraan Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Mendapatkan Bantuan
 
-Jika anda tersangkut atau mempunyai sebarang pertanyaan mengenai pembinaan aplikasi AI. Sertai rakan pelajar dan pembangun berpengalaman dalam perbincangan mengenai MCP. Ia adalah sebuah komuniti yang menyokong di mana soalan dialu-alukan dan pengetahuan dikongsi dengan bebas.
+Jika anda tersekat atau mempunyai sebarang pertanyaan mengenai membina aplikasi AI. Sertai para pelajar dan pembangun berpengalaman dalam perbincangan mengenai MCP. Ia adalah komuniti yang menyokong di mana soalan dialu-alukan dan pengetahuan dikongsi dengan bebas.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Jika anda mempunyai maklum balas produk atau ralat semasa membina lawati:
+Jika anda mempunyai maklum balas produk atau ralat semasa membina, lawati:
 
-[![Forum Pembangun Microsoft Foundry](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Penafian:
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI Co-op Translator (https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi ralat atau ketidakakuratan. Dokumen asal dalam bahasa asalnya hendaklah dianggap sebagai sumber rujukan yang sah. Untuk maklumat penting, terjemahan profesional oleh penterjemah manusia adalah disyorkan. Kami tidak bertanggungjawab terhadap sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

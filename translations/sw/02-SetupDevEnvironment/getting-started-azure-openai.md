@@ -75,7 +75,7 @@ Mwongozo huu utakusaidia kuweka mifano ya Azure AI Foundry kwa programu zako za 
    > **Kumbuka**: Ikiwa unataka kuhariri usanidi wa msingi tafadhali angalia [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Katika hifadhi yako ya forked, bonyeza **Code** → kichupo cha **Codespaces**
 3. Bonyeza **...** → **New with options...**
-![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.sw.png)
+![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a5.sw.png)
 4. Chagua **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Bonyeza **Create codespace**

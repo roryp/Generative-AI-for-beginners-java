@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 5. പരിസ്ഥിതി സജ്ജമാകാൻ ~2 മിനിറ്റ് കാത്തിരിക്കുക
 6. [Step 2: Create GitHub Token](../../../02-SetupDevEnvironment) ഭാഗത്തേക്ക് മുന്നോട്ട് പോകുക
 
-<img src="../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ml.png" alt="സ്ക്രീൻഷോട്ട്: Codespaces സബ്‌മെനു" width="50%">
+<img src="../../../translated_images/codespaces.9945ded8ceb431a5.ml.png" alt="സ്ക്രീൻഷോട്ട്: Codespaces സബ്‌മെനു" width="50%">
 
-<img src="../../../translated_images/image.833552b62eee7766c6da4d3ff2ff630507f102ad3ef5d5a1f0cb72e89a4ee917.ml.png" alt="സ്ക്രീൻഷോട്ട്: New with options" width="50%">
+<img src="../../../translated_images/image.833552b62eee7766.ml.png" alt="സ്ക്രീൻഷോട്ട്: New with options" width="50%">
 
-<img src="../../../translated_images/codespaces-create.b44a36f728660ab7e4374cfec7bcde27cb8047708231465bcebc4c3c5e7c80fe.ml.png" alt="സ്ക്രീൻഷോട്ട്: Create codespace options" width="50%">
+<img src="../../../translated_images/codespaces-create.b44a36f728660ab7.ml.png" alt="സ്ക്രീൻഷോട്ട്: Create codespace options" width="50%">
 
 > **Codespaces-ന്റെ ഗുണങ്ങൾ**:
 > - പ്രാദേശിക ഇൻസ്റ്റലേഷൻ ആവശ്യമില്ല
@@ -100,9 +100,9 @@ CO_OP_TRANSLATOR_METADATA:
 6. കണ്ടെയ്നർ നിർമ്മിച്ച് ആരംഭിക്കാൻ കാത്തിരിക്കുക
 7. [Step 2: Create GitHub Token](../../../02-SetupDevEnvironment) ഭാഗത്തേക്ക് മുന്നോട്ട് പോകുക
 
-<img src="../../../translated_images/devcontainer.21126c9d6de64494d1b0d1a27c688010a1250007f61767b7ea77f34f0f500ad6.ml.png" alt="സ്ക്രീൻഷോട്ട്: Dev container setup" width="50%">
+<img src="../../../translated_images/devcontainer.21126c9d6de64494.ml.png" alt="സ്ക്രീൻഷോട്ട്: Dev container setup" width="50%">
 
-<img src="../../../translated_images/image-3.bf93d533bbc8426848c04825db9d85b3b6e3345b94a3ff89e345589941420b61.ml.png" alt="സ്ക്രീൻഷോട്ട്: Dev container build complete" width="50%">
+<img src="../../../translated_images/image-3.bf93d533bbc84268.ml.png" alt="സ്ക്രീൻഷോട്ട്: Dev container build complete" width="50%">
 
 #### ഓപ്ഷൻ C: നിങ്ങളുടെ നിലവിലെ പ്രാദേശിക ഇൻസ്റ്റലേഷൻ ഉപയോഗിക്കുക
 
@@ -120,7 +120,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **പ്രൊ ടിപ്പ്**: നിങ്ങളുടെ മെഷീൻ കുറഞ്ഞ സ്പെക്കുകൾ ഉള്ളതാണെങ്കിൽ, GitHub Codespaces ഉപയോഗിച്ച് പ്രാദേശിക VS Code ഉപയോഗിക്കുക! ക്ലൗഡ്-ഹോസ്റ്റുചെയ്ത Codespace-നെ പ്രാദേശിക VS Code-യുമായി ബന്ധിപ്പിച്ച് ഇരുവരുടെയും മികച്ച അനുഭവം നേടുക.
 
-<img src="../../../translated_images/image-2.fc0da29a6e4d2aff197876d11b27f71c1177a9113b30d8b8c5d1d340357e6ac0.ml.png" alt="സ്ക്രീൻഷോട്ട്: created local devcontainer instance" width="50%">
+<img src="../../../translated_images/image-2.fc0da29a6e4d2aff.ml.png" alt="സ്ക്രീൻഷോട്ട്: created local devcontainer instance" width="50%">
 
 ## ഘട്ടം 2: GitHub Personal Access Token സൃഷ്ടിക്കുക
 

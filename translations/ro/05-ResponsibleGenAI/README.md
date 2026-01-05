@@ -58,7 +58,7 @@ Clasa `ResponsibleGithubModels` urmează acest flux:
 5. Afișează rezultatele care arată ce conținut a fost blocat, refuzat sau permis
 6. Testează conținut sigur pentru comparație
 
-![Demonstrație de Siguranță AI Responsabilă](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.ro.png)
+![Demonstrație de Siguranță AI Responsabilă](../../../translated_images/responsible.e4f51a917bafa4bf.ro.png)
 
 ### Instrucțiuni de Configurare
 
@@ -164,7 +164,7 @@ Acest exemplu folosește prompturi intenționat problematice doar în scopuri ed
 
 Felicitări pentru finalizarea cursului Generative AI pentru Începători!
 
-![Finalizarea Cursului](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.ro.png)
+![Finalizarea Cursului](../../../translated_images/image.73c7e2ff4a652e77.ro.png)
 
 **Ce ai realizat:**
 - Ai configurat mediul de dezvoltare

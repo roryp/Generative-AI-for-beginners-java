@@ -58,7 +58,7 @@ GitHub Models มาพร้อมกับการกรองเนื้อ
 5. แสดงผลลัพธ์ที่แสดงว่าเนื้อหาใดถูกบล็อก ปฏิเสธ หรืออนุญาต  
 6. ทดสอบเนื้อหาที่ปลอดภัยเพื่อเปรียบเทียบ  
 
-![การสาธิตความปลอดภัยของ AI อย่างมีความรับผิดชอบ](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.th.png)  
+![การสาธิตความปลอดภัยของ AI อย่างมีความรับผิดชอบ](../../../translated_images/responsible.e4f51a917bafa4bf.th.png)  
 
 ### คำแนะนำในการตั้งค่า
 
@@ -164,7 +164,7 @@ Status: Response generated successfully
 
 ขอแสดงความยินดีที่คุณได้จบหลักสูตร Generative AI สำหรับผู้เริ่มต้น!  
 
-![การจบหลักสูตร](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.th.png)  
+![การจบหลักสูตร](../../../translated_images/image.73c7e2ff4a652e77.th.png)  
 
 **สิ่งที่คุณได้ทำสำเร็จ:**  
 - ตั้งค่าสภาพแวดล้อมการพัฒนาของคุณ  

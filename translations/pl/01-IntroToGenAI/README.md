@@ -44,7 +44,7 @@ Podczas tworzenia aplikacji AI w Javie będziesz pracować z **modelami generaty
 
 Istnieją różne typy modeli zoptymalizowane do różnych zadań. Na przykład zarówno **małe modele językowe (SLM)**, jak i **duże modele językowe (LLM)** mogą obsługiwać generowanie tekstu, przy czym LLM zazwyczaj oferują lepszą wydajność w przypadku złożonych zadań. Do zadań związanych z obrazami używa się wyspecjalizowanych modeli wizji lub modeli multimodalnych.
 
-![Rysunek: Typy modeli generatywnej AI i ich zastosowania.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.pl.png)
+![Rysunek: Typy modeli generatywnej AI i ich zastosowania.](../../../translated_images/llms.225ca2b8a0d34473.pl.png)
 
 Oczywiście odpowiedzi generowane przez te modele nie zawsze są idealne. Pewnie słyszałeś o przypadkach, gdy modele "halucynują" lub generują błędne informacje w sposób autorytatywny. Możesz jednak pomóc modelowi generować lepsze odpowiedzi, dostarczając mu jasne instrukcje i kontekst. Właśnie tutaj wkracza **inżynieria promptów**.
 
@@ -79,13 +79,13 @@ Tokenizacja to proces dzielenia tekstu na te mniejsze jednostki. Jest to kluczow
 
 - **Osadzenia (embeddings)**: Osadzenia to wektorowe reprezentacje tokenów, które uchwytują znaczenie semantyczne. Są to numeryczne reprezentacje (zazwyczaj tablice liczb zmiennoprzecinkowych), które pozwalają modelom rozumieć relacje między słowami i generować odpowiedzi kontekstowo odpowiednie. Podobne słowa mają podobne osadzenia, co umożliwia modelowi rozumienie takich pojęć jak synonimy i relacje semantyczne.
 
-![Rysunek: Osadzenia](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.pl.png)
+![Rysunek: Osadzenia](../../../translated_images/embedding.398e50802c0037f9.pl.png)
 
   W Javie możesz generować osadzenia za pomocą OpenAI SDK lub innych bibliotek obsługujących generowanie osadzeń. Te osadzenia są kluczowe w zadaniach takich jak wyszukiwanie semantyczne, gdzie chcesz znaleźć podobne treści na podstawie znaczenia, a nie dokładnych dopasowań tekstowych.
 
 - **Bazy danych wektorowych**: Bazy danych wektorowych to wyspecjalizowane systemy przechowywania zoptymalizowane pod kątem osadzeń. Umożliwiają one efektywne wyszukiwanie podobieństw i są kluczowe w wzorcach Retrieval-Augmented Generation (RAG), gdzie musisz znaleźć odpowiednie informacje z dużych zbiorów danych na podstawie podobieństwa semantycznego, a nie dokładnych dopasowań.
 
-![Rysunek: Architektura bazy danych wektorowej pokazująca, jak osadzenia są przechowywane i wyszukiwane w celu wyszukiwania podobieństw.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.pl.png)
+![Rysunek: Architektura bazy danych wektorowej pokazująca, jak osadzenia są przechowywane i wyszukiwane w celu wyszukiwania podobieństw.](../../../translated_images/vector.f12f114934e223df.pl.png)
 
 > **Uwaga**: W tym kursie nie omówimy baz danych wektorowych, ale warto o nich wspomnieć, ponieważ są powszechnie używane w aplikacjach rzeczywistych.
 
@@ -93,7 +93,7 @@ Tokenizacja to proces dzielenia tekstu na te mniejsze jednostki. Jest to kluczow
 
 W aplikacjach AI w Javie będziesz używać tokenów do przetwarzania tekstu, osadzeń do wyszukiwania semantycznego i RAG, baz danych wektorowych do wyszukiwania danych oraz agentów z MCP do budowania inteligentnych systemów korzystających z narzędzi.
 
-![Rysunek: jak prompt staje się odpowiedzią—tokeny, wektory, opcjonalne wyszukiwanie RAG, myślenie LLM i agent MCP w jednym szybkim przepływie.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.pl.png)
+![Rysunek: jak prompt staje się odpowiedzią—tokeny, wektory, opcjonalne wyszukiwanie RAG, myślenie LLM i agent MCP w jednym szybkim przepływie.](../../../translated_images/flow.f4ef62c3052d12a8.pl.png)
 
 ### Narzędzia i biblioteki do rozwoju AI w Javie
 

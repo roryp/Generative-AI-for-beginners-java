@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 5. சூழல் தயாராக ~2 நிமிடங்கள் காத்திருக்கவும்
 6. [படி 2: GitHub Token உருவாக்குதல்](../../../02-SetupDevEnvironment) பகுதியை நோக்கி செல்லுங்கள்
 
-<img src="../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ta.png" alt="திரைப்படம்: Codespaces submenu" width="50%">
+<img src="../../../translated_images/codespaces.9945ded8ceb431a5.ta.png" alt="திரைப்படம்: Codespaces submenu" width="50%">
 
-<img src="../../../translated_images/image.833552b62eee7766c6da4d3ff2ff630507f102ad3ef5d5a1f0cb72e89a4ee917.ta.png" alt="திரைப்படம்: New with options" width="50%">
+<img src="../../../translated_images/image.833552b62eee7766.ta.png" alt="திரைப்படம்: New with options" width="50%">
 
-<img src="../../../translated_images/codespaces-create.b44a36f728660ab7e4374cfec7bcde27cb8047708231465bcebc4c3c5e7c80fe.ta.png" alt="திரைப்படம்: Create codespace options" width="50%">
+<img src="../../../translated_images/codespaces-create.b44a36f728660ab7.ta.png" alt="திரைப்படம்: Create codespace options" width="50%">
 
 
 > **Codespaces இன் நன்மைகள்**:
@@ -101,9 +101,9 @@ CO_OP_TRANSLATOR_METADATA:
 6. கண்டெய்னர் கட்டமைக்கவும் மற்றும் தொடங்கவும் காத்திருக்கவும்
 7. [படி 2: GitHub Token உருவாக்குதல்](../../../02-SetupDevEnvironment) பகுதியை நோக்கி செல்லுங்கள்
 
-<img src="../../../translated_images/devcontainer.21126c9d6de64494d1b0d1a27c688010a1250007f61767b7ea77f34f0f500ad6.ta.png" alt="திரைப்படம்: Dev container அமைப்பு" width="50%">
+<img src="../../../translated_images/devcontainer.21126c9d6de64494.ta.png" alt="திரைப்படம்: Dev container அமைப்பு" width="50%">
 
-<img src="../../../translated_images/image-3.bf93d533bbc8426848c04825db9d85b3b6e3345b94a3ff89e345589941420b61.ta.png" alt="திரைப்படம்: Dev container கட்டமைப்பு முடிந்தது" width="50%">
+<img src="../../../translated_images/image-3.bf93d533bbc84268.ta.png" alt="திரைப்படம்: Dev container கட்டமைப்பு முடிந்தது" width="50%">
 
 #### விருப்பம் C: உங்கள் உள்ளூர் நிறுவலை பயன்படுத்துதல்
 
@@ -121,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **சிறந்த ஆலோசனை**: உங்கள் கணினி குறைந்த அளவிலான திறனுடன் இருந்தால், ஆனால் உள்ளூர் VS Code ஐ விரும்பினால், GitHub Codespaces ஐ பயன்படுத்துங்கள்! உங்கள் உள்ளூர் VS Code ஐ கிளவுட்-ஹோஸ்டட் Codespace க்கு இணைக்கலாம், இரண்டின் சிறந்த அம்சங்களையும் பெற.
 
-<img src="../../../translated_images/image-2.fc0da29a6e4d2aff197876d11b27f71c1177a9113b30d8b8c5d1d340357e6ac0.ta.png" alt="திரைப்படம்: உள்ளூர் devcontainer instance உருவாக்கப்பட்டது" width="50%">
+<img src="../../../translated_images/image-2.fc0da29a6e4d2aff.ta.png" alt="திரைப்படம்: உள்ளூர் devcontainer instance உருவாக்கப்பட்டது" width="50%">
 
 
 ## படி 2: GitHub தனிப்பட்ட அணுகல் டோக்கனை உருவாக்குதல்
