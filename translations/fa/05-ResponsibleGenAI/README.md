@@ -58,7 +58,7 @@ GitHub Models به‌صورت پیش‌فرض دارای فیلتر محتوای
 5. نمایش نتایج که نشان می‌دهد کدام محتوا مسدود، رد یا مجاز شده است  
 6. آزمایش محتوای ایمن برای مقایسه  
 
-![دمو ایمنی هوش مصنوعی مسئولانه](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.fa.png)  
+![دمو ایمنی هوش مصنوعی مسئولانه](../../../translated_images/responsible.e4f51a917bafa4bf.fa.png)  
 
 ### دستورالعمل‌های راه‌اندازی
 
@@ -164,7 +164,7 @@ Status: Response generated successfully
 
 تبریک می‌گوییم که دوره هوش مصنوعی مولد برای مبتدیان را به پایان رساندید!  
 
-![پایان دوره](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.fa.png)  
+![پایان دوره](../../../translated_images/image.73c7e2ff4a652e77.fa.png)  
 
 **آنچه به دست آوردید:**  
 - محیط توسعه خود را راه‌اندازی کردید  

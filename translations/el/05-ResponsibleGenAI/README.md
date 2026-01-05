@@ -58,7 +58,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. Εμφανίζει αποτελέσματα που δείχνουν ποιο περιεχόμενο αποκλείστηκε, απορρίφθηκε ή επιτράπηκε
 6. Δοκιμάζει ασφαλές περιεχόμενο για σύγκριση
 
-![Επίδειξη Ασφάλειας Υπεύθυνης ΤΝ](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.el.png)
+![Επίδειξη Ασφάλειας Υπεύθυνης ΤΝ](../../../translated_images/responsible.e4f51a917bafa4bf.el.png)
 
 ### Οδηγίες Ρύθμισης
 
@@ -164,7 +164,7 @@ Status: Response generated successfully
 
 Συγχαρητήρια για την ολοκλήρωση του μαθήματος "Γενεσιουργός ΤΝ για Αρχάριους"!
 
-![Ολοκλήρωση Μαθήματος](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.el.png)
+![Ολοκλήρωση Μαθήματος](../../../translated_images/image.73c7e2ff4a652e77.el.png)
 
 **Τι έχετε επιτύχει:**
 - Ρυθμίσατε το περιβάλλον ανάπτυξής σας
