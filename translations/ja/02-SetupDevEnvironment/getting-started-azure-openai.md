@@ -75,7 +75,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **注意**: 基本設定を編集したい場合は [Dev Container Configuration](../../../.devcontainer/devcontainer.json) を確認してください。
 2. フォークしたリポジトリで **Code** → **Codespaces** タブをクリックします。
 3. **...** → **New with options...** をクリックします。
-![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ja.png)
+![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a5.ja.png)
 4. **Dev container configuration** を選択します: 
    - **Generative AI Java Development Environment**
 5. **Create codespace** をクリックします。

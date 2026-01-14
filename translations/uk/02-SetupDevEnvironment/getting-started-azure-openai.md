@@ -75,7 +75,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **Примітка**: Якщо ви хочете змінити базову конфігурацію, перегляньте [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. У вашому форкнутому репозиторії натисніть **Code** → вкладка **Codespaces**
 3. Натисніть **...** → **New with options...**
-![створення Codespace з опціями](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.uk.png)
+![створення Codespace з опціями](../../../translated_images/codespaces.9945ded8ceb431a5.uk.png)
 4. Виберіть **Конфігурацію контейнера для розробки**: 
    - **Середовище розробки Generative AI Java**
 5. Натисніть **Create codespace**

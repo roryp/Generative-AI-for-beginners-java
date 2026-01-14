@@ -58,7 +58,7 @@ De `ResponsibleGithubModels`-klasse volgt deze stappen:
 5. Toon resultaten die laten zien welke inhoud werd geblokkeerd, geweigerd of toegestaan
 6. Test veilige inhoud ter vergelijking
 
-![Verantwoordelijke AI Veiligheidsdemo](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.nl.png)
+![Verantwoordelijke AI Veiligheidsdemo](../../../translated_images/responsible.e4f51a917bafa4bf.nl.png)
 
 ### Installatie-instructies
 
@@ -164,7 +164,7 @@ Dit voorbeeld gebruikt opzettelijk problematische prompts uitsluitend voor educa
 
 Gefeliciteerd met het voltooien van de Generatieve AI voor Beginners-cursus!
 
-![Cursus Voltooiing](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.nl.png)
+![Cursus Voltooiing](../../../translated_images/image.73c7e2ff4a652e77.nl.png)
 
 **Wat je hebt bereikt:**
 - Je ontwikkelomgeving opgezet

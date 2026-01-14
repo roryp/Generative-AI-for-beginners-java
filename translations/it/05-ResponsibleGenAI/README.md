@@ -58,7 +58,7 @@ La classe `ResponsibleGithubModels` segue questo flusso:
 5. Mostra i risultati indicando quali contenuti sono stati bloccati, rifiutati o consentiti
 6. Testa contenuti sicuri per confronto
 
-![Demo di Sicurezza AI Responsabile](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.it.png)
+![Demo di Sicurezza AI Responsabile](../../../translated_images/responsible.e4f51a917bafa4bf.it.png)
 
 ### Istruzioni per la Configurazione
 
@@ -164,7 +164,7 @@ Questo esempio utilizza prompt intenzionalmente problematici solo a scopo educat
 
 Congratulazioni per aver completato il corso Generative AI for Beginners!
 
-![Completamento del Corso](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.it.png)
+![Completamento del Corso](../../../translated_images/image.73c7e2ff4a652e77.it.png)
 
 **Cosa hai realizzato:**
 - Hai configurato il tuo ambiente di sviluppo

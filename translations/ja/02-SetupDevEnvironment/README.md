@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 5. 環境の準備ができるまで約 2 分待ちます。
 6. [ステップ 2: GitHub トークンの作成](#step-2-create-a-github-personal-access-token) に進みます。
 
-<img src="/translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ja.png" alt="スクリーンショット: Codespaces サブメニュー" width="50%">
+<img src="/translated_images/codespaces.9945ded8ceb431a5.ja.png" alt="スクリーンショット: Codespaces サブメニュー" width="50%">
 
-<img src="/translated_images/image.833552b62eee7766c6da4d3ff2ff630507f102ad3ef5d5a1f0cb72e89a4ee917.ja.png" alt="スクリーンショット: オプション付き新規作成" width="50%">
+<img src="/translated_images/image.833552b62eee7766.ja.png" alt="スクリーンショット: オプション付き新規作成" width="50%">
 
-<img src="/translated_images/codespaces-create.b44a36f728660ab7e4374cfec7bcde27cb8047708231465bcebc4c3c5e7c80fe.ja.png" alt="スクリーンショット: Codespaces 作成オプション" width="50%">
+<img src="/translated_images/codespaces-create.b44a36f728660ab7.ja.png" alt="スクリーンショット: Codespaces 作成オプション" width="50%">
 
 > **Codespaces のメリット**:
 > - ローカルインストールは不要
@@ -100,9 +100,9 @@ CO_OP_TRANSLATOR_METADATA:
 6. コンテナがビルドされて起動するまで待ちます。
 7. [ステップ2: GitHubトークンの作成](#step-2-create-a-github-per) に進みます。
 
-<img src="/translated_images/devcontainer.21126c9d6de64494d1b0d1a27c688010a1250007f61767b7ea77f34f0f500ad6.ja.png" alt="スクリーンショット: 開発コンテナのセットアップ" width="50%">
+<img src="/translated_images/devcontainer.21126c9d6de64494.ja.png" alt="スクリーンショット: 開発コンテナのセットアップ" width="50%">
 
-<img src="/translated_images/image-3.bf93d533bbc8426848c04825db9d85b3b6e3345b94a3ff89e345589941420b61.ja.png" alt="スクリーンショット: 開発コンテナのビルド完了" width="50%">
+<img src="/translated_images/image-3.bf93d533bbc84268.ja.png" alt="スクリーンショット: 開発コンテナのビルド完了" width="50%">
 
 #### オプション C: 既存のローカルインストールを使用する
 
@@ -120,7 +120,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **プロのヒント**: 低スペックのマシンを使っているけれど、VS Code をローカルで使いたい場合は、GitHub Codespaces をご利用ください。ローカルの VS Code をクラウドホストの Codespace に接続することで、両方のメリットを享受できます。
 
-<img src="/translated_images/image-2.fc0da29a6e4d2aff197876d11b27f71c1177a9113b30d8b8c5d1d340357e6ac0.ja.png" alt="スクリーンショット: ローカルの devcontainer インスタンスを作成" width="50%">
+<img src="/translated_images/image-2.fc0da29a6e4d2aff.ja.png" alt="スクリーンショット: ローカルの devcontainer インスタンスを作成" width="50%">
 
 ## ステップ 2: GitHub 個人アクセストークンの作成
 

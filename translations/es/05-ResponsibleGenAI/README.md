@@ -58,7 +58,7 @@ La clase `ResponsibleGithubModels` sigue este flujo:
 5. Muestra los resultados indicando qué contenido fue bloqueado, rechazado o permitido
 6. Prueba contenido seguro para comparación
 
-![Demostración de Seguridad en IA Responsable](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.es.png)
+![Demostración de Seguridad en IA Responsable](../../../translated_images/responsible.e4f51a917bafa4bf.es.png)
 
 ### Instrucciones de Configuración
 
@@ -164,7 +164,7 @@ Este ejemplo utiliza indicaciones intencionalmente problemáticas solo con fines
 
 ¡Felicidades por completar el curso de IA Generativa para Principiantes!
 
-![Finalización del Curso](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.es.png)
+![Finalización del Curso](../../../translated_images/image.73c7e2ff4a652e77.es.png)
 
 **Lo que has logrado:**
 - Configurar tu entorno de desarrollo

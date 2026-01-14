@@ -58,7 +58,7 @@ Darasa la `ResponsibleGithubModels` linafuata mtiririko huu:
 5. Kuonyesha matokeo yanayoonyesha ni maudhui gani yalizuiwa, kukataliwa, au kuruhusiwa
 6. Kujaribu maudhui salama kwa kulinganisha
 
-![Onyesho la Usalama wa AI Inayowajibika](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.sw.png)
+![Onyesho la Usalama wa AI Inayowajibika](../../../translated_images/responsible.e4f51a917bafa4bf.sw.png)
 
 ### Maelekezo ya Kuanzisha
 
@@ -164,7 +164,7 @@ Mfano huu unatumia maelekezo yenye matatizo kwa madhumuni ya kielimu pekee. Leng
 
 Hongera kwa kumaliza kozi ya AI Jenereta kwa Kompyuta!
 
-![Kumaliza Kozi](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.sw.png)
+![Kumaliza Kozi](../../../translated_images/image.73c7e2ff4a652e77.sw.png)
 
 **Ulichofanikiwa:**
 - Kuanzisha mazingira yako ya maendeleo

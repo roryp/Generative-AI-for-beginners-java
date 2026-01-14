@@ -75,7 +75,7 @@ Bu kılavuz, bu kursta Java yapay zeka uygulamalarınız için Azure AI Foundry 
    > **Not**: Temel yapılandırmayı düzenlemek isterseniz [Geliştirme Konteyneri Yapılandırması](../../../.devcontainer/devcontainer.json) bölümüne göz atabilirsiniz.
 2. Forkladığınız depoda, **Code** → **Codespaces** sekmesine tıklayın
 3. **...** → **New with options...** seçeneğine tıklayın  
-![seçeneklerle bir codespace oluşturma](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.tr.png)
+![seçeneklerle bir codespace oluşturma](../../../translated_images/codespaces.9945ded8ceb431a5.tr.png)
 4. **Geliştirme konteyneri yapılandırmasını** seçin: 
    - **Generative AI Java Development Environment**
 5. **Create codespace** seçeneğine tıklayın

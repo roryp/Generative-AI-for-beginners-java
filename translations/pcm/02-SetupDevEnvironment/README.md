@@ -75,11 +75,11 @@ We don create preconfigured development container to make setup easy and make su
 5. Wait ~2 minutes make the environment ready
 6. Go [Step 2: Create GitHub Token](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.pcm.png" alt="Screenshot: Codespaces submenu" width="50%">
+<img src="../../../translated_images/codespaces.9945ded8ceb431a5.pcm.png" alt="Screenshot: Codespaces submenu" width="50%">
 
-<img src="../../../translated_images/image.833552b62eee7766c6da4d3ff2ff630507f102ad3ef5d5a1f0cb72e89a4ee917.pcm.png" alt="Screenshot: New with options" width="50%">
+<img src="../../../translated_images/image.833552b62eee7766.pcm.png" alt="Screenshot: New with options" width="50%">
 
-<img src="../../../translated_images/codespaces-create.b44a36f728660ab7e4374cfec7bcde27cb8047708231465bcebc4c3c5e7c80fe.pcm.png" alt="Screenshot: Create codespace options" width="50%">
+<img src="../../../translated_images/codespaces-create.b44a36f728660ab7.pcm.png" alt="Screenshot: Create codespace options" width="50%">
 
 
 > **Benefits of Codespaces**:
@@ -102,9 +102,9 @@ We don create preconfigured development container to make setup easy and make su
 6. Wait make the container build and start
 7. Go [Step 2: Create GitHub Token](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/devcontainer.21126c9d6de64494d1b0d1a27c688010a1250007f61767b7ea77f34f0f500ad6.pcm.png" alt="Screenshot: Dev container setup" width="50%">
+<img src="../../../translated_images/devcontainer.21126c9d6de64494.pcm.png" alt="Screenshot: Dev container setup" width="50%">
 
-<img src="../../../translated_images/image-3.bf93d533bbc8426848c04825db9d85b3b6e3345b94a3ff89e345589941420b61.pcm.png" alt="Screenshot: Dev container build complete" width="50%">
+<img src="../../../translated_images/image-3.bf93d533bbc84268.pcm.png" alt="Screenshot: Dev container build complete" width="50%">
 
 #### Option C: Use Your Existing Local Installation
 
@@ -122,7 +122,7 @@ Steps:
 
 > **Pro Tip**: If your machine no strong but you wan use VS Code locally, try GitHub Codespaces! You fit connect your local VS Code to cloud-hosted Codespace for better experience.
 
-<img src="../../../translated_images/image-2.fc0da29a6e4d2aff197876d11b27f71c1177a9113b30d8b8c5d1d340357e6ac0.pcm.png" alt="Screenshot: created local devcontainer instance" width="50%">
+<img src="../../../translated_images/image-2.fc0da29a6e4d2aff.pcm.png" alt="Screenshot: created local devcontainer instance" width="50%">
 
 
 ## Step 2: Create a GitHub Personal Access Token

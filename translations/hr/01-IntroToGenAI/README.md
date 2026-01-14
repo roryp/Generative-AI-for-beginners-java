@@ -44,7 +44,7 @@ Dok razvijate svoje Java AI aplikacije, radit ćete s **generativnim AI modelima
 
 Postoje specifične vrste modela optimizirane za različite zadatke. Na primjer, i **Mali Jezični Modeli (SLM-ovi)** i **Veliki Jezični Modeli (LLM-ovi)** mogu obraditi generiranje teksta, pri čemu LLM-ovi obično nude bolje performanse za složenije zadatke. Za zadatke vezane uz slike koristili biste specijalizirane modele za viziju ili multimodalne modele.
 
-![Slika: Vrste generativnih AI modela i primjene.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.hr.png)
+![Slika: Vrste generativnih AI modela i primjene.](../../../translated_images/llms.225ca2b8a0d34473.hr.png)
 
 Naravno, odgovori ovih modela nisu uvijek savršeni. Vjerojatno ste čuli za to da modeli "haluciniraju" ili generiraju netočne informacije na autoritativan način. No, možete pomoći modelu da generira bolje odgovore pružanjem jasnih uputa i konteksta. Ovdje dolazi do izražaja **inženjering upita**.
 
@@ -79,13 +79,13 @@ Tokenizacija je proces razbijanja teksta na ove manje jedinice. Ovo je ključno 
 
 - **Ugrađivanja**: Ugrađivanja su vektorske reprezentacije tokena koje hvataju semantičko značenje. To su numeričke reprezentacije (obično nizovi brojeva s pomičnim zarezom) koje omogućuju modelima razumijevanje odnosa između riječi i generiranje kontekstualno relevantnih odgovora. Slične riječi imaju slična ugrađivanja, omogućujući modelu razumijevanje koncepata poput sinonima i semantičkih odnosa.
 
-![Slika: Ugrađivanja](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.hr.png)
+![Slika: Ugrađivanja](../../../translated_images/embedding.398e50802c0037f9.hr.png)
 
   U Javi možete generirati ugrađivanja koristeći OpenAI SDK ili druge biblioteke koje podržavaju generiranje ugrađivanja. Ova ugrađivanja su ključna za zadatke poput semantičkog pretraživanja, gdje želite pronaći sličan sadržaj na temelju značenja, a ne točnih podudaranja teksta.
 
 - **Vektorske baze podataka**: Vektorske baze podataka su specijalizirani sustavi za pohranu optimizirani za ugrađivanja. Omogućuju učinkovito pretraživanje sličnosti i ključne su za obrasce generiranja uz pomoć pretraživanja (RAG), gdje trebate pronaći relevantne informacije iz velikih skupova podataka na temelju semantičke sličnosti, a ne točnih podudaranja.
 
-![Slika: Arhitektura vektorske baze podataka koja prikazuje kako se ugrađivanja pohranjuju i dohvaćaju za pretraživanje sličnosti.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.hr.png)
+![Slika: Arhitektura vektorske baze podataka koja prikazuje kako se ugrađivanja pohranjuju i dohvaćaju za pretraživanje sličnosti.](../../../translated_images/vector.f12f114934e223df.hr.png)
 
 > **Napomena**: U ovom tečaju nećemo pokrivati vektorske baze podataka, ali smatramo da ih vrijedi spomenuti jer se često koriste u stvarnim aplikacijama.
 
@@ -93,7 +93,7 @@ Tokenizacija je proces razbijanja teksta na ove manje jedinice. Ovo je ključno 
 
 U Java AI aplikacijama koristit ćete tokene za obradu teksta, ugrađivanja za semantičko pretraživanje i RAG, vektorske baze podataka za dohvaćanje podataka te agente s MCP-om za izgradnju inteligentnih sustava koji koriste alate.
 
-![Slika: kako upit postaje odgovor—tokeni, vektori, opcionalno RAG pretraživanje, razmišljanje LLM-a i MCP agent sve u jednom brzom tijeku.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.hr.png)
+![Slika: kako upit postaje odgovor—tokeni, vektori, opcionalno RAG pretraživanje, razmišljanje LLM-a i MCP agent sve u jednom brzom tijeku.](../../../translated_images/flow.f4ef62c3052d12a8.hr.png)
 
 ### Alati i biblioteke za razvoj AI u Javi
 

@@ -58,7 +58,7 @@ GitHub Modelsには、基本的なコンテンツフィルタリング機能が�
 5. ブロックされたコンテンツ、拒否されたコンテンツ、許可されたコンテンツを表示  
 6. 比較のために安全なコンテンツをテスト  
 
-![責任あるAI安全デモ](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.ja.png)
+![責任あるAI安全デモ](../../../translated_images/responsible.e4f51a917bafa4bf.ja.png)
 
 ### セットアップ手順
 
@@ -164,7 +164,7 @@ AIアプリケーションを構築する際には、以下の重要なプラク
 
 生成AI初心者向けコースの修了おめでとうございます！
 
-![コース修了](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.ja.png)
+![コース修了](../../../translated_images/image.73c7e2ff4a652e77.ja.png)
 
 **達成したこと:**  
 - 開発環境のセットアップ  
