@@ -224,7 +224,7 @@ Having issues? Here are common problems and solutions:
 - **Token not working?** 
   - Ensure you copied the entire token without any extra spaces
   - Verify the token is set correctly as an environment variable
-  - Check that your token has the correct permissions (Models: Read and write)
+  - Check that your token has the correct permissions (Models: Read-only)
 
 - **Maven not found?** 
   - If using dev containers/Codespaces, Maven should be pre-installed
