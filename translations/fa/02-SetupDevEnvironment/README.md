@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:40:42+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "fa"
-}
--->
 # راه‌اندازی محیط توسعه برای هوش مصنوعی مولد در جاوا
 
 > **شروع سریع**: برنامه‌نویسی در ابر در ۲ دقیقه - به بخش [راه‌اندازی GitHub Codespaces](../../../02-SetupDevEnvironment) بروید - نیازی به نصب محلی نیست و از مدل‌های گیت‌هاب استفاده می‌کند!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **نیازی به راه‌اندازی محلی نیست!** شما می‌توانید بلافاصله با استفاده از GitHub Codespaces شروع به برنامه‌نویسی کنید که یک محیط توسعه کامل را در مرورگر شما فراهم می‌کند.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/fa/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 ما استفاده از [**مدل‌های GitHub**](https://github.com/marketplace?type=models) را برای این دوره توصیه می‌کنیم زیرا:
 - شروع آن **رایگان** است

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:53:48+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ur"
-}
--->
 # ایزور اوپن اے آئی کے لیے ڈیولپمنٹ ماحول ترتیب دینا
 
 > **جلدی شروع کریں**: یہ گائیڈ ایزور اوپن اے آئی سیٹ اپ کے لیے ہے۔ مفت ماڈلز کے ساتھ فوری آغاز کے لیے [GitHub Models with Codespaces](./README.md#quick-start-cloud) استعمال کریں۔

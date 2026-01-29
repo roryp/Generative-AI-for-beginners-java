@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:52:42+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "fa"
-}
--->
 # راه‌اندازی محیط توسعه برای Azure OpenAI
 
 > **شروع سریع**: این راهنما برای تنظیم Azure OpenAI است. برای شروع سریع با مدل‌های رایگان، از [مدل‌های GitHub با Codespaces](./README.md#quick-start-cloud) استفاده کنید.

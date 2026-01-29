@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:41:32+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ur"
-}
--->
 # جاوا کے لئے جنریٹیو اے آئی کے لیے ڈیولپمنٹ ماحول کی ترتیب
 
 > **فوری آغاز**: کلاؤڈ میں 2 منٹ میں کوڈ لکھیں - پر جائیں [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - کوئی مقامی تنصیب ضروری نہیں اور گٹ ہب ماڈلز استعمال کرتا ہے!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **کوئی مقامی سیٹ اپ ضروری نہیں!** آپ فوری طور پر GitHub Codespaces کا استعمال کرتے ہوئے کوڈنگ شروع کر سکتے ہیں، جو آپ کے براؤزر میں مکمل ڈیولپمنٹ ماحول فراہم کرتا ہے۔
 
-<img src="./images/models.webp" alt="اسکرین شاٹ: GitHub Models" width="50%">
+<img src="../../../translated_images/ur/models.cb07f8af0d724e4d.webp" alt="اسکرین شاٹ: GitHub Models" width="50%">
 
 ہم اس کورس کے لیے [**GitHub Models**](https://github.com/marketplace?type=models) کے استعمال کی سفارش کرتے ہیں کیونکہ یہ:
 - شروع کرنے کے لیے **مفت** ہے
