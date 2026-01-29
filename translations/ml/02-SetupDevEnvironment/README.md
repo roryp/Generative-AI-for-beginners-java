@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:39:07+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ml"
-}
--->
 # ജാവയ്ക്കായുള്ള ജനറേറ്റീവ് എഐ വികസന പരിസ്ഥിതി സജ്ജമാക്കൽ
 
 > **ത്വരിതാരംഭം**: 2 മിനിറ്റിനുള്ളിൽ ക്ലൗഡിൽ കോഡ് ചെയ്യാം - [GitHub Codespaces സെറ്റപ്പ്](../../../02-SetupDevEnvironment) എന്നതിലേക്ക് ഓടുക - ലൊക്കൽ ഇൻസ്റ്റാളേഷൻ ആവശ്യമില്ല, github മോഡലുകൾ ഉപയോഗിക്കുന്നു!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **ലോക്കൽ സെറ്റപ്പ് ആവശ്യമില്ല!** GitHub Codespaces ഉപയോഗിച്ച് നിങ്ങളെത്തന്നെ ബ്രൗസറില്‍ പൂർണ്ണ ഡെവലപ്പ്മെന്റ് എൻവയോൺമെന്റ് ഉപയോഗിച്ച് കോഡിങ് ഉടൻ തന്നെ ആരംഭിക്കാം.
 
-<img src="./images/models.webp" alt="സ്ക്രീൻഷോട്ട്: GitHub മോഡലുകൾ" width="50%">
+<img src="../../../translated_images/ml/models.cb07f8af0d724e4d.webp" alt="സ്ക്രീൻഷോട്ട്: GitHub മോഡലുകൾ" width="50%">
 
 ഈ കോഴ്‌സിനായി [**GitHub Models**](https://github.com/marketplace?type=models) ഉപയോഗിക്കാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു കാരണം ഇത്:  
 - **സൗജന്യം** ആരംഭിക്കാൻ    

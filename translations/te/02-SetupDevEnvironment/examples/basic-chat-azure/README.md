@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-12-01T09:36:50+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "te"
-}
--->
 # Azure OpenAI తో బేసిక్ చాట్ - ఎండ్-టు-ఎండ్ ఉదాహరణ
 
 ఈ ఉదాహరణ Azure OpenAI కి కనెక్ట్ అయ్యే సింపుల్ స్ప్రింగ్ బూట్ అప్లికేషన్‌ను ఎలా సృష్టించాలో మరియు మీ సెటప్‌ను పరీక్షించాలో చూపిస్తుంది.

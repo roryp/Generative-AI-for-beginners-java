@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "685f55cb07de19b52a30ce6e8b6d889e",
-  "translation_date": "2025-12-01T09:40:32+00:00",
-  "source_file": "03-CoreGenerativeAITechniques/README.md",
-  "language_code": "te"
-}
--->
 # కోర్ జనరేటివ్ AI టెక్నిక్స్ ట్యుటోరియల్
 
 ## విషయ సూచిక

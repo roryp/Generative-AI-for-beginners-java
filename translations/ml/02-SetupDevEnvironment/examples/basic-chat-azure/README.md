@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-12-01T09:37:48+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "ml"
-}
--->
 # Azure OpenAI ഉപയോഗിച്ച് അടിസ്ഥാന ചാറ്റ് - എന്റു-ടു-എന്റ് ഉദാഹരണം
 
 ഈ ഉദാഹരണം Azure OpenAI-യുമായി ബന്ധിപ്പിക്കുന്ന ഒരു ലളിതമായ Spring Boot ആപ്ലിക്കേഷൻ സൃഷ്ടിക്കുകയും നിങ്ങളുടെ സജ്ജീകരണം പരിശോധിക്കുകയും ചെയ്യുന്നതാണ്.

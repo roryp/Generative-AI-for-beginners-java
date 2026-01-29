@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
-  "translation_date": "2025-12-01T09:48:20+00:00",
-  "source_file": "01-IntroToGenAI/README.md",
-  "language_code": "kn"
-}
--->
 # ಜನರೇಟಿವ್ AI ಗೆ ಪರಿಚಯ - ಜಾವಾ ಆವೃತ್ತಿ
 
 ## ನೀವು ಏನು ಕಲಿಯುತ್ತೀರಿ

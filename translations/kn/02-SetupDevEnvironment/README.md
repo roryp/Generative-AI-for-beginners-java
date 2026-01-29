@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:40:42+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "kn"
-}
--->
 # ಜನರೇಟಿವ್ AI ನಿಗಾಗಿ Java ವಿಕಾಸ ಪರಿಸರವನ್ನು ಸജ್ಜುಗೊಳಿಸುವುದು
 
 > **ತ್ವರಿತ ಪ್ರಾರಂಭ**: 2 ನಿಮಿಷಗಳಲ್ಲಿ ಕ್ಲೌಡ್‌ನಲ್ಲಿ ಕೋಡ್ ಮಾಡಿ - [GitHub Codespaces ಸೆಟ್‌ಅಪ್](../../../02-SetupDevEnvironment) ಗೆ ಹೊಕ್ಕೆ - ಯಾವುದೇ ಸ್ಥಳೀಯ ಸ್ಥಾಪನೆ ಅವಶ್ಯಕತೆ ಇಲ್ಲ ಮತ್ತು github ಮಾದರಿಗಳನ್ನು ಬಳಸುತ್ತದೆ!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **ಯಾವುದೇ ಸ್ಥಳೀಯ ಸೆಟ್‌ಅಪ್ ಅಗತ್ಯವಿಲ್ಲ!** GitHub Codespaces ಬಳಸಿ ತಕ್ಷಣವೇ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಸಂಪೂರ್ಣ ವಿಕಾಸ ಪರಿಸರವನ್ನು ಪಡೆಯಿರಿ.
 
-<img src="./images/models.webp" alt="ತೇಜಃಚಿತ್ರ: GitHub Models" width="50%">
+<img src="../../../translated_images/kn/models.cb07f8af0d724e4d.webp" alt="ತೇಜಃಚಿತ್ರ: GitHub Models" width="50%">
 
 ನಾವು ಈ ಕೋರ್ಸ್‌ಗೆ [**GitHub Models**](https://github.com/marketplace?type=models) ಬಳಸುವುದನ್ನು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ ಏಕೆಂದರೆ ಅದು:
 - ಪ್ರಾರಂಭಿಸಲು **ಉಚಿತ**

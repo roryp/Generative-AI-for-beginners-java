@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "14c0a61ecc1cd2012a9c129236dfdf71",
-  "translation_date": "2025-12-01T09:16:14+00:00",
-  "source_file": "04-PracticalSamples/README.md",
-  "language_code": "kn"
-}
--->
 # ಪ್ರಾಯೋಗಿಕ ಅನ್ವಯಗಳು ಮತ್ತು ಯೋಜನೆಗಳು
 
 ## ನೀವು ಕಲಿಯುವದು ಏನು

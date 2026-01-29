@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:37:21+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "te"
-}
--->
 # Java కోసం జనరేటివ్ AI అభివృద్ధి పరిసరాన్ని ఏర్పాటు
 
 > **తక్షణ ప్రారంభం**: 2 నిమిషాల్లో క్లౌడ్‌లో కోడ్ చేయండి - [GitHub Codespaces సెటప్](../../../02-SetupDevEnvironment) కు వెళ్ళండి - స్థానిక ఇన్‌స్టాలేషన్ అవసరం లేదు మరియు github మోడల్స్ ఉపయోగిస్తుంది!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **స్థానిక సెటప్ అవసరం లేదు!** GitHub Codespaces ను ఉపయోగించి బ్రౌజర్‌లోనే పూర్తి అభివృద్ధి పరిసరంతో వెంటనే కోడింగ్ ప్రారంభించవచ్చు.
 
-<img src="./images/models.webp" alt="స్క్రీన్‌షాట్: GitHub Models" width="50%">
+<img src="../../../translated_images/te/models.cb07f8af0d724e4d.webp" alt="స్క్రీన్‌షాట్: GitHub Models" width="50%">
 
 మేము ఈ కోర్సు కోసం [**GitHub Models**](https://github.com/marketplace?type=models) ఉపయోగించవలసిందిగా సిఫార్సు చేస్తున్నాము ఎందుకంటే:
 - **ఉచితం** ప్రారంభించడానికి

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f787307400de59adc25a1404466a35f3",
-  "translation_date": "2025-12-01T09:22:29+00:00",
-  "source_file": "04-PracticalSamples/foundrylocal/README.md",
-  "language_code": "ml"
-}
--->
 # Foundry Local Spring Boot ട്യൂട്ടോറിയൽ
 
 ## ഉള്ളടക്കം

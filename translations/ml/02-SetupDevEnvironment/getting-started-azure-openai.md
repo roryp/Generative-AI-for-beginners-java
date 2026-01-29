@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-12-01T09:33:02+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ml"
-}
--->
 # Azure OpenAI വികസന പരിസ്ഥിതി സജ്ജമാക്കൽ
 
 > **Quick Start**: ഈ ഗൈഡ് Azure OpenAI സജ്ജീകരണത്തിനാണ്. സൗജന്യ മോഡലുകൾ ഉപയോഗിച്ച് ഉടൻ ആരംഭിക്കാൻ, [GitHub Models with Codespaces](./README.md#quick-start-cloud) ഉപയോഗിക്കുക.
