@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:11:42+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "id"
-}
--->
 # Menyiapkan Lingkungan Pengembangan untuk Generative AI untuk Java
 
 > **Mulai Cepat**: Kode di Cloud dalam 2 menit - Langsung ke [Pengaturan GitHub Codespaces](../../../02-SetupDevEnvironment) - tidak perlu instalasi lokal dan menggunakan model github!
@@ -39,7 +30,7 @@ Bab ini akan membimbing Anda melalui penyiapan lingkungan pengembangan. Kita aka
 
 **Tidak perlu pengaturan lokal!** Anda dapat mulai coding langsung menggunakan GitHub Codespaces, yang menyediakan lingkungan pengembangan lengkap di browser Anda.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/id/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 Kami merekomendasikan menggunakan [**GitHub Models**](https://github.com/marketplace?type=models) untuk kursus ini karena:
 - **Gratis** untuk memulai

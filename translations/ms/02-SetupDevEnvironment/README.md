@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:13:10+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ms"
-}
--->
 # Menyediakan Persekitaran Pembangunan untuk Generative AI bagi Java
 
 > **Mula Cepat**: Kod dalam Awan dalam 2 minit - Lompat ke [Persediaan GitHub Codespaces](../../../02-SetupDevEnvironment) - tiada pemasangan tempatan diperlukan dan menggunakan model github!
@@ -39,7 +30,7 @@ Bab ini akan memandu anda melalui penyediaan persekitaran pembangunan. Kami akan
 
 **Tiada persediaan tempatan diperlukan!** Anda boleh mula menulis kod serta-merta menggunakan GitHub Codespaces, yang menyediakan persekitaran pembangunan penuh dalam pelayar anda.
 
-<img src="./images/models.webp" alt="Tangkapan skrin: Model GitHub" width="50%">
+<img src="../../../translated_images/ms/models.cb07f8af0d724e4d.webp" alt="Tangkapan skrin: Model GitHub" width="50%">
 
 Kami mengesyorkan menggunakan [**Model GitHub**](https://github.com/marketplace?type=models) untuk kursus ini kerana ia:
 - **Percuma** untuk bermula

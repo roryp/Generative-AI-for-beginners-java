@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:13:54+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "tl"
-}
--->
 # Pag-set Up ng Development Environment para sa Generative AI para sa Java
 
 > **Mabilisang Simula**: Mag-code sa Cloud sa loob ng 2 minuto - Tumalon sa [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - walang kinakailangang lokal na pag-install at gumagamit ng github models!
@@ -39,7 +30,7 @@ Ang kabanatang ito ay gagabay sa iyo sa pag-set up ng development environment. G
 
 **Walang kinakailangang lokal na setup!** Maaari kang magsimula agad mag-code gamit ang GitHub Codespaces, na nagbibigay ng kumpletong development environment sa iyong browser.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/tl/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 Inirerekomenda naming gamitin ang [**GitHub Models**](https://github.com/marketplace?type=models) para sa kursong ito dahil ito ay:
 - **Libre** para makapagsimula

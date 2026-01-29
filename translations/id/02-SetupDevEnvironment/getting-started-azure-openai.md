@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:19:10+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "id"
-}
--->
 # Menyiapkan Lingkungan Pengembangan untuk Azure OpenAI
 
 > **Quick Start**: Panduan ini untuk pengaturan Azure OpenAI. Untuk memulai dengan model gratis, gunakan [GitHub Models with Codespaces](./README.md#quick-start-cloud).
