@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:26:48+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "sl"
-}
--->
 # Nastavitev razvojnega okolja za Generativno umetno inteligenco za Javo
 
 > **Hiter začetek**: Kodirajte v oblaku v 2 minutah - Pojdite na [Nastavitev GitHub Codespaces](../../../02-SetupDevEnvironment) - ni potrebno lokalno nameščanje in uporablja github modele!
@@ -39,7 +30,7 @@ Ta poglavje vas bo vodilo pri nastavitvi razvojnega okolja. Za naš glavni prime
 
 **Ni potrebna lokalna namestitev!** Takoj lahko začnete kodirati z uporabo GitHub Codespaces, ki zagotavlja popolno razvojno okolje v vašem brskalniku.
 
-<img src="./images/models.webp" alt="Posnetek zaslona: GitHub Models" width="50%">
+<img src="../../../translated_images/sl/models.cb07f8af0d724e4d.webp" alt="Posnetek zaslona: GitHub Models" width="50%">
 
 Priporočamo uporabo [**GitHub Models**](https://github.com/marketplace?type=models) za ta tečaj, ker je:
 - **Brezplačen** za začetek

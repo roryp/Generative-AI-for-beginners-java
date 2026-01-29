@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:25:25+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "hr"
-}
--->
 # Postavljanje Razvojnog Okruženja za Generativnu AI za Javu
 
 > **Brzi početak**: Kodirajte u oblaku za 2 minute - skočite na [Postavljanje GitHub Codespaces](../../../02-SetupDevEnvironment) - nije potrebna lokalna instalacija i koristi GitHub modele!
@@ -39,7 +30,7 @@ Ovo poglavlje vodi vas kroz postavljanje razvojnog okruženja. Koristit ćemo **
 
 **Nije potrebna lokalna instalacija!** Možete odmah početi kodirati koristeći GitHub Codespaces koji pruža potpuno razvojno okruženje u vašem pregledniku.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub modeli" width="50%">
+<img src="../../../translated_images/hr/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub modeli" width="50%">
 
 Preporučujemo korištenje [**GitHub modela**](https://github.com/marketplace?type=models) za ovaj tečaj jer su:
 - **Besplatni** za početak

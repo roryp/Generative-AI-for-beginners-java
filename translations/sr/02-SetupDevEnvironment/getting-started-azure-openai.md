@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:28:06+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "sr"
-}
--->
 # Подешавање Развојног Окружења за Azure OpenAI
 
 > **Брзи почетак**: Овај водич је за подешавање Azure OpenAI. За тренутни почетак са бесплатним моделима, користите [GitHub Models with Codespaces](./README.md#quick-start-cloud).
