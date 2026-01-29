@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-07-27T13:41:39+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "th"
-}
--->
 # ตัวอย่างการแชทพื้นฐานกับ Azure OpenAI - ตั้งแต่ต้นจนจบ
 
 ตัวอย่างนี้แสดงวิธีสร้างแอปพลิเคชัน Spring Boot แบบง่ายที่เชื่อมต่อกับ Azure OpenAI และทดสอบการตั้งค่าของคุณ

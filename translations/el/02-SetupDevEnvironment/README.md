@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:00:48+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "el"
-}
--->
 # Ρύθμιση του Περιβάλλοντος Ανάπτυξης για Γενετική AI για Java
 
 > **Γρήγορη Εκκίνηση**: Κωδικοποιήστε στο Cloud σε 2 λεπτά - Μεταβείτε στο [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - δεν απαιτείται τοπική εγκατάσταση και χρησιμοποιεί μοντέλα του GitHub!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Δεν απαιτείται τοπική ρύθμιση!** Μπορείτε να ξεκινήσετε αμέσως να κωδικοποιείτε χρησιμοποιώντας GitHub Codespaces, που παρέχει πλήρες περιβάλλον ανάπτυξης στον browser σας.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/el/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 Συνιστούμε τη χρήση των [**GitHub Models**](https://github.com/marketplace?type=models) για αυτό το μάθημα επειδή είναι:
 - **Δωρεάν** για να ξεκινήσετε

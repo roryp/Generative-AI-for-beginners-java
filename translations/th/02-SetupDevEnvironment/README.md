@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:02:22+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "th"
-}
--->
 # การตั้งค่าสภาพแวดล้อมการพัฒนาสำหรับ Generative AI สำหรับ Java
 
 > **เริ่มต้นอย่างรวดเร็ว**: โค้ดในคลาวด์ใน 2 นาที - ข้ามไปที่ [การตั้งค่า GitHub Codespaces](../../../02-SetupDevEnvironment) - ไม่ต้องติดตั้งในเครื่องและใช้โมเดลของ github!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **ไม่ต้องติดตั้งในเครื่อง!** คุณสามารถเริ่มเขียนโค้ดได้ทันทีโดยใช้ GitHub Codespaces ซึ่งให้สภาพแวดล้อมการพัฒนาเต็มรูปแบบในเว็บเบราว์เซอร์ของคุณ
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/th/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 เราแนะนำให้ใช้ [**GitHub Models**](https://github.com/marketplace?type=models) สำหรับคอร์สนี้เพราะว่า:
 - **ฟรี** เริ่มต้นได้ทันที
