@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:53:07+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "pa"
-}
--->
 # ਜੇਨੇਰੇਟਿਵ ਏਆਈ ਲਈ ਜਾਵਾ ਦੇ ਵਿਕਾਸਕਾਰੀ ਮਾਹੌਲ ਨੂੰ ਸੈਟਅਪ ਕਰਨਾ
 
 > **ਥੋੜ੍ਹੀ ਦੇਰ ਵਿੱਚ ਸ਼ੁਰੂ ਕਰੋ**: 2 ਮਿੰਟਾਂ ਵਿੱਚ ਕਲਾਉਡ ਵਿੱਚ ਕੋਡ ਕਰੋ - [GitHub ਕੋਡਸਪੇਸ ਸੈਟਅਪ](../../../02-SetupDevEnvironment) ਤੇ ਜਾਓ - ਕੋਈ ਸਥਾਨਕ ਇੰਸਟਾਲੇਸ਼ਨ ਲੋੜੀਂਦੀ ਨਹੀਂ ਅਤੇ github ਮਾਡਲ ਉਪਯੋਗ ਕਰਦਾ ਹੈ!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **ਕੋਈ ਸਥਾਨਕ ਸੈਟਅਪ ਲੋੜੀਂਦੀ ਨਹੀਂ!** ਤੁਸੀਂ ਤੁਰੰਤ GitHub Codespaces ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਪੂਰਾ ਵਿਕਾਸਕਾਰੀ ਮਾਹੌਲ ਵਰਤ ਸਕਦੇ ਹੋ।
 
-<img src="./images/models.webp" alt="ਸਕਰੀਨਸ਼ਾਟ: GitHub Models" width="50%">
+<img src="../../../translated_images/pa/models.cb07f8af0d724e4d.webp" alt="ਸਕਰੀਨਸ਼ਾਟ: GitHub Models" width="50%">
 
 ਅਸੀਂ ਇਸ ਕੋਰਸ ਲਈ [**GitHub Models**](https://github.com/marketplace?type=models) ਵਰਤੋਂ ਦੀ ਸਿਫਾਰਸ਼ ਕਰਦੇ ਹਾਂ ਕਿਉਂਕਿ ਇਹ:
 - ਸ਼ੁਰੂ ਕਰਨ ਲਈ **ਮੁਫਤ** ਹੈ
