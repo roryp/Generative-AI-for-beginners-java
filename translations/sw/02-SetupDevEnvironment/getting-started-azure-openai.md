@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:21:57+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "sw"
-}
--->
 # Kuweka Mazingira ya Maendeleo kwa Azure OpenAI
 
 > **Mwongozo wa Haraka**: Mwongozo huu ni kwa ajili ya usanidi wa Azure OpenAI. Kwa kuanza mara moja na mifano ya bure, tumia [GitHub Models with Codespaces](./README.md#quick-start-cloud).

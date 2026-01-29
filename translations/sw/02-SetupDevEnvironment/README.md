@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:15:44+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "sw"
-}
--->
 # Kuweka Mazingira ya Maendeleo kwa AI ya Kizazi kwa Java
 
 > **Anza Haraka**: Andika Msimbo Katika Cloud kwa Dakika 2 - Ruka kwa [Mpangilio wa GitHub Codespaces](../../../02-SetupDevEnvironment) - hakuna usakinishaji wa ndani unahitajika na hutumia mifano ya github!
@@ -39,7 +30,7 @@ Sura hii itakuongoza kupitia kuanzisha mazingira ya maendeleo. Tutatumia **Mifan
 
 **Hakuna usakinishaji wa ndani unahitajika!** Unaweza kuanza kuandika msimbo mara moja ukitumia GitHub Codespaces, inayotoa mazingira kamili ya maendeleo kwenye kivinjari chako.
 
-<img src="./images/models.webp" alt="Picha ya skrini: Mifano ya GitHub" width="50%">
+<img src="../../../translated_images/sw/models.cb07f8af0d724e4d.webp" alt="Picha ya skrini: Mifano ya GitHub" width="50%">
 
 Tunapendekeza kutumia [**Mifano ya GitHub**](https://github.com/marketplace?type=models) kwa kozi hii kwa sababu ni:
 - **Bure** kuanza

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:17:40+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "hu"
-}
--->
 # Fejlesztői környezet beállítása Generatív Mesterséges Intelligencia Java-hoz
 
 > **Gyors kezdés**: Kódolj a felhőben 2 perc alatt – ugorj a [GitHub Codespaces beállítás](../../../02-SetupDevEnvironment) részhez – nincs szükség helyi telepítésre, és GitHub modelleket használ!
@@ -39,7 +30,7 @@ Ez a fejezet végigvezet a fejlesztői környezet beállításán. Elsődleges p
 
 **Nem szükséges helyi beállítás!** Azonnal kezdhetsz kódolni a GitHub Codespaces használatával, amely teljes fejlesztői környezetet biztosít a böngésződben.
 
-<img src="./images/models.webp" alt="GitHub modellek képernyőképe" width="50%">
+<img src="../../../translated_images/hu/models.cb07f8af0d724e4d.webp" alt="GitHub modellek képernyőképe" width="50%">
 
 Azért ajánljuk a [**GitHub modelleket**](https://github.com/marketplace?type=models) ehhez a tanfolyamhoz, mert:
 - **Ingyenes** a kezdés
