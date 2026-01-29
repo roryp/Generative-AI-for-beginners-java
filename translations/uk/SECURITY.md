@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
-  "translation_date": "2025-07-21T20:36:57+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "uk"
-}
--->
 ## Безпека
 
 Microsoft серйозно ставиться до безпеки наших програмних продуктів і послуг, включаючи всі репозиторії вихідного коду, які керуються через наші організації на GitHub, такі як [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet) і [Xamarin](https://github.com/xamarin).

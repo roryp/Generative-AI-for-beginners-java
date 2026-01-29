@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:29:22+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "uk"
-}
--->
 # Налаштування середовища розробки для генеративного ШІ для Java
 
 > **Швидкий старт**: Програмуйте у хмарі за 2 хвилини – Перейдіть до [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) – локальна інсталяція не потрібна та використовує моделі GitHub!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Локальна інсталяція не потрібна!** Ви можете почати програмувати відразу, використовуючи GitHub Codespaces, яке надає повне середовище розробки у вашому браузері.
 
-<img src="./images/models.webp" alt="Скріншот: GitHub Models" width="50%">
+<img src="../../../translated_images/uk/models.cb07f8af0d724e4d.webp" alt="Скріншот: GitHub Models" width="50%">
 
 Ми рекомендуємо використовувати [**GitHub Models**](https://github.com/marketplace?type=models) для цього курсу, тому що це:
 - **Безкоштовно** для початку

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-07-27T13:48:57+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "my"
-}
--->
 # Azure OpenAI နှင့် Basic Chat - အဆုံးမှအဆုံးအထိ နမူနာ
 
 ဒီနမူနာက Azure OpenAI နဲ့ ချိတ်ဆက်ပြီး သင့် setup ကို စမ်းသပ်နိုင်တဲ့ ရိုးရှင်းတဲ့ Spring Boot အက်ပ်လီကေးရှင်း တစ်ခုကို ဘယ်လို ဖန်တီးရမလဲ ပြသပေးမှာ ဖြစ်ပါတယ်။

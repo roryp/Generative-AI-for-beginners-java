@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:30:54+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "my"
-}
--->
 # Azure OpenAI အတွက် Development Environment ကို Set Up လုပ်ခြင်း
 
 > **Quick Start**: ဒီလမ်းညွှန်ချက်က Azure OpenAI setup အတွက်ဖြစ်ပါတယ်။ အခမဲ့မော်ဒယ်များကို အမြန်စတင်လိုပါက [GitHub Models with Codespaces](./README.md#quick-start-cloud) ကို အသုံးပြုပါ။

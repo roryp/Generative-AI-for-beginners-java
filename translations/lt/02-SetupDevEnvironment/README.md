@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:30:57+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "lt"
-}
--->
 # Generatyvinio DI kūrimo aplinkos sąranka Java kalba
 
 > **Greitas pradžios vadovas**: Kodavimas debesyje per 2 minutes – pereikite prie [GitHub Codespaces sąrankos](../../../02-SetupDevEnvironment) – nereikia diegti lokaliai, naudojami GitHub modeliai!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Nereikia vietinio diegimo!** Galite iškart rašyti kodą naudodami GitHub Codespaces – tai visavertė kūrimo aplinka jūsų naršyklėje.
 
-<img src="./images/models.webp" alt="Ekrano nuotrauka: GitHub modeliai" width="50%">
+<img src="../../../translated_images/lt/models.cb07f8af0d724e4d.webp" alt="Ekrano nuotrauka: GitHub modeliai" width="50%">
 
 Rekomenduojame naudoti [**GitHub modelius**](https://github.com/marketplace?type=models) šiame kurse, nes jie:
 - **Nemokami** pradėti

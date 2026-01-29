@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:28:25+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "my"
-}
--->
 # Java အတွက် Generative AI အတွက် ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင် တပ်ဆင်ခြင်း
 
 > **အမြန်စတင်ရန်**: ၂ မိနစ်အတွင်း Cloud မှာ ကုဒ်ရေးပါ - [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) ကို ရောက်ပါ - ဒါဟာ ဒေသတွင်း တပ်ဆင်မှုမလိုအပ်ဘဲ github မော်ဒယ်တွေကို အသုံးပြုပါတယ်!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **ဒေသတွင်း တပ်ဆင်မှု မလိုအပ်ပါ!** GitHub Codespaces ကို အသုံးပြု၍ ဘရောက်ဇာတစ်ခုလုံးထဲမှာ အပြည့်အဝ ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင် တစ်ခုရရှိနိုင်ပြီး ချက်ချင်း ကုဒ်ရေးသားနိုင်ပါတယ်။
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/my/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 ဒီသင်တန်းအတွက် [**GitHub Models**](https://github.com/marketplace?type=models) ကို အသုံးပြုခွင့် ပေးတာမှာ အောက်ပါအချက်တွေကြောင့် အကြံပြုပါတယ် –
 - စတင်ဖို့ **အခမဲ့**
