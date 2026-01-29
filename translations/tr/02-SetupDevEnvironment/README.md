@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:59:15+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "tr"
-}
--->
 # Java için Üretken AI Geliştirme Ortamını Kurma
 
 > **Hızlı Başlangıç**: Bulutta 2 dakikada kodlamaya başlayın - Atla [GitHub Codespaces Kurulumu](../../../02-SetupDevEnvironment) - yerel kurulum gerekmez ve github modellerini kullanır!
@@ -39,7 +30,7 @@ Bu bölüm, geliştirme ortamınızın kurulmasına rehberlik edecektir. Birinci
 
 **Yerel kurulum gerekmez!** Tam bir geliştirme ortamı sağlayan GitHub Codespaces ile tarayıcınızdan hemen kodlamaya başlayabilirsiniz.
 
-<img src="./images/models.webp" alt="Ekran Görüntüsü: GitHub Modelleri" width="50%">
+<img src="../../../translated_images/tr/models.cb07f8af0d724e4d.webp" alt="Ekran Görüntüsü: GitHub Modelleri" width="50%">
 
 Bu kurs için [**GitHub Modelleri**](https://github.com/marketplace?type=models) kullanmanızı öneriyoruz çünkü:
 - Başlamak için **ücretsiz**

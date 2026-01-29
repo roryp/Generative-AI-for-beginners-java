@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:57:55+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "pl"
-}
--->
 # Konfiguracja środowiska programistycznego dla Generative AI dla Java
 
 > **Szybki start**: Koduj w chmurze w 2 minuty – przejdź do [Konfiguracja GitHub Codespaces](../../../02-SetupDevEnvironment) – brak instalacji lokalnej, korzysta z modeli GitHub!
@@ -39,7 +30,7 @@ Ten rozdział przeprowadzi Cię przez proces konfiguracji środowiska programist
 
 **Brak konieczności lokalnej instalacji!** Możesz zacząć kodować od razu, używając GitHub Codespaces, które zapewnia pełne środowisko programistyczne w przeglądarce.
 
-<img src="./images/models.webp" alt="Zrzut ekranu: GitHub Models" width="50%">
+<img src="../../../translated_images/pl/models.cb07f8af0d724e4d.webp" alt="Zrzut ekranu: GitHub Models" width="50%">
 
 Polecamy korzystać z [**GitHub Models**](https://github.com/marketplace?type=models) na ten kurs, ponieważ jest to:
 - **Darmowe** aby zacząć
