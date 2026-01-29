@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:36:22+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "es"
-}
--->
 # Configuración del Entorno de Desarrollo para Generative AI para Java
 
 > **Inicio rápido**: Programa en la nube en 2 minutos - Salta a [Configuración de GitHub Codespaces](../../../02-SetupDevEnvironment) - ¡no se requiere instalación local y usa modelos de GitHub!
@@ -39,7 +30,7 @@ Este capítulo te guiará en la configuración de un entorno de desarrollo. Usar
 
 **¡No se requiere configuración local!** Puedes empezar a programar inmediatamente usando GitHub Codespaces, que proporciona un entorno de desarrollo completo en tu navegador.
 
-<img src="./images/models.webp" alt="Captura de pantalla: GitHub Models" width="50%">
+<img src="../../../translated_images/es/models.cb07f8af0d724e4d.webp" alt="Captura de pantalla: GitHub Models" width="50%">
 
 Recomendamos usar [**GitHub Models**](https://github.com/marketplace?type=models) para este curso porque es:
 - **Gratis** para comenzar

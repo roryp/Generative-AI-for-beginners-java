@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 5. 等待大约 2 分钟环境准备完成
 6. 继续到 [步骤 2：创建 GitHub 令牌](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/zh/codespaces.9945ded8ceb431a5.webp" alt="截图：Codespaces 子菜单" width="50%">
+<img src="../../../translated_images/zh-CN/codespaces.9945ded8ceb431a5.webp" alt="截图：Codespaces 子菜单" width="50%">
 
-<img src="../../../translated_images/zh/image.833552b62eee7766.webp" alt="截图：New with options" width="50%">
+<img src="../../../translated_images/zh-CN/image.833552b62eee7766.webp" alt="截图：New with options" width="50%">
 
-<img src="../../../translated_images/zh/codespaces-create.b44a36f728660ab7.webp" alt="截图：创建 codespace 选项" width="50%">
+<img src="../../../translated_images/zh-CN/codespaces-create.b44a36f728660ab7.webp" alt="截图：创建 codespace 选项" width="50%">
 
 
 > **Codespaces 的优势**：
@@ -101,9 +101,9 @@ CO_OP_TRANSLATOR_METADATA:
 6. 等待容器构建并启动
 7. 继续到 [步骤 2：创建 GitHub 令牌](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/zh/devcontainer.21126c9d6de64494.webp" alt="截图：开发容器设置" width="50%">
+<img src="../../../translated_images/zh-CN/devcontainer.21126c9d6de64494.webp" alt="截图：开发容器设置" width="50%">
 
-<img src="../../../translated_images/zh/image-3.bf93d533bbc84268.webp" alt="截图：开发容器构建完成" width="50%">
+<img src="../../../translated_images/zh-CN/image-3.bf93d533bbc84268.webp" alt="截图：开发容器构建完成" width="50%">
 
 #### 选项 C：使用您现有的本地安装
 
@@ -121,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **专业提示**：如果您的设备配置较低但想在本地用 VS Code，可以使用 GitHub Codespaces！您可以将本地 VS Code 连接到云端 Codespace，兼得两者优势。
 
-<img src="../../../translated_images/zh/image-2.fc0da29a6e4d2aff.webp" alt="截图：创建的本地开发容器实例" width="50%">
+<img src="../../../translated_images/zh-CN/image-2.fc0da29a6e4d2aff.webp" alt="截图：创建的本地开发容器实例" width="50%">
 
 
 ## 步骤 2：创建 GitHub 个人访问令牌

@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 5. 等待約 2 分鐘，環境就緒
 6. 執行至 [步驟 2：建立 GitHub 存取權杖](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/tw/codespaces.9945ded8ceb431a5.webp" alt="Screenshot: Codespaces submenu" width="50%">
+<img src="../../../translated_images/zh-TW/codespaces.9945ded8ceb431a5.webp" alt="Screenshot: Codespaces submenu" width="50%">
 
-<img src="../../../translated_images/tw/image.833552b62eee7766.webp" alt="Screenshot: New with options" width="50%">
+<img src="../../../translated_images/zh-TW/image.833552b62eee7766.webp" alt="Screenshot: New with options" width="50%">
 
-<img src="../../../translated_images/tw/codespaces-create.b44a36f728660ab7.webp" alt="Screenshot: Create codespace options" width="50%">
+<img src="../../../translated_images/zh-TW/codespaces-create.b44a36f728660ab7.webp" alt="Screenshot: Create codespace options" width="50%">
 
 
 > **Codespaces 的優點**：
@@ -101,9 +101,9 @@ CO_OP_TRANSLATOR_METADATA:
 6. 等待容器建置並啟動完成
 7. 執行至 [步驟 2：建立 GitHub 存取權杖](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/tw/devcontainer.21126c9d6de64494.webp" alt="Screenshot: Dev container setup" width="50%">
+<img src="../../../translated_images/zh-TW/devcontainer.21126c9d6de64494.webp" alt="Screenshot: Dev container setup" width="50%">
 
-<img src="../../../translated_images/tw/image-3.bf93d533bbc84268.webp" alt="Screenshot: Dev container build complete" width="50%">
+<img src="../../../translated_images/zh-TW/image-3.bf93d533bbc84268.webp" alt="Screenshot: Dev container build complete" width="50%">
 
 #### 選項 C：使用你現有的本地安裝
 
@@ -121,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **小提示**：若你的裝置規格較低但想使用本地 VS Code，建議採用 GitHub Codespaces！你可以將本地 VS Code 連接到雲端 Codespace，享受兩者優點。
 
-<img src="../../../translated_images/tw/image-2.fc0da29a6e4d2aff.webp" alt="Screenshot: created local devcontainer instance" width="50%">
+<img src="../../../translated_images/zh-TW/image-2.fc0da29a6e4d2aff.webp" alt="Screenshot: created local devcontainer instance" width="50%">
 
 ## 步驟 2：建立 GitHub 個人存取權杖
 

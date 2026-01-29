@@ -74,11 +74,11 @@ Criámos um contentor de desenvolvimento pré-configurado para minimizar o tempo
 5. Aguarde cerca de 2 minutos para o ambiente ficar pronto
 6. Prossiga para [Passo 2: Criar Token GitHub](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/pt/codespaces.9945ded8ceb431a5.webp" alt="Screenshot: Codespaces submenu" width="50%">
+<img src="../../../translated_images/pt-PT/codespaces.9945ded8ceb431a5.webp" alt="Screenshot: Codespaces submenu" width="50%">
 
-<img src="../../../translated_images/pt/image.833552b62eee7766.webp" alt="Screenshot: New with options" width="50%">
+<img src="../../../translated_images/pt-PT/image.833552b62eee7766.webp" alt="Screenshot: New with options" width="50%">
 
-<img src="../../../translated_images/pt/codespaces-create.b44a36f728660ab7.webp" alt="Screenshot: Create codespace options" width="50%">
+<img src="../../../translated_images/pt-PT/codespaces-create.b44a36f728660ab7.webp" alt="Screenshot: Create codespace options" width="50%">
 
 > **Vantagens dos Codespaces**:
 > - Não requer instalação local
@@ -100,9 +100,9 @@ Criámos um contentor de desenvolvimento pré-configurado para minimizar o tempo
 6. Aguarde o contentor ser construído e iniciado
 7. Prossiga para [Passo 2: Criar Token GitHub](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/pt/devcontainer.21126c9d6de64494.webp" alt="Screenshot: Dev container setup" width="50%">
+<img src="../../../translated_images/pt-PT/devcontainer.21126c9d6de64494.webp" alt="Screenshot: Dev container setup" width="50%">
 
-<img src="../../../translated_images/pt/image-3.bf93d533bbc84268.webp" alt="Screenshot: Dev container build complete" width="50%">
+<img src="../../../translated_images/pt-PT/image-3.bf93d533bbc84268.webp" alt="Screenshot: Dev container build complete" width="50%">
 
 #### Opção C: Use a Sua Instalação Local Existente
 
@@ -120,7 +120,7 @@ Passos:
 
 > **Dica Profissional**: Se tiver uma máquina com especificações baixas mas quiser usar VS Code localmente, use GitHub Codespaces! Pode ligar o seu VS Code local a um Codespace alojado na nuvem para o melhor dos dois mundos.
 
-<img src="../../../translated_images/pt/image-2.fc0da29a6e4d2aff.webp" alt="Screenshot: created local devcontainer instance" width="50%">
+<img src="../../../translated_images/pt-PT/image-2.fc0da29a6e4d2aff.webp" alt="Screenshot: created local devcontainer instance" width="50%">
 
 ## Passo 2: Crie um Token de Acesso Pessoal do GitHub
 

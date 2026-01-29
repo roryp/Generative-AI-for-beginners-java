@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 5. 等候約 2 分鐘以完成環境準備
 6. 繼續至 [步驟 2：建立 GitHub 權杖](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/mo/codespaces.9945ded8ceb431a5.webp" alt="螢幕截圖：Codespaces 子選單" width="50%">
+<img src="../../../translated_images/zh-MO/codespaces.9945ded8ceb431a5.webp" alt="螢幕截圖：Codespaces 子選單" width="50%">
 
-<img src="../../../translated_images/mo/image.833552b62eee7766.webp" alt="螢幕截圖：New with options" width="50%">
+<img src="../../../translated_images/zh-MO/image.833552b62eee7766.webp" alt="螢幕截圖：New with options" width="50%">
 
-<img src="../../../translated_images/mo/codespaces-create.b44a36f728660ab7.webp" alt="螢幕截圖：建立 codespace 選項" width="50%">
+<img src="../../../translated_images/zh-MO/codespaces-create.b44a36f728660ab7.webp" alt="螢幕截圖：建立 codespace 選項" width="50%">
 
 > **Codespaces 的優點**：
 > - 不需本地安裝
@@ -100,9 +100,9 @@ CO_OP_TRANSLATOR_METADATA:
 6. 等待容器建置與啟動完成
 7. 繼續至 [步驟 2：建立 GitHub 權杖](../../../02-SetupDevEnvironment)
 
-<img src="../../../translated_images/mo/devcontainer.21126c9d6de64494.webp" alt="螢幕截圖：開發容器設定" width="50%">
+<img src="../../../translated_images/zh-MO/devcontainer.21126c9d6de64494.webp" alt="螢幕截圖：開發容器設定" width="50%">
 
-<img src="../../../translated_images/mo/image-3.bf93d533bbc84268.webp" alt="螢幕截圖：開發容器建置完成" width="50%">
+<img src="../../../translated_images/zh-MO/image-3.bf93d533bbc84268.webp" alt="螢幕截圖：開發容器建置完成" width="50%">
 
 #### 選項 C：使用您現有的本地安裝
 
@@ -120,7 +120,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **專家提示**：如果您的電腦規格較低，但仍想本地使用 VS Code，請使用 GitHub Codespaces！您可以讓本地 VS Code 連接至雲端託管的 Codespace，享有兩者優勢。
 
-<img src="../../../translated_images/mo/image-2.fc0da29a6e4d2aff.webp" alt="螢幕截圖：已建立本地開發容器實例" width="50%">
+<img src="../../../translated_images/zh-MO/image-2.fc0da29a6e4d2aff.webp" alt="螢幕截圖：已建立本地開發容器實例" width="50%">
 
 
 ## 步驟 2：建立 GitHub 個人存取權杖
