@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0cbf68d605615a1e602c832a24616859",
-  "translation_date": "2025-10-11T10:42:17+00:00",
-  "source_file": "04-PracticalSamples/petstory/README.md",
-  "language_code": "ta"
-}
--->
 # தொடக்கத்திற்கான செல்லப்பிராணி கதை உருவாக்கி பயிற்சி
 
 ## உள்ளடக்க அட்டவணை

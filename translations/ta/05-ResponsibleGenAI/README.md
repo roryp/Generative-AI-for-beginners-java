@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-10-11T10:43:02+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "ta"
-}
--->
 # பொறுப்பான ஜெனரேட்டிவ் AI
 
 ## நீங்கள் என்ன கற்றுக்கொள்வீர்கள்

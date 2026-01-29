@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:32:22+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ta"
-}
--->
 # Java க்கான ஜெனரேட்டிவ் AI வளர்ச்சிக்கான சூழலை அமைத்தல்
 
 > **விரைவான துவக்கம்**: 2 நிமிடங்களில் கிளவுட்டில் குறியீடு - [GitHub Codespaces அமைப்பு](../../../02-SetupDevEnvironment) பார்க்கவும் - உள்ளூர் நிறுவல் தேவையில்லை மற்றும் github மாதிரிகள் பயன்படுத்தப்படும்!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **எந்த உள்ளூர் அமைப்பும் தேவையில்லை!** GitHub Codespaces ஐப் பயன்படுத்தி உடனடியாக துவக்கம் செய்யலாம், இது உலாவியில் முழுமையான வளர்ச்சி சூழலை வழங்குகிறது.
 
-<img src="./images/models.webp" alt="திரைபடம்: GitHub Models" width="50%">
+<img src="../../../translated_images/ta/models.cb07f8af0d724e4d.webp" alt="திரைபடம்: GitHub Models" width="50%">
 
 இந்த பாடத்திட்டத்துக்காக [**GitHub Models**](https://github.com/marketplace?type=models) பயன்படுத்த பரிந்துரைக்கப்படுகிறது:
 

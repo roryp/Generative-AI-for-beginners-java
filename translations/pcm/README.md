@@ -1,18 +1,9 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "459109e7c925f3a7b94440ad61c596a0",
-  "translation_date": "2026-01-05T10:02:59+00:00",
-  "source_file": "README.md",
-  "language_code": "pcm"
-}
--->
 # Generative AI for Beginners - Java Edition
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 ![Generative AI for Beginners - Java Edition](../../translated_images/pcm/beg-genai-series.8b48be9951cc574c.webp)
 
-**Time Commitment**: Di whole workshop fit finish online without local setup. Di environment setup go take 2 minutes, and di samples exploration go take 1-3 hours based on how deep you wan explore.
+**Time Commitment**: Di whole workshop fit finish online without local setup. Di environment setup go take 2 minutes, and to explore di samples go take 1-3 hours depending on how deep you wan explore.
 
 > **Quick Start** 
 
@@ -20,18 +11,18 @@ CO_OP_TRANSLATOR_METADATA:
 2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
 3. Use di defaults – dis one go select di Development container wey dem create for dis course
 4. Click **Create codespace**
-5. Wait ~2 minutes make di environment ready
-6. Jump straight go [Di first example](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Wait ~2 minutes make environment ready
+6. Jump straight to [The first example](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 > **Prefer to Clone Locally?**
 >
-> Dis repository get 50+ language translations wey mean say e go increase di download size. If you wan clone without translations, use sparse checkout:
+> Dis repository get 50+ language translations wey dey increase the size wey you go download. To clone without di translations, use sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dis dey give you everytin wey you need to finish di course with faster download.
+> Dis one go give you everything wey you need to complete di course with faster download.
 
 
 ## Multi-Language Support
@@ -39,17 +30,17 @@ CO_OP_TRANSLATOR_METADATA:
 ### Supported via GitHub Action (Automated & Always Up-to-Date)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
 > **Prefer to Clone Locally?**
 
-> Dis repository get 50+ language translations wey mean say e go increase di download size. If you wan clone without translations, use sparse checkout:
+> Dis repository get 50+ language translations wey dey increase di download size well well. To clone without di translations, use sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dis dey give you everytin wey you need to finish di course with faster download.
+> Dis one go give you everything wey you need to complete di course with faster download.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 ## Course Structure & Learning Path
@@ -57,22 +48,22 @@ CO_OP_TRANSLATOR_METADATA:
 ### **Chapter 1: Introduction to Generative AI**
 - **Core Concepts**: Understand Large Language Models, tokens, embeddings, and AI capabilities
 - **Java AI Ecosystem**: Overview of Spring AI and OpenAI SDKs
-- **Model Context Protocol**: Introduction to MCP and how e dey help AI agent communication
-- **Practical Applications**: Real-world tins like chatbots and content generation
+- **Model Context Protocol**: Introduction to MCP and how e dey help AI agents talk
+- **Practical Applications**: Real-life scenarios like chatbots and content generation
 - **[→ Start Chapter 1](./01-IntroToGenAI/README.md)**
 
 ### **Chapter 2: Development Environment Setup**
 - **Multi-Provider Configuration**: Set up GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
-- **Spring Boot + Spring AI**: Best way dem dey do enterprise AI application development
-- **GitHub Models**: Free AI model access for prototyping and learning (no credit card needed)
+- **Spring Boot + Spring AI**: Best practices for enterprise AI application development
+- **GitHub Models**: Free AI model access for prototyping and learning (no need credit card)
 - **Development Tools**: Docker containers, VS Code, and GitHub Codespaces setup
 - **[→ Start Chapter 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chapter 3: Core Generative AI Techniques**
 - **Prompt Engineering**: Techniques to get better AI model responses
-- **Embeddings & Vector Operations**: Fit do semantic search and similarity matching
+- **Embeddings & Vector Operations**: How to run semantic search and similarity matching
 - **Retrieval-Augmented Generation (RAG)**: Combine AI with your own data sources
-- **Function Calling**: Make AI more powerful with custom tools and plugins
+- **Function Calling**: Extend AI powers with custom tools and plugins
 - **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapter 4: Practical Applications & Projects**
@@ -82,9 +73,9 @@ CO_OP_TRANSLATOR_METADATA:
 - **[→ Start Chapter 4](./04-PracticalSamples/README.md)**
 
 ### **Chapter 5: Responsible AI Development**
-- **GitHub Models Safety**: Test built-in content filtering and safety mechanisms (hard blocks and soft refusals)
-- **Responsible AI Demo**: Hands-on example how modern AI safety systems dey work for real life
-- **Best Practices**: Important guidelines for ethical AI development and deployment
+- **GitHub Models Safety**: Test built-in content filtering and safety mechanics (hard blocks plus soft refusals)
+- **Responsible AI Demo**: Hands-on example wey show how modern AI safety systems dey work
+- **Best Practices**: Important guidelines to do ethical AI development and deployment
 - **[→ Start Chapter 5](./05-ResponsibleGenAI/README.md)**
 
 ## Additional Resources
@@ -131,17 +122,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Getting Help
 
-If you get stuck or get any question about building AI apps. Join other learners and experienced developers for talks about MCP. Na community wey dey help, where questions dey welcome and knowledge dey share freely.
+If you dey jam wahala or get any question about how to build AI apps. Na so you fit join oda learners and beta developers for talk about MCP. Na community wey dey supportive, where questions dey welcome and dem dey share knowledge freely.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-If you get product feedback or you see errors when you dey build, waka go:
+If you get feedback about product or you see error wen you dey build, waka go:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-Dis document na wetin AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) translate. Even though we try make e correct, abeg sabi say automated translation fit get some mistakes or no clear well. The original document wey dem write for im own language na im carry true info. If na serious matter, e better make person wey sabi translate am human translate am. We no go take responsibility if person no understand or waka wrong because of dis translation.
+**Disclaimer**:  
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say machine translation fit get mistake or no too correct. Di original document for im own language na di correct one. If na serious matter, e good make human professional translator do am. We no go take responsibility if person misunderstand or misinterpret anything from dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

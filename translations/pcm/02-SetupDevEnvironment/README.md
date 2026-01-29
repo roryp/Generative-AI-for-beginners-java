@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:35:47+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "pcm"
-}
--->
 # Setting Up the Development Environment for Generative AI for Java
 
 > **Quick Start**: Code for Cloud for 2 minutes - Jump go [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - no need install for local and e dey use github models!
@@ -39,7 +30,7 @@ Dis chapter go guide you how to set up development environment. We go use **GitH
 
 **No need set up anything for local!** You fit start to code sharp sharp using GitHub Codespaces, wey dey provide full development environment for your browser.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/pcm/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 We recommend make you use [**GitHub Models**](https://github.com/marketplace?type=models) for dis course because e be:
 - **Free** to start

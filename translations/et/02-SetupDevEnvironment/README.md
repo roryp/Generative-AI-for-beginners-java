@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:34:15+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "et"
-}
--->
 # Arenduskeskkonna seadistamine Generatiivse tehisintellekti jaoks Java jaoks
 
 > **Kiire algus**: Koodi kirjutamine pilves 2 minutiga - liigu otse [GitHub Codespacesi seadistusse](../../../02-SetupDevEnvironment) - kohaliku installatsiooni pole vaja ja kasutatakse githubi mudeleid!
@@ -39,7 +30,7 @@ See peatükk juhendab sind arenduskeskkonna seadistamisel. Kasutame peamise näi
 
 **Kohalikku seadistust pole vaja!** Saad kohe kodeerima hakata GitHub Codespaces'is, mis pakub brauseris täisväärtuslikku arenduskeskkonda.
 
-<img src="./images/models.webp" alt="Ekraanipilt: GitHub Models" width="50%">
+<img src="../../../translated_images/et/models.cb07f8af0d724e4d.webp" alt="Ekraanipilt: GitHub Models" width="50%">
 
 Soovitame seda kursust läbides kasutada [**GitHub Models**](https://github.com/marketplace?type=models), sest see on:
 - **Tasuta** alustamiseks
