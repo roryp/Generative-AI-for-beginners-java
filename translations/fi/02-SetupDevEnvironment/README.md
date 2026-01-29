@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:05:54+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "fi"
-}
--->
 # Kehitysympäristön asentaminen Generative AI:ta varten Javassa
 
 > **Pika-aloitus**: Koodaa pilvessä 2 minuutissa – siirry kohtaan [GitHub Codespaces -asennus](../../../02-SetupDevEnvironment) – ei tarvitse paikallista asennusta ja käyttää GitHub-malleja!
@@ -39,7 +30,7 @@ Tässä luvussa opastamme sinut läpi kehitysympäristön asentamisen. Käytämm
 
 **Paikallista asennusta ei tarvita!** Voit aloittaa koodaamisen heti GitHub Codespacesin avulla, joka antaa täyden kehitysympäristön selaimessasi.
 
-<img src="./images/models.webp" alt="Näyttökuva: GitHub Models" width="50%">
+<img src="../../../translated_images/fi/models.cb07f8af0d724e4d.webp" alt="Näyttökuva: GitHub Models" width="50%">
 
 Suosittelemme tämän kurssin käyttämistä yhdessä [**GitHub Models**](https://github.com/marketplace?type=models) kanssa, koska se on:
 - **Ilmainen** aloittaa

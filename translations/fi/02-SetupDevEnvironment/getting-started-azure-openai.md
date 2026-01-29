@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:15:22+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "fi"
-}
--->
 # Kehitysympäristön asennus Azure OpenAI:lle
 
 > **Pika-aloitus**: Tämä opas on tarkoitettu Azure OpenAI -asennukseen. Jos haluat aloittaa nopeasti ilmaisilla malleilla, käytä [GitHub-malleja Codespacesin kanssa](./README.md#quick-start-cloud).

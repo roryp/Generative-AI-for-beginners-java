@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
-  "translation_date": "2025-09-18T15:34:44+00:00",
-  "source_file": "04-PracticalSamples/calculator/README.md",
-  "language_code": "no"
-}
--->
 # MCP Kalkulatorveiledning for Nybegynnere
 
 ## Innholdsfortegnelse

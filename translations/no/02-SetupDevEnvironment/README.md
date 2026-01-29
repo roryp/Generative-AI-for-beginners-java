@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:05:11+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "no"
-}
--->
 # Sette opp utviklingsmiljøet for Generativ AI for Java
 
 > **Rask start**: Kode i skyen på 2 minutter - hopp til [GitHub Codespaces-oppsett](../../../02-SetupDevEnvironment) - ingen lokal installasjon kreves og bruker GitHub-modeller!
@@ -39,7 +30,7 @@ Dette kapitlet vil veilede deg gjennom å sette opp et utviklingsmiljø. Vi bruk
 
 **Ingen lokal oppsett kreves!** Du kan begynne å kode umiddelbart ved hjelp av GitHub Codespaces, som gir et fullt utviklingsmiljø i nettleseren din.
 
-<img src="./images/models.webp" alt="Skjermbilde: GitHub Models" width="50%">
+<img src="../../../translated_images/no/models.cb07f8af0d724e4d.webp" alt="Skjermbilde: GitHub Models" width="50%">
 
 Vi anbefaler å bruke [**GitHub Models**](https://github.com/marketplace?type=models) for dette kurset fordi det er:
 - **Gratis** å komme i gang

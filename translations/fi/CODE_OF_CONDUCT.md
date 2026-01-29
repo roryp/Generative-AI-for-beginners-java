@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T19:08:32+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "fi"
-}
--->
 # Microsoftin avoimen lähdekoodin toimintasäännöt
 
 Tämä projekti on ottanut käyttöön [Microsoftin avoimen lähdekoodin toimintasäännöt](https://opensource.microsoft.com/codeofconduct/).
