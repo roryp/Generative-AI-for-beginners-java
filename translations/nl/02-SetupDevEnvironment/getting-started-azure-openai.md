@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:16:19+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "nl"
-}
--->
 # Het Instellen van de Ontwikkelomgeving voor Azure OpenAI
 
 > **Snelle Start**: Deze handleiding is bedoeld voor het instellen van Azure OpenAI. Voor een directe start met gratis modellen, gebruik [GitHub Models met Codespaces](./README.md#quick-start-cloud).

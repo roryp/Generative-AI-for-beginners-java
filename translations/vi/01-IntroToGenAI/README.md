@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
-  "translation_date": "2025-07-29T09:43:00+00:00",
-  "source_file": "01-IntroToGenAI/README.md",
-  "language_code": "vi"
-}
--->
 # Giới thiệu về Generative AI - Phiên bản Java
 
 ## Những điều bạn sẽ học

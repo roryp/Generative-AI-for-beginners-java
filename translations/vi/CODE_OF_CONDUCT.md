@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T19:08:49+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "vi"
-}
--->
 # Quy tắc ứng xử mã nguồn mở của Microsoft
 
 Dự án này đã áp dụng [Quy tắc ứng xử mã nguồn mở của Microsoft](https://opensource.microsoft.com/codeofconduct/).

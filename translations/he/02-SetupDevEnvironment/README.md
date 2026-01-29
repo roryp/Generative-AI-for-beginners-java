@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:08:45+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "he"
-}
--->
 # הקמת סביבת הפיתוח ל-AI גנרטיבי עבור Java
 
 > **התחלה מהירה**: כתבו קוד בענן תוך 2 דקות - עברו ל-[הגדרת GitHub Codespaces](../../../02-SetupDevEnvironment) - אין צורך בהתקנה מקומית ומשתמש בדגמי github!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **אין צורך בהתקנה מקומית!** אתם יכולים להתחיל לכתוב קוד מיד באמצעות GitHub Codespaces, שמספק סביבת פיתוח מלאה בדפדפן שלכם.
 
-<img src="./images/models.webp" alt="צילום מסך: דגמי GitHub" width="50%">
+<img src="../../../translated_images/he/models.cb07f8af0d724e4d.webp" alt="צילום מסך: דגמי GitHub" width="50%">
 
 ממליצים להשתמש ב-[**דגמי GitHub**](https://github.com/marketplace?type=models) לקורס זה מפני שהם:
 - **חינם** להתחלה

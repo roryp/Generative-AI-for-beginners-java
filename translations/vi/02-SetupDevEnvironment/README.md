@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:10:14+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "vi"
-}
--->
 # Thiết Lập Môi Trường Phát Triển cho Generative AI bằng Java
 
 > **Bắt Đầu Nhanh**: Lập trình trên đám mây trong 2 phút - Nhảy tới [Thiết Lập GitHub Codespaces](../../../02-SetupDevEnvironment) - không cần cài đặt cục bộ và sử dụng các mô hình github!
@@ -39,7 +30,7 @@ Chương này sẽ hướng dẫn bạn thiết lập môi trường phát tri�
 
 **Không cần thiết lập cục bộ!** Bạn có thể bắt đầu lập trình ngay bằng GitHub Codespaces, cung cấp môi trường phát triển đầy đủ trên trình duyệt của bạn.
 
-<img src="./images/models.webp" alt="Ảnh chụp màn hình: GitHub Models" width="50%">
+<img src="../../../translated_images/vi/models.cb07f8af0d724e4d.webp" alt="Ảnh chụp màn hình: GitHub Models" width="50%">
 
 Chúng tôi khuyên bạn dùng [**GitHub Models**](https://github.com/marketplace?type=models) cho khóa học này vì nó:
 - **Miễn phí** để bắt đầu

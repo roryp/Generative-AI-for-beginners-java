@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T19:08:43+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "he"
-}
--->
 # קוד ההתנהגות של קוד פתוח של מיקרוסופט
 
 הפרויקט הזה אימץ את [קוד ההתנהגות של קוד פתוח של מיקרוסופט](https://opensource.microsoft.com/codeofconduct/).

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:07:14+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "nl"
-}
--->
 # Het opzetten van de ontwikkelomgeving voor Generatieve AI voor Java
 
 > **Snel aan de slag**: codeer in de cloud binnen 2 minuten - Ga naar [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) - geen lokale installatie nodig en gebruikt GitHub-modellen!
@@ -39,7 +30,7 @@ Dit hoofdstuk leidt je door het opzetten van een ontwikkelomgeving. We gebruiken
 
 **Geen lokale installatie nodig!** Je kunt meteen beginnen met coderen via GitHub Codespaces, die een volledige ontwikkelomgeving in je browser levert.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/nl/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 We raden aan om [**GitHub Models**](https://github.com/marketplace?type=models) te gebruiken voor deze cursus omdat het:
 - **Gratis** is om te starten
