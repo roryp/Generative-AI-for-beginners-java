@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:22:13+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ro"
-}
--->
 # Configurarea mediului de dezvoltare pentru Generative AI pentru Java
 
 > **Început rapid**: Codifică în cloud în 2 minute - Sari la [Configurarea GitHub Codespaces](../../../02-SetupDevEnvironment) - nu este necesară nicio instalare locală și folosește modelele GitHub!
@@ -39,7 +30,7 @@ Acest capitol te va ghida prin configurarea unui mediu de dezvoltare. Vom folosi
 
 **Nu este necesară configurarea locală!** Poți începe codarea imediat folosind GitHub Codespaces, care oferă un mediu complet de dezvoltare în browserul tău.
 
-<img src="./images/models.webp" alt="Captură de ecran: GitHub Models" width="50%">
+<img src="../../../translated_images/ro/models.cb07f8af0d724e4d.webp" alt="Captură de ecran: GitHub Models" width="50%">
 
 Recomandăm folosirea [**GitHub Models**](https://github.com/marketplace?type=models) pentru acest curs pentru că este:
 - **Gratuit** pentru a începe

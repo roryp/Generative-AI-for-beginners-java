@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T05:20:41+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "sk"
-}
--->
 # Nastavenie vývojového prostredia pre Generatívnu AI pre Java
 
 > **Rýchly začiatok**: Kódovanie v cloude za 2 minúty – prejdite na [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) – nie je potrebná lokálna inštalácia a využíva github modely!
@@ -39,7 +30,7 @@ Táto kapitola vás prevedie nastavením vývojového prostredia. Ako primárny 
 
 **Nie je potrebné lokálne nastavenie!** Môžete začať kódovať okamžite pomocou GitHub Codespaces, ktoré poskytuje plné vývojové prostredie vo vašom prehliadači.
 
-<img src="./images/models.webp" alt="Snímka obrazovky: GitHub Modely" width="50%">
+<img src="../../../translated_images/sk/models.cb07f8af0d724e4d.webp" alt="Snímka obrazovky: GitHub Modely" width="50%">
 
 Odporúčame používať [**GitHub Modely**](https://github.com/marketplace?type=models) pre tento kurz, pretože sú:
 - **Bezplatné** na začiatok
