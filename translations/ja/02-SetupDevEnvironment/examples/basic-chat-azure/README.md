@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-07-27T13:36:37+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "ja"
-}
--->
 # Azure OpenAIとの基本的なチャット - エンドツーエンドの例
 
 この例では、Azure OpenAIに接続し、セットアップをテストするシンプルなSpring Bootアプリケーションを作成する方法を示します。

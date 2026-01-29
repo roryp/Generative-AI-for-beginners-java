@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:46:55+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ja"
-}
--->
 # Java向け生成AIの開発環境のセットアップ
 
 > **クイックスタート**: 2分でクラウドでコーディング - [GitHub Codespacesセットアップ](../../../02-SetupDevEnvironment)へジャンプ - ローカルインストール不要でGitHubモデルを利用！
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **ローカルセットアップは不要！** GitHub Codespacesを使えばブラウザ上にフル開発環境が準備され、すぐにコーディングを始められます。
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/ja/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 このコースでは [**GitHub Models**](https://github.com/marketplace?type=models) の利用を推奨します。理由は：
 - **無料**で開始可能

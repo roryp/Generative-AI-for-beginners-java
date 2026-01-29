@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:49:06+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "hi"
-}
--->
 # जेनरेटिव AI के लिए जावा के विकास वातावरण की स्थापना
 
 > **त्वरित प्रारंभ**: 2 मिनट में क्लाउड में कोड करें - [GitHub Codespaces सेटअप](../../../02-SetupDevEnvironment) पर जाएं - किसी स्थानीय स्थापना की आवश्यकता नहीं है और गिटहब मॉडल का उपयोग करता है!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **कोई स्थानीय सेटअप आवश्यक नहीं!** आप तुरंत ब्राउज़र में GitHub Codespaces का उपयोग कर कोडिंग शुरू कर सकते हैं, जो एक पूर्ण विकास वातावरण प्रदान करता है।
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/hi/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 हम इस कोर्स के लिए [**GitHub मॉडल**](https://github.com/marketplace?type=models) का उपयोग करने की सलाह देते हैं क्योंकि यह:
 - शुरू करने के लिए **मुफ्त** है

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "14c0a61ecc1cd2012a9c129236dfdf71",
-  "translation_date": "2025-07-29T08:35:13+00:00",
-  "source_file": "04-PracticalSamples/README.md",
-  "language_code": "ko"
-}
--->
 # 실용적인 응용 프로그램 및 프로젝트
 
 ## 학습 목표

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:48:27+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ko"
-}
--->
 # Java용 생성 AI 개발 환경 설정
 
 > **빠른 시작**: 2분 안에 클라우드에서 코딩 - [GitHub Codespaces 설정](../../../02-SetupDevEnvironment)으로 바로 이동 - 로컬 설치 불필요하며 GitHub 모델 사용!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **로컬 설정 불필요!** GitHub Codespaces를 사용하면 브라우저에서 바로 전체 개발 환경으로 코딩을 시작할 수 있습니다.
 
-<img src="./images/models.webp" alt="스크린샷: GitHub Models" width="50%">
+<img src="../../../translated_images/ko/models.cb07f8af0d724e4d.webp" alt="스크린샷: GitHub Models" width="50%">
 
 이 과정에는 [**GitHub Models**](https://github.com/marketplace?type=models)를 권장합니다. 이유는:
 - **무료**로 시작 가능

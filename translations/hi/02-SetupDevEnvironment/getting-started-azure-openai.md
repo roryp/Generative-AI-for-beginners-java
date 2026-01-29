@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:00:09+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "hi"
-}
--->
 # Azure OpenAI के लिए डेवलपमेंट एनवायरनमेंट सेटअप करना
 
 > **त्वरित शुरुआत**: यह गाइड Azure OpenAI सेटअप के लिए है। मुफ्त मॉडल्स के साथ तुरंत शुरुआत करने के लिए [GitHub Models with Codespaces](./README.md#quick-start-cloud) का उपयोग करें।
