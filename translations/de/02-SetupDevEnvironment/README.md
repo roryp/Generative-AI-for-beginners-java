@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:37:41+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "de"
-}
--->
 # Einrichtung der Entwicklungsumgebung für Generative KI für Java
 
 > **Schnellstart**: Programmieren in der Cloud in 2 Minuten – springen Sie zu [GitHub Codespaces Einrichtung](../../../02-SetupDevEnvironment) – keine lokale Installation erforderlich und verwendet GitHub-Modelle!
@@ -39,7 +30,7 @@ Dieses Kapitel führt Sie durch die Einrichtung einer Entwicklungsumgebung. Wir 
 
 **Keine lokale Einrichtung erforderlich!** Sie können sofort mit der Programmierung beginnen, indem Sie GitHub Codespaces verwenden, die eine vollständige Entwicklungsumgebung in Ihrem Browser bereitstellen.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Modelle" width="50%">
+<img src="../../../translated_images/de/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Modelle" width="50%">
 
 Wir empfehlen die Nutzung von [**GitHub Models**](https://github.com/marketplace?type=models) für diesen Kurs, weil es:
 - **Kostenlos** zum Einstieg ist

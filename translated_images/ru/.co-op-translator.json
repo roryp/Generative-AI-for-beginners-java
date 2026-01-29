@@ -77,10 +77,22 @@
     "source_file": "01-IntroToGenAI/images/mcp.png",
     "language_code": "ru"
   },
+  "models.cb07f8af0d724e4d.webp": {
+    "original_hash": "a1d68725372d3c033c59d1719b859d60",
+    "translation_date": "2026-01-29T15:19:50+00:00",
+    "source_file": "02-SetupDevEnvironment/images/models.webp",
+    "language_code": "ru"
+  },
   "responsible.e4f51a917bafa4bf.webp": {
     "original_hash": "fa8d1e23eabb52aff991b3257f039a93",
     "translation_date": "2026-01-16T06:33:43+00:00",
     "source_file": "05-ResponsibleGenAI/images/responsible.png",
+    "language_code": "ru"
+  },
+  "tokens.6283ed277a2ffff4.webp": {
+    "original_hash": "11572cc20ac9478d3d009a4b7e6aad2d",
+    "translation_date": "2026-01-29T15:19:33+00:00",
+    "source_file": "01-IntroToGenAI/images/tokens.webp",
     "language_code": "ru"
   },
   "tool.189edfdb50db566d.webp": {

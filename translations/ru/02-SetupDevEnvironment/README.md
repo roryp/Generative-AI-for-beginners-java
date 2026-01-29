@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:38:22+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ru"
-}
--->
 # Настройка среды разработки для Generative AI на Java
 
 > **Быстрый старт**: кодируйте в облаке за 2 минуты — перейдите к [настройке GitHub Codespaces](../../../02-SetupDevEnvironment) — установка на локальный компьютер не требуется, используются модели GitHub!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Локальная установка не нужна!** Вы можете сразу же начать кодировать, используя GitHub Codespaces — полноценную среду разработки прямо в браузере.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+<img src="../../../translated_images/ru/models.cb07f8af0d724e4d.webp" alt="Screenshot: GitHub Models" width="50%">
 
 Мы рекомендуем использовать [**GitHub Models**](https://github.com/marketplace?type=models) для этого курса, потому что это:
 - **Бесплатно** для начала работы

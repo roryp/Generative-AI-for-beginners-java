@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:39:55+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ar"
-}
--->
 # إعداد بيئة التطوير للذكاء الاصطناعي التوليدي لجافا
 
 > **البدء السريع**: البرمجة في السحابة خلال دقيقتين - انتقل إلى [إعداد GitHub Codespaces](../../../02-SetupDevEnvironment) - لا حاجة لتثبيت محلي ويستخدم نماذج github!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **لا حاجة لإعداد محلي!** يمكنك البدء بالبرمجة فورًا باستخدام GitHub Codespaces، التي توفر بيئة تطوير كاملة في متصفحك.
 
-<img src="./images/models.webp" alt="لقطة شاشة: نماذج GitHub" width="50%">
+<img src="../../../translated_images/ar/models.cb07f8af0d724e4d.webp" alt="لقطة شاشة: نماذج GitHub" width="50%">
 
 نوصي باستخدام [**نماذج GitHub**](https://github.com/marketplace?type=models) لهذه الدورة لأنها:
 - **مجانية** للبدء
