@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:51:26+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "ne"
-}
--->
 # जनरेटिभ एआईका लागि जाभा विकास वातावरण सेटअप गर्दै
 
 > **द्रुत सुरु:** २ मिनेटमै क्लाउडमा कोड लेख्न थाल्नुहोस् - [GitHub Codespaces सेटअप](../../../02-SetupDevEnvironment) मा जानुहोस् - कुनै स्थानीय इन्स्टलेसन आवश्यक छैन र GitHub मोडेलहरू प्रयोग गर्छ!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **कुनै स्थानीय सेटअप आवश्यक छैन!** तपाइँ तुरुन्तै GitHub Codespaces प्रयोग गरी ब्राउजरमा पूर्ण विकास वातावरण प्रदान गर्दै कोड लेख्न सुरु गर्न सक्नुहुन्छ।
 
-<img src="./images/models.webp" alt="स्क्रीनशट: GitHub Models" width="50%">
+<img src="../../../translated_images/ne/models.cb07f8af0d724e4d.webp" alt="स्क्रीनशट: GitHub Models" width="50%">
 
 हामी यस कोर्सका लागि [**GitHub Models**](https://github.com/marketplace?type=models) प्रयोग गर्न सिफारिस गर्छौं किनकि यो:
 - सुरु गर्नका लागि **निःशुल्क**

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-07-27T13:37:49+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "bn"
-}
--->
 # Azure OpenAI-এর সাথে বেসিক চ্যাট - সম্পূর্ণ উদাহরণ
 
 এই উদাহরণটি দেখায় কীভাবে একটি সাধারণ Spring Boot অ্যাপ্লিকেশন তৈরি করা যায় যা Azure OpenAI-এর সাথে সংযুক্ত হয় এবং আপনার সেটআপ পরীক্ষা করে।

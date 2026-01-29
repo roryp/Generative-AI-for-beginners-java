@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
-  "translation_date": "2026-01-28T04:49:51+00:00",
-  "source_file": "02-SetupDevEnvironment/README.md",
-  "language_code": "bn"
-}
--->
 # Java এর জন্য Generative AI এর ডেভেলপমেন্ট এনভায়রনমেন্ট সেট আপ করা
 
 > **দ্রুত শুরু করুন**: ২ মিনিটে ক্লাউডে কোড করুন - যান [GitHub Codespaces Setup](../../../02-SetupDevEnvironment) এ - কোনও লোকাল ইনস্টলেশনের প্রয়োজন নেই এবং GitHub মডেল ব্যবহার করে!
@@ -39,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **কোনও লোকাল সেটআপের প্রয়োজন নেই!** আপনি ব্রাউজারে একটি সম্পূর্ণ ডেভেলপমেন্ট এনভায়রনমেন্ট প্রদান করে GitHub Codespaces ব্যবহার করে অবিলম্বে কোডিং শুরু করতে পারেন।
 
-<img src="./images/models.webp" alt="স্ক্রীনশট: GitHub মডেল" width="50%">
+<img src="../../../translated_images/bn/models.cb07f8af0d724e4d.webp" alt="স্ক্রীনশট: GitHub মডেল" width="50%">
 
 আমরা এই কোর্সের জন্য [**GitHub Models**](https://github.com/marketplace?type=models) ব্যবহারের পরামর্শ দিই কারণ এটা:
 - শুরু করার জন্য **বিনামূল্যে**
