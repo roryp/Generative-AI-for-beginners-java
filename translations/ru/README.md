@@ -1,18 +1,18 @@
-# Генеративный ИИ для начинающих - издание на Java
+# Генеративный ИИ для начинающих - версия Java
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-![Генеративный ИИ для начинающих - издание на Java](../../translated_images/ru/beg-genai-series.8b48be9951cc574c.webp)
+![Генеративный ИИ для начинающих - версия Java](../../translated_images/ru/beg-genai-series.8b48be9951cc574c.webp)
 
-**Временные затраты**: Весь мастер-класс можно пройти онлайн без локальной настройки. Настройка среды занимает 2 минуты, изучение примеров требует от 1 до 3 часов в зависимости от глубины изучения.
+**Время на выполнение**: Весь воркшоп можно пройти онлайн без локальной установки. Настройка окружения занимает 2 минуты, изучение примеров требует от 1 до 3 часов в зависимости от глубины изучения.
 
 > **Быстрый старт** 
 
-1. Сделайте форк этого репозитория в свой аккаунт GitHub
-2. Нажмите **Code** → вкладку **Codespaces** → **...** → **New with options...**
-3. Используйте настройки по умолчанию – это выберет контейнер разработки, созданный для этого курса
+1. Форкните этот репозиторий в свой аккаунт GitHub
+2. Нажмите **Code** → вкладка **Codespaces** → **...** → **New with options...**
+3. Используйте значения по умолчанию – это выберет контейнер разработки, созданный для этого курса
 4. Нажмите **Create codespace**
-5. Подождите около 2 минут, пока среда будет готова
-6. Перейдите сразу к [первому примеру](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Подождите около 2 минут, пока окружение не будет готово
+6. Перейдите сразу к [Первому примеру](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 > **Предпочитаете клонировать локально?**
 >
@@ -22,60 +22,49 @@
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Это даст вам всё необходимое для прохождения курса с гораздо более быстрой загрузкой.
+> Это даст вам всё необходимое для прохождения курса с более быстрой загрузкой.
 
 
 ## Поддержка нескольких языков
 
-### Поддерживается через GitHub Action (автоматически и всегда актуально)
+### Поддержка через GitHub Action (автоматически и всегда актуально)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Арабский](../ar/README.md) | [Бенгальский](../bn/README.md) | [Болгарский](../bg/README.md) | [Бирманский (Мьянма)](../my/README.md) | [Китайский (упрощённый)](../zh-CN/README.md) | [Китайский (традиционный, Гонконг)](../zh-HK/README.md) | [Китайский (традиционный, Макао)](../zh-MO/README.md) | [Китайский (традиционный, Тайвань)](../zh-TW/README.md) | [Хорватский](../hr/README.md) | [Чешский](../cs/README.md) | [Датский](../da/README.md) | [Голландский](../nl/README.md) | [Эстонский](../et/README.md) | [Финский](../fi/README.md) | [Французский](../fr/README.md) | [Немецкий](../de/README.md) | [Греческий](../el/README.md) | [Иврит](../he/README.md) | [Хинди](../hi/README.md) | [Венгерский](../hu/README.md) | [Индонезийский](../id/README.md) | [Итальянский](../it/README.md) | [Японский](../ja/README.md) | [Каннада](../kn/README.md) | [Корейский](../ko/README.md) | [Литовский](../lt/README.md) | [Малайский](../ms/README.md) | [Малаялам](../ml/README.md) | [Маратхи](../mr/README.md) | [Непальский](../ne/README.md) | [Нигерийский пиджин](../pcm/README.md) | [Норвежский](../no/README.md) | [Персидский (фарси)](../fa/README.md) | [Польский](../pl/README.md) | [Португальский (Бразилия)](../pt-BR/README.md) | [Португальский (Португалия)](../pt-PT/README.md) | [Пенджаби (гурмукхи)](../pa/README.md) | [Румынский](../ro/README.md) | [Русский](./README.md) | [Сербский (кириллица)](../sr/README.md) | [Словацкий](../sk/README.md) | [Словенский](../sl/README.md) | [Испанский](../es/README.md) | [Свахили](../sw/README.md) | [Шведский](../sv/README.md) | [Тагалог (филиппинский)](../tl/README.md) | [Тамильский](../ta/README.md) | [Телугу](../te/README.md) | [Тайский](../th/README.md) | [Турецкий](../tr/README.md) | [Украинский](../uk/README.md) | [Урду](../ur/README.md) | [Вьетнамский](../vi/README.md)
+[Арабский](../ar/README.md) | [Бенгальский](../bn/README.md) | [Болгарский](../bg/README.md) | [Бирманский (Мьянма)](../my/README.md) | [Китайский (упрощенный)](../zh-CN/README.md) | [Китайский (традиционный, Гонконг)](../zh-HK/README.md) | [Китайский (традиционный, Макао)](../zh-MO/README.md) | [Китайский (традиционный, Тайвань)](../zh-TW/README.md) | [Хорватский](../hr/README.md) | [Чешский](../cs/README.md) | [Датский](../da/README.md) | [Нидерландский](../nl/README.md) | [Эстонский](../et/README.md) | [Финский](../fi/README.md) | [Французский](../fr/README.md) | [Немецкий](../de/README.md) | [Греческий](../el/README.md) | [Иврит](../he/README.md) | [Хинди](../hi/README.md) | [Венгерский](../hu/README.md) | [Индонезийский](../id/README.md) | [Итальянский](../it/README.md) | [Японский](../ja/README.md) | [Каннада](../kn/README.md) | [Корейский](../ko/README.md) | [Литовский](../lt/README.md) | [Малайский](../ms/README.md) | [Малаялам](../ml/README.md) | [Маратхи](../mr/README.md) | [Непальский](../ne/README.md) | [Нигерийский пиджин](../pcm/README.md) | [Норвежский](../no/README.md) | [Персидский (фарси)](../fa/README.md) | [Польский](../pl/README.md) | [Португальский (Бразилия)](../pt-BR/README.md) | [Португальский (Португалия)](../pt-PT/README.md) | [Пенджабский (гурмухи)](../pa/README.md) | [Румынский](../ro/README.md) | [Русский](./README.md) | [Сербский (кириллица)](../sr/README.md) | [Словацкий](../sk/README.md) | [Словенский](../sl/README.md) | [Испанский](../es/README.md) | [Суахили](../sw/README.md) | [Шведский](../sv/README.md) | [Тагальский (филиппинский)](../tl/README.md) | [Тамильский](../ta/README.md) | [Т Telugu](../te/README.md) | [Тайский](../th/README.md) | [Турецкий](../tr/README.md) | [Украинский](../uk/README.md) | [Урду](../ur/README.md) | [Вьетнамский](../vi/README.md)
 
-> **Предпочитаете клонировать локально?**
-
-> Этот репозиторий включает более 50 языковых переводов, что значительно увеличивает размер загрузки. Чтобы клонировать без переводов, используйте sparse checkout:
-> ```bash
-> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
-> cd Generative-AI-for-beginners-java
-> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
-> ```
-> Это даст вам всё необходимое для прохождения курса с гораздо более быстрой загрузкой.
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
-
-## Структура курса и учебный путь
+## Структура курса и учебный план
 
 ### **Глава 1: Введение в генеративный ИИ**
-- **Основные концепции**: понимание больших языковых моделей, токенов, эмбеддингов и возможностей ИИ
-- **Экосистема Java AI**: обзор Spring AI и OpenAI SDK
+- **Основные понятия**: понимание больших языковых моделей, токенов, эмбеддингов и возможностей ИИ
+- **Экосистема ИИ на Java**: обзор Spring AI и OpenAI SDK
 - **Протокол контекста модели**: введение в MCP и его роль в коммуникации ИИ-агентов
-- **Практические применения**: реальные сценарии, включая чатботов и генерацию контента
+- **Практическое применение**: реальные сценарии, включая чат-ботов и генерацию контента
 - **[→ Начать главу 1](./01-IntroToGenAI/README.md)**
 
 ### **Глава 2: Настройка среды разработки**
-- **Настройка для нескольких провайдеров**: интеграция GitHub Models, Azure OpenAI и OpenAI Java SDK
+- **Конфигурация для нескольких провайдеров**: настройка GitHub Models, Azure OpenAI и OpenAI Java SDK
 - **Spring Boot + Spring AI**: лучшие практики разработки корпоративных AI-приложений
-- **GitHub Models**: бесплатный доступ к AI моделям для прототипирования и обучения (без кредитной карты)
+- **GitHub Models**: бесплатный доступ к AI-моделям для прототипирования и обучения (без необходимости кредитной карты)
 - **Инструменты разработки**: контейнеры Docker, VS Code и настройка GitHub Codespaces
 - **[→ Начать главу 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Глава 3: Основные техники генеративного ИИ**
-- **Промпт-инжиниринг**: техники для получения оптимальных ответов AI модели
-- **Эмбеддинги и векторные операции**: реализация семантического поиска и сопоставления по сходству
-- **Retrieval-Augmented Generation (RAG)**: сочетание AI с собственными источниками данных
-- **Вызов функций**: расширение возможностей AI с помощью пользовательских инструментов и плагинов
+- **Инжиниринг подсказок**: методы оптимального ответа модели ИИ
+- **Эмбеддинги и векторные операции**: реализация семантического поиска и сопоставления похожести
+- **Генерация с дополнением через поиск (RAG)**: сочетание ИИ с собственными источниками данных
+- **Вызов функций**: расширение возможностей ИИ с помощью пользовательских инструментов и плагинов
 - **[→ Начать главу 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Глава 4: Практические приложения и проекты**
-- **Генератор историй о питомцах** (`petstory/`): творческая генерация контента с GitHub Models
-- **Демонстрация Foundry local** (`foundrylocal/`): локальная интеграция AI модели с OpenAI Java SDK
-- **Сервис калькулятора MCP** (`calculator/`): базовая реализация протокола контекста модели с Spring AI
+- **Генератор истории о питомце** (`petstory/`): творческая генерация контента с использованием GitHub Models
+- **Демонстрация Foundry Local** (`foundrylocal/`): интеграция локальной модели ИИ с OpenAI Java SDK
+- **Сервис калькулятора MCP** (`calculator/`): базовая реализация протокола контекста модели с использованием Spring AI
 - **[→ Начать главу 4](./04-PracticalSamples/README.md)**
 
 ### **Глава 5: Ответственная разработка ИИ**
-- **Безопасность GitHub Models**: тестирование встроенных механизмов фильтрации контента и безопасности (жёсткие блокировки и мягкие отказы)
+- **Безопасность GitHub Models**: тестирование встроенных фильтров контента и механизмов защиты (жесткие блокировки и мягкие отказы)
 - **Демонстрация ответственного ИИ**: практический пример работы современных систем безопасности ИИ
-- **Лучшие практики**: основные рекомендации по этичной разработке и развёртыванию ИИ
+- **Лучшие практики**: основные правила этичной разработки и внедрения ИИ
 - **[→ Начать главу 5](./05-ResponsibleGenAI/README.md)**
 
 ## Дополнительные ресурсы
@@ -87,7 +76,7 @@
 
 ---
 
-### Azure / Edge / MCP / Агенты
+### Azure / Edge / MCP / агенты
 [![AZD для начинающих](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI для начинающих](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP для начинающих](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -95,7 +84,7 @@
 
 ---
  
-### Серия по генеративному ИИ
+### Серия Generative AI
 [![Генеративный ИИ для начинающих](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Генеративный ИИ (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Генеративный ИИ (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -103,13 +92,12 @@
 
 ---
  
-### Основные области обучения
+### Основное обучение
 [![Машинное обучение для начинающих](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![Наука о данных для начинающих](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science для начинающих](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![ИИ для начинающих](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Кибербезопасность для начинающих](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-
-[![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![Веб-разработка для начинающих](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
@@ -123,11 +111,11 @@
 
 ## Получение помощи
 
-Если вы застряли или у вас есть вопросы по созданию AI-приложений, присоединяйтесь к другим учащимся и опытным разработчикам в обсуждениях MCP. Это поддерживающее сообщество, где вопросы приветствуются, а знания свободно делятся.
+Если вы застряли или у вас есть вопросы по созданию AI-приложений. Присоединяйтесь к другим учащимся и опытным разработчикам в обсуждениях о MCP. Это поддерживающее сообщество, где вопросы приветствуются, а знания свободно делятся.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Если у вас есть отзывы о продукте или ошибки при создании, посетите:
+Если у вас есть отзывы о продукте или ошибки при разработке, посетите:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -135,5 +123,5 @@
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Отказ от ответственности**:  
-Этот документ был переведен с использованием сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия по обеспечению точности, имейте в виду, что автоматический перевод может содержать ошибки или неточности. Оригинальный документ на его исходном языке следует считать авторитетным источником. Для критически важной информации рекомендуется воспользоваться профессиональным переводом, выполненным человеком. Мы не несем ответственности за любые недоразумения или неправильные истолкования, возникшие в результате использования данного перевода.
+Этот документ был переведен с помощью автоматического сервиса перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия обеспечить точность, имейте в виду, что автоматический перевод может содержать ошибки или неточности. Оригинальный документ на исходном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется обращаться к профессиональному переводу, выполненному человеком. Мы не несем ответственности за любые недоразумения или неправильные толкования, возникшие в результате использования данного перевода.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
