@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:22:50+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "hu"
-}
--->
 # Az Azure OpenAI fejlesztési környezet beállítása
 
 > **Gyors kezdés**: Ez az útmutató az Azure OpenAI beállításához készült. Ha azonnal szeretnéd elkezdeni ingyenes modellekkel, használd a [GitHub Models with Codespaces](./README.md#quick-start-cloud) lehetőséget.

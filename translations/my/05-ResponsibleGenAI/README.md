@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T16:01:26+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "my"
-}
--->
 # တာဝန်ရှိသော Generative AI
 
 ## သင်လေ့လာမည့်အရာများ

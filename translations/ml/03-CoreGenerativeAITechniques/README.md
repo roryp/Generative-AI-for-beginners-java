@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "685f55cb07de19b52a30ce6e8b6d889e",
-  "translation_date": "2025-12-01T09:42:19+00:00",
-  "source_file": "03-CoreGenerativeAITechniques/README.md",
-  "language_code": "ml"
-}
--->
 # കോർ ജനറേറ്റീവ് AI ടെക്നിക്‌സ് ട്യൂട്ടോറിയൽ
 
 ## ഉള്ളടക്ക പട്ടിക

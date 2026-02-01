@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-10-11T10:43:46+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ta"
-}
--->
 # Azure OpenAI வளர்ச்சி சூழலை அமைத்தல்
 
 > **விரைவான தொடக்கம்**: இந்த வழிகாட்டி Azure OpenAI அமைப்புக்காக. இலவச மாடல்களுடன் உடனடி தொடக்கத்திற்காக [GitHub Models with Codespaces](./README.md#quick-start-cloud) பயன்படுத்தவும்.

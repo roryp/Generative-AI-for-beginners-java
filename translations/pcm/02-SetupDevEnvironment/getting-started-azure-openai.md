@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-11-18T17:58:06+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "pcm"
-}
--->
 # How to Set Up Di Development Environment for Azure OpenAI
 
 > **Quick Start**: Dis guide na for Azure OpenAI setup. If you wan start quick-quick with free models, use [GitHub Models with Codespaces](./README.md#quick-start-cloud).

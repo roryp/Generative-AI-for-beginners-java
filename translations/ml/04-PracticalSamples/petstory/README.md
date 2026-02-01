@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0cbf68d605615a1e602c832a24616859",
-  "translation_date": "2025-12-01T09:26:40+00:00",
-  "source_file": "04-PracticalSamples/petstory/README.md",
-  "language_code": "ml"
-}
--->
 # പെട്ട് സ്റ്റോറി ജനറേറ്റർ ട്യൂട്ടോറിയൽ ആരംഭക്കാർക്കായി
 
 ## ഉള്ളടക്കം

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-10-11T10:44:07+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "et"
-}
--->
 # Azure OpenAI arenduskeskkonna seadistamine
 
 > **Kiire alustamine**: See juhend on mõeldud Azure OpenAI seadistamiseks. Tasuta mudelitega koheseks alustamiseks kasuta [GitHub Models with Codespaces](./README.md#quick-start-cloud).

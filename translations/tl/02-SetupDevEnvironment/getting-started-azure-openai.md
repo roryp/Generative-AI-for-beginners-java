@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:20:59+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "tl"
-}
--->
 # Pagtatakda ng Development Environment para sa Azure OpenAI
 
 > **Quick Start**: Ang gabay na ito ay para sa Azure OpenAI setup. Para sa mabilisang pagsisimula gamit ang mga libreng modelo, gamitin ang [GitHub Models with Codespaces](./README.md#quick-start-cloud).

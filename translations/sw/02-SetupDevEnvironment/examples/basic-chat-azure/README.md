@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-07-27T13:45:27+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "sw"
-}
--->
 # Mazungumzo ya Msingi na Azure OpenAI - Mfano wa Mwisho kwa Mwisho
 
 Mfano huu unaonyesha jinsi ya kuunda programu rahisi ya Spring Boot inayounganisha na Azure OpenAI na kujaribu usanidi wako.

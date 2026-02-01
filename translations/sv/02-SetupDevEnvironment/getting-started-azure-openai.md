@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:12:22+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "sv"
-}
--->
 # Ställa in utvecklingsmiljön för Azure OpenAI
 
 > **Snabbstart**: Den här guiden är för att konfigurera Azure OpenAI. För att komma igång direkt med gratis modeller, använd [GitHub Models with Codespaces](./README.md#quick-start-cloud).

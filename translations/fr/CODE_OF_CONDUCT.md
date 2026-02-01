@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T15:58:33+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "fr"
-}
--->
 # Code de conduite Open Source de Microsoft
 
 Ce projet a adopté le [Code de conduite Open Source de Microsoft](https://opensource.microsoft.com/codeofconduct/).

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:25:57+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ro"
-}
--->
 # Configurarea Mediului de Dezvoltare pentru Azure OpenAI
 
 > **Start Rapid**: Acest ghid este pentru configurarea Azure OpenAI. Pentru un început imediat cu modele gratuite, folosiți [Modele GitHub cu Codespaces](./README.md#quick-start-cloud).

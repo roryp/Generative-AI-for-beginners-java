@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:10:25+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "el"
-}
--->
 # Ρύθμιση του Περιβάλλοντος Ανάπτυξης για το Azure OpenAI
 
 > **Γρήγορη Εκκίνηση**: Αυτός ο οδηγός αφορά τη ρύθμιση του Azure OpenAI. Για άμεση εκκίνηση με δωρεάν μοντέλα, χρησιμοποιήστε [GitHub Models with Codespaces](./README.md#quick-start-cloud).

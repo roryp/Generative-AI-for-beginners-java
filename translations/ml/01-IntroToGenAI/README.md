@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
-  "translation_date": "2025-12-01T09:46:32+00:00",
-  "source_file": "01-IntroToGenAI/README.md",
-  "language_code": "ml"
-}
--->
 # ജനറേറ്റീവ് AI - ജാവ എഡിഷൻ പരിചയം
 
 ## നിങ്ങൾ പഠിക്കുന്നതെന്താണ്

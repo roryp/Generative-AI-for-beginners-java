@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:27:05+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "bg"
-}
--->
 # Настройване на среда за разработка за Azure OpenAI
 
 > **Бърз старт**: Това ръководство е за настройка на Azure OpenAI. За незабавен старт с безплатни модели, използвайте [GitHub Models with Codespaces](./README.md#quick-start-cloud).

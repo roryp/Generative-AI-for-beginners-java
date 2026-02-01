@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T17:36:57+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "pa"
-}
--->
 # ਮਾਈਕਰੋਸਾਫਟ ਖੁੱਲ੍ਹੇ ਸਰੋਤ ਦੇ ਆਚਰਣ ਕੋਡ
 
 ਇਸ ਪ੍ਰੋਜੈਕਟ ਨੇ [ਮਾਈਕਰੋਸਾਫਟ ਖੁੱਲ੍ਹੇ ਸਰੋਤ ਦੇ ਆਚਰਣ ਕੋਡ](https://opensource.microsoft.com/codeofconduct/) ਨੂੰ ਅਪਨਾਇਆ ਹੈ।

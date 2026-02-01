@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
-  "translation_date": "2025-12-01T09:17:11+00:00",
-  "source_file": "04-PracticalSamples/calculator/README.md",
-  "language_code": "te"
-}
--->
 # MCP కాలిక్యులేటర్ ట్యుటోరియల్ ప్రారంభికుల కోసం
 
 ## విషయ సూచిక

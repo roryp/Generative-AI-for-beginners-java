@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-07-27T13:41:10+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "el"
-}
--->
 # Βασική Συνομιλία με το Azure OpenAI - Παράδειγμα από Άκρη σε Άκρη
 
 Αυτό το παράδειγμα δείχνει πώς να δημιουργήσετε μια απλή εφαρμογή Spring Boot που συνδέεται με το Azure OpenAI και δοκιμάζει τη ρύθμισή σας.

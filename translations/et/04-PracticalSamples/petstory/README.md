@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0cbf68d605615a1e602c832a24616859",
-  "translation_date": "2025-10-11T10:42:41+00:00",
-  "source_file": "04-PracticalSamples/petstory/README.md",
-  "language_code": "et"
-}
--->
 # Lemmiklooma Loo Generaatori Õpetus Algajatele
 
 ## Sisukord

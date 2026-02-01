@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0cbf68d605615a1e602c832a24616859",
-  "translation_date": "2025-07-25T12:08:44+00:00",
-  "source_file": "04-PracticalSamples/petstory/README.md",
-  "language_code": "my"
-}
--->
 # သင်ကြားမှုအတွက် စတင်သူများအတွက် အိမ်မွေးတိရစ္ဆာန်ပုံပြင် ဖန်တီးရေးစနစ်
 
 ## အကြောင်းအရာများ

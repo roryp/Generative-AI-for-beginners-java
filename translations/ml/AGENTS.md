@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "afc90918d008cf77fd1982691f681306",
-  "translation_date": "2025-12-01T09:06:25+00:00",
-  "source_file": "AGENTS.md",
-  "language_code": "ml"
-}
--->
 # AGENTS.md
 
 ## പ്രോജക്റ്റ് അവലോകനം

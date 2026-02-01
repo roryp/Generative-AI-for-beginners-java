@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
-  "translation_date": "2025-07-21T20:34:57+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "hu"
-}
--->
 ## Biztonság
 
 A Microsoft komolyan veszi szoftvertermékei és szolgáltatásai biztonságát, beleértve az összes forráskód-tárházat, amelyeket GitHub szervezeteinken keresztül kezelünk, mint például [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet) és [Xamarin](https://github.com/xamarin).

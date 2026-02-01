@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0cbf68d605615a1e602c832a24616859",
-  "translation_date": "2025-07-25T12:01:59+00:00",
-  "source_file": "04-PracticalSamples/petstory/README.md",
-  "language_code": "sr"
-}
--->
 # Туторијал за Генератор Причa о Кућним Љубимцима за Почетнике
 
 ## Садржај

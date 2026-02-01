@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "14c0a61ecc1cd2012a9c129236dfdf71",
-  "translation_date": "2025-07-29T09:12:37+00:00",
-  "source_file": "04-PracticalSamples/README.md",
-  "language_code": "tr"
-}
--->
 # Pratik Uygulamalar ve Projeler
 
 ## Öğrenecekleriniz

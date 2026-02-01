@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
-  "translation_date": "2025-10-11T10:48:28+00:00",
-  "source_file": "01-IntroToGenAI/README.md",
-  "language_code": "ta"
-}
--->
 # ஜெனரேட்டிவ் AI - ஜாவா பதிப்பு அறிமுகம்
 
 ## நீங்கள் கற்றுக்கொள்ளப்போகிறீர்கள்

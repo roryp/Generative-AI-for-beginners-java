@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-07-27T13:44:24+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "id"
-}
--->
 # Obrolan Dasar dengan Azure OpenAI - Contoh End-to-End
 
 Contoh ini menunjukkan cara membuat aplikasi Spring Boot sederhana yang terhubung ke Azure OpenAI dan menguji pengaturan Anda.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T19:08:54+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "id"
-}
--->
 # Kode Etik Sumber Terbuka Microsoft
 
 Proyek ini telah mengadopsi [Kode Etik Sumber Terbuka Microsoft](https://opensource.microsoft.com/codeofconduct/).

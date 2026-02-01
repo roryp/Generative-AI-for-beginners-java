@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T15:59:14+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "pl"
-}
--->
 # Kodeks postępowania Microsoft Open Source
 
 Ten projekt przyjął [Kodeks postępowania Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/).
