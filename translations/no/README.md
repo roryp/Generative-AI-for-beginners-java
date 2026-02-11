@@ -3,71 +3,80 @@
 
 ![Generativ AI for Nybegynnere - Java-utgave](../../translated_images/no/beg-genai-series.8b48be9951cc574c.webp)
 
-**Tidsbruk**: Hele workshoppen kan gjennomføres på nett uten lokal oppsett. Miljøoppsettet tar 2 minutter, med utforsking av eksempler som krever 1–3 timer avhengig av hvor grundig du utforsker.
+**Tidsforpliktelse**: Hele verkstedet kan gjennomføres online uten lokal oppsett. Miljøoppsettet tar 2 minutter, med utforsking av eksemplene som krever 1-3 timer avhengig av utforskningsdybde.
 
-> **Rask start** 
+> **Rask Start**
 
-1. Lag en fork av dette repositoriet til din GitHub-konto
-2. Klikk **Code** → **Codespaces**-fanen → **...** → **Ny med valg...**
-3. Bruk standardinnstillinger – dette velger utviklingscontaineren som er laget for dette kurset
-4. Klikk **Create codespace**
-5. Vent ca. 2 minutter til miljøet er klart
-6. Gå direkte til [Det første eksempelet](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+1. Fork dette depotet til din GitHub-konto
+2. Klikk **Code** → **Codespaces**-fanen → **...** → **Ny med alternativer...**
+3. Bruk standardinnstillingene – dette velger utviklingscontaineren opprettet for dette kurset
+4. Klikk **Opprett codespace**
+5. Vent ~2 minutter til miljøet er klart
+6. Hopp rett til [Det første eksempelet](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
 > **Foretrekker du å klone lokalt?**
 >
-> Dette repositoriet inkluderer 50+ språkoversettelser som øker nedlastingsstørrelsen betydelig. For å klone uten oversettelser kan du bruke sparsomme utsjekk:
+> Dette depotet inkluderer 50+ språkoversettelser som øker nedlastingsstørrelsen betydelig. For å klone uten oversettelser, bruk sparsommelig utsjekking:
+>
+> **Linux / macOS (Bash)**
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dette gir deg alt du trenger for å fullføre kurset med en mye raskere nedlasting.
+>
+> **Windows (PowerShell)**
+> ```powershell
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
+> ```
+> Dette gir deg alt du trenger for å fullføre kurset med mye raskere nedlasting.
 
 
-## Støtte for flere språk
+## Flerspråklig Støtte
 
-### Støttes via GitHub Action (Automatisert & Alltid oppdatert)
+### Støttet via GitHub Action (Automatisert og Alltid Oppdatert)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabisk](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarsk](../bg/README.md) | [Burmesisk (Myanmar)](../my/README.md) | [Kinesisk (Forenklet)](../zh-CN/README.md) | [Kinesisk (Tradisjonell, Hong Kong)](../zh-HK/README.md) | [Kinesisk (Tradisjonell, Macau)](../zh-MO/README.md) | [Kinesisk (Tradisjonell, Taiwan)](../zh-TW/README.md) | [Kroatisk](../hr/README.md) | [Tsjekkisk](../cs/README.md) | [Dansk](../da/README.md) | [Nederlandsk](../nl/README.md) | [Estisk](../et/README.md) | [Finsk](../fi/README.md) | [Fransk](../fr/README.md) | [Tysk](../de/README.md) | [Gresk](../el/README.md) | [Hebraisk](../he/README.md) | [Hindi](../hi/README.md) | [Ungarsk](../hu/README.md) | [Indonesisk](../id/README.md) | [Italiensk](../it/README.md) | [Japansk](../ja/README.md) | [Kannada](../kn/README.md) | [Koreansk](../ko/README.md) | [Litauisk](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalesisk](../ne/README.md) | [Nigeriansk Pidgin](../pcm/README.md) | [Norsk](./README.md) | [Persisk (Farsi)](../fa/README.md) | [Polsk](../pl/README.md) | [Portugisisk (Brasil)](../pt-BR/README.md) | [Portugisisk (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumensk](../ro/README.md) | [Russisk](../ru/README.md) | [Serbisk (kyrillisk)](../sr/README.md) | [Slovakisk](../sk/README.md) | [Slovensk](../sl/README.md) | [Spansk](../es/README.md) | [Swahili](../sw/README.md) | [Svensk](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thailandsk](../th/README.md) | [Tyrkisk](../tr/README.md) | [Ukrainsk](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamesisk](../vi/README.md)
+[Arabisk](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarsk](../bg/README.md) | [Burmesisk (Myanmar)](../my/README.md) | [Kinesisk (Forenklet)](../zh-CN/README.md) | [Kinesisk (Tradisjonell, Hong Kong)](../zh-HK/README.md) | [Kinesisk (Tradisjonell, Macau)](../zh-MO/README.md) | [Kinesisk (Tradisjonell, Taiwan)](../zh-TW/README.md) | [Kroatisk](../hr/README.md) | [Tsjekkisk](../cs/README.md) | [Dansk](../da/README.md) | [Nederlandsk](../nl/README.md) | [Estisk](../et/README.md) | [Finsk](../fi/README.md) | [Fransk](../fr/README.md) | [Tysk](../de/README.md) | [Gresk](../el/README.md) | [Hebraisk](../he/README.md) | [Hindi](../hi/README.md) | [Ungarsk](../hu/README.md) | [Indonesisk](../id/README.md) | [Italiensk](../it/README.md) | [Japansk](../ja/README.md) | [Kannada](../kn/README.md) | [Koreansk](../ko/README.md) | [Litauisk](../lt/README.md) | [Malayisk](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalesisk](../ne/README.md) | [Nigeriansk Pidgin](../pcm/README.md) | [Norsk](./README.md) | [Persisk (Farsi)](../fa/README.md) | [Polsk](../pl/README.md) | [Portugisisk (Brasil)](../pt-BR/README.md) | [Portugisisk (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumensk](../ro/README.md) | [Russisk](../ru/README.md) | [Serbisk (Kyrillisk)](../sr/README.md) | [Slovakisk](../sk/README.md) | [Slovensk](../sl/README.md) | [Spansk](../es/README.md) | [Swahili](../sw/README.md) | [Svensk](../sv/README.md) | [Tagalog (Filippinsk)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Tyrkisk](../tr/README.md) | [Ukrainsk](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamesisk](../vi/README.md)
 
-## Kursstruktur og læringsløp
+## Kursstruktur & Læringsvei
 
 ### **Kapittel 1: Introduksjon til Generativ AI**
-- **Kjernebegreper**: Forståelse av store språkmodeller, tokens, innkapslinger og AI-kapasiteter
-- **Java AI-økosystem**: Oversikt over Spring AI og OpenAI SDK-er
-- **Model Context Protocol**: Introduksjon til MCP og dens rolle i AI-agentkommunikasjon
-- **Praktiske anvendelser**: Virkelige scenarier inkludert chatteboter og innholdsgenerering
-- **[→ Start kapittel 1](./01-IntroToGenAI/README.md)**
+- **Kjernebegreper**: Forståelse av store språkmodeller, tokens, embeddings og AI-evner
+- **Java AI-økosystemet**: Oversikt over Spring AI og OpenAI SDK-er
+- **Modellkontekstprotokoll**: Introduksjon til MCP og dens rolle i AI-agentkommunikasjon
+- **Praktiske Anvendelser**: Virkelige scenarier inkludert chatboter og innholdsgenerering
+- **[→ Start Kapittel 1](./01-IntroToGenAI/README.md)**
 
-### **Kapittel 2: Oppsett av utviklingsmiljø**
-- **Multi-leverandørkonfigurasjon**: Sett opp GitHub Models, Azure OpenAI og OpenAI Java SDK-integrasjoner
-- **Spring Boot + Spring AI**: Beste praksis for virksomhets-AI-applikasjonsutvikling
-- **GitHub Models**: Gratis AI-modelltilgang for prototyping og læring (ingen kredittkort nødvendig)
+### **Kapittel 2: Oppsett av Utviklingsmiljø**
+- **Multi-leverandør Konfigurasjon**: Sett opp GitHub-modeller, Azure OpenAI og OpenAI Java SDK-integrasjoner
+- **Spring Boot + Spring AI**: Beste praksis for utvikling av bedrifts-AI-applikasjoner
+- **GitHub-modeller**: Gratis AI-modelltilgang for prototyping og læring (ingen kredittkort nødvendig)
 - **Utviklingsverktøy**: Docker-containere, VS Code og GitHub Codespaces-konfigurasjon
-- **[→ Start kapittel 2](./02-SetupDevEnvironment/README.md)**
+- **[→ Start Kapittel 2](./02-SetupDevEnvironment/README.md)**
 
-### **Kapittel 3: Kjerne Generativ AI-teknikker**
+### **Kapittel 3: Kjerne Generative AI-teknikker**
 - **Prompt Engineering**: Teknikker for optimale AI-modellsvar
-- **Innkapslinger & vektoroperasjoner**: Implementer semantisk søk og likhetsmatching
-- **Retrieval-Augmented Generation (RAG)**: Kombiner AI med egne datakilder
-- **Funksjonskall**: Utvid AI-kapasiteter med egendefinerte verktøy og plugins
-- **[→ Start kapittel 3](./03-CoreGenerativeAITechniques/README.md)**
+- **Embeddings & Vector-operasjoner**: Implementer semantisk søk og likhetsmatching
+- **Retrieval-Augmented Generation (RAG)**: Kombiner AI med dine egne datakilder
+- **Funksjonsanrop**: Utvid AI-evner med egendefinerte verktøy og plugins
+- **[→ Start Kapittel 3](./03-CoreGenerativeAITechniques/README.md)**
 
-### **Kapittel 4: Praktiske anvendelser og prosjekter**
-- **Pet Story Generator** (`petstory/`): Kreativ innholdsgenerering med GitHub Models
+### **Kapittel 4: Praktiske Anvendelser & Prosjekter**
+- **Pet Story Generator** (`petstory/`): Kreativ innholdsgenerering med GitHub-modeller
 - **Foundry Local Demo** (`foundrylocal/`): Lokal AI-modellintegrasjon med OpenAI Java SDK
-- **MCP Calculator Service** (`calculator/`): Enkel Model Context Protocol-implementasjon med Spring AI
-- **[→ Start kapittel 4](./04-PracticalSamples/README.md)**
+- **MCP Calculator Service** (`calculator/`): Enkel Modellkontekstprotokoll-implementasjon med Spring AI
+- **[→ Start Kapittel 4](./04-PracticalSamples/README.md)**
 
 ### **Kapittel 5: Ansvarlig AI-utvikling**
-- **GitHub Models-sikkerhet**: Test innebygd innholdsfiltrering og sikkerhetsmekanismer (hard blokkering og myke avslag)
-- **Ansvarlig AI-demo**: Praktisk eksempel som viser hvordan moderne AI-sikkerhetssystemer fungerer
-- **Beste praksiser**: Viktige retningslinjer for etisk AI-utvikling og distribusjon
-- **[→ Start kapittel 5](./05-ResponsibleGenAI/README.md)**
+- **GitHub-modellers Sikkerhet**: Test innebygde innholdsfiltre og sikkerhetsmekanismer (harde blokkeringer og myke avslag)
+- **Demonstrasjon av Ansvarlig AI**: Praktisk eksempel som viser hvordan moderne AI-sikkerhetssystemer fungerer i praksis
+- **Beste Praksiser**: Viktige retningslinjer for etisk AI-utvikling og distribusjon
+- **[→ Start Kapittel 5](./05-ResponsibleGenAI/README.md)**
 
-## Ekstra ressurser
+## Ytterligere Ressurser
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -92,11 +101,11 @@
 
 ---
  
-### Kjerne-læring
+### Kjerne Læring
 [![ML for Nybegynnere](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Nybegynnere](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Nybegynnere](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![Cybersecurity for Nybegynnere](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Cybersikkerhet for Nybegynnere](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -111,17 +120,17 @@
 
 ## Få hjelp
 
-Hvis du går fast eller har noen spørsmål om å bygge AI-applikasjoner. Bli med andre lærende og erfarne utviklere i diskusjoner om MCP. Det er et støttende fellesskap hvor spørsmål er velkomne og kunnskap deles fritt.
+Hvis du står fast eller har spørsmål om å bygge AI-apper. Bli med andre elever og erfarne utviklere i diskusjoner om MCP. Det er et støttende fellesskap hvor spørsmål er velkomne og kunnskap deles fritt.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Hvis du har tilbakemeldinger på produktet eller opplever feil mens du bygger, besøk:
+Hvis du har produktinnspill eller opplever feil under byggingen, besøk:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Ansvarsfraskrivelse**:
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det opprinnelige dokumentet på sitt opprinnelige språk skal betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+**Ansvarsfraskrivelse**:  
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vennligst vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det opprinnelige dokumentet på originalspråket skal betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi påtar oss ikke ansvar for eventuelle misforståelser eller feiltolkninger som følge av bruk av denne oversettelsen.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
