@@ -2,7 +2,7 @@
 
 [![Practical Applications & Projects](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Practical Applications & Projects")
 
-> **Video**: Click the image above to watch the video overview for this lesson.
+> **Video overview:** [Watch "Practical Applications & Projects" on YouTube](https://www.youtube.com/watch?v=01vJsYei3H0).
 
 ## What You'll Learn
 In this section we'll demo three practical applications that showcase generative AI development patterns with Java:
