@@ -1,5 +1,9 @@
 # Introduction to Generative AI - Java Edition
 
+[![Introduction to Generative AI](https://img.youtube.com/vi/XH46tGp_eSw/0.jpg)](https://www.youtube.com/watch?v=XH46tGp_eSw "Introduction to Generative AI")
+
+> **Video**: Click the image above to watch the video overview for this lesson.
+
 ## What You'll Learn
 
 - **Generative AI fundamentals** including LLMs, prompt engineering, tokens, embeddings, and vector databases

@@ -1,5 +1,9 @@
 # Responsible Generative AI
 
+[![Responsible Generative AI](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
+
+> **Video**: Click the image above to watch the video overview for this lesson.
+
 ## What You'll Learn
 
 - Learn the ethical considerations and best practices that matter for AI development
