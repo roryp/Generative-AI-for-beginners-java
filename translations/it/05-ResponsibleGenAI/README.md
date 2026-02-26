@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:49:25+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "it"
-}
--->
 # Intelligenza Artificiale Generativa Responsabile
 
 ## Cosa Imparerai
@@ -58,7 +49,7 @@ La classe `ResponsibleGithubModels` segue questo flusso:
 5. Mostra i risultati indicando quali contenuti sono stati bloccati, rifiutati o consentiti
 6. Testa contenuti sicuri per confronto
 
-![Demo di Sicurezza AI Responsabile](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.it.png)
+![Demo di Sicurezza AI Responsabile](../../../translated_images/it/responsible.e4f51a917bafa4bf.webp)
 
 ### Istruzioni per la Configurazione
 
@@ -164,7 +155,7 @@ Questo esempio utilizza prompt intenzionalmente problematici solo a scopo educat
 
 Congratulazioni per aver completato il corso Generative AI for Beginners!
 
-![Completamento del Corso](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.it.png)
+![Completamento del Corso](../../../translated_images/it/image.73c7e2ff4a652e77.webp)
 
 **Cosa hai realizzato:**
 - Hai configurato il tuo ambiente di sviluppo

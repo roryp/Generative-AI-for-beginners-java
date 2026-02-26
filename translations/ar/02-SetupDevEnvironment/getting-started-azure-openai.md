@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:51:54+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ar"
-}
--->
 # إعداد بيئة التطوير لـ Azure OpenAI
 
 > **البدء السريع**: هذا الدليل مخصص لإعداد Azure OpenAI. للبدء الفوري باستخدام النماذج المجانية، استخدم [نماذج GitHub مع Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **ملاحظة**: إذا كنت ترغب في تعديل التكوين الأساسي، يرجى الاطلاع على [تكوين حاوية التطوير](../../../.devcontainer/devcontainer.json)
 2. في المستودع الذي قمت بعمل Fork له، انقر على **Code** → علامة تبويب **Codespaces**
 3. انقر على **...** → **جديد مع الخيارات...**
-![إنشاء Codespace مع الخيارات](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ar.png)
+![إنشاء Codespace مع الخيارات](../../../translated_images/ar/codespaces.9945ded8ceb431a5.webp)
 4. اختر **تكوين حاوية التطوير**: 
    - **بيئة تطوير Java للذكاء الاصطناعي التوليدي**
 5. انقر على **إنشاء Codespace**

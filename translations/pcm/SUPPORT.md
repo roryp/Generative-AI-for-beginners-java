@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b8ef73cc49dec68e2c885ee9df545129",
-  "translation_date": "2025-11-18T17:53:28+00:00",
-  "source_file": "SUPPORT.md",
-  "language_code": "pcm"
-}
--->
 # Support
 
 ## How you go fit report wahala and get help  

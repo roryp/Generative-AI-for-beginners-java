@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:52:42+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "fa"
-}
--->
 # راه‌اندازی محیط توسعه برای Azure OpenAI
 
 > **شروع سریع**: این راهنما برای تنظیم Azure OpenAI است. برای شروع سریع با مدل‌های رایگان، از [مدل‌های GitHub با Codespaces](./README.md#quick-start-cloud) استفاده کنید.
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **توجه**: اگر می‌خواهید تنظیمات پایه را ویرایش کنید، به [پیکربندی کانتینر توسعه](../../../.devcontainer/devcontainer.json) نگاهی بیندازید.
 2. در مخزن فورک‌شده خود، روی **Code** → تب **Codespaces** کلیک کنید.
 3. روی **...** → **New with options...** کلیک کنید.
-![ایجاد یک Codespace با گزینه‌ها](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.fa.png)
+![ایجاد یک Codespace با گزینه‌ها](../../../translated_images/fa/codespaces.9945ded8ceb431a5.webp)
 4. **پیکربندی کانتینر توسعه** را انتخاب کنید: 
    - **محیط توسعه جاوای هوش مصنوعی مولد**
 5. روی **Create codespace** کلیک کنید.

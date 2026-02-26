@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T17:36:51+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "ne"
-}
--->
 # माइक्रोसफ्ट ओपन सोर्स आचारसंहिता
 
 यस परियोजनाले [माइक्रोसफ्ट ओपन सोर्स आचारसंहिता](https://opensource.microsoft.com/codeofconduct/) अपनाएको छ।

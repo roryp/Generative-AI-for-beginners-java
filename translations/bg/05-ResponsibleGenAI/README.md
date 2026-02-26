@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:59:23+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "bg"
-}
--->
 # Отговорен Генеративен AI
 
 ## Какво ще научите
@@ -58,7 +49,7 @@ GitHub Models предлага основно филтриране на съдъ
 5. Показване на резултати, които показват кое съдържание е блокирано, отказано или разрешено
 6. Тестване на безопасно съдържание за сравнение
 
-![Демонстрация за безопасност на отговорен AI](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.bg.png)
+![Демонстрация за безопасност на отговорен AI](../../../translated_images/bg/responsible.e4f51a917bafa4bf.webp)
 
 ### Инструкции за настройка
 
@@ -164,7 +155,7 @@ Status: Response generated successfully
 
 Поздравления за завършването на курса "Генеративен AI за начинаещи"!
 
-![Завършване на курса](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.bg.png)
+![Завършване на курса](../../../translated_images/bg/image.73c7e2ff4a652e77.webp)
 
 **Какво постигнахте:**
 - Настроихте вашата среда за разработка

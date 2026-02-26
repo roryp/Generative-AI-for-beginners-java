@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-07-27T13:36:59+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "ko"
-}
--->
 # Azure OpenAI와의 기본 채팅 - 엔드 투 엔드 예제
 
 이 예제는 Azure OpenAI에 연결하고 설정을 테스트하는 간단한 Spring Boot 애플리케이션을 만드는 방법을 보여줍니다.

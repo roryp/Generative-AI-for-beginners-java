@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-11-18T17:58:06+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "pcm"
-}
--->
 # How to Set Up Di Development Environment for Azure OpenAI
 
 > **Quick Start**: Dis guide na for Azure OpenAI setup. If you wan start quick-quick with free models, use [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Dis guide go show you how you fit set up Azure AI Foundry models for your Java A
    > **Note**: If you wan change di basic config, check di [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. For your forked repo, click **Code** → **Codespaces** tab
 3. Click **...** → **New with options...**
-![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.pcm.png)
+![creating a codespace with options](../../../translated_images/pcm/codespaces.9945ded8ceb431a5.webp)
 4. Choose **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Click **Create codespace**

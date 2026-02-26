@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-10-11T10:45:49+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "et"
-}
--->
 # Põhiline vestlus Azure OpenAI-ga - Näide algusest lõpuni
 
 See näide näitab, kuidas luua lihtne Spring Boot rakendus, mis ühendub Azure OpenAI-ga ja testib teie seadistust.

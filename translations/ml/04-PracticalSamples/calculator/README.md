@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
-  "translation_date": "2025-12-01T09:18:44+00:00",
-  "source_file": "04-PracticalSamples/calculator/README.md",
-  "language_code": "ml"
-}
--->
 # MCP കാൽക്കുലേറ്റർ ട്യൂട്ടോറിയൽ ആരംഭക്കാർക്കായി
 
 ## ഉള്ളടക്കസൂചിക

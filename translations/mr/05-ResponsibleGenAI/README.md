@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:46:37+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "mr"
-}
--->
 # जबाबदार जनरेटिव AI
 
 ## तुम्ही काय शिकाल
@@ -58,7 +49,7 @@ GitHub Models मध्ये मूलभूत सामग्री फिल
 5. कोणती सामग्री ब्लॉक केली गेली, नाकारली गेली किंवा परवानगी दिली गेली हे दर्शविणारे परिणाम प्रदर्शित करा
 6. तुलना करण्यासाठी सुरक्षित सामग्रीची चाचणी करा
 
-![जबाबदार AI सुरक्षा डेमो](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.mr.png)
+![जबाबदार AI सुरक्षा डेमो](../../../translated_images/mr/responsible.e4f51a917bafa4bf.webp)
 
 ### सेटअप सूचना
 
@@ -164,7 +155,7 @@ AI अनुप्रयोग तयार करताना, या आवश
 
 Generative AI for Beginners कोर्स पूर्ण केल्याबद्दल अभिनंदन!
 
-![कोर्स पूर्णता](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.mr.png)
+![कोर्स पूर्णता](../../../translated_images/mr/image.73c7e2ff4a652e77.webp)
 
 **तुम्ही काय साध्य केले आहे:**
 - तुमचे विकास वातावरण सेट केले

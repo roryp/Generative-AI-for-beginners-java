@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:10:25+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "el"
-}
--->
 # Ρύθμιση του Περιβάλλοντος Ανάπτυξης για το Azure OpenAI
 
 > **Γρήγορη Εκκίνηση**: Αυτός ο οδηγός αφορά τη ρύθμιση του Azure OpenAI. Για άμεση εκκίνηση με δωρεάν μοντέλα, χρησιμοποιήστε [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **Σημείωση**: Αν θέλετε να επεξεργαστείτε τη βασική διαμόρφωση, δείτε τη [Διαμόρφωση Dev Container](../../../.devcontainer/devcontainer.json)
 2. Στο αποθετήριο που κάνατε fork, κάντε κλικ στο **Code** → καρτέλα **Codespaces**
 3. Κάντε κλικ στο **...** → **New with options...**
-![δημιουργία codespace με επιλογές](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.el.png)
+![δημιουργία codespace με επιλογές](../../../translated_images/el/codespaces.9945ded8ceb431a5.webp)
 4. Επιλέξτε **Διαμόρφωση Dev container**: 
    - **Περιβάλλον Ανάπτυξης Generative AI Java**
 5. Κάντε κλικ στο **Create codespace**

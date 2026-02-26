@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
-  "translation_date": "2025-07-29T09:33:20+00:00",
-  "source_file": "01-IntroToGenAI/README.md",
-  "language_code": "fi"
-}
--->
 # Johdanto generatiiviseen tekoälyyn - Java Edition
 
 ## Mitä opit
@@ -44,7 +35,7 @@ Kun kehität Java-tekoälysovelluksia, työskentelet **generatiivisten tekoälym
 
 On olemassa erityyppisiä malleja, jotka on optimoitu eri tehtäviin. Esimerkiksi sekä **pienet kielimallit (SLM:t)** että **suuret kielimallit (LLM:t)** voivat käsitellä tekstintuotantoa, mutta LLM:t tarjoavat yleensä paremman suorituskyvyn monimutkaisissa tehtävissä. Kuvatehtäviin käytetään erikoistuneita visiomalleja tai multimodaalisia malleja.
 
-![Kuva: Generatiivisten tekoälymallien tyypit ja käyttötapaukset.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.fi.png)
+![Kuva: Generatiivisten tekoälymallien tyypit ja käyttötapaukset.](../../../translated_images/fi/llms.225ca2b8a0d34473.webp)
 
 Mallien vastaukset eivät tietenkään ole aina täydellisiä. Olet ehkä kuullut, että mallit voivat "hallusinoida" tai tuottaa virheellistä tietoa vakuuttavalla tavalla. Voit kuitenkin ohjata mallia tuottamaan parempia vastauksia antamalla sille selkeitä ohjeita ja kontekstia. Tässä **kehotetekniikka** astuu kuvaan.
 
@@ -79,13 +70,13 @@ Tokenisointi on prosessi, jossa teksti jaetaan näihin pienempiin yksiköihin. T
 
 - **Upotukset**: Upotukset ovat tokenien vektoriedustuksia, jotka sisältävät semanttista merkitystä. Ne ovat numeerisia esityksiä (tyypillisesti liukulukuja sisältäviä taulukoita), jotka mahdollistavat mallien ymmärtää sanojen välisiä suhteita ja tuottaa kontekstuaalisesti merkityksellisiä vastauksia. Samankaltaisilla sanoilla on samankaltaiset upotukset, mikä mahdollistaa mallin ymmärtää synonyymejä ja semanttisia suhteita.
 
-![Kuva: Upotukset](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.fi.png)
+![Kuva: Upotukset](../../../translated_images/fi/embedding.398e50802c0037f9.webp)
 
   Javassa voit luoda upotuksia OpenAI SDK:ta tai muita upotusten luomista tukevia kirjastoja käyttäen. Nämä upotukset ovat olennaisia tehtävissä, kuten semanttinen haku, jossa haluat löytää samankaltaista sisältöä merkityksen perusteella eikä tarkkojen tekstivastaavuuksien.
 
 - **Vektoripohjaiset tietokannat**: Vektoripohjaiset tietokannat ovat erikoistuneita tallennusjärjestelmiä, jotka on optimoitu upotuksille. Ne mahdollistavat tehokkaan samankaltaisuushaun ja ovat keskeisiä Retrieval-Augmented Generation (RAG) -malleissa, joissa haluat löytää merkityksellistä tietoa suurista tietoaineistoista semanttisen samankaltaisuuden perusteella eikä tarkkojen vastaavuuksien.
 
-![Kuva: Vektoripohjaisen tietokannan arkkitehtuuri, joka näyttää, kuinka upotuksia tallennetaan ja haetaan samankaltaisuushaussa.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.fi.png)
+![Kuva: Vektoripohjaisen tietokannan arkkitehtuuri, joka näyttää, kuinka upotuksia tallennetaan ja haetaan samankaltaisuushaussa.](../../../translated_images/fi/vector.f12f114934e223df.webp)
 
 > **Huomio**: Tässä kurssissa emme käsittele vektoripohjaisia tietokantoja, mutta ne ovat mainitsemisen arvoisia, koska niitä käytetään yleisesti tosielämän sovelluksissa.
 
@@ -93,7 +84,7 @@ Tokenisointi on prosessi, jossa teksti jaetaan näihin pienempiin yksiköihin. T
 
 Java-tekoälysovelluksissa käytät tokeneita tekstin käsittelyyn, upotuksia semanttiseen hakuun ja RAG:iin, vektoripohjaisia tietokantoja tiedonhakuun sekä agentteja MCP:n kanssa älykkäiden, työkaluja hyödyntävien järjestelmien rakentamiseen.
 
-![Kuva: kuinka kehotteesta tulee vastaus—tokenit, vektorit, valinnainen RAG-haku, LLM-ajattelu ja MCP-agentti kaikki yhdessä nopeassa virtauksessa.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.fi.png)
+![Kuva: kuinka kehotteesta tulee vastaus—tokenit, vektorit, valinnainen RAG-haku, LLM-ajattelu ja MCP-agentti kaikki yhdessä nopeassa virtauksessa.](../../../translated_images/fi/flow.f4ef62c3052d12a8.webp)
 
 ### Java-tekoälykehityksen työkalut ja kirjastot
 

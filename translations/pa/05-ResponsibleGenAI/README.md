@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:47:49+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "pa"
-}
--->
 # ਜ਼ਿੰਮੇਵਾਰ ਜਨਰੇਟਿਵ AI
 
 ## ਤੁਸੀਂ ਕੀ ਸਿੱਖੋਗੇ
@@ -58,7 +49,7 @@ GitHub Models ਵਿੱਚ ਮੂਲ ਸਮੱਗਰੀ ਫਿਲਟਰੀਕਰ
 5. ਨਤੀਜੇ ਦਿਖਾਓ ਕਿ ਕਿਹੜੀ ਸਮੱਗਰੀ ਰੋਕੀ ਗਈ, ਇਨਕਾਰ ਕੀਤੀ ਗਈ ਜਾਂ ਮਨਜ਼ੂਰ ਕੀਤੀ ਗਈ
 6. ਤੁਲਨਾ ਲਈ ਸੁਰੱਖਿਅਤ ਸਮੱਗਰੀ ਦੀ ਜਾਂਚ ਕਰੋ
 
-![ਜ਼ਿੰਮੇਵਾਰ AI ਸੁਰੱਖਿਆ ਡੈਮੋ](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.pa.png)
+![ਜ਼ਿੰਮੇਵਾਰ AI ਸੁਰੱਖਿਆ ਡੈਮੋ](../../../translated_images/pa/responsible.e4f51a917bafa4bf.webp)
 
 ### ਸੈਟਅੱਪ ਨਿਰਦੇਸ਼
 
@@ -164,7 +155,7 @@ AI ਐਪਲੀਕੇਸ਼ਨ ਬਣਾਉਣ ਸਮੇਂ, ਇਹ ਜ਼ਰੂ
 
 ਜਨਰੇਟਿਵ AI ਲਈ ਸ਼ੁਰੂਆਤੀ ਕੋਰਸ ਪੂਰਾ ਕਰਨ 'ਤੇ ਮੁਬਾਰਕਾਂ!
 
-![ਕੋਰਸ ਪੂਰਾ](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.pa.png)
+![ਕੋਰਸ ਪੂਰਾ](../../../translated_images/pa/image.73c7e2ff4a652e77.webp)
 
 **ਤੁਹਾਡੇ ਪ੍ਰਾਪਤੀਆਂ:**
 - ਆਪਣਾ ਵਿਕਾਸ ਵਾਤਾਵਰਣ ਸੈਟ ਕੀਤਾ

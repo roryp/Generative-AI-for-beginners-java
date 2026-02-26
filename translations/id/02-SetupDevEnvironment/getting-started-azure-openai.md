@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:19:10+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "id"
-}
--->
 # Menyiapkan Lingkungan Pengembangan untuk Azure OpenAI
 
 > **Quick Start**: Panduan ini untuk pengaturan Azure OpenAI. Untuk memulai dengan model gratis, gunakan [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Panduan ini akan membantu Anda menyiapkan model Azure AI Foundry untuk aplikasi 
    > **Catatan**: Jika Anda ingin mengedit konfigurasi dasar, silakan lihat [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Di repositori fork Anda, klik **Code** → tab **Codespaces**
 3. Klik **...** → **New with options...**
-![membuat codespace dengan opsi](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.id.png)
+![membuat codespace dengan opsi](../../../translated_images/id/codespaces.9945ded8ceb431a5.webp)
 4. Pilih **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Klik **Create codespace**

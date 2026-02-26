@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:39:12+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "en"
-}
--->
 # Responsible Generative AI
 
 ## What You'll Learn
@@ -58,7 +49,7 @@ The `ResponsibleGithubModels` class operates as follows:
 5. Displays results indicating which content was blocked, refused, or allowed
 6. Tests safe content for comparison
 
-![Responsible AI Safety Demo](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.en.png)
+![Responsible AI Safety Demo](../../../translated_images/en/responsible.e4f51a917bafa4bf.webp)
 
 ### Setup Instructions
 
@@ -164,7 +155,7 @@ This example uses intentionally problematic prompts solely for educational purpo
 
 Congratulations on completing the Generative AI for Beginners course!
 
-![Course Completion](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.en.png)
+![Course Completion](../../../translated_images/en/image.73c7e2ff4a652e77.webp)
 
 **What you've accomplished:**
 - Set up your development environment

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "afc90918d008cf77fd1982691f681306",
-  "translation_date": "2025-10-03T08:38:50+00:00",
-  "source_file": "AGENTS.md",
-  "language_code": "nl"
-}
--->
 # AGENTS.md
 
 ## Projectoverzicht

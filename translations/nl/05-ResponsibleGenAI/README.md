@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:54:11+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "nl"
-}
--->
 # Verantwoordelijke Generatieve AI
 
 ## Wat Je Gaat Leren
@@ -58,7 +49,7 @@ De `ResponsibleGithubModels`-klasse volgt deze stappen:
 5. Toon resultaten die laten zien welke inhoud werd geblokkeerd, geweigerd of toegestaan
 6. Test veilige inhoud ter vergelijking
 
-![Verantwoordelijke AI Veiligheidsdemo](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.nl.png)
+![Verantwoordelijke AI Veiligheidsdemo](../../../translated_images/nl/responsible.e4f51a917bafa4bf.webp)
 
 ### Installatie-instructies
 
@@ -164,7 +155,7 @@ Dit voorbeeld gebruikt opzettelijk problematische prompts uitsluitend voor educa
 
 Gefeliciteerd met het voltooien van de Generatieve AI voor Beginners-cursus!
 
-![Cursus Voltooiing](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.nl.png)
+![Cursus Voltooiing](../../../translated_images/nl/image.73c7e2ff4a652e77.webp)
 
 **Wat je hebt bereikt:**
 - Je ontwikkelomgeving opgezet

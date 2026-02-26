@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T16:01:01+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "sl"
-}
--->
 # Odgovorna generativna umetna inteligenca
 
 ## Kaj se boste naučili
@@ -58,7 +49,7 @@ Razred `ResponsibleGithubModels` sledi temu poteku:
 5. Prikaz rezultatov, ki kažejo, katera vsebina je bila blokirana, zavrnjena ali dovoljena
 6. Testiranje varne vsebine za primerjavo
 
-![Demonstracija varnosti odgovorne umetne inteligence](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.sl.png)
+![Demonstracija varnosti odgovorne umetne inteligence](../../../translated_images/sl/responsible.e4f51a917bafa4bf.webp)
 
 ### Navodila za nastavitev
 
@@ -164,7 +155,7 @@ Ta primer uporablja namerno problematične pozive zgolj v izobraževalne namene.
 
 Čestitamo za zaključek tečaja Generativna umetna inteligenca za začetnike!
 
-![Zaključek tečaja](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.sl.png)
+![Zaključek tečaja](../../../translated_images/sl/image.73c7e2ff4a652e77.webp)
 
 **Kaj ste dosegli:**
 - Nastavili svoje razvojno okolje

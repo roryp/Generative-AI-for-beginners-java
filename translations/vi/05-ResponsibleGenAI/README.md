@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:55:03+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "vi"
-}
--->
 # AI Tạo Sinh Có Trách Nhiệm
 
 ## Những Gì Bạn Sẽ Học
@@ -58,7 +49,7 @@ Lớp `ResponsibleGithubModels` thực hiện theo luồng sau:
 5. Hiển thị kết quả cho biết nội dung nào bị chặn, từ chối hoặc được phép
 6. Kiểm tra nội dung an toàn để so sánh
 
-![Demo An Toàn AI Có Trách Nhiệm](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.vi.png)
+![Demo An Toàn AI Có Trách Nhiệm](../../../translated_images/vi/responsible.e4f51a917bafa4bf.webp)
 
 ### Hướng Dẫn Cài Đặt
 
@@ -164,7 +155,7 @@ Ví dụ này sử dụng các lời nhắc có vấn đề một cách có ch�
 
 Chúc mừng bạn đã hoàn thành khóa học AI Tạo Sinh cho Người Mới Bắt Đầu!
 
-![Hoàn Thành Khóa Học](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.vi.png)
+![Hoàn Thành Khóa Học](../../../translated_images/vi/image.73c7e2ff4a652e77.webp)
 
 **Những gì bạn đã đạt được:**
 - Thiết lập môi trường phát triển của bạn

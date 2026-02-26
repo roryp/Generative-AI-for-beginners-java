@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:50:09+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "de"
-}
--->
 # Einrichten der Entwicklungsumgebung für Azure OpenAI
 
 > **Schnellstart**: Diese Anleitung ist für die Einrichtung von Azure OpenAI gedacht. Für einen sofortigen Start mit kostenlosen Modellen nutzen Sie [GitHub Models mit Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Diese Anleitung hilft Ihnen, Azure AI Foundry-Modelle für Ihre Java-AI-Anwendun
    > **Hinweis**: Wenn Sie die grundlegende Konfiguration bearbeiten möchten, werfen Sie einen Blick auf die [Dev Container-Konfiguration](../../../.devcontainer/devcontainer.json).
 2. In Ihrem geforkten Repository klicken Sie auf **Code** → Tab **Codespaces**.
 3. Klicken Sie auf **...** → **Neu mit Optionen...**.
-![Codespace mit Optionen erstellen](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.de.png)
+![Codespace mit Optionen erstellen](../../../translated_images/de/codespaces.9945ded8ceb431a5.webp)
 4. Wählen Sie **Dev Container-Konfiguration**: 
    - **Generative AI Java Entwicklungsumgebung**
 5. Klicken Sie auf **Codespace erstellen**.

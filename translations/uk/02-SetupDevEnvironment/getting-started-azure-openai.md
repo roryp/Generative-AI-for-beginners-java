@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:31:56+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "uk"
-}
--->
 # Налаштування середовища розробки для Azure OpenAI
 
 > **Швидкий старт**: Цей посібник призначений для налаштування Azure OpenAI. Для швидкого старту з безкоштовними моделями скористайтеся [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **Примітка**: Якщо ви хочете змінити базову конфігурацію, перегляньте [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. У вашому форкнутому репозиторії натисніть **Code** → вкладка **Codespaces**
 3. Натисніть **...** → **New with options...**
-![створення Codespace з опціями](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.uk.png)
+![створення Codespace з опціями](../../../translated_images/uk/codespaces.9945ded8ceb431a5.webp)
 4. Виберіть **Конфігурацію контейнера для розробки**: 
    - **Середовище розробки Generative AI Java**
 5. Натисніть **Create codespace**

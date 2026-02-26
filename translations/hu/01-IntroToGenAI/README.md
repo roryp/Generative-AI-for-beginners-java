@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
-  "translation_date": "2025-07-29T09:59:32+00:00",
-  "source_file": "01-IntroToGenAI/README.md",
-  "language_code": "hu"
-}
--->
 # Bevezetés a Generatív MI-be - Java kiadás
 
 ## Amit megtanulsz
@@ -44,7 +35,7 @@ Java MI alkalmazások fejlesztése során generatív MI modellekkel fogsz dolgoz
 
 Vannak olyan modellek, amelyek különböző feladatokra optimalizáltak. Például a **Kis Nyelvi Modellek (SLM-ek)** és a **Nagy Nyelvi Modellek (LLM-ek)** képesek szöveg generálására, az LLM-ek általában jobb teljesítményt nyújtanak összetett feladatok esetén. Képhez kapcsolódó feladatokhoz speciális látásmodelleket vagy multimodális modelleket használnál.
 
-![Ábra: Generatív MI modellek típusai és felhasználási területei.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.hu.png)
+![Ábra: Generatív MI modellek típusai és felhasználási területei.](../../../translated_images/hu/llms.225ca2b8a0d34473.webp)
 
 Természetesen ezeknek a modelleknek a válaszai nem mindig tökéletesek. Valószínűleg hallottál már arról, hogy a modellek "hallucinálnak", vagyis helytelen információt generálnak meggyőző módon. Azonban segíthetsz a modellnek jobb válaszokat generálni, ha világos utasításokat és kontextust adsz neki. Itt jön képbe a **prompt tervezés**.
 
@@ -79,13 +70,13 @@ A tokenizálás az a folyamat, amely során a szöveget ezekre a kisebb egysége
 
 - **Beágyazások**: A beágyazások a tokenek vektoros reprezentációi, amelyek szemantikai jelentést hordoznak. Ezek numerikus reprezentációk (általában lebegőpontos számok tömbjei), amelyek lehetővé teszik a modellek számára, hogy megértsék a szavak közötti kapcsolatokat, és kontextuálisan releváns válaszokat generáljanak. Hasonló szavak hasonló beágyazásokkal rendelkeznek, lehetővé téve a modell számára, hogy megértse például a szinonimákat és szemantikai kapcsolatokat.
 
-![Ábra: Beágyazások](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.hu.png)
+![Ábra: Beágyazások](../../../translated_images/hu/embedding.398e50802c0037f9.webp)
 
   Java-ban beágyazásokat generálhatsz az OpenAI SDK vagy más könyvtárak segítségével, amelyek támogatják a beágyazás generálását. Ezek a beágyazások elengedhetetlenek olyan feladatokhoz, mint a szemantikai keresés, ahol a jelentés alapján szeretnél hasonló tartalmat találni, nem pedig pontos szöveg egyezések alapján.
 
 - **Vektor adatbázisok**: A vektor adatbázisok olyan speciális tárolórendszerek, amelyek optimalizáltak a beágyazások számára. Hatékony hasonlósági keresést tesznek lehetővé, és kulcsfontosságúak a Retrieval-Augmented Generation (RAG) mintákhoz, ahol nagy adathalmazokból szemantikai hasonlóság alapján kell releváns információt találni, nem pedig pontos egyezések alapján.
 
-![Ábra: Vektor adatbázis architektúra, amely bemutatja, hogyan tárolják és keresik a beágyazásokat hasonlósági kereséshez.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.hu.png)
+![Ábra: Vektor adatbázis architektúra, amely bemutatja, hogyan tárolják és keresik a beágyazásokat hasonlósági kereséshez.](../../../translated_images/hu/vector.f12f114934e223df.webp)
 
 > **Megjegyzés**: Ebben a kurzusban nem foglalkozunk vektor adatbázisokkal, de érdemes megemlíteni őket, mivel gyakran használják őket valós alkalmazásokban.
 
@@ -93,7 +84,7 @@ A tokenizálás az a folyamat, amely során a szöveget ezekre a kisebb egysége
 
 Java MI alkalmazásokban tokeneket használsz szövegfeldolgozáshoz, beágyazásokat szemantikai kereséshez és RAG-hoz, vektor adatbázisokat adatkereséshez, valamint ügynököket MCP-vel intelligens, eszközhasználó rendszerek építéséhez.
 
-![Ábra: hogyan válik egy prompt válasszá—tokenek, vektorok, opcionális RAG keresés, LLM gondolkodás és MCP ügynök egy gyors folyamatban.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.hu.png)
+![Ábra: hogyan válik egy prompt válasszá—tokenek, vektorok, opcionális RAG keresés, LLM gondolkodás és MCP ügynök egy gyors folyamatban.](../../../translated_images/hu/flow.f4ef62c3052d12a8.webp)
 
 ### MI fejlesztői eszközök és könyvtárak Java-hoz
 

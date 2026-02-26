@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b8ef73cc49dec68e2c885ee9df545129",
-  "translation_date": "2025-12-01T09:13:04+00:00",
-  "source_file": "SUPPORT.md",
-  "language_code": "kn"
-}
--->
 # ಬೆಂಬಲ
 
 ## ಸಮಸ್ಯೆಗಳನ್ನು ದಾಖಲಿಸುವುದು ಮತ್ತು ಸಹಾಯ ಪಡೆಯುವುದು ಹೇಗೆ  

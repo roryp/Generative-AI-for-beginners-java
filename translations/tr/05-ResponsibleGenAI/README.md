@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:50:19+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "tr"
-}
--->
 # Sorumlu Üretken Yapay Zeka
 
 ## Öğrenecekleriniz
@@ -58,7 +49,7 @@ Bu bölüm, GitHub Models'ın güvenlik önlemlerini nasıl uyguladığını, g�
 5. Engellenen, reddedilen veya izin verilen içerikleri gösteren sonuçları görüntüler
 6. Karşılaştırma için güvenli içerikleri test eder
 
-![Sorumlu Yapay Zeka Güvenlik Demosu](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.tr.png)
+![Sorumlu Yapay Zeka Güvenlik Demosu](../../../translated_images/tr/responsible.e4f51a917bafa4bf.webp)
 
 ### Kurulum Talimatları
 
@@ -164,7 +155,7 @@ Bu örnek, yalnızca eğitim amaçlı olarak kasıtlı olarak sorunlu istemler k
 
 Üretken Yapay Zeka için Başlangıç Kursunu tamamladığınız için tebrikler!
 
-![Kurs Tamamlama](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.tr.png)
+![Kurs Tamamlama](../../../translated_images/tr/image.73c7e2ff4a652e77.webp)
 
 **Başardıklarınız:**
 - Geliştirme ortamınızı kurdunuz

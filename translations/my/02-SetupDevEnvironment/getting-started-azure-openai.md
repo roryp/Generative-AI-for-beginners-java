@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:30:54+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "my"
-}
--->
 # Azure OpenAI အတွက် Development Environment ကို Set Up လုပ်ခြင်း
 
 > **Quick Start**: ဒီလမ်းညွှန်ချက်က Azure OpenAI setup အတွက်ဖြစ်ပါတယ်။ အခမဲ့မော်ဒယ်များကို အမြန်စတင်လိုပါက [GitHub Models with Codespaces](./README.md#quick-start-cloud) ကို အသုံးပြုပါ။
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **Note**: Basic config ကို ပြင်ဆင်လိုပါက [Dev Container Configuration](../../../.devcontainer/devcontainer.json) ကို ကြည့်ပါ
 2. သင့် Fork လုပ်ထားသော repo မှ **Code** → **Codespaces** tab ကို နှိပ်ပါ
 3. **...** → **New with options...** ကို နှိပ်ပါ  
-![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.my.png)
+![creating a codespace with options](../../../translated_images/my/codespaces.9945ded8ceb431a5.webp)
 4. **Dev container configuration** ကို ရွေးပါ: 
    - **Generative AI Java Development Environment**
 5. **Create codespace** ကို နှိပ်ပါ

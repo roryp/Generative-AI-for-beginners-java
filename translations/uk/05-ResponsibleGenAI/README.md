@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T16:02:15+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "uk"
-}
--->
 # Відповідальний Генеративний AI
 
 ## Що Ви Дізнаєтесь
@@ -58,7 +49,7 @@ GitHub Models має базову фільтрацію контенту "з ко
 5. Відображає результати, які показують, який контент було заблоковано, відхилено або дозволено
 6. Тестує безпечний контент для порівняння
 
-![Демонстрація Безпеки Відповідального AI](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.uk.png)
+![Демонстрація Безпеки Відповідального AI](../../../translated_images/uk/responsible.e4f51a917bafa4bf.webp)
 
 ### Інструкції з Налаштування
 
@@ -164,7 +155,7 @@ Status: Response generated successfully
 
 Вітаємо з завершенням курсу "Генеративний AI для Початківців"!
 
-![Завершення Курсу](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.uk.png)
+![Завершення Курсу](../../../translated_images/uk/image.73c7e2ff4a652e77.webp)
 
 **Що Ви Досягли:**
 - Налаштували середовище розробки

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:49:53+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "pl"
-}
--->
 # Odpowiedzialna Generatywna AI
 
 ## Czego się nauczysz
@@ -58,7 +49,7 @@ Klasa `ResponsibleGithubModels` działa według następującego schematu:
 5. Wyświetla wyniki pokazujące, które treści zostały zablokowane, odrzucone lub zaakceptowane
 6. Testuje bezpieczne treści dla porównania
 
-![Demonstracja bezpieczeństwa odpowiedzialnej AI](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.pl.png)
+![Demonstracja bezpieczeństwa odpowiedzialnej AI](../../../translated_images/pl/responsible.e4f51a917bafa4bf.webp)
 
 ### Instrukcje konfiguracji
 
@@ -164,7 +155,7 @@ Ten przykład wykorzystuje celowo problematyczne zapytania wyłącznie w celach 
 
 Gratulacje z okazji ukończenia kursu Generatywna AI dla początkujących!
 
-![Zakończenie kursu](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.pl.png)
+![Zakończenie kursu](../../../translated_images/pl/image.73c7e2ff4a652e77.webp)
 
 **Co udało Ci się osiągnąć:**
 - Skonfigurować środowisko programistyczne

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:55:36+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "id"
-}
--->
 # AI Generatif yang Bertanggung Jawab
 
 ## Apa yang Akan Anda Pelajari
@@ -58,7 +49,7 @@ Kelas `ResponsibleGithubModels` mengikuti alur berikut:
 5. Menampilkan hasil yang menunjukkan konten mana yang diblokir, ditolak, atau diizinkan
 6. Menguji konten aman untuk perbandingan
 
-![Demo Keamanan AI yang Bertanggung Jawab](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.id.png)
+![Demo Keamanan AI yang Bertanggung Jawab](../../../translated_images/id/responsible.e4f51a917bafa4bf.webp)
 
 ### Instruksi Pengaturan
 
@@ -164,7 +155,7 @@ Contoh ini menggunakan permintaan yang bermasalah secara sengaja hanya untuk tuj
 
 Selamat telah menyelesaikan kursus Generative AI untuk Pemula!
 
-![Penyelesaian Kursus](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.id.png)
+![Penyelesaian Kursus](../../../translated_images/id/image.73c7e2ff4a652e77.webp)
 
 **Apa yang telah Anda capai:**
 - Menyiapkan lingkungan pengembangan Anda

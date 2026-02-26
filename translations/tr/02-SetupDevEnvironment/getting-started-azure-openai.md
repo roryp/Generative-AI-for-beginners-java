@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:09:15+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "tr"
-}
--->
 # Azure OpenAI için Geliştirme Ortamını Kurma
 
 > **Hızlı Başlangıç**: Bu kılavuz Azure OpenAI kurulumu içindir. Ücretsiz modellerle hemen başlamak için [GitHub Modelleri ve Codespaces](./README.md#quick-start-cloud) kullanabilirsiniz.
@@ -75,7 +66,7 @@ Bu kılavuz, bu kursta Java yapay zeka uygulamalarınız için Azure AI Foundry 
    > **Not**: Temel yapılandırmayı düzenlemek isterseniz [Geliştirme Konteyneri Yapılandırması](../../../.devcontainer/devcontainer.json) bölümüne göz atabilirsiniz.
 2. Forkladığınız depoda, **Code** → **Codespaces** sekmesine tıklayın
 3. **...** → **New with options...** seçeneğine tıklayın  
-![seçeneklerle bir codespace oluşturma](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.tr.png)
+![seçeneklerle bir codespace oluşturma](../../../translated_images/tr/codespaces.9945ded8ceb431a5.webp)
 4. **Geliştirme konteyneri yapılandırmasını** seçin: 
    - **Generative AI Java Development Environment**
 5. **Create codespace** seçeneğine tıklayın

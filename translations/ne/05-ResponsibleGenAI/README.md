@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:47:20+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "ne"
-}
--->
 # जिम्मेवार जेनेरेटिभ एआई
 
 ## तपाईंले के सिक्नुहुनेछ
@@ -58,7 +49,7 @@ GitHub Models ले आधारभूत सामग्री फिल्ट
 5. कुन सामग्री ब्लक गरियो, अस्वीकृत गरियो, वा अनुमति दिइयो भन्ने नतिजा देखाउनुहोस्
 6. तुलनाका लागि सुरक्षित सामग्री परीक्षण गर्नुहोस्
 
-![जिम्मेवार एआई सुरक्षा डेमो](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.ne.png)
+![जिम्मेवार एआई सुरक्षा डेमो](../../../translated_images/ne/responsible.e4f51a917bafa4bf.webp)
 
 ### सेटअप निर्देशनहरू
 
@@ -164,7 +155,7 @@ Status: Response generated successfully
 
 जेनेरेटिभ एआई फर बिगिनर्स पाठ्यक्रम पूरा गर्नुभएकोमा बधाई छ!
 
-![पाठ्यक्रम पूरा](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.ne.png)
+![पाठ्यक्रम पूरा](../../../translated_images/ne/image.73c7e2ff4a652e77.webp)
 
 **तपाईंले के हासिल गर्नुभएको छ:**
 - आफ्नो विकास वातावरण सेट गर्नुहोस्

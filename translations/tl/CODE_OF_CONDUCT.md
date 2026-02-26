@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-07-21T19:09:05+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "tl"
-}
--->
 # Microsoft Open Source Code of Conduct
 
 Ang proyektong ito ay sumunod sa [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).

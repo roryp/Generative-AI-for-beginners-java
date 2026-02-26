@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:18:18+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "vi"
-}
--->
 # Thiết Lập Môi Trường Phát Triển cho Azure OpenAI
 
 > **Bắt Đầu Nhanh**: Hướng dẫn này dành cho thiết lập Azure OpenAI. Để bắt đầu ngay với các mô hình miễn phí, hãy sử dụng [GitHub Models với Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Hướng dẫn này sẽ giúp bạn thiết lập các mô hình Azure AI Found
    > **Lưu ý**: Nếu bạn muốn chỉnh sửa cấu hình cơ bản, hãy xem [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Trong repo đã fork, nhấp vào **Code** → tab **Codespaces**
 3. Nhấp vào **...** → **New with options...**
-![tạo codespace với tùy chọn](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.vi.png)
+![tạo codespace với tùy chọn](../../../translated_images/vi/codespaces.9945ded8ceb431a5.webp)
 4. Chọn **Cấu hình container phát triển**: 
    - **Môi Trường Phát Triển Generative AI Java**
 5. Nhấp vào **Create codespace**

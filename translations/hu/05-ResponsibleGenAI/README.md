@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:57:09+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "hu"
-}
--->
 # Felelős Generatív AI
 
 ## Amit Megtanulsz
@@ -58,7 +49,7 @@ A `ResponsibleGithubModels` osztály az alábbi folyamatot követi:
 5. Eredmények megjelenítése, amelyek mutatják, hogy mely tartalmakat blokkolták, utasították el vagy engedélyezték
 6. Biztonságos tartalom tesztelése összehasonlítás céljából
 
-![Felelős AI Biztonsági Bemutató](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.hu.png)
+![Felelős AI Biztonsági Bemutató](../../../translated_images/hu/responsible.e4f51a917bafa4bf.webp)
 
 ### Telepítési Útmutató
 
@@ -164,7 +155,7 @@ Ez a példa kizárólag oktatási célból használ problémás promptokat. A c�
 
 Gratulálunk, hogy befejezted a Generatív AI Kezdőknek tanfolyamot!
 
-![Tanfolyam Befejezése](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.hu.png)
+![Tanfolyam Befejezése](../../../translated_images/hu/image.73c7e2ff4a652e77.webp)
 
 **Amit elértél:**
 - Beállítottad a fejlesztési környezetedet

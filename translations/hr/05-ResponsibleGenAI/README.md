@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T16:00:26+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "hr"
-}
--->
 # Odgovorna Generativna AI
 
 ## Što ćete naučiti
@@ -58,7 +49,7 @@ Klasa `ResponsibleGithubModels` slijedi ovaj tijek:
 5. Prikazuje rezultate koji pokazuju koji je sadržaj blokiran, odbijen ili dopušten
 6. Testira siguran sadržaj za usporedbu
 
-![Demo sigurnosti odgovornog AI-a](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.hr.png)
+![Demo sigurnosti odgovornog AI-a](../../../translated_images/hr/responsible.e4f51a917bafa4bf.webp)
 
 ### Upute za postavljanje
 
@@ -164,7 +155,7 @@ Ovaj primjer koristi namjerno problematične upite isključivo u edukativne svrh
 
 Čestitamo na završetku tečaja Generativni AI za početnike!
 
-![Završetak tečaja](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.hr.png)
+![Završetak tečaja](../../../translated_images/hr/image.73c7e2ff4a652e77.webp)
 
 **Što ste postigli:**
 - Postavili ste razvojno okruženje

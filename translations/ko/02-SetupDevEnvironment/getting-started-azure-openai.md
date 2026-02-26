@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:59:22+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ko"
-}
--->
 # Azure OpenAI 개발 환경 설정
 
 > **빠른 시작**: 이 가이드는 Azure OpenAI 설정을 위한 것입니다. 무료 모델로 바로 시작하려면 [GitHub Models with Codespaces](./README.md#quick-start-cloud)를 사용하세요.
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **참고**: 기본 설정을 수정하려면 [Dev Container Configuration](../../../.devcontainer/devcontainer.json)을 확인하세요.
 2. 포크한 저장소에서 **Code** → **Codespaces** 탭을 클릭합니다.
 3. **...** → **New with options...**를 클릭합니다.
-![옵션으로 Codespace 생성](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ko.png)
+![옵션으로 Codespace 생성](../../../translated_images/ko/codespaces.9945ded8ceb431a5.webp)
 4. **Dev container configuration**을 선택합니다: 
    - **Generative AI Java Development Environment**
 5. **Create codespace**를 클릭합니다.

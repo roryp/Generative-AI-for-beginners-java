@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:51:24+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "th"
-}
--->
 # การพัฒนา Generative AI อย่างมีความรับผิดชอบ
 
 ## สิ่งที่คุณจะได้เรียนรู้
@@ -58,7 +49,7 @@ GitHub Models มาพร้อมกับการกรองเนื้อ
 5. แสดงผลลัพธ์ที่แสดงว่าเนื้อหาใดถูกบล็อก ปฏิเสธ หรืออนุญาต  
 6. ทดสอบเนื้อหาที่ปลอดภัยเพื่อเปรียบเทียบ  
 
-![การสาธิตความปลอดภัยของ AI อย่างมีความรับผิดชอบ](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.th.png)  
+![การสาธิตความปลอดภัยของ AI อย่างมีความรับผิดชอบ](../../../translated_images/th/responsible.e4f51a917bafa4bf.webp)  
 
 ### คำแนะนำในการตั้งค่า
 
@@ -164,7 +155,7 @@ Status: Response generated successfully
 
 ขอแสดงความยินดีที่คุณได้จบหลักสูตร Generative AI สำหรับผู้เริ่มต้น!  
 
-![การจบหลักสูตร](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.th.png)  
+![การจบหลักสูตร](../../../translated_images/th/image.73c7e2ff4a652e77.webp)  
 
 **สิ่งที่คุณได้ทำสำเร็จ:**  
 - ตั้งค่าสภาพแวดล้อมการพัฒนาของคุณ  

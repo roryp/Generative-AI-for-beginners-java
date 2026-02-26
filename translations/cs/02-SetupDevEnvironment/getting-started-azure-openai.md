@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:23:55+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "cs"
-}
--->
 # Nastavení vývojového prostředí pro Azure OpenAI
 
 > **Rychlý start**: Tento průvodce je určen pro nastavení Azure OpenAI. Pro okamžitý začátek s bezplatnými modely použijte [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Tento průvodce vám pomůže nastavit modely Azure AI Foundry pro vaše Java AI
    > **Poznámka**: Pokud chcete upravit základní konfiguraci, podívejte se na [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Ve svém forkovaném repozitáři klikněte na **Code** → záložka **Codespaces**
 3. Klikněte na **...** → **New with options...**
-![vytvoření codespace s možnostmi](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.cs.png)
+![vytvoření codespace s možnostmi](../../../translated_images/cs/codespaces.9945ded8ceb431a5.webp)
 4. Vyberte **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Klikněte na **Create codespace**

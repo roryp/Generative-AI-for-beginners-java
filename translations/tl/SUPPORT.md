@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b8ef73cc49dec68e2c885ee9df545129",
-  "translation_date": "2025-07-21T19:10:17+00:00",
-  "source_file": "SUPPORT.md",
-  "language_code": "tl"
-}
--->
 # Suporta
 
 ## Paano maghain ng mga isyu at humingi ng tulong  

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:20:59+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "tl"
-}
--->
 # Pagtatakda ng Development Environment para sa Azure OpenAI
 
 > **Quick Start**: Ang gabay na ito ay para sa Azure OpenAI setup. Para sa mabilisang pagsisimula gamit ang mga libreng modelo, gamitin ang [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Ang gabay na ito ay tutulong sa iyo na i-set up ang mga modelo ng Azure AI Found
    > **Tandaan**: Kung nais mong i-edit ang basic config, tingnan ang [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Sa iyong forked repo, i-click ang **Code** → **Codespaces** tab
 3. I-click ang **...** → **New with options...**
-![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.tl.png)
+![creating a codespace with options](../../../translated_images/tl/codespaces.9945ded8ceb431a5.webp)
 4. Piliin ang **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. I-click ang **Create codespace**

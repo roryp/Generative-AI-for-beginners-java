@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "14c0a61ecc1cd2012a9c129236dfdf71",
-  "translation_date": "2025-12-01T09:15:46+00:00",
-  "source_file": "04-PracticalSamples/README.md",
-  "language_code": "ml"
-}
--->
 # പ്രായോഗിക പ്രയോഗങ്ങളും പ്രോജക്റ്റുകളും
 
 ## നിങ്ങൾ എന്താണ് പഠിക്കുക

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:00:09+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "hi"
-}
--->
 # Azure OpenAI के लिए डेवलपमेंट एनवायरनमेंट सेटअप करना
 
 > **त्वरित शुरुआत**: यह गाइड Azure OpenAI सेटअप के लिए है। मुफ्त मॉडल्स के साथ तुरंत शुरुआत करने के लिए [GitHub Models with Codespaces](./README.md#quick-start-cloud) का उपयोग करें।
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **नोट**: यदि आप बेसिक कॉन्फ़िगरेशन को एडिट करना चाहते हैं, तो [Dev Container Configuration](../../../.devcontainer/devcontainer.json) देखें
 2. अपनी फोर्क की गई रिपॉजिटरी में, **Code** → **Codespaces** टैब पर क्लिक करें
 3. **...** → **New with options...** पर क्लिक करें
-![options के साथ codespace बनाना](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.hi.png)
+![options के साथ codespace बनाना](../../../translated_images/hi/codespaces.9945ded8ceb431a5.webp)
 4. **Dev container configuration** चुनें: 
    - **Generative AI Java Development Environment**
 5. **Create codespace** पर क्लिक करें

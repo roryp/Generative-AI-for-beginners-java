@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
-  "translation_date": "2025-07-29T09:46:18+00:00",
-  "source_file": "01-IntroToGenAI/README.md",
-  "language_code": "id"
-}
--->
 # Pengantar Generative AI - Edisi Java
 
 ## Apa yang Akan Anda Pelajari
@@ -44,7 +35,7 @@ Saat Anda mengembangkan aplikasi AI Java, Anda akan bekerja dengan **model gener
 
 Ada jenis model tertentu yang dioptimalkan untuk tugas-tugas berbeda. Misalnya, baik **Small Language Models (SLMs)** maupun **Large Language Models (LLMs)** dapat menangani pembuatan teks, dengan LLM biasanya memberikan kinerja yang lebih baik untuk tugas-tugas kompleks. Untuk tugas terkait gambar, Anda akan menggunakan model visi khusus atau model multi-modal.
 
-![Gambar: Jenis model Generative AI dan kasus penggunaannya.](../../../translated_images/llms.225ca2b8a0d344738419defc5ae14bba2fd3388b94f09fd4e8be8ce2a720ae51.id.png)
+![Gambar: Jenis model Generative AI dan kasus penggunaannya.](../../../translated_images/id/llms.225ca2b8a0d34473.webp)
 
 Tentu saja, respons dari model ini tidak selalu sempurna. Anda mungkin pernah mendengar tentang model yang "berhalusinasi" atau menghasilkan informasi yang salah dengan cara yang meyakinkan. Namun, Anda dapat membantu membimbing model untuk menghasilkan respons yang lebih baik dengan memberikan instruksi dan konteks yang jelas. Di sinilah **rekayasa prompt** berperan.
 
@@ -79,13 +70,13 @@ Tokenisasi adalah proses memecah teks menjadi unit-unit kecil ini. Ini penting k
 
 - **Embedding**: Embedding adalah representasi vektor dari token yang menangkap makna semantik. Mereka adalah representasi numerik (biasanya array angka floating-point) yang memungkinkan model memahami hubungan antar kata dan menghasilkan respons yang relevan secara kontekstual. Kata-kata yang serupa memiliki embedding yang serupa, memungkinkan model memahami konsep seperti sinonim dan hubungan semantik.
 
-![Gambar: Embedding](../../../translated_images/embedding.398e50802c0037f931c725fd0113747831ea7776434d2b3ba3eb2e7a1a20ab1f.id.png)
+![Gambar: Embedding](../../../translated_images/id/embedding.398e50802c0037f9.webp)
 
   Dalam Java, Anda dapat menghasilkan embedding menggunakan OpenAI SDK atau pustaka lain yang mendukung pembuatan embedding. Embedding ini penting untuk tugas seperti pencarian semantik, di mana Anda ingin menemukan konten serupa berdasarkan makna daripada kecocokan teks yang persis.
 
 - **Basis data vektor**: Basis data vektor adalah sistem penyimpanan khusus yang dioptimalkan untuk embedding. Mereka memungkinkan pencarian kesamaan yang efisien dan sangat penting untuk pola Retrieval-Augmented Generation (RAG) di mana Anda perlu menemukan informasi yang relevan dari kumpulan data besar berdasarkan kesamaan semantik daripada kecocokan yang persis.
 
-![Gambar: Arsitektur basis data vektor yang menunjukkan bagaimana embedding disimpan dan diambil untuk pencarian kesamaan.](../../../translated_images/vector.f12f114934e223dff971b01ca371e85a41a540f3af2ffdd49fb3acec6c6652f2.id.png)
+![Gambar: Arsitektur basis data vektor yang menunjukkan bagaimana embedding disimpan dan diambil untuk pencarian kesamaan.](../../../translated_images/id/vector.f12f114934e223df.webp)
 
 > **Catatan**: Dalam kursus ini, kami tidak akan membahas basis data vektor tetapi menganggapnya layak disebutkan karena sering digunakan dalam aplikasi dunia nyata.
 
@@ -93,7 +84,7 @@ Tokenisasi adalah proses memecah teks menjadi unit-unit kecil ini. Ini penting k
 
 Dalam aplikasi AI Java, Anda akan menggunakan token untuk pemrosesan teks, embedding untuk pencarian semantik dan RAG, basis data vektor untuk pengambilan data, dan agen dengan MCP untuk membangun sistem cerdas yang menggunakan alat.
 
-![Gambar: bagaimana sebuah prompt menjadi respons—token, vektor, pencarian RAG opsional, pemikiran LLM, dan agen MCP semuanya dalam satu alur cepat.](../../../translated_images/flow.f4ef62c3052d12a88b1d216eb2cd0e2ea3293c806d0defa7921dd1786dcb8516.id.png)
+![Gambar: bagaimana sebuah prompt menjadi respons—token, vektor, pencarian RAG opsional, pemikiran LLM, dan agen MCP semuanya dalam satu alur cepat.](../../../translated_images/id/flow.f4ef62c3052d12a8.webp)
 
 ### Alat dan Perpustakaan Pengembangan AI untuk Java
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:28:06+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "sr"
-}
--->
 # Подешавање Развојног Окружења за Azure OpenAI
 
 > **Брзи почетак**: Овај водич је за подешавање Azure OpenAI. За тренутни почетак са бесплатним моделима, користите [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **Напомена**: Ако желите да измените основну конфигурацију, погледајте [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. У свом fork-ованом репозиторијуму, кликните на **Code** → картица **Codespaces**
 3. Кликните на **...** → **New with options...**
-![креирање Codespace-а са опцијама](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.sr.png)
+![креирање Codespace-а са опцијама](../../../translated_images/sr/codespaces.9945ded8ceb431a5.webp)
 4. Изаберите **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Кликните на **Create codespace**

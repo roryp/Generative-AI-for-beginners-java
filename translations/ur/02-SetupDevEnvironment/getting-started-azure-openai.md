@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:53:48+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ur"
-}
--->
 # ایزور اوپن اے آئی کے لیے ڈیولپمنٹ ماحول ترتیب دینا
 
 > **جلدی شروع کریں**: یہ گائیڈ ایزور اوپن اے آئی سیٹ اپ کے لیے ہے۔ مفت ماڈلز کے ساتھ فوری آغاز کے لیے [GitHub Models with Codespaces](./README.md#quick-start-cloud) استعمال کریں۔
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **نوٹ**: اگر آپ بنیادی کنفیگریشن میں ترمیم کرنا چاہتے ہیں تو [Dev Container Configuration](../../../.devcontainer/devcontainer.json) دیکھیں
 2. اپنی فورک شدہ ریپوزٹری میں، **Code** → **Codespaces** ٹیب پر کلک کریں
 3. **...** → **New with options...** پر کلک کریں  
-![کوڈ اسپیس آپشنز کے ساتھ بنانا](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ur.png)
+![کوڈ اسپیس آپشنز کے ساتھ بنانا](../../../translated_images/ur/codespaces.9945ded8ceb431a5.webp)
 4. **Dev container configuration** منتخب کریں: 
    - **Generative AI Java Development Environment**
 5. **Create codespace** پر کلک کریں

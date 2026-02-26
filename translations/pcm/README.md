@@ -1,18 +1,9 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:41:15+00:00",
-  "source_file": "README.md",
-  "language_code": "pcm"
-}
--->
 # Generative AI for Beginners - Java Edition
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.pcm.png)
+![Generative AI for Beginners - Java Edition](../../translated_images/pcm/beg-genai-series.8b48be9951cc574c.webp)
 
-**Time Commitment**: Di whole workshop fit finish online without local setup. Di environment setup go take 2 minutes, and to explore di samples go need 1-3 hours depending on how deep you wan explore.
+**Time Commitment**: Di whole workshop fit finish online without setup for your local machine. Di environment setup go take 2 minutes, but to explore di samples fit take 1-3 hours depending on how deep you wan explore.
 
 > **Quick Start** 
 
@@ -20,48 +11,57 @@ CO_OP_TRANSLATOR_METADATA:
 2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
 3. Use di defaults – dis one go select di Development container wey dem create for dis course
 4. Click **Create codespace**
-5. Wait ~2 minutes make environment ready
-6. Jump straight go [The first example](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Wait ~2 minutes make di environment ready
+6. Jump straight go [Di first example](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-> **Prefer to Clone Locally?**
+> **You Wan Clone Am for Your Machine?**
 >
-> Dis repository get 50+ language translations wey dey increase di download size well well. To clone without translations, use sparse checkout:
+> Dis repository get 50+ language translations wey dey make di download size big. To clone without di translations, use sparse checkout:
+>
+> **Linux / macOS (Bash)**
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dis one go give you everything wey you need to complete di course with faster download.
+>
+> **Windows (PowerShell)**
+> ```powershell
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
+> ```
+> Dis one go give you everytin wey you need to finish di course with fast download.
+
 
 ## Multi-Language Support
 
 ### Supported via GitHub Action (Automated & Always Up-to-Date)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
 ## Course Structure & Learning Path
 
 ### **Chapter 1: Introduction to Generative AI**
 - **Core Concepts**: Understanding Large Language Models, tokens, embeddings, and AI capabilities
 - **Java AI Ecosystem**: Overview of Spring AI and OpenAI SDKs
-- **Model Context Protocol**: Introduction to MCP and how e dey help AI agent communication
-- **Practical Applications**: Real-world tins like chatbots and content generation
+- **Model Context Protocol**: Introduction to MCP and its role in AI agent communication
+- **Practical Applications**: Real-world scenarios including chatbots and content generation
 - **[→ Start Chapter 1](./01-IntroToGenAI/README.md)**
 
 ### **Chapter 2: Development Environment Setup**
-- **Multi-Provider Configuration**: Setup GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
-- **Spring Boot + Spring AI**: Best ways to develop enterprise AI applications
-- **GitHub Models**: Free AI model access for prototyping and learning (no credit card needed)
-- **Development Tools**: Docker containers, VS Code, and GitHub Codespaces setup
+- **Multi-Provider Configuration**: Set up GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
+- **Spring Boot + Spring AI**: Best practices for enterprise AI application development
+- **GitHub Models**: Free AI model access for prototyping and learning (no credit card required)
+- **Development Tools**: Docker containers, VS Code, and GitHub Codespaces configuration
 - **[→ Start Chapter 2](./02-SetupDevEnvironment/README.md)**
 
 ### **Chapter 3: Core Generative AI Techniques**
-- **Prompt Engineering**: Ways to get best AI model responses
-- **Embeddings & Vector Operations**: How to do semantic search and similarity matching
+- **Prompt Engineering**: Techniques for optimal AI model responses
+- **Embeddings & Vector Operations**: Implement semantic search and similarity matching
 - **Retrieval-Augmented Generation (RAG)**: Combine AI with your own data sources
-- **Function Calling**: Extend AI power with custom tools and plugins
+- **Function Calling**: Extend AI capabilities with custom tools and plugins
 - **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapter 4: Practical Applications & Projects**
@@ -72,8 +72,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### **Chapter 5: Responsible AI Development**
 - **GitHub Models Safety**: Test built-in content filtering and safety mechanisms (hard blocks and soft refusals)
-- **Responsible AI Demo**: Hands-on example wey show how modern AI safety systems dey work for real life
-- **Best Practices**: Important guidelines for ethical AI development and deployment
+- **Responsible AI Demo**: Hands-on example showing how modern AI safety systems work in practice
+- **Best Practices**: Essential guidelines for ethical AI development and deployment
 - **[→ Start Chapter 5](./05-ResponsibleGenAI/README.md)**
 
 ## Additional Resources
@@ -82,7 +82,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
-
+[![LangChain for Beginners](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
 ### Azure / Edge / MCP / Agents
@@ -120,11 +120,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Getting Help
 
-If you get stuck or get any question about how to build AI apps. Join other learners and experienced developers for talk about MCP. Na supportive community wey questions dey welcome and knowledge dey shared freely.
+If you get stuck or get any questions about building AI apps. Join other learners and experienced developers for discussions about MCP. Na supportive community wey questions dey welcome and knowledge dey shared freely.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-If you get product feedback or errors while you dey build, visit:
+If you get product feedback or errors for building, visit:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -132,5 +132,5 @@ If you get product feedback or errors while you dey build, visit:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or wrong tins. Di original document wey dey im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any misunderstanding or wrong meaning wey fit come from dis translation.
+Dis document na translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make am correct, abeg sabi say automated translation fit get some mistakes or no correct well. The original document for dia own language na wetin get authority pass. For important tins, make you use professional human translation. We no go take responsibility if person no understand or misinterpret because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

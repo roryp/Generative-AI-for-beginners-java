@@ -1,0 +1,92 @@
+{
+  "01-IntroToGenAI/README.md": {
+    "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
+    "translation_date": "2025-07-29T09:43:00+00:00",
+    "source_file": "01-IntroToGenAI/README.md",
+    "language_code": "vi"
+  },
+  "02-SetupDevEnvironment/README.md": {
+    "original_hash": "96a30d42b9751a3d4e4b20e28d29d459",
+    "translation_date": "2026-01-28T05:10:14+00:00",
+    "source_file": "02-SetupDevEnvironment/README.md",
+    "language_code": "vi"
+  },
+  "02-SetupDevEnvironment/examples/basic-chat-azure/README.md": {
+    "original_hash": "efd82efe50711d7e257eb943151d682c",
+    "translation_date": "2025-07-27T13:44:07+00:00",
+    "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
+    "language_code": "vi"
+  },
+  "02-SetupDevEnvironment/getting-started-azure-openai.md": {
+    "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
+    "translation_date": "2025-07-27T13:18:18+00:00",
+    "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
+    "language_code": "vi"
+  },
+  "03-CoreGenerativeAITechniques/README.md": {
+    "original_hash": "685f55cb07de19b52a30ce6e8b6d889e",
+    "translation_date": "2025-08-28T22:11:05+00:00",
+    "source_file": "03-CoreGenerativeAITechniques/README.md",
+    "language_code": "vi"
+  },
+  "04-PracticalSamples/README.md": {
+    "original_hash": "14c0a61ecc1cd2012a9c129236dfdf71",
+    "translation_date": "2025-07-29T09:42:39+00:00",
+    "source_file": "04-PracticalSamples/README.md",
+    "language_code": "vi"
+  },
+  "04-PracticalSamples/calculator/README.md": {
+    "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
+    "translation_date": "2025-09-18T15:36:26+00:00",
+    "source_file": "04-PracticalSamples/calculator/README.md",
+    "language_code": "vi"
+  },
+  "04-PracticalSamples/foundrylocal/README.md": {
+    "original_hash": "f787307400de59adc25a1404466a35f3",
+    "translation_date": "2025-11-04T07:29:19+00:00",
+    "source_file": "04-PracticalSamples/foundrylocal/README.md",
+    "language_code": "vi"
+  },
+  "04-PracticalSamples/petstory/README.md": {
+    "original_hash": "0cbf68d605615a1e602c832a24616859",
+    "translation_date": "2025-07-25T11:41:11+00:00",
+    "source_file": "04-PracticalSamples/petstory/README.md",
+    "language_code": "vi"
+  },
+  "05-ResponsibleGenAI/README.md": {
+    "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
+    "translation_date": "2025-07-29T15:55:03+00:00",
+    "source_file": "05-ResponsibleGenAI/README.md",
+    "language_code": "vi"
+  },
+  "AGENTS.md": {
+    "original_hash": "afc90918d008cf77fd1982691f681306",
+    "translation_date": "2025-10-03T08:39:35+00:00",
+    "source_file": "AGENTS.md",
+    "language_code": "vi"
+  },
+  "CODE_OF_CONDUCT.md": {
+    "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
+    "translation_date": "2025-07-21T19:08:49+00:00",
+    "source_file": "CODE_OF_CONDUCT.md",
+    "language_code": "vi"
+  },
+  "README.md": {
+    "original_hash": "e0d85c07a82cc2cdb6ff3e4a1f03a08d",
+    "translation_date": "2026-02-10T10:12:09+00:00",
+    "source_file": "README.md",
+    "language_code": "vi"
+  },
+  "SECURITY.md": {
+    "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
+    "translation_date": "2025-07-21T19:07:12+00:00",
+    "source_file": "SECURITY.md",
+    "language_code": "vi"
+  },
+  "SUPPORT.md": {
+    "original_hash": "b8ef73cc49dec68e2c885ee9df545129",
+    "translation_date": "2025-07-21T19:10:00+00:00",
+    "source_file": "SUPPORT.md",
+    "language_code": "vi"
+  }
+}

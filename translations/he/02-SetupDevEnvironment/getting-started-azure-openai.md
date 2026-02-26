@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:17:23+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "he"
-}
--->
 # הגדרת סביבת הפיתוח עבור Azure OpenAI
 
 > **התחלה מהירה**: מדריך זה מיועד להגדרת Azure OpenAI. להתחלה מיידית עם מודלים חינמיים, השתמשו ב-[GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **הערה**: אם ברצונכם לערוך את ההגדרות הבסיסיות, עיינו ב-[Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. במאגר ה-Fork שלכם, לחצו על **Code** → לשונית **Codespaces**
 3. לחצו על **...** → **New with options...**  
-![יצירת Codespace עם אפשרויות](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.he.png)
+![יצירת Codespace עם אפשרויות](../../../translated_images/he/codespaces.9945ded8ceb431a5.webp)
 4. בחרו **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. לחצו על **Create codespace**

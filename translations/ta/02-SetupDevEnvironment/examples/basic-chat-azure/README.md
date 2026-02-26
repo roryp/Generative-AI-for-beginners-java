@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efd82efe50711d7e257eb943151d682c",
-  "translation_date": "2025-10-11T10:45:28+00:00",
-  "source_file": "02-SetupDevEnvironment/examples/basic-chat-azure/README.md",
-  "language_code": "ta"
-}
--->
 # Azure OpenAI உடன் அடிப்படை உரையாடல் - முழுமையான எடுத்துக்காட்டு
 
 இந்த எடுத்துக்காட்டில் Azure OpenAI-க்கு இணைக்கும் ஒரு எளிய Spring Boot பயன்பாட்டை உருவாக்குவது மற்றும் உங்கள் அமைப்பை சோதிப்பது எப்படி என்பதை விளக்குகிறது.

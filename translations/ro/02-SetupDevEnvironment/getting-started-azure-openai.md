@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:25:57+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ro"
-}
--->
 # Configurarea Mediului de Dezvoltare pentru Azure OpenAI
 
 > **Start Rapid**: Acest ghid este pentru configurarea Azure OpenAI. Pentru un început imediat cu modele gratuite, folosiți [Modele GitHub cu Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Acest ghid vă va ajuta să configurați modelele Azure AI Foundry pentru aplica
    > **Notă**: Dacă doriți să editați configurația de bază, consultați [Configurarea Containerului de Dezvoltare](../../../.devcontainer/devcontainer.json)
 2. În depozitul fork-uit, faceți clic pe **Code** → fila **Codespaces**
 3. Faceți clic pe **...** → **New with options...**
-![crearea unui codespace cu opțiuni](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ro.png)
+![crearea unui codespace cu opțiuni](../../../translated_images/ro/codespaces.9945ded8ceb431a5.webp)
 4. Selectați **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Faceți clic pe **Create codespace**

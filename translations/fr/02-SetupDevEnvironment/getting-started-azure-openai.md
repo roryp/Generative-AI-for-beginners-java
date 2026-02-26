@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:48:20+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "fr"
-}
--->
 # Configuration de l'environnement de développement pour Azure OpenAI
 
 > **Démarrage rapide** : Ce guide est destiné à la configuration d'Azure OpenAI. Pour un démarrage immédiat avec des modèles gratuits, utilisez [GitHub Models avec Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Ce guide vous aidera à configurer les modèles Azure AI Foundry pour vos applic
    > **Remarque** : Si vous souhaitez modifier la configuration de base, consultez la [Configuration du conteneur de développement](../../../.devcontainer/devcontainer.json)
 2. Dans votre dépôt forké, cliquez sur **Code** → Onglet **Codespaces**
 3. Cliquez sur **...** → **Nouveau avec options...**
-![création d'un codespace avec options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.fr.png)
+![création d'un codespace avec options](../../../translated_images/fr/codespaces.9945ded8ceb431a5.webp)
 4. Sélectionnez **Configuration du conteneur de développement** : 
    - **Environnement de développement Java pour l'IA générative**
 5. Cliquez sur **Créer un codespace**

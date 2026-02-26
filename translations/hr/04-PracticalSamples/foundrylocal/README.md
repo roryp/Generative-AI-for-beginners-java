@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f787307400de59adc25a1404466a35f3",
-  "translation_date": "2025-11-04T07:35:45+00:00",
-  "source_file": "04-PracticalSamples/foundrylocal/README.md",
-  "language_code": "hr"
-}
--->
 # Foundry Local Spring Boot Vodič
 
 ## Sadržaj

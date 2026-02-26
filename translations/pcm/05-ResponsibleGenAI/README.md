@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-11-18T17:57:48+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "pcm"
-}
--->
 # Responsible Generative AI
 
 ## Wetin You Go Learn
@@ -58,7 +49,7 @@ Di `ResponsibleGithubModels` class dey follow dis steps:
 5. Show results wey go display di content wey dem block, refuse, or allow
 6. Test safe content to compare
 
-![Responsible AI Safety Demo](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.pcm.png)
+![Responsible AI Safety Demo](../../../translated_images/pcm/responsible.e4f51a917bafa4bf.webp)
 
 ### Setup Instructions
 
@@ -164,7 +155,7 @@ Dis example dey use problematic prompts for learning purpose only. Di aim na to 
 
 Congrats say you don finish di Generative AI for Beginners course!
 
-![Course Completion](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.pcm.png)
+![Course Completion](../../../translated_images/pcm/image.73c7e2ff4a652e77.webp)
 
 **Wetin you don achieve:**
 - Set up your development environment

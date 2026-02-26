@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:04:16+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "pa"
-}
--->
 # ਐਜ਼ਰ ਓਪਨਏਆਈ ਲਈ ਡਿਵੈਲਪਮੈਂਟ ਵਾਤਾਵਰਣ ਸੈਟਅੱਪ ਕਰਨਾ
 
 > **ਤੁਰੰਤ ਸ਼ੁਰੂਆਤ**: ਇਹ ਗਾਈਡ ਐਜ਼ਰ ਓਪਨਏਆਈ ਸੈਟਅੱਪ ਲਈ ਹੈ। ਮੁਫ਼ਤ ਮਾਡਲਾਂ ਨਾਲ ਤੁਰੰਤ ਸ਼ੁਰੂਆਤ ਲਈ, [GitHub ਮਾਡਲਜ਼ ਵਿਥ ਕੋਡਸਪੇਸਜ਼](./README.md#quick-start-cloud) ਵਰਤੋ।
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **ਨੋਟ**: ਜੇ ਤੁਸੀਂ ਬੇਸਿਕ ਕੰਫਿਗਰੇਸ਼ਨ ਸੋਧਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ [ਡਿਵ ਕੰਟੇਨਰ ਕੰਫਿਗਰੇਸ਼ਨ](../../../.devcontainer/devcontainer.json) ਵੇਖੋ।
 2. ਆਪਣੇ ਫੋਰਕ ਕੀਤੇ ਰਿਪੋ ਵਿੱਚ, **Code** → **Codespaces** ਟੈਬ 'ਤੇ ਕਲਿਕ ਕਰੋ।
 3. **...** → **New with options...** 'ਤੇ ਕਲਿਕ ਕਰੋ।
-![ਕੋਡਸਪੇਸ ਵਿਕਲਪਾਂ ਨਾਲ ਬਣਾਉਣਾ](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.pa.png)
+![ਕੋਡਸਪੇਸ ਵਿਕਲਪਾਂ ਨਾਲ ਬਣਾਉਣਾ](../../../translated_images/pa/codespaces.9945ded8ceb431a5.webp)
 4. **ਡਿਵ ਕੰਟੇਨਰ ਕੰਫਿਗਰੇਸ਼ਨ** ਚੁਣੋ:
    - **ਜਨਰੇਟਿਵ ਏਆਈ ਜਾਵਾ ਡਿਵੈਲਪਮੈਂਟ ਵਾਤਾਵਰਣ**
 5. **ਕੋਡਸਪੇਸ ਬਣਾਓ** 'ਤੇ ਕਲਿਕ ਕਰੋ।

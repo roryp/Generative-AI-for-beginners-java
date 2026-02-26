@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T13:21:57+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "sw"
-}
--->
 # Kuweka Mazingira ya Maendeleo kwa Azure OpenAI
 
 > **Mwongozo wa Haraka**: Mwongozo huu ni kwa ajili ya usanidi wa Azure OpenAI. Kwa kuanza mara moja na mifano ya bure, tumia [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ Mwongozo huu utakusaidia kuweka mifano ya Azure AI Foundry kwa programu zako za 
    > **Kumbuka**: Ikiwa unataka kuhariri usanidi wa msingi tafadhali angalia [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. Katika hifadhi yako ya forked, bonyeza **Code** → kichupo cha **Codespaces**
 3. Bonyeza **...** → **New with options...**
-![creating a codespace with options](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.sw.png)
+![creating a codespace with options](../../../translated_images/sw/codespaces.9945ded8ceb431a5.webp)
 4. Chagua **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Bonyeza **Create codespace**

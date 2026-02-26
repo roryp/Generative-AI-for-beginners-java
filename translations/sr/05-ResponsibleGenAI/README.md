@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:59:50+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "sr"
-}
--->
 # Одговорна Генеративна Вештачка Интелигенција
 
 ## Шта ћете научити
@@ -58,7 +49,7 @@ GitHub модели долазе са основним филтрирањем с
 5. Приказује резултате који показују који садржај је блокиран, одбијен или дозвољен  
 6. Тестира безбедан садржај за поређење  
 
-![Демонстрација безбедности одговорне вештачке интелигенције](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.sr.png)
+![Демонстрација безбедности одговорне вештачке интелигенције](../../../translated_images/sr/responsible.e4f51a917bafa4bf.webp)
 
 ### Упутства за подешавање
 
@@ -164,7 +155,7 @@ Status: Response generated successfully
 
 Честитамо на завршетку курса Генеративна вештачка интелигенција за почетнике!
 
-![Завршетак курса](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.sr.png)
+![Завршетак курса](../../../translated_images/sr/image.73c7e2ff4a652e77.webp)
 
 **Шта сте постигли:**  
 - Подесили сте своје развојно окружење  

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6c16b5514d524e415a94f6097ee7d4c",
-  "translation_date": "2025-10-11T10:40:02+00:00",
-  "source_file": "04-PracticalSamples/calculator/README.md",
-  "language_code": "ta"
-}
--->
 # MCP கணக்கீடு டுடோரியல் தொடக்கநிலை பயிற்சி
 
 ## உள்ளடக்க அட்டவணை

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T15:52:06+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "sv"
-}
--->
 # Ansvarsfull Generativ AI
 
 ## Vad du kommer att lära dig
@@ -58,7 +49,7 @@ Klassen `ResponsibleGithubModels` följer detta flöde:
 5. Visa resultat som visar vilket innehåll som blockerades, avslogs eller tilläts
 6. Testa säkert innehåll för jämförelse
 
-![Demo för ansvarsfull AI-säkerhet](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.sv.png)
+![Demo för ansvarsfull AI-säkerhet](../../../translated_images/sv/responsible.e4f51a917bafa4bf.webp)
 
 ### Installationsinstruktioner
 
@@ -164,7 +155,7 @@ Detta exempel använder avsiktligt problematiska uppmaningar endast i utbildning
 
 Grattis till att ha slutfört kursen Generativ AI för nybörjare!
 
-![Kursavslutning](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.sv.png)
+![Kursavslutning](../../../translated_images/sv/image.73c7e2ff4a652e77.webp)
 
 **Vad du har åstadkommit:**
 - Ställt in din utvecklingsmiljö

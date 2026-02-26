@@ -1,88 +1,88 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b1a467efb7f8e13a19f961a587226f71",
-  "translation_date": "2025-12-18T10:34:29+00:00",
-  "source_file": "README.md",
-  "language_code": "my"
-}
--->
 # Generative AI for Beginners - Java Edition
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-![Generative AI for Beginners - Java Edition](../../translated_images/beg-genai-series.8b48be9951cc574c25f8a3accba949bfd03c2f008e2c613283a1b47316fbee68.my.png)
+![Generative AI for Beginners - Java Edition](../../translated_images/my/beg-genai-series.8b48be9951cc574c.webp)
 
-**အချိန်ပေးရန်**: အလုပ်ရုံလုံးဝကို အွန်လိုင်းပေါ်တွင် ပြီးမြောက်နိုင်ပြီး ဒေသတွင်း စနစ်တပ်ဆင်မှု မလိုအပ်ပါ။ ပတ်ဝန်းကျင်တပ်ဆင်ခြင်းမှာ ၂ မိနစ်ကြာပြီး နမူနာများကို စူးစမ်းရန် ၁-၃ နာရီကြာနိုင်သည်၊ စူးစမ်းမှု အနက်အရှည်ပေါ်မူတည်သည်။
+**အချိန်အပ်နှံမှု**: စက်တို local setup မလိုဘဲ အွန်လိုင်းပေါ်မှာ အလုပ်ရုံလုံးဝပြီးစီးနိုင်သည်။ ပတ်ဝန်းကျင်အား ၂ မိနစ်စာ တပ်ဆင်ရန် ကြာပြီး နမူနာများကို စူးစမ်းရန် လေ့လာမှု အနက်အလယ် ပြုလုပ်မူပေါ် မူတည်၍ ၁-၃ နာရီကာလလိုအပ်သည်။
 
-> **အမြန်စတင်ရန်**
+> **အမြန်စတင်ခြင်း**
 
-1. ဤ repository ကို သင့် GitHub အကောင့်သို့ Fork လုပ်ပါ
-2. **Code** → **Codespaces** tab → **...** → **New with options...** ကို နှိပ်ပါ
-3. ပုံမှန်တန်ဖိုးများကို အသုံးပြုပါ – ဤသည် သင်တန်းအတွက် ဖန်တီးထားသော Development container ကို ရွေးချယ်ပါလိမ့်မည်
+1. ဒီ repository ကို သင့် GitHub မှာ Fork လုပ်ပါ
+2. **Code** → **Codespaces** အတန်း → **...** → **New with options...** ကိုနှိပ်ပါ
+3. Default များကို အသုံးပြုပါ – ၎င်းသည် ဒီသင်တန်းအတွက် ဖန်တီးထားသော Development container ကို ရွေးချယ်မည်
 4. **Create codespace** ကို နှိပ်ပါ
-5. ပတ်ဝန်းကျင် ပြင်ဆင်မှု ပြီးမြောက်ရန် ~၂ မိနစ် စောင့်ပါ
+5. ပတ်ဝန်းကျင် ပြင်ဆင်ပြီး မိနစ် ၂ ခန့် စောင့်ဆိုင်းပါ
 6. တိုက်ရိုက် [ပထမဥပမာ](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token) သို့ သွားပါ
 
-> **ဒေသတွင်း Clone လုပ်ချင်ပါသလား?**
+> **ဒေသတွင် Clone လုပ်ချင်သောသူများ?**
 >
-> ဤ repository တွင် ဘာသာစကား ၅၀ ကျော် ဘာသာပြန်ချက်များ ပါဝင်ပြီး ဒေါင်းလုပ်အရွယ်အစားကို အလွန်ကြီးစေသည်။ ဘာသာပြန်ချက် မပါဘဲ clone လုပ်ရန် sparse checkout ကို အသုံးပြုပါ:
+> ဒီ repository တွင် ဘာသာစကား ၅၀ ကျော်၏ ဘာသာပြန်ထားမှုရှိပြီး ဒါကြောင့် ဖိုင်ဒေါင်းလုပ်အရွယ်အစား ကြီးမားသည်။ ဘာသာပြန်ခြင်းမပါဘဲ clone လုပ်ရန် sparse checkout ကို အသုံးပြုနိုင်သည်။
+>
+> **Linux / macOS (Bash)**
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
 > cd Generative-AI-for-beginners-java
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> ၎င်းသည် သင်တန်းကို အလျင်အမြန်ပြီးမြောက်စေရန် လိုအပ်သည့် အရာအားလုံးကို ပေးပါသည်။
+>
+> **Windows (PowerShell)**
+> ```powershell
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Generative-AI-for-beginners-java.git
+> cd Generative-AI-for-beginners-java
+> git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
+> ```
+>  သင်သည် သင်ကြားမှု ပြီးမြောက်စေရန် လိုအပ်သမျှ အရာအားလုံးကို လျင်မြန်စွာ ဒေါင်းလုပ်ဆွဲနိုင်မည်ဖြစ်သည်။
 
-## ဘာသာစကားများစွာ ထောက်ပံ့မှု
 
-### GitHub Action ဖြင့် ထောက်ပံ့သည် (အလိုအလျောက်နှင့် အမြဲတမ်း နောက်ဆုံးပေါ်)
+## ဘာသာစကားစုံ ပံ့ပိုးမှု
+
+### GitHub Action မှတဆင့် ထောက်ပံ့သည် (အလိုအလျောက်နှင့် အမြဲတမ်းနောက်ဆုံးထိန်းသိမ်းထားသည်)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](./README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](./README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
 ## သင်တန်းဖွဲ့စည်းမှုနှင့် သင်ယူမှုလမ်းကြောင်း
 
-### **အခန်း ၁: Generative AI အကြောင်းအရာ မိတ်ဆက်ခြင်း**
-- **အဓိက အယူအဆများ**: ကြီးမားသော ဘာသာစကား မော်ဒယ်များ၊ token များ၊ embedding များနှင့် AI စွမ်းဆောင်ရည်များကို နားလည်ခြင်း
-- **Java AI ပတ်ဝန်းကျင်**: Spring AI နှင့် OpenAI SDK များအကြောင်း အနှစ်ချုပ်
-- **Model Context Protocol**: MCP နှင့် AI အေးဂျင့် ဆက်သွယ်မှုတွင် ၎င်း၏ အခန်းကဏ္ဍ မိတ်ဆက်ခြင်း
-- **လက်တွေ့ အသုံးချမှုများ**: စကားပြောစက်များနှင့် အကြောင်းအရာ ဖန်တီးခြင်း အပါအဝင် အမှန်တကယ် ဖြစ်ပေါ်နေသော အခြေအနေများ
+### **အခန်း ၁: Generative AI ကို မိတ်ဆက်ခြင်း**
+- **အခြေခံအတွေးအခေါ်များ**: ကြီးမားသောဘာသာစကားမော်ဒယ်များ၊ token များ၊ embedding များနှင့် AI စွမ်းဆောင်ရည်များကို နားလည်ခြင်း
+- **Java AI ကမာပဒ်**: Spring AI နှင့် OpenAI SDK များ အကြောင်းအနှစ်ချုပ်
+- **Model Context Protocol**: MCP ကိုမိတ်ဆက်ခြင်းနှင့် AI တာဝန်ထမ်းအေးဂျင့် ဆက်သွယ်မှုရှိရာနေရာ
+- **လက်တွေ့လျှပ်စစ်သုံးဆာဇ်များ**: စကားပြောဂျဉ်၊ အကြောင်းအရာဖန်တီးမှု အပါအဝင် လက်တွေ့အသုံးချမှုများ
 - **[→ အခန်း ၁ စတင်ရန်](./01-IntroToGenAI/README.md)**
 
-### **အခန်း ၂: ဖွံ့ဖြိုးရေး ပတ်ဝန်းကျင် တပ်ဆင်ခြင်း**
-- **အမျိုးမျိုးသော ပံ့ပိုးသူများ စနစ်တကျ တပ်ဆင်ခြင်း**: GitHub Models, Azure OpenAI, နှင့် OpenAI Java SDK ပေါင်းစပ်ခြင်း
-- **Spring Boot + Spring AI**: စီးပွားရေး AI အက်ပလီကေးရှင်း ဖွံ့ဖြိုးရေးအတွက် အကောင်းဆုံး လေ့လာမှုများ
-- **GitHub Models**: prototype ဖန်တီးခြင်းနှင့် သင်ယူရန် အခမဲ့ AI မော်ဒယ် အသုံးပြုခွင့် (ကဒ်မလိုအပ်)
-- **ဖွံ့ဖြိုးရေးကိရိယာများ**: Docker container များ၊ VS Code နှင့် GitHub Codespaces တပ်ဆင်မှု
+### **အခန်း ၂: ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင် တပ်ဆင်ခြင်း**
+- **အများပြည်သူ ပံ့ပိုးမှုများ**: GitHub Models, Azure OpenAI နှင့် OpenAI Java SDK နှင့် ပေါင်းစပ်တပ်ဆင်ခြင်း
+- **Spring Boot + Spring AI**: စီးပွားရေးအဆောက်အဦ AI အက်ပလီကေးရှင်း ဖန်တီးမှု အကောင်းဆုံးလေ့လာမှုစနစ်များ
+- **GitHub Models**: prototype ဖန်တီးခြင်းနှင့် သင်ယူခြင်းအတွက် အခမဲ့ AI မော်ဒယ် အသုံးပြုခြင်း (ခရက်ဒစ်ကတ် မလိုအပ်ပါ)
+- **ဖွံ့ဖြိုးရေးကိရိယာများ**: Docker ကွန်တိန်နာများ၊ VS Code နှင့် GitHub Codespaces ကို တပ်ဆင်ခြင်း
 - **[→ အခန်း ၂ စတင်ရန်](./02-SetupDevEnvironment/README.md)**
 
-### **အခန်း ၃: အဓိက Generative AI နည်းပညာများ**
-- **Prompt Engineering**: AI မော်ဒယ် အကောင်းဆုံး တုံ့ပြန်မှု ရရှိစေရန် နည်းလမ်းများ
-- **Embedding နှင့် Vector လုပ်ဆောင်ချက်များ**: semantic ရှာဖွေရေးနှင့် ဆင်တူမှု ကိုက်ညီမှု အကောင်အထည်ဖော်ခြင်း
-- **Retrieval-Augmented Generation (RAG)**: သင့်ကိုယ်ပိုင် ဒေတာအရင်းအမြစ်များနှင့် AI ပေါင်းစပ်ခြင်း
-- **Function Calling**: AI စွမ်းဆောင်ရည်များကို စိတ်ကြိုက် ကိရိယာများနှင့် plugin များဖြင့် တိုးချဲ့ခြင်း
+### **အခန်း ၃: Generative AI အခြေခံနည်းပညာများ**
+- **Prompt Engineering**: AI မော်ဒယ် ဖြေကြားချက် အကောင်းဆုံး စနစ်များ
+- **Embedding များနှင့် Vector လုပ်ဆောင်ချက်များ**: အဓိပ္ပါယ်ရှာဖွေရေးနှင့် ညီလျော်မှုကို တိုးတက်စွာ ဆောင်ရွက်ခြင်း
+- **Retrieval-Augmented Generation (RAG)**: ကိုယ်ပိုင်ဒေတာရင်းမြစ်များနှင့် AI ကို ပေါင်းစပ်ခြင်း
+- **Function Calling**: AI ၏စွမ်းစေ့မှုများကို ကိုယ်ပိုင်ကိရိယာများနှင့် ပလပ်ဂင်များဖြင့် တိုးချဲ့ခြင်း
 - **[→ အခန်း ၃ စတင်ရန်](./03-CoreGenerativeAITechniques/README.md)**
 
-### **အခန်း ၄: လက်တွေ့ အသုံးချမှုများနှင့် ပရောဂျက်များ**
-- **Pet Story Generator** (`petstory/`): GitHub Models ဖြင့် ဖန်တီးမှု အကြောင်းအရာ ဖန်တီးခြင်း
+### **အခန်း ၄: လက်တွေ့အသုံးချမှုများနှင့် ပရောဂျက်များ**
+- **Pet Story Generator** (`petstory/`): GitHub Models ဖြင့် ဖန်တီးချက် အကြောင်းအရာ ဖန်တီးခြင်း
 - **Foundry Local Demo** (`foundrylocal/`): OpenAI Java SDK ဖြင့် ဒေသတွင်း AI မော်ဒယ် ပေါင်းစပ်ခြင်း
 - **MCP Calculator Service** (`calculator/`): Spring AI ဖြင့် အခြေခံ Model Context Protocol အကောင်အထည်ဖော်ခြင်း
 - **[→ အခန်း ၄ စတင်ရန်](./04-PracticalSamples/README.md)**
 
-### **အခန်း ၅: တာဝန်ရှိသော AI ဖွံ့ဖြိုးရေး**
-- **GitHub Models လုံခြုံရေး**: အတွင်းပိုင်း အကြောင်းအရာ စစ်ထုတ်ခြင်းနှင့် လုံခြုံရေး စနစ်များ (ခိုင်မာသော တားမြစ်မှုများနှင့် နူးညံ့သော ငြင်းဆန်မှုများ) စမ်းသပ်ခြင်း
-- **တာဝန်ရှိသော AI ဒေမို**: ခေတ်မီ AI လုံခြုံရေး စနစ်များ လက်တွေ့ အလုပ်လုပ်ပုံ ကို ပြသသော လက်တွေ့ ဥပမာ
-- **အကောင်းဆုံး လေ့လာမှုများ**: တာဝန်ရှိသော AI ဖွံ့ဖြိုးရေးနှင့် တပ်ဆင်မှုအတွက် အရေးကြီးသော လမ်းညွှန်ချက်များ
+### **အခန်း ၅: တာဝန်ယူသော AI ဖွံ့ဖြိုးတိုးတက်မှု**
+- **GitHub Models လုံခြုံရေး**: ထည့်သွင်းထားသော အကြောင်းအရာ စစ်ထုတ်ခြင်းနှင့် လုံခြုံရေးစနစ်များ စမ်းသပ်ရန် (ခက်ခဲသော ကန့်သတ်ချက်များနှင့် ကြီးကြပ်မှုများ)
+- **တာဝန်ယူသော AI များ Demo**: လက်တွေ့မှာ AI လုံခြုံရေးစနစ် များ ယေဘုယျအဖြစ် ဖော်ပြခြင်း
+- **အကောင်းဆုံးလေ့လာမှုများ**: ကျင့်ဝတ်မဲ၊ တာဝန်ယူမှုဖြင့် AI ဖြန့်ချိခြင်းနှင့် ဖွံ့ဖြိုးမှုအတွက် လမ်းညွှန်ချက်များ
 - **[→ အခန်း ၅ စတင်ရန်](./05-ResponsibleGenAI/README.md)**
 
-## အပိုဆောင်း အရင်းအမြစ်များ
+## နောက်ထပ် အရင်းအမြစ်များ
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
-
+[![LangChain for Beginners](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
 ### Azure / Edge / MCP / Agents
@@ -112,25 +112,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Copilot စီးရီး
+### Copilot Series
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## အကူအညီရယူခြင်း
+## ဝ◌ိ◌ဉာ်ရည်ကူညီမှုရယူခြင်း
 
-AI အက်ပ်များ တည်ဆောက်ရာတွင် အခက်အခဲများရှိပါက သို့မဟုတ် မေးခွန်းများရှိပါက MCP အကြောင်း ဆွေးနွေးမှုများတွင် အတူတကွ သင်ယူနေသူများနှင့် အတွေ့အကြုံရှိ ဖန်တီးသူများနှင့် ပူးပေါင်းပါ။ မေးခွန်းများကို ကြိုဆိုပြီး အသိပညာများကို လွတ်လပ်စွာ မျှဝေသော ပံ့ပိုးမှုရှိသော အသိုင်းအဝိုင်းတစ်ခုဖြစ်သည်။
+AI အက်ပ်များ တည်ဆောက်ရာတွင် ဆင်းရဲနေပါက သို့မဟုတ် မေးခွန်းများရှိပါက MCP အကြောင်း လူအများနှင့် အတွေ့အကြုံရှိ ဖန်တီးသူများနှင့် ပြောဆိုဆွေးနွေးပါ။ အဲဒီမှာ မေးခွန်းဖြစ်ပေါ်နိုင်ပြီး အတတ်ပညာစာသင်များ အခမဲ့မျှဝေကြသည့် ကူညီထောက်ပံ့မှုရှိသော အသိုင်းအဝိုင်းတစ်ခု ဖြစ်ပါသည်။
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-ထုတ်ကုန်တုံ့ပြန်ချက်များ သို့မဟုတ် အမှားများရှိပါက တည်ဆောက်ရာတွင် အောက်ပါနေရာသို့ သွားရောက်ကြည့်ရှုနိုင်ပါသည်-
+ထုတ်ကုန်တုံ့ပြန်ချက်များ သို့မဟုတ် အမှားများ ရှိပါက တည်ဆောက်နေစဉ်တွင် အောက်ပါတွင် ဝင်ရောက်ကြည့်ရှုနိုင်ပါသည်-
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**အကြောင်းကြားချက်**  
-ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ဖြင့် ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ပါဝင်နိုင်ကြောင်း သတိပြုပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။ မူရင်းစာတမ်းကို မိမိဘာသာစကားဖြင့်သာ တရားဝင်အချက်အလက်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်မှ ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုရာမှ ဖြစ်ပေါ်လာနိုင်သည့် နားလည်မှုမှားယွင်းမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မရှိပါ။
+**ဆိုင်းငံ့ချက်**  
+ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှုဖြစ်သော [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် မှန်ကန်မှုအတွက် ကြိုးစားပေမယ့် အလိုအလျောက် ဘာသာပြန်မှုများအတွက် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ပါဝင်နိုင်ကြောင်း သတိပေးလိုသည်။ မူလစာတမ်းကို မိမိဘာသာစကားရှိ ပြည့်စုံသည့် အရင်းအမြစ်အဖြစ် ယူဆသင့်ပါသည်။ အရေးပါတဲ့ အချက်အလက်များအတွက် လူသား ကျွမ်းကျင်အရည်အချင်းရှိ ဘာသာပြန်သူမှ ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုရာမှ ဖြစ်ပေါ်နိုင်သည့် နားလည်မှုမှားယွင်းခြင်း သို့မဟုတ် အဓိပ္ပါယ်မှားယွင်းခြင်းအတွက် ကျွန်ုပ်တို့ တာဝန်မရှိပါ။
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

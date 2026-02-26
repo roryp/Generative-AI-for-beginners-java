@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-  "translation_date": "2025-07-29T16:01:26+00:00",
-  "source_file": "05-ResponsibleGenAI/README.md",
-  "language_code": "my"
-}
--->
 # တာဝန်ရှိသော Generative AI
 
 ## သင်လေ့လာမည့်အရာများ
@@ -58,7 +49,7 @@ GitHub Models တွင် အခြေခံ အကြောင်းအရာ 
 5. ဘယ်အကြောင်းအရာများကို ပိတ်ဆို့ခဲ့သည်၊ ငြင်းပယ်ခဲ့သည်၊ သို့မဟုတ် ခွင့်ပြုခဲ့သည်ကို ပြသပါ  
 6. လုံခြုံသော အကြောင်းအရာများကို နှိုင်းယှဉ်ရန် စမ်းသပ်ပါ  
 
-![Responsible AI Safety Demo](../../../translated_images/responsible.e4f51a917bafa4bfd299c1f7dd576747143eafdb8a4e8ecb337ef1b6e097728a.my.png)  
+![Responsible AI Safety Demo](../../../translated_images/my/responsible.e4f51a917bafa4bf.webp)  
 
 ### တပ်ဆင်ရန် လမ်းညွှန်ချက်များ
 
@@ -164,7 +155,7 @@ AI အက်ပ်များ ဖန်တီးရာတွင် အောက
 
 Generative AI for Beginners သင်တန်းကို ပြီးဆုံးနိုင်ခဲ့သည့်အတွက် ဂုဏ်ယူပါတယ်!  
 
-![Course Completion](../../../translated_images/image.73c7e2ff4a652e77a3ff439639bf47b8406e3b32ec6ecddc571a31b6f886cf12.my.png)  
+![Course Completion](../../../translated_images/my/image.73c7e2ff4a652e77.webp)  
 
 **သင်၏ အောင်မြင်မှုများ:**  
 - သင့်ဖွံ့ဖြိုးရေး ပတ်ဝန်းကျင်ကို တပ်ဆင်နိုင်ခဲ့သည်  

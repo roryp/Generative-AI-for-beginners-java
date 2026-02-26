@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfdb4b4eadbee3a59ef742439f58326a",
-  "translation_date": "2025-07-27T12:51:01+00:00",
-  "source_file": "02-SetupDevEnvironment/getting-started-azure-openai.md",
-  "language_code": "ru"
-}
--->
 # Настройка среды разработки для Azure OpenAI
 
 > **Быстрый старт**: Это руководство предназначено для настройки Azure OpenAI. Для быстрого начала с бесплатными моделями используйте [GitHub Models with Codespaces](./README.md#quick-start-cloud).
@@ -75,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
    > **Примечание**: Если вы хотите изменить базовую конфигурацию, ознакомьтесь с [Dev Container Configuration](../../../.devcontainer/devcontainer.json)
 2. В вашем форкнутом репозитории нажмите **Code** → вкладка **Codespaces**
 3. Нажмите **...** → **New with options...**
-![создание codespace с опциями](../../../translated_images/codespaces.9945ded8ceb431a58e8bee7f212e8c62b55733b7e302fd58194fadc95472fa3c.ru.png)
+![создание codespace с опциями](../../../translated_images/ru/codespaces.9945ded8ceb431a5.webp)
 4. Выберите **Dev container configuration**: 
    - **Generative AI Java Development Environment**
 5. Нажмите **Create codespace**
