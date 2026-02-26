@@ -1,5 +1,9 @@
 # Core Generative AI Techniques Tutorial 
 
+[![Core Generative AI Techniques](https://img.youtube.com/vi/ZUgN6gTjlPE/0.jpg)](https://www.youtube.com/watch?v=ZUgN6gTjlPE "Core Generative AI Techniques")
+
+> **Video overview:** [Watch "Core Generative AI Techniques" on YouTube](https://www.youtube.com/watch?v=ZUgN6gTjlPE), or click the thumbnail above.
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
