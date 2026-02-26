@@ -2,7 +2,8 @@
 
 [![Responsible Generative AI](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
 
-> **Video**: Click the image above to watch the video overview for this lesson.
+> **Video**: [Watch the video overview for this lesson](https://www.youtube.com/watch?v=rF-b2BTSMQ4).
+> You can also click the thumbnail image above to open the same video.
 
 ## What You'll Learn
 
