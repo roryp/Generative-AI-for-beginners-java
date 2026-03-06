@@ -1,5 +1,7 @@
 package com.example;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openai.client.OpenAIClient;
 import com.openai.client.okhttp.OpenAIOkHttpClient;
 import com.openai.models.chat.completions.*;
@@ -7,6 +9,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 /**
  * Service for connecting to locally running AI models via Foundry Local.
@@ -31,8 +37,8 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;  // Where your local AI server is running
     
-    @Value("${foundry.local.model:phi-3.5-mini-instruct-trtrtx-gpu:1}")
-    private String model;    // Which local AI model to use
+    @Value("${foundry.local.model:}")
+    private String model;    // Which local AI model to use (auto-detected if empty)
     
     // OpenAI client configured to talk to local server instead of OpenAI's servers
     private OpenAIClient openAIClient;
@@ -46,18 +52,50 @@ public class FoundryLocalService {
      */
     @PostConstruct
     public void init() {
-        // Create OpenAI client but point it to local server instead of OpenAI
-        // This works because local AI servers often implement OpenAI-compatible APIs
+        // Auto-detect the model from Foundry Local if not explicitly configured
+        if (model == null || model.isBlank()) {
+            model = detectModel();
+        }
+
         System.out.println("Initializing Foundry Local client:");
         System.out.println("  Base URL: " + baseUrl);
         System.out.println("  Model: " + model);
         
+        // Create OpenAI client but point it to local server instead of OpenAI
+        // This works because local AI servers often implement OpenAI-compatible APIs
         this.openAIClient = OpenAIOkHttpClient.builder()
                 .baseUrl(baseUrl)                   // Local server endpoint with /v1 path for OpenAI API compatibility
                 .apiKey("not-needed")               // Local servers usually don't need real API keys
                 .build();
         
         System.out.println("Client initialized successfully");
+    }
+
+    /**
+     * Query the Foundry Local /v1/models endpoint and return the first available model ID.
+     * This makes the app work regardless of which model variant is loaded.
+     */
+    private String detectModel() {
+        try {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseUrl + "/models"))
+                    .GET()
+                    .build();
+            HttpResponse<String> response = HttpClient.newHttpClient()
+                    .send(request, HttpResponse.BodyHandlers.ofString());
+            JsonNode root = new ObjectMapper().readTree(response.body());
+            JsonNode data = root.get("data");
+            if (data != null && data.isArray() && !data.isEmpty()) {
+                String detected = data.get(0).get("id").asText();
+                System.out.println("Auto-detected model from Foundry Local: " + detected);
+                return detected;
+            }
+        } catch (Exception e) {
+            System.err.println("Could not auto-detect model from " + baseUrl + "/models: " + e.getMessage());
+        }
+        throw new RuntimeException(
+            "No model found. Make sure Foundry Local is running at " + baseUrl +
+            " with a model loaded, or set foundry.local.model in application.properties.");
     }
     
     /**
