@@ -52,12 +52,13 @@ This project consists of four main components:
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=phi-3.5-mini-instruct-trtrtx-gpu:1
 ```
 
 **What this does:**
 - **base-url**: Specifies where Foundry Local is running, including the `/v1` path for OpenAI API compatibility. **Note**: Foundry Local dynamically assigns a port, so check your actual port using `foundry service status`
-- **model**: Names the AI model to use for text generation, including the version number (e.g., `:1`). Use `foundry model list` to see available models with their exact IDs
+- **model** (optional): Names the AI model to use for text generation. **By default, the application auto-detects the model** by querying the Foundry Local `/v1/models` endpoint at startup, so you don't need to set this. You can still set it explicitly to override auto-detection if needed.
 
 **Key concept:** Spring Boot automatically loads these properties and makes them available to your application using the `@Value` annotation.
 
@@ -117,14 +118,14 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // Auto-detected if empty
 ```
 
 **What this does:**
 - `@Service` tells Spring this class provides business logic
 - `@Value` injects configuration values from application.properties
-- The `:default-value` syntax provides fallback values if properties aren't set
+- The model defaults to empty, which triggers **auto-detection** from Foundry Local at startup. This means the app works with any model loaded in Foundry Local without manual configuration.
 
 #### Client Initialization:
 ```java
@@ -216,12 +217,13 @@ Here's the complete flow when you run the application:
 
 1. **Startup**: Spring Boot starts and reads `application.properties`
 2. **Service Creation**: Spring creates `FoundryLocalService` and injects configuration values
-3. **Client Setup**: `@PostConstruct` initializes the OpenAI client to connect to Foundry Local
-4. **Demo Execution**: `CommandLineRunner` executes after startup
-5. **AI Call**: The demo calls `foundryLocalService.chat()` with a test message
-6. **API Request**: Service builds and sends OpenAI-compatible request to Foundry Local
-7. **Response Processing**: Service extracts and returns the AI's response
-8. **Display**: Application prints the response and exits
+3. **Model Detection**: If no model is configured, the service queries Foundry Local's `/v1/models` endpoint and uses the first available model automatically
+4. **Client Setup**: `@PostConstruct` initializes the OpenAI client to connect to Foundry Local
+5. **Demo Execution**: `CommandLineRunner` executes after startup
+6. **AI Call**: The demo calls `foundryLocalService.chat()` with a test message
+7. **API Request**: Service builds and sends OpenAI-compatible request to Foundry Local
+8. **Response Processing**: Service extracts and returns the AI's response
+9. **Display**: Application prints the response and exits
 
 ## Setting Up Foundry Local
 
@@ -244,14 +246,16 @@ To set up Foundry Local, follow these steps:
    foundry model run phi-3.5-mini
    ```
 
-4. **Configure the application.properties** file to match your Foundry Local settings:
+4. **Configure the application.properties** file if needed:
    - Update the port in `base-url` (from step 2), ensuring it includes `/v1` at the end
-   - Update the model name to include the version number (check with `foundry model list`)
+   - The model name is **auto-detected** from Foundry Local, so you typically don't need to set it
+   - To override auto-detection, uncomment and set `foundry.local.model` (check exact IDs with `foundry model list`)
    
    Example:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=phi-3.5-mini-instruct-trtrtx-gpu:1
    ```
 
 ## Running the Application
@@ -298,8 +302,8 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 - Try restarting Foundry Local: `foundry model run phi-3.5-mini`
 
 **"Model not found" or "404 Not Found" errors**
-- Check available models with their exact IDs: `foundry model list`
-- Update the model name in `application.properties` to match exactly, including the version number (e.g., `Phi-3.5-mini-instruct-cuda-gpu:1`)
+- The application auto-detects the model from Foundry Local, so model name mismatches should be rare. If you've overridden the model name in `application.properties`, verify it matches exactly with `foundry model list`
+- Note: Foundry Local may change model IDs across updates (e.g., `cuda-gpu` → `trtrtx-gpu`). Auto-detection handles this automatically
 - Ensure the `base-url` includes `/v1` at the end: `http://localhost:5273/v1`
 - Download the model if needed: `foundry model run phi-3.5-mini`
 
