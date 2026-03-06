@@ -31,7 +31,7 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;  // Where your local AI server is running
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
+    @Value("${foundry.local.model:phi-3.5-mini-instruct-trtrtx-gpu:1}")
     private String model;    // Which local AI model to use
     
     // OpenAI client configured to talk to local server instead of OpenAI's servers
