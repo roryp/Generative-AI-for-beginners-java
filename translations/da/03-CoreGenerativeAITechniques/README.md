@@ -1,38 +1,42 @@
-# Core Generative AI Techniques Tutorial 
+# Core Generative AI Teknikker Tutorial
+
+[![Core Generative AI Techniques](https://img.youtube.com/vi/ZUgN6gTjlPE/0.jpg)](https://www.youtube.com/watch?v=ZUgN6gTjlPE "Core Generative AI Techniques")
+
+> **Video oversigt:** [Se "Core Generative AI Techniques" på YouTube](https://www.youtube.com/watch?v=ZUgN6gTjlPE), eller klik på miniaturebilledet ovenfor.
 
 ## Indholdsfortegnelse
 
-- [Forudsætninger](../../../03-CoreGenerativeAITechniques)
-- [Kom godt i gang](../../../03-CoreGenerativeAITechniques)
-  - [Trin 1: Sæt din miljøvariabel](../../../03-CoreGenerativeAITechniques)
-  - [Trin 2: Naviger til eksempelmappen](../../../03-CoreGenerativeAITechniques)
-- [Modelvalgsguide](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 1: LLM-udfyldelser og chat](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 2: Funktionskald](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 3: RAG (Retrieval-Augmented Generation)](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 4: Ansvarlig AI](../../../03-CoreGenerativeAITechniques)
-- [Fælles mønstre på tværs af eksempler](../../../03-CoreGenerativeAITechniques)
-- [Næste skridt](../../../03-CoreGenerativeAITechniques)
-- [Fejlfinding](../../../03-CoreGenerativeAITechniques)
-  - [Almindelige problemer](../../../03-CoreGenerativeAITechniques)
+- [Forudsætninger](#forudsætninger)
+- [Kom godt i gang](#kom-godt-i-gang)
+  - [Trin 1: Sæt din miljøvariabel](#trin-1-sæt-din-miljøvariabel)
+  - [Trin 2: Naviger til eksempelmappen](#trin-2-naviger-til-eksempelmappen)
+- [Modelvalg Guide](#modelvalg-guide)
+- [Tutorial 1: LLM Fuldførelser og Chat](#tutorial-1-llm-fuldførelser-og-chat)
+- [Tutorial 2: Funktionskald](#tutorial-2-funktionskald)
+- [Tutorial 3: RAG (Retrieval-Augmented Generation)](#tutorial-3-rag-retrieval-augmented-generation)
+- [Tutorial 4: Ansvarlig AI](#tutorial-4-ansvarlig-ai)
+- [Almindelige Mønstre på tværs af Eksempler](#almindelige-mønstre-på-tværs-af-eksempler)
+- [Næste Skridt](#næste-skridt)
+- [Fejlfinding](#fejlfinding)
+  - [Almindelige problemer](#almindelige-problemer)
 
 
 ## Oversigt
 
-Denne tutorial giver praktiske eksempler på centrale generative AI-teknikker ved brug af Java og GitHub-modeller. Du vil lære at interagere med Large Language Models (LLMs), implementere funktionskald, bruge retrieval-augmented generation (RAG) og anvende ansvarlige AI-praksisser.
+Denne tutorial giver praktiske eksempler på kerne teknikker inden for generativ AI ved brug af Java og GitHub Models. Du vil lære, hvordan man interagerer med store sprogmodeller (LLM'er), implementerer funktionskald, anvender retrieval-augmented generation (RAG), og hvordan man anvender ansvarlige AI-praksisser.
 
 ## Forudsætninger
 
-Før du starter, skal du sikre dig, at du har:
+Før du går i gang, skal du sikre dig, at du har:
 - Java 21 eller nyere installeret
 - Maven til afhængighedsstyring
-- En GitHub-konto med en personlig adgangstoken (PAT)
+- En GitHub-konto med et personligt adgangstoken (PAT)
 
 ## Kom godt i gang
 
 ### Trin 1: Sæt din miljøvariabel
 
-Først skal du sætte din GitHub-token som en miljøvariabel. Denne token giver dig adgang til GitHub-modeller gratis.
+Først skal du sætte dit GitHub-token som en miljøvariabel. Dette token giver dig gratis adgang til GitHub Models.
 
 **Windows (Command Prompt):**
 ```cmd
@@ -55,92 +59,92 @@ export GITHUB_TOKEN=your_github_token_here
 cd 03-CoreGenerativeAITechniques/examples/
 ```
 
-## Modelvalgsguide
+## Modelvalg Guide
 
-Disse eksempler bruger forskellige modeller, der er optimeret til deres specifikke anvendelser:
+Disse eksempler bruger forskellige modeller optimeret til deres specifikke anvendelser:
 
-**GPT-4.1-nano** (Eksempel på udfyldelser):
+**GPT-4.1-nano** (Fuldførelses-eksempel):
 - Ultra-hurtig og ultra-billig
-- Perfekt til grundlæggende tekstudfyldelse og chat
-- Ideel til at lære fundamentale interaktionsmønstre med LLM
+- Perfekt til grundlæggende tekstfuldførelse og chat
+- Ideel til at lære grundlæggende LLM-interaktionsmønstre
 
-**GPT-4o-mini** (Eksempler på funktioner, RAG og ansvarlig AI):
-- Lille, men fuldt udstyret "omni-arbejdshest"-model
+**GPT-4o-mini** (Funktioner, RAG og Ansvarlig AI eksempler):
+- Lille, men fuldt udstyret "omni workhorse" model
 - Understøtter pålideligt avancerede funktioner på tværs af leverandører:
-  - Visionsbehandling
-  - JSON/strukturerede outputs  
+  - Vision behandling
+  - JSON/strukturerede output  
   - Værktøjs-/funktionskald
-- Flere funktioner end nano, hvilket sikrer, at eksemplerne fungerer konsekvent
+- Flere funktioner end nano, hvilket sikrer, at eksempler fungerer konsekvent
 
-> **Hvorfor dette er vigtigt**: Mens "nano"-modeller er gode til hastighed og omkostninger, er "mini"-modeller det sikrere valg, når du har brug for pålidelig adgang til avancerede funktioner som funktionskald, som muligvis ikke er fuldt eksponeret af alle hostingudbydere for nano-varianter.
+> **Hvorfor det betyder noget**: Mens "nano" modeller er gode for hastighed og pris, er "mini" modeller det sikrere valg, når du har brug for pålidelig adgang til avancerede funktioner som funktionskald, som muligvis ikke er fuldt tilgængelige hos alle hosting udbydere for nano-varianter.
 
-## Tutorial 1: LLM-udfyldelser og chat
+## Tutorial 1: LLM Fuldførelser og Chat
 
 **Fil:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-### Hvad dette eksempel lærer dig
+### Hvad dette eksempel lærer
 
-Dette eksempel demonstrerer de grundlæggende mekanismer for interaktion med Large Language Models (LLM) via OpenAI API, herunder klientinitialisering med GitHub-modeller, mønstre for meddelelsesstruktur til system- og brugerprompter, styring af samtalestatus gennem akkumulering af meddelelseshistorik og parameterjustering for at kontrollere svarlængde og kreativitet.
+Dette eksempel demonstrerer de grundlæggende mekanismer til interaktion med store sprogmodeller (LLM) via OpenAI API, herunder klientinitialisering med GitHub Models, beskedstrukturmønstre for system- og bruger-prompter, samt håndtering af samtalestatus via akkumulering af beskedhistorik og parameterjustering for at styre svarlængde og kreativitet.
 
-### Centrale kodekoncepter
+### Nøglekodekoncepter
 
 #### 1. Klientopsætning
 ```java
-// Create the AI client
+// Opret AI-klienten
 OpenAIClient client = new OpenAIClientBuilder()
     .endpoint("https://models.inference.ai.azure.com")
     .credential(new StaticTokenCredential(pat))
     .buildClient();
 ```
 
-Dette opretter en forbindelse til GitHub-modeller ved hjælp af din token.
+Dette opretter en forbindelse til GitHub Models ved hjælp af dit token.
 
-#### 2. Enkel udfyldelse
+#### 2. Enkel Fuldførelse
 ```java
 List<ChatRequestMessage> messages = List.of(
-    // System message sets AI behavior
+    // Systembesked fastlægger AI-adfærd
     new ChatRequestSystemMessage("You are a helpful Java expert."),
-    // User message contains the actual question
+    // Brugerbesked indeholder det faktiske spørgsmål
     new ChatRequestUserMessage("Explain Java streams briefly.")
 );
 
 ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
-    .setModel("gpt-4.1-nano")  // Fast, cost-effective model for basic completions
-    .setMaxTokens(200)         // Limit response length
-    .setTemperature(0.7);      // Control creativity (0.0-1.0)
+    .setModel("gpt-4.1-nano")  // Hurtig, omkostningseffektiv model til grundlæggende udførelser
+    .setMaxTokens(200)         // Begræns svarlængde
+    .setTemperature(0.7);      // Kontroller kreativitet (0.0-1.0)
 ```
 
-#### 3. Samtalememory
+#### 3. Samtalehukommelse
 ```java
-// Add AI's response to maintain conversation history
+// Tilføj AI's svar for at bevare samtalehistorikken
 messages.add(new ChatRequestAssistantMessage(aiResponse));
 messages.add(new ChatRequestUserMessage("Follow-up question"));
 ```
 
-AI husker tidligere meddelelser kun, hvis du inkluderer dem i efterfølgende forespørgsler.
+AI husker tidligere beskeder kun, hvis du medtager dem i efterfølgende anmodninger.
 
 ### Kør eksemplet
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
 ```
 
-### Hvad der sker, når du kører det
+### Hvad sker der, når du kører det
 
-1. **Enkel udfyldelse**: AI besvarer et Java-spørgsmål med vejledning fra systemprompten
-2. **Flertrinschat**: AI opretholder kontekst på tværs af flere spørgsmål
-3. **Interaktiv chat**: Du kan have en reel samtale med AI'en
+1. **Enkel Fuldførelse**: AI svarer på et Java-spørgsmål med system prompt vejledning
+2. **Flertrins Chat**: AI bevarer kontekst på tværs af flere spørgsmål
+3. **Interaktiv Chat**: Du kan føre en rigtig samtale med AI
 
 ## Tutorial 2: Funktionskald
 
 **Fil:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-### Hvad dette eksempel lærer dig
+### Hvad dette eksempel lærer
 
-Funktionskald gør det muligt for AI-modeller at anmode om eksekvering af eksterne værktøjer og API'er via en struktureret protokol, hvor modellen analyserer naturlige sprogforespørgsler, bestemmer nødvendige funktionskald med passende parametre ved hjælp af JSON Schema-definitioner og behandler returnerede resultater for at generere kontekstuelle svar, mens den faktiske funktionseksekvering forbliver under udviklerens kontrol for sikkerhed og pålidelighed.
+Funktionskald muliggør, at AI modeller kan anmode om eksekvering af eksterne værktøjer og API'er gennem en struktureret protokol, hvor modellen analyserer naturlige sprogforespørgsler, bestemmer nødvendige funktionskald med passende parametre ved brug af JSON Schema definitioner, og behandler returnerede resultater for at generere kontekstuelle svar, mens selve funktionen eksekveres under udviklerens kontrol for sikkerhed og pålidelighed.
 
-> **Bemærk**: Dette eksempel bruger `gpt-4o-mini`, fordi funktionskald kræver pålidelige værktøjskaldsfunktioner, som muligvis ikke er fuldt eksponeret i nano-modeller på alle hostingplatforme.
+> **Bemærk**: Dette eksempel bruger `gpt-4o-mini` fordi funktionskald kræver pålidelige værktøjskaldsfunktioner, som muligvis ikke er fuldt tilgængelige i nano-modeller på alle hosting platforme.
 
-### Centrale kodekoncepter
+### Nøglekodekoncepter
 
 #### 1. Funktionsdefinition
 ```java
@@ -148,7 +152,7 @@ ChatCompletionsFunctionToolDefinitionFunction weatherFunction =
     new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
 weatherFunction.setDescription("Get current weather information for a city");
 
-// Define parameters using JSON Schema
+// Definer parametre ved hjælp af JSON Schema
 weatherFunction.setParameters(BinaryData.fromString("""
     {
         "type": "object",
@@ -165,19 +169,19 @@ weatherFunction.setParameters(BinaryData.fromString("""
 
 Dette fortæller AI, hvilke funktioner der er tilgængelige, og hvordan de skal bruges.
 
-#### 2. Funktionseksekveringsflow
+#### 2. Funktions eksekveringsflow
 ```java
-// 1. AI requests a function call
+// 1. AI anmoder om et funktionskald
 if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
     ChatCompletionsFunctionToolCall functionCall = ...;
     
-    // 2. You execute the function
+    // 2. Du udfører funktionen
     String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
     
-    // 3. You give the result back to AI
+    // 3. Du giver resultatet tilbage til AI
     messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
     
-    // 4. AI provides final response with function result
+    // 4. AI giver det endelige svar med funktionsresultatet
     ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
 }
 ```
@@ -185,8 +189,8 @@ if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
 #### 3. Funktionsimplementering
 ```java
 private static String simulateWeatherFunction(String arguments) {
-    // Parse arguments and call real weather API
-    // For demo, we return mock data
+    // Analyser argumenter og kald den faktiske vejr-API
+    // Til demo returnerer vi simulerede data
     return """
         {
             "city": "Seattle",
@@ -202,30 +206,30 @@ private static String simulateWeatherFunction(String arguments) {
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
 ```
 
-### Hvad der sker, når du kører det
+### Hvad sker der, når du kører det
 
-1. **Vejrfunktion**: AI anmoder om vejrdata for Seattle, du leverer dem, AI formaterer et svar
-2. **Lommeregnerfunktion**: AI anmoder om en beregning (15% af 240), du udfører den, AI forklarer resultatet
+1. **Vejrfunktion**: AI anmoder om vejrinformation for Seattle, du leverer den, AI formaterer et svar
+2. **Lommeregnerfunktion**: AI anmoder om en beregning (15% af 240), du beregner det, AI forklarer resultatet
 
 ## Tutorial 3: RAG (Retrieval-Augmented Generation)
 
 **Fil:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-### Hvad dette eksempel lærer dig
+### Hvad dette eksempel lærer
 
-Retrieval-Augmented Generation (RAG) kombinerer informationssøgning med sprogproduktion ved at injicere ekstern dokumentkontekst i AI-prompter, hvilket gør det muligt for modeller at give præcise svar baseret på specifikke videnskilder frem for potentielt forældede eller unøjagtige træningsdata, samtidig med at klare grænser mellem brugerforespørgsler og autoritative informationskilder opretholdes gennem strategisk promptdesign.
+Retrieval-Augmented Generation (RAG) kombinerer informationssøgning med sprogproduktion ved at injicere ekstern dokumentkontekst i AI prompter, hvilket gør modeller i stand til at give præcise svar baseret på specifikke vidensbaser frem for potentielt forældet eller unøjagtig træningsdata, samtidig med at der opretholdes klare grænser mellem brugerforespørgsler og autoritative informationskilder via strategisk prompt design.
 
-> **Bemærk**: Dette eksempel bruger `gpt-4o-mini` for at sikre pålidelig behandling af strukturerede prompter og konsekvent håndtering af dokumentkontekst, hvilket er afgørende for effektive RAG-implementeringer.
+> **Bemærk**: Dette eksempel bruger `gpt-4o-mini` for at sikre pålidelig behandling af strukturerede promter og konsekvent håndtering af dokumentkontekst, hvilket er afgørende for effektive RAG-implementeringer.
 
-### Centrale kodekoncepter
+### Nøglekodekoncepter
 
 #### 1. Dokumentindlæsning
 ```java
-// Load your knowledge source
+// Indlæs din videnskilde
 String doc = Files.readString(Paths.get("document.txt"));
 ```
 
-#### 2. Kontekstindsprøjtning
+#### 2. Kontekst injektion
 ```java
 List<ChatRequestMessage> messages = List.of(
     new ChatRequestSystemMessage(
@@ -237,9 +241,9 @@ List<ChatRequestMessage> messages = List.of(
 );
 ```
 
-De tre anførselstegn hjælper AI med at skelne mellem kontekst og spørgsmål.
+Triple citations hjælper AI med at skelne mellem kontekst og spørgsmål.
 
-#### 3. Sikker svarhåndtering
+#### 3. Sikker responsbehandling
 ```java
 if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
     String answer = response.getChoices().get(0).getMessage().getContent();
@@ -249,42 +253,42 @@ if (response != null && response.getChoices() != null && !response.getChoices().
 }
 ```
 
-Valider altid API-svar for at forhindre nedbrud.
+Valider altid API-responser for at forhindre nedbrud.
 
 ### Kør eksemplet
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
 ```
 
-### Hvad der sker, når du kører det
+### Hvad sker der, når du kører det
 
-1. Programmet indlæser `document.txt` (indeholder info om GitHub-modeller)
+1. Programmet indlæser `document.txt` (indeholder info om GitHub Models)
 2. Du stiller et spørgsmål om dokumentet
-3. AI svarer kun baseret på dokumentets indhold, ikke dens generelle viden
+3. AI svarer kun baseret på dokumentindholdet, ikke sin generelle viden
 
-Prøv at spørge: "Hvad er GitHub-modeller?" vs "Hvordan er vejret?"
+Prøv at spørge: "Hvad er GitHub Models?" vs "Hvordan er vejret?"
 
 ## Tutorial 4: Ansvarlig AI
 
 **Fil:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
-### Hvad dette eksempel lærer dig
+### Hvad dette eksempel lærer
 
-Eksemplet på ansvarlig AI viser vigtigheden af at implementere sikkerhedsforanstaltninger i AI-applikationer. Det demonstrerer, hvordan moderne AI-sikkerhedssystemer fungerer gennem to primære mekanismer: hårde blokeringer (HTTP 400-fejl fra sikkerhedsfiltre) og bløde afvisninger (høflige "Jeg kan ikke hjælpe med det"-svar fra modellen selv). Dette eksempel viser, hvordan produktions-AI-applikationer bør håndtere overtrædelser af indholdspolitik på en elegant måde gennem korrekt undtagelseshåndtering, afvisningsdetektion, brugerfeedbackmekanismer og fallback-svarstrategier.
+Ansvarlig AI-eksemplet fremhæver vigtigheden af at implementere sikkerhedsforanstaltninger i AI-applikationer. Det demonstrerer, hvordan moderne AI-sikkerhedssystemer fungerer via to primære mekanismer: hårde blokeringer (HTTP 400 fejl fra sikkerhedsfiltre) og bløde afvisninger (høflige "Jeg kan ikke hjælpe med det" svar fra selve modellen). Dette eksempel viser, hvordan produktions-AI-applikationer bør håndtere overtrædelser af indholdspolitikker elegant gennem korrekt undtagelseshåndtering, afvisningsdetektion, brugerfeedback mekanismer og fallback-responsstrategier.
 
-> **Bemærk**: Dette eksempel bruger `gpt-4o-mini`, fordi det giver mere konsekvente og pålidelige sikkerhedssvar på tværs af forskellige typer potentielt skadeligt indhold, hvilket sikrer, at sikkerhedsmekanismerne demonstreres korrekt.
+> **Bemærk**: Dette eksempel bruger `gpt-4o-mini` fordi det giver mere konsekvente og pålidelige sikkerhedssvar på tværs af forskellige typer potentielt skadeligt indhold, hvilket sikrer, at sikkerhedsmekanismerne demonstreres korrekt.
 
-### Centrale kodekoncepter
+### Nøglekodekoncepter
 
-#### 1. Sikkerhedstestframework
+#### 1. Sikkerhedstest rammeværk
 ```java
 private void testPromptSafety(String prompt, String category) {
     try {
-        // Attempt to get AI response
+        // Forsøg på at få AI-svar
         ChatCompletions response = client.getChatCompletions(modelId, options);
         String content = response.getChoices().get(0).getMessage().getContent();
         
-        // Check if the model refused the request (soft refusal)
+        // Tjek om modellen afviste anmodningen (blød afvisning)
         if (isRefusalResponse(content)) {
             System.out.println("[REFUSED BY MODEL]");
             System.out.println("✓ This is GOOD - the AI refused to generate harmful content!");
@@ -321,9 +325,9 @@ private boolean isRefusalResponse(String response) {
 ```
 
 #### 2. Testede sikkerhedskategorier
-- Vold/skadeinstruktioner
+- Vold/skade instruktioner
 - Hadetale
-- Privatlivsovertrædelser
+- Privatlivskrænkelse
 - Medicinsk misinformation
 - Ulovlige aktiviteter
 
@@ -332,13 +336,13 @@ private boolean isRefusalResponse(String response) {
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
 ```
 
-### Hvad der sker, når du kører det
+### Hvad sker der, når du kører det
 
-Programmet tester forskellige skadelige prompter og viser, hvordan AI-sikkerhedssystemet fungerer gennem to mekanismer:
+Programmet tester forskellige skadelige prompter og viser, hvordan AI-sikkerhedssystemet fungerer via to mekanismer:
 
-1. **Hårde blokeringer**: HTTP 400-fejl, når indhold blokeres af sikkerhedsfiltre, før det når modellen
+1. **Hårde blokeringer**: HTTP 400 fejl når indhold blokeres af sikkerhedsfiltre før det når modellen
 2. **Bløde afvisninger**: Modellen svarer med høflige afvisninger som "Jeg kan ikke hjælpe med det" (mest almindeligt med moderne modeller)
-3. **Sikkert indhold**: Tillader legitime forespørgsler at blive genereret normalt
+3. **Sikkert indhold**: Tillader legitime anmodninger at blive genereret normalt
 
 Forventet output for skadelige prompter:
 ```
@@ -349,12 +353,12 @@ Status: [REFUSED BY MODEL]
 ✓ This is GOOD - the AI refused to generate harmful content!
 ```
 
-Dette demonstrerer, at **både hårde blokeringer og bløde afvisninger indikerer, at sikkerhedssystemet fungerer korrekt**.
+Dette demonstrerer, at **både hårde blokeringer og bløde afvisninger indikerer, at sikkerhedssystemet virker korrekt**.
 
-## Fælles mønstre på tværs af eksempler
+## Almindelige Mønstre på tværs af Eksempler
 
-### Autentifikationsmønster
-Alle eksempler bruger dette mønster til at autentificere med GitHub-modeller:
+### Autentificeringsmønster
+Alle eksempler bruger dette mønster til at autentificere med GitHub Models:
 
 ```java
 String pat = System.getenv("GITHUB_TOKEN");
@@ -368,15 +372,15 @@ OpenAIClient client = new OpenAIClientBuilder()
 ### Fejlhåndteringsmønster
 ```java
 try {
-    // AI operation
+    // AI drift
 } catch (HttpResponseException e) {
-    // Handle API errors (rate limits, safety filters)
+    // Håndter API-fejl (grænser for hastighed, sikkerhedsfiltre)
 } catch (Exception e) {
-    // Handle general errors (network, parsing)
+    // Håndter generelle fejl (netværk, parsing)
 }
 ```
 
-### Meddelelsesstrukturmønster
+### Beskedstrukturmønster
 ```java
 List<ChatRequestMessage> messages = List.of(
     new ChatRequestSystemMessage("Set AI behavior"),
@@ -384,9 +388,9 @@ List<ChatRequestMessage> messages = List.of(
 );
 ```
 
-## Næste skridt
+## Næste Skridt
 
-Klar til at bruge disse teknikker? Lad os bygge nogle rigtige applikationer!
+Klar til at bringe disse teknikker i spil? Lad os bygge nogle rigtige applikationer!
 
 [Kapitel 04: Praktiske eksempler](../04-PracticalSamples/README.md)
 
@@ -396,18 +400,20 @@ Klar til at bruge disse teknikker? Lad os bygge nogle rigtige applikationer!
 
 **"GITHUB_TOKEN ikke sat"**
 - Sørg for, at du har sat miljøvariablen
-- Bekræft, at din token har `models:read`-scope
+- Bekræft, at dit token har `models:read` scope
 
-**"Ingen svar fra API"**
+**"Ingen respons fra API"**
 - Tjek din internetforbindelse
-- Bekræft, at din token er gyldig
-- Tjek, om du har nået grænserne for forespørgsler
+- Bekræft, at dit token er gyldigt
+- Tjek om du har ramt ratebegrænsninger
 
-**Maven-kompilationsfejl**
-- Sørg for, at du har Java 21 eller nyere
+**Maven kompileringsfejl**
+- Sikr dig, at du har Java 21 eller nyere
 - Kør `mvn clean compile` for at opdatere afhængigheder
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, bedes du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets modersmål bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

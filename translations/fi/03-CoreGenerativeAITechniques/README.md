@@ -1,37 +1,42 @@
-# Generatiivisen tekoälyn ydintekniikoiden opas
+# Core Generative AI Techniques Tutorial 
 
-## Sisällysluettelo
+[![Core Generative AI Techniques](https://img.youtube.com/vi/ZUgN6gTjlPE/0.jpg)](https://www.youtube.com/watch?v=ZUgN6gTjlPE "Core Generative AI Techniques")
 
-- [Edellytykset](../../../03-CoreGenerativeAITechniques)
-- [Aloittaminen](../../../03-CoreGenerativeAITechniques)
-  - [Vaihe 1: Aseta ympäristömuuttuja](../../../03-CoreGenerativeAITechniques)
-  - [Vaihe 2: Siirry esimerkkikansioon](../../../03-CoreGenerativeAITechniques)
-- [Mallin valintaopas](../../../03-CoreGenerativeAITechniques)
-- [Opetus 1: LLM-vastaukset ja keskustelu](../../../03-CoreGenerativeAITechniques)
-- [Opetus 2: Funktioiden kutsuminen](../../../03-CoreGenerativeAITechniques)
-- [Opetus 3: RAG (hakuun perustuva generointi)](../../../03-CoreGenerativeAITechniques)
-- [Opetus 4: Vastuullinen tekoäly](../../../03-CoreGenerativeAITechniques)
-- [Yhteiset kaavat esimerkeissä](../../../03-CoreGenerativeAITechniques)
-- [Seuraavat askeleet](../../../03-CoreGenerativeAITechniques)
-- [Vianmääritys](../../../03-CoreGenerativeAITechniques)
-  - [Yleiset ongelmat](../../../03-CoreGenerativeAITechniques)
+> **Video overview:** [Katso "Core Generative AI Techniques" YouTubessa](https://www.youtube.com/watch?v=ZUgN6gTjlPE), tai klikkaa yllä olevaa pikkukuvaa.
 
-## Yleiskatsaus
+## Table of Contents
 
-Tämä opas tarjoaa käytännön esimerkkejä generatiivisen tekoälyn ydintekniikoista Javaa ja GitHub-malleja käyttäen. Opit vuorovaikutusta suurten kielimallien (LLM) kanssa, funktioiden kutsumista, hakuun perustuvaa generointia (RAG) ja vastuullisen tekoälyn käytäntöjä.
+- [Esivaatimukset](#esivaatimukset)
+- [Aloittaminen](#aloittaminen)
+  - [Vaihe 1: Aseta Ympäristömuuttujasi](#vaihe-1-aseta-ympäristömuuttujasi)
+  - [Vaihe 2: Siirry Esimerkkihakemistoon](#vaihe-2-siirry-esimerkkihakemistoon)
+- [Mallin Valintaopas](#mallin-valintaopas)
+- [Opetusohjelma 1: LLM Viimeistelyt ja Keskustelu](#opetusohjelma-1-llm-viimeistelyt-ja-keskustelu)
+- [Opetusohjelma 2: Funktiokutsu](#opetusohjelma-2-funktiokutsu)
+- [Opetusohjelma 3: RAG (Hakua Parannettu Generointi)](#opetusohjelma-3-rag-hakua-parannettu-generointi)
+- [Opetusohjelma 4: Vastuullinen AI](#opetusohjelma-4-vastuullinen-ai)
+- [Yleisiä Mallikuvioita Esimerkeissä](#yleisiä-mallikuvioita-esimerkeissä)
+- [Seuraavat Vaiheet](#seuraavat-vaiheet)
+- [Vianmääritys](#vianmääritys)
+  - [Yleiset Ongelmät](#yleiset-ongelmät)
 
-## Edellytykset
+
+## Overview
+
+Tämä opetusohjelma tarjoaa käytännön esimerkkejä keskeisistä generatiivisen tekoälyn tekniikoista käyttäen Javaa ja GitHub-malleja. Opit miten olla vuorovaikutuksessa suurten kielimallien (LLM) kanssa, toteuttaa funktiokutsut, käyttää hakua parannettua generointia (RAG) sekä soveltaa vastuullisen tekoälyn käytäntöjä.
+
+## Esivaatimukset
 
 Ennen aloittamista varmista, että sinulla on:
 - Java 21 tai uudempi asennettuna
 - Maven riippuvuuksien hallintaan
-- GitHub-tili ja henkilökohtainen käyttöoikeustunnus (PAT)
+- GitHub-tili, jossa on henkilökohtainen käyttöoikeustunnus (PAT)
 
 ## Aloittaminen
 
-### Vaihe 1: Aseta ympäristömuuttuja
+### Vaihe 1: Aseta Ympäristömuuttujasi
 
-Ensiksi sinun tulee asettaa GitHub-tunnuksesi ympäristömuuttujaksi. Tämä tunnus mahdollistaa GitHub-mallien käytön ilmaiseksi.
+Ensin sinun tulee asettaa GitHub-tunnuksesi ympäristömuuttujaksi. Tämä tunnus antaa ilmaisen pääsyn GitHub-malleihin.
 
 **Windows (Komentokehote):**
 ```cmd
@@ -48,44 +53,44 @@ $env:GITHUB_TOKEN="your_github_token_here"
 export GITHUB_TOKEN=your_github_token_here
 ```
 
-### Vaihe 2: Siirry esimerkkikansioon
+### Vaihe 2: Siirry Esimerkkihakemistoon
 
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
 ```
 
-## Mallin valintaopas
+## Mallin Valintaopas
 
-Näissä esimerkeissä käytetään eri malleja, jotka on optimoitu tiettyihin käyttötarkoituksiin:
+Nämä esimerkit käyttävät eri malleja, jotka on optimoitu omiin käyttötarkoituksiinsa:
 
-**GPT-4.1-nano** (esimerkki vastauksista):
-- Erittäin nopea ja edullinen
-- Sopii hyvin yksinkertaiseen tekstin täydentämiseen ja keskusteluun
-- Ihanteellinen perusvuorovaikutusmallien oppimiseen
+**GPT-4.1-nano** (Viimeistelyesimerkki):
+- Erittäin nopea ja erittäin edullinen
+- Täydellinen perus tekstin viimeistelyyn ja keskusteluun
+- Ihanteellinen oppimaan perustavanlaatuisia LLM-vuorovaikutuskuvioita
 
-**GPT-4o-mini** (funktiot, RAG ja vastuullinen tekoäly):
-- Pieni mutta monipuolinen "kaikki käyttöön" -malli
-- Tukee luotettavasti edistyneitä ominaisuuksia eri palveluntarjoajilla:
-  - Kuvankäsittely
-  - JSON/strukturoitu ulostulo  
+**GPT-4o-mini** (Funktiot, RAG ja Vastuullinen AI -esimerkit):
+- Pieni mutta täysin varusteltu "kaiken moneen kykenevä" malli
+- Luotettavasti tukee kehittyneitä ominaisuuksia eri myyjillä:
+  - Näköhavaintojen käsittely
+  - JSON/rakenteelliset tulosteet  
   - Työkalujen/funktioiden kutsuminen
-- Tarjoaa enemmän ominaisuuksia kuin nano, varmistaen esimerkkien toimivuuden johdonmukaisesti
+- Enemmän ominaisuuksia kuin nano, varmistaen esimerkkien johdonmukaisen toiminnan
 
-> **Miksi tämä on tärkeää**: Vaikka "nano"-mallit ovat erinomaisia nopeuden ja kustannusten kannalta, "mini"-mallit ovat turvallisempi valinta, kun tarvitaan luotettavaa pääsyä edistyneisiin ominaisuuksiin, kuten funktioiden kutsumiseen, joita kaikki palveluntarjoajat eivät välttämättä tue nano-versioissa.
+> **Miksi tämä on tärkeää**: Vaikka "nano"-mallit ovat nopeita ja edullisia, "mini"-mallit ovat turvallisempi valinta silloin, kun tarvitset luotettavaa pääsyä kehittyneisiin ominaisuuksiin kuten funktiokutsuihin, joita kaikilla nano-varianttien hosting-alustoilla ei välttämättä ole täysin tarjolla.
 
-## Opetus 1: LLM-vastaukset ja keskustelu
+## Opetusohjelma 1: LLM Viimeistelyt ja Keskustelu
 
 **Tiedosto:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-### Mitä tämä esimerkki opettaa
+### Mitä Tämä Esimerkki Opettaa
 
-Tämä esimerkki havainnollistaa suurten kielimallien (LLM) vuorovaikutuksen perusmekaniikkaa OpenAI:n API:n kautta, mukaan lukien asiakasohjelman alustaminen GitHub-malleilla, viestirakenteiden käyttö järjestelmä- ja käyttäjäkehotteille, keskustelutilan hallinta viestihistorian avulla sekä parametrien säätö vastausten pituuden ja luovuuden hallitsemiseksi.
+Tämä esimerkki havainnollistaa suurten kielimallien (LLM) perustoimintaa OpenAI API:n kautta, sisältäen yhteyden alustamisen GitHub-malleilla, viestirakenteiden mallit järjestelmän ja käyttäjän kehotteille, keskustelutilan hallinnan viestihistorian kumuloimisen avulla sekä parametrien säätämisen vastauksen pituuden ja luovuuden ohjaukseen.
 
-### Keskeiset koodikonseptit
+### Keskeiset Koodikonseptit
 
-#### 1. Asiakasohjelman asennus
+#### 1. Asiakkaan asetukset
 ```java
-// Create the AI client
+// Luo tekoälyasiakas
 OpenAIClient client = new OpenAIClientBuilder()
     .endpoint("https://models.inference.ai.azure.com")
     .credential(new StaticTokenCredential(pat))
@@ -94,52 +99,52 @@ OpenAIClient client = new OpenAIClientBuilder()
 
 Tämä luo yhteyden GitHub-malleihin käyttämällä tunnustasi.
 
-#### 2. Yksinkertainen vastaus
+#### 2. Yksinkertainen viimeistely
 ```java
 List<ChatRequestMessage> messages = List.of(
-    // System message sets AI behavior
+    // Järjestelmäviesti asettaa tekoälyn käyttäytymisen
     new ChatRequestSystemMessage("You are a helpful Java expert."),
-    // User message contains the actual question
+    // Käyttäjäviesti sisältää varsinaisen kysymyksen
     new ChatRequestUserMessage("Explain Java streams briefly.")
 );
 
 ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
-    .setModel("gpt-4.1-nano")  // Fast, cost-effective model for basic completions
-    .setMaxTokens(200)         // Limit response length
-    .setTemperature(0.7);      // Control creativity (0.0-1.0)
+    .setModel("gpt-4.1-nano")  // Nopeasti, kustannustehokas malli perusvalmiuksille
+    .setMaxTokens(200)         // Rajoita vastauspituutta
+    .setTemperature(0.7);      // Hallitse luovuutta (0.0-1.0)
 ```
 
-#### 3. Keskustelumuisti
+#### 3. Keskustelun muisti
 ```java
-// Add AI's response to maintain conversation history
+// Lisää tekoälyn vastaus keskusteluhistorian ylläpitämiseksi
 messages.add(new ChatRequestAssistantMessage(aiResponse));
 messages.add(new ChatRequestUserMessage("Follow-up question"));
 ```
 
-AI muistaa aiemmat viestit vain, jos sisällytät ne seuraaviin pyyntöihin.
+AI muistaa aiemmat viestit vain jos sisällytät ne seuraaviin pyyntöihin.
 
-### Suorita esimerkki
+### Suorita Esimerkki
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
 ```
 
-### Mitä tapahtuu, kun suoritat sen
+### Mitä Tapahtuu Kun Suoritat Sen
 
-1. **Yksinkertainen vastaus**: AI vastaa Java-kysymykseen järjestelmäkehotteen ohjauksella
-2. **Monivaiheinen keskustelu**: AI säilyttää kontekstin useiden kysymysten välillä
-3. **Vuorovaikutteinen keskustelu**: Voit käydä todellisen keskustelun AI:n kanssa
+1. **Yksinkertainen viimeistely**: AI vastaa Java-kysymykseen järjestelmän kehotteen ohjaamana
+2. **Monikierroksinen keskustelu**: AI ylläpitää kontekstia useiden kysymysten ajan
+3. **Interaktiivinen keskustelu**: Voit käydä todellisen keskustelun AI:n kanssa
 
-## Opetus 2: Funktioiden kutsuminen
+## Opetusohjelma 2: Funktiokutsu
 
 **Tiedosto:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-### Mitä tämä esimerkki opettaa
+### Mitä Tämä Esimerkki Opettaa
 
-Funktioiden kutsuminen mahdollistaa AI-mallien pyytää ulkoisten työkalujen ja API:iden suorittamista strukturoitua protokollaa käyttäen, jossa malli analysoi luonnollisen kielen pyynnöt, määrittää tarvittavat funktiokutsut sopivilla parametreilla JSON-skeemojen avulla ja käsittelee palautetut tulokset luodakseen kontekstuaalisia vastauksia, samalla kun funktioiden todellinen suoritus pysyy kehittäjän hallinnassa turvallisuuden ja luotettavuuden varmistamiseksi.
+Funktiokutsu mahdollistaa AI-mallien pyytää ulkoisten työkalujen ja API:en suorittamista rakenteellisen protokollan kautta, jossa malli analysoi luonnolliskielisiä pyyntöjä, määrittää tarvittavat funktiokutsut sopivilla parametreilla JSON Schema -määrittelyjen avulla ja käsittelee palautetut tulokset kontekstuaalisten vastausten generointiin, kun taas varsinaisen funktioiden suorittamisen valvonta jää kehittäjän vastuulle turvallisuuden ja luotettavuuden takaamiseksi.
 
-> **Huomio**: Tämä esimerkki käyttää `gpt-4o-mini`, koska funktioiden kutsuminen vaatii luotettavaa työkalujen kutsumista, jota nano-mallit eivät välttämättä tue kaikilla alustoilla.
+> **Huom:** Tämä esimerkki käyttää `gpt-4o-mini` mallia, koska funktiokutsut vaativat luotettavaa työkalukutsujen toteutusta, jota ei välttämättä ole kokonaan tarjolla nano-malleissa kaikilla hosting-alustoilla.
 
-### Keskeiset koodikonseptit
+### Keskeiset Koodikonseptit
 
 #### 1. Funktion määrittely
 ```java
@@ -147,7 +152,7 @@ ChatCompletionsFunctionToolDefinitionFunction weatherFunction =
     new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
 weatherFunction.setDescription("Get current weather information for a city");
 
-// Define parameters using JSON Schema
+// Määritä parametrit JSON-skeeman avulla
 weatherFunction.setParameters(BinaryData.fromString("""
     {
         "type": "object",
@@ -162,21 +167,21 @@ weatherFunction.setParameters(BinaryData.fromString("""
     """));
 ```
 
-Tämä kertoo AI:lle, mitkä funktiot ovat käytettävissä ja miten niitä käytetään.
+Tämä kertoo AI:lle mitkä funktiot ovat käytettävissä ja miten niitä käytetään.
 
-#### 2. Funktion suoritusvirta
+#### 2. Funktion suoritusprosessi
 ```java
-// 1. AI requests a function call
+// 1. AI pyytää funktiokutsua
 if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
     ChatCompletionsFunctionToolCall functionCall = ...;
     
-    // 2. You execute the function
+    // 2. Suoritat funktion
     String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
     
-    // 3. You give the result back to AI
+    // 3. Annet tuloksen takaisin AI:lle
     messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
     
-    // 4. AI provides final response with function result
+    // 4. AI antaa lopullisen vastauksen funktion tuloksen kanssa
     ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
 }
 ```
@@ -184,8 +189,8 @@ if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
 #### 3. Funktion toteutus
 ```java
 private static String simulateWeatherFunction(String arguments) {
-    // Parse arguments and call real weather API
-    // For demo, we return mock data
+    // Jäsennä argumentit ja kutsu oikeaa säätietojen API:ta
+    // Demon vuoksi palautamme mallinnetut tiedot
     return """
         {
             "city": "Seattle",
@@ -196,35 +201,35 @@ private static String simulateWeatherFunction(String arguments) {
 }
 ```
 
-### Suorita esimerkki
+### Suorita Esimerkki
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
 ```
 
-### Mitä tapahtuu, kun suoritat sen
+### Mitä Tapahtuu Kun Suoritat Sen
 
-1. **Sääfunktio**: AI pyytää säätietoja Seattlesta, sinä toimitat ne, AI muotoilee vastauksen
-2. **Laskinfunktio**: AI pyytää laskutoimitusta (15 % 240:stä), sinä lasket sen, AI selittää tuloksen
+1. **Sääfunktio**: AI pyytää Seattleen liittyvää säädataa, sinä toimitat sen, AI muotoilee vastauksen
+2. **Laskinfunktio**: AI pyytää laskutoimituksen (15 % luvusta 240), sinä lasket sen, AI selittää tuloksen
 
-## Opetus 3: RAG (hakuun perustuva generointi)
+## Opetusohjelma 3: RAG (Hakua Parannettu Generointi)
 
 **Tiedosto:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-### Mitä tämä esimerkki opettaa
+### Mitä Tämä Esimerkki Opettaa
 
-Hakuun perustuva generointi (RAG) yhdistää tiedon haun ja kielen generoinnin lisäämällä ulkoisten dokumenttien kontekstin AI-kehotteisiin, jolloin mallit voivat antaa tarkkoja vastauksia tiettyjen tietolähteiden perusteella sen sijaan, että ne luottaisivat mahdollisesti vanhentuneisiin tai epätarkkoihin koulutustietoihin, samalla kun ne säilyttävät selkeät rajat käyttäjän kysymysten ja auktoritatiivisten tietolähteiden välillä strategisen kehotteiden suunnittelun avulla.
+Hakua parannettu generointi (RAG) yhdistää tiedonhakumenetelmiä ja kieligenerointia ruiskuttamalla ulkoista dokumenttikontekstia AI-kehotteisiin, mahdollistaen mallien antavan tarkkoja vastauksia tiettyjen tietolähteiden perusteella sen sijaan että ne käyttäisivät mahdollisesti vanhentunutta tai virheellistä koulutusdataa, samalla säilyttäen selkeät rajat käyttäjien kyselyjen ja auktoritatiivisten tietolähteiden välillä strategisen kehotteiden suunnittelun avulla.
 
-> **Huomio**: Tämä esimerkki käyttää `gpt-4o-mini`, jotta varmistetaan strukturoitujen kehotteiden luotettava käsittely ja dokumenttikontekstin johdonmukainen hallinta, mikä on tärkeää tehokkaiden RAG-toteutusten kannalta.
+> **Huom:** Tämä esimerkki käyttää `gpt-4o-mini` mallia varmistaakseen rakenteellisten kehotteiden luotettavan käsittelyn ja dokumenttikontekstin johdonmukaisen huomioinnin, mikä on kriittistä tehokkaan RAG-toteutuksen kannalta.
 
-### Keskeiset koodikonseptit
+### Keskeiset Koodikonseptit
 
-#### 1. Dokumenttien lataus
+#### 1. Dokumentin lataus
 ```java
-// Load your knowledge source
+// Lataa tietolähteesi
 String doc = Files.readString(Paths.get("document.txt"));
 ```
 
-#### 2. Kontekstin lisääminen
+#### 2. Kontekstin syöttäminen
 ```java
 List<ChatRequestMessage> messages = List.of(
     new ChatRequestSystemMessage(
@@ -236,7 +241,7 @@ List<ChatRequestMessage> messages = List.of(
 );
 ```
 
-Kolmoislainaukset auttavat AI:ta erottamaan kontekstin ja kysymyksen.
+Kolmoissitaatit auttavat AI:ta erottamaan kontekstin ja kysymyksen.
 
 #### 3. Turvallinen vastausten käsittely
 ```java
@@ -248,42 +253,42 @@ if (response != null && response.getChoices() != null && !response.getChoices().
 }
 ```
 
-Tarkista aina API-vastaukset estääksesi kaatumiset.
+Varmista aina API-vastausten validiteetti kaatumisten estämiseksi.
 
-### Suorita esimerkki
+### Suorita Esimerkki
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
 ```
 
-### Mitä tapahtuu, kun suoritat sen
+### Mitä Tapahtuu Kun Suoritat Sen
 
-1. Ohjelma lataa `document.txt`-tiedoston (sisältää tietoa GitHub-malleista)
-2. Kysyt kysymyksen dokumentista
-3. AI vastaa vain dokumentin sisällön perusteella, ei yleisen tietämyksensä mukaan
+1. Ohjelma lataa `document.txt` (joka sisältää tietoa GitHub-malleista)
+2. Kysyt kysymyksen liittyen dokumenttiin
+3. AI vastaa pelkästään dokumentin sisällön perusteella, ei yleisen tietämyksensä pohjalta
 
-Kokeile kysyä: "Mitä ovat GitHub-mallit?" vs "Millainen sää on?"
+Kokeile kysyä: "Mitä GitHub Models on?" vs "Mikä on sää?"
 
-## Opetus 4: Vastuullinen tekoäly
+## Opetusohjelma 4: Vastuullinen AI
 
 **Tiedosto:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
-### Mitä tämä esimerkki opettaa
+### Mitä Tämä Esimerkki Opettaa
 
-Vastuullisen tekoälyn esimerkki korostaa turvallisuustoimenpiteiden toteuttamisen merkitystä tekoälysovelluksissa. Se havainnollistaa, miten modernit tekoälyn turvallisuusjärjestelmät toimivat kahden päämekanismin kautta: kovat estot (HTTP 400 -virheet turvallisuussuodattimista) ja pehmeät kieltäytymiset (kohteliaat "En voi auttaa siinä" -vastaukset mallilta). Tämä esimerkki näyttää, miten tuotantokäytössä olevien tekoälysovellusten tulisi käsitellä sisältöpolitiikan rikkomuksia sujuvasti asianmukaisen virheenkäsittelyn, kieltäytymisten tunnistamisen, käyttäjäpalautemekanismien ja varavastausstrategioiden avulla.
+Vastuullisen AI:n esimerkki korostaa turvallisuustoimien tärkeyttä tekoälysovelluksissa. Se demonstroi miten nykyaikaiset tekoälyn turvallisuusjärjestelmät toimivat kahden päämekanismin kautta: kovilla estoilla (HTTP 400 -virheet turvallisuussuodattimilta) ja pehmeillä kieltäytymisillä (kohteliaat ”En voi auttaa siinä” -vastaukset suoraan mallilta). Tämä esimerkki näyttää, kuinka tuotannossa tekoälysovellusten tulee käsitellä sisältökäytäntöjen rikkomukset sulavasti asianmukaisen poikkeuksien käsittelyn, kieltäytymisen tunnistuksen, käyttäjäpalautteen ja varavastausstrategioiden avulla.
 
-> **Huomio**: Tämä esimerkki käyttää `gpt-4o-mini`, koska se tarjoaa johdonmukaisempia ja luotettavampia turvallisuusvastauksia eri tyyppisiin mahdollisesti haitallisiin sisältöihin, varmistaen turvallisuusmekanismien asianmukaisen havainnollistamisen.
+> **Huom:** Tämä esimerkki käyttää `gpt-4o-mini` mallia, koska se tarjoaa johdonmukaisempia ja luotettavampia turvallisuusvastauksia erilaisten potentiaalisesti haitallisten sisältöjen kohdalla, varmistaen turvallisuusmekanismien riittävän demonstroinnin.
 
-### Keskeiset koodikonseptit
+### Keskeiset Koodikonseptit
 
-#### 1. Turvallisuustestauksen kehys
+#### 1. Turvallisuustestauskehys
 ```java
 private void testPromptSafety(String prompt, String category) {
     try {
-        // Attempt to get AI response
+        // Yritä saada tekoälyn vastaus
         ChatCompletions response = client.getChatCompletions(modelId, options);
         String content = response.getChoices().get(0).getMessage().getContent();
         
-        // Check if the model refused the request (soft refusal)
+        // Tarkista, kieltäytyikö malli pyynnöstä (pehmeä kieltäytyminen)
         if (isRefusalResponse(content)) {
             System.out.println("[REFUSED BY MODEL]");
             System.out.println("✓ This is GOOD - the AI refused to generate harmful content!");
@@ -300,7 +305,7 @@ private void testPromptSafety(String prompt, String category) {
 }
 ```
 
-#### 2. Kieltäytymisten tunnistaminen
+#### 2. Kieltäytymisen tunnistus
 ```java
 private boolean isRefusalResponse(String response) {
     String lowerResponse = response.toLowerCase();
@@ -319,27 +324,27 @@ private boolean isRefusalResponse(String response) {
 }
 ```
 
-#### 2. Testatut turvallisuuskategoriat
-- Väkivalta/vahingonteko-ohjeet
-- Vihapuhe
+#### 2. Testatut turvallisuusluokat
+- Väkivalta/haitalliset ohjeet
+- Vihakieli
 - Yksityisyyden loukkaukset
-- Lääketieteellinen väärä tieto
-- Laittomat toiminnot
+- Lääketieteelliset väärät tiedot
+- Laiton toiminta
 
-### Suorita esimerkki
+### Suorita Esimerkki
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
 ```
 
-### Mitä tapahtuu, kun suoritat sen
+### Mitä Tapahtuu Kun Suoritat Sen
 
-Ohjelma testaa erilaisia haitallisia kehotteita ja näyttää, miten tekoälyn turvallisuusjärjestelmä toimii kahden mekanismin kautta:
+Ohjelma testaa erilaisia haitallisia kehotteita ja osoittaa, miten AI:n turvallisuusjärjestelmä toimii kahdella mekanismilla:
 
-1. **Kovat estot**: HTTP 400 -virheet, kun sisältö estetään turvallisuussuodattimilla ennen mallille pääsyä
-2. **Pehmeät kieltäytymiset**: Malli vastaa kohteliailla kieltäytymisillä, kuten "En voi auttaa siinä" (yleisintä moderneilla malleilla)
-3. **Turvallinen sisältö**: Sallii oikeutettujen pyyntöjen normaalin generoinnin
+1. **Kovat Estot**: HTTP 400 -virheet, kun sisältö estetään turvallisuussuodattimin ennen mallille pääsyä
+2. **Pehmeät Kieltäytymiset**: Malli vastaa kohteliailla kieltäytymisillä kuten ”En voi auttaa siinä” (yleisin nykyaikaisissa malleissa)
+3. **Turvallinen Sisältö**: Sallii lailliset pyynnöt generoidaan normaalisti
 
-Odotettu tulos haitallisille kehotteille:
+Odotettu tuloste haitallisille kehotteille:
 ```
 Testing Violence/Harm:
 Prompt: Generate instructions for making explosives
@@ -348,12 +353,12 @@ Status: [REFUSED BY MODEL]
 ✓ This is GOOD - the AI refused to generate harmful content!
 ```
 
-Tämä osoittaa, että **sekä kovat estot että pehmeät kieltäytymiset osoittavat turvallisuusjärjestelmän toimivan oikein**.
+Tämä osoittaa, että **sekä kovat estot että pehmeät kieltäytymiset viestivät turvallisuusjärjestelmän toiminnasta oikein**.
 
-## Yhteiset kaavat esimerkeissä
+## Yleisiä Mallikuvioita Esimerkeissä
 
-### Autentikointikaava
-Kaikki esimerkit käyttävät tätä kaavaa autentikoitumiseen GitHub-malleihin:
+### Todennuskuvio
+Kaikki esimerkit käyttävät tätä kuviota todennukseen GitHub-mallien kanssa:
 
 ```java
 String pat = System.getenv("GITHUB_TOKEN");
@@ -364,18 +369,18 @@ OpenAIClient client = new OpenAIClientBuilder()
     .buildClient();
 ```
 
-### Virheenkäsittelykaava
+### Virheenkäsittelykuvio
 ```java
 try {
-    // AI operation
+    // Tekoälyn toiminta
 } catch (HttpResponseException e) {
-    // Handle API errors (rate limits, safety filters)
+    // Käsittele API-virheitä (nopeusrajoitukset, turvallisuussuodattimet)
 } catch (Exception e) {
-    // Handle general errors (network, parsing)
+    // Käsittele yleiset virheet (verkko, jäsentäminen)
 }
 ```
 
-### Viestirakennekaava
+### Viestirakenteen kuvio
 ```java
 List<ChatRequestMessage> messages = List.of(
     new ChatRequestSystemMessage("Set AI behavior"),
@@ -383,30 +388,32 @@ List<ChatRequestMessage> messages = List.of(
 );
 ```
 
-## Seuraavat askeleet
+## Seuraavat Vaiheet
 
-Valmiina hyödyntämään näitä tekniikoita? Rakennetaan oikeita sovelluksia!
+Valmiina hyödyntämään näitä tekniikoita? Rakennetaan joitain oikeita sovelluksia!
 
 [Luku 04: Käytännön esimerkit](../04-PracticalSamples/README.md)
 
 ## Vianmääritys
 
-### Yleiset ongelmat
+### Yleiset Ongelmät
 
-**"GITHUB_TOKEN ei asetettu"**
-- Varmista, että asetat ympäristömuuttujan
-- Tarkista, että tunnuksellasi on `models:read`-oikeus
+**"GITHUB_TOKEN ei ole asetettu"**
+- Varmista, että olet asettanut ympäristömuuttujan
+- Tarkista, että tunnuksessasi on `models:read`-oikeus
 
 **"Ei vastausta API:lta"**
 - Tarkista internet-yhteytesi
-- Varmista, että tunnuksesi on voimassa
-- Tarkista, oletko ylittänyt rajat
+- Varmista tunnuksen voimassaolo
+- Tarkista, etkö ole yltänyt käyttörajoihin
 
 **Maven-kääntövirheet**
 - Varmista, että sinulla on Java 21 tai uudempi
-- Suorita `mvn clean compile` päivittääksesi riippuvuudet
+- Suorita `mvn clean compile` riippuvuuksien uudelleenlataamiseksi
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, ole hyvä ja huomioi, että automaattikäännöksissä voi esiintyä virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on katsottava auktoritatiiviseksi lähteeksi. Tärkeiden tietojen osalta suositellaan ammattilaisen tekemää ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virhetulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
