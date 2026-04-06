@@ -1,56 +1,64 @@
 # Practical Applications & Projects
 
+[![Practical Applications & Projects](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Practical Applications & Projects")
+
+> **Video overview:** [Watch "Practical Applications & Projects" on YouTube](https://www.youtube.com/watch?v=01vJsYei3H0).
+
 ## What You'll Learn
-In this section, we’ll explore three practical applications that highlight generative AI development patterns with Java:
-- Build a multi-modal Pet Story Generator combining client-side and server-side AI
-- Integrate local AI models using the Foundry Local Spring Boot demo
-- Create a Model Context Protocol (MCP) service with the Calculator example
+In this section we'll demo three practical applications that showcase generative AI development patterns with Java:
+- Create a multi-modal Pet Story Generator combining client-side and server-side AI
+- Implement local AI model integration with the Foundry Local Spring Boot demo
+- Develop a Model Context Protocol (MCP) service with the Calculator example
 
 ## Table of Contents
 
-- [Introduction](../../../04-PracticalSamples)
-  - [Foundry Local Spring Boot Demo](../../../04-PracticalSamples)
-  - [Pet Story Generator](../../../04-PracticalSamples)
-  - [MCP Calculator Service (Beginner-Friendly MCP Demo)](../../../04-PracticalSamples)
-- [Learning Progression](../../../04-PracticalSamples)
-- [Summary](../../../04-PracticalSamples)
-- [Next Steps](../../../04-PracticalSamples)
+- [Introduction](#introduction)
+  - [Foundry Local Spring Boot Demo](#foundry-local-spring-boot-demo)
+  - [Pet Story Generator](#pet-story-generator)
+  - [MCP Calculator Service (Beginner-Friendly MCP Demo)](#mcp-calculator-service-beginner-friendly-mcp-demo)
+- [Learning Progression](#learning-progression)
+- [Summary](#summary)
+- [Next Steps](#next-steps)
 
 ## Introduction
 
-This chapter presents **sample projects** that illustrate generative AI development patterns with Java. Each project is fully functional and demonstrates specific AI technologies, architectural patterns, and best practices that you can adapt for your own applications.
+This chapter showcases **sample projects** that demonstrate generative AI development patterns with Java. Each project is fully functional and demonstrates specific AI technologies, architectural patterns, and best practices that you can adapt for your own applications.
 
 ### Foundry Local Spring Boot Demo
 
-The **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** shows how to integrate with local AI models using the **OpenAI Java SDK**. It demonstrates connecting to the **Phi-3.5-mini** model running on Foundry Local, enabling you to run AI applications without relying on cloud services.
+The **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** demonstrates how to integrate with local AI models using the **OpenAI Java SDK**. It showcases connecting to the **Phi-3.5-mini** model running on Foundry Local, allowing you to run AI applications without relying on cloud services.
 
 ### Pet Story Generator
 
-The **[Pet Story Generator](petstory/README.md)** is an interactive Spring Boot web application that demonstrates **multi-modal AI processing** to create imaginative pet stories. It combines client-side and server-side AI capabilities using transformer.js for browser-based AI interactions and the OpenAI SDK for server-side processing.
+The **[Pet Story Generator](petstory/README.md)** is an engaging Spring Boot web application that demonstrates **multi-modal AI processing** to generate creative pet stories. It combines client-side and server-side AI capabilities using transformer.js for browser-based AI interactions and the OpenAI SDK for server-side processing.
 
 ### MCP Calculator Service (Beginner-Friendly MCP Demo)
 
-The **[MCP Calculator Service](calculator/README.md)** is a straightforward demonstration of the **Model Context Protocol (MCP)** using Spring AI. It provides an easy introduction to MCP concepts, showing how to build a basic MCP Server that interacts with MCP clients.
+The **[MCP Calculator Service](calculator/README.md)** is a simple demonstration of the **Model Context Protocol (MCP)** using Spring AI. It provides a beginner-friendly introduction to MCP concepts, showing how to create a basic MCP Server that interacts with MCP clients.
 
 ## Learning Progression
 
-These projects are designed to build on concepts from earlier chapters:
+These projects are designed to build upon concepts from previous chapters:
 
-1. **Start Simple**: Begin with the Foundry Local Spring Boot Demo to learn basic AI integration with local models
-2. **Add Interactivity**: Move on to the Pet Story Generator for multi-modal AI and web-based interactions
-3. **Learn MCP Basics**: Try the MCP Calculator Service to understand the fundamentals of the Model Context Protocol
+1. **Start Simple**: Begin with the Foundry Local Spring Boot Demo to understand basic AI integration with local models
+2. **Add Interactivity**: Progress to the Pet Story Generator for multi-modal AI and web-based interactions
+3. **Learn MCP Basics**: Try the MCP Calculator Service to understand Model Context Protocol fundamentals
 
 ## Summary
 
-Great job! You’ve now explored some real-world applications:
+Nice work! You've now explored some real applications:
 
-- Multi-modal AI experiences that function both in the browser and on the server
-- Integration of local AI models using modern Java frameworks and SDKs
-- Your first Model Context Protocol service to see how tools interact with AI
+- Multi-modal AI experiences that work both in the browser and on the server
+- Local AI model integration using modern Java frameworks and SDKs
+- Your first Model Context Protocol service to see how tools integrate with AI
 
 ## Next Steps
 
 [Chapter 5: Responsible Generative AI](../05-ResponsibleGenAI/README.md)
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
