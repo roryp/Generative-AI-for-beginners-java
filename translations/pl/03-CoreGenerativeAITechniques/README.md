@@ -1,37 +1,42 @@
-# Podstawowe Techniki Generatywnej AI - Tutorial
+# Podstawowy samouczek technik generatywnej sztucznej inteligencji
 
-## Spis Treści
+[![Podstawowe techniki generatywnej SI](https://img.youtube.com/vi/ZUgN6gTjlPE/0.jpg)](https://www.youtube.com/watch?v=ZUgN6gTjlPE "Podstawowe techniki generatywnej SI")
 
-- [Wymagania wstępne](../../../03-CoreGenerativeAITechniques)
-- [Pierwsze kroki](../../../03-CoreGenerativeAITechniques)
-  - [Krok 1: Ustaw zmienną środowiskową](../../../03-CoreGenerativeAITechniques)
-  - [Krok 2: Przejdź do katalogu z przykładami](../../../03-CoreGenerativeAITechniques)
-- [Przewodnik po wyborze modelu](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 1: Uzupełnienia LLM i Chat](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 2: Wywoływanie funkcji](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 3: RAG (Generacja wspomagana wyszukiwaniem)](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 4: Odpowiedzialna AI](../../../03-CoreGenerativeAITechniques)
-- [Wspólne wzorce w przykładach](../../../03-CoreGenerativeAITechniques)
-- [Kolejne kroki](../../../03-CoreGenerativeAITechniques)
-- [Rozwiązywanie problemów](../../../03-CoreGenerativeAITechniques)
-  - [Typowe problemy](../../../03-CoreGenerativeAITechniques)
+> **Przegląd wideo:** [Obejrzyj "Podstawowe techniki generatywnej SI" na YouTube](https://www.youtube.com/watch?v=ZUgN6gTjlPE) lub kliknij miniaturkę powyżej.
+
+## Spis treści
+
+- [Wymagania wstępne](#wymagania-wstępne)
+- [Rozpoczęcie pracy](#rozpoczęcie-pracy)
+  - [Krok 1: Ustaw zmienną środowiskową](#krok-1-ustaw-zmienną-środowiskową)
+  - [Krok 2: Przejdź do katalogu z przykładami](#krok-2-przejdź-do-katalogu-z-przykładami)
+- [Przewodnik po wyborze modeli](#przewodnik-po-wyborze-modeli)
+- [Samouczek 1: Uzupełnienia LLM i czat](#samouczek-1-uzupełnienia-i-czat-llm)
+- [Samouczek 2: Wywoływanie funkcji](#samouczek-2-wywoływanie-funkcji)
+- [Samouczek 3: RAG (Generowanie wspomagane wyszukiwaniem)](#samouczek-3-rag-generowanie-wspomagane-wyszukiwaniem)
+- [Samouczek 4: Odpowiedzialna SI](#samouczek-4-odpowiedzialna-si)
+- [Typowe wzorce we wszystkich przykładach](#typowe-wzorce-we-wszystkich-przykładach)
+- [Kolejne kroki](#kolejne-kroki)
+- [Rozwiązywanie problemów](#rozwiązywanie-problemów)
+  - [Typowe problemy](#typowe-problemy)
+
 
 ## Przegląd
 
-Ten tutorial zawiera praktyczne przykłady podstawowych technik generatywnej AI z użyciem Javy i modeli GitHub. Nauczysz się, jak pracować z dużymi modelami językowymi (LLM), implementować wywoływanie funkcji, korzystać z generacji wspomaganej wyszukiwaniem (RAG) oraz stosować praktyki odpowiedzialnej AI.
+Ten samouczek dostarcza praktyczne przykłady podstawowych technik generatywnej sztucznej inteligencji z użyciem Javy i modeli GitHub. Nauczysz się jak komunikować się z dużymi modelami językowymi (LLM), implementować wywoływanie funkcji, korzystać z generowania wspomaganego wyszukiwaniem (RAG) oraz stosować odpowiedzialne praktyki SI.
 
 ## Wymagania wstępne
 
 Przed rozpoczęciem upewnij się, że masz:
-- Zainstalowaną Javę w wersji 21 lub wyższej
+- Zainstalowaną Javę 21 lub nowszą
 - Maven do zarządzania zależnościami
-- Konto GitHub z tokenem dostępu osobistego (PAT)
+- Konto na GitHub z tokenem dostępu osobistego (PAT)
 
-## Pierwsze kroki
+## Rozpoczęcie pracy
 
 ### Krok 1: Ustaw zmienną środowiskową
 
-Najpierw musisz ustawić swój token GitHub jako zmienną środowiskową. Token ten umożliwia dostęp do modeli GitHub za darmo.
+Najpierw musisz ustawić swój token GitHub jako zmienną środowiskową. Token ten pozwala na darmowy dostęp do modeli GitHub.
 
 **Windows (Command Prompt):**
 ```cmd
@@ -54,90 +59,90 @@ export GITHUB_TOKEN=your_github_token_here
 cd 03-CoreGenerativeAITechniques/examples/
 ```
 
-## Przewodnik po wyborze modelu
+## Przewodnik po wyborze modeli
 
-Przykłady wykorzystują różne modele zoptymalizowane pod kątem ich specyficznych zastosowań:
+Te przykłady używają różnych modeli zoptymalizowanych pod kątem ich konkretnych zastosowań:
 
-**GPT-4.1-nano** (Przykład uzupełnień):
-- Bardzo szybki i tani
-- Idealny do podstawowych uzupełnień tekstu i chatu
+**GPT-4.1-nano** (przykład uzupełnień):
+- Ultra szybki i bardzo tani
+- Idealny do podstawowego uzupełniania tekstu i czatu
 - Doskonały do nauki podstawowych wzorców interakcji z LLM
 
-**GPT-4o-mini** (Przykłady funkcji, RAG i odpowiedzialnej AI):
-- Mały, ale wszechstronny model "do wszystkiego"
+**GPT-4o-mini** (przykłady funkcji, RAG i odpowiedzialnej SI):
+- Mały, ale w pełni funkcjonalny „omni pracownik”
 - Niezawodnie obsługuje zaawansowane funkcje u różnych dostawców:
   - Przetwarzanie obrazu
-  - Wyjścia w formacie JSON/strukturalnym
+  - Wyjścia JSON/strukturalne  
   - Wywoływanie narzędzi/funkcji
-- Więcej możliwości niż nano, zapewniając spójność działania zaawansowanych funkcji
+- Więcej możliwości niż nano, zapewniając spójne działanie przykładów
 
-> **Dlaczego to ważne**: Modele "nano" są świetne pod względem szybkości i kosztów, ale modele "mini" są bezpieczniejszym wyborem, gdy potrzebujesz niezawodnego dostępu do zaawansowanych funkcji, takich jak wywoływanie funkcji, które mogą nie być w pełni dostępne u wszystkich dostawców dla wariantów nano.
+> **Dlaczego to ważne**: Modele „nano” są świetne pod względem szybkości i kosztów, ale modele „mini” są bezpieczniejszym wyborem, gdy potrzebujesz niezawodnego dostępu do zaawansowanych funkcji, takich jak wywoływanie funkcji, które mogą nie być w pełni dostępne u wszystkich dostawców dla wariantów nano.
 
-## Tutorial 1: Uzupełnienia LLM i Chat
+## Samouczek 1: Uzupełnienia i czat LLM
 
 **Plik:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
 ### Czego uczy ten przykład
 
-Ten przykład pokazuje podstawowe mechanizmy interakcji z dużymi modelami językowymi (LLM) za pomocą API OpenAI, w tym inicjalizację klienta z modelami GitHub, wzorce struktury wiadomości dla systemowych i użytkowych promptów, zarządzanie stanem rozmowy poprzez akumulację historii wiadomości oraz dostrajanie parametrów w celu kontrolowania długości odpowiedzi i poziomu kreatywności.
+Ten przykład demonstruje podstawowe mechanizmy interakcji z dużym modelem językowym (LLM) przez API OpenAI, w tym inicjalizację klienta z modelami GitHub, wzorce struktury wiadomości dla promptów systemowych i użytkownika, zarządzanie stanem rozmowy przez akumulację historii wiadomości oraz dostrajanie parametrów kontrolujących długość odpowiedzi i poziom kreatywności.
 
 ### Kluczowe koncepcje kodu
 
 #### 1. Konfiguracja klienta
 ```java
-// Create the AI client
+// Utwórz klienta AI
 OpenAIClient client = new OpenAIClientBuilder()
     .endpoint("https://models.inference.ai.azure.com")
     .credential(new StaticTokenCredential(pat))
     .buildClient();
 ```
 
-Tworzy połączenie z modelami GitHub za pomocą Twojego tokena.
+To tworzy połączenie z modelami GitHub za pomocą twojego tokena.
 
 #### 2. Proste uzupełnienie
 ```java
 List<ChatRequestMessage> messages = List.of(
-    // System message sets AI behavior
+    // Wiadomość systemowa ustawia zachowanie AI
     new ChatRequestSystemMessage("You are a helpful Java expert."),
-    // User message contains the actual question
+    // Wiadomość użytkownika zawiera właściwe pytanie
     new ChatRequestUserMessage("Explain Java streams briefly.")
 );
 
 ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
-    .setModel("gpt-4.1-nano")  // Fast, cost-effective model for basic completions
-    .setMaxTokens(200)         // Limit response length
-    .setTemperature(0.7);      // Control creativity (0.0-1.0)
+    .setModel("gpt-4.1-nano")  // Szybki, ekonomiczny model do podstawowych uzupełnień
+    .setMaxTokens(200)         // Ogranicz długość odpowiedzi
+    .setTemperature(0.7);      // Kontroluj kreatywność (0.0-1.0)
 ```
 
 #### 3. Pamięć rozmowy
 ```java
-// Add AI's response to maintain conversation history
+// Dodaj odpowiedź AI, aby utrzymać historię rozmowy
 messages.add(new ChatRequestAssistantMessage(aiResponse));
 messages.add(new ChatRequestUserMessage("Follow-up question"));
 ```
 
-AI pamięta poprzednie wiadomości tylko wtedy, gdy uwzględnisz je w kolejnych żądaniach.
+SI pamięta poprzednie wiadomości tylko jeśli uwzględnisz je w kolejnych żądaniach.
 
-### Uruchomienie przykładu
+### Uruchom przykład
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
 ```
 
 ### Co się dzieje po uruchomieniu
 
-1. **Proste uzupełnienie**: AI odpowiada na pytanie dotyczące Javy, korzystając z systemowego promptu
-2. **Wielokrotna rozmowa**: AI utrzymuje kontekst w kolejnych pytaniach
-3. **Interaktywny chat**: Możesz prowadzić prawdziwą rozmowę z AI
+1. **Proste uzupełnienie**: SI odpowiada na pytanie o Javie z podpowiedzią systemową
+2. **Czat wieloetapowy**: SI utrzymuje kontekst przez wiele pytań
+3. **Interaktywny czat**: Możesz prowadzić prawdziwą rozmowę z SI
 
-## Tutorial 2: Wywoływanie funkcji
+## Samouczek 2: Wywoływanie funkcji
 
 **Plik:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
 ### Czego uczy ten przykład
 
-Wywoływanie funkcji umożliwia modelom AI żądanie wykonania zewnętrznych narzędzi i API za pomocą ustrukturyzowanego protokołu, w którym model analizuje żądania w języku naturalnym, określa wymagane wywołania funkcji z odpowiednimi parametrami, korzystając z definicji schematów JSON, oraz przetwarza zwrócone wyniki, aby generować odpowiedzi w kontekście, podczas gdy rzeczywiste wykonanie funkcji pozostaje pod kontrolą programisty dla bezpieczeństwa i niezawodności.
+Wywoływanie funkcji umożliwia modelom SI żądanie wykonania zewnętrznych narzędzi i API za pomocą ustrukturyzowanego protokołu, gdzie model analizuje naturalne językowe zapytania, ustala wymagane wywołania funkcji z odpowiednimi parametrami korzystającymi z definicji JSON Schema, a następnie przetwarza zwrócone wyniki, aby wygenerować kontekstowe odpowiedzi, podczas gdy faktyczne wykonanie funkcji pozostaje pod kontrolą dewelopera dla bezpieczeństwa i niezawodności.
 
-> **Uwaga**: Ten przykład wykorzystuje `gpt-4o-mini`, ponieważ wywoływanie funkcji wymaga niezawodnych możliwości narzędziowych, które mogą nie być w pełni dostępne w modelach nano u wszystkich dostawców.
+> **Uwaga**: Ten przykład używa `gpt-4o-mini`, ponieważ wywoływanie funkcji wymaga niezawodnych możliwości wywoływania narzędzi, które mogą nie być w pełni dostępne w modelach nano na wszystkich platformach hostingowych.
 
 ### Kluczowe koncepcje kodu
 
@@ -147,7 +152,7 @@ ChatCompletionsFunctionToolDefinitionFunction weatherFunction =
     new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
 weatherFunction.setDescription("Get current weather information for a city");
 
-// Define parameters using JSON Schema
+// Zdefiniuj parametry za pomocą JSON Schema
 weatherFunction.setParameters(BinaryData.fromString("""
     {
         "type": "object",
@@ -162,21 +167,21 @@ weatherFunction.setParameters(BinaryData.fromString("""
     """));
 ```
 
-Określa, jakie funkcje są dostępne i jak z nich korzystać.
+To mówi SI, jakie funkcje są dostępne i jak ich używać.
 
 #### 2. Przepływ wykonania funkcji
 ```java
-// 1. AI requests a function call
+// 1. AI żąda wywołania funkcji
 if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
     ChatCompletionsFunctionToolCall functionCall = ...;
     
-    // 2. You execute the function
+    // 2. Wykonujesz funkcję
     String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
     
-    // 3. You give the result back to AI
+    // 3. Przekazujesz wynik z powrotem do AI
     messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
     
-    // 4. AI provides final response with function result
+    // 4. AI podaje końcową odpowiedź z wynikiem funkcji
     ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
 }
 ```
@@ -184,8 +189,8 @@ if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
 #### 3. Implementacja funkcji
 ```java
 private static String simulateWeatherFunction(String arguments) {
-    // Parse arguments and call real weather API
-    // For demo, we return mock data
+    // Analizuj argumenty i wywołaj rzeczywiste API pogodowe
+    // Dla demonstracji zwracamy dane testowe
     return """
         {
             "city": "Seattle",
@@ -196,31 +201,31 @@ private static String simulateWeatherFunction(String arguments) {
 }
 ```
 
-### Uruchomienie przykładu
+### Uruchom przykład
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
 ```
 
 ### Co się dzieje po uruchomieniu
 
-1. **Funkcja pogodowa**: AI żąda danych pogodowych dla Seattle, Ty je dostarczasz, AI formatuje odpowiedź
-2. **Funkcja kalkulatora**: AI żąda obliczenia (15% z 240), Ty je wykonujesz, AI wyjaśnia wynik
+1. **Funkcja pogodowa**: SI prosi o dane pogodowe dla Seattle, ty je dostarczasz, SI formatuje odpowiedź
+2. **Funkcja kalkulatora**: SI prosi o obliczenie (15% z 240), ty to obliczasz, SI wyjaśnia wynik
 
-## Tutorial 3: RAG (Generacja wspomagana wyszukiwaniem)
+## Samouczek 3: RAG (Generowanie wspomagane wyszukiwaniem)
 
 **Plik:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
 ### Czego uczy ten przykład
 
-Generacja wspomagana wyszukiwaniem (RAG) łączy wyszukiwanie informacji z generacją językową, wstrzykując kontekst zewnętrznych dokumentów do promptów AI, umożliwiając modelom udzielanie dokładnych odpowiedzi na podstawie konkretnych źródeł wiedzy, zamiast potencjalnie nieaktualnych lub niedokładnych danych treningowych, przy jednoczesnym zachowaniu wyraźnych granic między zapytaniami użytkownika a autorytatywnymi źródłami informacji dzięki strategicznemu projektowaniu promptów.
+Generowanie wspomagane wyszukiwaniem (RAG) łączy wyszukiwanie informacji z generowaniem języka przez wstrzyknięcie zewnętrznego kontekstu dokumentu do promptów SI, umożliwiając modelom dostarczanie dokładnych odpowiedzi opartych na konkretnych źródłach wiedzy, zamiast potencjalnie przestarzałych lub niedokładnych danych treningowych, jednocześnie utrzymując wyraźne granice między zapytaniami użytkownika a autorytatywnymi źródłami informacji przez przemyślane projektowanie promptów.
 
-> **Uwaga**: Ten przykład wykorzystuje `gpt-4o-mini`, aby zapewnić niezawodne przetwarzanie ustrukturyzowanych promptów i spójne zarządzanie kontekstem dokumentów, co jest kluczowe dla skutecznych implementacji RAG.
+> **Uwaga**: Ten przykład używa `gpt-4o-mini`, aby zapewnić niezawodną obsługę ustrukturyzowanych promptów i spójne przetwarzanie kontekstu dokumentów, co jest kluczowe dla skutecznych implementacji RAG.
 
 ### Kluczowe koncepcje kodu
 
 #### 1. Ładowanie dokumentu
 ```java
-// Load your knowledge source
+// Załaduj swoje źródło wiedzy
 String doc = Files.readString(Paths.get("document.txt"));
 ```
 
@@ -236,9 +241,9 @@ List<ChatRequestMessage> messages = List.of(
 );
 ```
 
-Potrójne cudzysłowy pomagają AI odróżnić kontekst od pytania.
+Potrójne cudzysłowy pomagają SI odróżnić kontekst od pytania.
 
-#### 3. Bezpieczne zarządzanie odpowiedziami
+#### 3. Bezpieczna obsługa odpowiedzi
 ```java
 if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
     String answer = response.getChoices().get(0).getMessage().getContent();
@@ -248,9 +253,9 @@ if (response != null && response.getChoices() != null && !response.getChoices().
 }
 ```
 
-Zawsze weryfikuj odpowiedzi API, aby zapobiec awariom.
+Zawsze waliduj odpowiedzi API, aby zapobiec awariom.
 
-### Uruchomienie przykładu
+### Uruchom przykład
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
 ```
@@ -258,32 +263,32 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleR
 ### Co się dzieje po uruchomieniu
 
 1. Program ładuje `document.txt` (zawiera informacje o modelach GitHub)
-2. Zadajesz pytanie dotyczące dokumentu
-3. AI odpowiada wyłącznie na podstawie treści dokumentu, a nie swojej ogólnej wiedzy
+2. Zadasz pytanie dotyczące dokumentu
+3. SI odpowiada tylko na podstawie zawartości dokumentu, a nie swojej ogólnej wiedzy
 
-Spróbuj zapytać: "Czym są modele GitHub?" vs "Jaka jest pogoda?"
+Spróbuj zapytać: „Czym są modele GitHub?” versus „Jaka jest dzisiaj pogoda?”
 
-## Tutorial 4: Odpowiedzialna AI
+## Samouczek 4: Odpowiedzialna SI
 
 **Plik:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
 ### Czego uczy ten przykład
 
-Przykład odpowiedzialnej AI pokazuje znaczenie wdrażania środków bezpieczeństwa w aplikacjach AI. Demonstruje, jak działają nowoczesne systemy bezpieczeństwa AI poprzez dwa główne mechanizmy: twarde blokady (błędy HTTP 400 z filtrów bezpieczeństwa) i miękkie odmowy (uprzejme odpowiedzi "Nie mogę w tym pomóc" od samego modelu). Ten przykład pokazuje, jak produkcyjne aplikacje AI powinny płynnie obsługiwać naruszenia polityki treści poprzez odpowiednie zarządzanie wyjątkami, wykrywanie odmów, mechanizmy opinii użytkownika i strategie odpowiedzi zapasowych.
+Przykład odpowiedzialnej SI pokazuje, jak ważne jest wdrażanie mechanizmów bezpieczeństwa w aplikacjach SI. Demonstruje, jak działają nowoczesne systemy bezpieczeństwa przez dwa podstawowe mechanizmy: twarde blokady (błędy HTTP 400 z filtrów bezpieczeństwa) oraz miękkie odmowy (grzeczne odpowiedzi „Nie mogę w tym pomóc” od samego modelu). Ten przykład pokazuje, jak aplikacje produkcyjne SI powinny łagodnie obsługiwać naruszenia polityki treści poprzez odpowiednie obsługi wyjątków, wykrywanie odmów, mechanizmy informacji zwrotnej dla użytkownika oraz strategie zapasowych odpowiedzi.
 
-> **Uwaga**: Ten przykład wykorzystuje `gpt-4o-mini`, ponieważ zapewnia bardziej spójne i niezawodne odpowiedzi bezpieczeństwa w przypadku różnych typów potencjalnie szkodliwych treści, co pozwala na właściwe zademonstrowanie mechanizmów bezpieczeństwa.
+> **Uwaga**: Ten przykład używa `gpt-4o-mini`, ponieważ zapewnia bardziej spójne i niezawodne odpowiedzi bezpieczeństwa w różnych rodzajach potencjalnie szkodliwych treści, gwarantując poprawną demonstrację mechanizmów bezpieczeństwa.
 
 ### Kluczowe koncepcje kodu
 
-#### 1. Ramy testowania bezpieczeństwa
+#### 1. Framework testów bezpieczeństwa
 ```java
 private void testPromptSafety(String prompt, String category) {
     try {
-        // Attempt to get AI response
+        // Próba uzyskania odpowiedzi AI
         ChatCompletions response = client.getChatCompletions(modelId, options);
         String content = response.getChoices().get(0).getMessage().getContent();
         
-        // Check if the model refused the request (soft refusal)
+        // Sprawdź, czy model odmówił wykonania żądania (miękka odmowa)
         if (isRefusalResponse(content)) {
             System.out.println("[REFUSED BY MODEL]");
             System.out.println("✓ This is GOOD - the AI refused to generate harmful content!");
@@ -320,24 +325,24 @@ private boolean isRefusalResponse(String response) {
 ```
 
 #### 2. Testowane kategorie bezpieczeństwa
-- Instrukcje dotyczące przemocy/szkód
+- Instrukcje dotyczące przemocy/krzywdy
 - Mowa nienawiści
 - Naruszenia prywatności
 - Dezinformacja medyczna
 - Działania nielegalne
 
-### Uruchomienie przykładu
+### Uruchom przykład
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
 ```
 
 ### Co się dzieje po uruchomieniu
 
-Program testuje różne szkodliwe prompty i pokazuje, jak działa system bezpieczeństwa AI poprzez dwa mechanizmy:
+Program testuje różne szkodliwe prompt’y i pokazuje jak system bezpieczeństwa SI działa za pomocą dwóch mechanizmów:
 
-1. **Twarde blokady**: Błędy HTTP 400, gdy treść jest blokowana przez filtry bezpieczeństwa przed dotarciem do modelu
-2. **Miękkie odmowy**: Model odpowiada uprzejmymi odmowami, takimi jak "Nie mogę w tym pomóc" (najczęstsze w nowoczesnych modelach)
-3. **Bezpieczna treść**: Pozwala na generowanie legalnych żądań w normalny sposób
+1. **Twarde blokady**: błędy HTTP 400, gdy treść jest blokowana przez filtry bezpieczeństwa przed dotarciem do modelu
+2. **Miękkie odmowy**: model odpowiada grzecznymi odmowami typu „Nie mogę w tym pomóc” (najczęstsze przy nowoczesnych modelach)
+3. **Bezpieczna treść**: pozwala na normalne generowanie legalnych zapytań
 
 Oczekiwany wynik dla szkodliwych promptów:
 ```
@@ -350,7 +355,7 @@ Status: [REFUSED BY MODEL]
 
 To pokazuje, że **zarówno twarde blokady, jak i miękkie odmowy wskazują na prawidłowe działanie systemu bezpieczeństwa**.
 
-## Wspólne wzorce w przykładach
+## Typowe wzorce we wszystkich przykładach
 
 ### Wzorzec uwierzytelniania
 Wszystkie przykłady używają tego wzorca do uwierzytelniania z modelami GitHub:
@@ -367,11 +372,11 @@ OpenAIClient client = new OpenAIClientBuilder()
 ### Wzorzec obsługi błędów
 ```java
 try {
-    // AI operation
+    // Operacja AI
 } catch (HttpResponseException e) {
-    // Handle API errors (rate limits, safety filters)
+    // Obsługa błędów API (limity szybkości, filtry bezpieczeństwa)
 } catch (Exception e) {
-    // Handle general errors (network, parsing)
+    // Obsługa ogólnych błędów (sieć, analiza)
 }
 ```
 
@@ -385,7 +390,7 @@ List<ChatRequestMessage> messages = List.of(
 
 ## Kolejne kroki
 
-Gotowy, aby zastosować te techniki w praktyce? Zbudujmy prawdziwe aplikacje!
+Gotowy, aby zastosować te techniki w praktyce? Zbudujmy kilka prawdziwych aplikacji!
 
 [Rozdział 04: Praktyczne przykłady](../04-PracticalSamples/README.md)
 
@@ -393,20 +398,22 @@ Gotowy, aby zastosować te techniki w praktyce? Zbudujmy prawdziwe aplikacje!
 
 ### Typowe problemy
 
-**"GITHUB_TOKEN not set"**
+**"GITHUB_TOKEN nie został ustawiony"**
 - Upewnij się, że ustawiłeś zmienną środowiskową
-- Zweryfikuj, czy Twój token ma zakres `models:read`
+- Sprawdź, czy twój token ma zakres `models:read`
 
-**"No response from API"**
-- Sprawdź swoje połączenie internetowe
-- Zweryfikuj, czy Twój token jest ważny
+**"Brak odpowiedzi z API"**
+- Sprawdź połączenie internetowe
+- Zweryfikuj ważność tokena
 - Sprawdź, czy nie przekroczyłeś limitów
 
 **Błędy kompilacji Maven**
-- Upewnij się, że masz Javę w wersji 21 lub wyższej
+- Upewnij się, że masz Javę 21 lub wyższą
 - Uruchom `mvn clean compile`, aby odświeżyć zależności
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Choć dokładamy starań, aby tłumaczenie było jak najdokładniejsze, należy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub niedokładności. Oryginalny dokument w jego języku źródłowym powinien być uznawany za źródło wiążące. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
