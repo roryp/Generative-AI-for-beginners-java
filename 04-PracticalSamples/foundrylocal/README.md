@@ -27,12 +27,15 @@ Before starting this tutorial, make sure you have:
 
 ### **Install Foundry Local:**
 
+> **Note:** Foundry Local CLI is available on **Windows** and **macOS** only. Linux is supported via the [Foundry Local SDKs](https://github.com/microsoft/Foundry-Local) (Python, JavaScript, C#, Rust).
+
 ```bash
 # Windows
 winget install Microsoft.FoundryLocal
 
 # macOS
-brew install microsoft/foundrylocal/foundrylocal
+brew tap microsoft/foundrylocal
+brew install foundrylocal
 ```
 
 Verify the installation:
