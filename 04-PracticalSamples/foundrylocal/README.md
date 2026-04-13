@@ -31,8 +31,13 @@ Before starting this tutorial, make sure you have:
 # Windows
 winget install Microsoft.FoundryLocal
 
-# macOS (after installing)
-foundry model run phi-3.5-mini
+# macOS
+brew install microsoft/foundrylocal/foundrylocal
+```
+
+Verify the installation:
+```bash
+foundry --version
 ```
 
 ## Project Overview
@@ -53,11 +58,11 @@ This project consists of four main components:
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
 # foundry.local.model is auto-detected from Foundry Local. Set it here to override:
-# foundry.local.model=phi-3.5-mini-instruct-trtrtx-gpu:1
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
 
 **What this does:**
-- **base-url**: Specifies where Foundry Local is running, including the `/v1` path for OpenAI API compatibility. **Note**: Foundry Local dynamically assigns a port, so check your actual port using `foundry service status`
+- **base-url**: Specifies where Foundry Local is running, including the `/v1` path for OpenAI API compatibility. The default port is `5273`. If the port differs, check it with `foundry service status`.
 - **model** (optional): Names the AI model to use for text generation. **By default, the application auto-detects the model** by querying the Foundry Local `/v1/models` endpoint at startup, so you don't need to set this. You can still set it explicitly to override auto-detection if needed.
 
 **Key concept:** Spring Boot automatically loads these properties and makes them available to your application using the `@Value` annotation.
@@ -131,6 +136,11 @@ public class FoundryLocalService {
 ```java
 @PostConstruct
 public void init() {
+    // Auto-detect the model from Foundry Local if not explicitly configured
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
             .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
             .apiKey("not-needed")            // Local server doesn't need real API key
@@ -140,6 +150,7 @@ public void init() {
 
 **What this does:**
 - `@PostConstruct` runs this method after Spring creates the service
+- If no model is configured, it queries Foundry Local's `/v1/models` endpoint and picks the first loaded model
 - Creates an OpenAI client that points to your local Foundry Local instance
 - The base URL from `application.properties` already includes `/v1` for OpenAI API compatibility
 - API key is set to "not-needed" because local development doesn't require authentication
@@ -227,45 +238,60 @@ Here's the complete flow when you run the application:
 
 ## Setting Up Foundry Local
 
-To set up Foundry Local, follow these steps:
-
 1. **Install Foundry Local** using the instructions in the [Prerequisites](#prerequisites) section.
 
-2. **Check the dynamically assigned port**. Foundry Local automatically assigns a port when it starts. Find your port with:
+2. **Start the service** (if not already running):
+   ```bash
+   foundry service start
+   ```
+
+3. **Check the service status** to confirm it is running and note the port:
    ```bash
    foundry service status
    ```
-   
-   **Optional**: If you prefer to use a specific port (e.g., 5273), you can configure it manually:
+
+4. **Download and run a model** (downloads on first run, cached for subsequent runs):
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
+   ```
+   This opens an interactive chat session. You can exit with `Ctrl+C`. The model stays loaded in the service.
+
+   > **Tip:** Run `foundry model list` to see all available models. Replace `phi-4-mini` with any alias from the catalog (e.g., `qwen2.5-0.5b` for a smaller/faster model).
+
+5. **Verify the model is loaded:**
+   ```bash
+   foundry service ps
    ```
 
-3. **Download the AI model** you want to use, for example, `phi-3.5-mini`, with the following command:
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
+6. **Update `application.properties`** if needed:
+   - The default `base-url` (`http://localhost:5273/v1`) matches the default CLI port. Update only if `foundry service status` shows a different port.
+   - The model is **auto-detected** at startup — no configuration needed.
 
-4. **Configure the application.properties** file if needed:
-   - Update the port in `base-url` (from step 2), ensuring it includes `/v1` at the end
-   - The model name is **auto-detected** from Foundry Local, so you typically don't need to set it
-   - To override auto-detection, uncomment and set `foundry.local.model` (check exact IDs with `foundry model list`)
-   
-   Example:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
    # Model is auto-detected. Uncomment below to override:
-   # foundry.local.model=phi-3.5-mini-instruct-trtrtx-gpu:1
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
 
 ## Running the Application
 
-### Step 1: Start Foundry Local
+### Step 1: Ensure a model is loaded in Foundry Local
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
+```
+If no models are listed, load one:
+```bash
+foundry model run phi-4-mini
 ```
 
 ### Step 2: Build and Run the Application
+In a separate terminal:
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
+
+Or build and run as a JAR:
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
@@ -278,11 +304,9 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
 
@@ -295,21 +319,18 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 ### Common Issues
 
 **"Connection refused" or "Service unavailable"**
-- Make sure Foundry Local is running: `foundry model list`
-- Check the actual port Foundry Local is using: `foundry service status`
-- Update your `application.properties` with the correct port, ensuring the URL ends with `/v1`
-- Alternatively, set a specific port if desired: `foundry service set --port 5273`
-- Try restarting Foundry Local: `foundry model run phi-3.5-mini`
+- Check the service: `foundry service status`
+- Restart if needed: `foundry service restart`
+- Verify the port in `application.properties` matches `foundry service status` output
+- Ensure the URL ends with `/v1`: `http://localhost:5273/v1`
 
-**"Model not found" or "404 Not Found" errors**
-- The application auto-detects the model from Foundry Local, so model name mismatches should be rare. If you've overridden the model name in `application.properties`, verify it matches exactly with `foundry model list`
-- Note: Foundry Local may change model IDs across updates (e.g., `cuda-gpu` → `trtrtx-gpu`). Auto-detection handles this automatically
-- Ensure the `base-url` includes `/v1` at the end: `http://localhost:5273/v1`
-- Download the model if needed: `foundry model run phi-3.5-mini`
+**"No model found" at startup**
+- The application auto-detects the model. Ensure at least one model is loaded: `foundry service ps`
+- If no models are loaded: `foundry model run phi-4-mini`
+- If you overrode the model name in `application.properties`, verify it matches `foundry model list`
 
 **"400 Bad Request" errors**
 - Verify the base URL includes `/v1`: `http://localhost:5273/v1`
-- Check that the model ID matches exactly what's shown in `foundry model list`
 - Ensure you're using `maxCompletionTokens()` in your code (not the deprecated `maxTokens()`)
 
 **Maven compilation errors**
@@ -317,7 +338,7 @@ For more examples, see [Chapter 04: Practical samples](../README.md)
 - Clean and rebuild: `mvn clean compile`
 - Check internet connection for dependency downloads
 
-**Application starts but no output**
-- Verify Foundry Local is responding: Check `http://localhost:5273/v1/models` or run `foundry service status`
-- Check application logs for specific error messages
-- Ensure the model is fully loaded and ready
+**Service connection problems**
+- If you see `Request to local service failed`, run: `foundry service restart`
+- Check loaded models: `foundry service ps`
+- View service logs: `foundry service diag`
