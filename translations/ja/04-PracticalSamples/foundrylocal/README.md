@@ -2,36 +2,45 @@
 
 ## 目次
 
-- [前提条件](../../../../04-PracticalSamples/foundrylocal)
-- [プロジェクト概要](../../../../04-PracticalSamples/foundrylocal)
-- [コードの理解](../../../../04-PracticalSamples/foundrylocal)
-  - [1. アプリケーション設定 (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. メインアプリケーションクラス (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. AIサービス層 (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. プロジェクト依存関係 (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [全体の動作](../../../../04-PracticalSamples/foundrylocal)
-- [Foundry Local のセットアップ](../../../../04-PracticalSamples/foundrylocal)
-- [アプリケーションの実行](../../../../04-PracticalSamples/foundrylocal)
-- [期待される出力](../../../../04-PracticalSamples/foundrylocal)
-- [次のステップ](../../../../04-PracticalSamples/foundrylocal)
-- [トラブルシューティング](../../../../04-PracticalSamples/foundrylocal)
+- [前提条件](#前提条件)
+- [プロジェクト概要](#プロジェクト概要)
+- [コードの理解](#コードの理解)
+  - [1. アプリケーション設定 (application.properties)](#1-アプリケーション設定-applicationproperties)
+  - [2. メインアプリケーションクラス (Application.java)](#2-メインアプリケーションクラス-applicationjava)
+  - [3. AIサービスレイヤー (FoundryLocalService.java)](#3-aiサービスレイヤー-foundrylocalservicejava)
+  - [4. プロジェクト依存関係 (pom.xml)](#4-プロジェクト依存関係-pomxml)
+- [動作の全体像](#動作の全体像)
+- [Foundry Local のセットアップ](#foundry-local-のセットアップ)
+- [アプリケーションの実行](#アプリケーションの実行)
+- [期待される出力](#期待される出力)
+- [次のステップ](#次のステップ)
+- [トラブルシューティング](#トラブルシューティング)
+
 
 ## 前提条件
 
 このチュートリアルを始める前に、以下を確認してください：
 
-- **Java 21以上** がシステムにインストールされていること
-- **Maven 3.6+** がプロジェクトのビルドに使用できること
-- **Foundry Local** がインストールされ、実行されていること
+- システムに **Java 21以上** がインストールされていること
+- プロジェクトをビルドするための **Maven 3.6以上**
+- **Foundry Local** がインストールされ、起動していること
 
 ### **Foundry Local のインストール:**
 
+> **注意:** Foundry Local CLI は **Windows** と **macOS** のみ対応しています。Linux は [Foundry Local SDKs](https://github.com/microsoft/Foundry-Local)（Python、JavaScript、C#、Rust）経由でサポートされています。
+
 ```bash
-# Windows
+# ウィンドウズ
 winget install Microsoft.FoundryLocal
 
-# macOS (after installing)
-foundry model run phi-3.5-mini
+# macOS
+brew tap microsoft/foundrylocal
+brew install foundrylocal
+```
+
+インストールを確認:
+```bash
+foundry --version
 ```
 
 
@@ -39,10 +48,10 @@ foundry model run phi-3.5-mini
 
 このプロジェクトは以下の4つの主要コンポーネントで構成されています：
 
-1. **Application.java** - Spring Boot アプリケーションのエントリポイント
-2. **FoundryLocalService.java** - AIとの通信を処理するサービス層
+1. **Application.java** - メインの Spring Boot アプリケーションエントリーポイント
+2. **FoundryLocalService.java** - AI通信を処理するサービス層
 3. **application.properties** - Foundry Local 接続の設定
-4. **pom.xml** - Maven依存関係とプロジェクト設定
+4. **pom.xml** - Maven 依存関係およびプロジェクト設定
 
 ## コードの理解
 
@@ -52,15 +61,15 @@ foundry model run phi-3.5-mini
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
 
+**内容説明:**
+- **base-url**: Foundry Local が動作する場所を指定し、OpenAI API互換のために `/v1` パスを含みます。デフォルトのポートは `5273` です。ポートが異なる場合は、`foundry service status` で確認してください。
+- **model** (オプション): テキスト生成に使用するAIモデル名を指定します。**デフォルトでは、アプリケーションは起動時に Foundry Local の `/v1/models` エンドポイントをクエリしてモデルを自動検出するため、設定不要です。** 明示的に設定することで自動検出を上書きできます。
 
-**これが行うこと:**
-- **base-url**: Foundry Local が実行されている場所を指定し、OpenAI API互換性のために `/v1` パスを含めます。**注意**: Foundry Local は動的にポートを割り当てるため、`foundry service status` を使用して実際のポートを確認してください。
-- **model**: テキスト生成に使用するAIモデルの名前とバージョン番号（例: `:1`）。`foundry model list` を使用して利用可能なモデルとその正確なIDを確認してください。
-
-**重要な概念:** Spring Boot はこれらのプロパティを自動的に読み込み、`@Value` アノテーションを使用してアプリケーションで利用可能にします。
+**重要ポイント:** Spring Boot はこれらのプロパティを自動で読み込み、`@Value` アノテーションでアプリケーションに提供します。
 
 ### 2. メインアプリケーションクラス (Application.java)
 
@@ -71,16 +80,15 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.setWebApplicationType(WebApplicationType.NONE);  // ウェブサーバーは不要です
         app.run(args);
     }
 ```
 
-
-**これが行うこと:**
-- `@SpringBootApplication` は Spring Boot の自動構成を有効にします。
-- `WebApplicationType.NONE` は、Springがコマンドラインアプリケーションであることを示します（Webサーバーではありません）。
-- メインメソッドは Spring アプリケーションを起動します。
+**内容説明:**
+- `@SpringBootApplication` は Spring Boot の自動設定を有効化
+- `WebApplicationType.NONE` はWebサーバーではなくコマンドラインアプリであることを示す
+- mainメソッドは Spring アプリケーションを起動する
 
 **デモランナー:**
 ```java
@@ -101,18 +109,17 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
+**内容説明:**
+- `@Bean` は Spring が管理するコンポーネントを作成
+- `CommandLineRunner` は Spring Boot 起動後にコードを実行
+- `foundryLocalService` は Spring によって自動的に注入される（DI）
+- AIにテストメッセージを送信し、応答を表示する
 
-**これが行うこと:**
-- `@Bean` は Spring が管理するコンポーネントを作成します。
-- `CommandLineRunner` は Spring Boot 起動後にコードを実行します。
-- `foundryLocalService` は Spring によって自動的に注入されます（依存性注入）。
-- テストメッセージをAIに送信し、応答を表示します。
-
-### 3. AIサービス層 (FoundryLocalService.java)
+### 3. AIサービスレイヤー (FoundryLocalService.java)
 
 **ファイル:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### 設定の注入:
+#### 設定値の注入:
 ```java
 @Service
 public class FoundryLocalService {
@@ -120,48 +127,52 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // 空の場合は自動検出
 ```
 
+**内容説明:**
+- `@Service` はこのクラスがビジネスロジックを提供するサービスであることをSpringに示す
+- `@Value` は `application.properties` から設定値を注入
+- modelは空文字列がデフォルトで、これにより起動時にFoundry Localが自動検出を行う。これにより、Foundry Local にロードされている任意のモデルで動作可能です。
 
-**これが行うこと:**
-- `@Service` は、このクラスがビジネスロジックを提供することを Spring に伝えます。
-- `@Value` は application.properties から設定値を注入します。
-- `:default-value` の構文は、プロパティが設定されていない場合のフォールバック値を提供します。
-
-#### クライアントの初期化:
+#### クライアント初期化:
 ```java
 @PostConstruct
 public void init() {
+    // 明示的に設定されていない場合はFoundry Localからモデルを自動検出する
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
-            .apiKey("not-needed")            // Local server doesn't need real API key
+            .baseUrl(baseUrl)                // ベースURLには設定から既に/v1が含まれている
+            .apiKey("not-needed")            // ローカルサーバーは実際のAPIキーを必要としない
             .build();
 }
 ```
 
-
-**これが行うこと:**
-- `@PostConstruct` は、Spring がサービスを作成した後にこのメソッドを実行します。
-- OpenAI クライアントを作成し、ローカルの Foundry Local インスタンスに接続します。
-- `application.properties` の base URL はすでに OpenAI API互換性のために `/v1` を含んでいます。
-- ローカル開発では認証が不要なため、APIキーは "not-needed" に設定されます。
+**内容説明:**
+- `@PostConstruct` はSpringがサービスを作成後にこのメソッドを実行
+- モデルが設定されていなければ、Foundry Localの `/v1/models` エンドポイントを照会し、最初にロードされたモデルを選択
+- OpenAIクライアントをローカルFoundry Localに接続するように作成
+- `application.properties` の base URL は既に OpenAI API互換の `/v1` を含む
+- APIキーはローカル開発なので "not-needed" に設定
 
 #### チャットメソッド:
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                .model(model)                    // Which AI model to use
-                .addUserMessage(message)         // Your question/prompt
-                .maxCompletionTokens(150)        // Limit response length
-                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .model(model)                    // 使用するAIモデル
+                .addUserMessage(message)         // あなたの質問／プロンプト
+                .maxCompletionTokens(150)        // 応答の長さを制限
+                .temperature(0.7)                // 創造性の制御（0.0-1.0）
                 .build();
         
         ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
         
-        // Extract the AI's response from the API result
+        // API結果からAIの応答を抽出する
         if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
             return chatCompletion.choices().get(0).message().content().orElse("No response found");
         }
@@ -173,20 +184,19 @@ public String chat(String message) {
 }
 ```
 
-
-**これが行うこと:**
-- **ChatCompletionCreateParams**: AIリクエストを構成します。
-  - `model`: 使用するAIモデルを指定します（`foundry model list` の正確なIDと一致する必要があります）。
-  - `addUserMessage`: 会話にメッセージを追加します。
-  - `maxCompletionTokens`: 応答の長さを制限します（リソースを節約）。
-  - `temperature`: ランダム性を制御します（0.0 = 決定論的、1.0 = 創造的）。
-- **APIコール**: リクエストを Foundry Local に送信します。
-- **応答処理**: AIのテキスト応答を安全に抽出します。
-- **エラーハンドリング**: 役立つエラーメッセージで例外をラップします。
+**内容説明:**
+- **ChatCompletionCreateParams**: AIリクエストの設定
+  - `model`: 使うAIモデルを指定 (必ず `foundry model list` の正確なIDと一致)
+  - `addUserMessage`: 会話にユーザーメッセージを追加
+  - `maxCompletionTokens`: 応答の最大トークン数制限（リソース節約）
+  - `temperature`: ランダム性の制御（0.0は決定的、1.0は創造的）
+- **APIコール**: リクエストをFoundry Localに送信
+- <strong>レスポンス処理</strong>: AIの応答テキストを安全に抽出
+- <strong>エラー処理</strong>: 例外をわかりやすいエラーメッセージでラップ
 
 ### 4. プロジェクト依存関係 (pom.xml)
 
-**主要な依存関係:**
+**重要な依存関係:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -211,68 +221,84 @@ public String chat(String message) {
 </dependency>
 ```
 
+**内容説明:**
+- **spring-boot-starter**: コアの Spring Boot 機能を提供
+- **openai-java**: OpenAI公式Java SDKによるAPI通信
+- **jackson-databind**: API呼び出しJSONのシリアライズ/デシリアライズ処理
 
-**これが行うこと:**
-- **spring-boot-starter**: Spring Boot の基本機能を提供します。
-- **openai-java**: OpenAI Java SDK を使用してAPI通信を行います。
-- **jackson-databind**: APIコールのためのJSONシリアル化/デシリアル化を処理します。
+## 動作の全体像
 
-## 全体の動作
+アプリケーション実行時のフローは以下の通りです：
 
-アプリケーションを実行するときの全体の流れは以下の通りです：
-
-1. **起動**: Spring Boot が起動し、`application.properties` を読み込みます。
-2. **サービス作成**: Spring が `FoundryLocalService` を作成し、設定値を注入します。
-3. **クライアント設定**: `@PostConstruct` が OpenAI クライアントを初期化し、Foundry Local に接続します。
-4. **デモ実行**: `CommandLineRunner` が起動後に実行されます。
-5. **AIコール**: デモがテストメッセージを `foundryLocalService.chat()` に送信します。
-6. **APIリクエスト**: サービスが OpenAI互換リクエストを Foundry Local に送信します。
-7. **応答処理**: サービスがAIの応答を抽出して返します。
-8. **表示**: アプリケーションが応答を表示して終了します。
+1. <strong>起動</strong>: Spring Boot が起動し、`application.properties` を読み込む
+2. <strong>サービス生成</strong>: Spring が `FoundryLocalService` を作成し設定値を注入
+3. <strong>モデル検出</strong>: モデル未設定なら Foundry Local の `/v1/models` エンドポイントを呼び、最初のモデルを自動利用
+4. <strong>クライアント設定</strong>: `@PostConstruct` によりOpenAIクライアントがFoundry Localへ接続設定
+5. <strong>デモ実行</strong>: `CommandLineRunner` が起動後に実行される
+6. **AI呼び出し**: `foundryLocalService.chat()` にテストメッセージを渡す
+7. **APIリクエスト**: OpenAI互換リクエストをFoundry Localに送信
+8. <strong>レスポンス処理</strong>: サービスがAI応答を抽出し返却
+9. <strong>表示</strong>: アプリケーションが応答を表示し終了
 
 ## Foundry Local のセットアップ
 
-Foundry Local をセットアップするには、以下の手順を実行してください：
+1. [前提条件](#前提条件) セクションの手順に従って **Foundry Local をインストール** してください。
 
-1. **Foundry Local をインストール** [前提条件](../../../../04-PracticalSamples/foundrylocal) セクションの指示に従ってください。
+2. <strong>サービスを起動</strong>（まだ起動していない場合）:
+   ```bash
+   foundry service start
+   ```
 
-2. **動的に割り当てられたポートを確認**します。Foundry Local は起動時にポートを自動的に割り当てます。以下のコマンドでポートを確認してください：
+3. <strong>サービスの状態を確認</strong>し、動作中かと使用ポートをチェック:
    ```bash
    foundry service status
    ```
-   
-   **オプション**: 特定のポート（例: 5273）を使用したい場合は、手動で設定できます：
+
+4. <strong>モデルをダウンロードして実行</strong>（初回実行時にダウンロードされ、以降はキャッシュ使用）:
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
+   ```
+   これで対話チャットセッションが開きます。`Ctrl+C` で終了可能。モデルはサービスで読み込み続けます。
+
+   > **ヒント:** `foundry model list` を実行して利用可能なモデル一覧を確認できます。`phi-4-mini` の代わりにカタログにある任意のエイリアスを使用可能です（例: より小型かつ高速な `qwen2.5-0.5b` など）。
+
+5. **モデルがロードされていることを確認:**
+   ```bash
+   foundry service ps
    ```
 
+6. **必要に応じて `application.properties` を更新:**
+   - デフォルトの `base-url` (`http://localhost:5273/v1`) はCLIのデフォルトポートに合致しています。`foundry service status` でポートが異なっていれば更新してください。
+   - モデルは起動時に <strong>自動検出</strong> されますので設定不要です。
 
-3. **使用するAIモデルをダウンロード**します。例えば、`phi-3.5-mini` を以下のコマンドでダウンロードします：
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
-
-
-4. **application.properties ファイルを Foundry Local の設定に合わせて構成**します：
-   - `base-url` のポートを更新します（ステップ2から）、最後に `/v1` を含めることを確認してください。
-   - モデル名をバージョン番号を含めて更新します（`foundry model list` で確認）。
-
-   例:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
 
 
 ## アプリケーションの実行
 
-### ステップ1: Foundry Local を起動
+### ステップ1: Foundry Local にモデルがロードされていることを確認
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
+```
+
+もしモデルがリストされていなければ、ロードしてください:
+```bash
+foundry model run phi-4-mini
 ```
 
 
-### ステップ2: アプリケーションをビルドして実行
+### ステップ2: アプリケーションのビルドと実行
+別のターミナルで:
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
+
+または JARとしてビルドし実行:
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
@@ -286,52 +312,49 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
 
 
 ## 次のステップ
 
-さらに例を確認するには、[Chapter 04: Practical samples](../README.md) を参照してください。
+さらに多くの例は [Chapter 04: Practical samples](../README.md) を参照してください。
 
 ## トラブルシューティング
 
 ### よくある問題
 
-**"Connection refused" または "Service unavailable"**
-- Foundry Local が実行されていることを確認してください: `foundry model list`
-- Foundry Local が使用している実際のポートを確認してください: `foundry service status`
-- `application.properties` を正しいポートで更新し、URLが `/v1` で終わることを確認してください。
-- または、特定のポートを設定する場合: `foundry service set --port 5273`
-- Foundry Local を再起動してみてください: `foundry model run phi-3.5-mini`
+**「接続拒否」や「サービス利用不可」**
+- サービス状態確認: `foundry service status`
+- 必要なら再起動: `foundry service restart`
+- `application.properties` のポートが `foundry service status` の出力と一致しているか確認
+- URLの末尾が `/v1` になっているか確認: `http://localhost:5273/v1`
 
-**"Model not found" または "404 Not Found" エラー**
-- 利用可能なモデルとその正確なIDを確認してください: `foundry model list`
-- application.properties のモデル名を正確に一致するように更新してください（例: `Phi-3.5-mini-instruct-cuda-gpu:1`）。
-- `base-url` が `/v1` を含むことを確認してください: `http://localhost:5273/v1`
-- 必要に応じてモデルをダウンロードしてください: `foundry model run phi-3.5-mini`
+**起動時に「モデルが見つからない」**
+- アプリはモデルを自動検出します。少なくとも1つのモデルがロードされていることを確認: `foundry service ps`
+- モデル未ロードなら: `foundry model run phi-4-mini`
+- `application.properties` でモデル名を上書きしている場合は、`foundry model list` と名前が一致しているか確認
 
-**"400 Bad Request" エラー**
-- base URL が `/v1` を含むことを確認してください: `http://localhost:5273/v1`
-- モデルIDが `foundry model list` に表示されるものと正確に一致していることを確認してください。
-- コードで `maxCompletionTokens()` を使用していることを確認してください（非推奨の `maxTokens()` を使用しない）。
+**「400 Bad Request」エラー**
+- base URL に `/v1` が含まれているか確認: `http://localhost:5273/v1`
+- コードで `maxCompletionTokens()` を使っているか（非推奨の `maxTokens()` は使わない）
 
 **Maven コンパイルエラー**
-- Java 21以上を確認してください: `java -version`
-- クリーンビルドを実行してください: `mvn clean compile`
-- 依存関係のダウンロードのためにインターネット接続を確認してください。
+- Java 21以上がインストールされているか: `java -version`
+- クリーンビルド: `mvn clean compile`
+- 依存関係ダウンロード用にインターネット接続があるか確認
 
-**アプリケーションが起動するが出力がない**
-- Foundry Local が応答していることを確認してください: `http://localhost:5273/v1/models` を確認するか、`foundry service status` を実行してください。
-- アプリケーションログで特定のエラーメッセージを確認してください。
-- モデルが完全にロードされ、準備ができていることを確認してください。
+<strong>サービス接続問題</strong>
+- `Request to local service failed` が表示される場合: `foundry service restart` を実行
+- ロードされているモデルを確認: `foundry service ps`
+- サービスログを確認: `foundry service diag`
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**:  
-この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求していますが、自動翻訳には誤りや不正確さが含まれる可能性があります。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤認について、当社は責任を負いません。
+本書類はAI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を期していますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があることをご理解ください。原文の母国語版が正式な情報源と見なされます。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用による誤解や誤訳について当方は一切の責任を負いかねます。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
