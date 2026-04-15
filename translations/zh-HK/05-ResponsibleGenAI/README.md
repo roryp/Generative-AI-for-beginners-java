@@ -1,78 +1,83 @@
-# 負責任的生成式人工智能
+# 負責任生成式人工智能
 
-## 學習內容
+[![負責任生成式人工智能](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
 
-- 學習人工智能開發中重要的倫理考量及最佳實踐
-- 在應用程式中加入內容過濾及安全措施
-- 使用 GitHub Models 的內建保護功能測試及處理人工智能安全回應
-- 運用負責任的人工智能原則，建立安全、合乎倫理的人工智能系統
+> <strong>影片</strong>: [觀看本課程的影片總覽](https://www.youtube.com/watch?v=rF-b2BTSMQ4)。
+> 你也可以點擊上方縮圖來開啟相同的影片。
+
+## 您將學習的內容
+
+- 學習對 AI 開發重要的倫理考量與最佳實踐
+- 在應用程式中建立內容過濾與安全機制
+- 使用 GitHub Models 內建保護測試並處理 AI 安全回應
+- 應用負責任 AI 原則，打造安全且有倫理的 AI 系統
 
 ## 目錄
 
-- [簡介](../../../05-ResponsibleGenAI)
-- [GitHub Models 的內建安全功能](../../../05-ResponsibleGenAI)
-- [實例演示：負責任的人工智能安全示範](../../../05-ResponsibleGenAI)
-  - [示範內容](../../../05-ResponsibleGenAI)
-  - [設置指引](../../../05-ResponsibleGenAI)
-  - [執行示範](../../../05-ResponsibleGenAI)
-  - [預期輸出](../../../05-ResponsibleGenAI)
-- [負責任的人工智能開發最佳實踐](../../../05-ResponsibleGenAI)
-- [重要提示](../../../05-ResponsibleGenAI)
-- [總結](../../../05-ResponsibleGenAI)
-- [課程完成](../../../05-ResponsibleGenAI)
-- [下一步](../../../05-ResponsibleGenAI)
+- [簡介](#簡介)
+- [GitHub Models 內建安全機制](#github-models-內建安全機制)
+- [實際範例：負責任 AI 安全示範](#實際範例：負責任-ai-安全示範)
+  - [示範內容](#示範內容)
+  - [設定指引](#設定指引)
+  - [執行示範](#執行示範)
+  - [預期輸出](#預期輸出)
+- [負責任 AI 開發最佳實踐](#負責任-ai-開發最佳實踐)
+- [重要提醒](#重要提醒)
+- [總結](#總結)
+- [課程結束](#課程結束)
+- [後續步驟](#後續步驟)
 
 ## 簡介
 
-本章節重點探討建立負責任及合乎倫理的生成式人工智能應用程式的關鍵要素。您將學習如何實施安全措施、處理內容過濾，以及運用前幾章介紹的工具和框架來遵循負責任的人工智能開發最佳實踐。理解這些原則對於建立不僅技術上令人印象深刻，且安全、合乎倫理及值得信賴的人工智能系統至關重要。
+本章節聚焦於建立負責任且具倫理的生成式 AI 應用的重要面向。您將了解如何實作安全機制、處理內容過濾，以及應用先前章節介紹的工具與框架所涵蓋的負責任 AI 最佳實踐。了解這些原則對於打造不只是技術上令人印象深刻，更同時安全、合乎倫理且值得信賴的 AI 系統至關重要。
 
-## GitHub Models 的內建安全功能
+## GitHub Models 內建安全機制
 
-GitHub Models 提供基本的內容過濾功能，就像人工智能俱樂部裡的一位友善保安——雖然不算最先進，但在基本場景中足夠應付。
+GitHub Models 內建有基本的內容過濾。就像在你的 AI 俱樂部裡有個親切的保全—雖不是最複雜但能應付基本情境。
 
-**GitHub Models 的保護範圍：**
-- **有害內容**：阻擋明顯的暴力、色情或危險內容
-- **基本仇恨言論**：過濾明顯的歧視性語言
-- **簡單的越獄攻擊**：抵禦基本的安全防護繞過嘗試
+**GitHub Models 防護範圍：**
+- <strong>有害內容</strong>：阻擋明顯暴力、色情或危險內容
+- <strong>基本仇恨言論</strong>：過濾清晰的歧視語言
+- <strong>簡單脫困攻擊</strong>：抵抗基本試圖繞過安全防護的嘗試
 
-## 實例演示：負責任的人工智能安全示範
+## 實際範例：負責任 AI 安全示範
 
-本章節包含一個實際示範，展示 GitHub Models 如何通過測試可能違反安全指引的提示來實施負責任的人工智能安全措施。
+本章包含一個實際示範，展示 GitHub Models 如何實施負責任 AI 安全措施，透過測試可能違反安全指引的提示語。
 
 ### 示範內容
 
 `ResponsibleGithubModels` 類別遵循以下流程：
-1. 使用身份驗證初始化 GitHub Models 客戶端
-2. 測試有害提示（暴力、仇恨言論、錯誤資訊、非法內容）
-3. 將每個提示發送至 GitHub Models API
-4. 處理回應：硬性阻擋（HTTP 錯誤）、軟性拒絕（禮貌地回應「我無法協助」），或正常內容生成
-5. 顯示結果，展示哪些內容被阻擋、拒絕或允許
+1. 使用驗證初始化 GitHub Models 客戶端
+2. 測試有害提示語（暴力、仇恨言論、錯誤資訊、非法內容）
+3. 將每個提示語送至 GitHub Models API
+4. 處理回應：硬阻擋（HTTP 錯誤）、軟拒絕（客氣的「我無法協助」回覆）或正常內容產生
+5. 顯示結果，呈現哪些內容被阻擋、拒絕或允許
 6. 測試安全內容以作比較
 
-![負責任的人工智能安全示範](../../../translated_images/zh-HK/responsible.e4f51a917bafa4bf.webp)
+![負責任 AI 安全示範](../../../translated_images/zh-HK/responsible.e4f51a917bafa4bf.webp)
 
-### 設置指引
+### 設定指引
 
-1. **設置您的 GitHub 個人訪問令牌：**
+1. **設定您的 GitHub 個人存取權杖：**
    
-   在 Windows（命令提示符）中：
+   Windows（命令提示字元）：
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
    
-   在 Windows（PowerShell）中：
+   Windows（PowerShell）：
    ```powershell
    $env:GITHUB_TOKEN="your_github_token_here"
    ```
    
-   在 Linux/macOS 中：
+   Linux/macOS：
    ```bash
    export GITHUB_TOKEN=your_github_token_here
    ```   
 
 ### 執行示範
 
-1. **進入範例目錄：**
+1. **切換到 examples 目錄：**
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
@@ -84,11 +89,11 @@ GitHub Models 提供基本的內容過濾功能，就像人工智能俱樂部裡
 
 ### 預期輸出
 
-示範將測試各種可能有害的提示，並展示現代人工智能安全如何通過以下兩種機制運作：
+示範會測試各種類型的潛在有害提示語，並展示現代 AI 安全如何透過兩種機制運作：
 
-- **硬性阻擋**：當內容被安全過濾器阻擋且未到達模型時，返回 HTTP 400 錯誤
-- **軟性拒絕**：模型以禮貌的拒絕回應，例如「我無法協助」（現代模型中最常見）
-- **安全內容**：獲得正常回應
+- <strong>硬阻擋</strong>：安全過濾器在內容抵達模型前即阻擋，返回 HTTP 400 錯誤
+- <strong>軟拒絕</strong>：模型以客氣拒絕（例如「我無法協助這件事」）回應（現代模型中最常見）
+- <strong>安全內容</strong>可得到正常回應
 
 範例輸出格式：
 ```
@@ -108,66 +113,66 @@ Status: Response generated successfully
 ────────────────────────────────────────────────────────────
 ```
 
-**注意**：硬性阻擋和軟性拒絕均表明安全系統運作正常。
+<strong>注意</strong>：硬阻擋與軟拒絕兩者均代表安全系統正常運作。
 
-## 負責任的人工智能開發最佳實踐
+## 負責任 AI 開發最佳實踐
 
-在建立人工智能應用程式時，請遵循以下重要實踐：
+建立 AI 應用時，請遵循以下重要做法：
 
-1. **始終妥善處理潛在的安全過濾回應**
-   - 為被阻擋的內容實施適當的錯誤處理
-   - 為用戶提供有意義的回饋，解釋內容被過濾的原因
+1. <strong>務必優雅處理潛在的安全過濾回應</strong>
+   - 對被阻擋內容實作適當錯誤處理
+   - 在內容被過濾時，提供使用者有意義的反饋
 
-2. **在適當情況下實施額外的內容驗證**
-   - 添加特定領域的安全檢查
-   - 為您的使用案例創建自定義驗證規則
+2. <strong>必要時實作額外的內容驗證</strong>
+   - 加入領域專屬的安全檢查
+   - 針對使用場景設計自訂驗證規則
 
-3. **教育用戶關於負責任的人工智能使用**
-   - 提供清晰的可接受使用指引
+3. **教育使用者負責任地使用 AI**
+   - 提供明確的使用準則
    - 解釋為何某些內容可能被阻擋
 
-4. **監控並記錄安全事件以便改進**
+4. <strong>監控並記錄安全事件以持續改進</strong>
    - 跟蹤被阻擋內容的模式
-   - 持續改進您的安全措施
+   - 持續改善安全措施
 
-5. **遵守平台的內容政策**
-   - 隨時了解平台指引的更新
-   - 遵守服務條款及倫理指引
+5. <strong>遵守平台的內容政策</strong>
+   - 隨時更新並遵守平台指引
+   - 遵循服務條款及倫理守則
 
-## 重要提示
+## 重要提醒
 
-此示例僅為教育目的而使用故意有問題的提示。目的是展示安全措施，而非繞過它們。請始終負責任且合乎倫理地使用人工智能工具。
+本範例刻意使用具問題性的提示語僅供教學用途。目標是展示安全措施，而非規避安全機制。請務必負責任且合乎倫理地使用 AI 工具。
 
 ## 總結
 
-**恭喜！** 您已成功：
+**恭喜您！** 您已成功：
 
-- **實施人工智能安全措施**，包括內容過濾及安全回應處理
-- **運用負責任的人工智能原則**，建立合乎倫理及值得信賴的人工智能系統
-- **測試安全機制**，使用 GitHub Models 的內建保護功能
-- **學習負責任的人工智能開發及部署最佳實踐**
+- **實作 AI 安全措施**，包含內容過濾與安全回應處理
+- **應用負責任 AI 原則**，打造倫理與值得信賴的 AI 系統
+- <strong>測試安全機制</strong>，利用 GitHub Models 內建保護功能
+- <strong>學習負責任 AI 的最佳實踐</strong>以便開發與部署
 
-**負責任的人工智能資源：**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - 了解 Microsoft 在安全、隱私及合規方面的做法
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - 探索 Microsoft 在負責任人工智能開發中的原則及實踐
+**負責任 AI 資源：**
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - 了解微軟在安全、隱私與合規方面的做法
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - 探索微軟負責任 AI 的原則與實務
 
-## 課程完成
+## 課程結束
 
-恭喜您完成生成式人工智能初學者課程！
+恭喜完成 Generative AI for Beginners 課程！
 
 ![課程完成](../../../translated_images/zh-HK/image.73c7e2ff4a652e77.webp)
 
-**您已完成的內容：**
-- 設置您的開發環境
-- 學習生成式人工智能的核心技術
-- 探索人工智能的實際應用
-- 理解負責任的人工智能原則
+**您已達成目標：**
+- 設定開發環境
+- 學習生成式 AI 核心技術
+- 探索實際 AI 應用
+- 理解負責任 AI 原則
 
-## 下一步
+## 後續步驟
 
-繼續您的人工智能學習旅程，探索以下額外資源：
+繼續您的 AI 學習之旅，參考以下資源：
 
-**額外學習課程：**
+**附加學習課程：**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
@@ -184,5 +189,9 @@ Status: Response generated successfully
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
-**免責聲明**：  
-本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原文檔的母語版本作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解讀概不負責。
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責聲明**：
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻譯而成。儘管我們努力確保準確性，但請注意自動翻譯可能含有錯誤或不準確之處。原文檔的本地語言版本應被視為權威來源。如涉及重要資訊，建議進行專業人工翻譯。對因使用本翻譯而產生的任何誤解或誤釋，我們不承擔任何責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

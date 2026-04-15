@@ -1,59 +1,64 @@
-# AI Jenereta Inayowajibika
+# AI ya Kizazi Inayowajibika
 
-## Utakachojifunza
+[![AI ya Kizazi Inayowajibika](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
 
-- Jifunze masuala ya kimaadili na mbinu bora zinazohitajika katika maendeleo ya AI
-- Jengea programu zako hatua za kuchuja maudhui na usalama
-- Jaribu na shughulikia majibu ya usalama wa AI kwa kutumia ulinzi wa ndani wa GitHub Models
-- Tumia kanuni za AI inayowajibika kuunda mifumo salama na ya kimaadili
+> **Video**: [Tazama muhtasari wa video kwa somo hili](https://www.youtube.com/watch?v=rF-b2BTSMQ4).
+> Unaweza pia kubofya picha ya kidokezo juu kufungua video ile ile.
 
-## Jedwali la Maudhui
+## Utajifunza Nini
 
-- [Utangulizi](../../../05-ResponsibleGenAI)
-- [Usalama wa Ndani wa GitHub Models](../../../05-ResponsibleGenAI)
-- [Mfano wa Kivitendo: Onyesho la Usalama wa AI Inayowajibika](../../../05-ResponsibleGenAI)
-  - [Kile Onyesho Linachoonyesha](../../../05-ResponsibleGenAI)
-  - [Maelekezo ya Kuanzisha](../../../05-ResponsibleGenAI)
-  - [Kuendesha Onyesho](../../../05-ResponsibleGenAI)
-  - [Matokeo Yanayotarajiwa](../../../05-ResponsibleGenAI)
-- [Mbinu Bora za Maendeleo ya AI Inayowajibika](../../../05-ResponsibleGenAI)
-- [Tanbihi Muhimu](../../../05-ResponsibleGenAI)
-- [Muhtasari](../../../05-ResponsibleGenAI)
-- [Kumaliza Kozi](../../../05-ResponsibleGenAI)
-- [Hatua Zifuatazo](../../../05-ResponsibleGenAI)
+- Jifunze maadili na mbinu bora zinazohitajika kwa maendeleo ya AI
+- Jenga vichujio vya maudhui na hatua za usalama katika programu zako
+- Jaribu na shughulikia majibu ya usalama wa AI kwa kutumia kinga zilizojengwa za GitHub Models
+- Tumia misingi ya AI inayowajibika kuunda mifumo salama na yenye maadili ya AI
+
+## Jedwali la Yaliyomo
+
+- [Utangulizi](#utangulizi)
+- [Kinga ya Msingi ya GitHub Models](#kinga-ya-msingi-ya-github-models)
+- [Mfano Wa Kivitendo: Demo ya Usalama wa AI Inayowajibika](#mfano-wa-kivitendo-demo-ya-usalama-wa-ai-inayowajibika)
+  - [Demo Inaonyesha Nini](#demo-inaonyesha-nini)
+  - [Maelekezo ya Utoaji](#maelekezo-ya-utoaji)
+  - [Kuendesha Demo](#kuendesha-demo)
+  - [Matokeo Yanayotarajiwa](#matokeo-yanayotarajiwa)
+- [Mbinu Bora za Maendeleo ya AI Inayowajibika](#mbinu-bora-za-maendeleo-ya-ai-inayowajibika)
+- [Kumbuka Muhimu](#kumbuka-muhimu)
+- [Muhtasari](#muhtasari)
+- [Kumaliza Kozi](#kumaliza-kozi)
+- [Hatua Zifuatazo](#hatua-zifuatazo)
 
 ## Utangulizi
 
-Sura hii ya mwisho inazingatia vipengele muhimu vya kujenga programu za AI jenereta zinazowajibika na za kimaadili. Utajifunza jinsi ya kutekeleza hatua za usalama, kushughulikia uchujaji wa maudhui, na kutumia mbinu bora za maendeleo ya AI inayowajibika kwa kutumia zana na mifumo iliyofunikwa katika sura zilizopita. Kuelewa kanuni hizi ni muhimu kwa kujenga mifumo ya AI ambayo si tu ya kuvutia kiufundi bali pia salama, ya kimaadili, na ya kuaminika.
+Sura hii ya mwisho inalenga katika vipengele muhimu vya ujenzi wa programu za kizazi za AI zinazowajibika na zenye maadili. Utajifunza jinsi ya kutekeleza hatua za usalama, kushughulikia vichujio vya maudhui, na kutumia mbinu bora za maendeleo ya AI inayowajibika kwa kutumia zana na mifumo iliyojadiliwa katika sura za awali. Kuelewa misingi hii ni muhimu kwa kujenga mifumo ya AI ambayo sio tu ya kiufundi bali pia salama, yenye maadili, na ya kuaminika.
 
-## Usalama wa Ndani wa GitHub Models
+## Kinga ya Msingi ya GitHub Models
 
-GitHub Models ina uwezo wa msingi wa kuchuja maudhui moja kwa moja. Ni kama kuwa na mlinzi rafiki katika klabu yako ya AI - si wa hali ya juu sana, lakini anatosha kwa hali za msingi.
+GitHub Models inakuja na vichujio vya msingi vya maudhui tayari. Ni kama kuwa na mlinzi rafiki katika klabu yako ya AI - si mzuri sana, lakini hufanya kazi kwa hali za msingi.
 
-**Kile GitHub Models Inalinda Dhidi Yake:**
-- **Maudhui Yenye Madhara**: Inazuia maudhui ya wazi ya vurugu, ngono, au hatari
-- **Hotuba ya Chuki ya Msingi**: Inachuja lugha ya kibaguzi ya wazi
-- **Njia Rahisi za Kuvunja Usalama**: Inapinga majaribio ya msingi ya kupita vizuizi vya usalama
+**GitHub Models Linalinda dhidi ya:**
+- **Maudhui Yenye Madhara**: Huzuia maudhui ya wazi ya vurugu, ngono, au hatari
+- **Hotuba za Chuki za Msingi**: Huchuja lugha zote zinazoonyesha ubaguzi wazi
+- **Mbinu Rahisi za Kuvunja Vizingiti**: Hukataa majaribio rahisi ya kupita vikwazo vya usalama
 
-## Mfano wa Kivitendo: Onyesho la Usalama wa AI Inayowajibika
+## Mfano Wa Kivitendo: Demo ya Usalama wa AI Inayowajibika
 
-Sura hii inajumuisha onyesho la kivitendo la jinsi GitHub Models inavyotekeleza hatua za usalama wa AI inayowajibika kwa kujaribu maelekezo ambayo yanaweza kukiuka miongozo ya usalama.
+Sura hii inaonyesha maonyesho ya jinsi GitHub Models inavyotekeleza hatua za usalama wa AI inayowajibika kwa kujaribu maelekezo yanayoweza kuvunja kanuni za usalama.
 
-### Kile Onyesho Linachoonyesha
+### Demo Inaonyesha Nini
 
 Darasa la `ResponsibleGithubModels` linafuata mtiririko huu:
-1. Kuanzisha mteja wa GitHub Models na uthibitisho
-2. Kujaribu maelekezo yenye madhara (vurugu, hotuba ya chuki, taarifa potofu, maudhui haramu)
-3. Kutuma kila maelekezo kwa API ya GitHub Models
-4. Kushughulikia majibu: vizuizi vikubwa (makosa ya HTTP), kukataa kwa upole ("Siwezi kusaidia" kwa heshima), au kizazi cha maudhui ya kawaida
-5. Kuonyesha matokeo yanayoonyesha ni maudhui gani yalizuiwa, kukataliwa, au kuruhusiwa
-6. Kujaribu maudhui salama kwa kulinganisha
+1. Anzisha mteja wa GitHub Models kwa uthibitishaji
+2. Jaribu maelekezo yenye madhara (vurugu, hotuba za chuki, habari potofu, maudhui haramu)
+3. Tuma kila maelekezo kwa API ya GitHub Models
+4. Shughulikia majibu: vikwazo vikubwa (makosa ya HTTP), kukataa kwa upole (majibu ya heshima kama "siwezi kusaidia"), au uzalishaji wa maudhui ya kawaida
+5. Onyesha matokeo yakionyesha ni maudhui gani yalikataliwa, kukataliwa, au kuruhusiwa
+6. Jaribu maudhui salama kwa kulinganisha
 
-![Onyesho la Usalama wa AI Inayowajibika](../../../translated_images/sw/responsible.e4f51a917bafa4bf.webp)
+![Demo ya Usalama wa AI Inayowajibika](../../../translated_images/sw/responsible.e4f51a917bafa4bf.webp)
 
-### Maelekezo ya Kuanzisha
+### Maelekezo ya Utoaji
 
-1. **Weka Tokeni ya Ufikiaji wa Kibinafsi ya GitHub:**
+1. **Weka Tokeni Yako ya Ufikiaji wa Kibinafsi ya GitHub:**
    
    Kwenye Windows (Command Prompt):
    ```cmd
@@ -70,27 +75,27 @@ Darasa la `ResponsibleGithubModels` linafuata mtiririko huu:
    export GITHUB_TOKEN=your_github_token_here
    ```   
 
-### Kuendesha Onyesho
+### Kuendesha Demo
 
 1. **Nenda kwenye saraka ya mifano:**
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
 
-2. **Tunga na endesha onyesho:**
+2. **Tengeneza na endesha demo:**
    ```bash
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
 ### Matokeo Yanayotarajiwa
 
-Onyesho litajaribu aina mbalimbali za maelekezo yenye uwezekano wa kuwa na madhara na kuonyesha jinsi usalama wa kisasa wa AI unavyofanya kazi kupitia mbinu mbili:
+Demo itajaribu aina mbalimbali za maelekezo yenye madhara na kuonyesha jinsi usalama wa siri za AI unavyofanya kazi kupitia mbinu mbili:
 
-- **Vizuizi Vikubwa**: Makosa ya HTTP 400 wakati maudhui yanazuiwa na vichujio vya usalama kabla ya kufikia modeli
-- **Kukataa kwa Upole**: Modeli inajibu kwa kukataa kwa heshima kama "Siwezi kusaidia na hilo" (ya kawaida zaidi na modeli za kisasa)
-- **Maudhui salama** yanayopata majibu ya kawaida
+- **Vikwazo Vikubwa**: Makosa ya HTTP 400 wakati maudhui yanakataliwa na vichujio vya usalama kabla ya kufikia mfano
+- **Kukataa kwa Upole**: Mfano hujibu kwa kukataa kwa heshima kama "siwezi kusaidia na hilo" (hitaji zaidi kwa mifano ya kisasa)
+- **Maudhui salama** yanayopata jibu la kawaida
 
-Muundo wa matokeo ya sampuli:
+Mfano wa muundo wa matokeo:
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -108,81 +113,85 @@ Status: Response generated successfully
 ────────────────────────────────────────────────────────────
 ```
 
-**Tanbihi**: Vizuizi vikubwa na kukataa kwa upole vinaonyesha mfumo wa usalama unafanya kazi ipasavyo.
+**Kumbuka**: Vikwazo vikubwa na kukataa kwa upole vyote vinaonyesha mfumo wa usalama unafanya kazi vyema.
 
 ## Mbinu Bora za Maendeleo ya AI Inayowajibika
 
-Unapojenga programu za AI, fuata mbinu hizi muhimu:
+Wakati wa kujenga programu za AI, fuata mbinu hizi muhimu:
 
-1. **Daima shughulikia majibu ya vichujio vya usalama kwa heshima**
-   - Tekeleza utunzaji sahihi wa makosa kwa maudhui yaliyofungiwa
-   - Toa maoni yenye maana kwa watumiaji wakati maudhui yanachujwa
+1. **Daima shughulikia majibu yanayoweza kutoka kwa vichujio vya usalama kwa heshima**
+   - Tekeleza usimamizi sahihi wa makosa ya maudhui yaliyokataliwa
+   - Toa mrejesho wenye maana kwa watumiaji wakati maudhui yanachujwa
 
-2. **Tekeleza uthibitishaji wa ziada wa maudhui inapohitajika**
-   - Ongeza ukaguzi wa usalama maalum wa sekta
-   - Unda sheria za uthibitishaji maalum kwa matumizi yako
+2. **Tekeleza uhakiki wa ziada wa maudhui pale inapofaa**
+   - Ongeza ukaguzi wa usalama maalum wa eneo lako
+   - Tengeneza kanuni za uhakiki za desturi kwa matumizi yako
 
-3. **Elimisha watumiaji kuhusu matumizi ya AI inayowajibika**
-   - Toa miongozo wazi kuhusu matumizi yanayokubalika
-   - Eleza kwa nini maudhui fulani yanaweza kuzuiwa
+3. **Waelekeze watumiaji kuhusu matumizi ya AI inayowajibika**
+   - Toa miongozo wazi juu ya matumizi yanayokubalika
+   - Eleza kwa nini maudhui fulani yanaweza kukataliwa
 
-4. **Fuatilia na rekodi matukio ya usalama kwa maboresho**
-   - Fuatilia mifumo ya maudhui yaliyofungiwa
-   - Boresha hatua zako za usalama mara kwa mara
+4. **Fuatilia na weka kumbukumbu za matukio ya usalama kwa uboreshaji**
+   - Rekodi mifumo ya maudhui yaliyokataliwa
+   - Boresha mara kwa mara hatua zako za usalama
 
 5. **Heshimu sera za maudhui za jukwaa**
-   - Kuwa na taarifa za hivi karibuni kuhusu miongozo ya jukwaa
-   - Fuata masharti ya huduma na miongozo ya kimaadili
+   - Kuwa na taarifa za miongozo ya jukwaa
+   - Fuata masharti ya huduma na miongozo ya maadili
 
-## Tanbihi Muhimu
+## Kumbuka Muhimu
 
-Mfano huu unatumia maelekezo yenye matatizo kwa madhumuni ya kielimu pekee. Lengo ni kuonyesha hatua za usalama, si kuzivuka. Daima tumia zana za AI kwa uwajibikaji na kimaadili.
+Mfano huu unatumia maelekezo yenye matatizo kwa makusudi kwa madhumuni ya mafunzo tu. Lengo ni kuonyesha hatua za usalama, si kuzivunja. Daima tumia zana za AI kwa uwajibikaji na maadili.
 
 ## Muhtasari
 
 **Hongera!** Umefanikiwa:
 
-- **Kutumia hatua za usalama wa AI** ikiwa ni pamoja na uchujaji wa maudhui na kushughulikia majibu ya usalama
-- **Kutumia kanuni za AI inayowajibika** kuunda mifumo ya AI ya kimaadili na ya kuaminika
-- **Kujaribu mifumo ya usalama** kwa kutumia uwezo wa ulinzi wa ndani wa GitHub Models
+- **Kutekeleza hatua za usalama za AI** ikiwa ni pamoja na kuchuja maudhui na kusimamia majibu ya usalama
+- **Kutumia misingi ya AI inayowajibika** kujenga mifumo ya AI yenye maadili na ya kuaminika
+- **Kujaribu mbinu za usalama** kupitia kinga zilizojengwa za GitHub Models
 - **Kujifunza mbinu bora** za maendeleo na utekelezaji wa AI inayowajibika
 
 **Rasilimali za AI Inayowajibika:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Jifunze kuhusu mbinu za Microsoft za usalama, faragha, na uzingatiaji
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Chunguza kanuni na mbinu za Microsoft za maendeleo ya AI inayowajibika
+- [Kituo cha Uaminifu cha Microsoft](https://www.microsoft.com/trust-center) - Jifunze kuhusu mkazo wa Microsoft katika usalama, faragha, na ufuatiliaji
+- [AI Inayowajibika ya Microsoft](https://www.microsoft.com/ai/responsible-ai) - Gundua misingi na mbinu za Microsoft katika maendeleo ya AI inayowajibika
 
 ## Kumaliza Kozi
 
-Hongera kwa kumaliza kozi ya AI Jenereta kwa Kompyuta!
+Hongera kwa kumaliza kozi ya AI ya Kizazi kwa Waanzilishi!
 
 ![Kumaliza Kozi](../../../translated_images/sw/image.73c7e2ff4a652e77.webp)
 
-**Ulichofanikiwa:**
-- Kuanzisha mazingira yako ya maendeleo
-- Kujifunza mbinu za msingi za AI jenereta
-- Kuchunguza matumizi ya kivitendo ya AI
-- Kuelewa kanuni za AI inayowajibika
+**Umefanya yafuatayo:**
+- Kuandaa mazingira yako ya maendeleo
+- Kujifunza mbinu kuu za AI ya kizazi
+- Kuchunguza programu za AI za vitendo
+- Kuelewa misingi ya AI inayowajibika
 
 ## Hatua Zifuatazo
 
-Endelea na safari yako ya kujifunza AI kwa kutumia rasilimali hizi za ziada:
+Endelea safari yako ya kujifunza AI kwa kutumia rasilimali hizi za ziada:
 
-**Kozi za Kujifunza Zaidi:**
-- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML for Beginners](https://aka.ms/ml-beginners)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)
-- [AI for Beginners](https://aka.ms/ai-beginners)
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+**Kozi Za Maendeleo Za Ziada:**
+- [Wakala wa AI kwa Waanzilishi](https://github.com/microsoft/ai-agents-for-beginners)
+- [AI ya Kizazi kwa Waanzilishi kutumia .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [AI ya Kizazi kwa Waanzilishi kutumia JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [AI ya Kizazi kwa Waanzilishi](https://github.com/microsoft/generative-ai-for-beginners)
+- [ML kwa Waanzilishi](https://aka.ms/ml-beginners)
+- [Sayansi ya Data kwa Waanzilishi](https://aka.ms/datascience-beginners)
+- [AI kwa Waanzilishi](https://aka.ms/ai-beginners)
+- [Usalama wa Mtandao kwa Waanzilishi](https://github.com/microsoft/Security-101)
+- [Uendelezaji wa Mtandao kwa Waanzilishi](https://aka.ms/webdev-beginners)
+- [IoT kwa Waanzilishi](https://aka.ms/iot-beginners)
+- [Maendeleo ya XR kwa Waanzilishi](https://github.com/microsoft/xr-development-for-beginners)
+- [Kuwa Mtaalam wa GitHub Copilot kwa Programu Mshikamano wa AI](https://aka.ms/GitHubCopilotAI)
+- [Kuwa Mtaalam wa GitHub Copilot kwa Waendelezaji wa C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Chagua Safari Yako ya Copilot](https://github.com/microsoft/CopilotAdventures)
+- [Programu ya Chat ya RAG na Huduma za Azure AI](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kiarifu cha Kutokujipatanisha**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Wakati tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya mzazi inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu sana, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuwezi kuwajibika kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

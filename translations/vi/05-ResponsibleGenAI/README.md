@@ -1,59 +1,64 @@
-# AI Tạo Sinh Có Trách Nhiệm
+# Responsible Generative AI
 
-## Những Gì Bạn Sẽ Học
+[![Responsible Generative AI](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
 
-- Tìm hiểu các cân nhắc đạo đức và thực hành tốt nhất trong phát triển AI
-- Tích hợp các biện pháp lọc nội dung và an toàn vào ứng dụng của bạn
-- Kiểm tra và xử lý các phản hồi an toàn AI bằng các biện pháp bảo vệ tích hợp sẵn của GitHub Models
-- Áp dụng các nguyên tắc AI có trách nhiệm để tạo ra các hệ thống AI an toàn, đạo đức
+> **Video**: [Xem video tổng quan cho bài học này](https://www.youtube.com/watch?v=rF-b2BTSMQ4).
+> Bạn cũng có thể nhấp vào hình thu nhỏ phía trên để mở cùng một video.
 
-## Mục Lục
+## What You'll Learn
 
-- [Giới Thiệu](../../../05-ResponsibleGenAI)
-- [Tính Năng An Toàn Tích Hợp Của GitHub Models](../../../05-ResponsibleGenAI)
-- [Ví Dụ Thực Tế: Demo An Toàn AI Có Trách Nhiệm](../../../05-ResponsibleGenAI)
-  - [Những Gì Demo Thể Hiện](../../../05-ResponsibleGenAI)
-  - [Hướng Dẫn Cài Đặt](../../../05-ResponsibleGenAI)
-  - [Chạy Demo](../../../05-ResponsibleGenAI)
-  - [Kết Quả Mong Đợi](../../../05-ResponsibleGenAI)
-- [Thực Hành Tốt Nhất Trong Phát Triển AI Có Trách Nhiệm](../../../05-ResponsibleGenAI)
-- [Lưu Ý Quan Trọng](../../../05-ResponsibleGenAI)
-- [Tóm Tắt](../../../05-ResponsibleGenAI)
-- [Hoàn Thành Khóa Học](../../../05-ResponsibleGenAI)
-- [Bước Tiếp Theo](../../../05-ResponsibleGenAI)
+- Tìm hiểu các cân nhắc về đạo đức và các thực hành tốt nhất quan trọng cho phát triển AI
+- Xây dựng bộ lọc nội dung và các biện pháp an toàn vào ứng dụng của bạn
+- Kiểm thử và xử lý phản hồi an toàn AI bằng các bảo vệ tích hợp sẵn của GitHub Models
+- Áp dụng các nguyên tắc AI có trách nhiệm để tạo ra các hệ thống AI an toàn và đạo đức
 
-## Giới Thiệu
+## Table of Contents
 
-Chương cuối này tập trung vào các khía cạnh quan trọng của việc xây dựng các ứng dụng AI tạo sinh có trách nhiệm và đạo đức. Bạn sẽ học cách triển khai các biện pháp an toàn, xử lý lọc nội dung và áp dụng các thực hành tốt nhất trong phát triển AI có trách nhiệm bằng cách sử dụng các công cụ và khung làm việc đã được đề cập trong các chương trước. Hiểu rõ các nguyên tắc này là điều cần thiết để xây dựng các hệ thống AI không chỉ ấn tượng về mặt kỹ thuật mà còn an toàn, đạo đức và đáng tin cậy.
+- [Introduction](#introduction)
+- [GitHub Models Built-in Safety](#github-models-built-in-safety)
+- [Practical Example: Responsible AI Safety Demo](#practical-example-responsible-ai-safety-demo)
+  - [What the Demo Shows](#what-the-demo-shows)
+  - [Setup Instructions](#setup-instructions)
+  - [Running the Demo](#running-the-demo)
+  - [Expected Output](#expected-output)
+- [Best Practices for Responsible AI Development](#best-practices-for-responsible-ai-development)
+- [Important Note](#important-note)
+- [Summary](#summary)
+- [Course Completion](#course-completion)
+- [Next Steps](#next-steps)
 
-## Tính Năng An Toàn Tích Hợp Của GitHub Models
+## Introduction
 
-GitHub Models đi kèm với tính năng lọc nội dung cơ bản được tích hợp sẵn. Nó giống như một người bảo vệ thân thiện tại câu lạc bộ AI của bạn - không phải là người tinh vi nhất, nhưng đủ để xử lý các tình huống cơ bản.
+Chương cuối cùng này tập trung vào các khía cạnh quan trọng của việc xây dựng các ứng dụng generative AI có trách nhiệm và đạo đức. Bạn sẽ học cách triển khai các biện pháp an toàn, xử lý lọc nội dung, và áp dụng các thực hành tốt nhất để phát triển AI có trách nhiệm bằng cách sử dụng các công cụ và khuôn khổ đã được đề cập trong các chương trước. Hiểu các nguyên tắc này là cần thiết để xây dựng các hệ thống AI không chỉ ấn tượng về kỹ thuật mà còn an toàn, đạo đức và đáng tin cậy.
 
-**Những Gì GitHub Models Bảo Vệ Chống Lại:**
-- **Nội Dung Gây Hại**: Chặn các nội dung bạo lực, khiêu dâm hoặc nguy hiểm rõ ràng
-- **Ngôn Từ Thù Hận Cơ Bản**: Lọc các ngôn từ phân biệt rõ ràng
-- **Các Cách Lách Luật Đơn Giản**: Chống lại các nỗ lực cơ bản nhằm vượt qua các biện pháp bảo vệ
+## GitHub Models Built-in Safety
 
-## Ví Dụ Thực Tế: Demo An Toàn AI Có Trách Nhiệm
+GitHub Models đi kèm với bộ lọc nội dung cơ bản ngay khi sử dụng. Nó như một nhân viên bảo vệ thân thiện tại câu lạc bộ AI của bạn — không phải là tinh vi nhất, nhưng hoàn thành nhiệm vụ cho các kịch bản cơ bản.
 
-Chương này bao gồm một minh họa thực tế về cách GitHub Models triển khai các biện pháp an toàn AI có trách nhiệm bằng cách kiểm tra các lời nhắc có thể vi phạm các nguyên tắc an toàn.
+**GitHub Models bảo vệ khỏi:**
+- **Nội dung có hại**: Chặn các nội dung bạo lực, tình dục hoặc nguy hiểm rõ ràng
+- **Lời nói thù địch cơ bản**: Lọc các ngôn ngữ phân biệt rõ ràng
+- **Các nỗ lực bẻ khóa đơn giản**: Chống lại các cố gắng cơ bản để vượt qua các hàng rào an toàn
 
-### Những Gì Demo Thể Hiện
+## Practical Example: Responsible AI Safety Demo
 
-Lớp `ResponsibleGithubModels` thực hiện theo luồng sau:
+Chương này bao gồm một ví dụ thực hành về cách GitHub Models triển khai các biện pháp an toàn AI có trách nhiệm bằng cách thử nghiệm các lời nhắc có thể vi phạm các nguyên tắc an toàn.
+
+### What the Demo Shows
+
+Lớp `ResponsibleGithubModels` theo quy trình sau:
 1. Khởi tạo client GitHub Models với xác thực
-2. Kiểm tra các lời nhắc gây hại (bạo lực, ngôn từ thù hận, thông tin sai lệch, nội dung bất hợp pháp)
+2. Thử các lời nhắc có nội dung có hại (bạo lực, lời nói thù địch, thông tin sai lệch, nội dung bất hợp pháp)
 3. Gửi từng lời nhắc đến API GitHub Models
-4. Xử lý phản hồi: chặn cứng (lỗi HTTP), từ chối mềm (phản hồi lịch sự "Tôi không thể hỗ trợ"), hoặc tạo nội dung bình thường
-5. Hiển thị kết quả cho biết nội dung nào bị chặn, từ chối hoặc được phép
-6. Kiểm tra nội dung an toàn để so sánh
+4. Xử lý phản hồi: chặn cứng (lỗi HTTP), từ chối nhẹ nhàng (phản hồi lịch sự như "Tôi không thể hỗ trợ"), hoặc tạo nội dung bình thường
+5. Hiển thị kết quả cho thấy nội dung nào bị chặn, từ chối hay được phép
+6. Thử nội dung an toàn để so sánh
 
-![Demo An Toàn AI Có Trách Nhiệm](../../../translated_images/vi/responsible.e4f51a917bafa4bf.webp)
+![Responsible AI Safety Demo](../../../translated_images/vi/responsible.e4f51a917bafa4bf.webp)
 
-### Hướng Dẫn Cài Đặt
+### Setup Instructions
 
-1. **Đặt GitHub Personal Access Token của bạn:**
+1. **Đặt mã truy cập cá nhân GitHub của bạn:**
    
    Trên Windows (Command Prompt):
    ```cmd
@@ -70,9 +75,9 @@ Lớp `ResponsibleGithubModels` thực hiện theo luồng sau:
    export GITHUB_TOKEN=your_github_token_here
    ```   
 
-### Chạy Demo
+### Running the Demo
 
-1. **Đi đến thư mục examples:**
+1. **Chuyển đến thư mục examples:**
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
@@ -82,15 +87,15 @@ Lớp `ResponsibleGithubModels` thực hiện theo luồng sau:
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
-### Kết Quả Mong Đợi
+### Expected Output
 
-Demo sẽ kiểm tra các loại lời nhắc có khả năng gây hại và hiển thị cách hoạt động của cơ chế an toàn AI hiện đại thông qua hai cơ chế:
+Demo sẽ thử nghiệm các loại lời nhắc có thể gây hại và thể hiện cách an toàn AI hiện đại hoạt động qua hai cơ chế:
 
-- **Chặn Cứng**: Lỗi HTTP 400 khi nội dung bị chặn bởi bộ lọc an toàn trước khi đến mô hình
-- **Từ Chối Mềm**: Mô hình phản hồi bằng cách từ chối lịch sự như "Tôi không thể hỗ trợ điều đó" (phổ biến nhất với các mô hình hiện đại)
+- **Chặn cứng**: lỗi HTTP 400 khi nội dung bị bộ lọc an toàn chặn trước khi đến mô hình
+- **Từ chối nhẹ nhàng**: mô hình trả lời với các từ chối lịch sự như "Tôi không thể hỗ trợ điều đó" (phổ biến nhất với các mô hình hiện đại)
 - **Nội dung an toàn** nhận được phản hồi bình thường
 
-Định dạng kết quả mẫu:
+Mẫu định dạng output:
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -108,66 +113,66 @@ Status: Response generated successfully
 ────────────────────────────────────────────────────────────
 ```
 
-**Lưu ý**: Cả chặn cứng và từ chối mềm đều cho thấy hệ thống an toàn đang hoạt động đúng cách.
+**Lưu ý**: Cả chặn cứng và từ chối nhẹ đều cho thấy hệ thống an toàn hoạt động đúng.
 
-## Thực Hành Tốt Nhất Trong Phát Triển AI Có Trách Nhiệm
+## Best Practices for Responsible AI Development
 
-Khi xây dựng các ứng dụng AI, hãy tuân theo các thực hành thiết yếu sau:
+Khi xây dựng các ứng dụng AI, hãy tuân thủ các thực hành thiết yếu sau:
 
-1. **Luôn xử lý phản hồi từ bộ lọc an toàn một cách hợp lý**
-   - Triển khai xử lý lỗi phù hợp cho nội dung bị chặn
+1. **Luôn xử lý phản hồi từ bộ lọc an toàn một cách khéo léo**
+   - Thực hiện xử lý lỗi phù hợp cho các nội dung bị chặn
    - Cung cấp phản hồi có ý nghĩa cho người dùng khi nội dung bị lọc
 
-2. **Triển khai thêm các biện pháp xác thực nội dung của riêng bạn khi cần thiết**
+2. **Triển khai thêm xác thực nội dung dựa trên phạm vi phù hợp**
    - Thêm các kiểm tra an toàn theo lĩnh vực cụ thể
-   - Tạo các quy tắc xác thực tùy chỉnh cho trường hợp sử dụng của bạn
+   - Tạo quy tắc xác thực tùy chỉnh cho trường hợp sử dụng của bạn
 
 3. **Giáo dục người dùng về việc sử dụng AI có trách nhiệm**
-   - Cung cấp các hướng dẫn rõ ràng về việc sử dụng chấp nhận được
+   - Cung cấp các hướng dẫn rõ ràng về cách sử dụng chấp nhận được
    - Giải thích lý do tại sao một số nội dung có thể bị chặn
 
-4. **Theo dõi và ghi lại các sự cố an toàn để cải thiện**
+4. **Theo dõi và ghi lại các sự cố an toàn để cải tiến**
    - Theo dõi các mẫu nội dung bị chặn
    - Liên tục cải thiện các biện pháp an toàn của bạn
 
-5. **Tuân thủ chính sách nội dung của nền tảng**
-   - Cập nhật các hướng dẫn của nền tảng
-   - Tuân thủ các điều khoản dịch vụ và hướng dẫn đạo đức
+5. **Tôn trọng chính sách nội dung của nền tảng**
+   - Cập nhật các quy định của nền tảng
+   - Tuân theo các điều khoản dịch vụ và các nguyên tắc đạo đức
 
-## Lưu Ý Quan Trọng
+## Important Note
 
-Ví dụ này sử dụng các lời nhắc có vấn đề một cách có chủ ý chỉ nhằm mục đích giáo dục. Mục tiêu là để minh họa các biện pháp an toàn, không phải để vượt qua chúng. Luôn sử dụng các công cụ AI một cách có trách nhiệm và đạo đức.
+Ví dụ này sử dụng các lời nhắc có vấn đề cố ý chỉ nhằm mục đích giáo dục. Mục tiêu là để minh họa các biện pháp an toàn, không phải để vượt qua chúng. Luôn sử dụng các công cụ AI một cách có trách nhiệm và đạo đức.
 
-## Tóm Tắt
+## Summary
 
-**Chúc mừng!** Bạn đã hoàn thành:
+**Chúc mừng!** Bạn đã thành công:
 
 - **Triển khai các biện pháp an toàn AI** bao gồm lọc nội dung và xử lý phản hồi an toàn
-- **Áp dụng các nguyên tắc AI có trách nhiệm** để xây dựng các hệ thống AI đạo đức và đáng tin cậy
-- **Kiểm tra các cơ chế an toàn** bằng cách sử dụng các khả năng bảo vệ tích hợp của GitHub Models
-- **Học các thực hành tốt nhất** trong phát triển và triển khai AI có trách nhiệm
+- **Áp dụng các nguyên tắc AI có trách nhiệm** để xây dựng hệ thống AI đạo đức và đáng tin cậy
+- **Kiểm thử các cơ chế an toàn** bằng cách sử dụng các khả năng bảo vệ tích hợp của GitHub Models
+- **Học các thực hành tốt nhất** cho phát triển và triển khai AI có trách nhiệm
 
-**Tài Nguyên AI Có Trách Nhiệm:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Tìm hiểu cách tiếp cận của Microsoft đối với bảo mật, quyền riêng tư và tuân thủ
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Khám phá các nguyên tắc và thực hành của Microsoft trong phát triển AI có trách nhiệm
+**Tài nguyên AI có trách nhiệm:**
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Tìm hiểu về cách Microsoft tiếp cận bảo mật, quyền riêng tư và tuân thủ
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Khám phá các nguyên tắc và thực hành của Microsoft cho phát triển AI có trách nhiệm
 
-## Hoàn Thành Khóa Học
+## Course Completion
 
-Chúc mừng bạn đã hoàn thành khóa học AI Tạo Sinh cho Người Mới Bắt Đầu!
+Chúc mừng bạn đã hoàn thành khóa học Generative AI cho Người mới bắt đầu!
 
-![Hoàn Thành Khóa Học](../../../translated_images/vi/image.73c7e2ff4a652e77.webp)
+![Course Completion](../../../translated_images/vi/image.73c7e2ff4a652e77.webp)
 
 **Những gì bạn đã đạt được:**
-- Thiết lập môi trường phát triển của bạn
-- Học các kỹ thuật AI tạo sinh cốt lõi
+- Thiết lập môi trường phát triển
+- Học các kỹ thuật generative AI cốt lõi
 - Khám phá các ứng dụng AI thực tế
 - Hiểu các nguyên tắc AI có trách nhiệm
 
-## Bước Tiếp Theo
+## Next Steps
 
-Tiếp tục hành trình học AI của bạn với các tài nguyên bổ sung sau:
+Tiếp tục hành trình học AI của bạn với các tài nguyên bổ sung này:
 
-**Các Khóa Học Học Thêm:**
+**Khóa học học thêm:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
@@ -184,5 +189,9 @@ Tiếp tục hành trình học AI của bạn với các tài nguyên bổ sung
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, nhưng xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc sự không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn chính xác nhất. Đối với thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp của con người. Chúng tôi không chịu trách nhiệm đối với bất kỳ sự hiểu nhầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

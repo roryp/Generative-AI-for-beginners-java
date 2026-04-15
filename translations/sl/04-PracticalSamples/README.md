@@ -1,56 +1,64 @@
-# Praktične aplikacije in projekti
+# Praktične uporabe in projekti
+
+[![Praktične uporabe in projekti](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Praktične uporabe in projekti")
+
+> **Pregled videa:** [Poglejte "Praktične uporabe in projekti" na YouTube](https://www.youtube.com/watch?v=01vJsYei3H0).
 
 ## Kaj se boste naučili
-V tem poglavju bomo predstavili tri praktične aplikacije, ki prikazujejo vzorce razvoja generativne umetne inteligence z uporabo Jave:
-- Ustvarite večmodalni generator zgodb o hišnih ljubljenčkih, ki združuje AI na strani odjemalca in strežnika
-- Implementirajte integracijo lokalnega AI modela z demo aplikacijo Foundry Local Spring Boot
-- Razvijte storitev Model Context Protocol (MCP) z uporabo primera kalkulatorja
+V tem razdelku bomo predstavili tri praktične aplikacije, ki prikazujejo vzorce razvoja generativne AI z Javo:
+- Ustvarite večmodalni generator zgodb o hišnih ljubljenčkih, ki združuje AI na odjemalski in strežniški strani
+- Izvedite lokalno integracijo AI modela z demonstracijo Foundry Local Spring Boot
+- Razvijte storitev Model Context Protocol (MCP) z uporabo primera Kalkulator
 
-## Kazalo
+## Kazalo vsebine
 
-- [Uvod](../../../04-PracticalSamples)
-  - [Demo aplikacija Foundry Local Spring Boot](../../../04-PracticalSamples)
-  - [Generator zgodb o hišnih ljubljenčkih](../../../04-PracticalSamples)
-  - [MCP storitev kalkulatorja (prijazna začetnikom)](../../../04-PracticalSamples)
-- [Napredovanje učenja](../../../04-PracticalSamples)
-- [Povzetek](../../../04-PracticalSamples)
-- [Naslednji koraki](../../../04-PracticalSamples)
+- [Uvod](#uvod)
+  - [Demonstracija Foundry Local Spring Boot](#demonstracija-foundry-local-spring-boot)
+  - [Generator zgodb o hišnih ljubljenčkih](#generator-zgodb-o-hišnih-ljubljenčkih)
+  - [MCP kalkulator storitev (začetniška MCP demonstracija)](#mcp-kalkulator-storitev-začetniška-mcp-demonstracija)
+- [Potek učenja](#potek-učenja)
+- [Povzetek](#povzetek)
+- [Naslednji koraki](#naslednji-koraki)
 
 ## Uvod
 
-To poglavje prikazuje **primerne projekte**, ki demonstrirajo vzorce razvoja generativne umetne inteligence z uporabo Jave. Vsak projekt je popolnoma funkcionalen in prikazuje specifične AI tehnologije, arhitekturne vzorce ter najboljše prakse, ki jih lahko prilagodite za svoje aplikacije.
+Ta poglavje prikazuje **vzorne projekte**, ki demonstrirajo vzorce razvoja generativne AI z Javo. Vsak projekt je popolnoma funkcionalen in prikazuje specifične AI tehnologije, arhitekturne vzorce in dobre prakse, ki jih lahko prilagodite za svoje aplikacije.
 
-### Demo aplikacija Foundry Local Spring Boot
+### Demonstracija Foundry Local Spring Boot
 
-**[Demo aplikacija Foundry Local Spring Boot](foundrylocal/README.md)** prikazuje, kako se povezati z lokalnimi AI modeli z uporabo **OpenAI Java SDK**. Demonstrira povezovanje z modelom **Phi-3.5-mini**, ki teče na Foundry Local, kar omogoča izvajanje AI aplikacij brez odvisnosti od oblačnih storitev.
+**[Demonstracija Foundry Local Spring Boot](foundrylocal/README.md)** prikazuje, kako integrirati lokalne AI modele z uporabo **OpenAI Java SDK**. Prikazuje povezavo z modelom **Phi-3.5-mini**, ki teče na Foundry Local, kar omogoča izvajanje AI aplikacij brez potrebe po oblačnih storitvah.
 
 ### Generator zgodb o hišnih ljubljenčkih
 
-**[Generator zgodb o hišnih ljubljenčkih](petstory/README.md)** je privlačna spletna aplikacija Spring Boot, ki demonstrira **večmodalno AI obdelavo** za ustvarjanje kreativnih zgodb o hišnih ljubljenčkih. Združuje AI zmogljivosti na strani odjemalca in strežnika z uporabo transformer.js za interakcije v brskalniku ter OpenAI SDK za obdelavo na strežniku.
+**[Generator zgodb o hišnih ljubljenčkih](petstory/README.md)** je privlačna spletna aplikacija Spring Boot, ki prikazuje **večmodalno AI obdelavo** za ustvarjanje ustvarjalnih zgodb o hišnih ljubljenčkih. Združuje AI zmogljivosti na odjemalski in strežniški strani z uporabo transformer.js za AI interakcije v brskalniku in OpenAI SDK za strežniško obdelavo.
 
-### MCP storitev kalkulatorja (prijazna začetnikom)
+### MCP kalkulator storitev (začetniška MCP demonstracija)
 
-**[MCP storitev kalkulatorja](calculator/README.md)** je preprosta demonstracija **Model Context Protocol (MCP)** z uporabo Spring AI. Ponuja prijazen uvod v MCP koncepte, ki prikazuje, kako ustvariti osnovni MCP strežnik, ki komunicira z MCP odjemalci.
+**[MCP kalkulator storitev](calculator/README.md)** je preprosta predstavitev **Model Context Protocol (MCP)** z uporabo Spring AI. Ponuja začetniški uvod v koncepte MCP, prikazuje, kako ustvariti osnovni MCP strežnik, ki komunicira z MCP odjemalci.
 
-## Napredovanje učenja
+## Potek učenja
 
-Ti projekti so zasnovani tako, da gradijo na konceptih iz prejšnjih poglavij:
+Ti projekti gradijo na konceptih iz prejšnjih poglavij:
 
-1. **Začnite preprosto**: Začnite z demo aplikacijo Foundry Local Spring Boot, da razumete osnovno integracijo AI z lokalnimi modeli
-2. **Dodajte interaktivnost**: Nadaljujte z generatorjem zgodb o hišnih ljubljenčkih za večmodalno AI in spletne interakcije
-3. **Spoznajte osnove MCP**: Preizkusite MCP storitev kalkulatorja, da razumete temeljne principe Model Context Protocol
+1. **Začni preprosto**: Začni z demonstracijo Foundry Local Spring Boot, da razumeš osnovno integracijo AI z lokalnimi modeli
+2. **Dodaj interaktivnost**: Nadaljuj z Generatorjem zgodb o hišnih ljubljenčkih za večmodalno AI in spletne interakcije
+3. **Nauči se osnov MCP**: Preizkusi MCP kalkulator storitev, da razumeš osnove Model Context Protocola
 
 ## Povzetek
 
-Odlično delo! Zdaj ste raziskali nekaj resničnih aplikacij:
+Čestitke! Zdaj ste raziskali nekaj resničnih aplikacij:
 
 - Večmodalne AI izkušnje, ki delujejo tako v brskalniku kot na strežniku
-- Integracija lokalnih AI modelov z uporabo sodobnih Java ogrodij in SDK-jev
-- Vaša prva storitev Model Context Protocol, ki prikazuje, kako se orodja povezujejo z AI
+- Lokalna integracija AI modela z uporabo modernih Java ogrodij in SDK-jev
+- Prva storitev Model Context Protocol, da vidite, kako orodja integrirajo AI
 
 ## Naslednji koraki
 
-[5. poglavje: Odgovorna generativna umetna inteligenca](../05-ResponsibleGenAI/README.md)
+[Poglavje 5: Odgovorna generativna AI](../05-ResponsibleGenAI/README.md)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, bodite pozorni, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v izvirnem jeziku velja za avtoriziran vir. Za kritične informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

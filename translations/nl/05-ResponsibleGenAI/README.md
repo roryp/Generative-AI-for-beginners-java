@@ -1,55 +1,60 @@
-# Verantwoordelijke Generatieve AI
+# Verantwoord Generatieve AI
 
-## Wat Je Gaat Leren
+[![Responsible Generative AI](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
 
-- Leer de ethische overwegingen en beste praktijken die belangrijk zijn voor AI-ontwikkeling
-- Bouw contentfilters en veiligheidsmaatregelen in je applicaties
-- Test en beheer AI-veiligheidsreacties met behulp van de ingebouwde bescherming van GitHub Models
-- Pas principes van verantwoordelijke AI toe om veilige, ethische AI-systemen te creëren
+> **Video**: [Bekijk de video-overzicht voor deze les](https://www.youtube.com/watch?v=rF-b2BTSMQ4).
+> Je kunt ook op de miniatuurafbeelding hierboven klikken om dezelfde video te openen.
+
+## Wat je zult leren
+
+- Leer de ethische overwegingen en best practices die belangrijk zijn voor AI-ontwikkeling
+- Bouw contentfiltering en veiligheidsmaatregelen in je applicaties
+- Test en handel AI veiligheidsreacties af met de ingebouwde beschermingen van GitHub Models
+- Pas verantwoordelijke AI-principes toe om veilige, ethische AI-systemen te creëren
 
 ## Inhoudsopgave
 
-- [Introductie](../../../05-ResponsibleGenAI)
-- [Ingebouwde Veiligheid van GitHub Models](../../../05-ResponsibleGenAI)
-- [Praktisch Voorbeeld: Verantwoordelijke AI Veiligheidsdemo](../../../05-ResponsibleGenAI)
-  - [Wat de Demo Laat Zien](../../../05-ResponsibleGenAI)
-  - [Installatie-instructies](../../../05-ResponsibleGenAI)
-  - [De Demo Uitvoeren](../../../05-ResponsibleGenAI)
-  - [Verwachte Output](../../../05-ResponsibleGenAI)
-- [Beste Praktijken voor Verantwoordelijke AI Ontwikkeling](../../../05-ResponsibleGenAI)
-- [Belangrijke Opmerking](../../../05-ResponsibleGenAI)
-- [Samenvatting](../../../05-ResponsibleGenAI)
-- [Cursus Voltooiing](../../../05-ResponsibleGenAI)
-- [Volgende Stappen](../../../05-ResponsibleGenAI)
+- [Introductie](#introductie)
+- [GitHub Models Ingebouwde Veiligheid](#github-models-ingebouwde-veiligheid)
+- [Praktisch Voorbeeld: Responsible AI Safety Demo](#praktisch-voorbeeld-responsible-ai-safety-demo)
+  - [Wat de Demo Laat Zien](#wat-de-demo-laat-zien)
+  - [Installatie-instructies](#installatie-instructies)
+  - [De Demo Uitvoeren](#de-demo-uitvoeren)
+  - [Verwachte Output](#verwachte-output)
+- [Best Practices voor Verantwoorde AI-ontwikkeling](#best-practices-voor-verantwoorde-ai-ontwikkeling)
+- [Belangrijke Opmerking](#belangrijke-opmerking)
+- [Samenvatting](#samenvatting)
+- [Cursus Voltooiing](#cursus-voltooiing)
+- [Volgende Stappen](#volgende-stappen)
 
 ## Introductie
 
-Dit laatste hoofdstuk richt zich op de cruciale aspecten van het bouwen van verantwoordelijke en ethische generatieve AI-applicaties. Je leert hoe je veiligheidsmaatregelen implementeert, contentfilters beheert en beste praktijken toepast voor verantwoordelijke AI-ontwikkeling met behulp van de tools en frameworks die in eerdere hoofdstukken zijn behandeld. Het begrijpen van deze principes is essentieel voor het bouwen van AI-systemen die niet alleen technisch indrukwekkend zijn, maar ook veilig, ethisch en betrouwbaar.
+Dit laatste hoofdstuk richt zich op de cruciale aspecten van het bouwen van verantwoorde en ethische generatieve AI-toepassingen. Je leert hoe je veiligheidsmaatregelen implementeert, contentfiltering afhandelt en best practices toepast voor verantwoorde AI-ontwikkeling met behulp van de tools en frameworks die in eerdere hoofdstukken behandeld zijn. Het begrijpen van deze principes is essentieel voor het bouwen van AI-systemen die niet alleen technisch indrukwekkend zijn, maar ook veilig, ethisch en betrouwbaar.
 
-## Ingebouwde Veiligheid van GitHub Models
+## GitHub Models Ingebouwde Veiligheid
 
-GitHub Models heeft standaard basiscontentfilters ingebouwd. Het is alsof je een vriendelijke portier hebt bij je AI-club - niet de meest geavanceerde, maar voldoende voor eenvoudige scenario's.
+GitHub Models wordt standaard geleverd met basis contentfiltering. Het is als een vriendelijke portier bij je AI-club - niet de meest geavanceerde, maar doet zijn werk voor basale scenario's.
 
-**Wat GitHub Models Beschermt Tegen:**
-- **Schadelijke Inhoud**: Blokkeert duidelijke gewelddadige, seksuele of gevaarlijke inhoud
-- **Basis Haatspraak**: Filtert duidelijke discriminerende taal
-- **Eenvoudige Omzeilpogingen**: Weerstaat basispogingen om veiligheidsmaatregelen te omzeilen
+**Waar GitHub Models je tegen beschermt:**
+- **Schadelijke Inhoud**: Blokkeert duidelijke gewelddadige, seksuele of gevaarlijke content
+- **Eenvoudige Haatspraak**: Filtert duidelijke discriminerende taal
+- **Eenvoudige Jailbreaks**: Weert basale pogingen om veiligheidsmaatregelen te omzeilen
 
-## Praktisch Voorbeeld: Verantwoordelijke AI Veiligheidsdemo
+## Praktisch Voorbeeld: Responsible AI Safety Demo
 
-Dit hoofdstuk bevat een praktische demonstratie van hoe GitHub Models verantwoordelijke AI-veiligheidsmaatregelen implementeert door prompts te testen die mogelijk veiligheidsrichtlijnen schenden.
+Dit hoofdstuk bevat een praktische demonstratie van hoe GitHub Models verantwoordelijke AI-veiligheidsmaatregelen implementeert door prompts te testen die mogelijk veiligheidsrichtlijnen overtreden.
 
 ### Wat de Demo Laat Zien
 
-De `ResponsibleGithubModels`-klasse volgt deze stappen:
-1. Initialiseer de GitHub Models-client met authenticatie
-2. Test schadelijke prompts (geweld, haatspraak, verkeerde informatie, illegale inhoud)
-3. Stuur elke prompt naar de GitHub Models API
-4. Verwerk reacties: harde blokkeringen (HTTP-fouten), zachte weigeringen (beleefde "Ik kan daar niet mee helpen"-reacties) of normale contentgeneratie
-5. Toon resultaten die laten zien welke inhoud werd geblokkeerd, geweigerd of toegestaan
-6. Test veilige inhoud ter vergelijking
+De `ResponsibleGithubModels` klasse volgt dit proces:  
+1. Initialiseer GitHub Models client met authenticatie  
+2. Test schadelijke prompts (geweld, haatspraak, misinformatie, illegale content)  
+3. Verstuur elke prompt naar de GitHub Models API  
+4. Verwerk reacties: harde blokkades (HTTP-fouten), zachte weigeringen (beleefde "Ik kan niet helpen" antwoorden), of normale content generatie  
+5. Toon resultaten met welke content geblokkeerd, geweigerd of toegestaan is  
+6. Test veilige content ter vergelijking
 
-![Verantwoordelijke AI Veiligheidsdemo](../../../translated_images/nl/responsible.e4f51a917bafa4bf.webp)
+![Responsible AI Safety Demo](../../../translated_images/nl/responsible.e4f51a917bafa4bf.webp)
 
 ### Installatie-instructies
 
@@ -72,7 +77,7 @@ De `ResponsibleGithubModels`-klasse volgt deze stappen:
 
 ### De Demo Uitvoeren
 
-1. **Navigeer naar de voorbeeldenmap:**
+1. **Navigeer naar de examples map:**
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
@@ -84,13 +89,13 @@ De `ResponsibleGithubModels`-klasse volgt deze stappen:
 
 ### Verwachte Output
 
-De demo zal verschillende soorten mogelijk schadelijke prompts testen en laten zien hoe moderne AI-veiligheid werkt via twee mechanismen:
+De demo test verschillende soorten potentieel schadelijke prompts en laat zien hoe moderne AI-veiligheid werkt via twee mechanismen:
 
-- **Harde Blokkeringen**: HTTP 400-fouten wanneer inhoud wordt geblokkeerd door veiligheidsfilters voordat het de model bereikt
-- **Zachte Weigeringen**: Het model reageert met beleefde weigeringen zoals "Ik kan daar niet mee helpen" (meest voorkomend bij moderne modellen)
-- **Veilige inhoud** die een normale reactie krijgt
+- **Harde blokkades**: HTTP 400 fouten wanneer content geblokkeerd wordt door veiligheidsfilters voordat het model bereikt wordt  
+- **Zachte weigeringen**: Het model reageert met beleefde weigeringen zoals "Ik kan daarbij niet helpen" (meest voorkomend bij moderne modellen)  
+- **Veilige content** die een normale reactie krijgt
 
-Voorbeeld outputformaat:
+Voorbeeld output formaat:
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -108,81 +113,85 @@ Status: Response generated successfully
 ────────────────────────────────────────────────────────────
 ```
 
-**Opmerking**: Zowel harde blokkeringen als zachte weigeringen geven aan dat het veiligheidssysteem correct werkt.
+**Opmerking**: Zowel harde blokkades als zachte weigeringen geven aan dat het veiligheidssysteem correct werkt.
 
-## Beste Praktijken voor Verantwoordelijke AI Ontwikkeling
+## Best Practices voor Verantwoorde AI-ontwikkeling
 
-Bij het bouwen van AI-applicaties, volg deze essentiële praktijken:
+Wanneer je AI-toepassingen bouwt, volg dan deze essentiële praktijken:
 
-1. **Behandel mogelijke reacties van veiligheidsfilters altijd op een nette manier**
-   - Implementeer correcte foutafhandeling voor geblokkeerde inhoud
-   - Geef gebruikers zinvolle feedback wanneer inhoud wordt gefilterd
+1. **Handel altijd mogelijke veiligheidsfilter reacties op een nette manier af**  
+   - Implementeer correcte foutafhandeling voor geblokkeerde content  
+   - Geef betekenisvolle feedback aan gebruikers als content gefilterd wordt  
 
-2. **Implementeer waar nodig je eigen aanvullende contentvalidatie**
-   - Voeg domeinspecifieke veiligheidscontroles toe
-   - Maak aangepaste validatieregels voor jouw gebruikssituatie
+2. **Voer waar nodig je eigen aanvullende contentvalidatie uit**  
+   - Voeg domeinspecifieke veiligheidscontroles toe  
+   - Maak aangepaste validatieregels voor je use case
 
-3. **Educateer gebruikers over verantwoord AI-gebruik**
-   - Geef duidelijke richtlijnen over acceptabel gebruik
-   - Leg uit waarom bepaalde inhoud mogelijk wordt geblokkeerd
+3. **Informeer gebruikers over verantwoord AI-gebruik**  
+   - Bied duidelijke richtlijnen over acceptabel gebruik  
+   - Leg uit waarom bepaalde content geblokkeerd kan worden
 
-4. **Monitor en log veiligheidsincidenten voor verbetering**
-   - Houd patronen van geblokkeerde inhoud bij
-   - Verbeter je veiligheidsmaatregelen continu
+4. **Monitor en log veiligheidsincidenten voor verbetering**  
+   - Volg patronen van geblokkeerde content  
+   - Verbeter continu je veiligheidsmaatregelen
 
-5. **Respecteer de contentbeleid van het platform**
-   - Blijf op de hoogte van platformrichtlijnen
-   - Volg de gebruiksvoorwaarden en ethische richtlijnen
+5. **Respecteer het contentbeleid van het platform**  
+   - Blijf op de hoogte van platformrichtlijnen  
+   - Volg servicevoorwaarden en ethische richtlijnen
 
 ## Belangrijke Opmerking
 
-Dit voorbeeld gebruikt opzettelijk problematische prompts uitsluitend voor educatieve doeleinden. Het doel is om veiligheidsmaatregelen te demonstreren, niet om ze te omzeilen. Gebruik AI-tools altijd op een verantwoorde en ethische manier.
+In dit voorbeeld worden bewust problematische prompts gebruikt enkel voor educatieve doeleinden. Het doel is het demonstreren van veiligheidsmaatregelen, niet deze te omzeilen. Gebruik AI-tools altijd verantwoordelijk en ethisch.
 
 ## Samenvatting
 
 **Gefeliciteerd!** Je hebt succesvol:
 
-- **AI-veiligheidsmaatregelen geïmplementeerd**, inclusief contentfilters en het afhandelen van veiligheidsreacties
-- **Principes van verantwoordelijke AI toegepast** om ethische en betrouwbare AI-systemen te bouwen
-- **Veiligheidsmechanismen getest** met behulp van de ingebouwde beschermingsmogelijkheden van GitHub Models
-- **Beste praktijken geleerd** voor verantwoordelijke AI-ontwikkeling en implementatie
+- **Veiligheidsmaatregelen voor AI geïmplementeerd** inclusief contentfiltering en afhandeling van veiligheidsreacties  
+- **Verantwoordelijke AI-principes toegepast** om ethische en betrouwbare AI-systemen te bouwen  
+- **Veiligheidsmechanisme getest** met de ingebouwde beschermingsmogelijkheden van GitHub Models  
+- **Best practices geleerd** voor verantwoorde AI-ontwikkeling en -uitrol
 
-**Verantwoordelijke AI Bronnen:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Leer meer over Microsoft's aanpak van beveiliging, privacy en compliance
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Ontdek Microsoft's principes en praktijken voor verantwoordelijke AI-ontwikkeling
+**Verantwoorde AI Bronnen:**  
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Leer over Microsofts aanpak van beveiliging, privacy en compliance  
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Verken Microsofts principes en praktijken voor verantwoorde AI-ontwikkeling
 
 ## Cursus Voltooiing
 
-Gefeliciteerd met het voltooien van de Generatieve AI voor Beginners-cursus!
+Gefeliciteerd met het afronden van de Generative AI for Beginners cursus!
 
-![Cursus Voltooiing](../../../translated_images/nl/image.73c7e2ff4a652e77.webp)
+![Course Completion](../../../translated_images/nl/image.73c7e2ff4a652e77.webp)
 
-**Wat je hebt bereikt:**
-- Je ontwikkelomgeving opgezet
-- Kerntechnieken van generatieve AI geleerd
-- Praktische AI-toepassingen verkend
-- Principes van verantwoordelijke AI begrepen
+**Wat je bereikt hebt:**  
+- Je ontwikkelomgeving opgezet  
+- Kerntechnieken van generatieve AI geleerd  
+- Praktische AI-toepassingen verkend  
+- Principes van verantwoorde AI begrepen
 
 ## Volgende Stappen
 
 Ga verder met je AI-leertraject met deze aanvullende bronnen:
 
-**Aanvullende Leerprogramma's:**
-- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML for Beginners](https://aka.ms/ml-beginners)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)
-- [AI for Beginners](https://aka.ms/ai-beginners)
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
+**Aanvullende Leer Cursussen:**  
+- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)  
+- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
+- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)  
+- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)  
+- [ML for Beginners](https://aka.ms/ml-beginners)  
+- [Data Science for Beginners](https://aka.ms/datascience-beginners)  
+- [AI for Beginners](https://aka.ms/ai-beginners)  
+- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)  
+- [Web Dev for Beginners](https://aka.ms/webdev-beginners)  
+- [IoT for Beginners](https://aka.ms/iot-beginners)  
+- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)  
+- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)  
+- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
+- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)  
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

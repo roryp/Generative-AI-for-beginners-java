@@ -1,56 +1,64 @@
-# Applications Pratiques & Projets
+# Applications pratiques et projets
 
-## Ce Que Vous Allez Apprendre
-Dans cette section, nous allons présenter trois applications pratiques illustrant des modèles de développement d'IA générative avec Java :
-- Créer un générateur d'histoires pour animaux de compagnie multi-modal combinant IA côté client et côté serveur
-- Implémenter l'intégration de modèles d'IA locaux avec la démo Foundry Local Spring Boot
-- Développer un service Model Context Protocol (MCP) avec l'exemple de la calculatrice
+[![Applications pratiques et projets](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Applications pratiques et projets")
 
-## Table des Matières
+> **Aperçu vidéo :** [Regardez "Applications pratiques et projets" sur YouTube](https://www.youtube.com/watch?v=01vJsYei3H0).
 
-- [Introduction](../../../04-PracticalSamples)
-  - [Démo Foundry Local Spring Boot](../../../04-PracticalSamples)
-  - [Générateur d'Histoires pour Animaux de Compagnie](../../../04-PracticalSamples)
-  - [Service MCP Calculatrice (Démo MCP pour Débutants)](../../../04-PracticalSamples)
-- [Progression de l'Apprentissage](../../../04-PracticalSamples)
-- [Résumé](../../../04-PracticalSamples)
-- [Prochaines Étapes](../../../04-PracticalSamples)
+## Ce que vous apprendrez
+Dans cette section, nous présenterons trois applications pratiques qui illustrent les modèles de développement d'IA générative avec Java :
+- Créer un générateur d'histoires pour animaux domestiques multimodal combinant IA côté client et côté serveur
+- Implémenter l'intégration locale de modèles IA avec la démo Foundry Local Spring Boot
+- Développer un service Model Context Protocol (MCP) avec l'exemple Calculatrice
+
+## Table des matières
+
+- [Introduction](#introduction)
+  - [Démo Foundry Local Spring Boot](#démo-foundry-local-spring-boot)
+  - [Générateur d'histoires pour animaux domestiques](#générateur-dhistoires-pour-animaux-domestiques)
+  - [Service MCP Calculatrice (démo MCP accessible aux débutants)](#service-mcp-calculatrice-démo-mcp-accessible-aux-débutants)
+- [Progression d'apprentissage](#progression-dapprentissage)
+- [Résumé](#résumé)
+- [Étapes suivantes](#étapes-suivantes)
 
 ## Introduction
 
-Ce chapitre présente des **projets exemples** qui illustrent des modèles de développement d'IA générative avec Java. Chaque projet est entièrement fonctionnel et met en avant des technologies d'IA spécifiques, des modèles architecturaux, et des bonnes pratiques que vous pouvez adapter à vos propres applications.
+Ce chapitre présente des **projets d'exemple** qui démontrent les modèles de développement d'IA générative avec Java. Chaque projet est entièrement fonctionnel et illustre des technologies IA spécifiques, des modèles architecturaux et des bonnes pratiques que vous pouvez adapter à vos propres applications.
 
 ### Démo Foundry Local Spring Boot
 
-La **[Démo Foundry Local Spring Boot](foundrylocal/README.md)** montre comment intégrer des modèles d'IA locaux en utilisant le **OpenAI Java SDK**. Elle illustre la connexion au modèle **Phi-3.5-mini** exécuté sur Foundry Local, vous permettant de développer des applications d'IA sans dépendre des services cloud.
+La **[Démo Foundry Local Spring Boot](foundrylocal/README.md)** montre comment s'intégrer avec des modèles IA locaux en utilisant le **SDK Java OpenAI**. Elle présente la connexion au modèle **Phi-3.5-mini** exécuté sur Foundry Local, vous permettant d'exécuter des applications IA sans dépendre des services cloud.
 
-### Générateur d'Histoires pour Animaux de Compagnie
+### Générateur d'histoires pour animaux domestiques
 
-Le **[Générateur d'Histoires pour Animaux de Compagnie](petstory/README.md)** est une application web Spring Boot captivante qui démontre le **traitement multi-modal par l'IA** pour générer des histoires créatives sur les animaux de compagnie. Elle combine des capacités d'IA côté client et côté serveur en utilisant transformer.js pour les interactions IA dans le navigateur et le SDK OpenAI pour le traitement côté serveur.
+Le **[Générateur d'histoires pour animaux domestiques](petstory/README.md)** est une application web Spring Boot engageante qui démontre le **traitement IA multimodal** pour générer des histoires créatives d'animaux domestiques. Il combine les capacités IA côté client et côté serveur en utilisant transformer.js pour les interactions IA côté navigateur et le SDK OpenAI pour le traitement côté serveur.
 
-### Service MCP Calculatrice (Démo MCP pour Débutants)
+### Service MCP Calculatrice (démo MCP accessible aux débutants)
 
-Le **[Service MCP Calculatrice](calculator/README.md)** est une démonstration simple du **Model Context Protocol (MCP)** utilisant Spring AI. Il offre une introduction accessible aux concepts MCP, en montrant comment créer un serveur MCP de base qui interagit avec des clients MCP.
+Le **[Service MCP Calculatrice](calculator/README.md)** est une démonstration simple du **Model Context Protocol (MCP)** utilisant Spring AI. Il offre une introduction accessible aux concepts MCP, montrant comment créer un serveur MCP basique qui interagit avec des clients MCP.
 
-## Progression de l'Apprentissage
+## Progression d'apprentissage
 
 Ces projets sont conçus pour s'appuyer sur les concepts des chapitres précédents :
 
-1. **Commencez Simple** : Débutez avec la Démo Foundry Local Spring Boot pour comprendre l'intégration de base de l'IA avec des modèles locaux
-2. **Ajoutez de l'Interactivité** : Passez au Générateur d'Histoires pour Animaux de Compagnie pour explorer l'IA multi-modale et les interactions web
-3. **Apprenez les Bases du MCP** : Essayez le Service MCP Calculatrice pour comprendre les fondamentaux du Model Context Protocol
+1. **Commencer simple** : débutez avec la démo Foundry Local Spring Boot pour comprendre l'intégration IA basique avec des modèles locaux
+2. **Ajouter l'interactivité** : passez au Générateur d'histoires pour animaux domestiques pour le traitement IA multimodal et les interactions web
+3. **Apprendre les bases du MCP** : essayez le service MCP Calculatrice pour comprendre les fondamentaux du Model Context Protocol
 
 ## Résumé
 
 Bravo ! Vous avez maintenant exploré des applications concrètes :
 
-- Des expériences d'IA multi-modales fonctionnant à la fois dans le navigateur et sur le serveur
-- L'intégration de modèles d'IA locaux en utilisant des frameworks et SDK Java modernes
-- Votre premier service Model Context Protocol pour voir comment les outils s'intègrent avec l'IA
+- Des expériences IA multimodales qui fonctionnent à la fois dans le navigateur et sur le serveur
+- L'intégration locale de modèles IA en utilisant des frameworks Java modernes et des SDK
+- Votre premier service Model Context Protocol pour voir comment les outils s’intègrent avec l’IA
 
-## Prochaines Étapes
+## Étapes suivantes
 
-[Chapitre 5 : IA Générative Responsable](../05-ResponsibleGenAI/README.md)
+[Chapitre 5 : IA générative responsable](../05-ResponsibleGenAI/README.md)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l’aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue native doit être considéré comme la source faisant foi. Pour les informations critiques, une traduction professionnelle humaine est recommandée. Nous déclinons toute responsabilité en cas de malentendus ou d’interprétations erronées résultant de l’utilisation de cette traduction.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

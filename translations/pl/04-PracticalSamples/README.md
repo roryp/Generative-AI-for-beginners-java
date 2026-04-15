@@ -1,56 +1,64 @@
-# Praktyczne Zastosowania i Projekty
+# Praktyczne zastosowania i projekty
+
+[![Praktyczne zastosowania i projekty](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Praktyczne zastosowania i projekty")
+
+> **Przegląd wideo:** [Obejrzyj "Praktyczne zastosowania i projekty" na YouTube](https://www.youtube.com/watch?v=01vJsYei3H0).
 
 ## Czego się nauczysz
-W tej sekcji zaprezentujemy trzy praktyczne aplikacje, które pokazują wzorce rozwoju generatywnej sztucznej inteligencji z użyciem Javy:
-- Tworzenie wielomodalnego Generatora Opowieści o Zwierzakach, łączącego AI po stronie klienta i serwera
-- Implementacja integracji z lokalnym modelem AI za pomocą demonstracji Foundry Local Spring Boot
-- Opracowanie usługi Model Context Protocol (MCP) na przykładzie Kalkulatora
+W tej sekcji zaprezentujemy trzy praktyczne zastosowania, które pokazują wzorce tworzenia generatywnej AI w Javie:
+- Utworzenie wielomodalnego generatora opowieści o zwierzętach łączącego AI po stronie klienta i serwera
+- Implementacja lokalnej integracji modelu AI z demonstracją Foundry Local Spring Boot
+- Opracowanie usługi Model Context Protocol (MCP) na przykładzie kalkulatora
 
 ## Spis treści
 
-- [Wprowadzenie](../../../04-PracticalSamples)
-  - [Demonstracja Foundry Local Spring Boot](../../../04-PracticalSamples)
-  - [Generator Opowieści o Zwierzakach](../../../04-PracticalSamples)
-  - [Usługa MCP Kalkulator (Przyjazna dla Początkujących Demonstracja MCP)](../../../04-PracticalSamples)
-- [Postęp w nauce](../../../04-PracticalSamples)
-- [Podsumowanie](../../../04-PracticalSamples)
-- [Kolejne kroki](../../../04-PracticalSamples)
+- [Wprowadzenie](#wprowadzenie)
+  - [Demonstracja Foundry Local Spring Boot](#demonstracja-foundry-local-spring-boot)
+  - [Generator opowieści o zwierzętach](#generator-opowieści-o-zwierzętach)
+  - [Usługa MCP Calculator (przyjazna dla początkujących demonstracja MCP)](#usługa-mcp-calculator-przyjazna-dla-początkujących-demonstracja-mcp)
+- [Postęp w nauce](#postęp-w-nauce)
+- [Podsumowanie](#podsumowanie)
+- [Kolejne kroki](#kolejne-kroki)
 
 ## Wprowadzenie
 
-Ten rozdział przedstawia **przykładowe projekty**, które demonstrują wzorce rozwoju generatywnej sztucznej inteligencji z użyciem Javy. Każdy projekt jest w pełni funkcjonalny i ilustruje konkretne technologie AI, wzorce architektoniczne oraz najlepsze praktyki, które możesz zaadaptować do własnych aplikacji.
+Ten rozdział prezentuje **przykładowe projekty**, które demonstrują wzorce tworzenia generatywnej AI w Javie. Każdy projekt jest w pełni funkcjonalny i pokazuje konkretne technologie AI, wzorce architektoniczne oraz najlepsze praktyki, które możesz zastosować we własnych aplikacjach.
 
 ### Demonstracja Foundry Local Spring Boot
 
-**[Demonstracja Foundry Local Spring Boot](foundrylocal/README.md)** pokazuje, jak integrować się z lokalnymi modelami AI za pomocą **OpenAI Java SDK**. Prezentuje połączenie z modelem **Phi-3.5-mini** działającym na Foundry Local, co pozwala na uruchamianie aplikacji AI bez konieczności korzystania z usług w chmurze.
+**[Demonstracja Foundry Local Spring Boot](foundrylocal/README.md)** pokazuje, jak integrować się z lokalnymi modelami AI za pomocą **OpenAI Java SDK**. Demonstruje łączenie z modelem **Phi-3.5-mini** działającym na Foundry Local, co pozwala uruchamiać aplikacje AI bez konieczności korzystania z usług chmurowych.
 
-### Generator Opowieści o Zwierzakach
+### Generator opowieści o zwierzętach
 
-**[Generator Opowieści o Zwierzakach](petstory/README.md)** to angażująca aplikacja webowa oparta na Spring Boot, która demonstruje **wielomodalne przetwarzanie AI** do generowania kreatywnych opowieści o zwierzakach. Łączy możliwości AI po stronie klienta i serwera, wykorzystując transformer.js do interakcji w przeglądarce oraz OpenAI SDK do przetwarzania po stronie serwera.
+**[Generator opowieści o zwierzętach](petstory/README.md)** to angażująca aplikacja webowa Spring Boot, która demonstruje **wielomodalne przetwarzanie AI** do generowania kreatywnych historii o zwierzętach. Łączy możliwości AI po stronie klienta i serwera, wykorzystując transformer.js do interakcji AI w przeglądarce oraz OpenAI SDK do przetwarzania po stronie serwera.
 
-### Usługa MCP Kalkulator (Przyjazna dla Początkujących Demonstracja MCP)
+### Usługa MCP Calculator (przyjazna dla początkujących demonstracja MCP)
 
-**[Usługa MCP Kalkulator](calculator/README.md)** to prosta demonstracja **Model Context Protocol (MCP)** z użyciem Spring AI. Zapewnia przyjazne dla początkujących wprowadzenie do koncepcji MCP, pokazując, jak stworzyć podstawowy serwer MCP, który współpracuje z klientami MCP.
+**[Usługa MCP Calculator](calculator/README.md)** to prosta demonstracja **Model Context Protocol (MCP)** z użyciem Spring AI. Stanowi wprowadzenie dla początkujących do koncepcji MCP, pokazując jak utworzyć podstawowy serwer MCP, który komunikuje się z klientami MCP.
 
 ## Postęp w nauce
 
-Te projekty zostały zaprojektowane tak, aby budować wiedzę krok po kroku:
+Projekty te zostały zaprojektowane tak, aby rozwijać koncepcje z poprzednich rozdziałów:
 
 1. **Zacznij od podstaw**: Rozpocznij od demonstracji Foundry Local Spring Boot, aby zrozumieć podstawową integrację AI z lokalnymi modelami
-2. **Dodaj interaktywność**: Przejdź do Generatora Opowieści o Zwierzakach, aby poznać wielomodalne AI i interakcje webowe
-3. **Poznaj podstawy MCP**: Wypróbuj Usługę MCP Kalkulator, aby zrozumieć fundamenty Model Context Protocol
+2. **Dodaj interaktywność**: Przejdź do Generatora opowieści o zwierzętach, aby poznać wielomodalną AI i interakcje webowe
+3. **Poznaj podstawy MCP**: Wypróbuj usługę MCP Calculator, aby zrozumieć fundamenty Model Context Protocol
 
 ## Podsumowanie
 
-Świetna robota! Poznałeś teraz kilka rzeczywistych zastosowań:
+Dobra robota! Teraz zapoznałeś się z prawdziwymi zastosowaniami:
 
-- Wielomodalne doświadczenia AI, które działają zarówno w przeglądarce, jak i na serwerze
-- Integrację z lokalnymi modelami AI przy użyciu nowoczesnych frameworków i SDK w Javie
-- Swoją pierwszą usługę Model Context Protocol, aby zobaczyć, jak narzędzia integrują się z AI
+- Wielomodalne doświadczenia AI działające zarówno w przeglądarce, jak i na serwerze
+- Integracja lokalnych modeli AI z użyciem nowoczesnych frameworków Java i SDK
+- Twoja pierwsza usługa Model Context Protocol, by zobaczyć, jak narzędzia współpracują z AI
 
 ## Kolejne kroki
 
-[Rozdział 5: Odpowiedzialna Generatywna Sztuczna Inteligencja](../05-ResponsibleGenAI/README.md)
+[Rozdział 5: Odpowiedzialna generatywna AI](../05-ResponsibleGenAI/README.md)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+Ten dokument został przetłumaczony przy użyciu usług tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dążymy do dokładności, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku krytycznych informacji zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za wszelkie nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

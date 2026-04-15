@@ -1,56 +1,64 @@
 # Käytännön sovellukset ja projektit
 
+[![Käytännön sovellukset ja projektit](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Käytännön sovellukset ja projektit")
+
+> **Videokatsaus:** [Katso "Käytännön sovellukset ja projektit" YouTubesta](https://www.youtube.com/watch?v=01vJsYei3H0).
+
 ## Mitä opit
-Tässä osiossa esittelemme kolme käytännön sovellusta, jotka havainnollistavat generatiivisen tekoälyn kehitysmalleja Javalla:
-- Luodaan monimodaalinen lemmikkitarinageneraattori, joka yhdistää asiakas- ja palvelinpuolen tekoälyn
-- Toteutetaan paikallisen tekoälymallin integrointi Foundry Local Spring Boot -demon avulla
-- Kehitetään Model Context Protocol (MCP) -palvelu laskin-esimerkin avulla
+Tässä osiossa demonstroimme kolmea käytännön sovellusta, jotka esittelevät generatiivisen tekoälyn kehitysmalleja Javalla:
+- Luoda monimodaalinen lemmikkitarinageneraattori yhdistämällä asiakas- ja palvelinpuolen tekoälyt
+- Toteuttaa paikallinen tekoälymallin integraatio Foundry Local Spring Boot -demolla
+- Kehittää Model Context Protocol (MCP) -palvelu Calculator-esimerkin avulla
 
 ## Sisällysluettelo
 
-- [Johdanto](../../../04-PracticalSamples)
-  - [Foundry Local Spring Boot Demo](../../../04-PracticalSamples)
-  - [Lemmikkitarinageneraattori](../../../04-PracticalSamples)
-  - [MCP-laskinpalvelu (aloittelijaystävällinen MCP-demo)](../../../04-PracticalSamples)
-- [Oppimispolku](../../../04-PracticalSamples)
-- [Yhteenveto](../../../04-PracticalSamples)
-- [Seuraavat askeleet](../../../04-PracticalSamples)
+- [Johdanto](#johdanto)
+  - [Foundry Local Spring Boot Demo](#foundry-local-spring-boot-demo)
+  - [Lemmikkitarinageneraattori](#lemmikkitarinageneraattori)
+  - [MCP Calculator Service (aloittelijaystävällinen MCP-demo)](#mcp-calculator-service-aloittelijaystävällinen-mcp-demo)
+- [Oppimisen eteneminen](#oppimisen-eteneminen)
+- [Yhteenveto](#yhteenveto)
+- [Seuraavat askeleet](#seuraavat-askeleet)
 
 ## Johdanto
 
-Tämä luku esittelee **esimerkkiprojekteja**, jotka havainnollistavat generatiivisen tekoälyn kehitysmalleja Javalla. Jokainen projekti on täysin toimiva ja esittelee tiettyjä tekoälyteknologioita, arkkitehtuurimalleja ja parhaita käytäntöjä, joita voit hyödyntää omissa sovelluksissasi.
+Tässä luvussa esitellään **esimerkkiprojekteja**, jotka demonstroivat generatiivisen tekoälyn kehitysmalleja Javalla. Jokainen projekti on täysin toimiva ja esittelee tiettyjä tekoälyteknologioita, arkkitehtuurimalleja ja parhaita käytäntöjä, joita voit mukauttaa omiin sovelluksiisi.
 
 ### Foundry Local Spring Boot Demo
 
-**[Foundry Local Spring Boot Demo](foundrylocal/README.md)** havainnollistaa, kuinka paikallisia tekoälymalleja voidaan integroida käyttämällä **OpenAI Java SDK:ta**. Demo esittelee yhteyden **Phi-3.5-mini**-malliin, joka toimii Foundry Local -ympäristössä, mahdollistaen tekoälysovellusten ajamisen ilman pilvipalveluita.
+**[Foundry Local Spring Boot Demo](foundrylocal/README.md)** näyttää, miten integroida paikallisiin tekoälymalleihin käyttämällä **OpenAI Java SDK:ta**. Se havainnollistaa yhteyden muodostamista **Phi-3.5-mini** -malliin, joka toimii Foundry Localissa, mahdollistaen tekoälysovellusten ajamisen ilman pilvipalveluihin tukeutumista.
 
 ### Lemmikkitarinageneraattori
 
-**[Lemmikkitarinageneraattori](petstory/README.md)** on viihdyttävä Spring Boot -verkkosovellus, joka esittelee **monimodaalista tekoälyn käsittelyä** luovien lemmikkitarinoiden tuottamiseksi. Se yhdistää asiakas- ja palvelinpuolen tekoälyominaisuudet hyödyntäen transformer.js-kirjastoa selaimessa tapahtuvaan tekoälyvuorovaikutukseen ja OpenAI SDK:ta palvelinpuolen käsittelyyn.
+**[Lemmikkitarinageneraattori](petstory/README.md)** on mukaansatempaava Spring Boot -verkkosovellus, joka demonstroi **monimodaalista tekoälyn käsittelyä** luodakseen luovia lemmikkitarinoita. Se yhdistää asiakas- ja palvelinpuolen tekoälyominaisuuksia käyttäen transformer.js-kirjastoa selaimessa tapahtuvaan tekoälyvuorovaikutukseen ja OpenAI SDK:ta palvelinpuolen prosessointiin.
 
-### MCP-laskinpalvelu (aloittelijaystävällinen MCP-demo)
+### MCP Calculator Service (aloittelijaystävällinen MCP-demo)
 
-**[MCP-laskinpalvelu](calculator/README.md)** on yksinkertainen esimerkki **Model Context Protocol (MCP)** -konseptista Spring AI:n avulla. Se tarjoaa aloittelijaystävällisen johdatuksen MCP:n perusideoihin ja näyttää, kuinka luoda yksinkertainen MCP-palvelin, joka kommunikoi MCP-asiakkaiden kanssa.
+**[MCP Calculator Service](calculator/README.md)** on yksinkertainen demonstraatio **Model Context Protocolista (MCP)** käyttäen Spring AI -kirjastoa. Se tarjoaa aloittelijaystävällisen johdannon MCP-konsepteihin näyttäen, miten luodaan perus MCP-palvelin, joka kommunikoi MCP-asiakkaiden kanssa.
 
-## Oppimispolku
+## Oppimisen eteneminen
 
-Nämä projektit on suunniteltu rakentumaan aiempien lukujen konseptien päälle:
+Nämä projektit on suunniteltu rakentumaan aiempien lukujen käsitteiden päälle:
 
-1. **Aloita yksinkertaisesta**: Aloita Foundry Local Spring Boot -demosta ymmärtääksesi paikallisten tekoälymallien perusintegraation
-2. **Lisää vuorovaikutteisuutta**: Siirry lemmikkitarinageneraattoriin oppiaksesi monimodaalista tekoälyä ja verkkopohjaisia vuorovaikutuksia
-3. **Opettele MCP:n perusteet**: Kokeile MCP-laskinpalvelua ymmärtääksesi Model Context Protocol -konseptin perusperiaatteet
+1. **Aloita yksinkertaisesti**: Aloita Foundry Local Spring Boot Demolla ymmärtääksesi paikallisten mallien perusteet tekoälyintegraatiossa
+2. **Lisää interaktiivisuutta**: Etene Lemmikkitarinageneraattoriin monimodaalisen tekoälyn ja web-pohjaisten vuorovaikutusten pariin
+3. **Opiskele MCP:n perusteet**: Kokeile MCP Calculator Serviceä ymmärtääksesi Model Context Protocolin perusasiat
 
 ## Yhteenveto
 
-Hienoa työtä! Olet nyt tutustunut muutamiin todellisiin sovelluksiin:
+Hienoa työtä! Olet nyt tutustunut todellisiin sovelluksiin:
 
-- Monimodaalisiin tekoälykokemuksiin, jotka toimivat sekä selaimessa että palvelimella
-- Paikallisten tekoälymallien integrointiin modernien Java-kehysten ja SDK:iden avulla
-- Ensimmäiseen Model Context Protocol -palveluusi, joka näyttää, kuinka työkalut integroituvat tekoälyyn
+- Monimodaaliset tekoälykokemukset, jotka toimivat sekä selaimessa että palvelimella
+- Paikallisen tekoälymallin integrointi moderneilla Java-kehyksillä ja SDK:illa
+- Ensimmäinen Model Context Protocol -palvelusi nähdäksesi, miten työkalut integroituvat tekoälyyn
 
 ## Seuraavat askeleet
 
-[5. luku: Vastuullinen generatiivinen tekoäly](../05-ResponsibleGenAI/README.md)
+[Luku 5: Vastuullinen generatiivinen tekoäly](../05-ResponsibleGenAI/README.md)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virhetulkinnoista.
+Tämä asiakirja on käännetty tekoälypohjaisella käännöspalvelulla [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta ole hyvä ja huomioi, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattilaisen tekemää ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinymmärryksistä tai virhetulkintojen seurauksista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

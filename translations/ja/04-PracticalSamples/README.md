@@ -1,56 +1,64 @@
 # 実践的な応用とプロジェクト
 
+[![実践的な応用とプロジェクト](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Practical Applications & Projects")
+
+> **ビデオ概要:** [YouTubeで「実践的な応用とプロジェクト」を見る](https://www.youtube.com/watch?v=01vJsYei3H0)。
+
 ## 学べること
-このセクションでは、Javaを使った生成型AI開発パターンを示す3つの実践的なアプリケーションをデモします：
-- クライアント側とサーバー側のAIを組み合わせたマルチモーダルなペットストーリー生成器を作成
-- Foundry Local Spring Bootデモを使用したローカルAIモデルの統合を実装
-- 電卓の例を使ったModel Context Protocol (MCP)サービスを開発
+このセクションでは、Javaによる生成AI開発パターンを紹介する3つの実践的なアプリケーションをデモします：
+- クライアントサイドとサーバーサイドのAIを組み合わせたマルチモーダルなペットストーリージェネレーターの作成
+- Foundry Local Spring BootデモによるローカルAIモデル統合の実装
+- 計算機の例を使ったモデルコンテキストプロトコル（MCP）サービスの開発
 
 ## 目次
 
-- [イントロダクション](../../../04-PracticalSamples)
-  - [Foundry Local Spring Bootデモ](../../../04-PracticalSamples)
-  - [ペットストーリー生成器](../../../04-PracticalSamples)
-  - [MCP電卓サービス（初心者向けMCPデモ）](../../../04-PracticalSamples)
-- [学習の進行](../../../04-PracticalSamples)
-- [まとめ](../../../04-PracticalSamples)
-- [次のステップ](../../../04-PracticalSamples)
+- [イントロダクション](#イントロダクション)
+  - [Foundry Local Spring Bootデモ](#foundry-local-spring-bootデモ)
+  - [ペットストーリージェネレーター](#ペットストーリージェネレーター)
+  - [MCP計算機サービス（初心者向けMCPデモ）](#mcp計算機サービス（初心者向けmcpデモ）)
+- [学習の進行](#学習の進行)
+- [まとめ](#まとめ)
+- [次のステップ](#次のステップ)
 
 ## イントロダクション
 
-この章では、Javaを使った生成型AI開発パターンを示す**サンプルプロジェクト**を紹介します。各プロジェクトは完全に機能し、特定のAI技術、アーキテクチャパターン、ベストプラクティスを示しており、自分のアプリケーションに適応させることができます。
+この章では、Javaでの生成AI開発パターンを示す<strong>サンプルプロジェクト</strong>を紹介します。各プロジェクトは完全に機能し、特定のAI技術、アーキテクチャパターン、ベストプラクティスを実演しており、自分のアプリケーションに適用できます。
 
 ### Foundry Local Spring Bootデモ
 
-**[Foundry Local Spring Bootデモ](foundrylocal/README.md)**は、**OpenAI Java SDK**を使用してローカルAIモデルと統合する方法を示します。このデモでは、Foundry Local上で動作する**Phi-3.5-mini**モデルに接続し、クラウドサービスに依存せずにAIアプリケーションを実行する方法を紹介します。
+**[Foundry Local Spring Bootデモ](foundrylocal/README.md)** は、<strong>OpenAI Java SDK</strong>を使ったローカルAIモデルとの統合を示します。Foundry Local上で動作する<strong>Phi-3.5-mini</strong>モデルへの接続をデモしており、クラウドサービスに依存せずにAIアプリケーションを実行できます。
 
-### ペットストーリー生成器
+### ペットストーリージェネレーター
 
-**[ペットストーリー生成器](petstory/README.md)**は、創造的なペットストーリーを生成する**マルチモーダルAI処理**を示す魅力的なSpring Bootウェブアプリケーションです。このアプリケーションは、ブラウザベースのAIインタラクションにtransformer.jsを使用し、サーバー側処理にOpenAI SDKを組み合わせています。
+**[ペットストーリージェネレーター](petstory/README.md)** は、創造的なペットの物語を生成する<strong>マルチモーダルAI処理</strong>を示す魅力的なSpring Bootウェブアプリケーションです。transformer.jsを利用したブラウザベースのAI対話と、サーバーサイド処理にはOpenAI SDKを組み合わせています。
 
 ### MCP計算機サービス（初心者向けMCPデモ）
 
-**[MCP計算機サービス](calculator/README.md)** は、Spring AIを使用した **Model Context Protocol (MCP)** の簡単なデモです。基本的なMCPサーバーを作成し、MCPクライアントとやり取りする方法を示す初心者向けのMCP概念の導入を提供します。
+**[MCP計算機サービス](calculator/README.md)** は、Spring AIを使った<strong>モデルコンテキストプロトコル（MCP）</strong>のシンプルなデモです。MCPの概念を初心者向けに紹介し、MCPクライアントと連携できる基本的なMCPサーバーの作成方法を示します。
 
 ## 学習の進行
 
-これらのプロジェクトは、前の章で学んだ概念を基に構築されています：
+これらのプロジェクトは、前章の概念を基に構築するよう設計されています：
 
-1. **シンプルに始める**: Foundry Local Spring Bootデモから始めて、ローカルモデルとの基本的なAI統合を理解
-2. **インタラクティブ性を追加**: ペットストーリー生成器に進み、マルチモーダルAIとウェブベースのインタラクションを学ぶ
-3. **MCPの基礎を学ぶ**: MCP電卓サービスを試して、Model Context Protocolの基本を理解
+1. <strong>シンプルに始める</strong>：Foundry Local Spring Bootデモでローカルモデルとの基本的なAI統合を理解
+2. <strong>インタラクティブに進む</strong>：ペットストーリージェネレーターでマルチモーダルAIおよびウェブベースの対話を体験
+3. **MCPの基礎を学ぶ**：MCP計算機サービスでモデルコンテキストプロトコルの基本を理解
 
 ## まとめ
 
-お疲れ様でした！以下のような実際のアプリケーションを探索しました：
+よく頑張りました！これで実際のアプリケーションをいくつか探求しました：
 
 - ブラウザとサーバーの両方で動作するマルチモーダルAI体験
-- 最新のJavaフレームワークとSDKを使用したローカルAIモデルの統合
-- AIとツールの統合方法を示す初めてのModel Context Protocolサービス
+- 最新のJavaフレームワークとSDKを使ったローカルAIモデル統合
+- ツールがAIと連携する様子を示す最初のモデルコンテキストプロトコルサービス
 
 ## 次のステップ
 
 [第5章: 責任ある生成AI](../05-ResponsibleGenAI/README.md)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書が正式な情報源と見なされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤訳について、当社は一切の責任を負いません。
+本書類はAI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性の確保に努めていますが、自動翻訳には誤りや不正確な箇所が含まれている可能性があります。原文のネイティブ言語による文書が権威ある情報源と見なされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じる誤解や誤訳について、当方は一切の責任を負いかねます。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

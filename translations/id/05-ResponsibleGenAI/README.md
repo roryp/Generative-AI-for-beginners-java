@@ -1,76 +1,81 @@
-# AI Generatif yang Bertanggung Jawab
+# Responsible Generative AI
 
-## Apa yang Akan Anda Pelajari
+[![Responsible Generative AI](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
 
-- Memahami pertimbangan etika dan praktik terbaik yang penting dalam pengembangan AI
-- Membangun penyaringan konten dan langkah-langkah keamanan ke dalam aplikasi Anda
-- Menguji dan menangani respons keamanan AI menggunakan perlindungan bawaan GitHub Models
-- Menerapkan prinsip AI yang bertanggung jawab untuk menciptakan sistem AI yang aman dan etis
+> **Video**: [Tonton video gambaran untuk pelajaran ini](https://www.youtube.com/watch?v=rF-b2BTSMQ4).
+> Anda juga dapat mengklik gambar thumbnail di atas untuk membuka video yang sama.
 
-## Daftar Isi
+## What You'll Learn
 
-- [Pendahuluan](../../../05-ResponsibleGenAI)
-- [Keamanan Bawaan GitHub Models](../../../05-ResponsibleGenAI)
-- [Contoh Praktis: Demo Keamanan AI yang Bertanggung Jawab](../../../05-ResponsibleGenAI)
-  - [Apa yang Ditunjukkan oleh Demo](../../../05-ResponsibleGenAI)
-  - [Instruksi Pengaturan](../../../05-ResponsibleGenAI)
-  - [Menjalankan Demo](../../../05-ResponsibleGenAI)
-  - [Output yang Diharapkan](../../../05-ResponsibleGenAI)
-- [Praktik Terbaik untuk Pengembangan AI yang Bertanggung Jawab](../../../05-ResponsibleGenAI)
-- [Catatan Penting](../../../05-ResponsibleGenAI)
-- [Ringkasan](../../../05-ResponsibleGenAI)
-- [Penyelesaian Kursus](../../../05-ResponsibleGenAI)
-- [Langkah Selanjutnya](../../../05-ResponsibleGenAI)
+- Pelajari pertimbangan etis dan praktik terbaik yang penting untuk pengembangan AI
+- Bangun penyaringan konten dan langkah-langkah keamanan ke dalam aplikasi Anda
+- Uji dan tangani respons keselamatan AI menggunakan perlindungan bawaan GitHub Models
+- Terapkan prinsip AI yang bertanggung jawab untuk membuat sistem AI yang aman dan etis
 
-## Pendahuluan
+## Table of Contents
 
-Bab terakhir ini berfokus pada aspek penting dalam membangun aplikasi AI generatif yang bertanggung jawab dan etis. Anda akan mempelajari cara menerapkan langkah-langkah keamanan, menangani penyaringan konten, dan menerapkan praktik terbaik untuk pengembangan AI yang bertanggung jawab menggunakan alat dan kerangka kerja yang telah dibahas di bab sebelumnya. Memahami prinsip-prinsip ini sangat penting untuk membangun sistem AI yang tidak hanya mengesankan secara teknis tetapi juga aman, etis, dan dapat dipercaya.
+- [Introduction](#introduction)
+- [GitHub Models Built-in Safety](#github-models-built-in-safety)
+- [Practical Example: Responsible AI Safety Demo](#practical-example-responsible-ai-safety-demo)
+  - [What the Demo Shows](#what-the-demo-shows)
+  - [Setup Instructions](#setup-instructions)
+  - [Running the Demo](#running-the-demo)
+  - [Expected Output](#expected-output)
+- [Best Practices for Responsible AI Development](#best-practices-for-responsible-ai-development)
+- [Important Note](#important-note)
+- [Summary](#summary)
+- [Course Completion](#course-completion)
+- [Next Steps](#next-steps)
 
-## Keamanan Bawaan GitHub Models
+## Introduction
 
-GitHub Models dilengkapi dengan penyaringan konten dasar secara otomatis. Ini seperti memiliki penjaga pintu yang ramah di klub AI Anda - tidak terlalu canggih, tetapi cukup untuk skenario dasar.
+Bab terakhir ini berfokus pada aspek penting dalam membangun aplikasi generatif AI yang bertanggung jawab dan etis. Anda akan belajar cara menerapkan langkah-langkah keamanan, menangani penyaringan konten, dan menerapkan praktik terbaik untuk pengembangan AI yang bertanggung jawab dengan menggunakan alat dan kerangka kerja yang dibahas di bab sebelumnya. Memahami prinsip-prinsip ini penting untuk membangun sistem AI yang tidak hanya mengesankan secara teknis tetapi juga aman, etis, dan dapat dipercaya.
 
-**Apa yang Dilindungi oleh GitHub Models:**
-- **Konten Berbahaya**: Memblokir konten yang jelas-jelas bersifat kekerasan, seksual, atau berbahaya
-- **Ucapan Kebencian Dasar**: Menyaring bahasa diskriminatif yang jelas
-- **Jailbreak Sederhana**: Menahan upaya dasar untuk melewati pengamanan
+## GitHub Models Built-in Safety
 
-## Contoh Praktis: Demo Keamanan AI yang Bertanggung Jawab
+GitHub Models dilengkapi dengan penyaringan konten dasar secara otomatis. Ini seperti memiliki penjaga yang ramah di klub AI Anda - tidak yang paling canggih, tapi cukup untuk skenario dasar.
 
-Bab ini mencakup demonstrasi praktis tentang bagaimana GitHub Models menerapkan langkah-langkah keamanan AI yang bertanggung jawab dengan menguji permintaan yang berpotensi melanggar pedoman keamanan.
+**Apa yang Dilindungi GitHub Models:**
+- **Konten Berbahaya**: Memblokir konten yang jelas bersifat kekerasan, seksual, atau berbahaya
+- **Ujaran Kebencian Dasar**: Memfilter bahasa diskriminatif yang jelas
+- **Jailbreak Sederhana**: Menolak upaya dasar untuk melewati pembatas keselamatan
 
-### Apa yang Ditunjukkan oleh Demo
+## Practical Example: Responsible AI Safety Demo
+
+Bab ini mencakup demonstrasi praktis bagaimana GitHub Models menerapkan langkah-langkah keselamatan AI yang bertanggung jawab dengan menguji prompt yang mungkin melanggar pedoman keselamatan.
+
+### What the Demo Shows
 
 Kelas `ResponsibleGithubModels` mengikuti alur berikut:
-1. Menginisialisasi klien GitHub Models dengan autentikasi
-2. Menguji permintaan berbahaya (kekerasan, ucapan kebencian, misinformasi, konten ilegal)
-3. Mengirim setiap permintaan ke API GitHub Models
-4. Menangani respons: blok keras (error HTTP), penolakan lunak (respons sopan "Saya tidak bisa membantu"), atau generasi konten normal
-5. Menampilkan hasil yang menunjukkan konten mana yang diblokir, ditolak, atau diizinkan
-6. Menguji konten aman untuk perbandingan
+1. Inisialisasi klien GitHub Models dengan autentikasi
+2. Uji prompt berbahaya (kekerasan, ujaran kebencian, misinformasi, konten ilegal)
+3. Kirim setiap prompt ke API GitHub Models
+4. Tangani respons: blok keras (error HTTP), penolakan halus (respons sopan "Saya tidak bisa membantu"), atau generasi konten normal
+5. Tampilkan hasil yang menunjukkan konten mana yang diblokir, ditolak, atau diizinkan
+6. Uji konten aman sebagai perbandingan
 
-![Demo Keamanan AI yang Bertanggung Jawab](../../../translated_images/id/responsible.e4f51a917bafa4bf.webp)
+![Responsible AI Safety Demo](../../../translated_images/id/responsible.e4f51a917bafa4bf.webp)
 
-### Instruksi Pengaturan
+### Setup Instructions
 
-1. **Tetapkan GitHub Personal Access Token Anda:**
+1. **Atur Token Akses Pribadi GitHub Anda:**  
    
-   Pada Windows (Command Prompt):
+   Di Windows (Command Prompt):
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
    
-   Pada Windows (PowerShell):
+   Di Windows (PowerShell):
    ```powershell
    $env:GITHUB_TOKEN="your_github_token_here"
    ```
    
-   Pada Linux/macOS:
+   Di Linux/macOS:
    ```bash
    export GITHUB_TOKEN=your_github_token_here
    ```   
 
-### Menjalankan Demo
+### Running the Demo
 
 1. **Masuk ke direktori contoh:**
    ```bash
@@ -82,15 +87,15 @@ Kelas `ResponsibleGithubModels` mengikuti alur berikut:
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
-### Output yang Diharapkan
+### Expected Output
 
-Demo akan menguji berbagai jenis permintaan yang berpotensi berbahaya dan menunjukkan bagaimana keamanan AI modern bekerja melalui dua mekanisme:
+Demo akan menguji berbagai jenis prompt yang berpotensi berbahaya dan menunjukkan bagaimana keamanan AI modern bekerja melalui dua mekanisme:
 
 - **Blok Keras**: Error HTTP 400 ketika konten diblokir oleh filter keamanan sebelum mencapai model
-- **Penolakan Lunak**: Model merespons dengan penolakan sopan seperti "Saya tidak bisa membantu dengan itu" (paling umum pada model modern)
+- **Penolakan Halus**: Model menanggapi dengan penolakan sopan seperti "Saya tidak bisa membantu dengan itu" (paling umum pada model modern)
 - **Konten aman** yang mendapatkan respons normal
 
-Format output sampel:
+Format output contoh:  
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -107,65 +112,65 @@ Response: Responsible AI development is crucial for ensuring...
 Status: Response generated successfully
 ────────────────────────────────────────────────────────────
 ```
+  
+**Catatan**: Baik blok keras maupun penolakan halus menandakan sistem keamanan berfungsi dengan benar.
 
-**Catatan**: Baik blok keras maupun penolakan lunak menunjukkan bahwa sistem keamanan bekerja dengan benar.
+## Best Practices for Responsible AI Development
 
-## Praktik Terbaik untuk Pengembangan AI yang Bertanggung Jawab
+Saat membangun aplikasi AI, ikuti praktik penting ini:
 
-Saat membangun aplikasi AI, ikuti praktik penting berikut:
-
-1. **Selalu tangani respons filter keamanan dengan baik**
+1. **Selalu tangani potensi respons filter keamanan dengan baik**
    - Terapkan penanganan error yang tepat untuk konten yang diblokir
-   - Berikan umpan balik yang bermakna kepada pengguna saat konten disaring
+   - Berikan umpan balik bermakna kepada pengguna saat konten disaring
 
 2. **Terapkan validasi konten tambahan sesuai kebutuhan**
    - Tambahkan pemeriksaan keamanan khusus domain
    - Buat aturan validasi khusus untuk kasus penggunaan Anda
 
 3. **Edukasi pengguna tentang penggunaan AI yang bertanggung jawab**
-   - Berikan panduan yang jelas tentang penggunaan yang dapat diterima
+   - Berikan panduan jelas tentang penggunaan yang dapat diterima
    - Jelaskan mengapa konten tertentu mungkin diblokir
 
 4. **Pantau dan catat insiden keamanan untuk perbaikan**
    - Lacak pola konten yang diblokir
-   - Tingkatkan langkah-langkah keamanan secara berkelanjutan
+   - Terus tingkatkan langkah-langkah keamanan Anda
 
 5. **Hormati kebijakan konten platform**
    - Tetap diperbarui dengan pedoman platform
-   - Ikuti syarat layanan dan pedoman etika
+   - Patuhi ketentuan layanan dan pedoman etis
 
-## Catatan Penting
+## Important Note
 
-Contoh ini menggunakan permintaan yang bermasalah secara sengaja hanya untuk tujuan pendidikan. Tujuannya adalah untuk menunjukkan langkah-langkah keamanan, bukan untuk melewati mereka. Selalu gunakan alat AI secara bertanggung jawab dan etis.
+Contoh ini menggunakan prompt yang bermasalah secara sengaja hanya untuk tujuan edukasi. Tujuannya adalah untuk menunjukkan langkah-langkah keamanan, bukan untuk melewatinya. Selalu gunakan alat AI secara bertanggung jawab dan etis.
 
-## Ringkasan
+## Summary
 
 **Selamat!** Anda telah berhasil:
 
 - **Menerapkan langkah-langkah keamanan AI** termasuk penyaringan konten dan penanganan respons keamanan
 - **Menerapkan prinsip AI yang bertanggung jawab** untuk membangun sistem AI yang etis dan dapat dipercaya
 - **Menguji mekanisme keamanan** menggunakan kemampuan perlindungan bawaan GitHub Models
-- **Mempelajari praktik terbaik** untuk pengembangan dan penerapan AI yang bertanggung jawab
+- **Memahami praktik terbaik** untuk pengembangan dan penerapan AI yang bertanggung jawab
 
 **Sumber Daya AI yang Bertanggung Jawab:**
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Pelajari pendekatan Microsoft terhadap keamanan, privasi, dan kepatuhan
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Jelajahi prinsip dan praktik Microsoft untuk pengembangan AI yang bertanggung jawab
 
-## Penyelesaian Kursus
+## Course Completion
 
-Selamat telah menyelesaikan kursus Generative AI untuk Pemula!
+Selamat telah menyelesaikan kursus Generative AI for Beginners!
 
-![Penyelesaian Kursus](../../../translated_images/id/image.73c7e2ff4a652e77.webp)
+![Course Completion](../../../translated_images/id/image.73c7e2ff4a652e77.webp)
 
 **Apa yang telah Anda capai:**
 - Menyiapkan lingkungan pengembangan Anda
-- Mempelajari teknik inti AI generatif
-- Mengeksplorasi aplikasi AI praktis
+- Mempelajari teknik inti generative AI
+- Menjelajahi aplikasi AI praktis
 - Memahami prinsip AI yang bertanggung jawab
 
-## Langkah Selanjutnya
+## Next Steps
 
-Lanjutkan perjalanan pembelajaran AI Anda dengan sumber daya tambahan berikut:
+Lanjutkan perjalanan belajar AI Anda dengan sumber daya tambahan berikut:
 
 **Kursus Pembelajaran Tambahan:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
@@ -182,7 +187,11 @@ Lanjutkan perjalanan pembelajaran AI Anda dengan sumber daya tambahan berikut:
 - [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+- [RAG Chat App dengan Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk akurasi, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi penting, dianjurkan menggunakan terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau kesalahan interpretasi yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

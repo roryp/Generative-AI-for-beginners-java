@@ -1,29 +1,29 @@
-# Генеративен изкуствен интелект за начинаещи - издание за Java
+# Генеративен AI за начинаещи - Издание за Java
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-![Генеративен изкуствен интелект за начинаещи - издание за Java](../../translated_images/bg/beg-genai-series.8b48be9951cc574c.webp)
+![Генеративен AI за начинаещи - Издание за Java](../../translated_images/bg/beg-genai-series.8b48be9951cc574c.webp)
 
-**Времева ангажираност**: Целият уъркшоп може да бъде завършен онлайн без локална инсталация. Настройката на средата отнема 2 минути, а разглеждането на примерите - от 1 до 3 часа в зависимост от задълбочеността.
+**Време за отделяне**: Целият уъркшоп може да се завърши онлайн без локална настройка. Настройката на средата отнема 2 минути, а разглеждането на примерите изисква 1-3 часа в зависимост от дълбочината на изследване.
 
-> **Бърз старт** 
+> **Бърз старт**
 
-1. Направете форк на това хранилище във вашия GitHub акаунт
-2. Кликнете **Code** → раздел **Codespaces** → **...** → **New with options...**
-3. Използвайте подразбиращите се настройки – това ще избере разработващия контейнер, създаден за този курс
+1. Направете fork на това хранилище във вашия GitHub акаунт
+2. Кликнете на **Code** → раздела **Codespaces** → **...** → **New with options...**
+3. Използвайте стандартните настройки – това ще избере контейнера за разработка, създаден за този курс
 4. Кликнете **Create codespace**
-5. Изчакайте около 2 минути средата да е готова
-6. Отбийте направо към [Първия пример](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
+5. Изчакайте около 2 минути, докато средата бъде готова
+6. Продължете директно към [Първия пример](./02-SetupDevEnvironment/README.md#step-2-create-a-github-personal-access-token)
 
-## Поддръжка на много езици
+## Многоезична поддръжка
 
-### Поддържа се чрез GitHub Action (Автоматизирано и винаги актуално)
+### Поддържана чрез GitHub Action (Автоматизирано и винаги обновено)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Арабски](../ar/README.md) | [Бенгалски](../bn/README.md) | [Български](./README.md) | [Бирмански (Мианмар)](../my/README.md) | [Китайски (опростен)](../zh-CN/README.md) | [Китайски (традиционен, Хонконг)](../zh-HK/README.md) | [Китайски (традиционен, Макао)](../zh-MO/README.md) | [Китайски (традиционен, Тайван)](../zh-TW/README.md) | [Хърватски](../hr/README.md) | [Чешки](../cs/README.md) | [Датски](../da/README.md) | [Холандски](../nl/README.md) | [Естонски](../et/README.md) | [Фински](../fi/README.md) | [Френски](../fr/README.md) | [Немски](../de/README.md) | [Гръцки](../el/README.md) | [Иврит](../he/README.md) | [Хинди](../hi/README.md) | [Унгарски](../hu/README.md) | [Индонезийски](../id/README.md) | [Италиански](../it/README.md) | [Японски](../ja/README.md) | [Каннада](../kn/README.md) | [Корейски](../ko/README.md) | [Литовски](../lt/README.md) | [Малайски](../ms/README.md) | [Малаялам](../ml/README.md) | [Марати](../mr/README.md) | [Непалски](../ne/README.md) | [Нигерийски пиджин](../pcm/README.md) | [Норвежки](../no/README.md) | [Персийски (фарси)](../fa/README.md) | [Полски](../pl/README.md) | [Португалски (Бразилия)](../pt-BR/README.md) | [Португалски (Португалия)](../pt-PT/README.md) | [Пенджабски (Гурмухи)](../pa/README.md) | [Румънски](../ro/README.md) | [Руски](../ru/README.md) | [Сръбски (Кирилица)](../sr/README.md) | [Словашки](../sk/README.md) | [Словенски](../sl/README.md) | [Испански](../es/README.md) | [Свахили](../sw/README.md) | [Шведски](../sv/README.md) | [Тагалог (Филипински)](../tl/README.md) | [Тамилски](../ta/README.md) | [Телугу](../te/README.md) | [Тайски](../th/README.md) | [Турски](../tr/README.md) | [Украински](../uk/README.md) | [Урду](../ur/README.md) | [Виетнамски](../vi/README.md)
+[Арабски](../ar/README.md) | [Бенгалски](../bn/README.md) | [Български](./README.md) | [Бирмански (Мианмар)](../my/README.md) | [Китайски (опростен)](../zh-CN/README.md) | [Китайски (традиционен, Хонконг)](../zh-HK/README.md) | [Китайски (традиционен, Макао)](../zh-MO/README.md) | [Китайски (традиционен, Тайван)](../zh-TW/README.md) | [Хърватски](../hr/README.md) | [Чешки](../cs/README.md) | [Датски](../da/README.md) | [Холандски](../nl/README.md) | [Естонски](../et/README.md) | [Фински](../fi/README.md) | [Френски](../fr/README.md) | [Немски](../de/README.md) | [Гръцки](../el/README.md) | [Иврит](../he/README.md) | [Хинди](../hi/README.md) | [Унгарски](../hu/README.md) | [Индонезийски](../id/README.md) | [Италиански](../it/README.md) | [Японски](../ja/README.md) | [Канада](../kn/README.md) | [Кмерски](../km/README.md) | [Корейски](../ko/README.md) | [Литовски](../lt/README.md) | [Малайски](../ms/README.md) | [Малаялам](../ml/README.md) | [Маратхи](../mr/README.md) | [Непали](../ne/README.md) | [Нигерийски пиджин](../pcm/README.md) | [Норвежки](../no/README.md) | [Персийски (фарси)](../fa/README.md) | [Полски](../pl/README.md) | [Португалски (Бразилия)](../pt-BR/README.md) | [Португалски (Португалия)](../pt-PT/README.md) | [Пенджабски (Гурмукхи)](../pa/README.md) | [Румънски](../ro/README.md) | [Руски](../ru/README.md) | [Сръбски (кирилица)](../sr/README.md) | [Словашки](../sk/README.md) | [Словенски](../sl/README.md) | [Испански](../es/README.md) | [Суахили](../sw/README.md) | [Шведски](../sv/README.md) | [Тагалог (филипински)](../tl/README.md) | [Тамилски](../ta/README.md) | [Телугу](../te/README.md) | [Тайски](../th/README.md) | [Турски](../tr/README.md) | [Украински](../uk/README.md) | [Урду](../ur/README.md) | [Виетнамски](../vi/README.md)
 
 > **Предпочитате да клонирате локално?**
 >
-> Това хранилище съдържа над 50 езикови превода, които значително увеличават размера на изтегляне. За да клонирате без преводи, използвайте sparse checkout:
+> Това хранилище включва преводи на над 50 езика, което значително увеличава размера за изтегляне. За да клонирате без преводи, използвайте sparse checkout:
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -44,38 +44,38 @@
 
 ## Структура на курса и учебен път
 
-### **Глава 1: Въведение в генеративния изкуствен интелект**
-- **Основни концепции**: Разбиране на големите езикови модели, токени, embeddings и способности на ИИ
-- **Java AI екосистема**: Преглед на Spring AI и OpenAI SDK
+### **Глава 1: Въведение в генеративния AI**
+- **Основни концепции**: Разбиране на големи езикови модели, токени, вграждания и възможности на AI
+- **Екосистема Java AI**: Преглед на Spring AI и OpenAI SDK
 - **Протокол за контекст на модела**: Въведение в MCP и ролята му в комуникацията на AI агенти
 - **Практически приложения**: Реални сценарии, включително чатботове и генериране на съдържание
-- **[→ Започнете глава 1](./01-IntroToGenAI/README.md)**
+- **[→ Започнете Глава 1](./01-IntroToGenAI/README.md)**
 
-### **Глава 2: Настройка на средата за разработка**
-- **Мулти-доставчик конфигурация**: Настройване на GitHub модели, Azure OpenAI и OpenAI Java SDK интеграции
+### **Глава 2: Настройка на среда за разработка**
+- **Конфигурация с много доставчици**: Настройка на GitHub Models, Azure OpenAI и OpenAI Java SDK интеграции
 - **Spring Boot + Spring AI**: Най-добри практики за разработка на корпоративни AI приложения
-- **GitHub модели**: Безплатен достъп до AI модели за прототипиране и учене (без нужда от кредитна карта)
-- **Инструменти за разработка**: Конфигурация на Docker контейнери, VS Code и GitHub Codespaces
-- **[→ Започнете глава 2](./02-SetupDevEnvironment/README.md)**
+- **GitHub Models**: Безплатен достъп до AI модели за прототипиране и обучение (без нужда от кредитна карта)
+- **Инструменти за разработка**: Docker контейнери, VS Code и конфигурация на GitHub Codespaces
+- **[→ Започнете Глава 2](./02-SetupDevEnvironment/README.md)**
 
-### **Глава 3: Основни техники за генеративен изкуствен интелект**
-- **Проектиране на промпти**: Техники за оптимални отговори от AI моделите
-- **Embeddings и векторни операции**: Имплементиране на семантично търсене и намиране на сходства
-- **Retrieval-Augmented Generation (RAG)**: Комбиниране на AI с ваши собствените източници на данни
-- **Викане на функции**: Разширяване на AI възможностите с помощта на персонализирани инструменти и плъгини
-- **[→ Започнете глава 3](./03-CoreGenerativeAITechniques/README.md)**
+### **Глава 3: Основни техники за генеративен AI**
+- **Проектиране на prompt-и**: Техники за оптимални отговори от AI моделите
+- **Вграждания и векторни операции**: Имплементиране на семантично търсене и съпоставяне на сходства
+- **Ретриюъл-аугментирана генерация (RAG)**: Комбиниране на AI с ваши собствени източници на данни
+- **Викане на функции**: Разширяване на AI възможностите с персонализирани инструменти и плъгини
+- **[→ Започнете Глава 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Глава 4: Практически приложения и проекти**
-- **Генератор на истории за домашни любимци** (`petstory/`): Креативно генериране на съдържание с GitHub модели
-- **Локално демо на Foundry** (`foundrylocal/`): Локална интеграция на AI модел с OpenAI Java SDK
-- **MCP калкулатор услуга** (`calculator/`): Основна имплементация на Model Context Protocol с Spring AI
-- **[→ Започнете глава 4](./04-PracticalSamples/README.md)**
+- **Генератор на истории за домашни любимци** (`petstory/`): Креативно генериране на съдържание с GitHub Models
+- **Демо на Foundry на локалната машина** (`foundrylocal/`): Локална интеграция на AI модел с OpenAI Java SDK
+- **Услуга за калкулатор MCP** (`calculator/`): Базова имплементация на Model Context Protocol със Spring AI
+- **[→ Започнете Глава 4](./04-PracticalSamples/README.md)**
 
 ### **Глава 5: Отговорно разработване на AI**
-- **Безопасност на GitHub модели**: Тестване на вградени филтри за съдържание и механизми за безопасност (твърди блокировки и меки откази)
-- **Демо за отговорен AI**: Практически пример, показващ как работят съвременните системи за безопасност на ИИ
-- **Най-добри практики**: Основни насоки за етично разработване и внедряване на AI
-- **[→ Започнете глава 5](./05-ResponsibleGenAI/README.md)**
+- **Безопасност в GitHub Models**: Тестване на вградени филтри за съдържание и механизми за безопасност (твърди блокирания и меки отхвърляния)
+- **Демонстрация за отговорен AI**: Практически пример, показващ как работят съвременните системи за безопасност на AI
+- **Най-добри практики**: Съществени насоки за етично разработване и внедряване на AI
+- **[→ Започнете Глава 5](./05-ResponsibleGenAI/README.md)**
 
 ## Допълнителни ресурси
 
@@ -94,7 +94,7 @@
 
 ---
  
-### Серия за генеративен AI
+### Серия генеративен AI
 [![Генеративен AI за начинаещи](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Генеративен AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Генеративен AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -104,8 +104,8 @@
  
 ### Основно обучение
 [![Машинно обучение за начинаещи](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![Данни наука за начинаещи](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![ИИ за начинаещи](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Наука за данни за начинаещи](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI за начинаещи](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Киберсигурност за начинаещи](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 
 [![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
@@ -122,11 +122,11 @@
 
 ## Получаване на помощ
 
-Ако се затрудните или имате въпроси относно изграждането на AI приложения, присъединете се към съмишленици и опитни разработчици в дискусии за MCP. Това е подкрепяща общност, където въпросите са добре дошли и знанието се споделя свободно.
+Ако заседнете или имате въпроси относно изграждането на AI приложения. Присъединете се към други учащи и опитни разработчици в дискусии за MCP. Това е подкрепяща общност, където въпросите са добре дошли и знанието се споделя свободно.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Ако имате обратна връзка за продукта или грешки по време на разработка, посетете:
+Ако имате обратна връзка за продукта или грешки при изграждане посетете:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -134,5 +134,5 @@
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Отказ от отговорност**:
-Този документ е преведен с помощта на AI преводаческа услуга [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматизираните преводи могат да съдържат грешки или неточности. Оригиналният документ на родния му език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Не носим отговорност за каквито и да е недоразумения или погрешни тълкувания, произтичащи от използването на този превод.
+Този документ е преведен с помощта на AI преводаческа услуга [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматизираните преводи може да съдържат грешки или неточности. Оригиналният документ на родния му език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Ние не носим отговорност за всякакви недоразумения или неправилни тълкувания, произтичащи от използването на този превод.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
