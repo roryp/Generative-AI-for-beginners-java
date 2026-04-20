@@ -1,86 +1,95 @@
 # មេរៀន Foundry Local Spring Boot
 
-## តារាងបញ្ជីមាតិកា
+## បញ្ជីមេរៀន
 
-- [លក្ខណ្ឌទាមទារ](#លក្ខណ្ឌទាមទារ)
+- [លក្ខខណ្ឌជាមុន](#លក្ខខណ្ឌជាមុន)
 - [ទិដ្ឋភាពគម្រោង](#ទិដ្ឋភាពគម្រោង)
-- [ការយល់ដឹងអំពីកូដ](#ការយល់ដឹងអំពីកូដ)
+- [យល់ដឹងអំពីកូដ](#យល់ដឹងអំពីកូដ)
   - [1. ការកំណត់កម្មវិធី (application.properties)](#1-ការកំណត់កម្មវិធី-applicationproperties)
   - [2. ថ្នាក់កម្មវិធីសំខាន់ (Application.java)](#2-ថ្នាក់កម្មវិធីសំខាន់-applicationjava)
-  - [3. សេវាកម្ម AI (FoundryLocalService.java)](#3-សេវាកម្ម-ai-foundrylocalservicejava)
-  - [4. ហេតុផលគម្រោង (pom.xml)](#4-ហេតុផលគម្រោង-pomxml)
-- [វិធីដែលវាដំណើរការជាមួយគ្នា](#វិធីដែលវាដំណើរការជាមួយគ្នា)
-- [ការតំឡើង Foundry Local](#ការតំឡើង-foundry-local)
-- [ការរត់កម្មវិធី](#ការរត់កម្មវិធី)
-- [លទ្ធផលដែលបានរំពឹត](#លទ្ធផលដែលបានរំពឹត)
+  - [3. ស្រទាប់សេវាកម្ម AI (FoundryLocalService.java)](#3-ស្រទាប់សេវាកម្ម-ai-foundrylocalservicejava)
+  - [4. ខួប Dependencies គម្រោង (pom.xml)](#4-ខួប-dependencies-គម្រោង-pomxml)
+- [របៀបដែលវាផ្គុំគ្នា](#របៀបដែលវាផ្គុំគ្នា)
+- [ការដំឡើង Foundry Local](#ការដំឡើង-foundry-local)
+- [ការប្រើកម្មវិធី](#ការប្រើកម្មវិធី)
+- [លទ្ធផលដែលរំពឹងទុក](#លទ្ធផលដែលរំពឹងទុក)
 - [ជំហានបន្ទាប់](#ជំហានបន្ទាប់)
-- [ការដោះស្រាយបញ្ហា](#ការដោះស្រាយបញ្ហា)
+- [ដោះស្រាយបញ្ហា](#ដោះស្រាយបញ្ហា)
 
 
-## លក្ខណ្ឌទាមទារ
+## លក្ខខណ្ឌជាមុន
 
-មុនពេលចាប់ផ្តើមមេរៀននេះ បូមប្រាកដថាអ្នកមានៈ
+មុននឹងចាប់ផ្តើមមេរៀននេះ សូមប្រាកដថាអ្នកមាន៖
 
-- **Java 21 ឬខ្ពស់ជាងនេះ** តំឡើងនៅលើប្រព័ន្ធរបស់អ្នក
-- **Maven 3.6+** សម្រាប់កសាងគម្រោង
-- **Foundry Local** តំឡើងហើយកំពុងដំណើរការ
+- **Java 21 ឬខ្ពស់ជាងនេះ** ដំឡើងលើប្រព័ន្ធរបស់អ្នក
+- **Maven 3.6+** សម្រាប់កំណត់សំណុំគម្រោង
+- **Foundry Local** ត្រូវបានដំឡើងហើយកំពុងដំណើរការ
 
-### **តំឡើង Foundry Local:**
+### **ដំឡើង Foundry Local:**
+
+> **ចំណាំ:** Foundry Local CLI មានសម្រាប់ **Windows** និង **macOS** តែប៉ុណ្ណោះ។ Linux ត្រូវបានគាំទ្របានតាមរយៈ [Foundry Local SDKs](https://github.com/microsoft/Foundry-Local) (Python, JavaScript, C#, Rust)។
 
 ```bash
-# វីនដូដ
+# វីនដូូ
 winget install Microsoft.FoundryLocal
 
-# macOS (បន្ទាប់ពីបានដំឡើង)
-foundry model run phi-3.5-mini
+# ម៉ាក់អូស
+brew tap microsoft/foundrylocal
+brew install foundrylocal
 ```
-
+  
+ផ្ទៀងផ្ទាត់ការដំឡើង៖  
+```bash
+foundry --version
+```
+  
 ## ទិដ្ឋភាពគម្រោង
 
-គម្រោងនេះមានធាតុសំខាន់បួន៖
+គម្រោងនេះមានបួនផ្នែកសំខាន់៖
 
-1. **Application.java** - ច្រកចូលកម្មវិធី Spring Boot សំខាន់
-2. **FoundryLocalService.java** - ស្រទាប់សេវាកម្មដែលគ្រប់គ្រងការទំនាក់ទំនង AI
-3. **application.properties** - ការកំណត់សម្រាប់ការតភ្ជាប់ Foundry Local
-4. **pom.xml** - ហេតុផល Maven និងការកំណត់គម្រោង
+1. **Application.java** - ចំណុចចូលកម្មវិធី Spring Boot សំខាន់
+2. **FoundryLocalService.java** - ស្រទាប់សេវាកម្មដែលគ្រប់គ្រងការប្រាស្រ័យទាក់ទង AI
+3. **application.properties** - ការកំណត់សម្រាប់ការភ្ជាប់ Foundry Local
+4. **pom.xml** - ខួប dependencies និងការកំណត់គម្រោង
 
-## ការយល់ដឹងអំពីកូដ
+## យល់ដឹងអំពីកូដ
 
 ### 1. ការកំណត់កម្មវិធី (application.properties)
 
-**ឯកសារ:** `src/main/resources/application.properties`
+**ឯកសារ៖** `src/main/resources/application.properties`
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
+  
+**អ្វីដែលវាធ្វើ៖**  
+- **base-url**: បញ្ជាក់ទីតាំងជំរុញផលិតកម្ម Foundry Local កំពុងដំណើរការ រួមមានផ្លូវ `/v1` សម្រាប់ភាពឆបគ្នាជាមួយ OpenAI API។ ផត់ផតលំនាំដើមគឺ `5273`។ ប្រសិនបើផត់ផតខុសគ្នា សូមពិនិត្យវាជាមួយ `foundry service status`។  
+- **model** (ជាជម្រើស): ឈ្មោះម៉ូដែល AI ដែលត្រូវប្រើសម្រាប់បង្កើតអត្ថបទ។ **លំនាំដើមកម្មវិធីនឹងស្វ័យប្រមាណម៉ូដែល** តាមការសួរព័ត៌មាន `/v1/models` របស់ Foundry Local នៅពេលចាប់ផ្តើម ដូច្នេះអ្នកមិនចាំបាច់កំណត់វាទេ។ អ្នកអាចកំណត់វាដោយច្បាស់ចង់លុបចោលការស្វ័យប្រមាណបើចាំបាច់។
 
-**អ្វីដែលវាត្រូវធ្វើ:**
-- **base-url**: បញ្ជាក់កន្លែងដែល Foundry Local កំពុងដំណើរការ រួមមានផ្លូវ `/v1` សម្រាប់ភាពសមរម្យ OpenAI API។ **កំណត់សំគាល់**: Foundry Local ផ្ដល់ច្រកថ្មីដោយស្វ័យប្រវត្តិ ដូច្នេះសូមពិនិត្យច្រកពិតប្រាកដរបស់អ្នកដោយប្រើ `foundry service status`
-- **model**: ឈ្មោះម៉ូដែល AI ដែលប្រើសម្រាប់បង្កើតអក្សរ រួមមានលេខកំណែ (ឧ. `:1`)។ ប្រើ `foundry model list` ដើម្បីមើលម៉ូដែលដែលមានជាមួយ ID ត្រឹមត្រូវ
-
-**គំនិតសំខាន់:** Spring Boot ផ្ទុកសំណុំនេះដោយស្វ័យប្រវត្តិ ហើយធ្វើអោយវាអាចប្រើបានក្នុងកម្មវិធីរបស់អ្នកដោយប្រើអង្គភាព `@Value`។
+**មូលដ្ឋានគោលន័យ៖** Spring Boot នឹងបញ្ចូលទិន្នន័យទាំងនេះដោយស្វ័យប្រវត្តិ និងធ្វើអោយវាអាចប្រើបានក្នុងកម្មវិធីរបស់អ្នកតាមរយៈអ្នូត `@Value`។
 
 ### 2. ថ្នាក់កម្មវិធីសំខាន់ (Application.java)
 
-**ឯកសារ:** `src/main/java/com/example/Application.java`
+**ឯកសារ៖** `src/main/java/com/example/Application.java`
 
 ```java
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);  // គ្មានការ​តម្រូវ​អ្នក​បម្រើ​បណ្ដាញ​បណ្តាញ​នោះទេ
+        app.setWebApplicationType(WebApplicationType.NONE);  // មិនចាំបាច់មានម៉ាស៊ីនបម្រើវេបសាយ
         app.run(args);
     }
 ```
+  
+**អ្វីដែលវាធ្វើ៖**  
+- `@SpringBootApplication` អនុញ្ញាតផ្ទាល់ការកំណត់ Spring Boot  
+- `WebApplicationType.NONE` ជូនដំណឹងថាអាជីវកម្មនេះជាកម្មវិធីបញ្ជាលើ Command-Line មិនមែនជា Web server  
+- មធ្យោបាយចម្បងចាប់ផ្តើមកម្មវិធី Spring
 
-**អ្វីដែលវាត្រូវធ្វើ:**
-- `@SpringBootApplication` បើកដំណើរការ Spring Boot អូតូ-ការកំណត់
-- `WebApplicationType.NONE` សំដៅថា វាជាកម្មវិធីបញ្ជារចម្លើយ មិនមែនជា server វ៉ែប
-- មុខងារសំខាន់ចាប់ផ្តើម Spring application
-
-**កម្មវិធី Demo Runner:**
+**កម្មវិធីដំណើរការសាកល្បង៖**  
 ```java
 @Bean
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
@@ -98,18 +107,18 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
     };
 }
 ```
+  
+**អ្វីដែលវាធ្វើ៖**  
+- `@Bean` បង្កើតផ្នែកទ្រទ្រង់ដែល Spring គ្រប់គ្រង  
+- `CommandLineRunner` រត់កូដបន្ទាប់ពី Spring Boot ចាប់ផ្តើម  
+- `foundryLocalService` ត្រូវបានបញ្ជូលដោយ Spring (dependency injection)  
+- ផ្ញើសារ​សាកល្បងទៅ AI ហើយបង្ហាញការឆ្លើយតប
 
-**អ្វីដែលវាត្រូវធ្វើ:**
-- `@Bean` បង្កើតធាតុមួយដែល Spring គ្រប់គ្រង
-- `CommandLineRunner` ប្រតិបត្តិកូដបន្ទាប់ពី Spring Boot ចាប់ផ្តើម
-- `foundryLocalService` ត្រូវបានចាក់បញ្ចូលដោយ Spring ផ្ទាល់ (dependency injection)
-- ផ្ញើសារពិនិត្យទៅ AI ហើយបង្ហាញការឆ្លើយតប
+### 3. ស្រទាប់សេវាកម្ម AI (FoundryLocalService.java)
 
-### 3. សេវាកម្ម AI (FoundryLocalService.java)
+**ឯកសារ៖** `src/main/java/com/example/FoundryLocalService.java`
 
-**ឯកសារ:** `src/main/java/com/example/FoundryLocalService.java`
-
-#### ការចាក់បញ្ចូលការកំណត់:
+#### ការចាក់បញ្ចូលការកំណត់៖  
 ```java
 @Service
 public class FoundryLocalService {
@@ -117,46 +126,52 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // ស្វ័យប្រមានបើទទេ
 ```
+  
+**អ្វីដែលវាធ្វើ៖**  
+- `@Service` អោយដឹងថាថ្នាក់នេះផ្តល់យុទ្ធសាស្ត្រអាជីវកម្ម  
+- `@Value` ចាក់បញ្ចូលតម្លៃកំណត់ពី application.properties  
+- ម៉ូដែលដើមគឺទទេ ដែលបណ្តាលឲ្យមានការស្វ័យប្រមាណពី Foundry Local នៅពេលចាប់ផ្តើម។ នេះមានន័យថាកម្មវិធីដំណើរការជាមួយម៉ូដែលណាមួយដែលបានដាក់នៅក្នុង Foundry Local ដោយមិនចាំបាច់កំណត់ដោយដៃ។
 
-**អ្វីដែលវាត្រូវធ្វើ:**
-- `@Service` បង្ហាញថា ថ្នាក់នេះផ្ដល់តុល្យភាពអាជីវកម្ម
-- `@Value` ចាក់ចូលតម្លៃកំណត់ពី application.properties
-- វិធីសាស្រ្ត `:default-value` ផ្ដល់តម្លៃជំនួស ប្រសិនបើ properties មិនត្រូវបានកំណត់
-
-#### ការចាប់ផ្តើម Client:
+#### ការចាប់ផ្តើម Client៖  
 ```java
 @PostConstruct
 public void init() {
+    // ស្វ័យប្រវត្តិនិយាយកំណត់ម៉ូដែលពី Foundry Local ប្រសិនបើមិនបានកំណត់ជាក់លាក់
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl)                // URL មូលដ្ឋានមានរួចស្រាប់ /v1 ពីការកំណត់រចនាសម្ព័ន្ធ
-            .apiKey("not-needed")            // ម៉ាស៊ីនមេក្នុងស្រុកមិនត្រូវការកូនសោ API ពិតប្រាកដ
+            .baseUrl(baseUrl)                // URL មូលដ្ឋានមានរួចហើយ /v1 ពីការកំណត់
+            .apiKey("not-needed")            // ម៉ាស៊ីនមូលដ្ឋានមិនត្រូវការកូន API ពិតប្រាកដ
             .build();
 }
 ```
+  
+**អ្វីដែលវាធ្វើ៖**  
+- `@PostConstruct` រត់មធ្យោបាយនេះបន្ទាប់ពី Spring បង្កើតសេវាកម្ម  
+- ប្រសិនបើមិនមានម៉ូដែលកំណត់ វាស្នើសុំ `/v1/models` របស់ Foundry Local ហើយជ្រើសរើសម៉ូដែលដំបូងដែលបានទាញយក  
+- បង្កើត client OpenAI ដែលបង្ហាញទៅម៉ាស៊ីន Foundry Local របស់អ្នក  
+- base URL ពី `application.properties` មាន `/v1` សម្រាប់ភាពឆបគ្នា OpenAI API  
+- គ្រាប់លេខ API បានកំណត់ជា "not-needed" ព្រោះការអភិវឌ្ឍតំបន់មូលដ្ឋានមិនត្រូវការសម្ងាត់
 
-**អ្វីដែលវាត្រូវធ្វើ:**
-- `@PostConstruct` បង្ហាញថាវិធីសាស្រ្តនេះបញ្ចប់បន្ទាប់ពី Spring បង្កើតសេវាកម្ម
-- បង្កើត OpenAI client ដែលបញ្ជូនទៅ Foundry Local របស់អ្នក
-- URL មូលដ្ឋានពី `application.properties` មាន `/v1` រួចហើយ សម្រាប់ភាពសមរម្យ OpenAI API
-- កូនសោ API ត្រូវបានកំណត់ជា "not-needed" ព្រោះការអភិវឌ្ឍន៏ក្នុងតំបន់មិនត្រូវការការផ្ទៀងផ្ទាត់
-
-#### វិធីសាស្រ្ត Chat:
+#### វិធីសាស្រ្ត Chat៖  
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                .model(model)                    // តើគំរូ AI ណាមួយដែលត្រូវប្រើ
-                .addUserMessage(message)         // សំណួរ/ការជំរុញរបស់អ្នក
+                .model(model)                    // ម៉ូដែល AI ដែលត្រូវប្រើ
+                .addUserMessage(message)         // សំណួរ/ការជំនួយរបស់អ្នក
                 .maxCompletionTokens(150)        // កំណត់ប្រវែងចម្លើយ
                 .temperature(0.7)                // គ្រប់គ្រងភាពច្នៃប្រឌិត (0.0-1.0)
                 .build();
         
         ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
         
-        // ដកចម្លើយ AI ពីលទ្ធផល API
+        // ដកចេញចម្លើយ AI ពីលទ្ធផល API
         if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
             return chatCompletion.choices().get(0).message().content().orElse("No response found");
         }
@@ -167,20 +182,20 @@ public String chat(String message) {
     }
 }
 ```
+  
+**អ្វីដែលវាធ្វើ៖**  
+- **ChatCompletionCreateParams**៖ កំណត់សំណើ AI  
+  - `model`: បញ្ជាក់ម៉ូដែល AI ដែលត្រូវប្រើ (ត្រូវតែត្រូវនឹង ID ត្រឹមត្រូវពី `foundry model list`)  
+  - `addUserMessage`: បន្ថែមសាររបស់អ្នកទៅក្នុងសន្ទនារ  
+  - `maxCompletionTokens`: កំណត់កំរិតប្រវែងការឆ្លើយតប (សន្សំធនធាន)  
+  - `temperature`: គ្រប់គ្រងការរញ្ជួយ (0.0 = លំអៀង, 1.0 = បង្កើតច្នៃប្រឌិត)  
+- **API Call**៖ ផ្ញើសំណើទៅ Foundry Local  
+- **ការដោះស្រាយចម្លើយ**៖ ដកអត្ថបទចម្លើយ AI ដោយមានសុវត្ថិភាព  
+- **ការដោះស្រាយកម្រិតបញ្ហា**៖ រុំកម្រងករណី exception ជាមួយសារ error ដែលមានប្រយោជន៍
 
-**អ្វីដែលវាត្រូវធ្វើ:**
-- **ChatCompletionCreateParams**: កំណត់សំណើ AI
-  - `model`: បញ្ជាក់ម៉ូដែល AI ដែលត្រូវប្រើ (ត្រូវតែត្រូវនឹង ID ពិតប្រាកដពី `foundry model list`)
-  - `addUserMessage`: បន្ថែមសាររបស់អ្នកក្នុងការសន្ទនា
-  - `maxCompletionTokens`: កំណត់ប្រវែងចម្លើយអតិបរមា (ជួយសន្សំធនធាន)
-  - `temperature`: គ្រប់គ្រងភាពចៃដន្យ (0.0 = ត្រឹមត្រូវដាច់ខាត, 1.0 = មានភាពច្នៃប្រឌិត)
-- **API Call**: ផ្ញើសំណើទៅ Foundry Local
-- **ការដោះស្រាយចម្លើយ**: កាប់យកអត្ថបទចម្លើយពី AI ដោយសុវត្ថិភាព
-- **ដោះស្រាយកំហុស**: ការចាប់ខ្សែភាពយន្តជាមួយសារ​កំហុសដែលមានប្រយោជន៍
+### 4. ខួប Dependencies គម្រោង (pom.xml)
 
-### 4. ហេតុផលគម្រោង (pom.xml)
-
-**ហេតុផលសំខាន់ៗ:**
+**ខួបសំខាន់៖**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -204,123 +219,137 @@ public String chat(String message) {
     <version>2.17.0</version>
 </dependency>
 ```
+  
+**អ្វីដែលវាធ្វើ៖**  
+- **spring-boot-starter**៖ ផ្តល់មុខងារមូលដ្ឋាន Spring Boot  
+- **openai-java**៖ គម្រោង Java SDK ផ្លូវការសម្រាប់ OpenAI API  
+- **jackson-databind**៖ ដំណើរការសម្រួល JSON សម្រាប់កម្មវិធី API
 
-**អ្វីដែលវាត្រូវធ្វើ:**
-- **spring-boot-starter**: ផ្ដល់មុខងារ Spring Boot មូលដ្ឋាន
-- **openai-java**: គ្រឹះស្ថាន OpenAI Java SDK សម្រាប់ការទំនាក់ទំនង API
-- **jackson-databind**: គ្រប់គ្រងការបំលែង JSON សម្រាប់ការហៅ API
+## របៀបដែលវាផ្គុំគ្នា
 
-## វិធីដែលវាដំណើរការជាមួយគ្នា
+នេះជាជួរប្រតិបត្តិពេញលេញពេលអ្នករត់កម្មវិធី៖
 
-នេះជាដំណើរការសរុបពេលអ្នករត់កម្មវិធី៖
+1. **ចាប់ផ្តើម**: Spring Boot ចាប់ផ្តើម ហើយអាន `application.properties`  
+2. **ការបង្កើតសេវាកម្ម**: Spring បង្កើត `FoundryLocalService` ហើយចាក់បញ្ចូលតម្លៃកំណត់  
+3. **ការស្វ័យប្រមាណម៉ូដែល**: ប្រសិនបើមិនមានម៉ូដែល ការសេវាស្នើសុំ `/v1/models` របស់ Foundry Local ហើយប្រើម៉ូដែលដំបូងនៅស្រាប់  
+4. **ការកំណត់ client**: `@PostConstruct` ចាប់ផ្តើម client OpenAI ဆាកដល់ Foundry Local  
+5. **ការប្រើប្រាស់សាកល្បង**: `CommandLineRunner` ធ្វើការប្រតិបត្តិបន្ទាប់ពីចាប់ផ្តើម  
+6. **សារហៅ AI**: ដំណើរការនៅ `foundryLocalService.chat()` ជាមួយសារសាកល្បង  
+7. **សំណើ API**: សេវាកម្មកសាង និងផ្ញើសំណើ OpenAI-compatible ទៅ Foundry Local  
+8. **ដោះស្រាយចម្លើយ**: សេវាកម្មដក ចម្លើយ AI ហើយត្រឡប់វិញ  
+9. **បង្ហាញលទ្ធផល**: កម្មវិធីបោះពុម្ពចម្លើយ ហើយចេញពីកម្មវិធី
 
-1. **ចាប់ផ្តើម**: Spring Boot ចាប់ផ្តើម និងអាន `application.properties`
-2. **បង្កើតសេវាកម្ម**: Spring បង្កើត `FoundryLocalService` ហើយចាក់បញ្ចូលតម្លៃកំណត់
-3. **តំឡើង Client**: `@PostConstruct` ចាប់ផ្តើម OpenAI client ដើម្បីភ្ជាប់ទៅ Foundry Local
-4. **ប្រតិបត្តិការបង្ហាញ**: `CommandLineRunner` បើកប្រាស្រ័យបន្ទាប់ពីចាប់ផ្តើម
-5. **ហៅ AI**: Demo ហៅ `foundryLocalService.chat()` ជាមួយសារពិនិត្យមួយ
-6. **សំណើ API**: សេវាកម្ម បង្កើត និងផ្ញើសំណើ OpenAI-compatible ទៅ Foundry Local
-7. **ដំណើរការចម្លើយ**: សេវាកម្មទាញនិងបង្វិលចម្លើយ AI
-8. **បង្ហាញ**: កម្មវិធីបោះពុម្ពចម្លើយ ហើយចេញពីកម្មវិធី
+## ការដំឡើង Foundry Local
 
-## ការតំឡើង Foundry Local
+1. **ដំឡើង Foundry Local** ដោយអនុវត្តតាមសេចក្តីណែនាំនៅក្នុងផ្នែក [លក្ខខណ្ឌជាមុន](#លក្ខខណ្ឌជាមុន)។
 
-ដើម្បីតំឡើង Foundry Local សូមអនុវត្តជំហានទាំងនេះ៖
-
-1. **តំឡើង Foundry Local** ដោយប្រើការណែនាំក្នុងផ្នែក [Prerequisites](#លក្ខណ្ឌទាមទារ)។
-
-2. **ពិនិត្យច្រកដែលមានការ​ផ្ដល់ដោយចៃដន្យ**។ Foundry Local ផ្ដល់ច្រកដោយស្វ័យប្រវត្តិពេលវាចាប់ផ្តើម។ រកច្រករបស់អ្នកដោយ៖
+2. **ចាប់ផ្តើមសេវាកម្ម** (ប្រសិនបើមិនបានដំណើរការ):  
+   ```bash
+   foundry service start
+   ```
+  
+3. **ពិនិត្យស្ថានភាពសេវាកម្ម** ដើម្បីបញ្ជាក់ថាវាកំពុងដំណើរការ និងចំណាំប័រផត់ផត:  
    ```bash
    foundry service status
    ```
-   
-   **ជម្រើសបន្ថែម**: ប្រសិនបើអ្នកចង់ប្រើច្រកជាក់លាក់ (ឧ. 5273) អ្នកអាចកំណត់ដៃ៖
+  
+4. **ទាញយក និងរត់ម៉ូដែល** (ទាញយកលើកដំបូង ហើយផ្ទុកក្នុង cache សម្រាប់ដំណើរការជាបន្ទាប់):  
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
    ```
+   នេះបើកកិច្ចប្រជុំជជែកអន្តរកម្ម អ្នកអាចចេញដោយចុច `Ctrl+C`។ ម៉ូដែលនៅតែត្រូវបានផ្ទុកក្នុងសេវាកម្ម។
 
-3. **ទាញយកម៉ូដែល AI** ដែលអ្នកចង់ប្រើ ឧ. `phi-3.5-mini` ជាមួយពាក្យបញ្ជាខាងក្រោម៖
+   > **គន្លឹះ:** រត់ `foundry model list` ដើម្បីមើលម៉ូដែលទាំងអស់ដែលមាន។ ជំនួស `phi-4-mini` ជាមួយបុព្វហេតុណាមួយក្នុងបញ្ជី (ឧ. `qwen2.5-0.5b` សម្រាប់ម៉ូដែលតូច/រហ័សជាង)។
+
+5. **ផ្ទៀងផ្ទាត់ម៉ូដែលត្រូវបានដាក់:**  
    ```bash
-   foundry model run phi-3.5-mini
+   foundry service ps
    ```
+  
+6. **អាប់ដេត `application.properties` ប្រសិនបើចាំបាច់៖**  
+   - base-url លំនាំដើម (`http://localhost:5273/v1`) ត្រូវនឹងច្រក CLI លំនាំដើម។ បើផត់ផតផ្សេង សូមធ្វើបច្ចុប្បន្នភាពតែប៉ុណ្ណោះ។  
+   - ម៉ូដែលត្រូវបាន **ស្វ័យប្រមាណ** នៅពេលចាប់ផ្តើម — មិនចាំបាច់កំណត់។
 
-4. **កំណត់ឯកសារ application.properties** ឲ្យសមរម្យនឹងការកំណត់ Foundry Local របស់អ្នក៖
-   - បន្ទាន់សម័យច្រកក្នុង `base-url` (ពីជំហាន 2) ហើយធានាថាផ្លូវមាន `/v1` នៅចុង
-   - បន្ទាន់សម័យឈ្មោះម៉ូដែល ដើម្បីរួមបញ្ចូលលេខកំណែ (ពិនិត្យជាមួយ `foundry model list`)
-   
-   និទាឃរូបៈ
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
+  
+## ការប្រើកម្មវិធី
 
-## ការរត់កម្មវិធី
-
-### ជំហាន 1: ចាប់ផ្តើម Foundry Local
+### ជំហាន 1: ប្រាកដថាម៉ូដែលបានផ្ទុកក្នុង Foundry Local  
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
 ```
-
-### ជំហាន 2: កសាង និងរត់កម្មវិធី
+  
+ប្រសិនបើគ្មានម៉ូដែលបង្ហាញ ចំណុះមួយ:  
+```bash
+foundry model run phi-4-mini
+```
+  
+### ជំហាន 2: បង្កើត និងរត់កម្មវិធី  
+នៅក្នុង Terminal ផ្សេងទៀត:  
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
+  
+ឬបង្កើត និងដំណើរការជា JAR:  
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
-
-## លទ្ធផលដែលបានរំពឹត
+  
+## លទ្ធផលដែលរំពឹងទុក
 
 ```
 === Foundry Local Demo ===
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
-
+  
 ## ជំហានបន្ទាប់
 
-សម្រាប់ឧទាហរណ៍បន្ថែម សូមមើល [ជំពូក 04: ឧទាហរណ៍អនុវត្ត](../README.md)
+សម្រាប់ឧទាហរណ៍បន្ថែម មើល [ជំពូក 04: ឧទាហរណ៍អនុវត្ត](../README.md)
 
-## ការដោះស្រាយបញ្ហា
+## ដោះស្រាយបញ្ហា
 
-### បញ្ហាទូទៅ
+### គន្លឹះរួម
 
-**"Connection refused" ឬ "Service unavailable"**
-- សូមប្រាកដថា Foundry Local កំពុងដំណើរការ៖ `foundry model list`
-- ពិនិត្យច្រកពិតប្រាកដដែល Foundry Local កំពុងប្រើ៖ `foundry service status`
-- បន្ទាន់សម័យ `application.properties` ជាមួយច្រកត្រឹមត្រូវ ហើយធានាថា URL បញ្ចប់ដោយ `/v1`
-- ជំនួស, កំណត់ច្រកជាក់លាក់ប្រសិនបើចង់៖ `foundry service set --port 5273`
-- ព្យាយាមចាប់ផ្តើមឡើងវិញ Foundry Local៖ `foundry model run phi-3.5-mini`
+**"Connection refused" ឬ "Service unavailable"**  
+- ពិនិត្យសេវាកម្ម៖ `foundry service status`  
+- ចាប់ផ្តើមឡើងវិញប្រសិនបើចាំបាច់៖ `foundry service restart`  
+- ផ្ទៀងផ្ទាត់ថាច្រកក្នុង `application.properties` ត្រូវនឹងការបញ្ចេញ `foundry service status`  
+- ធ្វើប្រាកដថា URL មាន `/v1` ចុងក្រោយ៖ `http://localhost:5273/v1`
 
-**"Model not found" ឬ កំហុស "404 Not Found"**
-- ពិនិត្យម៉ូដែលដែលមានជាមួយ ID ត្រឹមត្រូវ៖ `foundry model list`
-- បន្ទាន់សម័យឈ្មោះម៉ូដែលក្នុង `application.properties` ដូចគ្នា រួមបញ្ចូលលេខកំណែ (ឧ. `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- ធានាថា `base-url` រួមមាន `/v1` នៅចុង៖ `http://localhost:5273/v1`
-- ទាញយកម៉ូដែល ប្រសិនបើចាំបាច់៖ `foundry model run phi-3.5-mini`
+**"No model found" នៅពេលចាប់ផ្តើម**  
+- កម្មវិធីស្វ័យប្រមាណម៉ូដែល។ សូមធ្វើឲ្យមានម៉ូដែលមួយយ៉ាងតិចតួចបានផ្ទុក: `foundry service ps`  
+- ប្រសិនបើគ្មានម៉ូដែលបានផ្ទុក៖ `foundry model run phi-4-mini`  
+- ប្រសិនបើអ្នកបានផ្លាស់ប្ដូរឈ្មោះម៉ូដែលក្នុង `application.properties` សូមផ្ទៀងផ្ទាត់ឲ្យតម្រឹមនឹង `foundry model list`
 
-**កំហុស "400 Bad Request"**
-- ពិនិត្យថា base URL មាន `/v1`: `http://localhost:5273/v1`
-- ពិនិត្យម៉ូដែល ID ត្រូវនឹង ID ត្រូវគ្នានៅក្នុង `foundry model list`
-- សូមប្រាកដថាអ្នកប្រើ `maxCompletionTokens()` ក្នុងកូដ (មិនមែន `maxTokens()` ដែលមិនប្រើឡើយ)
+**កំហុស "400 Bad Request"**  
+- ផ្ទៀងផ្ទាត់ base URL មាន `/v1`៖ `http://localhost:5273/v1`  
+- ត្រូវប្រាកដអ្នកប្រើ `maxCompletionTokens()` ក្នុងកូដ (ញឹកញាប់ធីត `maxTokens()` គឺហ៊ានលុបចោល)
 
-**កំហុសកំណត់អត្ថប្រយោជន៍ Maven**
-- ប្រាកដថា Java 21 ឬខ្ពស់ជាងនេះ៖ `java -version`
-- សម្អាត និងសាងសង់ឡើងវិញ៖ `mvn clean compile`
-- ពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតសម្រាប់ទាញយកអាសយដ្ឋាន
+**កំហុសបំលែង Maven**  
+- ធ្វើឲ្យប្រាកដ Java 21 ឬខ្ពស់ទៀត៖ `java -version`  
+- សម្អាត និងសង់ឡើងវិញ៖ `mvn clean compile`  
+- ពិនិត្យការតភ្ជាប់អ៊ីនធើណិតសម្រាប់ទាញ dependencies
 
-**កម្មវិធីចាប់ផ្តើមតែមិនមានលទ្ធផលចេញវិញ**
-- ពិនិត្យថា Foundry Local កំពុងឆ្លើយតប៖ ពិនិត្យ `http://localhost:5273/v1/models` ឬរត់ `foundry service status`
-- ពិនិត្យកំណត់ហេតុកម្មវិធី (logs) សម្រាប់សារកំហុសជាក់លាក់
-- ធានាពិនិត្យម៉ូដែលបានចំនួនពេញលេញហើយរួចរាល់
+**បញ្ហាការភ្ជាប់សេវាកម្ម**  
+- ប្រសិនបើអ្នកឃើញ `Request to local service failed` សូមរត់៖ `foundry service restart`  
+- ពិនិត្យម៉ូដែលផ្ទុក៖ `foundry service ps`  
+- មើលកំណត់ហេតុសេវាកម្ម៖ `foundry service diag`
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**ការបដិសេធ**:  
-ឯកសារនេះត្រូវបានបកប្រែដោយប្រើសេវាកម្មបកប្រែ AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ទោះយើងខិតខំប្រឹងប្រែងសម្រាប់ភាពត្រឹមត្រូវ ក៏សូមយល់ព្រមថាការបកប្រែដោយស្វ័យប្រវត្តិអាចមានកំហុស ឬភាពមិនត្រឹមត្រូវ។ ឯកសារដើមក្នុងភាសាទ្រង់ទ្រាយដើមគួរត្រូវបានភាគរយដល់ការជឿជាក់។ សម្រាប់ព័ត៌មានសំខាន់ៗ ការបកប្រែដោយមនុស្សជំនាញត្រូវបានផ្តល់អនុសាសន៍។ យើងមិនទទួលខុសត្រូវចំពោះការយល់ច្រឡំ ឬការពន្យល់ថា ខុសពីការប្រើប្រាស់ការបកប្រែនេះឡើយ។
+**បញ្ជាក់**៖  
+ឯកសារនេះត្រូវបានបកប្រែដោយប្រើសេវាបកប្រែ AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ខណៈពេលយើងខិតខំបំពេញភាពត្រឹមត្រូវ សូមជ្រាបថាការបកប្រែដោយស្វ័យប្រវត្តិក្នុងនេះអាចមានកំហុស ឬភាពមិនត្រឹមត្រូវខ្លះ។ ឯកសារដើមជាភាសារដែលមានដើមគួរត្រូវបានគេចាត់ទុកជាធនធានមានសុពាល់។ សម្រាប់ព័ត៌មានសំខាន់ៗ សូមផ្ដល់ការបកប្រែដោយមនុស្សអ្នកជំនាញ។ យើងមិនទទួលខុសត្រូវចំពោះការយល់ច្រឡំឬការបកស្រាយខុសពីការប្រើប្រាស់ការបកប្រែនេះទេ។
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

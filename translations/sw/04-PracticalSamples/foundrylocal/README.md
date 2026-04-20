@@ -1,47 +1,56 @@
-# Mafunzo ya Foundry Local Spring Boot
+# Foundry Local Spring Boot Mafunzo
 
-## Jedwali la Yaliyomo
+## Yaliyomo
 
-- [Mahitaji ya Awali](../../../../04-PracticalSamples/foundrylocal)
-- [Muhtasari wa Mradi](../../../../04-PracticalSamples/foundrylocal)
-- [Kuelewa Msimbo](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Usanidi wa Programu (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Darasa Kuu la Programu (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. Tabaka la Huduma ya AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Mahitaji ya Mradi (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [Jinsi Yote Inavyofanya Kazi Pamoja](../../../../04-PracticalSamples/foundrylocal)
-- [Kuweka Foundry Local](../../../../04-PracticalSamples/foundrylocal)
-- [Kuendesha Programu](../../../../04-PracticalSamples/foundrylocal)
-- [Matokeo Yanayotarajiwa](../../../../04-PracticalSamples/foundrylocal)
-- [Hatua Zifuatazo](../../../../04-PracticalSamples/foundrylocal)
-- [Kutatua Tatizo](../../../../04-PracticalSamples/foundrylocal)
+- [Mahitaji ya Awali](#mahitaji-ya-awali)
+- [Muhtasari wa Mradi](#muhtasari-wa-mradi)
+- [Kuelewa Msimbo](#kuelewa-msimbo)
+  - [1. Usanidi wa Programu (application.properties)](#1-usanidi-wa-programu-applicationproperties)
+  - [2. Darasa Kuu la Programu (Application.java)](#2-darasa-kuu-la-programu-applicationjava)
+  - [3. Tabaka la Huduma za AI (FoundryLocalService.java)](#3-tabaka-la-huduma-za-ai-foundrylocalservicejava)
+  - [4. Mategemeo ya Mradi (pom.xml)](#4-mategemeo-ya-mradi-pomxml)
+- [Jinsi Yote Hufanya Kazi Pamoja](#jinsi-yote-hufanya-kazi-pamoja)
+- [Kuweka Foundry Local](#kuweka-foundry-local)
+- [Kukimbia Programu](#kukimbia-programu)
+- [Matokeo Yanayotarajiwa](#matokeo-yanayotarajiwa)
+- [Hatua Zifuatazo](#hatua-zifuatazo)
+- [Matatizo na Suluhisho](#matatizo-na-suluhisho)
+
 
 ## Mahitaji ya Awali
 
 Kabla ya kuanza mafunzo haya, hakikisha una:
 
 - **Java 21 au zaidi** imewekwa kwenye mfumo wako
-- **Maven 3.6+** kwa ajili ya kujenga mradi
+- **Maven 3.6+** kwa kujenga mradi
 - **Foundry Local** imewekwa na inaendesha
 
-### **Weka Foundry Local:**
+### **Sakinisha Foundry Local:**
+
+> **Kumbuka:** CLI ya Foundry Local inapatikana tu kwa **Windows** na **macOS**. Linux inasaidiwa kupitia [Foundry Local SDKs](https://github.com/microsoft/Foundry-Local) (Python, JavaScript, C#, Rust).
 
 ```bash
 # Windows
 winget install Microsoft.FoundryLocal
 
-# macOS (after installing)
-foundry model run phi-3.5-mini
+# macOS
+brew tap microsoft/foundrylocal
+brew install foundrylocal
+```
+
+Thibitisha usakinishaji:
+```bash
+foundry --version
 ```
 
 ## Muhtasari wa Mradi
 
-Mradi huu una sehemu kuu nne:
+Mradi huu una vipengele vinne vikuu:
 
-1. **Application.java** - Sehemu kuu ya kuanzia programu ya Spring Boot
+1. **Application.java** - Sehemu kuu ya kwanza ya programu ya Spring Boot
 2. **FoundryLocalService.java** - Tabaka la huduma linaloshughulikia mawasiliano ya AI
 3. **application.properties** - Usanidi wa muunganisho wa Foundry Local
-4. **pom.xml** - Mahitaji ya Maven na usanidi wa mradi
+4. **pom.xml** - Mategemeo ya Maven na usanidi wa mradi
 
 ## Kuelewa Msimbo
 
@@ -51,14 +60,15 @@ Mradi huu una sehemu kuu nne:
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
 
-**Kazi ya Hii:**
-- **base-url**: Inaonyesha mahali Foundry Local inaendesha, ikijumuisha njia ya `/v1` kwa ulinganifu wa API ya OpenAI. **Kumbuka**: Foundry Local inatoa bandari kwa njia ya kiotomatiki, kwa hivyo angalia bandari yako halisi kwa kutumia `foundry service status`
-- **model**: Inaonyesha jina la mfano wa AI wa kutumia kwa kizazi cha maandishi, ikijumuisha namba ya toleo (mfano, `:1`). Tumia `foundry model list` kuona mifano inayopatikana na vitambulisho vyake halisi
+**Hii hufanya nini:**
+- **base-url**: Inaelezea mahali Foundry Local inaendesha, ikiwa ni pamoja na njia ya `/v1` kwa muunganisho wa OpenAI API. Mlangoni pa default ni `5273`. Ikiwa mlangoni ni tofauti, angalia kwa `foundry service status`.
+- **model** (hiari): Inataja jina la modeli ya AI kutumia kwa uzalishaji wa maandishi. **Kwa kawaida, programu hutambua modeli kiotomatiki** kwa kuulizia Foundry Local `/v1/models` wakati wa kuanzisha, hivyo huwezi kuhitaji kuibainisha. Unaweza bado kuibainisha wazi kama unahitaji kuzima utambuzi wa kiotomatiki.
 
-**Dhana Muhimu:** Spring Boot inasoma kiotomatiki mali hizi na kuzifanya zipatikane kwa programu yako kwa kutumia `@Value`.
+**Dhana muhimu:** Spring Boot hupakia mali hizi kiotomatiki na kuzifanya zipatikane kwa programu yako kwa kutumia alama `@Value`.
 
 ### 2. Darasa Kuu la Programu (Application.java)
 
@@ -69,15 +79,15 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.setWebApplicationType(WebApplicationType.NONE);  // Hakuna seva ya wavuti inahitajika
         app.run(args);
     }
 ```
 
-**Kazi ya Hii:**
-- `@SpringBootApplication` inawezesha usanidi wa kiotomatiki wa Spring Boot
-- `WebApplicationType.NONE` inaambia Spring kuwa hii ni programu ya mstari wa amri, si seva ya wavuti
-- Njia kuu inaanzisha programu ya Spring
+**Hii hufanya nini:**
+- `@SpringBootApplication` huwezesha usanidi wa Spring Boot kiotomatiki
+- `WebApplicationType.NONE` huonyesha Spring hii ni programu ya mstari wa amri, si seva ya wavuti
+- Njia kuu huanzisha programu ya Spring
 
 **Mwendeshaji wa Demo:**
 ```java
@@ -98,17 +108,17 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
-**Kazi ya Hii:**
-- `@Bean` huunda sehemu ambayo Spring inasimamia
-- `CommandLineRunner` inaendesha msimbo baada ya Spring Boot kuanza
-- `foundryLocalService` inaingizwa kiotomatiki na Spring (kuingiza utegemezi)
-- Inatuma ujumbe wa majaribio kwa AI na kuonyesha majibu
+**Hii hufanya nini:**
+- `@Bean` huunda sehemu inayosimamiwa na Spring
+- `CommandLineRunner` huendesha msimbo baada ya Spring Boot kuanza
+- `foundryLocalService` huingizwa kiotomatiki na Spring (udoaji wa utegemezi)
+- Hutuma ujumbe wa jaribio kwa AI na kuonyesha jibu
 
-### 3. Tabaka la Huduma ya AI (FoundryLocalService.java)
+### 3. Tabaka la Huduma za AI (FoundryLocalService.java)
 
 **Faili:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### Usanidi wa Kuingiza:
+#### Uingizaji Usanidi:
 ```java
 @Service
 public class FoundryLocalService {
@@ -116,46 +126,52 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // Inatambuliwa kiotomatiki ikiwa tupu
 ```
 
-**Kazi ya Hii:**
-- `@Service` inaonyesha Spring kuwa darasa hili linatoa mantiki ya biashara
-- `@Value` inaingiza thamani za usanidi kutoka application.properties
-- Sintaksia ya `:default-value` inatoa thamani mbadala ikiwa mali hazijawekwa
+**Hii hufanya nini:**
+- `@Service` huambia Spring kuwa darasa hili linatoa mantiki ya biashara
+- `@Value` huingiza thamani za usanidi kutoka application.properties
+- Modeli huanzishwa kuwa tupu, ambayo husababisha **utambuzi wa kiotomatiki** kutoka Foundry Local wakati wa kuanzisha. Hii ina maana programu hufanya kazi na modeli yoyote iliyo kwenye Foundry Local bila usanidi wa mkono.
 
 #### Uanzishaji wa Mteja:
 ```java
 @PostConstruct
 public void init() {
+    // Kugundua moja kwa moja modeli kutoka Foundry Local ikiwa haijasanidiwa wazi
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
-            .apiKey("not-needed")            // Local server doesn't need real API key
+            .baseUrl(baseUrl)                // URL ya Msingi tayari inajumuisha /v1 kutoka kwa usanidi
+            .apiKey("not-needed")            // Seva ya ndani haihitaji ufunguo halali wa API
             .build();
 }
 ```
 
-**Kazi ya Hii:**
-- `@PostConstruct` inaendesha njia hii baada ya Spring kuunda huduma
-- Inaunda mteja wa OpenAI anayeelekea kwenye Foundry Local yako ya ndani
-- URL ya msingi kutoka `application.properties` tayari inajumuisha `/v1` kwa ulinganifu wa API ya OpenAI
+**Hii hufanya nini:**
+- `@PostConstruct` huendesha njia hii baada ya Spring kuunda huduma
+- Ikiwa hakuna modeli iliyosanidiwa, inauliza kwa Foundry Local `/v1/models` na kuchagua modeli ya kwanza iliyopakiwa
+- Huunda mteja wa OpenAI unaoelekeza kwa toleo lako la Foundry Local
+- URL msingi kutoka `application.properties` tayari ina `/v1` kwa muunganisho wa API wa OpenAI
 - Funguo ya API imewekwa kuwa "not-needed" kwa sababu maendeleo ya ndani hayahitaji uthibitisho
 
-#### Njia ya Mazungumzo:
+#### Njia ya Chat:
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                .model(model)                    // Which AI model to use
-                .addUserMessage(message)         // Your question/prompt
-                .maxCompletionTokens(150)        // Limit response length
-                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .model(model)                    // Ni mfano gani wa AI wa kutumia
+                .addUserMessage(message)         // Swali/lalisha lako
+                .maxCompletionTokens(150)        // Weka kikomo kwa urefu wa jibu
+                .temperature(0.7)                // Dhibiti ubunifu (0.0-1.0)
                 .build();
         
         ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
         
-        // Extract the AI's response from the API result
+        // Chukua jibu la AI kutoka kwa matokeo ya API
         if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
             return chatCompletion.choices().get(0).message().content().orElse("No response found");
         }
@@ -167,19 +183,19 @@ public String chat(String message) {
 }
 ```
 
-**Kazi ya Hii:**
-- **ChatCompletionCreateParams**: Inasanidi ombi la AI
-  - `model`: Inaonyesha ni mfano gani wa AI wa kutumia (lazima ulingane na ID halisi kutoka `foundry model list`)
-  - `addUserMessage`: Inaongeza ujumbe wako kwenye mazungumzo
-  - `maxCompletionTokens`: Inapunguza urefu wa majibu (inaokoa rasilimali)
-  - `temperature`: Inadhibiti nasibu (0.0 = ya uhakika, 1.0 = ya ubunifu)
-- **API Call**: Inatuma ombi kwa Foundry Local
-- **Response Handling**: Inatoa majibu ya maandishi ya AI kwa usalama
-- **Error Handling**: Inafunga makosa na ujumbe wa msaada
+**Hii hufanya nini:**
+- **ChatCompletionCreateParams**: Husanidi ombi la AI
+  - `model`: Inaeleza modeli ya AI kutumia (inapaswa kulingana na kitambulisho halisi kutoka `foundry model list`)
+  - `addUserMessage`: Inongeza ujumbe wako kwenye mazungumzo
+  - `maxCompletionTokens`: Huongeza kikomo cha urefu wa jibu (kuokoa rasilimali)
+  - `temperature`: Hudhibiti kutabirika (0.0 = thabiti, 1.0 = ubunifu)
+- **API Call**: Hutuma ombi kwa Foundry Local
+- **Udhibiti wa Majibu**: Huchukua kwa usalama jibu la maandishi la AI
+- **Udhibiti wa Makosa**: Huizungusha mitisho na ujumbe wa kusaidia
 
-### 4. Mahitaji ya Mradi (pom.xml)
+### 4. Mategemeo ya Mradi (pom.xml)
 
-**Mahitaji Muhimu:**
+**Mategemeo Muhimu:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -204,63 +220,81 @@ public String chat(String message) {
 </dependency>
 ```
 
-**Kazi ya Hii:**
-- **spring-boot-starter**: Inatoa utendaji wa msingi wa Spring Boot
-- **openai-java**: SDK rasmi ya OpenAI Java kwa mawasiliano ya API
-- **jackson-databind**: Inashughulikia usawazishaji/usawazishaji wa JSON kwa miito ya API
+**Hii hufanya nini:**
+- **spring-boot-starter**: Hutolewa kazi kuu za Spring Boot
+- **openai-java**: SDK rasmi ya OpenAI kwa Java kwa mawasiliano ya API
+- **jackson-databind**: Hushughulikia serialization/deserialization ya JSON kwa simu za API
 
-## Jinsi Yote Inavyofanya Kazi Pamoja
+## Jinsi Yote Hufanya Kazi Pamoja
 
-Hivi ndivyo mtiririko mzima unavyofanya kazi unapokimbia programu:
+Hapa ni mtiririko kamili unapokimbia programu:
 
-1. **Kuanza**: Spring Boot inaanza na kusoma `application.properties`
-2. **Uundaji wa Huduma**: Spring inaunda `FoundryLocalService` na kuingiza thamani za usanidi
-3. **Usanidi wa Mteja**: `@PostConstruct` inaanzisha mteja wa OpenAI kuunganishwa na Foundry Local
-4. **Utekelezaji wa Demo**: `CommandLineRunner` inaendesha baada ya kuanza
-5. **Mwito wa AI**: Demo inaita `foundryLocalService.chat()` na ujumbe wa majaribio
-6. **Ombi la API**: Huduma inajenga na kutuma ombi linalolingana na OpenAI kwa Foundry Local
-7. **Usindikaji wa Majibu**: Huduma inatoa na kurudisha majibu ya AI
-8. **Onyesho**: Programu inaonyesha majibu na kuacha
+1. **Kuanzisha**: Spring Boot huanza na kusoma `application.properties`
+2. **Uundaji wa Huduma**: Spring huunda `FoundryLocalService` na kuingiza thamani za usanidi
+3. **Utambuzi wa Modeli**: Ikiwa hakuna modeli isiyosanidiwa, huduma huuliza `/v1/models` ya Foundry Local na kutumia modeli ya kwanza iliyo na upakiaji kiotomatiki
+4. **Kuanzisha Mteja**: `@PostConstruct` huanzisha mteja wa OpenAI kuunganishwa na Foundry Local
+5. **Uendeshaji wa Demo**: `CommandLineRunner` hutekelezwa baada ya kuanzisha
+6. **Simu ya AI**: Demo huita `foundryLocalService.chat()` na ujumbe wa jaribio
+7. **Ombi la API**: Huduma hujenga na kutuma ombi linaloungwa mkono na OpenAI kwa Foundry Local
+8. **Ushughulikiaji wa Majibu**: Huduma huchukua na kurudisha jibu la AI
+9. **Kuonyesha**: Programu inapiga chapisho jibu na kutoka
 
 ## Kuweka Foundry Local
 
-Ili kuweka Foundry Local, fuata hatua hizi:
+1. **Sakinisha Foundry Local** kwa kutumia maelekezo katika sehemu ya [Mahitaji ya Awali](#mahitaji-ya-awali).
 
-1. **Weka Foundry Local** kwa kutumia maelekezo katika sehemu ya [Mahitaji ya Awali](../../../../04-PracticalSamples/foundrylocal).
+2. **Anzisha huduma** (ikiwa haijaanza tayari):
+   ```bash
+   foundry service start
+   ```
 
-2. **Angalia bandari iliyotolewa kiotomatiki**. Foundry Local inatoa bandari kiotomatiki inapowashwa. Tafuta bandari yako kwa:
+3. **Angalia hali ya huduma** kuhakikisha inaendesha na kumbuka mlangoni:
    ```bash
    foundry service status
    ```
-   
-   **Hiari**: Ikiwa unapendelea kutumia bandari maalum (mfano, 5273), unaweza kuisanidi kwa mikono:
+
+4. **Pakua na endesha modeli** (huipakua mara ya kwanza, huhifadhi kwa mara za baadaye):
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
+   ```
+   Hii huanzisha kikao cha mazungumzo cha kuingiliana. Unaweza kutoka kwa `Ctrl+C`. Modeli huendelea kuwa imepakiwa katika huduma.
+
+   > **Vidokezo:** Endesha `foundry model list` kuona modeli zote zinazopatikana. Badilisha `phi-4-mini` na jina lolote la kauli kutoka kwenye orodha (mfano, `qwen2.5-0.5b` kwa modeli ndogo/haraka).
+
+5. **Thibitisha modeli imepakiwa:**
+   ```bash
+   foundry service ps
    ```
 
-3. **Pakua mfano wa AI** unaotaka kutumia, kwa mfano, `phi-3.5-mini`, kwa amri ifuatayo:
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
+6. **Sasisha `application.properties`** ikiwa inahitajika:
+   - `base-url` ya default (`http://localhost:5273/v1`) inalingana na mlangoni wa default wa CLI. Badilisha tu kama `foundry service status` inaonyesha mlangoni tofauti.
+   - Modeli hutambuliwa **kiotomatiki** wakati wa kuanzisha — hakuna usanidi wa mkono unahitajika.
 
-4. **Sanidi faili ya application.properties** ili kulingana na mipangilio yako ya Foundry Local:
-   - Sasisha bandari katika `base-url` (kutoka hatua ya 2), ukihakikisha inajumuisha `/v1` mwishoni
-   - Sasisha jina la mfano ili kujumuisha namba ya toleo (angalia kwa `foundry model list`)
-   
-   Mfano:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
 
-## Kuendesha Programu
+## Kukimbia Programu
 
-### Hatua ya 1: Washa Foundry Local
+### Hatua ya 1: Hakikisha modeli imepakiwa ndani ya Foundry Local
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
+```
+Ikiwa hakuna modeli zilizoonyeshwa, pakua moja:
+```bash
+foundry model run phi-4-mini
 ```
 
-### Hatua ya 2: Jenga na Endesha Programu
+### Hatua ya 2: Tengeneza na Kukimbia Programu
+Katika terminal tofauti:
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
+
+Au tengeneza na kimbia kama JAR:
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
@@ -273,51 +307,48 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
 
 ## Hatua Zifuatazo
 
-Kwa mifano zaidi, angalia [Sura ya 04: Sampuli za vitendo](../README.md)
+Kwa mifano zaidi, ona [Sura 04: Mifano halisi](../README.md)
 
-## Kutatua Tatizo
+## Matatizo na Suluhisho
 
 ### Masuala ya Kawaida
 
 **"Connection refused" au "Service unavailable"**
-- Hakikisha Foundry Local inaendesha: `foundry model list`
-- Angalia bandari halisi Foundry Local inatumia: `foundry service status`
-- Sasisha `application.properties` yako na bandari sahihi, ukihakikisha URL inaishia na `/v1`
-- Vinginevyo, weka bandari maalum ikiwa unataka: `foundry service set --port 5273`
-- Jaribu kuwasha upya Foundry Local: `foundry model run phi-3.5-mini`
+- Angalia huduma: `foundry service status`
+- Anzisha tena kama inahitajika: `foundry service restart`
+- Hakikisha mlangoni katika `application.properties` unalingana na toleo la `foundry service status`
+- Hakikisha URL ina mwisho wa `/v1`: `http://localhost:5273/v1`
 
-**"Model not found" au "404 Not Found" errors**
-- Angalia mifano inayopatikana na vitambulisho vyake halisi: `foundry model list`
-- Sasisha jina la mfano katika `application.properties` ili kulingana kabisa, ikijumuisha namba ya toleo (mfano, `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Hakikisha `base-url` inajumuisha `/v1` mwishoni: `http://localhost:5273/v1`
-- Pakua mfano ikiwa inahitajika: `foundry model run phi-3.5-mini`
+**"Hakuna modeli iliyopatikana" wakati wa kuanzisha**
+- Programu hutambua modeli kiotomatiki. Hakikisha angalau modeli moja imepakiwa: `foundry service ps`
+- Ikiwa hakuna modeli zinazopakiwa: `foundry model run phi-4-mini`
+- Ikiwa umebadilisha jina la modeli katika `application.properties`, hakikisha linakubaliana na `foundry model list`
 
-**"400 Bad Request" errors**
-- Thibitisha URL ya msingi inajumuisha `/v1`: `http://localhost:5273/v1`
-- Angalia kuwa ID ya mfano inalingana kabisa na inavyoonyeshwa katika `foundry model list`
-- Hakikisha unatumia `maxCompletionTokens()` katika msimbo wako (si `maxTokens()` ambayo imepitwa na wakati)
+**Makosa ya "400 Bad Request"**
+- Hakikisha base URL ina `/v1`: `http://localhost:5273/v1`
+- Hakikisha unatumia `maxCompletionTokens()` katika msimbo wako (sio `maxTokens()` iliyopotoka)
 
-**Makosa ya mkusanyiko wa Maven**
+**Makosa ya mkusanyiko ya Maven**
 - Hakikisha Java 21 au zaidi: `java -version`
 - Safisha na jenga upya: `mvn clean compile`
-- Angalia muunganisho wa intaneti kwa upakuaji wa mahitaji
+- Hakikisha una muunganisho wa intaneti kwa kupakua mategemeo
 
-**Programu inaanza lakini hakuna matokeo**
-- Thibitisha Foundry Local inajibu: Angalia `http://localhost:5273/v1/models` au endesha `foundry service status`
-- Angalia kumbukumbu za programu kwa ujumbe maalum wa makosa
-- Hakikisha mfano umepakiwa kikamilifu na uko tayari
+**Matatizo ya muunganisho wa huduma**
+- Ikiwa unaona `Request to local service failed`, endesha: `foundry service restart`
+- Angalia modeli zilizoanza: `foundry service ps`
+- Angalia kumbukumbu za huduma: `foundry service diag`
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kielelezo cha Hukumu**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri kwa AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za moja kwa moja zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa nyeti, tafsiri ya kitaalamu inayofanywa na binadamu inashauriwa. Hatupati dhamana yoyote kwa kutoelewana au tafsiri zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,24 +1,25 @@
 # Foundry Local Spring Boot Tutorial
 
-## Nilalaman ng Talakayan
+## Table of Contents
 
-- [Mga Kinakailangan](../../../../04-PracticalSamples/foundrylocal)
-- [Pangkalahatang-ideya ng Proyekto](../../../../04-PracticalSamples/foundrylocal)
-- [Pag-unawa sa Code](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Konfigurasyon ng Aplikasyon (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Pangunahing Klase ng Aplikasyon (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. Serbisyo ng AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Mga Dependency ng Proyekto (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [Paano Nagtutulungan ang Lahat](../../../../04-PracticalSamples/foundrylocal)
-- [Pag-set Up ng Foundry Local](../../../../04-PracticalSamples/foundrylocal)
-- [Pagpapatakbo ng Aplikasyon](../../../../04-PracticalSamples/foundrylocal)
-- [Inaasahang Output](../../../../04-PracticalSamples/foundrylocal)
-- [Susunod na Hakbang](../../../../04-PracticalSamples/foundrylocal)
-- [Pag-aayos ng Problema](../../../../04-PracticalSamples/foundrylocal)
+- [Mga Kinakailangan](#mga-kinakailangan)
+- [Pangkalahatang-ideya ng Proyekto](#pangkalahatang-ideya-ng-proyekto)
+- [Pag-unawa sa Code](#pag-unawa-sa-code)
+  - [1. Konfigurasyon ng Aplikasyon (application.properties)](#1-konfigurasyon-ng-aplikasyon-applicationproperties)
+  - [2. Pangunahing Klase ng Aplikasyon (Application.java)](#2-pangunahing-klase-ng-aplikasyon-applicationjava)
+  - [3. AI Service Layer (FoundryLocalService.java)](#3-ai-service-layer-foundrylocalservicejava)
+  - [4. Mga Dependency ng Proyekto (pom.xml)](#4-mga-dependency-ng-proyekto-pomxml)
+- [Paano Nagtutulungan Lahat ng Ito](#paano-nagtutulungan-lahat-ng-ito)
+- [Pag-setup ng Foundry Local](#pag-setup-ng-foundry-local)
+- [Pagpapatakbo ng Aplikasyon](#pagpapatakbo-ng-aplikasyon)
+- [Inaasahang Output](#inaasahang-output)
+- [Mga Susunod na Hakbang](#mga-susunod-na-hakbang)
+- [Pag-troubleshoot](#pag-troubleshoot)
+
 
 ## Mga Kinakailangan
 
-Bago simulan ang tutorial na ito, tiyakin na mayroon ka ng:
+Bago simulan ang tutorial na ito, siguraduhing mayroon ka ng:
 
 - **Java 21 o mas mataas** na naka-install sa iyong sistema
 - **Maven 3.6+** para sa pagbuo ng proyekto
@@ -26,21 +27,29 @@ Bago simulan ang tutorial na ito, tiyakin na mayroon ka ng:
 
 ### **I-install ang Foundry Local:**
 
+> **Tandaan:** Ang Foundry Local CLI ay available lamang sa **Windows** at **macOS**. Sinusuportahan ang Linux sa pamamagitan ng [Foundry Local SDKs](https://github.com/microsoft/Foundry-Local) (Python, JavaScript, C#, Rust).
+
 ```bash
 # Windows
 winget install Microsoft.FoundryLocal
 
-# macOS (after installing)
-foundry model run phi-3.5-mini
+# macOS
+brew tap microsoft/foundrylocal
+brew install foundrylocal
+```
+
+Suriin ang pag-install:
+```bash
+foundry --version
 ```
 
 ## Pangkalahatang-ideya ng Proyekto
 
 Ang proyektong ito ay binubuo ng apat na pangunahing bahagi:
 
-1. **Application.java** - Ang pangunahing entry point ng Spring Boot application
-2. **FoundryLocalService.java** - Serbisyo na humahawak sa komunikasyon ng AI
-3. **application.properties** - Konfigurasyon para sa koneksyon sa Foundry Local
+1. **Application.java** - Pangunahing entry point ng Spring Boot na aplikasyon
+2. **FoundryLocalService.java** - Service layer na humahawak ng komunikasyon sa AI
+3. **application.properties** - Konfigurasyon para sa koneksyon ng Foundry Local
 4. **pom.xml** - Mga dependency ng Maven at konfigurasyon ng proyekto
 
 ## Pag-unawa sa Code
@@ -51,14 +60,15 @@ Ang proyektong ito ay binubuo ng apat na pangunahing bahagi:
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
 
 **Ano ang ginagawa nito:**
-- **base-url**: Tinutukoy kung saan tumatakbo ang Foundry Local, kabilang ang `/v1` na path para sa OpenAI API compatibility. **Tandaan**: Ang Foundry Local ay awtomatikong nag-aassign ng port, kaya't suriin ang aktwal na port gamit ang `foundry service status`
-- **model**: Pinapangalanan ang AI model na gagamitin para sa text generation, kabilang ang version number (hal. `:1`). Gamitin ang `foundry model list` para makita ang mga available na modelo kasama ang kanilang eksaktong ID
+- **base-url**: Tinukoy kung saan tumatakbo ang Foundry Local, kabilang ang path na `/v1` para sa pagiging tugma sa OpenAI API. Ang default na port ay `5273`. Kung iba ang port, suriin gamit ang `foundry service status`.
+- **model** (opsyonal): Pangalan ng AI model na gagamitin para sa pagbuo ng teksto. **Sa default, awtomatikong nadedetect ng aplikasyon ang model** sa pamamagitan ng pag-query sa Foundry Local `/v1/models` endpoint sa pagsisimula, kaya hindi mo kailangan itong itakda. Maaari mo pa ring itakda ito nang tahasan para malampasan ang awtomatikong pagtuklas kung kinakailangan.
 
-**Pangunahing konsepto:** Ang Spring Boot ay awtomatikong naglo-load ng mga properties na ito at ginagawang available sa iyong application gamit ang `@Value` annotation.
+**Pangunahing konsepto:** Ang Spring Boot ay awtomatikong naglo-load ng mga property na ito at ginagawang available sa iyong aplikasyon gamit ang annotation na `@Value`.
 
 ### 2. Pangunahing Klase ng Aplikasyon (Application.java)
 
@@ -69,15 +79,15 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.setWebApplicationType(WebApplicationType.NONE);  // Hindi kailangan ng web server
         app.run(args);
     }
 ```
 
 **Ano ang ginagawa nito:**
-- `@SpringBootApplication` ay nagbibigay-daan sa auto-configuration ng Spring Boot
-- `WebApplicationType.NONE` ay nagsasabi sa Spring na ito ay isang command-line app, hindi isang web server
-- Ang pangunahing method ay nagsisimula sa Spring application
+- `@SpringBootApplication` pinapagana ang auto-configuration ng Spring Boot
+- `WebApplicationType.NONE` nagsasabing command-line app ito, hindi web server
+- Nagsisimula ang pangunahing method ng Spring application
 
 **Ang Demo Runner:**
 ```java
@@ -99,16 +109,16 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 ```
 
 **Ano ang ginagawa nito:**
-- `@Bean` ay lumilikha ng component na pinamamahalaan ng Spring
+- Ang `@Bean` ay lumilikha ng component na pinamamahalaan ng Spring
 - `CommandLineRunner` ay nagpapatakbo ng code pagkatapos magsimula ang Spring Boot
 - Ang `foundryLocalService` ay awtomatikong ini-inject ng Spring (dependency injection)
 - Nagpapadala ng test message sa AI at ipinapakita ang sagot
 
-### 3. Serbisyo ng AI (FoundryLocalService.java)
+### 3. AI Service Layer (FoundryLocalService.java)
 
 **File:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### Konfigurasyon ng Injection:
+#### Pag-inject ng Konfigurasyon:
 ```java
 @Service
 public class FoundryLocalService {
@@ -116,46 +126,52 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // Awtomatikong natukoy kung walang laman
 ```
 
 **Ano ang ginagawa nito:**
-- `@Service` ay nagsasabi sa Spring na ang klase na ito ay nagbibigay ng business logic
-- `@Value` ay nag-iinject ng mga konfigurasyon mula sa application.properties
-- Ang syntax na `:default-value` ay nagbibigay ng fallback values kung hindi naka-set ang mga properties
+- `@Service` nagsasabi sa Spring na ang klase na ito ay nagbibigay ng business logic
+- `@Value` nag-iinject ng mga halaga ng konfigurasyon mula sa application.properties
+- Ang model ay default na walang laman, na nagpapatakbo ng **auto-detection** mula sa Foundry Local sa pagsisimula. Ibig sabihin nito, gumagana ang app sa anumang model na naka-load sa Foundry Local nang walang manwal na konfigurasyon.
 
-#### Pag-initialize ng Client:
+#### Pagsisimula ng Client:
 ```java
 @PostConstruct
 public void init() {
+    // Awtomatikong tuklasin ang modelo mula sa Foundry Local kung hindi tahasang naka-configure
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
-            .apiKey("not-needed")            // Local server doesn't need real API key
+            .baseUrl(baseUrl)                // Kasama na sa Base URL ang /v1 mula sa configuration
+            .apiKey("not-needed")            // Hindi kailangan ng totoong API key ang lokal na server
             .build();
 }
 ```
 
 **Ano ang ginagawa nito:**
-- `@PostConstruct` ay nagpapatakbo ng method na ito pagkatapos likhain ng Spring ang serbisyo
-- Lumilikha ng OpenAI client na tumutukoy sa iyong lokal na Foundry Local instance
-- Ang base URL mula sa `application.properties` ay kasama na ang `/v1` para sa OpenAI API compatibility
-- Ang API key ay naka-set sa "not-needed" dahil ang lokal na development ay hindi nangangailangan ng authentication
+- `@PostConstruct` nagpapatakbo ng method na ito pagkatapos malikha ng Spring ang service
+- Kung walang naka-configure na model, kino-query nito ang Foundry Local `/v1/models` endpoint at pinipili ang unang na-load na model
+- Lumilikha ng OpenAI client na naka-point sa iyong lokal na Foundry Local instance
+- Ang base URL mula sa `application.properties` ay kasama na ang `/v1` para sa pagiging tugma sa OpenAI API
+- Ang API key ay naka-set sa "not-needed" dahil hindi kailangan ng authentication sa lokal na development
 
 #### Chat Method:
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                .model(model)                    // Which AI model to use
-                .addUserMessage(message)         // Your question/prompt
-                .maxCompletionTokens(150)        // Limit response length
-                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .model(model)                    // Aling modelo ng AI ang gagamitin
+                .addUserMessage(message)         // Iyong tanong/prompt
+                .maxCompletionTokens(150)        // Limitahan ang haba ng sagot
+                .temperature(0.7)                // Kontrolin ang pagkamalikhain (0.0-1.0)
                 .build();
         
         ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
         
-        // Extract the AI's response from the API result
+        // Kunin ang sagot ng AI mula sa resulta ng API
         if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
             return chatCompletion.choices().get(0).message().content().orElse("No response found");
         }
@@ -168,18 +184,18 @@ public String chat(String message) {
 ```
 
 **Ano ang ginagawa nito:**
-- **ChatCompletionCreateParams**: Kinokonfigura ang AI request
-  - `model`: Tinutukoy kung aling AI model ang gagamitin (dapat tumugma sa eksaktong ID mula sa `foundry model list`)
-  - `addUserMessage`: Idinadagdag ang iyong mensahe sa usapan
-  - `maxCompletionTokens`: Nililimitahan kung gaano kahaba ang sagot (nakakatipid ng resources)
-  - `temperature`: Kinokontrol ang randomness (0.0 = deterministic, 1.0 = creative)
-- **API Call**: Nagpapadala ng request sa Foundry Local
-- **Response Handling**: Ligtas na kinukuha ang text response ng AI
-- **Error Handling**: Binabalot ang mga exception na may kapaki-pakinabang na error messages
+- **ChatCompletionCreateParams**: Nagko-configure ng AI request
+  - `model`: Tinukoy kung aling AI model ang gagamitin (dapat tumugma sa eksaktong ID mula sa `foundry model list`)
+  - `addUserMessage`: Idinadagdag ang iyong mensahe sa pag-uusap
+  - `maxCompletionTokens`: Nililimitahan ang haba ng sagot (para makatipid sa resources)
+  - `temperature`: Kinokontrol ang randomness (0.0 = deterministic, 1.0 = malikhain)
+- **API Call**: Pinapadala ang request sa Foundry Local
+- **Paghawak ng Tugon**: Kinukuha nang ligtas ang teksto ng sagot ng AI
+- **Paghawak ng Error**: Binabalot ang mga exception gamit ang mga kapaki-pakinabang na mensahe ng error
 
 ### 4. Mga Dependency ng Proyekto (pom.xml)
 
-**Mga Pangunahing Dependency:**
+**Pangunahing Dependencies:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -205,62 +221,80 @@ public String chat(String message) {
 ```
 
 **Ano ang ginagawa nito:**
-- **spring-boot-starter**: Nagbibigay ng pangunahing functionality ng Spring Boot
-- **openai-java**: Opisyal na OpenAI Java SDK para sa API communication
-- **jackson-databind**: Humahawak sa JSON serialization/deserialization para sa mga API call
+- **spring-boot-starter**: Nagbibigay ng core na functionality ng Spring Boot
+- **openai-java**: Opisyal na OpenAI Java SDK para sa komunikasyon sa API
+- **jackson-databind**: Humahawak ng JSON serialization/deserialization para sa mga tawag sa API
 
-## Paano Nagtutulungan ang Lahat
+## Paano Nagtutulungan Lahat ng Ito
 
-Narito ang buong daloy kapag pinatakbo mo ang application:
+Narito ang buong daloy kapag pinatakbo mo ang aplikasyon:
 
-1. **Startup**: Sinisimulan ng Spring Boot at binabasa ang `application.properties`
-2. **Paglikha ng Serbisyo**: Lumilikha ang Spring ng `FoundryLocalService` at ini-inject ang mga konfigurasyon
-3. **Setup ng Client**: Ang `@PostConstruct` ay nag-iinitialize ng OpenAI client para kumonekta sa Foundry Local
-4. **Pagpapatakbo ng Demo**: Ang `CommandLineRunner` ay nagpapatakbo pagkatapos magsimula
-5. **AI Call**: Ang demo ay tumatawag sa `foundryLocalService.chat()` gamit ang test message
-6. **API Request**: Ang serbisyo ay bumubuo at nagpapadala ng OpenAI-compatible request sa Foundry Local
-7. **Pagproseso ng Sagot**: Kinukuha ng serbisyo ang sagot ng AI at ibinabalik ito
-8. **Pagpapakita**: Ipinapakita ng application ang sagot at tumitigil
+1. **Pagsisimula**: Nagsisimula ang Spring Boot at binabasa ang `application.properties`
+2. **Paglikha ng Serbisyo**: Gumagawa ang Spring ng `FoundryLocalService` at ini-inject ang mga halaga ng konfigurasyon
+3. **Pagtukoy ng Model**: Kung walang naka-configure na model, kino-query ng service ang Foundry Local `/v1/models` endpoint at awtomatikong ginagamit ang unang available na model
+4. **Pagsisimula ng Client**: Ang `@PostConstruct` ay nag-iinitialize ng OpenAI client para kumonekta sa Foundry Local
+5. **Pagpapatupad ng Demo**: Ang `CommandLineRunner` ay nagpapatakbo pagkatapos ng startup
+6. **Pagtawag sa AI**: Tumatawag ang demo ng `foundryLocalService.chat()` na may test message
+7. **Request sa API**: Nagbuo ang service at nagpapadala ng OpenAI-compatible nga request sa Foundry Local
+8. **Pagproseso ng Tugon**: Kinukuha ng service at ibinabalik ang tugon ng AI
+9. **Pagpakita**: Ipinapakita ng aplikasyon ang tugon at lumalabas
 
-## Pag-set Up ng Foundry Local
+## Pag-setup ng Foundry Local
 
-Para i-set up ang Foundry Local, sundin ang mga hakbang na ito:
+1. **I-install ang Foundry Local** gamit ang mga tagubilin sa seksyong [Mga Kinakailangan](#mga-kinakailangan).
 
-1. **I-install ang Foundry Local** gamit ang mga tagubilin sa seksyong [Mga Kinakailangan](../../../../04-PracticalSamples/foundrylocal).
+2. **Simulan ang serbisyo** (kung hindi pa tumatakbo):
+   ```bash
+   foundry service start
+   ```
 
-2. **Suriin ang awtomatikong na-assign na port**. Ang Foundry Local ay awtomatikong nag-aassign ng port kapag ito ay nagsimula. Hanapin ang iyong port gamit ang:
+3. **Suriin ang status ng serbisyo** para matiyak na ito ay tumatakbo at alamin ang port:
    ```bash
    foundry service status
    ```
-   
-   **Opsyonal**: Kung mas gusto mong gumamit ng partikular na port (hal. 5273), maaari mo itong i-configure nang manu-mano:
+
+4. **I-download at patakbuhin ang model** (dinadownload sa unang takbo, naka-cache para sa sunod na mga takbo):
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
+   ```
+   Magbubukas ito ng interactive na chat session. Maaari kang lumabas gamit ang `Ctrl+C`. Mananatiling naka-load ang model sa serbisyo.
+
+   > **Tip:** Patakbuhin ang `foundry model list` para makita ang lahat ng available na model. Palitan ang `phi-4-mini` ng anumang alias mula sa catalog (hal., `qwen2.5-0.5b` para sa mas maliit/mabilis na model).
+
+5. **Suriin na naka-load ang model:**
+   ```bash
+   foundry service ps
    ```
 
-3. **I-download ang AI model** na nais mong gamitin, halimbawa, `phi-3.5-mini`, gamit ang sumusunod na command:
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
+6. **I-update ang `application.properties`** kung kinakailangan:
+   - Ang default na `base-url` (`http://localhost:5273/v1`) ay tumutugma sa default na CLI port. I-update lang kung nagpapakita ang `foundry service status` ng ibang port.
+   - Ang model ay **awtomatikong nadedetect** sa pagsisimula — hindi kailangan ng konfigurasyon.
 
-4. **I-configure ang application.properties** file upang tumugma sa iyong Foundry Local settings:
-   - I-update ang port sa `base-url` (mula sa hakbang 2), siguraduhing kasama ang `/v1` sa dulo
-   - I-update ang pangalan ng modelo upang isama ang version number (suriin gamit ang `foundry model list`)
-   
-   Halimbawa:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
 
 ## Pagpapatakbo ng Aplikasyon
 
-### Hakbang 1: Simulan ang Foundry Local
+### Hakbang 1: Siguraduhing naka-load ang isang model sa Foundry Local
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
+```
+Kung walang listadong mga model, mag-load ng isa:
+```bash
+foundry model run phi-4-mini
 ```
 
 ### Hakbang 2: I-build at Patakbuhin ang Aplikasyon
+Sa isang hiwalay na terminal:
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
+
+O i-build at patakbuhin bilang JAR:
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
@@ -273,51 +307,48 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
 
-## Susunod na Hakbang
+## Mga Susunod na Hakbang
 
-Para sa higit pang mga halimbawa, tingnan ang [Kabanata 04: Mga Praktikal na Halimbawa](../README.md)
+Para sa karagdagang mga halimbawa, tingnan ang [Chapter 04: Practical samples](../README.md)
 
-## Pag-aayos ng Problema
+## Pag-troubleshoot
 
-### Karaniwang Mga Isyu
+### Mga Karaniwang Isyu
 
 **"Connection refused" o "Service unavailable"**
-- Tiyakin na tumatakbo ang Foundry Local: `foundry model list`
-- Suriin ang aktwal na port na ginagamit ng Foundry Local: `foundry service status`
-- I-update ang iyong `application.properties` gamit ang tamang port, siguraduhing ang URL ay nagtatapos sa `/v1`
-- Bilang alternatibo, mag-set ng partikular na port kung nais: `foundry service set --port 5273`
-- Subukang i-restart ang Foundry Local: `foundry model run phi-3.5-mini`
+- Suriin ang serbisyo: `foundry service status`
+- I-restart kung kinakailangan: `foundry service restart`
+- Tiyakin na tumutugma ang port sa `application.properties` ng ipinalabas ng `foundry service status`
+- Siguraduhing nagtatapos sa `/v1` ang URL: `http://localhost:5273/v1`
 
-**"Model not found" o "404 Not Found" errors**
-- Suriin ang mga available na modelo kasama ang kanilang eksaktong ID: `foundry model list`
-- I-update ang pangalan ng modelo sa `application.properties` upang tumugma nang eksakto, kabilang ang version number (hal. `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Tiyakin na ang `base-url` ay nagtatapos sa `/v1`: `http://localhost:5273/v1`
-- I-download ang modelo kung kinakailangan: `foundry model run phi-3.5-mini`
+**"No model found" sa pagsisimula**
+- Awtomatikong nadedetect ng aplikasyon ang model. Siguraduhing mayroong kahit isang model na naka-load: `foundry service ps`
+- Kung walang mga model na naka-load: `foundry model run phi-4-mini`
+- Kung pinalitan mo ang pangalan ng model sa `application.properties`, siguraduhing tumutugma ito sa `foundry model list`
 
-**"400 Bad Request" errors**
-- Tiyakin na ang base URL ay nagtatapos sa `/v1`: `http://localhost:5273/v1`
-- Suriin na ang model ID ay tumutugma nang eksakto sa ipinapakita sa `foundry model list`
-- Siguraduhing ginagamit mo ang `maxCompletionTokens()` sa iyong code (hindi ang deprecated na `maxTokens()`)
+**Mga error na "400 Bad Request"**
+- Tiyaking kasama ang `/v1` sa base URL: `http://localhost:5273/v1`
+- Siguraduhing ginagamit mo ang `maxCompletionTokens()` sa code mo (hindi na ginagamit ang deprecated na `maxTokens()`)
 
-**Mga error sa Maven compilation**
-- Tiyakin na Java 21 o mas mataas: `java -version`
+**Mga error sa compilation ng Maven**
+- Siguraduhing Java 21 o mas mataas ang gamit: `java -version`
 - Linisin at i-rebuild: `mvn clean compile`
 - Suriin ang koneksyon sa internet para sa pag-download ng mga dependency
 
-**Nagsimula ang application ngunit walang output**
-- Tiyakin na tumutugon ang Foundry Local: Suriin ang `http://localhost:5273/v1/models` o patakbuhin ang `foundry service status`
-- Suriin ang application logs para sa mga partikular na error messages
-- Siguraduhin na ang modelo ay ganap na na-load at handa
+**Problema sa koneksyon ng serbisyo**
+- Kung nakikita mo ang `Request to local service failed`, patakbuhin: `foundry service restart`
+- Tignan ang mga loaded na model: `foundry service ps`
+- Tingnan ang mga log ng serbisyo: `foundry service diag`
 
 ---
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Pagtanggi**:
+Ang dokumentong ito ay isinalin gamit ang serbisyong AI translation na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o kamalian. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na nagmumula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

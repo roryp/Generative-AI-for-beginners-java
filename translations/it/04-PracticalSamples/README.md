@@ -1,64 +1,64 @@
-# Applicazioni Pratiche & Progetti
+# Applicazioni pratiche e progetti
 
-[![Applicazioni Pratiche & Progetti](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Applicazioni Pratiche & Progetti")
+[![Applicazioni pratiche e progetti](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Applicazioni pratiche e progetti")
 
-> **Panoramica video:** [Guarda "Applicazioni Pratiche & Progetti" su YouTube](https://www.youtube.com/watch?v=01vJsYei3H0).
+> **Panoramica video:** [Guarda "Applicazioni pratiche e progetti" su YouTube](https://www.youtube.com/watch?v=01vJsYei3H0).
 
-## Cosa Imparerai
-In questa sezione mostreremo tre applicazioni pratiche che illustrano i pattern di sviluppo dell'AI generativa con Java:
-- Creare un Generatore di Storie per Animali multi-modale combinando AI client-side e server-side
-- Implementare l'integrazione di modelli AI locali con la demo Foundry Local Spring Boot
-- Sviluppare un servizio Model Context Protocol (MCP) con l'esempio Calcolatrice
+## Cosa imparerai
+In questa sezione presenteremo tre applicazioni pratiche che mostrano i modelli di sviluppo dell’IA generativa con Java:
+- Creare un generatore di storie multi-modale per animali domestici combinando IA lato client e lato server
+- Implementare l’integrazione locale di modelli IA con la demo Foundry Local Spring Boot
+- Sviluppare un servizio Model Context Protocol (MCP) con l’esempio della calcolatrice
 
 ## Indice
 
 - [Introduzione](#introduzione)
-  - [Foundry Local Spring Boot Demo](#foundry-local-spring-boot-demo)
-  - [Generatore di Storie per Animali](#generatore-di-storie-per-animali)
-  - [Servizio Calcolatrice MCP (Demo MCP adatta ai principianti)](#servizio-calcolatrice-mcp-demo-mcp-adatta-ai-principianti)
-- [Progressione dell'Apprendimento](#progressione-dellapprendimento)
+  - [Demo Foundry Local Spring Boot](#demo-foundry-local-spring-boot)
+  - [Generatore di storie per animali domestici](#generatore-di-storie-per-animali-domestici)
+  - [Servizio MCP Calculator (demo MCP adatta ai principianti)](#servizio-mcp-calculator-demo-mcp-adatta-ai-principianti)
+- [Progressione di apprendimento](#progressione-di-apprendimento)
 - [Riepilogo](#riepilogo)
-- [Prossimi Passi](#prossimi-passi)
+- [Passaggi successivi](#passaggi-successivi)
 
 ## Introduzione
 
-Questo capitolo presenta **progetti di esempio** che dimostrano pattern di sviluppo AI generativa con Java. Ogni progetto è completamente funzionante e mostra specifiche tecnologie AI, pattern architetturali e best practice che puoi adattare per le tue applicazioni.
+Questo capitolo presenta **progetti di esempio** che mostrano i modelli di sviluppo dell’IA generativa con Java. Ogni progetto è completamente funzionale e dimostra specifiche tecnologie IA, modelli architetturali e best practice che puoi adattare per le tue applicazioni.
 
-### Foundry Local Spring Boot Demo
+### Demo Foundry Local Spring Boot
 
-Il **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** dimostra come integrare modelli AI locali usando il **OpenAI Java SDK**. Mostra la connessione al modello **Phi-3.5-mini** in esecuzione su Foundry Local, permettendo di eseguire applicazioni AI senza fare affidamento su servizi cloud.
+La **[demo Foundry Local Spring Boot](foundrylocal/README.md)** dimostra come integrare modelli IA locali utilizzando il **OpenAI Java SDK**. Mostra la connessione a modelli in esecuzione su Foundry Local (ad esempio, **Phi-4-mini**), con rilevamento automatico del modello, consentendo di eseguire applicazioni IA senza dipendere da servizi cloud.
 
-### Generatore di Storie per Animali
+### Generatore di storie per animali domestici
 
-Il **[Generatore di Storie per Animali](petstory/README.md)** è un’applicazione web Spring Boot coinvolgente che dimostra il **processamento AI multi-modale** per generare storie creative di animali. Combina capacità AI client-side e server-side usando transformer.js per interazioni AI nel browser e l’OpenAI SDK per l’elaborazione server-side.
+Il **[generatore di storie per animali domestici](petstory/README.md)** è un’app web Spring Boot coinvolgente che dimostra l’**elaborazione AI multi-modale** per generare storie creative sugli animali domestici. Combina funzionalità AI lato client e lato server usando transformer.js per interazioni IA basate sul browser e l’OpenAI SDK per l’elaborazione lato server.
 
-### Servizio Calcolatrice MCP (Demo MCP adatta ai principianti)
+### Servizio MCP Calculator (demo MCP adatta ai principianti)
 
-Il **[Servizio Calcolatrice MCP](calculator/README.md)** è una semplice dimostrazione del **Model Context Protocol (MCP)** usando Spring AI. Fornisce un’introduzione adatta ai principianti ai concetti MCP, mostrando come creare un MCP Server di base che interagisce con client MCP.
+Il **[servizio MCP Calculator](calculator/README.md)** è una semplice dimostrazione del **Model Context Protocol (MCP)** usando Spring AI. Offre un’introduzione adatta ai principianti ai concetti MCP, mostrando come creare un MCP Server di base che interagisce con client MCP.
 
-## Progressione dell'Apprendimento
+## Progressione di apprendimento
 
-Questi progetti sono progettati per costruire concetti dai capitoli precedenti:
+Questi progetti sono progettati per costruire sui concetti dei capitoli precedenti:
 
-1. **Inizia con semplicità**: Parti con Foundry Local Spring Boot Demo per comprendere l’integrazione AI base con modelli locali
-2. **Aggiungi interattività**: Procedi con il Generatore di Storie per Animali per AI multi-modale e interazioni web-based
-3. **Impara le basi del MCP**: Prova il Servizio Calcolatrice MCP per capire i fondamenti del Model Context Protocol
+1. **Inizia semplice**: inizia con la demo Foundry Local Spring Boot per capire l’integrazione base dell’IA con modelli locali
+2. **Aggiungi interattività**: prosegui con il generatore di storie per animali domestici per IA multi-modale e interazioni web
+3. **Impara le basi MCP**: prova il servizio MCP Calculator per capire i fondamenti del Model Context Protocol
 
 ## Riepilogo
 
-Ottimo lavoro! Hai esplorato ora alcune applicazioni reali:
+Ottimo lavoro! Hai ora esplorato alcune applicazioni reali:
 
-- Esperienze AI multi-modali che funzionano sia nel browser che sul server
-- Integrazione di modelli AI locali usando framework Java moderni e SDK
-- Il tuo primo servizio Model Context Protocol per vedere come gli strumenti si integrano con l’AI
+- Esperienze IA multi-modale che funzionano sia nel browser sia sul server
+- Integrazione di modelli IA locali usando framework Java moderni e SDK
+- Il tuo primo servizio Model Context Protocol per vedere come gli strumenti si integrano con l’IA
 
-## Prossimi Passi
+## Passaggi successivi
 
-[Capitolo 5: Generative AI Responsabile](../05-ResponsibleGenAI/README.md)
+[Capitolo 5: Generative AI responsabile](../05-ResponsibleGenAI/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per l'accuratezza, si prega di considerare che le traduzioni automatiche possono contenere errori o inesattezze. Il documento originale nella sua lingua madre deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall'uso di questa traduzione.
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo a garantire l'accuratezza, si prega di notare che le traduzioni automatizzate potrebbero contenere errori o inesattezze. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

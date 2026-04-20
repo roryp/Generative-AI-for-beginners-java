@@ -26,7 +26,7 @@ This chapter showcases **sample projects** that demonstrate generative AI develo
 
 ### Foundry Local Spring Boot Demo
 
-The **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** demonstrates how to integrate with local AI models using the **OpenAI Java SDK**. It showcases connecting to the **Phi-3.5-mini** model running on Foundry Local, allowing you to run AI applications without relying on cloud services.
+The **[Foundry Local Spring Boot Demo](foundrylocal/README.md)** demonstrates how to integrate with local AI models using the **OpenAI Java SDK**. It showcases connecting to models running on Foundry Local (e.g., **Phi-4-mini**), with automatic model detection, allowing you to run AI applications without relying on cloud services.
 
 ### Pet Story Generator
 

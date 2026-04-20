@@ -2,55 +2,55 @@
 
 [![Gyakorlati alkalmazások és projektek](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Gyakorlati alkalmazások és projektek")
 
-> **Videó áttekintése:** [Nézd meg a „Gyakorlati alkalmazások és projektek” videót a YouTube-on](https://www.youtube.com/watch?v=01vJsYei3H0).
+> **Videó áttekintés:** [Nézze meg a „Gyakorlati alkalmazások és projektek” videót a YouTube-on](https://www.youtube.com/watch?v=01vJsYei3H0).
 
-## Amit megtanulsz
-Ebben a részben három gyakorlati alkalmazást mutatunk be, amelyek a generatív MI fejlesztési mintákat szemléltetik Java nyelven:
-- Többmodalitású Pet Story Generator létrehozása, amely kliens-oldali és szerver-oldali MI-t egyesít
+## Amit tanulni fogsz
+Ebben a részben három olyan gyakorlati alkalmazást mutatunk be, amelyek a Java generatív MI fejlesztési mintáit szemléltetik:
+- Többmodalitású Háziállat-történet generátor létrehozása, kliens- és szerveroldali MI kombinálásával
 - Helyi MI modell integrálása a Foundry Local Spring Boot demóval
-- Model Context Protocol (MCP) szolgáltatás fejlesztése a Számológép példával
+- Model Context Protocol (MCP) szolgáltatás fejlesztése a Számológép példán keresztül
 
 ## Tartalomjegyzék
 
 - [Bevezetés](#bevezetés)
-  - [Foundry Local Spring Boot demó](#foundry-local-spring-boot-demó)
-  - [Pet Story Generator](#pet-story-generator)
+  - [Foundry Local Spring Boot demo](#foundry-local-spring-boot-demo)
+  - [Háziállat-történet generátor](#háziállat-történet-generátor)
   - [MCP Számológép szolgáltatás (Kezdőbarát MCP demó)](#mcp-számológép-szolgáltatás-kezdőbarát-mcp-demó)
-- [Tanulási folyamat](#tanulási-folyamat)
-- [Összefoglaló](#összefoglaló)
+- [Tanulási előrehaladás](#tanulási-előrehaladás)
+- [Összefoglalás](#összefoglalás)
 - [Következő lépések](#következő-lépések)
 
 ## Bevezetés
 
-Ez a fejezet **mintaprojekteket** mutat be, amelyek a generatív MI fejlesztési mintákat Java nyelven szemléltetik. Minden projekt teljesen működőképes, és konkrét MI technológiákat, architekturális mintákat és bevált gyakorlatokat mutat be, amelyeket alkalmazásaidhoz igazíthatsz.
+Ez a fejezet olyan **mintaprojekteket** mutat be, amelyek a Java generatív MI fejlesztési mintáit szemléltetik. Minden projekt teljesen működőképes, és bemutat konkrét MI technológiákat, architekturális mintákat, valamint bevált gyakorlatokat, amelyeket saját alkalmazásaidhoz alakíthatsz.
 
-### Foundry Local Spring Boot demó
+### Foundry Local Spring Boot demo
 
-A **[Foundry Local Spring Boot demó](foundrylocal/README.md)** bemutatja, hogyan lehet integrálódni helyi MI modellekkel az **OpenAI Java SDK** segítségével. Megmutatja a **Phi-3.5-mini** modellen való csatlakozást, amely a Foundry Local-on fut, lehetővé téve MI alkalmazások futtatását felhőszolgáltatás nélkül.
+A **[Foundry Local Spring Boot demo](foundrylocal/README.md)** bemutatja, hogyan integrálhatóak helyi MI modellek az **OpenAI Java SDK** segítségével. Megjeleníti a Foundry Local-on futó modellekhez (pl. **Phi-4-mini**) való csatlakozást, automatikus modellérzékeléssel, lehetővé téve MI alkalmazások futtatását felhőszolgáltatások igénybevétele nélkül.
 
-### Pet Story Generator
+### Háziállat-történet generátor
 
-A **[Pet Story Generator](petstory/README.md)** egy lebilincselő Spring Boot webalkalmazás, amely a **többmodalitású MI feldolgozást** demonstrálja kreatív háziállat történetek generálására. Ötvözi a kliens-oldali és a szerver-oldali MI képességeket a transformer.js használatával a böngésző alapú MI interakciókhoz és az OpenAI SDK-val a szerver-oldali feldolgozáshoz.
+A **[Háziállat-történet generátor](petstory/README.md)** egy lebilincselő Spring Boot webalkalmazás, amely bemutatja a **többmodalitású MI feldolgozást** kreatív háziállat-történetek generálásához. Kombinálja a kliensoldali és szerveroldali MI képességeket a transformer.js segítségével böngészőalapú MI interakciókhoz és az OpenAI SDK-val a szerveroldali feldolgozáshoz.
 
 ### MCP Számológép szolgáltatás (Kezdőbarát MCP demó)
 
-A **[MCP Számológép szolgáltatás](calculator/README.md)** egyszerű bemutatója a **Model Context Protocol-nak (MCP)** a Spring AI használatával. Kezdőbarát bevezetést nyújt az MCP fogalmaiba, megmutatva, hogyan készíthetünk alap MCP szervert, amely MCP kliensekkel kommunikál.
+A **[MCP Számológép szolgáltatás](calculator/README.md)** egy egyszerű bemutatója a **Model Context Protocol (MCP)** használatának a Spring AI segítségével. Kezdőbarát bevezetést nyújt az MCP koncepciókhoz, megmutatva, hogyan hozható létre egy alap MCP szerver, amely MCP kliensekkel kommunikál.
 
-## Tanulási folyamat
+## Tanulási előrehaladás
 
-Ezek a projektek úgy vannak kialakítva, hogy kapcsolódjanak a korábbi fejezetekben tanult fogalmakhoz:
+Ezek a projektek a korábbi fejezetek fogalmainak továbbépítésére készültek:
 
-1. **Kezdd egyszerűen**: Kezdd a Foundry Local Spring Boot demóval, hogy megértsd az alapvető MI integrációt helyi modellekkel
-2. **Adj interaktivitást**: Haladj a Pet Story Generator felé a többmodalitású MI és a webes interakciók megismeréséhez
-3. **Tanuld meg az MCP alapjait**: Próbáld ki az MCP Számológép szolgáltatást, hogy megértsd a Model Context Protocol alapelveit
+1. **Kezdj egyszerűen**: Kezdd a Foundry Local Spring Boot demóval, hogy megértsd az alapvető MI integrációt helyi modellekkel
+2. **Adj interaktivitást**: Haladj a Háziállat-történet generátorra a többmodalitású MI és webalapú interakciók érdekében
+3. **Tanuld meg az MCP alapjait**: Próbáld ki az MCP Számológép szolgáltatást, hogy megértsd a Model Context Protocol alapjait
 
-## Összefoglaló
+## Összefoglalás
 
-Jó munka! Most már megismerkedtél néhány valós alkalmazással:
+Szép munka! Most már megismertél néhány valós alkalmazást:
 
-- Többmodalitású MI élmények, amelyek egyszerre működnek a böngészőben és a szerveren
-- Helyi MI modell integrálása modern Java keretrendszerekkel és SDK-kkal
-- Az első Model Context Protocol szolgáltatásod, hogy lásd, hogyan integrálhatók az eszközök az MI-vel
+- Többmodalitású MI élmények, amelyek egyszerre működnek böngészőben és szerveren
+- Helyi MI modell integráció modern Java keretrendszerekkel és SDK-kkal
+- Az első Model Context Protocol szolgáltatásod, hogy lásd, hogyan integrálódnak az eszközök az MI-vel
 
 ## Következő lépések
 
@@ -59,6 +59,6 @@ Jó munka! Most már megismerkedtél néhány valós alkalmazással:
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Nyilatkozat**:  
-Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Kritikus információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget az ebből a fordításból eredő félreértésekért vagy félrefordításokért.
+**Kizáró nyilatkozat**:  
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum a saját nyelvén tekintendő hivatalos forrásnak. Kritikus információk esetén professzionális emberi fordítás ajánlott. Nem vállalunk felelősséget az ebből a fordításból eredő félreértésekért vagy félreértelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
