@@ -249,5 +249,5 @@ System.out.println("Response: " + response.choices().get(0).message().content().
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**：  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性を期しておりますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があることをご了承ください。原文の言語による文書が正式な情報源とみなされます。重要な内容については、専門の人間による翻訳を推奨します。本翻訳の利用による誤解や誤訳に関して当方は一切の責任を負いかねます。
+本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されました。正確性を期しておりますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があることをご了承ください。原文の言語による文書が正式な情報源とみなされます。重要な内容については、専門の人間による翻訳を推奨します。本翻訳の利用による誤解や誤訳に関して当方は一切の責任を負いかねます。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
