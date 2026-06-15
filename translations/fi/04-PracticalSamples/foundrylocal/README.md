@@ -1,66 +1,74 @@
-# Foundry Local Spring Boot -opas
+# Foundry Local Spring Boot -opetusohjelma
 
 ## Sisällysluettelo
 
-- [Edellytykset](../../../../04-PracticalSamples/foundrylocal)
-- [Projektin yleiskatsaus](../../../../04-PracticalSamples/foundrylocal)
-- [Koodin ymmärtäminen](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Sovelluksen konfiguraatio (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Pääsovellusluokka (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. AI-palvelukerros (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Projektin riippuvuudet (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [Miten kaikki toimii yhdessä](../../../../04-PracticalSamples/foundrylocal)
-- [Foundry Localin asennus](../../../../04-PracticalSamples/foundrylocal)
-- [Sovelluksen suorittaminen](../../../../04-PracticalSamples/foundrylocal)
-- [Odotettu tulos](../../../../04-PracticalSamples/foundrylocal)
-- [Seuraavat askeleet](../../../../04-PracticalSamples/foundrylocal)
-- [Vianetsintä](../../../../04-PracticalSamples/foundrylocal)
+- [Esivaatimukset](#esivaatimukset)
+- [Projektin yleiskatsaus](#projektin-yleiskatsaus)
+- [Koodin ymmärtäminen](#koodin-ymmärtäminen)
+  - [1. Sovelluksen määritykset (application.properties)](#1-sovelluksen-määritykset-applicationproperties)
+  - [2. Pääsovellusluokka (Application.java)](#2-pääsovellusluokka-applicationjava)
+  - [3. AI-palvelutaso (FoundryLocalService.java)](#3-ai-palvelutaso-foundrylocalservicejava)
+  - [4. Projektin riippuvuudet (pom.xml)](#4-projektin-riippuvuudet-pomxml)
+- [Miten kaikki toimii yhdessä](#miten-kaikki-toimii-yhdessä)
+- [Foundry Localin käyttöönotto](#foundry-localin-käyttöönotto)
+- [Sovelluksen suorittaminen](#sovelluksen-suorittaminen)
+- [Odotettu tulos](#odotettu-tulos)
+- [Seuraavat askeleet](#seuraavat-askeleet)
+- [Vianmääritys](#vianmääritys)
 
-## Edellytykset
 
-Ennen kuin aloitat tämän oppaan, varmista, että sinulla on:
+## Esivaatimukset
+
+Ennen tämän opetusohjelman aloittamista varmista, että sinulla on:
 
 - **Java 21 tai uudempi** asennettuna järjestelmääsi
 - **Maven 3.6+** projektin rakentamiseen
 - **Foundry Local** asennettuna ja käynnissä
 
-### **Foundry Localin asennus:**
+### **Asenna Foundry Local:**
+
+> **Huom:** Foundry Local CLI on saatavilla vain **Windowsille** ja **macOS:lle**. Linuxia tuetaan [Foundry Local SDK:iden](https://github.com/microsoft/Foundry-Local) (Python, JavaScript, C#, Rust) kautta.
 
 ```bash
 # Windows
 winget install Microsoft.FoundryLocal
 
-# macOS (after installing)
-foundry model run phi-3.5-mini
+# macOS
+brew tap microsoft/foundrylocal
+brew install foundrylocal
 ```
 
+Vahvista asennus:
+```bash
+foundry --version
+```
 
 ## Projektin yleiskatsaus
 
 Tämä projekti koostuu neljästä pääkomponentista:
 
-1. **Application.java** - Spring Boot -sovelluksen pääpiste
-2. **FoundryLocalService.java** - Palvelukerros, joka hoitaa AI-kommunikoinnin
-3. **application.properties** - Foundry Local -yhteyden konfiguraatio
-4. **pom.xml** - Maven-riippuvuudet ja projektin konfiguraatio
+1. **Application.java** - pääsisäänkäynti Spring Boot -sovellukseen
+2. **FoundryLocalService.java** - palvelutaso, joka hoitaa tekoälyn kommunikoinnin
+3. **application.properties** - Foundry Local -yhteyden määritykset
+4. **pom.xml** - Maven-riippuvuudet ja projektin määritykset
 
 ## Koodin ymmärtäminen
 
-### 1. Sovelluksen konfiguraatio (application.properties)
+### 1. Sovelluksen määritykset (application.properties)
 
 **Tiedosto:** `src/main/resources/application.properties`
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
 
+**Tämä tekee:**
+- **base-url**: Määrittää, missä Foundry Local on käynnissä, mukaan lukien `/v1`-polku OpenAI-rajapinnan yhteensopivuuden vuoksi. Oletusportti on `5273`. Jos portti on eri, tarkista se komennolla `foundry service status`.
+- **model** (valinnainen): Nimeää tekoälymallin tekstin generointiin. **Sovellus tunnistaa mallin oletuksena automaattisesti** kysymällä Foundry Localin `/v1/models`-päätepistettä käynnistyksen yhteydessä, joten sinun ei tarvitse asettaa tätä. Voit silti määrittää mallin nimenuudelleen automaattitunnistuksen ohittamiseksi tarvittaessa.
 
-**Mitä tämä tekee:**
-- **base-url**: Määrittää, missä Foundry Local on käynnissä, mukaan lukien `/v1`-polku OpenAI API -yhteensopivuuden vuoksi. **Huom:** Foundry Local määrittää portin dynaamisesti, joten tarkista todellinen portti komennolla `foundry service status`.
-- **model**: Määrittää käytettävän AI-mallin nimen tekstin generointiin, mukaan lukien versionumeron (esim. `:1`). Käytä komentoa `foundry model list` nähdäksesi saatavilla olevat mallit ja niiden tarkat tunnukset.
-
-**Keskeinen käsite:** Spring Boot lataa nämä asetukset automaattisesti ja tekee ne saataville sovelluksessasi `@Value`-annotaation avulla.
+**Keskeinen käsite:** Spring Boot lataa nämä määritykset automaattisesti ja tekee ne sovelluksellesi saataville `@Value`-annotaation avulla.
 
 ### 2. Pääsovellusluokka (Application.java)
 
@@ -71,15 +79,14 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.setWebApplicationType(WebApplicationType.NONE);  // Ei tarvita web-palvelinta
         app.run(args);
     }
 ```
 
-
-**Mitä tämä tekee:**
-- `@SpringBootApplication` mahdollistaa Spring Bootin automaattisen konfiguroinnin
-- `WebApplicationType.NONE` kertoo Springille, että kyseessä on komentorivisovellus, ei verkkopalvelin
+**Tämä tekee:**
+- `@SpringBootApplication` mahdollistaa Spring Bootin automaattisen määrityksen
+- `WebApplicationType.NONE` kertoo Springille, että tämä on komentorivisovellus, ei web-palvelin
 - Päämetodi käynnistää Spring-sovelluksen
 
 **Demo Runner:**
@@ -101,18 +108,17 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
+**Tämä tekee:**
+- `@Bean` luo Springin hallitseman komponentin
+- `CommandLineRunner` suorittaa koodin Spring Bootin käynnistyksen jälkeen
+- `foundryLocalService` injektoidaan automaattisesti Springin toimesta (riippuvuuden injektointi)
+- Lähettää testiviestin tekoälylle ja näyttää vastauksen
 
-**Mitä tämä tekee:**
-- `@Bean` luo komponentin, jota Spring hallinnoi
-- `CommandLineRunner` suorittaa koodin Spring Bootin käynnistymisen jälkeen
-- `foundryLocalService` injektoidaan automaattisesti Springin toimesta (riippuvuuksien injektio)
-- Lähettää testiviestin AI:lle ja näyttää vastauksen
-
-### 3. AI-palvelukerros (FoundryLocalService.java)
+### 3. AI-palvelutaso (FoundryLocalService.java)
 
 **Tiedosto:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### Konfiguraation injektio:
+#### Määritysten injektointi:
 ```java
 @Service
 public class FoundryLocalService {
@@ -120,48 +126,52 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // Automaattisesti tunnistettu, jos tyhjä
 ```
 
+**Tämä tekee:**
+- `@Service` kertoo Springille, että luokka tarjoaa liiketoimintalogiikkaa
+- `@Value` injektoi arvot application.properties -tiedostosta
+- Malli on oletuksena tyhjä, mikä käynnistää **automaattisen tunnistuksen** Foundry Localista käynnistyksen yhteydessä. Tämä tarkoittaa, että sovellus toimii minkä tahansa Foundry Localiin ladatun mallin kanssa ilman manuaalista määritystä.
 
-**Mitä tämä tekee:**
-- `@Service` kertoo Springille, että tämä luokka tarjoaa liiketoimintalogiikkaa
-- `@Value` injektoi konfiguraatioarvot application.properties-tiedostosta
-- `:default-value`-syntaksi tarjoaa oletusarvot, jos asetuksia ei ole määritetty
-
-#### Asiakkaan alustaminen:
+#### Asiakasohjelman alustaminen:
 ```java
 @PostConstruct
 public void init() {
+    // Malli tunnistetaan automaattisesti Foundry Localista, jos sitä ei ole nimenomaisesti määritetty
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
-            .apiKey("not-needed")            // Local server doesn't need real API key
+            .baseUrl(baseUrl)                // Perus-URL sisältää jo /v1 määrityksestä
+            .apiKey("not-needed")            // Paikallinen palvelin ei tarvitse oikeaa API-avainta
             .build();
 }
 ```
 
-
-**Mitä tämä tekee:**
+**Tämä tekee:**
 - `@PostConstruct` suorittaa tämän metodin sen jälkeen, kun Spring on luonut palvelun
-- Luo OpenAI-asiakkaan, joka osoittaa paikalliseen Foundry Local -instanssiin
-- application.properties-tiedoston base URL sisältää jo `/v1` OpenAI API -yhteensopivuuden vuoksi
-- API-avain asetetaan "not-needed", koska paikallinen kehitys ei vaadi autentikointia
+- Jos mallia ei ole määritetty, se kysyy Foundry Localin `/v1/models`-päätepistettä ja valitsee ensimmäisen ladatun mallin
+- Luo OpenAI-asiakkaan, joka yhdistää paikalliseen Foundry Local -instanssiisi
+- Sovelluksen määrityksissä oleva perus-URL sisältää jo `/v1` OpenAI-rajapinnan yhteensopivuuden takia
+- API-avain on asetettu arvoon "not-needed", koska paikallisessa kehityksessä autentikointia ei tarvita
 
 #### Chat-metodi:
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                .model(model)                    // Which AI model to use
-                .addUserMessage(message)         // Your question/prompt
-                .maxCompletionTokens(150)        // Limit response length
-                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .model(model)                    // Mitä tekoälymallia käyttää
+                .addUserMessage(message)         // Kysymyksesi / kehotteesi
+                .maxCompletionTokens(150)        // Vastauksen pituuden rajoitus
+                .temperature(0.7)                // Hallitse luovuutta (0.0-1.0)
                 .build();
         
         ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
         
-        // Extract the AI's response from the API result
+        // Poimi tekoälyn vastaus API-tuloksesta
         if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
             return chatCompletion.choices().get(0).message().content().orElse("No response found");
         }
@@ -173,16 +183,15 @@ public String chat(String message) {
 }
 ```
 
-
-**Mitä tämä tekee:**
-- **ChatCompletionCreateParams**: Konfiguroi AI-pyynnön
-  - `model`: Määrittää käytettävän AI-mallin (tunnuksen täytyy vastata tarkasti `foundry model list` -komennon tulosta)
-  - `addUserMessage`: Lisää viestisi keskusteluun
-  - `maxCompletionTokens`: Rajoittaa vastauksen pituutta (säästää resursseja)
+**Tämä tekee:**
+- **ChatCompletionCreateParams**: Määrittää tekoälypyynnön asetukset
+  - `model`: Valitsee käytettävän tekoälymallin (täytyy täsmätä tarkkaan ID:hen, joka saadaan `foundry model list` -komennolla)
+  - `addUserMessage`: Lisää käyttäjän viestin keskusteluun
+  - `maxCompletionTokens`: Rajaa vastauksen maksimipituutta (säästää resursseja)
   - `temperature`: Kontrolloi satunnaisuutta (0.0 = deterministinen, 1.0 = luova)
 - **API-kutsu**: Lähettää pyynnön Foundry Localille
-- **Vastauksen käsittely**: Poimii AI:n tekstivastauksen turvallisesti
-- **Virheenkäsittely**: Käsittelee poikkeukset hyödyllisten virheilmoitusten avulla
+- **Vastauksen käsittely**: Erottaa turvallisesti tekoälyn tekstivastauksen
+- **Virheiden käsittely**: Käärii poikkeukset selkeiksi virheilmoituksiksi
 
 ### 4. Projektin riippuvuudet (pom.xml)
 
@@ -211,73 +220,85 @@ public String chat(String message) {
 </dependency>
 ```
 
-
-**Mitä nämä tekevät:**
-- **spring-boot-starter**: Tarjoaa Spring Bootin ydintoiminnallisuudet
-- **openai-java**: Virallinen OpenAI Java SDK API-kommunikointiin
-- **jackson-databind**: Käsittelee JSON-sarjoitusta/desarjoitusta API-kutsuille
+**Tämä tekee:**
+- **spring-boot-starter**: Tarjoaa Spring Bootin ydintoiminnot
+- **openai-java**: Virallinen OpenAI:n Java SDK rajapintakommunikointiin
+- **jackson-databind**: Käsittelee JSON-sarjoituksen ja -desarjoituksen API-kutsuille
 
 ## Miten kaikki toimii yhdessä
 
-Näin sovellus toimii, kun se käynnistetään:
+Tässä on kokonaisvirtaus, kun suoritat sovelluksen:
 
-1. **Käynnistys**: Spring Boot käynnistyy ja lukee `application.properties`-tiedoston
-2. **Palvelun luonti**: Spring luo `FoundryLocalService`-palvelun ja injektoi konfiguraatioarvot
-3. **Asiakkaan asetukset**: `@PostConstruct` alustaa OpenAI-asiakkaan yhteyden muodostamiseksi Foundry Localiin
-4. **Demon suoritus**: `CommandLineRunner` suoritetaan käynnistyksen jälkeen
-5. **AI-kutsu**: Demo kutsuu `foundryLocalService.chat()`-metodia testiviestillä
-6. **API-pyyntö**: Palvelu rakentaa ja lähettää OpenAI-yhteensopivan pyynnön Foundry Localille
-7. **Vastauksen käsittely**: Palvelu poimii ja palauttaa AI:n vastauksen
-8. **Näyttö**: Sovellus tulostaa vastauksen ja sulkeutuu
+1. **Käynnistys**: Spring Boot käynnistyy ja lukee `application.properties` -tiedoston
+2. **Palvelun luonti**: Spring luo `FoundryLocalService`-instanssin ja injektoi määritysarvot
+3. **Mallin tunnistus**: Jos mallia ei ole määritelty, palvelu kysyy Foundry Localin `/v1/models`-päätepistettä ja valitsee automaattisesti ensimmäisen saatavilla olevan mallin
+4. **Asiakkaan alustaminen**: `@PostConstruct` alustaa OpenAI-asiakkaan yhdistääkseen Foundry Localiin
+5. **Demon suoritus**: `CommandLineRunner` suoritetaan käynnistyksen jälkeen
+6. **Tekoälykutsu**: Demo kutsuu `foundryLocalService.chat()` -metodia testiviestillä
+7. **API-pyyntö**: Palvelu rakentaa ja lähettää OpenAI-yhteensopivan pyynnön Foundry Localille
+8. **Vastauksen käsittely**: Palvelu erottaa ja palauttaa tekoälyn vastauksen
+9. **Näyttö**: Sovellus tulostaa vastauksen ja lopettaa
 
-## Foundry Localin asennus
+## Foundry Localin käyttöönotto
 
-Seuraa näitä vaiheita asentaaksesi Foundry Localin:
+1. **Asenna Foundry Local** [Esivaatimukset](#esivaatimukset) -kohdassa annettujen ohjeiden mukaisesti.
 
-1. **Asenna Foundry Local** käyttämällä ohjeita [Edellytykset](../../../../04-PracticalSamples/foundrylocal)-osiossa.
+2. **Käynnistä palvelu** (jos ei vielä käynnissä):
+   ```bash
+   foundry service start
+   ```
 
-2. **Tarkista dynaamisesti määritetty portti**. Foundry Local määrittää portin automaattisesti käynnistyessään. Löydät portin seuraavalla komennolla:
+3. **Tarkista palvelun tila** varmistaaksesi, että se on käynnissä ja huomioi portti:
    ```bash
    foundry service status
    ```
-   
-   **Valinnainen**: Jos haluat käyttää tiettyä porttia (esim. 5273), voit määrittää sen manuaalisesti:
+
+4. **Lataa ja käynnistä malli** (lataa ensimmäisellä käynnillä, välimuistissa myöhempiä käyntejä varten):
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
+   ```
+   Tämä avaa interaktiivisen chat-istunnon. Voit poistua painamalla `Ctrl+C`. Malli pysyy ladattuna palvelussa.
+
+   > **Vinkki:** Suorita `foundry model list` nähdäksesi kaikki saatavilla olevat mallit. Korvaa `phi-4-mini` millä tahansa alias-nimellä katalogista (esim. `qwen2.5-0.5b` pienempää/nopeampaa mallia varten).
+
+5. **Varmista, että malli on ladattu:**
+   ```bash
+   foundry service ps
    ```
 
+6. **Päivitä `application.properties` tarvittaessa:**
+   - Oletus-`base-url` (`http://localhost:5273/v1`) vastaa oletusporttia CLI:ssä. Päivitä vain, jos `foundry service status` näyttää toisen portin.
+   - Malli tunnistetaan **automaattisesti** käynnistyksen yhteydessä — määritystä ei tarvita.
 
-3. **Lataa haluamasi AI-malli**, esimerkiksi `phi-3.5-mini`, seuraavalla komennolla:
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
-
-
-4. **Konfiguroi application.properties**-tiedosto vastaamaan Foundry Local -asetuksiasi:
-   - Päivitä portti `base-url`-kohtaan (vaiheesta 2), varmistaen, että se sisältää `/v1` lopussa
-   - Päivitä mallin nimi sisältämään versionumero (tarkista `foundry model list` -komennolla)
-
-   Esimerkki:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
-
 
 ## Sovelluksen suorittaminen
 
-### Vaihe 1: Käynnistä Foundry Local
+### Vaihe 1: Varmista, että malli on ladattu Foundry Localissa
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
+```
+Jos malleja ei ole listattu, lataa yksi:
+```bash
+foundry model run phi-4-mini
 ```
 
-
 ### Vaihe 2: Rakenna ja suorita sovellus
+Avaa toinen terminaali:
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
+
+Tai rakenna ja suorita JAR-tiedostona:
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
-
 
 ## Odotettu tulos
 
@@ -286,52 +307,48 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
-
 
 ## Seuraavat askeleet
 
 Lisää esimerkkejä löydät [Luku 04: Käytännön esimerkit](../README.md)
 
-## Vianetsintä
+## Vianmääritys
 
-### Yleiset ongelmat
+### Yleisiä ongelmia
 
-**"Yhteys kielletty" tai "Palvelu ei käytettävissä"**
-- Varmista, että Foundry Local on käynnissä: `foundry model list`
-- Tarkista, mitä porttia Foundry Local käyttää: `foundry service status`
-- Päivitä `application.properties` oikealla portilla, varmistaen, että URL päättyy `/v1`
-- Vaihtoehtoisesti määritä tietty portti, jos haluat: `foundry service set --port 5273`
-- Kokeile käynnistää Foundry Local uudelleen: `foundry model run phi-3.5-mini`
+**"Connection refused" tai "Service unavailable"**
+- Tarkista palvelu komennolla: `foundry service status`
+- Käynnistä uudelleen tarvittaessa: `foundry service restart`
+- Tarkista, että `application.properties`-tiedoston portti vastaa `foundry service status` -tulosta
+- Varmista, että URL päättyy `/v1`:llä: `http://localhost:5273/v1`
 
-**"Mallia ei löydy" tai "404 Not Found" -virheet**
-- Tarkista saatavilla olevat mallit ja niiden tarkat tunnukset: `foundry model list`
-- Päivitä mallin nimi `application.properties`-tiedostossa vastaamaan tarkasti, mukaan lukien versionumero (esim. `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Varmista, että `base-url` sisältää `/v1` lopussa: `http://localhost:5273/v1`
-- Lataa malli tarvittaessa: `foundry model run phi-3.5-mini`
+**"No model found" käynnistyksessä**
+- Sovellus tunnistaa mallin automaattisesti. Varmista, että vähintään yksi malli on ladattu komennolla: `foundry service ps`
+- Jos malleja ei ole ladattu: `foundry model run phi-4-mini`
+- Jos olet määrännyt mallin nimen `application.properties`-tiedostossa, varmista, että se täsmää `foundry model list` -listan kanssa
 
 **"400 Bad Request" -virheet**
-- Varmista, että base URL sisältää `/v1`: `http://localhost:5273/v1`
-- Tarkista, että mallin tunnus vastaa tarkasti `foundry model list` -komennon tulosta
-- Varmista, että käytät `maxCompletionTokens()` koodissasi (ei vanhentunutta `maxTokens()`)
+- Varmista, että base URL sisältää `/v1`:n: `http://localhost:5273/v1`
+- Varmista, että käytät `maxCompletionTokens()`:ia koodissasi (ei vanhentunutta `maxTokens()`-metodia)
 
-**Maven-kääntövirheet**
-- Varmista, että käytössäsi on Java 21 tai uudempi: `java -version`
-- Puhdista ja rakenna uudelleen: `mvn clean compile`
-- Tarkista internet-yhteys riippuvuuksien lataamista varten
+**Maven-käännösvirheet**
+- Varmista, että Java 21 tai uudempi on asennettuna: `java -version`
+- Siivoa ja rakenna uudelleen: `mvn clean compile`
+- Tarkista verkkoyhteys riippuvuuksien latausta varten
 
-**Sovellus käynnistyy, mutta ei tuota tulosta**
-- Varmista, että Foundry Local vastaa: Tarkista `http://localhost:5273/v1/models` tai suorita `foundry service status`
-- Tarkista sovelluksen lokit tarkempien virheilmoitusten varalta
-- Varmista, että malli on täysin ladattu ja valmis
+**Palvelin-yhteysongelmat**
+- Jos näet virheen `Request to local service failed`, suorita: `foundry service restart`
+- Tarkista ladatut mallit: `foundry service ps`
+- Katso palvelun lokit: `foundry service diag`
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on katsottava viralliseksi lähteeksi. Tärkeiden tietojen osalta suositellaan ammattimaista ihmiskääntäjää. Emme ota vastuuta tästä käännöksestä johtuvista väärinkäsityksistä tai virheellisistä tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,102 +1,106 @@
-# Generatiivse tehisintellekti sissejuhatus - Java väljaanne
+# Sissejuhatus generatiivse tehisintellekti - Java väljaanne
+
+[![Sissejuhatus generatiivse tehisintellekti](https://img.youtube.com/vi/XH46tGp_eSw/0.jpg)](https://www.youtube.com/watch?v=XH46tGp_eSw "Sissejuhatus generatiivse tehisintellekti")
+
+> **Video**: [Vaata selle õppetüki videoülevaadet YouTube'is.](https://www.youtube.com/watch?v=XH46tGp_eSw) Võid ka ülalolevale pisipildile klõpsata.
 
 ## Mida sa õpid
 
-- **Generatiivse tehisintellekti põhialused**, sealhulgas LLM-id, promptide inseneeria, tokenid, embeddingud ja vektoriandmebaasid
-- **Võrdle Java tehisintellekti arendustööriistu**, sealhulgas Azure OpenAI SDK, Spring AI ja OpenAI Java SDK
-- **Tutvu Model Context Protocoliga** ja selle rolliga tehisintellekti agentide suhtluses
+- **Generatiivse tehisintellekti alused** sealhulgas LLM-id, prompti inseneritöö, tokenid, embeddingud ja vektorandmebaasid
+- **Java AI arendustööriistade võrdlus** sealhulgas Azure OpenAI SDK, Spring AI ja OpenAI Java SDK
+- **Mudelikonteksti protokolli avastamine** ja selle roll AI agentide suhtluses
 
 ## Sisukord
 
-- [Sissejuhatus](../../../01-IntroToGenAI)
-- [Kiire ülevaade generatiivse tehisintellekti mõistetest](../../../01-IntroToGenAI)
-- [Promptide inseneeria ülevaade](../../../01-IntroToGenAI)
-- [Tokenid, embeddingud ja agendid](../../../01-IntroToGenAI)
-- [Tehisintellekti arendustööriistad ja -raamatukogud Java jaoks](../../../01-IntroToGenAI)
-  - [OpenAI Java SDK](../../../01-IntroToGenAI)
-  - [Spring AI](../../../01-IntroToGenAI)
-  - [Azure OpenAI Java SDK](../../../01-IntroToGenAI)
-- [Kokkuvõte](../../../01-IntroToGenAI)
-- [Järgmised sammud](../../../01-IntroToGenAI)
+- [Sissejuhatus](#sissejuhatus)
+- [Kiire värskendus generatiivse tehisintellekti kontseptsioonidele](#kiire-värskendus-generatiivse-tehisintellekti-kontseptsioonidele)
+- [Prompti inseneritöö ülevaade](#prompti-inseneritöö-ülevaade)
+- [Tokenid, embeddingud ja agendid](#tokenid-embeddingud-ja-agendid)
+- [AI arendustööriistad ja -raamatukogud Javale](#ai-arendustööriistad-ja-raamatukogud-javale)
+  - [OpenAI Java SDK](#openai-java-sdk)
+  - [Spring AI](#spring-ai)
+  - [Azure OpenAI Java SDK](#azure-openai-java-sdk)
+- [Kokkuvõte](#kokkuvõte)
+- [Järgmised sammud](#järgmised-sammud)
 
 ## Sissejuhatus
 
-Tere tulemast generatiivse tehisintellekti algajate kursuse esimesse peatükki - Java väljaanne! See sissejuhatav õppetund tutvustab sulle generatiivse tehisintellekti põhikontseptsioone ja nende kasutamist Java abil. Sa õpid tundma tehisintellekti rakenduste olulisi ehituskive, sealhulgas suured keelemudelid (LLM-id), tokenid, embeddingud ja tehisintellekti agendid. Samuti uurime peamisi Java tööriistu, mida selles kursuses kasutad.
+Tere tulemast Generatiivse tehisintellekti algajatele esimese peatüki juurde - Java väljaanne! See põhjalik õppetükk tutvustab sulle generatiivse tehisintellekti keskseid mõisteid ja seda, kuidas nendega Java abil töötada. Õpid tehisintellekti rakenduste põhikomponentide kohta, sealhulgas suured keelemudelid (LLM-id), tokenid, embeddingud ja AI agendid. Samuti uurime peamisi Java tööriistu, mida selle kursuse jooksul kasutad.
 
-### Kiire ülevaade generatiivse tehisintellekti mõistetest
+### Kiire värskendus generatiivse tehisintellekti kontseptsioonidele
 
-Generatiivne tehisintellekt on tehisintellekti tüüp, mis loob uut sisu, näiteks teksti, pilte või koodi, tuginedes andmetest õpitud mustritele ja seostele. Generatiivsed tehisintellekti mudelid suudavad genereerida inimlikke vastuseid, mõista konteksti ja mõnikord isegi luua sisu, mis tundub inimlik.
+Generatiivne tehisintellekt on tehisintellekti tüüp, mis loob uut sisu, nagu tekst, pildid või kood, andmetest õpitud mustrite ja seoste põhjal. Generatiivse AI mudelid suudavad luua inimliku kõlaga vastuseid, mõista konteksti ja mõnikord isegi genereerida sisu, mis näib inimliku olevat.
 
-Java tehisintellekti rakenduste arendamisel töötad **generatiivsete tehisintellekti mudelitega**, et luua sisu. Generatiivse tehisintellekti mudelite mõned võimed hõlmavad:
+Java AI rakendusi arendades töötad **generatiivsete AI mudelitega**, et sisu luua. Mõned generatiivsete AI mudelite võimed on:
 
-- **Teksti genereerimine**: Inimlikult kõlava teksti loomine vestlusrobotite, sisu ja tekstide täiendamise jaoks.
-- **Piltide genereerimine ja analüüs**: Realistlike piltide loomine, fotode täiustamine ja objektide tuvastamine.
+- **Teksti genereerimine**: Inimliku kõlaga teksti loomine vestlusrobotitele, sisule ja teksti täiendamiseks.
+- **Pildi loomine ja analüüs**: Realistlike piltide tootmine, fotode täiustamine ja objektide tuvastamine.
 - **Koodi genereerimine**: Koodilõikude või skriptide kirjutamine.
 
-On olemas spetsiaalseid mudeleid, mis on optimeeritud erinevate ülesannete jaoks. Näiteks nii **väikesed keelemudelid (SLM-id)** kui ka **suured keelemudelid (LLM-id)** suudavad teostada teksti genereerimist, kusjuures LLM-id pakuvad tavaliselt keerukamate ülesannete jaoks paremat jõudlust. Piltidega seotud ülesannete jaoks kasutatakse spetsiaalseid visuaalseid mudeleid või multimodaalseid mudeleid.
+On olemas erinevaid mudeleid, mis on optimeeritud erinevateks ülesanneteks. Näiteks nii **väikesed keelemudelid (SLM-id)** kui ka **suured keelemudelid (LLM-id)** suudavad teksti genereerida, kusjuures LLM-id pakuvad tavaliselt paremat sooritust keerukamates ülesannetes. Pildiga seotud ülesannete jaoks kasutaksid spetsialiseeritud nägemismudeleid või multimodaalseid mudeleid.
 
-![Joonis: Generatiivse tehisintellekti mudelitüübid ja kasutusjuhtumid.](../../../translated_images/et/llms.225ca2b8a0d34473.webp)
+![Joonis: Generatiivse AI mudelite tüübid ja kasutusjuhtumid.](../../../translated_images/et/llms.225ca2b8a0d34473.webp)
 
-Muidugi ei ole nende mudelite vastused alati täiuslikud. Oled ilmselt kuulnud, et mudelid võivad "hallutsineerida" või esitada ekslikku teavet autoriteetsel viisil. Kuid sa saad aidata mudelil paremaid vastuseid genereerida, andes sellele selgeid juhiseid ja konteksti. Siin tulebki mängu **promptide inseneeria**.
+Loomulikult ei ole mudelite vastused alati täiuslikud. Sa oled tõenäoliselt kuulnud mudelitest, kes "hallutsineerivad" või genereerivad valesid andmeid autoriteetselt. Kuid sa saad aidata mudelil paremaid vastuseid genereerida, andes neile selged juhised ja konteksti. Siin tulebki mängu **prompti inseneritöö**.
 
-#### Promptide inseneeria ülevaade
+#### Prompti inseneritöö ülevaade
 
-Promptide inseneeria on praktika, mille eesmärk on kujundada tõhusad sisendid, et suunata tehisintellekti mudeleid soovitud väljundite poole. See hõlmab:
+Prompti inseneritöö on efektiivsete sisendite kavandamine, et suunata AI mudeleid soovitud väljundite poole. See hõlmab:
 
-- **Selgus**: Tee juhised selgeks ja ühemõtteliseks.
-- **Kontekst**: Paku vajalikku taustteavet.
-- **Piirangud**: Määra kõik piirangud või formaadid.
+- **Selgus**: Juhiste muutmine selgeteks ja ühemõttelisteks.
+- **Kontekst**: Vajalik taustateabe esitamine.
+- **Piirangud**: Mis tahes piirangute või formaatide määramine.
 
-Mõned parimad tavad promptide inseneerias hõlmavad promptide kujundamist, selgeid juhiseid, ülesannete jaotamist, ühe- ja vähese näitega õppimist ning promptide häälestamist. Erinevate promptide testimine on oluline, et leida, mis sinu konkreetse kasutusjuhtumi jaoks kõige paremini töötab.
+Parimad praktikad prompti inseneritöös hõlmavad prompti kavandamist, selgeid juhiseid, ülesande jagamist, ühe- ja väheseandmelist õppimist ning promptide häälestamist. Erinevate promptide testimine on hädavajalik, et leida, mis sinu konkreetse kasutusjuhtumi jaoks kõige paremini toimib.
 
-Rakenduste arendamisel töötad erinevat tüüpi promptidega:
-- **Süsteemi promptid**: Määravad mudeli käitumise põhireeglid ja konteksti
-- **Kasutaja promptid**: Sinu rakenduse kasutajate sisendandmed
-- **Assistendi promptid**: Mudeli vastused, mis põhinevad süsteemi ja kasutaja promptidel
+Rakendusi arendades töötad erinevate promptide tüüpidega:
+- **Süsteemi promptid**: Määravad mudeleid käitumise põhireeglid ja konteksti
+- **Kasutajapromptid**: Sinu rakenduse kasutajate sisendandmed
+- **Assisteerivad promptid**: Mudeli vastused süsteemi ja kasutajapromptide põhjal
 
-> **Loe rohkem**: Loe rohkem promptide inseneeriast [GenAI algajate kursuse Promptide inseneeria peatükis](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals)
+> **Õpi rohkem**: Lisateavet prompti inseneritöö kohta leiad [GenAI algajate kursuse peatükist "Prompt Engineering"](https://github.com/microsoft/generative-ai-for-beginners/tree/main/04-prompt-engineering-fundamentals)
 
 #### Tokenid, embeddingud ja agendid
 
-Generatiivsete tehisintellekti mudelitega töötades puutud kokku selliste mõistetega nagu **tokenid**, **embeddingud**, **agendid** ja **Model Context Protocol (MCP)**. Siin on nende mõistete üksikasjalik ülevaade:
+Generatiivsete AI mudelitega töötades kohtad termineid nagu **tokenid**, **embeddingud**, **agendid** ja **Mudelikonteksti protokoll (MCP)**. Siin on neile mõistetele detailne ülevaade:
 
-- **Tokenid**: Tokenid on mudeli jaoks väikseimad tekstiosad. Need võivad olla sõnad, tähed või osasõnad. Tokenid esindavad tekstandmeid formaadis, millest mudel aru saab. Näiteks lause "The quick brown fox jumped over the lazy dog" võib tokeniseerida järgmiselt: ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] või ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"], sõltuvalt tokeniseerimisstrateegiast.
+- **Tokenid**: Tokenid on mudelis teksti väikseimad üksused. Need võivad olla sõnad, tähemärgid või alam-sõnad. Tokenid esindavad teksti andmeid vormingus, mida mudel suudab mõista. Näiteks lause "The quick brown fox jumped over the lazy dog" võiks tokeniseerida nii ["The", " quick", " brown", " fox", " jumped", " over", " the", " lazy", " dog"] või ["The", " qu", "ick", " br", "own", " fox", " jump", "ed", " over", " the", " la", "zy", " dog"], sõltuvalt tokeniseerimisstrateegiast.
 
-![Joonis: Generatiivse tehisintellekti tokenite näide, kuidas sõnad jagatakse tokeniteks](../../../01-IntroToGenAI/images/tokens.webp)
+![Joonis: Generatiivse AI tokenite näide sõnade lõhkumisest tokeniteks](../../../translated_images/et/tokens.6283ed277a2ffff4.webp)
 
-Tokeniseerimine on protsess, mille käigus tekst jagatakse väiksemateks osadeks. See on oluline, kuna mudelid töötavad tokenitega, mitte toortekstiga. Tokenite arv promptis mõjutab mudeli vastuse pikkust ja kvaliteeti, kuna mudelitel on kontekstiakna jaoks tokenite piirangud (nt GPT-4o puhul 128K tokenit, mis hõlmab nii sisendit kui ka väljundit).
+Tokeniseerimine on tekstide jaotamine nendeks väiksemateks üksusteks. See on ülimalt oluline, sest mudelid töötlevad tokenite, mitte toore teksti peal. Tokenite arv promptis mõjutab mudeli vastuse pikkust ja kvaliteeti, kuna mudelitel on tokenite piirangud oma kontekstiväljas (näiteks GPT-4o puhul kogukontekst 128K tokenit, mis hõlmab nii sisendit kui väljundit).
 
-  Javas saad kasutada näiteks OpenAI SDK-d, et tokeniseerimist automaatselt hallata, kui saadad päringuid tehisintellekti mudelitele.
+Java keeles saad kasutada OpenAI SDK-t, mis tokeniseerimise automaatselt ära teeb, kui sa AI mudelitele päringuid saadad.
 
-- **Embeddingud**: Embeddingud on tokenite vektorilised esitlused, mis hõlmavad semantilist tähendust. Need on numbrilised esitused (tavaliselt ujukomaarvude massiivid), mis võimaldavad mudelitel mõista sõnade vahelisi seoseid ja genereerida konteksti arvestavaid vastuseid. Sarnastel sõnadel on sarnased embeddingud, mis võimaldab mudelil mõista sünonüüme ja semantilisi seoseid.
+- **Embeddingud**: Embeddingud on tokenite vektorilised esitlused, mis haaravad semantilist tähendust. Need on numbrilised esitlused (tavaliselt ujukoma-väärtuste massiivid), mis võimaldavad mudelitel mõista sõnade vahelisi suhteid ning genereerida kontekstuaalselt asjakohaseid vastuseid. Sarnased sõnad omavad sarnaseid embeddinguid, mis võimaldab mudelil mõista sünonüüme ja semantilisi seoseid.
 
 ![Joonis: Embeddingud](../../../translated_images/et/embedding.398e50802c0037f9.webp)
 
-  Javas saad embeddinguid genereerida OpenAI SDK või muude embeddingute genereerimist toetavate raamatukogude abil. Need embeddingud on olulised selliste ülesannete jaoks nagu semantiline otsing, kus soovid leida sarnast sisu tähenduse, mitte täpse tekstivastavuse põhjal.
+Java keeles saad embeddinguid genereerida kasutades OpenAI SDK-d või muid embeddingute loomist toetavaid raamatukogusid. Need embeddingud on olulised ülesannetes nagu semantiline otsing, kus soovid leida sarnast sisu tähenduse, mitte täpse tekstivastavuse põhjal.
 
-- **Vektoriandmebaasid**: Vektoriandmebaasid on spetsiaalsed salvestussüsteemid, mis on optimeeritud embeddingute jaoks. Need võimaldavad tõhusat sarnasuse otsingut ja on olulised RAG (Retrieval-Augmented Generation) mustrite jaoks, kus on vaja leida asjakohast teavet suurtest andmekogumitest semantilise sarnasuse, mitte täpse vastavuse alusel.
+- **Vektorandmebaasid**: Vektorandmebaasid on spetsialiseeritud salvestussüsteemid, mis on optimeeritud embeddingute jaoks. Need võimaldavad tõhusat sarnasuse otsingut ja on hädavajalikud Retrieval-Augmented Generation (RAG) mustrites, kus vaja leida suures andmestikus olulist teavet semantilise sarnasuse, mitte täpse vastavuse põhjal.
 
-![Joonis: Vektoriandmebaasi arhitektuur, mis näitab, kuidas embeddinguid salvestatakse ja sarnasuse otsimiseks kasutatakse.](../../../translated_images/et/vector.f12f114934e223df.webp)
+![Joonis: Vektorandmebaasi arhitektuur, mis näitab kuidas embeddingud salvestatakse ja leitakse sarnasuse otsingu jaoks.](../../../translated_images/et/vector.f12f114934e223df.webp)
 
-> **Märkus**: Selles kursuses me vektoriandmebaase ei käsitle, kuid need on mainimist väärt, kuna neid kasutatakse sageli päriselu rakendustes.
+> **Märkus**: Selles kursuses me vektorandmebaase ei hõlma, kuid mainime neid, kuna need on reaalse maailma rakendustes sageli kasutusel.
 
-- **Agendid ja MCP**: Tehisintellekti komponendid, mis suhtlevad iseseisvalt mudelite, tööriistade ja väliste süsteemidega. Model Context Protocol (MCP) pakub standardiseeritud viisi agentidele, et turvaliselt juurde pääseda välistele andmeallikatele ja tööriistadele. Loe rohkem meie [MCP algajatele](https://github.com/microsoft/mcp-for-beginners) kursusest.
+- **Agendid ja MCP**: AI komponendid, kes autonoomselt suhtlevad mudelite, tööriistade ja välistingimuste süsteemidega. Mudelikonteksti protokoll (MCP) pakub standardiseeritud viisi agentide turvaliseks juurdepääsuks välistingimuste andmeallikatele ja tööriistadele. Loe lisaks meie [MCP algajate kursusest](https://github.com/microsoft/mcp-for-beginners).
 
-Java tehisintellekti rakendustes kasutad tokeneid tekstide töötlemiseks, embeddinguid semantilise otsingu ja RAG jaoks, vektoriandmebaase andmete leidmiseks ning agente koos MCP-ga intelligentsete, tööriistu kasutavate süsteemide loomiseks.
+Java AI rakendustes kasutad tokeniteks tekstitöötluseks, embeddinguid semantilise otsingu ja RAG jaoks, vektorandmebaase andmete päringuks ning agente koos MCP-ga intelligentsete, tööriistu kasutavate süsteemide loomisel.
 
-![Joonis: kuidas prompt muutub vastuseks—tokenid, vektorid, valikuline RAG otsing, LLM-i mõtlemine ja MCP agent ühes kiire voos.](../../../translated_images/et/flow.f4ef62c3052d12a8.webp)
+![Joonis: Kuidas promptist saab vastus — tokenid, vektorid, valikuline RAG päring, LLM-i mõtlemine ja MCP agent kõik ühes kiiremas voos.](../../../translated_images/et/flow.f4ef62c3052d12a8.webp)
 
-### Tehisintellekti arendustööriistad ja -raamatukogud Java jaoks
+### AI arendustööriistad ja -raamatukogud Javale
 
-Java pakub suurepäraseid tööriistu tehisintellekti arendamiseks. Selles kursuses uurime kolme peamist raamatukogu - OpenAI Java SDK, Azure OpenAI SDK ja Spring AI.
+Java pakub suurepäraseid tööriistu AI arenduseks. Selles kursuses uurime kolme peamist raamatukogu - OpenAI Java SDK, Azure OpenAI SDK ja Spring AI.
 
-Siin on kiire võrdlustabel, mis näitab, millist SDK-d kasutatakse iga peatüki näidetes:
+Siin on kiire viitetabel, mis näitab, millist SDK-d kasutatakse iga peatüki näidetes:
 
-| Peatükk | Näide | SDK |
-|---------|-------|-----|
+| Peatükk | Näidis | SDK |
+|---------|--------|-----|
 | 02-SetupDevEnvironment | github-models | OpenAI Java SDK |
 | 02-SetupDevEnvironment | basic-chat-azure | Spring AI Azure OpenAI |
-| 03-CoreGenerativeAITechniques | näited | Azure OpenAI SDK |
+| 03-CoreGenerativeAITechniques | examples | Azure OpenAI SDK |
 | 04-PracticalSamples | petstory | OpenAI Java SDK |
 | 04-PracticalSamples | foundrylocal | OpenAI Java SDK |
 | 04-PracticalSamples | calculator | Spring AI MCP SDK + LangChain4j |
@@ -109,39 +113,41 @@ Siin on kiire võrdlustabel, mis näitab, millist SDK-d kasutatakse iga peatüki
 
 #### OpenAI Java SDK
 
-OpenAI SDK on OpenAI API ametlik Java raamatukogu. See pakub lihtsat ja ühtset liidest OpenAI mudelitega suhtlemiseks, muutes tehisintellekti võimaluste integreerimise Java rakendustesse lihtsaks. 2. peatüki GitHubi mudelite näide, 4. peatüki Pet Story rakendus ja Foundry Local näide demonstreerivad OpenAI SDK lähenemist.
+OpenAI SDK on ametlik Java raamatukogu OpenAI API jaoks. See pakub lihtsat ja ühtset liidest OpenAI mudelitega suhtlemiseks, muutes AI võimete integreerimise Java rakendustesse lihtsaks. Peatüki 2 GitHubi mudelite näide, peatüki 4 Pet Story rakendus ja Foundry Local näide demonstreerivad OpenAI SDK lähenemist.
 
 #### Spring AI
 
-Spring AI on terviklik raamistik, mis toob tehisintellekti võimalused Springi rakendustesse, pakkudes ühtset abstraktsioonikihti erinevate tehisintellekti pakkujate vahel. See integreerub sujuvalt Springi ökosüsteemiga, muutes selle ideaalseks valikuks ettevõtte Java rakendustele, mis vajavad tehisintellekti võimalusi.
+Spring AI on põhjalik raamistik, mis toob AI võimed Springi rakendustesse, pakkudes ühtset abstraktsioonitasandit erinevate AI pakkujate vahel. See integreerub sujuvalt Springi ökosüsteemiga, muutes selle ideaalseks valikuks ettevõtte Java rakenduste jaoks, mis vajavad AI võimeid.
 
-Spring AI tugevus seisneb selle sujuvas integreerimises Springi ökosüsteemiga, mis muudab tootmiskõlblike tehisintellekti rakenduste loomise lihtsaks, kasutades tuttavaid Springi mustreid, nagu sõltuvuste süstimine, konfiguratsioonihaldus ja testimisraamistikud. Kasutad Spring AI-d 2. ja 4. peatükis, et luua rakendusi, mis kasutavad nii OpenAI kui ka Model Context Protocol (MCP) Spring AI raamatukogusid.
+Spring AI tugevus seisneb selle sujuvas integreerumises Springi ökosüsteemiga, võimaldades ehitada tootmiskõlblikke AI rakendusi tuttavate Springi mustritega nagu sõltuvuste süstimine, konfiguratsiooni haldamine ja testimisraamistikud. Kasutad Spring AI-d peatükkides 2 ja 4, et ehitada rakendusi, mis kasutavad nii OpenAI kui ka Mudelikonteksti protokolli (MCP) Spring AI raamatukogusid.
 
-##### Model Context Protocol (MCP)
+##### Mudelikonteksti protokoll (MCP)
 
-[Model Context Protocol (MCP)](https://modelcontextprotocol.io/) on uus standard, mis võimaldab tehisintellekti rakendustel turvaliselt suhelda väliste andmeallikate ja tööriistadega. MCP pakub standardiseeritud viisi, kuidas tehisintellekti mudelid saavad juurdepääsu kontekstuaalsele teabele ja täita toiminguid sinu rakendustes.
+[Mudelikonteksti protokoll (MCP)](https://modelcontextprotocol.io/) on uueajastu standard, mis võimaldab AI rakendustel turvaliselt suhelda välistingimuste andmeallikate ja tööriistadega. MCP pakub standardiseeritud viisi AI mudelitele kontekstiteabe ligipääsuks ja toimingute sooritamiseks sinu rakendustes.
 
-4. peatükis ehitad lihtsa MCP kalkulaatoriteenuse, mis demonstreerib Model Context Protocoli põhialuseid Spring AI abil, näidates, kuidas luua põhilisi tööriistade integreerimisi ja teenuse arhitektuure.
+Peatükis 4 ehitad lihtsa MCP kalkulaatoriteenuse, mis demonstreerib Mudelikonteksti protokolli põhialuseid Spring AI-ga, näidates kuidas luua lihtsaid tööriista integratsioone ja teenuse arhitektuure.
 
 #### Azure OpenAI Java SDK
 
-Azure OpenAI kliendiraamatukogu Java jaoks on OpenAI REST API-de kohandatud versioon, mis pakub idiomaatilist liidest ja integreerub ülejäänud Azure SDK ökosüsteemiga. 3. peatükis ehitad rakendusi, kasutades Azure OpenAI SDK-d, sealhulgas vestlusrakendusi, funktsioonikutsumisi ja RAG (Retrieval-Augmented Generation) mustreid.
+Azure OpenAI klientraamatukogu Javale on OpenAI REST API-de adaptsioon, mis pakub idiomaatilist liidest ja integreerub teiste Azure SDK ökosüsteemi osadega. Peatükis 3 ehitad rakendusi kasutades Azure OpenAI SDK-d, sealhulgas vestlusrakendusi, funktsioonikõnesid ja RAG (Retrieval-Augmented Generation) mustreid.
 
-> Märkus: Azure OpenAI SDK jääb funktsioonide osas OpenAI Java SDK-le alla, seega tulevaste projektide jaoks kaalu OpenAI Java SDK kasutamist.
+> Märkus: Azure OpenAI SDK jookseb järele OpenAI Java SDK-st funktsioonide poolest, seega tulevaste projektide puhul tasub kaaluda OpenAI Java SDK kasutamist.
 
 ## Kokkuvõte
 
-Sellega on alused kaetud! Nüüd mõistad:
+See lõpetab põhialused! Sa mõistad nüüd:
 
-- Generatiivse tehisintellekti põhikontseptsioone - alates LLM-idest ja promptide inseneeriast kuni tokenite, embeddingute ja vektoriandmebaasideni
-- Oma tööriistakomplekti valikuid Java tehisintellekti arenduseks: Azure OpenAI SDK, Spring AI ja OpenAI Java SDK
-- Mis on Model Context Protocol ja kuidas see võimaldab tehisintellekti agentidel töötada väliste tööriistadega
+- Generatiivse AI keskseid mõisteid - LLM-i ja prompti inseneritööst kuni tokenite, embeddingute ja vektorandmebaasideni
+- Java AI arendustööriistade valikuid: Azure OpenAI SDK, Spring AI ja OpenAI Java SDK
+- Mis on Mudelikonteksti protokoll ja kuidas see võimaldab AI agentidel töötada välistingimuste tööriistadega
 
 ## Järgmised sammud
 
-[2. peatükk: Arenduskeskkonna seadistamine](../02-SetupDevEnvironment/README.md)
+[Peatükk 2: Arenduskeskkonna ülesseadmine](../02-SetupDevEnvironment/README.md)
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastutusest loobumine**:  
+Seda dokumenti on tõlgitud kasutades tehisintellektipõhist tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi püüame täpsust, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selles algkeeles tuleb pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tingitud arusaamatuste või valesti mõistmiste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

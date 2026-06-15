@@ -2,37 +2,45 @@
 
 ## Table of Contents
 
-- [Prerequisites](../../../../04-PracticalSamples/foundrylocal)
-- [Project Overview](../../../../04-PracticalSamples/foundrylocal)
-- [Understanding the Code](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Application Configuration (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Main Application Class (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. AI Service Layer (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Project Dependencies (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [How It All Works Together](../../../../04-PracticalSamples/foundrylocal)
-- [Setting Up Foundry Local](../../../../04-PracticalSamples/foundrylocal)
-- [Running the Application](../../../../04-PracticalSamples/foundrylocal)
-- [Expected Output](../../../../04-PracticalSamples/foundrylocal)
-- [Next Steps](../../../../04-PracticalSamples/foundrylocal)
-- [Troubleshooting](../../../../04-PracticalSamples/foundrylocal)
+- [Prerequisites](#prerequisites)
+- [Project Overview](#project-overview)
+- [Understanding the Code](#understanding-the-code)
+  - [1. Application Configuration (application.properties)](#1-application-configuration-applicationproperties)
+  - [2. Main Application Class (Application.java)](#2-main-application-class-applicationjava)
+  - [3. AI Service Layer (FoundryLocalService.java)](#3-ai-service-layer-foundrylocalservicejava)
+  - [4. Project Dependencies (pom.xml)](#4-project-dependencies-pomxml)
+- [How It All Works Together](#how-it-all-works-together)
+- [Setting Up Foundry Local](#setting-up-foundry-local)
+- [Running the Application](#running-the-application)
+- [Expected Output](#expected-output)
+- [Next Steps](#next-steps)
+- [Troubleshooting](#troubleshooting)
 
 
 ## Prerequisites
 
-Before you start dis tutorial, make sure say you get:
+Bifo you start dis tutorial, make sure say you get:
 
-- **Java 21 or higher** wey don dey your system
-- **Maven 3.6+** to build di project
-- **Foundry Local** wey don dey installed and dey run
+- **Java 21 or higher** wey you don install for your system
+- **Maven 3.6+** wey you go take build di project
+- **Foundry Local** wey you don install and e dey run
 
 ### **Install Foundry Local:**
+
+> **Note:** Foundry Local CLI dey available for **Windows** and **macOS** only. Linux dey supported via di [Foundry Local SDKs](https://github.com/microsoft/Foundry-Local) (Python, JavaScript, C#, Rust).
 
 ```bash
 # Windows
 winget install Microsoft.FoundryLocal
 
-# macOS (after installing)
-foundry model run phi-3.5-mini
+# macOS
+brew tap microsoft/foundrylocal
+brew install foundrylocal
+```
+
+Verify di installation:
+```bash
+foundry --version
 ```
 
 ## Project Overview
@@ -52,14 +60,15 @@ Dis project get four main parts:
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
 
 **Wetin dis one dey do:**
-- **base-url**: E dey show where Foundry Local dey run, including di `/v1` path for OpenAI API compatibility. **Note**: Foundry Local dey assign port automatically, so check di actual port wey e dey use with `foundry service status`
-- **model**: E dey show di AI model wey you go use for text generation, including di version number (e.g., `:1`). Use `foundry model list` to see di available models with their exact IDs
+- **base-url**: E dey specify where Foundry Local dey run, including di `/v1` path for OpenAI API compatibility. Di default port na `5273`. If di port different, check am with `foundry service status`.
+- **model** (optional): Na di name of di AI model wey you go use for text generation. **By default, di application dey auto-detect di model** by querying Foundry Local `/v1/models` endpoint when e start up, so no need to set am. You fit still set am explicit if you want override di auto-detection.
 
-**Key concept:** Spring Boot go load dis properties automatically and make dem dey available to your application using di `@Value` annotation.
+**Main idea:** Spring Boot dey automatically load these properties and e go make dem available to your application with di use of `@Value` annotation.
 
 ### 2. Main Application Class (Application.java)
 
@@ -70,14 +79,14 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.setWebApplicationType(WebApplicationType.NONE);  // No web server need am
         app.run(args);
     }
 ```
 
 **Wetin dis one dey do:**
 - `@SpringBootApplication` dey enable Spring Boot auto-configuration
-- `WebApplicationType.NONE` dey tell Spring say na command-line app, no be web server
+- `WebApplicationType.NONE` dey tell Spring say na command-line app dis be, no be web server
 - Di main method dey start di Spring application
 
 **Di Demo Runner:**
@@ -103,7 +112,7 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 - `@Bean` dey create component wey Spring go manage
 - `CommandLineRunner` dey run code after Spring Boot don start
 - `foundryLocalService` dey automatically injected by Spring (dependency injection)
-- E dey send test message to di AI and show di response
+- E dey send test message to di AI and e go show di response
 
 ### 3. AI Service Layer (FoundryLocalService.java)
 
@@ -117,46 +126,52 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // E go detect by itself if e empty
 ```
 
 **Wetin dis one dey do:**
 - `@Service` dey tell Spring say dis class dey provide business logic
 - `@Value` dey inject configuration values from application.properties
-- Di `:default-value` syntax dey provide fallback values if properties no dey set
+- Di model default na empty, wey go make am do **auto-detection** from Foundry Local once e start. Dis mean say di app fit work with any model wey dey for Foundry Local without you configure manually.
 
 #### Client Initialization:
 ```java
 @PostConstruct
 public void init() {
+    // Auto sabi di model from Foundry Local if e no clear say make e configure
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
-            .apiKey("not-needed")            // Local server doesn't need real API key
+            .baseUrl(baseUrl)                // Base URL don already get /v1 from configuration
+            .apiKey("not-needed")            // Local server no need correct API key
             .build();
 }
 ```
 
 **Wetin dis one dey do:**
 - `@PostConstruct` dey run dis method after Spring don create di service
+- If no model dey configure, e go query Foundry Local `/v1/models` endpoint and e go pick di first loaded model
 - E dey create OpenAI client wey dey point to your local Foundry Local instance
 - Di base URL from `application.properties` don already include `/v1` for OpenAI API compatibility
-- API key dey set to "not-needed" because local development no need authentication
+- API key na "not-needed" because for local development no need authentication
 
 #### Chat Method:
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                .model(model)                    // Which AI model to use
+                .model(model)                    // Which AI model we go use
                 .addUserMessage(message)         // Your question/prompt
-                .maxCompletionTokens(150)        // Limit response length
-                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .maxCompletionTokens(150)        // Make response no too long
+                .temperature(0.7)                // Control how creative e go be (0.0-1.0)
                 .build();
         
         ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
         
-        // Extract the AI's response from the API result
+        // Comot di AI response from di API result
         if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
             return chatCompletion.choices().get(0).message().content().orElse("No response found");
         }
@@ -170,13 +185,13 @@ public String chat(String message) {
 
 **Wetin dis one dey do:**
 - **ChatCompletionCreateParams**: E dey configure di AI request
-  - `model`: E dey specify di AI model wey you go use (e must match di exact ID from `foundry model list`)
+  - `model`: E dey specify which AI model to use (e gats match di exact ID from `foundry model list`)
   - `addUserMessage`: E dey add your message to di conversation
-  - `maxCompletionTokens`: E dey limit how long di response fit be (e dey save resources)
-  - `temperature`: E dey control randomness (0.0 = deterministic, 1.0 = creative)
-- **API Call**: E dey send di request to Foundry Local
-- **Response Handling**: E dey extract di AI text response safely
-- **Error Handling**: E dey wrap exceptions with helpful error messages
+  - `maxCompletionTokens`: E dey limit how long di response fit be (dis one dey save resources)
+  - `temperature`: E dey control randomness (0.0 = certain, 1.0 = creative)
+- **API Call**: E dey send di request go Foundry Local
+- **Response Handling**: E dey collect di AI text response safely
+- **Error Handling**: E dey wrap exceptions with beta error messages
 
 ### 4. Project Dependencies (pom.xml)
 
@@ -205,63 +220,81 @@ public String chat(String message) {
 </dependency>
 ```
 
-**Wetin dem dey do:**
+**Wetin these ones dey do:**
 - **spring-boot-starter**: E dey provide core Spring Boot functionality
-- **openai-java**: Official OpenAI Java SDK for API communication
+- **openai-java**: Official OpenAI Java SDK wey dey do API communication
 - **jackson-databind**: E dey handle JSON serialization/deserialization for API calls
 
 ## How It All Works Together
 
 Dis na di full flow when you run di application:
 
-1. **Startup**: Spring Boot go start and read `application.properties`
-2. **Service Creation**: Spring go create `FoundryLocalService` and inject configuration values
-3. **Client Setup**: `@PostConstruct` go initialize di OpenAI client to connect to Foundry Local
-4. **Demo Execution**: `CommandLineRunner` go execute after startup
-5. **AI Call**: Di demo go call `foundryLocalService.chat()` with test message
-6. **API Request**: Service go build and send OpenAI-compatible request to Foundry Local
-7. **Response Processing**: Service go extract and return di AI response
-8. **Display**: Application go print di response and exit
+1. **Startup**: Spring Boot start and e read `application.properties`
+2. **Service Creation**: Spring create `FoundryLocalService` and e inject configuration values
+3. **Model Detection**: If no model dey configure, di service go query Foundry Local `/v1/models` endpoint and e dey use di first available model automatically
+4. **Client Setup**: `@PostConstruct` go initialize di OpenAI client to connect to Foundry Local
+5. **Demo Execution**: `CommandLineRunner` go run after startup
+6. **AI Call**: Di demo go call `foundryLocalService.chat()` with test message
+7. **API Request**: Di service go build and send OpenAI-compatible request to Foundry Local
+8. **Response Processing**: Di service go collect and return di AI response
+9. **Display**: Di application go print di response then e go exit
 
 ## Setting Up Foundry Local
 
-To set up Foundry Local, follow dis steps:
+1. **Install Foundry Local** using di instructions for di [Prerequisites](#prerequisites) section.
 
-1. **Install Foundry Local** using di instructions wey dey di [Prerequisites](../../../../04-PracticalSamples/foundrylocal) section.
+2. **Start di service** (if e never dey run):
+   ```bash
+   foundry service start
+   ```
 
-2. **Check di dynamically assigned port**. Foundry Local dey assign port automatically when e start. Find di port with:
+3. **Check di service status** to make sure say e dey run and note di port:
    ```bash
    foundry service status
    ```
-   
-   **Optional**: If you wan use specific port (e.g., 5273), you fit configure am manually:
+
+4. **Download and run model** (e go download for first time, dem dey cache for subsequent runs):
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
+   ```
+   Dis one go open interactive chat session. You fit exit wit `Ctrl+C`. Di model go still dey loaded for di service.
+
+   > **Tip:** Run `foundry model list` to see all di available models. Replace `phi-4-mini` wit any alias from di catalog (e.g., `qwen2.5-0.5b` for small/faster model).
+
+5. **Verify say di model don load:**
+   ```bash
+   foundry service ps
    ```
 
-3. **Download di AI model** wey you wan use, for example, `phi-3.5-mini`, with di following command:
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
+6. **Update `application.properties`** if e necessary:
+   - Di default `base-url` (`http://localhost:5273/v1`) match di default CLI port. Update am only if `foundry service status` show different port.
+   - Di model dey **auto-detect** at startup — no configuration needed.
 
-4. **Configure di application.properties** file to match your Foundry Local settings:
-   - Update di port for `base-url` (from step 2), make sure say e include `/v1` for di end
-   - Update di model name to include di version number (check with `foundry model list`)
-   
-   Example:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
 
 ## Running the Application
 
-### Step 1: Start Foundry Local
+### Step 1: Make sure say model dey loaded for Foundry Local
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
+```
+If models no dey listed, load one:
+```bash
+foundry model run phi-4-mini
 ```
 
 ### Step 2: Build and Run di Application
+For separate terminal:
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
+
+Or build and run as JAR:
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
@@ -274,53 +307,48 @@ java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
 
 ## Next Steps
 
-For more examples, check [Chapter 04: Practical samples](../README.md)
+For beta examples, see [Chapter 04: Practical samples](../README.md)
 
 ## Troubleshooting
 
 ### Common Issues
 
 **"Connection refused" or "Service unavailable"**
-- Make sure say Foundry Local dey run: `foundry model list`
-- Check di actual port wey Foundry Local dey use: `foundry service status`
-- Update your `application.properties` with di correct port, make sure say di URL end with `/v1`
-- Alternatively, set specific port if you wan: `foundry service set --port 5273`
-- Try restart Foundry Local: `foundry model run phi-3.5-mini`
+- Check di service: `foundry service status`
+- Restart if e necessary: `foundry service restart`
+- Make sure say di port for `application.properties` match `foundry service status` output
+- Make sure say di URL end wit `/v1`: `http://localhost:5273/v1`
 
-**"Model not found" or "404 Not Found" errors**
-- Check available models with their exact IDs: `foundry model list`
-- Update di model name for `application.properties` to match am exactly, including di version number (e.g., `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Make sure say di `base-url` include `/v1` for di end: `http://localhost:5273/v1`
-- Download di model if e never dey: `foundry model run phi-3.5-mini`
+**"No model found" at startup**
+- Di application dey auto-detect di model. Make sure say at least one model dey loaded: `foundry service ps`
+- If no models loaded: `foundry model run phi-4-mini`
+- If you override di model name inside `application.properties`, check say e match `foundry model list`
 
 **"400 Bad Request" errors**
-- Confirm say di base URL include `/v1`: `http://localhost:5273/v1`
-- Check say di model ID match exactly wetin dey for `foundry model list`
+- Confirm di base URL contain `/v1`: `http://localhost:5273/v1`
 - Make sure say you dey use `maxCompletionTokens()` for your code (no use di deprecated `maxTokens()`)
 
 **Maven compilation errors**
-- Confirm say Java 21 or higher dey: `java -version`
+- Make sure say Java 21 or higher dey installed: `java -version`
 - Clean and rebuild: `mvn clean compile`
-- Check internet connection for dependency downloads
+- Check di internet connection for dependency downloads
 
-**Application start but no output**
-- Confirm say Foundry Local dey respond: Check `http://localhost:5273/v1/models` or run `foundry service status`
-- Check application logs for specific error messages
-- Make sure say di model don fully load and dey ready
+**Service connection problems**
+- If you see `Request to local service failed`, run: `foundry service restart`
+- Check loaded models: `foundry service ps`
+- View service logs: `foundry service diag`
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Dis docu don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) take translate am. Even though we dey try make sure say e correct, abeg no forget say automatic translation fit get mistake or no dey accurate well. Di original docu for di language wey dem write am first na di main correct one. For important information, e good make professional human translator check am. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because of dis translation.
+Dis dokument don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translations fit get some mistakes or wrong tin. Di original dokument for im own language na di correct source. For important tin dem, make una use professional human translation. We no go responsible for any misunderstanding or wrong meaning wey fit show because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

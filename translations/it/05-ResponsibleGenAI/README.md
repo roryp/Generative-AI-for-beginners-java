@@ -1,59 +1,64 @@
 # Intelligenza Artificiale Generativa Responsabile
 
+[![Responsible Generative AI](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
+
+> **Video**: [Guarda la panoramica video per questa lezione](https://www.youtube.com/watch?v=rF-b2BTSMQ4).
+> Puoi anche cliccare sull'immagine in miniatura sopra per aprire lo stesso video.
+
 ## Cosa Imparerai
 
-- Scopri le considerazioni etiche e le migliori pratiche per lo sviluppo di AI
-- Integra misure di filtraggio dei contenuti e sicurezza nelle tue applicazioni
-- Testa e gestisci le risposte di sicurezza AI utilizzando le protezioni integrate dei modelli di GitHub
-- Applica i principi di AI responsabile per creare sistemi AI sicuri ed etici
+- Imparare le considerazioni etiche e le migliori pratiche importanti per lo sviluppo dell'IA
+- Costruire filtri di contenuto e misure di sicurezza nelle tue applicazioni
+- Testare e gestire le risposte di sicurezza AI utilizzando le protezioni integrate di GitHub Models
+- Applicare i principi di IA responsabile per creare sistemi di IA sicuri ed etici
 
 ## Indice
 
-- [Introduzione](../../../05-ResponsibleGenAI)
-- [Sicurezza Integrata nei Modelli di GitHub](../../../05-ResponsibleGenAI)
-- [Esempio Pratico: Demo di Sicurezza AI Responsabile](../../../05-ResponsibleGenAI)
-  - [Cosa Mostra la Demo](../../../05-ResponsibleGenAI)
-  - [Istruzioni per la Configurazione](../../../05-ResponsibleGenAI)
-  - [Esecuzione della Demo](../../../05-ResponsibleGenAI)
-  - [Output Atteso](../../../05-ResponsibleGenAI)
-- [Migliori Pratiche per lo Sviluppo di AI Responsabile](../../../05-ResponsibleGenAI)
-- [Nota Importante](../../../05-ResponsibleGenAI)
-- [Riepilogo](../../../05-ResponsibleGenAI)
-- [Completamento del Corso](../../../05-ResponsibleGenAI)
-- [Prossimi Passi](../../../05-ResponsibleGenAI)
+- [Introduzione](#introduzione)
+- [Sicurezza Integrata di GitHub Models](#sicurezza-integrata-di-github-models)
+- [Esempio Pratico: Demo Sicurezza AI Responsabile](#esempio-pratico-demo-sicurezza-ai-responsabile)
+  - [Cosa Mostra la Demo](#cosa-mostra-la-demo)
+  - [Istruzioni di Configurazione](#istruzioni-di-configurazione)
+  - [Esecuzione della Demo](#esecuzione-della-demo)
+  - [Output Previsto](#output-previsto)
+- [Migliori Pratiche per lo Sviluppo di IA Responsabile](#migliori-pratiche-per-lo-sviluppo-di-ia-responsabile)
+- [Nota Importante](#nota-importante)
+- [Riepilogo](#riepilogo)
+- [Completamento del Corso](#completamento-del-corso)
+- [Prossimi Passi](#prossimi-passi)
 
 ## Introduzione
 
-Questo capitolo finale si concentra sugli aspetti critici della creazione di applicazioni di intelligenza artificiale generativa responsabili ed etiche. Imparerai come implementare misure di sicurezza, gestire il filtraggio dei contenuti e applicare le migliori pratiche per lo sviluppo di AI responsabile utilizzando gli strumenti e i framework trattati nei capitoli precedenti. Comprendere questi principi è essenziale per costruire sistemi AI non solo tecnicamente avanzati, ma anche sicuri, etici e affidabili.
+Questo capitolo finale si concentra sugli aspetti critici della costruzione di applicazioni di intelligenza artificiale generativa responsabile ed etica. Imparerai come implementare misure di sicurezza, gestire il filtraggio dei contenuti e applicare le migliori pratiche per lo sviluppo di IA responsabile utilizzando gli strumenti e i framework trattati nei capitoli precedenti. Comprendere questi principi è essenziale per costruire sistemi di IA che non siano solo tecnicamente impressionanti ma anche sicuri, etici e affidabili.
 
-## Sicurezza Integrata nei Modelli di GitHub
+## Sicurezza Integrata di GitHub Models
 
-I modelli di GitHub includono un filtraggio dei contenuti di base integrato. È come avere un buttafuori amichevole nel tuo club AI: non il più sofisticato, ma efficace per scenari di base.
+GitHub Models offre un filtraggio di contenuti di base subito disponibile. È come avere una guardia amichevole nel tuo club di IA - non la più sofisticata, ma che fa il suo lavoro per scenari di base.
 
-**Cosa Proteggono i Modelli di GitHub:**
-- **Contenuti Dannosi**: Blocca contenuti palesemente violenti, sessuali o pericolosi
-- **Discorsi di Odio di Base**: Filtra linguaggi chiaramente discriminatori
-- **Tentativi di Evasione Semplici**: Resiste a tentativi basilari di aggirare le protezioni
+**Contro cosa protegge GitHub Models:**
+- **Contenuti dannosi**: Blocca contenuti violentI, sessuali o pericolosi ovvi
+- **Discorso d'odio di base**: Filtra linguaggio chiaramente discriminatorio
+- **Semplici jailbreak**: Resiste ai tentativi basilari di aggirare i controlli di sicurezza
 
-## Esempio Pratico: Demo di Sicurezza AI Responsabile
+## Esempio Pratico: Demo Sicurezza AI Responsabile
 
-Questo capitolo include una dimostrazione pratica di come i modelli di GitHub implementano misure di sicurezza AI responsabile testando prompt che potrebbero violare le linee guida di sicurezza.
+Questo capitolo include una dimostrazione pratica di come GitHub Models implementa misure di sicurezza AI responsabile testando prompt che potrebbero potenzialmente violare le linee guida di sicurezza.
 
 ### Cosa Mostra la Demo
 
 La classe `ResponsibleGithubModels` segue questo flusso:
-1. Inizializza il client dei modelli di GitHub con autenticazione
-2. Testa prompt dannosi (violenza, discorsi di odio, disinformazione, contenuti illegali)
-3. Invia ogni prompt all'API dei modelli di GitHub
-4. Gestisce le risposte: blocchi rigidi (errori HTTP), rifiuti morbidi (risposte educate come "Non posso aiutarti") o generazione di contenuti normali
+1. Inizializza il client GitHub Models con autenticazione
+2. Testa prompt dannosi (violenza, discorso d’odio, disinformazione, contenuti illegali)
+3. Invia ogni prompt all’API di GitHub Models
+4. Gestisce le risposte: blocchi rigidi (errori HTTP), rifiuti soft (risposte educate come "non posso aiutare"), o generazione normale di contenuti
 5. Mostra i risultati indicando quali contenuti sono stati bloccati, rifiutati o consentiti
 6. Testa contenuti sicuri per confronto
 
-![Demo di Sicurezza AI Responsabile](../../../translated_images/it/responsible.e4f51a917bafa4bf.webp)
+![Responsible AI Safety Demo](../../../translated_images/it/responsible.e4f51a917bafa4bf.webp)
 
-### Istruzioni per la Configurazione
+### Istruzioni di Configurazione
 
-1. **Imposta il tuo GitHub Personal Access Token:**
+1. **Imposta il tuo token personale di accesso a GitHub:**
    
    Su Windows (Prompt dei Comandi):
    ```cmd
@@ -72,7 +77,7 @@ La classe `ResponsibleGithubModels` segue questo flusso:
 
 ### Esecuzione della Demo
 
-1. **Vai alla directory degli esempi:**
+1. **Vai nella directory degli esempi:**
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
@@ -82,15 +87,15 @@ La classe `ResponsibleGithubModels` segue questo flusso:
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
-### Output Atteso
+### Output Previsto
 
-La demo testerà vari tipi di prompt potenzialmente dannosi e mostrerà come funziona la sicurezza AI moderna attraverso due meccanismi:
+La demo testerà diversi tipi di prompt potenzialmente dannosi e mostrerà come funziona la sicurezza AI moderna attraverso due meccanismi:
 
-- **Blocchi Rigidi**: Errori HTTP 400 quando i contenuti vengono bloccati dai filtri di sicurezza prima di raggiungere il modello
-- **Rifiuti Morbidi**: Il modello risponde con rifiuti educati come "Non posso aiutarti" (il più comune con i modelli moderni)
-- **Contenuti Sicuri** che ricevono una risposta normale
+- **Blocchi Rigidi**: errori HTTP 400 quando il contenuto è bloccato da filtri di sicurezza prima di raggiungere il modello
+- **Rifiuti Soft**: il modello risponde con rifiuti cortesi come "Non posso aiutarti con questo" (il più comune con modelli moderni)
+- **Contenuto sicuro** che riceve una risposta normale
 
-Formato di output di esempio:
+Formato esempio di output:
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -108,64 +113,64 @@ Status: Response generated successfully
 ────────────────────────────────────────────────────────────
 ```
 
-**Nota**: Sia i blocchi rigidi che i rifiuti morbidi indicano che il sistema di sicurezza sta funzionando correttamente.
+**Nota**: sia i blocchi rigidi che i rifiuti soft indicano che il sistema di sicurezza sta funzionando correttamente.
 
-## Migliori Pratiche per lo Sviluppo di AI Responsabile
+## Migliori Pratiche per lo Sviluppo di IA Responsabile
 
-Quando sviluppi applicazioni AI, segui queste pratiche essenziali:
+Quando costruisci applicazioni di IA, segui queste pratiche essenziali:
 
-1. **Gestisci sempre con grazia le risposte dei filtri di sicurezza**
-   - Implementa una gestione corretta degli errori per i contenuti bloccati
-   - Fornisci feedback significativi agli utenti quando i contenuti vengono filtrati
+1. **Gestisci sempre con cura le possibili risposte dei filtri di sicurezza**
+   - Implementa un’appropriata gestione degli errori per contenuti bloccati
+   - Fornisci feedback significativi agli utenti quando i contenuti sono filtrati
 
-2. **Implementa una validazione aggiuntiva dei contenuti dove appropriato**
+2. **Implementa ulteriori validazioni di contenuto dove opportuno**
    - Aggiungi controlli di sicurezza specifici per il dominio
-   - Crea regole di validazione personalizzate per il tuo caso d'uso
+   - Crea regole personalizzate di validazione per il tuo caso d’uso
 
-3. **Educa gli utenti sull'uso responsabile dell'AI**
-   - Fornisci linee guida chiare sull'uso accettabile
-   - Spiega perché certi contenuti potrebbero essere bloccati
+3. **Educa gli utenti sull’uso responsabile dell’IA**
+   - Fornisci linee guida chiare sull’uso accettabile
+   - Spiega perché certi contenuti possono essere bloccati
 
-4. **Monitora e registra gli incidenti di sicurezza per miglioramenti**
-   - Tieni traccia dei modelli di contenuti bloccati
+4. **Monitora e registra gli incidenti di sicurezza per miglioramento**
+   - Tieni traccia dei modelli di contenuto bloccato
    - Migliora continuamente le tue misure di sicurezza
 
-5. **Rispetta le politiche sui contenuti della piattaforma**
+5. **Rispetta le politiche di contenuto della piattaforma**
    - Rimani aggiornato con le linee guida della piattaforma
-   - Segui i termini di servizio e le linee guida etiche
+   - Segui termini di servizio e linee guida etiche
 
 ## Nota Importante
 
-Questo esempio utilizza prompt intenzionalmente problematici solo a scopo educativo. L'obiettivo è dimostrare le misure di sicurezza, non aggirarle. Usa sempre gli strumenti AI in modo responsabile ed etico.
+Questo esempio usa prompt volutamente problematici solo a scopo educativo. L’obiettivo è dimostrare le misure di sicurezza, non aggirarle. Usa sempre gli strumenti di IA in modo responsabile ed etico.
 
 ## Riepilogo
 
 **Congratulazioni!** Hai completato con successo:
 
-- **L'implementazione di misure di sicurezza AI**, inclusi il filtraggio dei contenuti e la gestione delle risposte di sicurezza
-- **L'applicazione dei principi di AI responsabile** per costruire sistemi AI etici e affidabili
-- **Il test dei meccanismi di sicurezza** utilizzando le capacità di protezione integrate dei modelli di GitHub
-- **L'apprendimento delle migliori pratiche** per lo sviluppo e la distribuzione di AI responsabile
+- **Implementato misure di sicurezza per l’IA** inclusi filtri di contenuto e gestione delle risposte di sicurezza
+- **Applicato i principi di IA responsabile** per costruire sistemi di IA etici e affidabili
+- **Testato i meccanismi di sicurezza** usando le protezioni integrate di GitHub Models
+- **Imparato le migliori pratiche** per lo sviluppo e la distribuzione responsabile di IA
 
-**Risorse per AI Responsabile:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Scopri l'approccio di Microsoft alla sicurezza, privacy e conformità
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Esplora i principi e le pratiche di Microsoft per lo sviluppo di AI responsabile
+**Risorse per IA Responsabile:**
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Scopri l’approccio di Microsoft a sicurezza, privacy e conformità
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Esplora i principi e le pratiche di Microsoft per lo sviluppo di IA responsabile
 
 ## Completamento del Corso
 
 Congratulazioni per aver completato il corso Generative AI for Beginners!
 
-![Completamento del Corso](../../../translated_images/it/image.73c7e2ff4a652e77.webp)
+![Course Completion](../../../translated_images/it/image.73c7e2ff4a652e77.webp)
 
-**Cosa hai realizzato:**
+**Cosa hai raggiunto:**
 - Hai configurato il tuo ambiente di sviluppo
-- Hai appreso le tecniche fondamentali di AI generativa
-- Hai esplorato applicazioni pratiche di AI
-- Hai compreso i principi di AI responsabile
+- Hai imparato le tecniche base di intelligenza artificiale generativa
+- Hai esplorato applicazioni pratiche di IA
+- Hai compreso i principi di IA responsabile
 
 ## Prossimi Passi
 
-Continua il tuo percorso di apprendimento sull'AI con queste risorse aggiuntive:
+Continua il tuo percorso di apprendimento sull’IA con queste risorse aggiuntive:
 
 **Corsi di Apprendimento Aggiuntivi:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
@@ -184,5 +189,9 @@ Continua il tuo percorso di apprendimento sull'AI con queste risorse aggiuntive:
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto usando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per l’accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

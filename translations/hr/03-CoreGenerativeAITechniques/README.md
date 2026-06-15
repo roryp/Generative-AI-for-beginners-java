@@ -1,37 +1,42 @@
-# Vodič za osnovne tehnike generativne umjetne inteligencije
+# Osnovne tehnike generativne umjetne inteligencije – vodič
+
+[![Osnovne tehnike generativne umjetne inteligencije](https://img.youtube.com/vi/ZUgN6gTjlPE/0.jpg)](https://www.youtube.com/watch?v=ZUgN6gTjlPE "Osnovne tehnike generativne umjetne inteligencije")
+
+> **Pregled videa:** [Pogledajte "Osnovne tehnike generativne umjetne inteligencije" na YouTubeu](https://www.youtube.com/watch?v=ZUgN6gTjlPE) ili kliknite na sličicu iznad.
 
 ## Sadržaj
 
-- [Preduvjeti](../../../03-CoreGenerativeAITechniques)
-- [Početak](../../../03-CoreGenerativeAITechniques)
-  - [Korak 1: Postavite varijablu okruženja](../../../03-CoreGenerativeAITechniques)
-  - [Korak 2: Navigirajte do direktorija s primjerima](../../../03-CoreGenerativeAITechniques)
-- [Vodič za odabir modela](../../../03-CoreGenerativeAITechniques)
-- [Vodič 1: LLM dovršavanje i razgovor](../../../03-CoreGenerativeAITechniques)
-- [Vodič 2: Pozivanje funkcija](../../../03-CoreGenerativeAITechniques)
-- [Vodič 3: RAG (Generacija uz prošireno dohvaćanje)](../../../03-CoreGenerativeAITechniques)
-- [Vodič 4: Odgovorna umjetna inteligencija](../../../03-CoreGenerativeAITechniques)
-- [Uobičajeni obrasci u primjerima](../../../03-CoreGenerativeAITechniques)
-- [Sljedeći koraci](../../../03-CoreGenerativeAITechniques)
-- [Rješavanje problema](../../../03-CoreGenerativeAITechniques)
-  - [Uobičajeni problemi](../../../03-CoreGenerativeAITechniques)
+- [Preduvjeti](#preduvjeti)
+- [Početak rada](#početak-rada)
+  - [Korak 1: Postavite svoju varijablu okoline](#korak-1-postavite-svoju-varijablu-okoline)
+  - [Korak 2: Idite do direktorija s primjerima](#korak-2-idite-do-direktorija-s-primjerima)
+- [Vodič za odabir modela](#vodič-za-odabir-modela)
+- [Vodič 1: Dovršavanje i chat s velikim jezičnim modelima (LLM)](#vodič-1-dovršavanje-i-chat-s-velikim-jezičnim-modelima-llm)
+- [Vodič 2: Pozivanje funkcija](#vodič-2-pozivanje-funkcija)
+- [Vodič 3: RAG (generiranje uz poboljšanje pretraživanjem)](#vodič-3-rag-generiranje-uz-poboljšanje-pretraživanjem)
+- [Vodič 4: Odgovorna umjetna inteligencija](#vodič-4-odgovorna-umjetna-inteligencija)
+- [Uobičajeni obrasci kroz primjere](#uobičajeni-obrasci-kroz-primjere)
+- [Sljedeći koraci](#sljedeći-koraci)
+- [Rješavanje problema](#rješavanje-problema)
+  - [Uobičajeni problemi](#uobičajeni-problemi)
+
 
 ## Pregled
 
-Ovaj vodič pruža praktične primjere osnovnih tehnika generativne umjetne inteligencije koristeći Java i GitHub modele. Naučit ćete kako komunicirati s velikim jezičnim modelima (LLM), implementirati pozivanje funkcija, koristiti generaciju uz prošireno dohvaćanje (RAG) i primijeniti prakse odgovorne umjetne inteligencije.
+Ovaj vodič pruža praktične primjere osnovnih tehnika generativne umjetne inteligencije koristeći Javu i GitHub modele. Naučit ćete kako komunicirati s Velikim jezičnim modelima (LLM), implementirati pozivanje funkcija, koristiti generiranje uz poboljšanje pretraživanjem (RAG) i primijeniti prakse odgovorne umjetne inteligencije.
 
 ## Preduvjeti
 
 Prije početka, provjerite imate li:
-- Instaliranu Javu 21 ili noviju verziju
+- Instaliranu Javu 21 ili noviju
 - Maven za upravljanje ovisnostima
 - GitHub račun s osobnim pristupnim tokenom (PAT)
 
-## Početak
+## Početak rada
 
-### Korak 1: Postavite varijablu okruženja
+### Korak 1: Postavite svoju varijablu okoline
 
-Prvo, trebate postaviti svoj GitHub token kao varijablu okruženja. Ovaj token omogućuje pristup GitHub modelima besplatno.
+Prvo trebate postaviti svoj GitHub token kao varijablu okoline. Ovaj token vam omogućuje pristup GitHub modelima besplatno.
 
 **Windows (Command Prompt):**
 ```cmd
@@ -48,7 +53,7 @@ $env:GITHUB_TOKEN="your_github_token_here"
 export GITHUB_TOKEN=your_github_token_here
 ```
 
-### Korak 2: Navigirajte do direktorija s primjerima
+### Korak 2: Idite do direktorija s primjerima
 
 ```bash
 cd 03-CoreGenerativeAITechniques/examples/
@@ -56,88 +61,88 @@ cd 03-CoreGenerativeAITechniques/examples/
 
 ## Vodič za odabir modela
 
-Ovi primjeri koriste različite modele optimizirane za specifične slučajeve upotrebe:
+Ovi primjeri koriste različite modele optimizirane za specifične slučajeve uporabe:
 
 **GPT-4.1-nano** (primjer dovršavanja):
-- Izuzetno brz i jeftin
-- Idealan za osnovno tekstualno dovršavanje i razgovor
-- Savršen za učenje osnovnih obrazaca interakcije s LLM-ovima
+- Ultra-brz i ultra-jeftin
+- Savršen za osnovno dovršavanje teksta i chat
+- Idealno za učenje osnovnih obrazaca interakcije s LLM-om
 
-**GPT-4o-mini** (primjeri funkcija, RAG-a i odgovorne umjetne inteligencije):
-- Mali, ali svestrani model
+**GPT-4o-mini** (primjeri funkcija, RAG i odgovorne AI):
+- Mali, ali potpuno opremljen "svestrani radni konj" model
 - Pouzdano podržava napredne mogućnosti kod različitih pružatelja usluga:
   - Obrada vizualnih podataka
   - JSON/strukturirani izlazi  
   - Pozivanje alata/funkcija
 - Više mogućnosti od nano modela, osiguravajući dosljedan rad primjera
 
-> **Zašto je ovo važno**: Dok su "nano" modeli izvrsni za brzinu i troškove, "mini" modeli su sigurniji izbor kada trebate pouzdan pristup naprednim značajkama poput pozivanja funkcija, koje možda nisu u potpunosti dostupne kod svih pružatelja usluga za nano varijante.
+> **Zašto je ovo važno**: Dok su "nano" modeli izvrsni za brzinu i trošak, "mini" modeli su sigurniji izbor kada trebate pouzdan pristup naprednim značajkama poput pozivanja funkcija, koje možda nisu u potpunosti dostupne u nano varijantama na svim platformama za hostanje.
 
-## Vodič 1: LLM dovršavanje i razgovor
+## Vodič 1: Dovršavanje i chat s velikim jezičnim modelima (LLM)
 
 **Datoteka:** `src/main/java/com/example/genai/techniques/completions/LLMCompletionsApp.java`
 
-### Što ovaj primjer podučava
+### Što ovaj primjer uči
 
-Ovaj primjer demonstrira osnovne mehanike interakcije s velikim jezičnim modelima (LLM) putem OpenAI API-ja, uključujući inicijalizaciju klijenta s GitHub modelima, obrasce strukture poruka za sistemske i korisničke upite, upravljanje stanjem razgovora kroz akumulaciju povijesti poruka te podešavanje parametara za kontrolu duljine odgovora i razine kreativnosti.
+Ovaj primjer prikazuje osnovne mehanizme interakcije s Velikim jezičnim modelom (LLM) kroz OpenAI API, uključujući inicijalizaciju klijenta s GitHub modelima, obrasce strukturiranja poruka za sistemske i korisničke upite, upravljanje stanjem razgovora kroz akumulaciju povijesti poruka i podešavanje parametara za kontrolu duljine odgovora i razine kreativnosti.
 
 ### Ključni koncepti koda
 
 #### 1. Postavljanje klijenta
 ```java
-// Create the AI client
+// Kreirajte AI klijent
 OpenAIClient client = new OpenAIClientBuilder()
     .endpoint("https://models.inference.ai.azure.com")
     .credential(new StaticTokenCredential(pat))
     .buildClient();
 ```
 
-Ovo stvara vezu s GitHub modelima koristeći vaš token.
+Ovo stvara vezu s GitHub modelima pomoću vašeg tokena.
 
 #### 2. Jednostavno dovršavanje
 ```java
 List<ChatRequestMessage> messages = List.of(
-    // System message sets AI behavior
+    // Poruka sustava postavlja ponašanje AI
     new ChatRequestSystemMessage("You are a helpful Java expert."),
-    // User message contains the actual question
+    // Poruka korisnika sadrži stvarno pitanje
     new ChatRequestUserMessage("Explain Java streams briefly.")
 );
 
 ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
-    .setModel("gpt-4.1-nano")  // Fast, cost-effective model for basic completions
-    .setMaxTokens(200)         // Limit response length
-    .setTemperature(0.7);      // Control creativity (0.0-1.0)
+    .setModel("gpt-4.1-nano")  // Brzi i isplativi model za osnovna dovršavanja
+    .setMaxTokens(200)         // Ograniči duljinu odgovora
+    .setTemperature(0.7);      // Kontroliraj kreativnost (0.0-1.0)
 ```
 
 #### 3. Memorija razgovora
 ```java
-// Add AI's response to maintain conversation history
+// Dodajte odgovor AI-ja kako biste održali povijest razgovora
 messages.add(new ChatRequestAssistantMessage(aiResponse));
 messages.add(new ChatRequestUserMessage("Follow-up question"));
 ```
 
-AI pamti prethodne poruke samo ako ih uključite u sljedeće zahtjeve.
+AI pamti prethodne poruke samo ako ih uključite u naknadne zahtjeve.
 
-### Pokretanje primjera
+### Pokrenite primjer
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions.LLMCompletionsApp"
 ```
 
 ### Što se događa kada ga pokrenete
 
-1. **Jednostavno dovršavanje**: AI odgovara na pitanje o Javi uz smjernice sistemskog upita
-2. **Višekratni razgovor**: AI održava kontekst kroz više pitanja
-3. **Interaktivni razgovor**: Možete voditi stvarni razgovor s AI-jem
+1. **Jednostavno dovršavanje**: AI odgovara na Java pitanje uz smjernice sistemskog upita
+2. **Višekratan chat**: AI održava kontekst kroz više pitanja
+3. **Interaktivni chat**: Možete voditi pravi razgovor s AI-jem
 
 ## Vodič 2: Pozivanje funkcija
 
 **Datoteka:** `src/main/java/com/example/genai/techniques/functions/FunctionsApp.java`
 
-### Što ovaj primjer podučava
+### Što ovaj primjer uči
 
-Pozivanje funkcija omogućuje AI modelima da zatraže izvršavanje vanjskih alata i API-ja putem strukturiranog protokola gdje model analizira zahtjeve na prirodnom jeziku, određuje potrebne pozive funkcija s odgovarajućim parametrima koristeći JSON sheme i obrađuje vraćene rezultate kako bi generirao kontekstualne odgovore, dok stvarno izvršavanje funkcija ostaje pod kontrolom programera radi sigurnosti i pouzdanosti.
+Pozivanje funkcija omogućuje AI modelima da zahtijevaju izvršavanje vanjskih alata i API-ja putem strukturiranog protokola u kojem model analizira zahtjeve u prirodnom jeziku, određuje potrebne pozive funkcija s odgovarajućim parametrima koristeći definicije JSON Sheme i obrađuje vraćene rezultate za generiranje kontekstualnih odgovora, dok se stvarno izvršavanje funkcija nalazi pod kontrolom programera radi sigurnosti i pouzdanosti.
 
-> **Napomena**: Ovaj primjer koristi `gpt-4o-mini` jer pozivanje funkcija zahtijeva pouzdane mogućnosti pozivanja alata koje možda nisu u potpunosti dostupne kod nano modela na svim platformama.
+> **Napomena**: Ovaj primjer koristi `gpt-4o-mini` jer pozivanje funkcija zahtijeva pouzdane mogućnosti pozivanja alata koje možda nisu potpuno dostupne u nano modelima na svim platformama za hostanje.
 
 ### Ključni koncepti koda
 
@@ -147,7 +152,7 @@ ChatCompletionsFunctionToolDefinitionFunction weatherFunction =
     new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
 weatherFunction.setDescription("Get current weather information for a city");
 
-// Define parameters using JSON Schema
+// Definirajte parametre koristeći JSON Shemu
 weatherFunction.setParameters(BinaryData.fromString("""
     {
         "type": "object",
@@ -164,19 +169,19 @@ weatherFunction.setParameters(BinaryData.fromString("""
 
 Ovo govori AI-ju koje su funkcije dostupne i kako ih koristiti.
 
-#### 2. Tok izvršavanja funkcije
+#### 2. Tijek izvršenja funkcije
 ```java
-// 1. AI requests a function call
+// 1. AI zahtijeva poziv funkcije
 if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
     ChatCompletionsFunctionToolCall functionCall = ...;
     
-    // 2. You execute the function
+    // 2. Izvršavate funkciju
     String result = simulateWeatherFunction(functionCall.getFunction().getArguments());
     
-    // 3. You give the result back to AI
+    // 3. Vraćate rezultat natrag AI-u
     messages.add(new ChatRequestToolMessage(result, toolCall.getId()));
     
-    // 4. AI provides final response with function result
+    // 4. AI pruža konačni odgovor s rezultatom funkcije
     ChatCompletions finalResponse = client.getChatCompletions(MODEL, options);
 }
 ```
@@ -184,8 +189,8 @@ if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
 #### 3. Implementacija funkcije
 ```java
 private static String simulateWeatherFunction(String arguments) {
-    // Parse arguments and call real weather API
-    // For demo, we return mock data
+    // Analizirajte argumente i pozovite stvarni vremenski API
+    // Za demonstraciju vraćamo lažne podatke
     return """
         {
             "city": "Seattle",
@@ -196,31 +201,31 @@ private static String simulateWeatherFunction(String arguments) {
 }
 ```
 
-### Pokretanje primjera
+### Pokrenite primjer
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.FunctionsApp"
 ```
 
 ### Što se događa kada ga pokrenete
 
-1. **Funkcija za vremensku prognozu**: AI traži podatke o vremenu za Seattle, vi ih pružate, AI formatira odgovor
-2. **Funkcija kalkulatora**: AI traži izračun (15% od 240), vi ga izračunate, AI objašnjava rezultat
+1. **Funkcija vremenske prognoze**: AI traži podatke o vremenu za Seattle, vi ih pružate, AI oblikuje odgovor
+2. **Funkcija kalkulatora**: AI traži izračun (15% od 240), vi izračunate, AI objasni rezultat
 
-## Vodič 3: RAG (Generacija uz prošireno dohvaćanje)
+## Vodič 3: RAG (generiranje uz poboljšanje pretraživanjem)
 
 **Datoteka:** `src/main/java/com/example/genai/techniques/rag/SimpleReaderDemo.java`
 
-### Što ovaj primjer podučava
+### Što ovaj primjer uči
 
-Generacija uz prošireno dohvaćanje (RAG) kombinira dohvaćanje informacija s generacijom jezika tako što ubacuje kontekst vanjskih dokumenata u AI upite, omogućujući modelima da pruže točne odgovore na temelju specifičnih izvora znanja umjesto potencijalno zastarjelih ili netočnih podataka iz obuke, dok jasno razdvajaju korisničke upite i autoritativne izvore informacija kroz strateško oblikovanje upita.
+Retrieval-Augmented Generation (RAG) kombinira dohvat informacija s generiranjem jezika tako da ubacuje vanjski dokumentarni kontekst u upite AI-ju, omogućujući modelima da daju točne odgovore temeljem specifičnih izvora znanja umjesto na potencijalno zastarjele ili netočne podatke treniranja, pritom održavajući jasne granice između korisničkih upita i autoritativnih izvora informacija kroz strateški dizajn upita.
 
-> **Napomena**: Ovaj primjer koristi `gpt-4o-mini` kako bi osigurao pouzdanu obradu strukturiranih upita i dosljedno rukovanje kontekstom dokumenata, što je ključno za učinkovite implementacije RAG-a.
+> **Napomena**: Ovaj primjer koristi `gpt-4o-mini` kako bi se osigurala pouzdana obrada strukturiranih upita i dosljedno upravljanje kontekstom dokumenata, što je ključno za učinkovite RAG implementacije.
 
 ### Ključni koncepti koda
 
-#### 1. Učitavanje dokumenata
+#### 1. Učitavanje dokumenta
 ```java
-// Load your knowledge source
+// Učitaj svoj izvor znanja
 String doc = Files.readString(Paths.get("document.txt"));
 ```
 
@@ -236,9 +241,9 @@ List<ChatRequestMessage> messages = List.of(
 );
 ```
 
-Trokostruki navodnici pomažu AI-ju razlikovati kontekst od pitanja.
+Trojni navodnici pomažu AI-ju da razlikuje kontekst od pitanja.
 
-#### 3. Sigurno rukovanje odgovorima
+#### 3. Sigurno upravljanje odgovorom
 ```java
 if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
     String answer = response.getChoices().get(0).getMessage().getContent();
@@ -248,9 +253,9 @@ if (response != null && response.getChoices() != null && !response.getChoices().
 }
 ```
 
-Uvijek provjerite odgovore API-ja kako biste spriječili padove.
+Uvijek validirajte odgovore API-ja kako biste spriječili pad aplikacije.
 
-### Pokretanje primjera
+### Pokrenite primjer
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleReaderDemo"
 ```
@@ -258,20 +263,20 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleR
 ### Što se događa kada ga pokrenete
 
 1. Program učitava `document.txt` (sadrži informacije o GitHub modelima)
-2. Postavljate pitanje o dokumentu
+2. Postavite pitanje o dokumentu
 3. AI odgovara isključivo na temelju sadržaja dokumenta, a ne svog općeg znanja
 
-Pokušajte pitati: "Što su GitHub modeli?" naspram "Kakvo je vrijeme?"
+Probajte pitati: "Što su GitHub modeli?" nasuprot "Kako je vrijeme?"
 
 ## Vodič 4: Odgovorna umjetna inteligencija
 
 **Datoteka:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
 
-### Što ovaj primjer podučava
+### Što ovaj primjer uči
 
-Primjer odgovorne umjetne inteligencije naglašava važnost implementacije sigurnosnih mjera u AI aplikacijama. Pokazuje kako moderni AI sigurnosni sustavi funkcioniraju kroz dva glavna mehanizma: tvrde blokade (HTTP 400 greške od sigurnosnih filtera) i mekana odbijanja (pristojni odgovori poput "Ne mogu pomoći s tim" od samog modela). Ovaj primjer prikazuje kako AI aplikacije u produkciji trebaju graciozno rukovati kršenjima pravila sadržaja kroz pravilno rukovanje iznimkama, detekciju odbijanja, mehanizme povratnih informacija korisnika i strategije rezervnih odgovora.
+Primjer odgovorne umjetne inteligencije pokazuje važnost implementacije sigurnosnih mjera u AI aplikacijama. Demonstrira kako suvremeni sigurnosni sustavi umjetne inteligencije djeluju kroz dva primarna mehanizma: tvrde blokade (HTTP 400 greške iz sigurnosnih filtara) i nježna odbijanja (uljudni odgovori modela poput "Ne mogu vam pomoći s tim"). Ovaj primjer pokazuje kako AI aplikacije u produkciji trebaju elegantno upravljati kršenjima pravila sadržaja kroz pravilno rukovanje iznimkama, detekciju odbijanja, mehanizme povratnih informacija korisnika i strategije rezervnih odgovora.
 
-> **Napomena**: Ovaj primjer koristi `gpt-4o-mini` jer pruža dosljednije i pouzdanije sigurnosne odgovore na različite vrste potencijalno štetnog sadržaja, osiguravajući pravilnu demonstraciju sigurnosnih mehanizama.
+> **Napomena**: Ovaj primjer koristi `gpt-4o-mini` jer pruža dosljednije i pouzdanije sigurnosne odgovore za različite vrste potencijalno štetnog sadržaja, osiguravajući pravilnu demonstraciju sigurnosnih mehanizama.
 
 ### Ključni koncepti koda
 
@@ -279,11 +284,11 @@ Primjer odgovorne umjetne inteligencije naglašava važnost implementacije sigur
 ```java
 private void testPromptSafety(String prompt, String category) {
     try {
-        // Attempt to get AI response
+        // Pokušaj dobivanja AI odgovora
         ChatCompletions response = client.getChatCompletions(modelId, options);
         String content = response.getChoices().get(0).getMessage().getContent();
         
-        // Check if the model refused the request (soft refusal)
+        // Provjeri je li model odbio zahtjev (blago odbijanje)
         if (isRefusalResponse(content)) {
             System.out.println("[REFUSED BY MODEL]");
             System.out.println("✓ This is GOOD - the AI refused to generate harmful content!");
@@ -320,24 +325,24 @@ private boolean isRefusalResponse(String response) {
 ```
 
 #### 2. Testirane kategorije sigurnosti
-- Nasilje/Štetne upute
+- Upute za nasilje/štetu
 - Govor mržnje
-- Kršenje privatnosti
+- Povredjivanje privatnosti
 - Medicinske dezinformacije
-- Nezakonite aktivnosti
+- Protuzakonite aktivnosti
 
-### Pokretanje primjera
+### Pokrenite primjer
 ```bash
 mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
 ```
 
 ### Što se događa kada ga pokrenete
 
-Program testira razne štetne upite i pokazuje kako AI sigurnosni sustav funkcionira kroz dva mehanizma:
+Program testira različite štetne upite i pokazuje kako sigurnosni sustav AI djeluje kroz dva mehanizma:
 
-1. **Tvrde blokade**: HTTP 400 greške kada sadržaj blokiraju sigurnosni filteri prije nego što dođe do modela
-2. **Mekana odbijanja**: Model odgovara pristojnim odbijanjem poput "Ne mogu pomoći s tim" (najčešće kod modernih modela)
-3. **Siguran sadržaj**: Omogućuje generiranje legitimnih zahtjeva normalno
+1. **Tvrde blokade**: HTTP 400 greške kada sadržaj blokiraju sigurnosni filtri prije nego dođe do modela
+2. **Nježna odbijanja**: model odgovara uljudnim odbijanjem poput "Ne mogu vam pomoći s tim" (najčešće kod modernih modela)
+3. **Siguran sadržaj**: dopušta generiranje legitimnih zahtjeva kao i obično
 
 Očekivani izlaz za štetne upite:
 ```
@@ -348,9 +353,9 @@ Status: [REFUSED BY MODEL]
 ✓ This is GOOD - the AI refused to generate harmful content!
 ```
 
-Ovo pokazuje da **i tvrde blokade i mekana odbijanja ukazuju na ispravan rad sigurnosnog sustava**.
+Ovo pokazuje da **i tvrde blokade i nježna odbijanja ukazuju na ispravno funkcioniranje sigurnosnog sustava**.
 
-## Uobičajeni obrasci u primjerima
+## Uobičajeni obrasci kroz primjere
 
 ### Obrazac autentifikacije
 Svi primjeri koriste ovaj obrazac za autentifikaciju s GitHub modelima:
@@ -367,11 +372,11 @@ OpenAIClient client = new OpenAIClientBuilder()
 ### Obrazac za rukovanje greškama
 ```java
 try {
-    // AI operation
+    // Operacija umjetne inteligencije
 } catch (HttpResponseException e) {
-    // Handle API errors (rate limits, safety filters)
+    // Rukovanje API pogreškama (ograničenja brzine, sigurnosni filteri)
 } catch (Exception e) {
-    // Handle general errors (network, parsing)
+    // Rukovanje općim pogreškama (mreža, parsiranje)
 }
 ```
 
@@ -385,28 +390,30 @@ List<ChatRequestMessage> messages = List.of(
 
 ## Sljedeći koraci
 
-Spremni za primjenu ovih tehnika? Izgradimo prave aplikacije!
+Spremni ste za primjenu ovih tehnika? Krenimo u izradu pravih aplikacija!
 
-[Četvrto poglavlje: Praktični primjeri](../04-PracticalSamples/README.md)
+[Članak 04: Praktični primjeri](../04-PracticalSamples/README.md)
 
 ## Rješavanje problema
 
 ### Uobičajeni problemi
 
 **"GITHUB_TOKEN nije postavljen"**
-- Provjerite jeste li postavili varijablu okruženja
-- Provjerite ima li vaš token `models:read` dozvolu
+- Provjerite jeste li postavili varijablu okoline
+- Provjerite ima li vaš token `models:read` ovlasti
 
 **"Nema odgovora od API-ja"**
 - Provjerite internetsku vezu
 - Provjerite je li vaš token valjan
-- Provjerite jeste li premašili ograničenja zahtjeva
+- Provjerite jeste li prekoračili ograničenja brzine
 
-**Greške pri kompilaciji Mavena**
-- Provjerite imate li Javu 21 ili noviju verziju
+**Maven greške pri kompajliranju**
+- Provjerite imate li Javu 21 ili noviju
 - Pokrenite `mvn clean compile` za osvježavanje ovisnosti
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden koristeći AI uslugu prevođenja [Co-op Translator](https://github.com/Azure/co-op-translator). Iako težimo točnosti, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Originalni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

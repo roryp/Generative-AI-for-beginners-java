@@ -1,58 +1,64 @@
-# Praktilised Rakendused ja Projektid
+# Praktilised rakendused ja projektid
 
-## Mida Sa Õpid
-Selles osas tutvustame kolme praktilist rakendust, mis näitavad generatiivse tehisintellekti arendamise mustreid Java abil:
-- Loo mitmeliigiline Lemmikloolugude Generaator, mis ühendab kliendipoolse ja serveripoolse tehisintellekti
-- Rakenda kohalikku tehisintellekti mudeli integreerimist Foundry Local Spring Boot demo abil
-- Arenda Model Context Protocol (MCP) teenust Kalkulaatori näite põhjal
+[![Praktilised rakendused ja projektid](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Praktilised rakendused ja projektid")
+
+> **Video ülevaade:** [Vaata "Praktilised rakendused ja projektid" YouTube'is](https://www.youtube.com/watch?v=01vJsYei3H0).
+
+## Mida õpid
+Selles jaotises demonstreerime kolme praktilist rakendust, mis tutvustavad generatiivse AI arenduse mustreid Javas:
+- Loo mitme modaaliga lemmikloomalugu generaator, ühendades kliendi- ja serveripoolset AI-d
+- Rakenda kohalik AI mudelite integratsioon Foundry Local Spring Boot demo abil
+- Arenda mudelikonteksti protokolli (MCP) teenus Calculator näitega
 
 ## Sisukord
 
-- [Sissejuhatus](../../../04-PracticalSamples)
-  - [Foundry Local Spring Boot Demo](../../../04-PracticalSamples)
-  - [Lemmikloolugude Generaator](../../../04-PracticalSamples)
-  - [MCP Kalkulaatori Teenus (Algajasõbralik MCP Demo)](../../../04-PracticalSamples)
-- [Õppimise Progressioon](../../../04-PracticalSamples)
-- [Kokkuvõte](../../../04-PracticalSamples)
-- [Järgmised Sammud](../../../04-PracticalSamples)
+- [Sissejuhatus](#sissejuhatus)
+  - [Foundry Local Spring Boot demo](#foundry-local-spring-boot-demo)
+  - [Lemmiklooma loo generaator](#lemmiklooma-loo-generaator)
+  - [MCP kalkulaatori teenus (algajasõbralik MCP demo)](#mcp-kalkulaatori-teenus-algajasõbralik-mcp-demo)
+- [Õppimise progressioon](#õppimise-progressioon)
+- [Kokkuvõte](#kokkuvõte)
+- [Järgmised sammud](#järgmised-sammud)
 
 ## Sissejuhatus
 
-See peatükk tutvustab **näidisprojekte**, mis demonstreerivad generatiivse tehisintellekti arendamise mustreid Java abil. Iga projekt on täielikult funktsionaalne ja näitab konkreetseid tehisintellekti tehnoloogiaid, arhitektuurilisi mustreid ja parimaid tavasid, mida saad oma rakendustes kohandada.
+See peatükk tutvustab **näidisprojekte**, mis demonstreerivad generatiivse AI arendusmustreid Javas. Iga projekt on täielikult funktsionaalne ja näitab konkreetseid AI tehnoloogiaid, arhitektuurimustreid ning parimaid praktikaid, mida saad kohandada omaenda rakenduste jaoks.
 
-### Foundry Local Spring Boot Demo
+### Foundry Local Spring Boot demo
 
-**[Foundry Local Spring Boot Demo](foundrylocal/README.md)** näitab, kuidas integreerida kohalikke tehisintellekti mudeleid, kasutades **OpenAI Java SDK-d**. See demonstreerib ühendust **Phi-3.5-mini** mudeliga, mis töötab Foundry Localis, võimaldades sul käivitada tehisintellekti rakendusi ilma pilveteenusteta.
+**[Foundry Local Spring Boot demo](foundrylocal/README.md)** demonstreerib, kuidas integreerida kohalikke AI mudeleid kasutades **OpenAI Java SDK-d**. See näitab ühendust Foundry Localil töötavate mudelitega (nt **Phi-4-mini**), automaatse mudelituvastusega, võimaldades sul käivitada AI rakendusi ilma pilveteenustest sõltumata.
 
-### Lemmikloolugude Generaator
+### Lemmiklooma loo generaator
 
-**[Lemmikloolugude Generaator](petstory/README.md)** on kaasahaarav Spring Boot veebirakendus, mis demonstreerib **mitmeliigilist tehisintellekti töötlemist**, et luua loomingulisi lemmikloolugusid. See ühendab kliendipoolse ja serveripoolse tehisintellekti võimekuse, kasutades transformer.js-i brauseripõhisteks tehisintellekti interaktsioonideks ja OpenAI SDK-d serveripoolseks töötlemiseks.
+**[Lemmiklooma loo generaator](petstory/README.md)** on kaasahaarav Spring Boot veebirakendus, mis demonstreerib **mitme modaaliga AI töötlemist**, et genereerida loomingulisi lemmikloomalugusid. See ühendab kliendi- ja serveripoolseid AI võimeid, kasutades brauseripõhisteks AI interaktsioonideks transformer.js-i ja serveripoolsesse töötlemisse OpenAI SDK-d.
 
-### MCP Kalkulaatori Teenus (Algajasõbralik MCP Demo)
+### MCP kalkulaatori teenus (algajasõbralik MCP demo)
 
-**[MCP Kalkulaatori Teenus](calculator/README.md)** on lihtne Model Context Protocol (MCP) demonstratsioon, mis kasutab Spring AI-d. See pakub algajasõbralikku sissejuhatust MCP kontseptsioonidesse, näidates, kuidas luua põhiline MCP Server, mis suhtleb MCP klientidega.
+**[MCP kalkulaatori teenus](calculator/README.md)** on lihtne demonstratsioon **mudelikonteksti protokollist (MCP)**, kasutades Spring AI-d. See pakub algajasõbralikku sissejuhatust MCP kontseptsioonidesse, näidates, kuidas luua põhiline MCP server, mis suhtleb MCP klientidega.
 
-## Õppimise Progressioon
+## Õppimise progressioon
 
-Need projektid on loodud tuginedes eelnevate peatükkide kontseptsioonidele:
+Need projektid on loodud eelnevate peatükkide kontseptsioonidele tuginedes:
 
-1. **Alusta Lihtsast**: Alusta Foundry Local Spring Boot Demoga, et mõista kohalike mudelite põhilist tehisintellekti integreerimist
-2. **Lisa Interaktiivsus**: Liigu edasi Lemmikloolugude Generaatorini, et kogeda mitmeliigilist tehisintellekti ja veebipõhiseid interaktsioone
-3. **Õpi MCP Põhitõdesid**: Proovi MCP Kalkulaatori Teenust, et mõista Model Context Protocoli aluseid
+1. **Alusta lihtsast**: alusta Foundry Local Spring Boot demost, et mõista kohalike mudelite AI põhitõdesid
+2. **Lisa interaktiivsus**: liigu edasi Lemmiklooma loo generaatorile mitme modaaliga AI ja veebipõhiste interaktsioonidega
+3. **Õpi MCP põhialuseid**: proovi MCP kalkulaatori teenust, et mõista mudelikonteksti protokolli aluseid
 
 ## Kokkuvõte
 
-Tubli töö! Oled nüüd tutvunud mõne reaalse rakendusega:
+Tubli töö! Nüüd oled uurinud mõningaid reaalseid rakendusi:
 
-- Mitmeliigilised tehisintellekti kogemused, mis töötavad nii brauseris kui ka serveris
-- Kohaliku tehisintellekti mudeli integreerimine kaasaegsete Java raamistikute ja SDK-de abil
-- Sinu esimene Model Context Protocol teenus, et näha, kuidas tööriistad tehisintellektiga integreeruvad
+- Mitme modaaliga AI kogemused, mis töötavad nii brauseris kui ka serveris
+- Kohalike AI mudelite integratsioon kaasaegsete Java raamistikute ja SDK-dega
+- Sinu esimene mudelikonteksti protokolli teenus, et näha, kuidas tööriistad AI-ga ühildavad
 
-## Järgmised Sammud
+## Järgmised sammud
 
-[5. peatükk: Vastutustundlik Generatiivne Tehisintellekt](../05-ResponsibleGenAI/README.md)
+[5. peatükk: Vastutustundlik generatiivne AI](../05-ResponsibleGenAI/README.md)
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuutusest loobumine**:  
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame täpsust, palun pange tähele, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta ühegi arusaamatuse või valesti mõistmise eest, mis tuleneb selle tõlke kasutamisest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

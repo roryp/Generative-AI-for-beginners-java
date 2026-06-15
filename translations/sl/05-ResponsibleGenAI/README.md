@@ -1,96 +1,103 @@
 # Odgovorna generativna umetna inteligenca
 
+[![Odgovorna generativna umetna inteligenca](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Odgovorna generativna umetna inteligenca")
+
+> **Video**: [Oglejte si video povzetek za to lekcijo](https://www.youtube.com/watch?v=rF-b2BTSMQ4).  
+> Prav tako lahko kliknete na sliko sličice zgoraj, da odprete isti video.
+
 ## Kaj se boste naučili
 
-- Spoznajte etične vidike in najboljše prakse, ki so pomembne za razvoj umetne inteligence
-- V svoje aplikacije vključite filtriranje vsebine in varnostne ukrepe
-- Preizkusite in obravnavajte varnostne odzive umetne inteligence z vgrajenimi zaščitami GitHub Models
-- Uporabite načela odgovorne umetne inteligence za ustvarjanje varnih in etičnih sistemov umetne inteligence
+- Spoznali boste etične premisleke in najboljše prakse, pomembne za razvoj umetne inteligence  
+- V svoje aplikacije boste vključili filtriranje vsebin in varnostne ukrepe  
+- Preizkusili in obvladovali varnostne odzive umetne inteligence z vgrajenimi zaščitami GitHub modelov  
+- Uporabili boste načela odgovorne umetne inteligence za ustvarjanje varnih in etičnih AI sistemov  
 
 ## Kazalo
 
-- [Uvod](../../../05-ResponsibleGenAI)
-- [Vgrajena varnost GitHub Models](../../../05-ResponsibleGenAI)
-- [Praktični primer: Demonstracija varnosti odgovorne umetne inteligence](../../../05-ResponsibleGenAI)
-  - [Kaj prikazuje demonstracija](../../../05-ResponsibleGenAI)
-  - [Navodila za nastavitev](../../../05-ResponsibleGenAI)
-  - [Zagon demonstracije](../../../05-ResponsibleGenAI)
-  - [Pričakovani rezultati](../../../05-ResponsibleGenAI)
-- [Najboljše prakse za razvoj odgovorne umetne inteligence](../../../05-ResponsibleGenAI)
-- [Pomembna opomba](../../../05-ResponsibleGenAI)
-- [Povzetek](../../../05-ResponsibleGenAI)
-- [Zaključek tečaja](../../../05-ResponsibleGenAI)
-- [Naslednji koraki](../../../05-ResponsibleGenAI)
+- [Uvod](#uvod)  
+- [Vgrajena varnost GitHub modelov](#vgrajena-varnost-github-modelov)  
+- [Praktični primer: prikaz odgovorne varnosti AI](#praktični-primer-prikaz-odgovorne-varnosti-ai)  
+  - [Kaj prikazuje prikaz](#kaj-prikazuje-prikaz)  
+  - [Navodila za namestitev](#navodila-za-namestitev)  
+  - [Zagon prikaza](#zagon-prikaza)  
+  - [Pričakovani izpis](#pričakovani-izpis)  
+- [Najboljše prakse za odgovoren razvoj AI](#najboljše-prakse-za-odgovoren-razvoj-ai)  
+- [Pomembna opomba](#pomembna-opomba)  
+- [Povzetek](#povzetek)  
+- [Zaključek tečaja](#zaključek-tečaja)  
+- [Naslednji koraki](#naslednji-koraki)  
 
 ## Uvod
 
-To zadnje poglavje se osredotoča na ključne vidike gradnje odgovornih in etičnih aplikacij generativne umetne inteligence. Naučili se boste, kako uvesti varnostne ukrepe, obravnavati filtriranje vsebine in uporabiti najboljše prakse za razvoj odgovorne umetne inteligence z orodji in okviri, ki so bili obravnavani v prejšnjih poglavjih. Razumevanje teh načel je bistveno za gradnjo sistemov umetne inteligence, ki niso le tehnično impresivni, temveč tudi varni, etični in zaupanja vredni.
+To zadnje poglavje se osredotoča na ključne vidike gradnje odgovornih in etičnih aplikacij generativne umetne inteligence. Naučili se boste, kako uvesti varnostne ukrepe, upravljati filtriranje vsebine in uporabljati najboljše prakse za odgovoren razvoj AI z orodji in okviri, predstavljenimi v prejšnjih poglavjih. Razumevanje teh načel je bistveno za gradnjo AI sistemov, ki niso le tehnično impresivni, ampak tudi varni, etični in zanesljivi.
 
-## Vgrajena varnost GitHub Models
+## Vgrajena varnost GitHub modelov
 
-GitHub Models ima osnovno filtriranje vsebine že vgrajeno. To je kot prijazen vratar v vašem klubu umetne inteligence – ni najbolj sofisticiran, a opravi delo v osnovnih scenarijih.
+GitHub modeli imajo osnovno filtriranje vsebin že vgrajeno. To je kot prijazni varnostnik v vašem AI klubu - morda ni najbolj sofisticiran, a opravi delo v osnovnih primerih.
 
-**Kaj GitHub Models ščiti:**
-- **Škodljiva vsebina**: Blokira očitno nasilno, seksualno ali nevarno vsebino
-- **Osnovni sovražni govor**: Filtrira jasno diskriminatorni jezik
-- **Preprosti poskusi izogibanja zaščiti**: Ustavi osnovne poskuse zaobiti varnostne ukrepe
+**Kaj GitHub modeli varujejo pred:**
+- **Škodljive vsebine**: Blokira očitno nasilno, spolno ali nevarno vsebino  
+- **Osnovni govor sovraštva**: Filtrira jasno diskriminatorni jezik  
+- **Preproste zlorabe (jailbreaks)**: Odpira osnovne poskuse zaobidenja varnostnih omejitev  
 
-## Praktični primer: Demonstracija varnosti odgovorne umetne inteligence
+## Praktični primer: prikaz odgovorne varnosti AI
 
-To poglavje vključuje praktično demonstracijo, kako GitHub Models izvaja varnostne ukrepe odgovorne umetne inteligence z testiranjem pozivov, ki bi lahko kršili varnostne smernice.
+To poglavje vključuje praktično demonstracijo, kako GitHub modeli izvajajo varnostne ukrepe odgovorne umetne inteligence z testiranjem pozivov, ki bi lahko potencialno kršili varnostne smernice.
 
-### Kaj prikazuje demonstracija
+### Kaj prikazuje prikaz
 
 Razred `ResponsibleGithubModels` sledi temu poteku:
-1. Inicializacija odjemalca GitHub Models z avtentikacijo
-2. Testiranje škodljivih pozivov (nasilje, sovražni govor, dezinformacije, nezakonita vsebina)
-3. Pošiljanje vsakega poziva API-ju GitHub Models
-4. Obravnava odzivov: stroge blokade (napake HTTP), mehke zavrnitve (vljudni odgovori, kot je "S tem vam ne morem pomagati") ali običajno generiranje vsebine
-5. Prikaz rezultatov, ki kažejo, katera vsebina je bila blokirana, zavrnjena ali dovoljena
-6. Testiranje varne vsebine za primerjavo
+1. Inicializira odjemalca GitHub modelov z avtentikacijo  
+2. Testira škodljive pozive (nasilje, govor sovraštva, zavajanje, nezakonite vsebine)  
+3. Pošlje vsak poziv prek GitHub Models API  
+4. Obvladuje odzive: trde blokade (HTTP napake), mehke zavrnitve (vljudni odgovori "Ne morem pomagati"), ali običajno generiranje vsebine  
+5. Prikaže rezultate, ki kažejo, katera vsebina je bila blokirana, zavrnjena ali dovoljena  
+6. Testira varno vsebino za primerjavo  
 
-![Demonstracija varnosti odgovorne umetne inteligence](../../../translated_images/sl/responsible.e4f51a917bafa4bf.webp)
+![Prikaz odgovorne varnosti AI](../../../translated_images/sl/responsible.e4f51a917bafa4bf.webp)
 
-### Navodila za nastavitev
+### Navodila za namestitev
 
-1. **Nastavite svoj osebni dostopni žeton GitHub:**
+1. **Nastavite svoj osebni dostopni žeton GitHub:**  
    
-   Na Windows (Command Prompt):
+   Na Windows (Command Prompt):  
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
    
-   Na Windows (PowerShell):
+   Na Windows (PowerShell):  
    ```powershell
    $env:GITHUB_TOKEN="your_github_token_here"
    ```
    
-   Na Linux/macOS:
+   Na Linux/macOS:  
    ```bash
    export GITHUB_TOKEN=your_github_token_here
    ```   
 
-### Zagon demonstracije
 
-1. **Pomaknite se v imenik primerov:**
+### Zagon prikaza
+
+1. **Pojdite v imenik examples:**  
    ```bash
    cd 03-CoreGenerativeAITechniques/examples
    ```
-
-2. **Prevedite in zaženite demonstracijo:**
+  
+2. **Prevedite in zaženite prikaz:**  
    ```bash
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
-### Pričakovani rezultati
 
-Demonstracija bo testirala različne vrste potencialno škodljivih pozivov in pokazala, kako sodobna varnost umetne inteligence deluje prek dveh mehanizmov:
+### Pričakovani izpis
 
-- **Stroge blokade**: Napake HTTP 400, ko je vsebina blokirana s filtri varnosti, preden doseže model
-- **Mehke zavrnitve**: Model odgovori z vljudnimi zavrnitvami, kot je "S tem vam ne morem pomagati" (najpogostejše pri sodobnih modelih)
-- **Varna vsebina**, ki prejme običajen odziv
+Prikaz bo testiral različne vrste morebitno škodljivih pozivov in pokazal, kako deluje moderna varnost AI s pomočjo dveh mehanizmov:
 
-Vzorec izhodnega formata:
+- **Trde blokade**: HTTP 400 napake, ko varnostni filtri blokirajo vsebino še preden doseže model  
+- **Mehke zavrnitve**: model odgovori z vljudnimi zavrnitvami, kot je "Ne morem pomagati s tem" (najpogostejše pri sodobnih modelih)  
+- **Varna vsebina**, ki dobi običajen odziv  
+
+Primer izpisa:  
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -107,82 +114,86 @@ Response: Responsible AI development is crucial for ensuring...
 Status: Response generated successfully
 ────────────────────────────────────────────────────────────
 ```
+  
+**Opomba**: Tako trde blokade kot mehke zavrnitve pomenijo, da varnostni sistem deluje pravilno.
 
-**Opomba**: Tako stroge blokade kot mehke zavrnitve kažejo, da varnostni sistem deluje pravilno.
+## Najboljše prakse za odgovoren razvoj AI
 
-## Najboljše prakse za razvoj odgovorne umetne inteligence
+Pri gradnji AI aplikacij upoštevajte te ključne prakse:
 
-Pri gradnji aplikacij umetne inteligence upoštevajte te ključne prakse:
+1. **Vedno primerno obvladujte morebitne odzive varnostnih filtrov**  
+   - Uvedite pravilno obdelavo napak za blokirano vsebino  
+   - Uporabnikom zagotavljajte smiselne povratne informacije, ko je vsebina filtrirana  
 
-1. **Vedno ustrezno obravnavajte odzive varnostnih filtrov**
-   - Implementirajte pravilno obravnavo napak za blokirano vsebino
-   - Uporabnikom zagotovite smiselne povratne informacije, ko je vsebina filtrirana
+2. **Implementirajte dodatne lastne preveritve vsebine, kjer je to primerno**  
+   - Dodajte varnostne preglede, specifične za domeno  
+   - Ustvarite pravila za preverjanje glede na vaš primer uporabe  
 
-2. **Uvedite dodatno preverjanje vsebine, kjer je to primerno**
-   - Dodajte varnostne preglede, specifične za vašo domeno
-   - Ustvarite prilagojena pravila za preverjanje glede na vaš primer uporabe
+3. **Izobražujte uporabnike o odgovorni uporabi umetne inteligence**  
+   - Zagotovite jasna navodila o sprejemljivi uporabi  
+   - Pojasnite, zakaj je določena vsebina lahko blokirana  
 
-3. **Izobražujte uporabnike o odgovorni uporabi umetne inteligence**
-   - Zagotovite jasne smernice o sprejemljivi uporabi
-   - Pojasnite, zakaj je določena vsebina morda blokirana
+4. **Spremljajte in beležite varnostne incidente za izboljšave**  
+   - Spremljajte vzorce blokirane vsebine  
+   - Nenehno izboljšujte svoje varnostne ukrepe  
 
-4. **Spremljajte in beležite varnostne incidente za izboljšave**
-   - Spremljajte vzorce blokirane vsebine
-   - Nenehno izboljšujte svoje varnostne ukrepe
-
-5. **Spoštujte vsebinske politike platforme**
-   - Bodite na tekočem z smernicami platforme
-   - Upoštevajte pogoje uporabe in etične smernice
+5. **Spoštujte politike vsebin platforme**  
+   - Bodite na tekočem s smernicami platforme  
+   - Upoštevajte pogoje storitve in etične smernice  
 
 ## Pomembna opomba
 
-Ta primer uporablja namerno problematične pozive zgolj v izobraževalne namene. Cilj je prikazati varnostne ukrepe, ne pa jih zaobiti. Umetno inteligenco vedno uporabljajte odgovorno in etično.
+Ta primer uporablja namerno problematične pozive le za izobraževalne namene. Cilj je prikazati varnostne ukrepe, ne pa jih zaobiti. Vedno uporabljajte AI orodja odgovorno in etično.
 
 ## Povzetek
 
-**Čestitamo!** Uspešno ste:
+**Čestitamo!** Uspešno ste:  
 
-- **Uvedli varnostne ukrepe umetne inteligence**, vključno s filtriranjem vsebine in obravnavo varnostnih odzivov
-- **Uporabili načela odgovorne umetne inteligence** za gradnjo etičnih in zaupanja vrednih sistemov umetne inteligence
-- **Preizkusili varnostne mehanizme** z vgrajenimi zaščitnimi zmogljivostmi GitHub Models
-- **Spoznali najboljše prakse** za razvoj in uvajanje odgovorne umetne inteligence
+- **Implementirali varnostne ukrepe AI**, vključno s filtriranjem vsebin in obvladovanjem varnostnih odzivov  
+- **Uporabili načela odgovorne AI** za gradnjo etičnih in zanesljivih AI sistemov  
+- **Preizkusili varnostne mehanizme** z vgrajenimi zaščitami GitHub modelov  
+- **Naučili se najboljših praks** za odgovoren razvoj in uvajanje AI  
 
-**Viri za odgovorno umetno inteligenco:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Spoznajte Microsoftov pristop k varnosti, zasebnosti in skladnosti
-- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Raziščite Microsoftova načela in prakse za razvoj odgovorne umetne inteligence
+**Viri o odgovorni umetni inteligenci:**  
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Spoznajte Microsoftov pristop k varnosti, zasebnosti in skladnosti  
+- [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Raziščite Microsoftova načela in prakse za odgovoren razvoj AI
 
 ## Zaključek tečaja
 
-Čestitamo za zaključek tečaja Generativna umetna inteligenca za začetnike!
+Čestitamo za dokončanje tečaja Generativna umetna inteligenca za začetnike!
 
 ![Zaključek tečaja](../../../translated_images/sl/image.73c7e2ff4a652e77.webp)
 
-**Kaj ste dosegli:**
-- Nastavili svoje razvojno okolje
-- Naučili se osnovnih tehnik generativne umetne inteligence
-- Raziskali praktične aplikacije umetne inteligence
-- Razumeli načela odgovorne umetne inteligence
+**Kaj ste dosegli:**  
+- Nastavili ste svoje razvojno okolje  
+- Naučili ste se osnovnih tehnik generativne AI  
+- Spoznali ste praktične uporabe AI  
+- Razumeli ste načela odgovorne umetne inteligence  
 
 ## Naslednji koraki
 
-Nadaljujte svojo pot učenja umetne inteligence z naslednjimi dodatnimi viri:
+Nadaljujte svojo AI učno pot z naslednjimi dodatnimi viri:
 
-**Dodatni tečaji:**
-- [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
-- [ML for Beginners](https://aka.ms/ml-beginners)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)
-- [AI for Beginners](https://aka.ms/ai-beginners)
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
-- [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
+**Dodatni tečaji:**  
+- [AI Agent za začetnike](https://github.com/microsoft/ai-agents-for-beginners)  
+- [Generativna AI za začetnike z .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
+- [Generativna AI za začetnike z JavaScript](https://github.com/microsoft/generative-ai-with-javascript)  
+- [Generativna AI za začetnike](https://github.com/microsoft/generative-ai-for-beginners)  
+- [Strojno učenje za začetnike](https://aka.ms/ml-beginners)  
+- [Podatkovna znanost za začetnike](https://aka.ms/datascience-beginners)  
+- [Umetna inteligenca za začetnike](https://aka.ms/ai-beginners)  
+- [Kibernetska varnost za začetnike](https://github.com/microsoft/Security-101)  
+- [Spletni razvoj za začetnike](https://aka.ms/webdev-beginners)  
+- [IoT za začetnike](https://aka.ms/iot-beginners)  
+- [Razvoj XR za začetnike](https://github.com/microsoft/xr-development-for-beginners)  
+- [Obvladovanje GitHub Copilot za AI sodelovalno programiranje](https://aka.ms/GitHubCopilotAI)  
+- [Obvladovanje GitHub Copilot za C#/.NET razvijalce](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
+- [Izberi svojo Copilot avanturo](https://github.com/microsoft/CopilotAdventures)  
+- [RAG klepetalna aplikacija z Azure AI storitvami](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
-**Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Opozorilo**:
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, upoštevajte, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba šteti za avtoritativni vir. Za kritične informacije priporočamo strokovni človeški prevod. Ne odgovarjamo za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

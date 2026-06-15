@@ -1,7 +1,7 @@
 {
   "01-IntroToGenAI/README.md": {
-    "original_hash": "75bfb080ca725e8a9aa9c80cae25fba1",
-    "translation_date": "2025-07-29T10:09:48+00:00",
+    "original_hash": "384cec3e72a3ed595f44ff9526514ccc",
+    "translation_date": "2026-04-06T19:11:29+00:00",
     "source_file": "01-IntroToGenAI/README.md",
     "language_code": "ro"
   },
@@ -24,14 +24,14 @@
     "language_code": "ro"
   },
   "03-CoreGenerativeAITechniques/README.md": {
-    "original_hash": "685f55cb07de19b52a30ce6e8b6d889e",
-    "translation_date": "2025-08-28T22:16:18+00:00",
+    "original_hash": "d92e8be418684eef11d88fdead021c0d",
+    "translation_date": "2026-04-06T19:13:05+00:00",
     "source_file": "03-CoreGenerativeAITechniques/README.md",
     "language_code": "ro"
   },
   "04-PracticalSamples/README.md": {
-    "original_hash": "14c0a61ecc1cd2012a9c129236dfdf71",
-    "translation_date": "2025-07-29T10:09:34+00:00",
+    "original_hash": "cc013e66cd29a54535f2de3ac46b2540",
+    "translation_date": "2026-04-15T06:38:23+00:00",
     "source_file": "04-PracticalSamples/README.md",
     "language_code": "ro"
   },
@@ -42,8 +42,8 @@
     "language_code": "ro"
   },
   "04-PracticalSamples/foundrylocal/README.md": {
-    "original_hash": "f787307400de59adc25a1404466a35f3",
-    "translation_date": "2025-11-04T07:34:06+00:00",
+    "original_hash": "62c4437338c8370900c3691a0ad79349",
+    "translation_date": "2026-04-15T06:39:21+00:00",
     "source_file": "04-PracticalSamples/foundrylocal/README.md",
     "language_code": "ro"
   },
@@ -54,8 +54,8 @@
     "language_code": "ro"
   },
   "05-ResponsibleGenAI/README.md": {
-    "original_hash": "301c05c2f57e60a6950b8c665b8bdbba",
-    "translation_date": "2025-07-29T15:58:56+00:00",
+    "original_hash": "0d8fdedf2a4968d139342f8fb37bfd47",
+    "translation_date": "2026-04-06T19:12:02+00:00",
     "source_file": "05-ResponsibleGenAI/README.md",
     "language_code": "ro"
   },
@@ -72,8 +72,8 @@
     "language_code": "ro"
   },
   "README.md": {
-    "original_hash": "da4930265b35d7d57234bb06fac10701",
-    "translation_date": "2026-02-11T08:16:12+00:00",
+    "original_hash": "5a9650fea4656cd5c628ba69d4316654",
+    "translation_date": "2026-04-06T19:10:22+00:00",
     "source_file": "README.md",
     "language_code": "ro"
   },

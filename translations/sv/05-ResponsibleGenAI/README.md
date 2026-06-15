@@ -1,61 +1,66 @@
 # Ansvarsfull Generativ AI
 
+[![Responsible Generative AI](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
+
+> **Video**: [Titta på videoöversikten för denna lektion](https://www.youtube.com/watch?v=rF-b2BTSMQ4).
+> Du kan också klicka på miniatyrbilden ovan för att öppna samma video.
+
 ## Vad du kommer att lära dig
 
-- Lär dig de etiska överväganden och bästa praxis som är viktiga för AI-utveckling
+- Lär dig de etiska övervägandena och bästa praxis som är viktiga för AI-utveckling
 - Bygg in innehållsfiltrering och säkerhetsåtgärder i dina applikationer
-- Testa och hantera AI-säkerhetssvar med hjälp av GitHub Models inbyggda skydd
-- Tillämpa principer för ansvarsfull AI för att skapa säkra och etiska AI-system
+- Testa och hantera AI-säkerhetssvar med GitHub Modellers inbyggda skydd
+- Använd ansvarsfulla AI-principer för att skapa säkra, etiska AI-system
 
 ## Innehållsförteckning
 
-- [Introduktion](../../../05-ResponsibleGenAI)
-- [GitHub Models inbyggda säkerhet](../../../05-ResponsibleGenAI)
-- [Praktiskt exempel: Demo för ansvarsfull AI-säkerhet](../../../05-ResponsibleGenAI)
-  - [Vad demon visar](../../../05-ResponsibleGenAI)
-  - [Installationsinstruktioner](../../../05-ResponsibleGenAI)
-  - [Köra demon](../../../05-ResponsibleGenAI)
-  - [Förväntad utdata](../../../05-ResponsibleGenAI)
-- [Bästa praxis för ansvarsfull AI-utveckling](../../../05-ResponsibleGenAI)
-- [Viktig notering](../../../05-ResponsibleGenAI)
-- [Sammanfattning](../../../05-ResponsibleGenAI)
-- [Kursavslutning](../../../05-ResponsibleGenAI)
-- [Nästa steg](../../../05-ResponsibleGenAI)
+- [Introduktion](#introduktion)
+- [GitHub Modellers inbyggda säkerhet](#github-modellers-inbyggda-säkerhet)
+- [Praktiskt exempel: Demo av ansvarsfull AI-säkerhet](#praktiskt-exempel-demo-av-ansvarsfull-ai-säkerhet)
+  - [Vad demon visar](#vad-demon-visar)
+  - [Installationsinstruktioner](#installationsinstruktioner)
+  - [Köra demon](#köra-demon)
+  - [Förväntad output](#förväntad-output)
+- [Bästa praxis för ansvarsfull AI-utveckling](#bästa-praxis-för-ansvarsfull-ai-utveckling)
+- [Viktig notering](#viktig-notering)
+- [Sammanfattning](#sammanfattning)
+- [Kursavslutning](#kursavslutning)
+- [Nästa steg](#nästa-steg)
 
 ## Introduktion
 
-Detta sista kapitel fokuserar på de kritiska aspekterna av att bygga ansvarsfulla och etiska generativa AI-applikationer. Du kommer att lära dig hur du implementerar säkerhetsåtgärder, hanterar innehållsfiltrering och tillämpar bästa praxis för ansvarsfull AI-utveckling med hjälp av de verktyg och ramverk som behandlats i tidigare kapitel. Att förstå dessa principer är avgörande för att bygga AI-system som inte bara är tekniskt imponerande utan också säkra, etiska och pålitliga.
+Detta sista kapitel fokuserar på de kritiska aspekterna av att bygga ansvarsfulla och etiska generativa AI-applikationer. Du kommer lära dig hur du implementerar säkerhetsåtgärder, hanterar innehållsfiltrering och använder bästa praxis för ansvarsfull AI-utveckling med hjälp av de verktyg och ramverk som täckts i tidigare kapitel. Att förstå dessa principer är avgörande för att bygga AI-system som inte bara är tekniskt imponerande utan också säkra, etiska och pålitliga.
 
-## GitHub Models inbyggda säkerhet
+## GitHub Modellers inbyggda säkerhet
 
-GitHub Models har grundläggande innehållsfiltrering inbyggt från början. Det är som att ha en vänlig dörrvakt på din AI-klubb – inte den mest sofistikerade, men tillräcklig för grundläggande scenarier.
+GitHub Modeller levereras med grundläggande innehållsfiltrering direkt från början. Det är som att ha en vänlig vakthavande portvakt vid din AI-klubb - inte den mest sofistikerade, men klarar jobbet för grundläggande scenarier.
 
-**Vad GitHub Models skyddar mot:**
+**Vad GitHub Modeller skyddar mot:**
 - **Skadligt innehåll**: Blockerar uppenbart våldsamt, sexuellt eller farligt innehåll
 - **Grundläggande hatretorik**: Filtrerar tydligt diskriminerande språk
-- **Enkla försök att kringgå säkerhet**: Motstår grundläggande försök att bryta säkerhetsgränser
+- **Enkla jailbreak-försök**: Motstår grundläggande försök att kringgå säkerhetsbarriärer
 
-## Praktiskt exempel: Demo för ansvarsfull AI-säkerhet
+## Praktiskt exempel: Demo av ansvarsfull AI-säkerhet
 
-Detta kapitel innehåller en praktisk demonstration av hur GitHub Models implementerar säkerhetsåtgärder genom att testa uppmaningar som potentiellt kan bryta mot säkerhetsriktlinjer.
+Detta kapitel innehåller en praktisk demonstration av hur GitHub Modeller implementerar ansvarsfulla AI-säkerhetsåtgärder genom att testa promptar som potentiellt kan bryta mot säkerhetsriktlinjer.
 
 ### Vad demon visar
 
-Klassen `ResponsibleGithubModels` följer detta flöde:
-1. Initiera GitHub Models-klienten med autentisering
-2. Testa skadliga uppmaningar (våld, hatretorik, desinformation, olagligt innehåll)
-3. Skicka varje uppmaning till GitHub Models API
-4. Hantera svar: hårda blockeringar (HTTP-fel), mjuka avslag (artiga "Jag kan inte hjälpa till"-svar) eller normal innehållsgenerering
-5. Visa resultat som visar vilket innehåll som blockerades, avslogs eller tilläts
+`ResponsibleGithubModels`-klassen följer detta flöde:
+1. Initiera GitHub Modeller-klienten med autentisering
+2. Testa skadliga promptar (våld, hatretorik, desinformation, olagligt innehåll)
+3. Skicka varje prompt till GitHub Modellers API
+4. Hantera svar: hårda blockeringar (HTTP-fel), mjuka avslag (hövliga ”Jag kan inte hjälpa till”-svar) eller normal innehållsgenerering
+5. Visa resultat som visar vilket innehåll som blockerats, nekat eller tillåtits
 6. Testa säkert innehåll för jämförelse
 
-![Demo för ansvarsfull AI-säkerhet](../../../translated_images/sv/responsible.e4f51a917bafa4bf.webp)
+![Responsible AI Safety Demo](../../../translated_images/sv/responsible.e4f51a917bafa4bf.webp)
 
 ### Installationsinstruktioner
 
-1. **Ställ in din GitHub Personal Access Token:**
+1. **Ställ in din GitHub Personliga Åtkomsttoken:**
    
-   På Windows (Command Prompt):
+   På Windows (Kommandoprompt):
    ```cmd
    set GITHUB_TOKEN=your_github_token_here
    ```
@@ -82,15 +87,15 @@ Klassen `ResponsibleGithubModels` följer detta flöde:
    mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
    ```
 
-### Förväntad utdata
+### Förväntad output
 
-Demon kommer att testa olika typer av potentiellt skadliga uppmaningar och visa hur moderna AI-säkerhetsåtgärder fungerar genom två mekanismer:
+Demon kommer att testa olika typer av potentiellt skadliga promptar och visa hur modern AI-säkerhet fungerar genom två mekanismer:
 
 - **Hårda blockeringar**: HTTP 400-fel när innehåll blockeras av säkerhetsfilter innan det når modellen
-- **Mjuka avslag**: Modellen svarar med artiga avslag som "Jag kan inte hjälpa till med det" (vanligt med moderna modeller)
+- **Mjuka avslag**: Modellen svarar med hövliga avslag som ”Jag kan inte hjälpa till med det” (vanligast med moderna modeller)
 - **Säkert innehåll** som får ett normalt svar
 
-Exempel på utdataformat:
+Exempel på outputformat:
 ```
 === Responsible AI Safety Demonstration ===
 
@@ -108,66 +113,66 @@ Status: Response generated successfully
 ────────────────────────────────────────────────────────────
 ```
 
-**Notering**: Både hårda blockeringar och mjuka avslag indikerar att säkerhetssystemet fungerar korrekt.
+**Notera**: Både hårda blockeringar och mjuka avslag indikerar att säkerhetssystemet fungerar korrekt.
 
 ## Bästa praxis för ansvarsfull AI-utveckling
 
-När du bygger AI-applikationer, följ dessa viktiga praxis:
+När du bygger AI-applikationer, följ dessa viktiga riktlinjer:
 
-1. **Hantera alltid svar från säkerhetsfilter på ett smidigt sätt**
+1. **Hantera alltid potentiella svar från säkerhetsfilter på ett smidigt sätt**
    - Implementera korrekt felhantering för blockerat innehåll
-   - Ge användarna meningsfull feedback när innehåll filtreras
+   - Ge meningsfull återkoppling till användare när innehåll filtreras
 
-2. **Implementera ytterligare innehållsvalidering där det är lämpligt**
+2. **Inför egna ytterligare innehållsvalideringar där det är lämpligt**
    - Lägg till domänspecifika säkerhetskontroller
-   - Skapa anpassade valideringsregler för ditt användningsfall
+   - Skapa anpassade valideringsregler för din användning
 
-3. **Utbilda användare om ansvarsfull AI-användning**
+3. **Informera användare om ansvarsfull AI-användning**
    - Ge tydliga riktlinjer för acceptabel användning
    - Förklara varför visst innehåll kan blockeras
 
 4. **Övervaka och logga säkerhetsincidenter för förbättring**
-   - Spåra mönster i blockerat innehåll
+   - Följ mönster i blockerat innehåll
    - Förbättra kontinuerligt dina säkerhetsåtgärder
 
-5. **Respektera plattformens innehållspolicyer**
-   - Håll dig uppdaterad med plattformens riktlinjer
+5. **Respektera plattformens innehållspolicys**
+   - Håll dig uppdaterad om plattformens riktlinjer
    - Följ användarvillkor och etiska riktlinjer
 
 ## Viktig notering
 
-Detta exempel använder avsiktligt problematiska uppmaningar endast i utbildningssyfte. Målet är att demonstrera säkerhetsåtgärder, inte att kringgå dem. Använd alltid AI-verktyg ansvarsfullt och etiskt.
+Detta exempel använder avsiktligt problematiska promptar för utbildningsändamål endast. Målet är att demonstrera säkerhetsåtgärder, inte att kringgå dem. Använd alltid AI-verktyg ansvarsfullt och etiskt.
 
 ## Sammanfattning
 
 **Grattis!** Du har framgångsrikt:
 
 - **Implementerat AI-säkerhetsåtgärder** inklusive innehållsfiltrering och hantering av säkerhetssvar
-- **Tillämpat principer för ansvarsfull AI** för att bygga etiska och pålitliga AI-system
-- **Testat säkerhetsmekanismer** med hjälp av GitHub Models inbyggda skyddsfunktioner
+- **Använt ansvarsfulla AI-principer** för att bygga etiska och pålitliga AI-system
+- **Testat säkerhetsmekanismer** med GitHub Modellers inbyggda skyddsfunktioner
 - **Lärt dig bästa praxis** för ansvarsfull AI-utveckling och distribution
 
-**Resurser för ansvarsfull AI:**
-- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Läs om Microsofts tillvägagångssätt för säkerhet, integritet och efterlevnad
+**Ansvarsfulla AI-resurser:**
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center) - Lär dig om Microsofts syn på säkerhet, integritet och efterlevnad
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai) - Utforska Microsofts principer och praxis för ansvarsfull AI-utveckling
 
 ## Kursavslutning
 
-Grattis till att ha slutfört kursen Generativ AI för nybörjare!
+Grattis till att du har slutfört kursen Generativ AI för nybörjare!
 
-![Kursavslutning](../../../translated_images/sv/image.73c7e2ff4a652e77.webp)
+![Course Completion](../../../translated_images/sv/image.73c7e2ff4a652e77.webp)
 
 **Vad du har åstadkommit:**
 - Ställt in din utvecklingsmiljö
-- Lärt dig grundläggande tekniker för generativ AI
+- Lärt dig kärntekniker för generativ AI
 - Utforskat praktiska AI-applikationer
 - Förstått principer för ansvarsfull AI
 
 ## Nästa steg
 
-Fortsätt din AI-inlärningsresa med dessa ytterligare resurser:
+Fortsätt din AI-läranderesa med dessa ytterligare resurser:
 
-**Ytterligare utbildningskurser:**
+**Ytterligare lärandekurser:**
 - [AI Agents For Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI for Beginners using JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
@@ -184,5 +189,9 @@ Fortsätt din AI-inlärningsresa med dessa ytterligare resurser:
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 - [RAG Chat App with Azure AI Services](https://github.com/Azure-Samples/azure-search-openai-demo-java)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, var vänlig notera att automatiska översättningar kan innehålla fel eller feltolkningar. Det ursprungliga dokumentet på dess originalspråk ska betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår från användningen av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

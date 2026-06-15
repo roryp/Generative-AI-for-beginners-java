@@ -1,47 +1,56 @@
-# Учебник по Foundry Local и Spring Boot
+# Руководство по Foundry Local и Spring Boot
 
 ## Содержание
 
-- [Предварительные требования](../../../../04-PracticalSamples/foundrylocal)
-- [Обзор проекта](../../../../04-PracticalSamples/foundrylocal)
-- [Понимание кода](../../../../04-PracticalSamples/foundrylocal)
-  - [1. Конфигурация приложения (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. Основной класс приложения (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. Слой сервиса AI (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. Зависимости проекта (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [Как все работает вместе](../../../../04-PracticalSamples/foundrylocal)
-- [Настройка Foundry Local](../../../../04-PracticalSamples/foundrylocal)
-- [Запуск приложения](../../../../04-PracticalSamples/foundrylocal)
-- [Ожидаемый результат](../../../../04-PracticalSamples/foundrylocal)
-- [Следующие шаги](../../../../04-PracticalSamples/foundrylocal)
-- [Устранение неполадок](../../../../04-PracticalSamples/foundrylocal)
+- [Требования](#требования)
+- [Обзор проекта](#обзор-проекта)
+- [Понимание кода](#понимание-кода)
+  - [1. Конфигурация приложения (application.properties)](#1-конфигурация-приложения-applicationproperties)
+  - [2. Основной класс приложения (Application.java)](#2-основной-класс-приложения-applicationjava)
+  - [3. Сервисный слой AI (FoundryLocalService.java)](#3-сервисный-слой-ai-foundrylocalservicejava)
+  - [4. Зависимости проекта (pom.xml)](#4-зависимости-проекта-pomxml)
+- [Как всё работает вместе](#как-всё-работает-вместе)
+- [Настройка Foundry Local](#настройка-foundry-local)
+- [Запуск приложения](#запуск-приложения)
+- [Ожидаемый вывод](#ожидаемый-вывод)
+- [Дальнейшие шаги](#дальнейшие-шаги)
+- [Устранение неполадок](#устранение-неполадок)
 
-## Предварительные требования
 
-Перед началом работы убедитесь, что у вас установлено:
+## Требования
 
-- **Java 21 или выше** на вашем компьютере
+Перед началом этого руководства убедитесь, что у вас установлено:
+
+- **Java 21 или выше**
 - **Maven 3.6+** для сборки проекта
 - **Foundry Local**, установленный и запущенный
 
-### **Установите Foundry Local:**
+### **Установка Foundry Local:**
+
+> **Примечание:** Foundry Local CLI доступен только для **Windows** и **macOS**. Linux поддерживается через [Foundry Local SDKs](https://github.com/microsoft/Foundry-Local) (Python, JavaScript, C#, Rust).
 
 ```bash
 # Windows
 winget install Microsoft.FoundryLocal
 
-# macOS (after installing)
-foundry model run phi-3.5-mini
+# macOS
+brew tap microsoft/foundrylocal
+brew install foundrylocal
+```
+
+Проверьте установку:
+```bash
+foundry --version
 ```
 
 
 ## Обзор проекта
 
-Проект состоит из четырех основных компонентов:
+Проект состоит из четырёх основных компонентов:
 
-1. **Application.java** - основной входной пункт приложения Spring Boot
-2. **FoundryLocalService.java** - слой сервиса, который обрабатывает взаимодействие с AI
-3. **application.properties** - конфигурация для подключения к Foundry Local
+1. **Application.java** - основной вход в приложение Spring Boot
+2. **FoundryLocalService.java** - сервисный слой для взаимодействия с AI
+3. **application.properties** - конфигурация подключения к Foundry Local
 4. **pom.xml** - зависимости Maven и конфигурация проекта
 
 ## Понимание кода
@@ -52,15 +61,15 @@ foundry model run phi-3.5-mini
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
 
+**Что делает:**
+- **base-url**: Указывает, где запущен Foundry Local, включая путь `/v1` для совместимости с API OpenAI. Порт по умолчанию — `5273`. Если порт отличается, проверьте его командой `foundry service status`.
+- **model** (опционально): Имя AI-модели для генерации текста. **По умолчанию приложение автоматически определяет модель** запросом к Foundry Local `/v1/models` при запуске, поэтому задавать её вручную не требуется. Вы можете установить явно для переопределения автоопределения, если нужно.
 
-**Что это делает:**
-- **base-url**: Указывает, где запущен Foundry Local, включая путь `/v1` для совместимости с API OpenAI. **Примечание**: Foundry Local динамически назначает порт, поэтому проверьте фактический порт с помощью команды `foundry service status`.
-- **model**: Указывает имя модели AI для генерации текста, включая номер версии (например, `:1`). Используйте `foundry model list`, чтобы увидеть доступные модели с их точными идентификаторами.
-
-**Ключевая концепция:** Spring Boot автоматически загружает эти свойства и делает их доступными для вашего приложения с помощью аннотации `@Value`.
+**Ключевая идея:** Spring Boot автоматически загружает эти свойства и предоставляет их вашему приложению через аннотацию `@Value`.
 
 ### 2. Основной класс приложения (Application.java)
 
@@ -71,18 +80,17 @@ foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
 public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.setWebApplicationType(WebApplicationType.NONE);  // Веб-сервер не требуется
         app.run(args);
     }
 ```
 
-
-**Что это делает:**
+**Что делает:**
 - `@SpringBootApplication` включает автоконфигурацию Spring Boot
-- `WebApplicationType.NONE` указывает Spring, что это консольное приложение, а не веб-сервер
-- Основной метод запускает приложение Spring
+- `WebApplicationType.NONE` указывает, что это консольное приложение, а не веб-сервер
+- Метод main запускает приложение Spring
 
-**Демонстрационный запуск:**
+**Демо-запуск:**
 ```java
 @Bean
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
@@ -101,18 +109,17 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
+**Что делает:**
+- `@Bean` создаёт управляемый Spring компонент
+- `CommandLineRunner` выполняет код после старта Spring Boot
+- `foundryLocalService` автоматически внедряется Spring (внедрение зависимости)
+- Отправляет тестовое сообщение AI и выводит ответ
 
-**Что это делает:**
-- `@Bean` создает компонент, управляемый Spring
-- `CommandLineRunner` выполняет код после запуска Spring Boot
-- `foundryLocalService` автоматически внедряется Spring (внедрение зависимостей)
-- Отправляет тестовое сообщение AI и отображает ответ
-
-### 3. Слой сервиса AI (FoundryLocalService.java)
+### 3. Сервисный слой AI (FoundryLocalService.java)
 
 **Файл:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### Внедрение конфигурации:
+#### Инъекция конфигурации:
 ```java
 @Service
 public class FoundryLocalService {
@@ -120,48 +127,52 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // Автоматически обнаружено, если пусто
 ```
 
-
-**Что это делает:**
-- `@Service` указывает Spring, что этот класс предоставляет бизнес-логику
-- `@Value` внедряет значения конфигурации из application.properties
-- Синтаксис `:default-value` предоставляет значения по умолчанию, если свойства не установлены
+**Что делает:**
+- `@Service` указывает Spring, что этот класс содержит бизнес-логику
+- `@Value` внедряет значения из application.properties
+- Модель по умолчанию пуста, что вызывает **автоопределение** из Foundry Local при запуске. Это позволяет работать с любой загруженной моделью без ручной настройки.
 
 #### Инициализация клиента:
 ```java
 @PostConstruct
 public void init() {
+    // Автоматическое определение модели из Foundry Local, если явно не настроено
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
-            .apiKey("not-needed")            // Local server doesn't need real API key
+            .baseUrl(baseUrl)                // Базовый URL уже включает /v1 из конфигурации
+            .apiKey("not-needed")            // Локальному серверу не нужен настоящий API ключ
             .build();
 }
 ```
 
+**Что делает:**
+- `@PostConstruct` выполняет метод после создания сервиса Spring
+- Если модель не задана, делает запрос к эндпоинту `/v1/models` Foundry Local и выбирает первую доступную
+- Создаёт OpenAI клиент, направленный на локальный Foundry Local
+- Базовый URL из `application.properties` уже включает `/v1` для совместимости с OpenAI API
+- Ключ API установлен как "not-needed", потому что локальная разработка не требует аутентификации
 
-**Что это делает:**
-- `@PostConstruct` выполняет этот метод после создания сервиса Spring
-- Создает клиент OpenAI, который подключается к вашему локальному экземпляру Foundry Local
-- Базовый URL из `application.properties` уже включает `/v1` для совместимости с API OpenAI
-- API-ключ установлен как "not-needed", так как для локальной разработки аутентификация не требуется
-
-#### Метод общения:
+#### Метод чата:
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                .model(model)                    // Which AI model to use
-                .addUserMessage(message)         // Your question/prompt
-                .maxCompletionTokens(150)        // Limit response length
-                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .model(model)                    // Какую модель ИИ использовать
+                .addUserMessage(message)         // Ваш вопрос/запрос
+                .maxCompletionTokens(150)        // Ограничить длину ответа
+                .temperature(0.7)                // Управление креативностью (0.0-1.0)
                 .build();
         
         ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
         
-        // Extract the AI's response from the API result
+        // Извлечь ответ ИИ из результата API
         if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
             return chatCompletion.choices().get(0).message().content().orElse("No response found");
         }
@@ -173,20 +184,19 @@ public String chat(String message) {
 }
 ```
 
-
-**Что это делает:**
-- **ChatCompletionCreateParams**: Настраивает запрос к AI
-  - `model`: Указывает, какую модель AI использовать (должен совпадать с точным идентификатором из `foundry model list`)
-  - `addUserMessage`: Добавляет ваше сообщение в разговор
-  - `maxCompletionTokens`: Ограничивает длину ответа (экономит ресурсы)
-  - `temperature`: Управляет случайностью (0.0 = детерминированный, 1.0 = творческий)
-- **API вызов**: Отправляет запрос в Foundry Local
-- **Обработка ответа**: Безопасно извлекает текстовый ответ AI
-- **Обработка ошибок**: Оборачивает исключения с полезными сообщениями об ошибках
+**Что делает:**
+- **ChatCompletionCreateParams**: настраивает запрос к AI
+  - `model`: указывает модель AI (должна точно совпадать с ID из `foundry model list`)
+  - `addUserMessage`: добавляет ваше сообщение в разговор
+  - `maxCompletionTokens`: ограничивает длину ответа (экономит ресурсы)
+  - `temperature`: регулирует степень случайности (0.0 = детерминированный, 1.0 = творческий)
+- **API-вызов**: отправляет запрос в Foundry Local
+- **Обработка ответа**: безопасно извлекает текст ответа AI
+- **Обработка ошибок**: оборачивает исключения с полезными сообщениями
 
 ### 4. Зависимости проекта (pom.xml)
 
-**Ключевые зависимости:**
+**Основные зависимости:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -211,127 +221,141 @@ public String chat(String message) {
 </dependency>
 ```
 
+**Что делают:**
+- **spring-boot-starter**: основные возможности Spring Boot
+- **openai-java**: официальный OpenAI Java SDK для API
+- **jackson-databind**: сериализация/десериализация JSON для API вызовов
 
-**Что они делают:**
-- **spring-boot-starter**: Обеспечивает основные функции Spring Boot
-- **openai-java**: Официальный Java SDK OpenAI для взаимодействия с API
-- **jackson-databind**: Обрабатывает сериализацию/десериализацию JSON для API вызовов
+## Как всё работает вместе
 
-## Как все работает вместе
+Полный процесс работы при запуске приложения:
 
-Вот полный процесс работы приложения:
-
-1. **Запуск**: Spring Boot запускается и считывает `application.properties`
-2. **Создание сервиса**: Spring создает `FoundryLocalService` и внедряет значения конфигурации
-3. **Настройка клиента**: `@PostConstruct` инициализирует клиент OpenAI для подключения к Foundry Local
-4. **Выполнение демонстрации**: `CommandLineRunner` выполняется после запуска
-5. **Вызов AI**: Демонстрация вызывает `foundryLocalService.chat()` с тестовым сообщением
-6. **Запрос API**: Сервис создает и отправляет запрос, совместимый с OpenAI, в Foundry Local
-7. **Обработка ответа**: Сервис извлекает и возвращает ответ AI
-8. **Отображение**: Приложение выводит ответ и завершает работу
+1. **Запуск:** Spring Boot стартует и читает `application.properties`
+2. **Создание сервиса:** Spring создаёт `FoundryLocalService` и внедряет конфигурационные значения
+3. **Определение модели:** Если модель не указана, сервис запрашивает `/v1/models` Foundry Local и автоматически выбирает первую модель
+4. **Настройка клиента:** `@PostConstruct` инициализирует OpenAI клиент для подключения к Foundry Local
+5. **Выполнение демонстрации:** `CommandLineRunner` запускается после старта
+6. **Вызов AI:** демонстрация вызывает `foundryLocalService.chat()` с тестовым сообщением
+7. **Отправка запроса:** сервис формирует и отправляет совместимый с OpenAI запрос в Foundry Local
+8. **Обработка ответа:** сервис извлекает и возвращает ответ AI
+9. **Вывод:** приложение выводит ответ и завершает работу
 
 ## Настройка Foundry Local
 
-Чтобы настроить Foundry Local, выполните следующие шаги:
+1. **Установите Foundry Local** согласно инструкциям в разделе [Требования](#требования).
 
-1. **Установите Foundry Local** согласно инструкциям в разделе [Предварительные требования](../../../../04-PracticalSamples/foundrylocal).
+2. **Запустите сервис** (если ещё не запущен):
+   ```bash
+   foundry service start
+   ```
 
-2. **Проверьте динамически назначенный порт**. Foundry Local автоматически назначает порт при запуске. Найдите ваш порт с помощью:
+3. **Проверьте статус сервиса** чтобы убедиться, что он запущен и узнайте порт:
    ```bash
    foundry service status
    ```
-   
-   **Опционально**: Если вы предпочитаете использовать определенный порт (например, 5273), вы можете настроить его вручную:
+
+4. **Загрузите и запустите модель** (скачивается при первом запуске, кэшируется для последующих):
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
+   ```
+  
+   Это открывает интерактивную сессию чата. Выход — `Ctrl+C`. Модель остаётся загруженной в сервисе.
+
+   > **Совет:** Выполните `foundry model list` для просмотра доступных моделей. Замените `phi-4-mini` на любой алиас из каталога (например, `qwen2.5-0.5b` для более компактной/быстрой модели).
+
+5. **Проверьте, что модель загружена:**
+   ```bash
+   foundry service ps
    ```
 
+6. **Обновите `application.properties`, если нужно:**
+   - По умолчанию `base-url` (`http://localhost:5273/v1`) совпадает с портом CLI по умолчанию. Меняйте только если `foundry service status` покажет другой порт.
+   - Модель **определяется автоматически** при запуске — настройка не требуется.
 
-3. **Скачайте модель AI**, которую вы хотите использовать, например, `phi-3.5-mini`, с помощью следующей команды:
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
-
-
-4. **Настройте файл application.properties** в соответствии с вашими настройками Foundry Local:
-   - Обновите порт в `base-url` (из шага 2), убедившись, что он включает `/v1` в конце
-   - Обновите имя модели, добавив номер версии (проверьте с помощью `foundry model list`)
-   
-   Пример:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
 
 
 ## Запуск приложения
 
-### Шаг 1: Запустите Foundry Local
+### Шаг 1: Убедитесь, что модель загружена в Foundry Local
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
+```
+
+Если моделей нет, загрузите одну:
+```bash
+foundry model run phi-4-mini
 ```
 
 
 ### Шаг 2: Соберите и запустите приложение
+В отдельном терминале:
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
+
+Или соберите и запустите JAR:
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
 
 
-## Ожидаемый результат
+## Ожидаемый вывод
 
 ```
 === Foundry Local Demo ===
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
 
 
-## Следующие шаги
+## Дальнейшие шаги
 
-Для получения дополнительных примеров смотрите [Глава 04: Практические примеры](../README.md)
+Для дополнительных примеров см. [Глава 04: Практические примеры](../README.md)
 
 ## Устранение неполадок
 
-### Распространенные проблемы
+### Распространённые проблемы
 
 **"Connection refused" или "Service unavailable"**
-- Убедитесь, что Foundry Local запущен: `foundry model list`
-- Проверьте фактический порт, который использует Foundry Local: `foundry service status`
-- Обновите ваш `application.properties` с правильным портом, убедившись, что URL заканчивается на `/v1`
-- Или задайте конкретный порт, если это необходимо: `foundry service set --port 5273`
-- Попробуйте перезапустить Foundry Local: `foundry model run phi-3.5-mini`
+- Проверьте сервис: `foundry service status`
+- Перезапустите при необходимости: `foundry service restart`
+- Убедитесь, что порт в `application.properties` совпадает с выводом `foundry service status`
+- Проверьте, что URL заканчивается на `/v1`: `http://localhost:5273/v1`
 
-**"Model not found" или ошибки "404 Not Found"**
-- Проверьте доступные модели с их точными идентификаторами: `foundry model list`
-- Обновите имя модели в `application.properties`, чтобы оно точно совпадало, включая номер версии (например, `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- Убедитесь, что `base-url` включает `/v1` в конце: `http://localhost:5273/v1`
-- Скачайте модель, если это необходимо: `foundry model run phi-3.5-mini`
+**"No model found" при запуске**
+- Приложение автоматически определяет модель. Убедитесь, что хотя бы одна модель загружена: `foundry service ps`
+- Если моделей нет: `foundry model run phi-4-mini`
+- Если вы указали название модели в `application.properties`, убедитесь, что оно совпадает с `foundry model list`
 
 **Ошибки "400 Bad Request"**
-- Убедитесь, что базовый URL включает `/v1`: `http://localhost:5273/v1`
-- Проверьте, что идентификатор модели точно совпадает с тем, что отображается в `foundry model list`
-- Убедитесь, что вы используете `maxCompletionTokens()` в вашем коде (а не устаревший `maxTokens()`)
+- Проверьте, что базовый URL включает `/v1`: `http://localhost:5273/v1`
+- Используйте в коде `maxCompletionTokens()`, а не устаревший `maxTokens()`
 
 **Ошибки компиляции Maven**
-- Убедитесь, что установлена Java 21 или выше: `java -version`
-- Очистите и пересоберите проект: `mvn clean compile`
-- Проверьте подключение к интернету для загрузки зависимостей
+- Проверьте версию Java: `java -version` (должна быть 21 или выше)
+- Очистите и пересоберите: `mvn clean compile`
+- Убедитесь в доступности интернета для загрузки зависимостей
 
-**Приложение запускается, но нет вывода**
-- Убедитесь, что Foundry Local отвечает: Проверьте `http://localhost:5273/v1/models` или выполните `foundry service status`
-- Проверьте журналы приложения на наличие конкретных сообщений об ошибках
-- Убедитесь, что модель полностью загружена и готова
+**Проблемы с подключением к сервису**
+- Если появляется ошибка `Request to local service failed`, выполните: `foundry service restart`
+- Проверьте загруженные модели: `foundry service ps`
+- Посмотрите логи сервиса: `foundry service diag`
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Отказ от ответственности**:  
-Этот документ был переведен с использованием сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия обеспечить точность, автоматические переводы могут содержать ошибки или неточности. Оригинальный документ на его родном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неправильные интерпретации, возникающие в результате использования данного перевода.
+Этот документ был переведен с помощью сервиса машинного перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия обеспечить точность, имейте в виду, что автоматический перевод может содержать ошибки или неточности. Оригинальный документ на его исходном языке следует считать авторитетным источником. Для важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неправильные толкования, возникшие в результате использования этого перевода.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
