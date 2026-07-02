@@ -228,7 +228,7 @@ public class LangChain4jClient {
 ```
 
 **What this does:**
-1. **Creates** an AI model connection using your GitHub token
+1. **Creates** an AI model connection using keyless authentication (Microsoft Entra ID)
 2. **Connects** the AI to our calculator MCP server
 3. **Gives** the AI access to all our calculator tools
 4. **Allows** natural language requests like "Calculate the sum of 24.5 and 17.3"
