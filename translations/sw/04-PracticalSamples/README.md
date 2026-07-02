@@ -1,56 +1,64 @@
-# Matumizi ya Kivitendo na Miradi
+# Matumizi ya Kivitendo & Miradi
+
+[![Matumizi ya Kivitendo & Miradi](https://img.youtube.com/vi/01vJsYei3H0/0.jpg)](https://www.youtube.com/watch?v=01vJsYei3H0 "Matumizi ya Kivitendo & Miradi")
+
+> **Muhtasari wa Video:** [Tazama "Matumizi ya Kivitendo & Miradi" kwenye YouTube](https://www.youtube.com/watch?v=01vJsYei3H0).
 
 ## Utajifunza Nini
-Katika sehemu hii, tutafanya maonyesho ya matumizi matatu ya kivitendo yanayoonyesha mifumo ya maendeleo ya AI ya kizazi kwa kutumia Java:
-- Kuunda **Kisimulizi cha Hadithi za Wanyama** kinachotumia AI pande zote mbili: upande wa mteja na upande wa seva
-- Kutekeleza ujumuishaji wa modeli za AI za ndani kwa kutumia **Foundry Local Spring Boot Demo**
-- Kuendeleza huduma ya **Model Context Protocol (MCP)** kwa mfano wa Calculator
+Katika sehemu hii tutaonyesha maombi matatu ya kivitendo yanayoonyesha mifumo ya maendeleo ya AI ya kizazi na Java:
+- Tengeneza Kizazi cha Hadithi za Wanyama wa Mbalimbali kinachochanganya AI kutoka upande wa mteja na upande wa seva
+- Tekeleza muunganisho wa mfano wa AI wa eneo kwa demo ya Foundry Local Spring Boot
+- Tengeneza huduma ya Model Context Protocol (MCP) kwa mfano wa Calculator
 
 ## Jedwali la Yaliyomo
 
-- [Utangulizi](../../../04-PracticalSamples)
-  - [Foundry Local Spring Boot Demo](../../../04-PracticalSamples)
-  - [Kisimulizi cha Hadithi za Wanyama](../../../04-PracticalSamples)
-  - [Huduma ya MCP Calculator (Mfano wa MCP wa Kuanza Rahisi)](../../../04-PracticalSamples)
-- [Mfululizo wa Kujifunza](../../../04-PracticalSamples)
-- [Muhtasari](../../../04-PracticalSamples)
-- [Hatua Zifuatazo](../../../04-PracticalSamples)
+- [Utangulizi](#utangulizi)
+  - [Demo ya Foundry Local Spring Boot](#demo-ya-foundry-local-spring-boot)
+  - [Kizazi cha Hadithi za Wanyama](#kizazi-cha-hadithi-za-wanyama)
+  - [Huduma ya MCP Calculator (Demo ya MCP Rafiki kwa Waanzilishi)](#huduma-ya-mcp-calculator-demo-ya-mcp-rafiki-kwa-waanzilishi)
+- [Mchakato wa Kujifunza](#mchakato-wa-kujifunza)
+- [Muhtasari](#muhtasari)
+- [Hatua Zifuatayo](#hatua-zifuatayo)
 
 ## Utangulizi
 
-Sura hii inaonyesha **miradi ya mfano** inayodhihirisha mifumo ya maendeleo ya AI ya kizazi kwa kutumia Java. Kila mradi unafanya kazi kikamilifu na unaonyesha teknolojia maalum za AI, mifumo ya usanifu, na mbinu bora ambazo unaweza kutumia katika programu zako mwenyewe.
+Sura hii inaonyesha **miradi ya mfano** inayothibitisha mifumo ya maendeleo ya AI ya kizazi na Java. Kila mradi ni wa kazi kamili na unaonyesha teknolojia maalum za AI, mifumo ya usanifu, na mbinu bora ambazo unaweza kubadilisha kwa maombi yako mwenyewe.
 
-### Foundry Local Spring Boot Demo
+### Demo ya Foundry Local Spring Boot
 
-**[Foundry Local Spring Boot Demo](foundrylocal/README.md)** inaonyesha jinsi ya kujumuisha modeli za AI za ndani kwa kutumia **OpenAI Java SDK**. Inadhihirisha jinsi ya kuunganishwa na modeli ya **Phi-3.5-mini** inayotumika kwenye Foundry Local, ikikuruhusu kuendesha programu za AI bila kutegemea huduma za wingu.
+**[Demo ya Foundry Local Spring Boot](foundrylocal/README.md)** inaonyesha jinsi ya kuunganisha na mifano ya AI ya eneo kwa kutumia **OpenAI Java SDK**. Inaonyesha kuunganishwa na mifano inayotumia Foundry Local (mfano, **Phi-4-mini**), kwa ugunduzi wa mfano moja kwa moja, ikiruhusu kuendesha maombi ya AI bila kutegemea huduma za wingu.
 
-### Kisimulizi cha Hadithi za Wanyama
+### Kizazi cha Hadithi za Wanyama
 
-**[Kisimulizi cha Hadithi za Wanyama](petstory/README.md)** ni programu ya wavuti ya Spring Boot inayovutia ambayo inaonyesha **usindikaji wa AI wa njia nyingi** ili kuzalisha hadithi za ubunifu za wanyama. Inachanganya uwezo wa AI wa upande wa mteja na upande wa seva kwa kutumia transformer.js kwa mwingiliano wa AI wa kivinjari na OpenAI SDK kwa usindikaji wa upande wa seva.
+**[Kizazi cha Hadithi za Wanyama](petstory/README.md)** ni programu ya wavuti ya Spring Boot yenye mvuto inayothibitisha **usindikaji wa AI wa namna nyingi** kuunda hadithi za wanyama wa ubunifu. Inachanganya uwezo wa AI kutoka upande wa mteja na upande wa seva kwa kutumia transformer.js kwa mazungumzo ya AI kupitia kivinjari na OpenAI SDK kwa usindikaji upande wa seva.
 
-### Huduma ya MCP Calculator (Mfano wa MCP wa Kuanza Rahisi)
+### Huduma ya MCP Calculator (Demo ya MCP Rafiki kwa Waanzilishi)
 
-**[Huduma ya MCP Calculator](calculator/README.md)** ni onyesho rahisi la **Model Context Protocol (MCP)** kwa kutumia Spring AI. Inatoa utangulizi wa kirafiki kwa MCP, ikionyesha jinsi ya kuunda MCP Server ya msingi inayoshirikiana na wateja wa MCP.
+**[Huduma ya MCP Calculator](calculator/README.md)** ni onyesho rahisi la **Model Context Protocol (MCP)** kwa kutumia Spring AI. Inatoa utangulizi rafiki kwa waanzilishi kwa dhana za MCP, ikionyesha jinsi ya kuunda MCP Server ya msingi inayoshirikiana na wateja wa MCP.
 
-## Mfululizo wa Kujifunza
+## Mchakato wa Kujifunza
 
-Miradi hii imeundwa ili kujenga juu ya dhana kutoka sura zilizopita:
+Miradi hii imetengenezwa kuendeleza dhana kutoka sura zilizopita:
 
-1. **Anza Rahisi**: Anza na Foundry Local Spring Boot Demo ili kuelewa ujumuishaji wa msingi wa AI na modeli za ndani
-2. **Ongeza Mwingiliano**: Endelea na Kisimulizi cha Hadithi za Wanyama kwa AI ya njia nyingi na mwingiliano wa wavuti
-3. **Jifunze Misingi ya MCP**: Jaribu Huduma ya MCP Calculator ili kuelewa misingi ya Model Context Protocol
+1. **Anza kwa Rahisi**: Anza na Demo ya Foundry Local Spring Boot kuelewa muunganisho wa AI wa msingi na mifano ya eneo
+2. **Ongeza Mwingiliano**: Endelea na Kizazi cha Hadithi za Wanyama kwa AI ya namna nyingi na mwingiliano kupitia wavuti
+3. **Jifunze Misingi ya MCP**: Jaribu Huduma ya MCP Calculator kuelewa misingi ya Model Context Protocol
 
 ## Muhtasari
 
-Kazi nzuri! Sasa umechunguza baadhi ya matumizi halisi:
+Kazi nzuri! Sasa umechunguza baadhi ya maombi halisi:
 
-- Uzoefu wa AI wa njia nyingi unaofanya kazi kwenye kivinjari na seva
-- Ujumuishaji wa modeli za AI za ndani kwa kutumia mifumo ya kisasa ya Java na SDKs
-- Huduma yako ya kwanza ya Model Context Protocol ili kuona jinsi zana zinavyoshirikiana na AI
+- Uzoefu wa AI wa namna nyingi unaofanya kazi kivinjari na kwenye seva
+- Muunganisho wa mfano wa AI wa eneo kwa kutumia mifumo ya kisasa ya Java na SDKs
+- Huduma yako ya kwanza ya Model Context Protocol kuona jinsi zana zinavyounganishwa na AI
 
-## Hatua Zifuatazo
+## Hatua Zifuatayo
 
 [Sura ya 5: AI ya Kizazi yenye Uwajibikaji](../05-ResponsibleGenAI/README.md)
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Maandishi ya Kukataa**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya utafsiri wa AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au ukosefu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa zinazohitaji usahihi mkubwa, inashauriwa kutumia utafsiri wa mtaalamu wa binadamu. Hatubebeshi lawama kwa kutoelewana au tafsiri potofu zitokanazo na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

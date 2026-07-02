@@ -1,24 +1,25 @@
-# دليل استخدام Foundry Local مع Spring Boot
+# Foundry Local Spring Boot Tutorial
 
-## جدول المحتويات
+## Table of Contents
 
-- [المتطلبات الأساسية](../../../../04-PracticalSamples/foundrylocal)
-- [نظرة عامة على المشروع](../../../../04-PracticalSamples/foundrylocal)
-- [فهم الكود](../../../../04-PracticalSamples/foundrylocal)
-  - [1. إعدادات التطبيق (application.properties)](../../../../04-PracticalSamples/foundrylocal)
-  - [2. الفئة الرئيسية للتطبيق (Application.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [3. طبقة خدمة الذكاء الاصطناعي (FoundryLocalService.java)](../../../../04-PracticalSamples/foundrylocal)
-  - [4. تبعيات المشروع (pom.xml)](../../../../04-PracticalSamples/foundrylocal)
-- [كيف تعمل جميع الأجزاء معًا](../../../../04-PracticalSamples/foundrylocal)
-- [إعداد Foundry Local](../../../../04-PracticalSamples/foundrylocal)
-- [تشغيل التطبيق](../../../../04-PracticalSamples/foundrylocal)
-- [المخرجات المتوقعة](../../../../04-PracticalSamples/foundrylocal)
-- [الخطوات التالية](../../../../04-PracticalSamples/foundrylocal)
-- [استكشاف الأخطاء وإصلاحها](../../../../04-PracticalSamples/foundrylocal)
+- [المتطلبات المسبقة](#المتطلبات-المسبقة)
+- [نظرة عامة على المشروع](#نظرة-عامة-على-المشروع)
+- [فهم الكود](#فهم-الكود)
+  - [1. تكوين التطبيق (application.properties)](#1-تكوين-التطبيق-applicationproperties)
+  - [2. الفصل الرئيسي للتطبيق (Application.java)](#2-الفصل-الرئيسي-للتطبيق-applicationjava)
+  - [3. طبقة خدمة الذكاء الاصطناعي (FoundryLocalService.java)](#3-طبقة-خدمة-الذكاء-الاصطناعي-foundrylocalservicejava)
+  - [4. اعتماديات المشروع (pom.xml)](#4-اعتماديات-المشروع-pomxml)
+- [كيف يعمل كل هذا معًا](#كيف-يعمل-كل-هذا-معًا)
+- [إعداد Foundry Local](#إعداد-foundry-local)
+- [تشغيل التطبيق](#تشغيل-التطبيق)
+- [الناتج المتوقع](#الناتج-المتوقع)
+- [الخطوات التالية](#الخطوات-التالية)
+- [استكشاف الأخطاء وإصلاحها](#استكشاف-الأخطاء-وإصلاحها)
 
-## المتطلبات الأساسية
 
-قبل البدء في هذا الدليل، تأكد من توفر ما يلي:
+## المتطلبات المسبقة
+
+قبل بدء هذا الدرس، تأكد من أنك تمتلك:
 
 - **Java 21 أو أعلى** مثبتة على نظامك
 - **Maven 3.6+** لبناء المشروع
@@ -26,63 +27,69 @@
 
 ### **تثبيت Foundry Local:**
 
+> **ملاحظة:** CLI الخاص بـ Foundry Local متوفر فقط على **ويندوز** و **macOS**. يتم دعم Linux عبر [Foundry Local SDKs](https://github.com/microsoft/Foundry-Local) (بايثون، جافا سكريبت، C#، روست).
+
 ```bash
-# Windows
+# ويندوز
 winget install Microsoft.FoundryLocal
 
-# macOS (after installing)
-foundry model run phi-3.5-mini
+# ماك أو إس
+brew tap microsoft/foundrylocal
+brew install foundrylocal
 ```
 
+تحقق من التثبيت:
+```bash
+foundry --version
+```
 
 ## نظرة عامة على المشروع
 
 يتكون هذا المشروع من أربعة مكونات رئيسية:
 
 1. **Application.java** - نقطة الدخول الرئيسية لتطبيق Spring Boot
-2. **FoundryLocalService.java** - طبقة الخدمة التي تتعامل مع الاتصال بالذكاء الاصطناعي
-3. **application.properties** - إعدادات الاتصال بـ Foundry Local
-4. **pom.xml** - تبعيات Maven وإعدادات المشروع
+2. **FoundryLocalService.java** - طبقة الخدمة التي تتعامل مع التواصل مع الذكاء الاصطناعي
+3. **application.properties** - تكوين اتصال Foundry Local
+4. **pom.xml** - اعتماديات Maven وتكوين المشروع
 
 ## فهم الكود
 
-### 1. إعدادات التطبيق (application.properties)
+### 1. تكوين التطبيق (application.properties)
 
-**الملف:** `src/main/resources/application.properties`
+**ملف:** `src/main/resources/application.properties`
 
 ```properties
 foundry.local.base-url=http://localhost:5273/v1
-foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+# foundry.local.model is auto-detected from Foundry Local. Set it here to override:
+# foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
 ```
 
+**ما يفعله هذا:**
+- **base-url**: يحدد مكان تشغيل Foundry Local، بما في ذلك مسار `/v1` للتوافق مع OpenAI API. المنفذ الافتراضي هو `5273`. إذا كان المنفذ مختلفًا، تحقق منه باستخدام `foundry service status`.
+- **model** (اختياري): يحدد اسم نموذج الذكاء الاصطناعي المستخدم لتوليد النص. **بشكل افتراضي، يقوم التطبيق بالكشف التلقائي عن النموذج** بسؤال نقطة النهاية `/v1/models` في Foundry Local عند بدء التشغيل، لذا لا تحتاج لضبطه. يمكنك تعيينه صراحة لتجاوز الكشف التلقائي إذا لزم الأمر.
 
-**ما الذي يفعله هذا:**
-- **base-url**: يحدد مكان تشغيل Foundry Local، بما في ذلك المسار `/v1` للتوافق مع واجهة برمجة تطبيقات OpenAI. **ملاحظة**: يقوم Foundry Local بتعيين منفذ ديناميكي، لذا تحقق من المنفذ الفعلي باستخدام `foundry service status`
-- **model**: يحدد اسم نموذج الذكاء الاصطناعي المستخدم لتوليد النصوص، بما في ذلك رقم الإصدار (مثل `:1`). استخدم `foundry model list` لرؤية النماذج المتاحة مع معرفاتها الدقيقة
+**المفهوم الأساسي:** يقوم Spring Boot بتحميل هذه الخصائص تلقائيًا ويجعلها متاحة لتطبيقك باستخدام التعليمة `@Value`.
 
-**المفهوم الرئيسي:** يقوم Spring Boot بتحميل هذه الإعدادات تلقائيًا ويجعلها متاحة لتطبيقك باستخدام التعليمة `@Value`.
+### 2. الفصل الرئيسي للتطبيق (Application.java)
 
-### 2. الفئة الرئيسية للتطبيق (Application.java)
-
-**الملف:** `src/main/java/com/example/Application.java`
+**ملف:** `src/main/java/com/example/Application.java`
 
 ```java
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(Application.class);
-        app.setWebApplicationType(WebApplicationType.NONE);  // No web server needed
+        app.setWebApplicationType(WebApplicationType.NONE);  // لا حاجة لخادم ويب
         app.run(args);
     }
 ```
 
+**ما يفعله هذا:**
+- `@SpringBootApplication` يفعّل التكوين التلقائي لـ Spring Boot
+- `WebApplicationType.NONE` يخبر Spring أن هذا تطبيق سطر أوامر وليس خادم ويب
+- تبدأ الطريقة الرئيسية تطبيق Spring
 
-**ما الذي يفعله هذا:**
-- `@SpringBootApplication` يُمكّن التهيئة التلقائية لـ Spring Boot
-- `WebApplicationType.NONE` يُخبر Spring أن هذا تطبيق سطر أوامر وليس خادم ويب
-- الطريقة الرئيسية تبدأ تشغيل تطبيق Spring
-
-**مشغل العرض التوضيحي:**
+**قيد التشغيل التجريبي:**
 ```java
 @Bean
 public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
@@ -101,18 +108,17 @@ public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalServ
 }
 ```
 
-
-**ما الذي يفعله هذا:**
-- `@Bean` ينشئ مكونًا يديره Spring
+**ما يفعله هذا:**
+- `@Bean` ينشئ مكونًا تديره Spring
 - `CommandLineRunner` يشغل الكود بعد بدء تشغيل Spring Boot
-- يتم حقن `foundryLocalService` تلقائيًا بواسطة Spring (حقن التبعيات)
-- يرسل رسالة اختبار إلى الذكاء الاصطناعي ويعرض الرد
+- يتم حقن `foundryLocalService` تلقائيًا بواسطة Spring (حقن التبعية)
+- يرسل رسالة اختبار إلى الذكاء الاصطناعي ويعرض الاستجابة
 
 ### 3. طبقة خدمة الذكاء الاصطناعي (FoundryLocalService.java)
 
-**الملف:** `src/main/java/com/example/FoundryLocalService.java`
+**ملف:** `src/main/java/com/example/FoundryLocalService.java`
 
-#### حقن الإعدادات:
+#### حقن التكوين:
 ```java
 @Service
 public class FoundryLocalService {
@@ -120,48 +126,52 @@ public class FoundryLocalService {
     @Value("${foundry.local.base-url:http://localhost:5273/v1}")
     private String baseUrl;
     
-    @Value("${foundry.local.model:Phi-3.5-mini-instruct-cuda-gpu:1}")
-    private String model;
+    @Value("${foundry.local.model:}")
+    private String model;    // تم الكشف تلقائيًا إذا كان فارغًا
 ```
 
-
-**ما الذي يفعله هذا:**
-- `@Service` يُخبر Spring أن هذه الفئة تقدم منطق الأعمال
-- `@Value` يحقن قيم الإعدادات من application.properties
-- صيغة `:default-value` توفر قيمًا افتراضية إذا لم يتم تعيين الإعدادات
+**ما يفعله هذا:**
+- `@Service` يخبر Spring أن هذه الفئة تقدم منطق الأعمال
+- `@Value` يحقن قيم التكوين من application.properties
+- النموذج افتراضيًا فارغ، مما يحفز **الكشف التلقائي** من Foundry Local عند بدء التشغيل. هذا يعني أن التطبيق يعمل مع أي نموذج محمّل في Foundry Local بدون تكوين يدوي.
 
 #### تهيئة العميل:
 ```java
 @PostConstruct
 public void init() {
+    // الكشف التلقائي عن النموذج من Foundry Local إذا لم يتم تكوينه صراحةً
+    if (model == null || model.isBlank()) {
+        model = detectModel();
+    }
+
     this.openAIClient = OpenAIOkHttpClient.builder()
-            .baseUrl(baseUrl)                // Base URL already includes /v1 from configuration
-            .apiKey("not-needed")            // Local server doesn't need real API key
+            .baseUrl(baseUrl)                // عنوان URL الأساسي يتضمن بالفعل /v1 من التكوين
+            .apiKey("not-needed")            // الخادم المحلي لا يحتاج إلى مفتاح API حقيقي
             .build();
 }
 ```
 
-
-**ما الذي يفعله هذا:**
-- `@PostConstruct` يشغل هذه الطريقة بعد إنشاء الخدمة بواسطة Spring
+**ما يفعله هذا:**
+- `@PostConstruct` يشغّل هذه الطريقة بعد إنشاء الخدمة بواسطة Spring
+- إذا لم يتم تكوين نموذج، فسوف يسأل نقطة نهاية `/v1/models` في Foundry Local ويختار أول نموذج محمّل
 - ينشئ عميل OpenAI يشير إلى مثيل Foundry Local المحلي الخاص بك
-- عنوان URL الأساسي من `application.properties` يتضمن بالفعل `/v1` للتوافق مع واجهة برمجة تطبيقات OpenAI
-- يتم تعيين مفتاح API إلى "not-needed" لأن التطوير المحلي لا يتطلب مصادقة
+- عنوان URL الأساسي من `application.properties` يتضمن بالفعل `/v1` لتوافق OpenAI API
+- مفتاح API مضبوط على "not-needed" لأن التطوير المحلي لا يتطلب مصادقة
 
 #### طريقة الدردشة:
 ```java
 public String chat(String message) {
     try {
         ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                .model(model)                    // Which AI model to use
-                .addUserMessage(message)         // Your question/prompt
-                .maxCompletionTokens(150)        // Limit response length
-                .temperature(0.7)                // Control creativity (0.0-1.0)
+                .model(model)                    // أي نموذج ذكاء صناعي يجب استخدامه
+                .addUserMessage(message)         // سؤالك/الإيعاز الخاص بك
+                .maxCompletionTokens(150)        // حد طول الرد
+                .temperature(0.7)                // التحكم في الإبداع (٠.٠-١.٠)
                 .build();
         
         ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
         
-        // Extract the AI's response from the API result
+        // استخراج رد الذكاء الصناعي من نتيجة واجهة برمجة التطبيقات
         if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
             return chatCompletion.choices().get(0).message().content().orElse("No response found");
         }
@@ -173,20 +183,19 @@ public String chat(String message) {
 }
 ```
 
-
-**ما الذي يفعله هذا:**
-- **ChatCompletionCreateParams**: يهيئ طلب الذكاء الاصطناعي
-  - `model`: يحدد نموذج الذكاء الاصطناعي المستخدم (يجب أن يتطابق مع المعرف الدقيق من `foundry model list`)
+**ما يفعله هذا:**
+- **ChatCompletionCreateParams**: يقوم بتكوين طلب الذكاء الاصطناعي
+  - `model`: يحدد نموذج الذكاء الاصطناعي المستخدم (يجب أن يطابق المعرف الدقيق من `foundry model list`)
   - `addUserMessage`: يضيف رسالتك إلى المحادثة
-  - `maxCompletionTokens`: يحد من طول الرد (لتوفير الموارد)
+  - `maxCompletionTokens`: يحدد الحد الأقصى لطول الاستجابة (يوفر الموارد)
   - `temperature`: يتحكم في العشوائية (0.0 = حتمي، 1.0 = إبداعي)
-- **استدعاء API**: يرسل الطلب إلى Foundry Local
-- **معالجة الرد**: يستخرج نص الرد الخاص بالذكاء الاصطناعي بأمان
-- **معالجة الأخطاء**: يلف الاستثناءات برسائل خطأ مفيدة
+- **نداء API**: يرسل الطلب إلى Foundry Local
+- **معالجة الاستجابة**: يستخرج نص الاستجابة من الذكاء الاصطناعي بأمان
+- **معالجة الأخطاء**: يغلف الاستثناءات برسائل خطأ مفيدة
 
-### 4. تبعيات المشروع (pom.xml)
+### 4. اعتماديات المشروع (pom.xml)
 
-**التبعيات الرئيسية:**
+**الاعتماديات الرئيسية:**
 
 ```xml
 <!-- Spring Boot - Application framework -->
@@ -211,127 +220,135 @@ public String chat(String message) {
 </dependency>
 ```
 
-
-**ما الذي تفعله هذه:**
+**ما تفعله هذه:**
 - **spring-boot-starter**: يوفر الوظائف الأساسية لـ Spring Boot
-- **openai-java**: SDK الرسمي لـ OpenAI للتواصل مع واجهة برمجة التطبيقات
-- **jackson-databind**: يتعامل مع تسلسل/إلغاء تسلسل JSON لاستدعاءات واجهة برمجة التطبيقات
+- **openai-java**: SDK الرسمي لجافا للتواصل مع OpenAI API
+- **jackson-databind**: يدير تسلسل/فك تسلسل JSON لاستدعاءات API
 
-## كيف تعمل جميع الأجزاء معًا
+## كيف يعمل كل هذا معًا
 
 إليك التدفق الكامل عند تشغيل التطبيق:
 
-1. **البدء**: يبدأ Spring Boot ويقرأ `application.properties`
-2. **إنشاء الخدمة**: يقوم Spring بإنشاء `FoundryLocalService` ويحقن قيم الإعدادات
-3. **إعداد العميل**: يقوم `@PostConstruct` بتهيئة عميل OpenAI للاتصال بـ Foundry Local
-4. **تنفيذ العرض التوضيحي**: يتم تشغيل `CommandLineRunner` بعد بدء التشغيل
-5. **استدعاء الذكاء الاصطناعي**: يقوم العرض التوضيحي باستدعاء `foundryLocalService.chat()` مع رسالة اختبار
-6. **طلب API**: تقوم الخدمة ببناء وإرسال طلب متوافق مع OpenAI إلى Foundry Local
-7. **معالجة الرد**: تستخرج الخدمة الرد الخاص بالذكاء الاصطناعي وتعيده
-8. **العرض**: يطبع التطبيق الرد وينهي التشغيل
+1. **بدء التشغيل**: يبدأ Spring Boot ويقرأ `application.properties`
+2. **إنشاء الخدمة**: تنشئ Spring الخدمة `FoundryLocalService` وتحقن قيم التكوين
+3. **الكشف عن النموذج**: إذا لم يتم تكوين نموذج، تستعلم الخدمة نقطة نهاية `/v1/models` في Foundry Local وتستخدم أول نموذج متاح تلقائيًا
+4. **إعداد العميل**: يقوم `@PostConstruct` بتهيئة عميل OpenAI للاتصال بـ Foundry Local
+5. **تنفيذ العرض التوضيحي**: ينفذ `CommandLineRunner` بعد بدء التشغيل
+6. **نداء AI**: يقوم العرض التوضيحي بنداء `foundryLocalService.chat()` مع رسالة اختبار
+7. **طلب API**: تبني الخدمة وترسل طلب متوافق مع OpenAI إلى Foundry Local
+8. **معالجة الاستجابة**: تستخرج الخدمة الرد وترجعه
+9. **العرض**: يطبع التطبيق الرد ثم يخرج
 
 ## إعداد Foundry Local
 
-لإعداد Foundry Local، اتبع الخطوات التالية:
+1. **قم بتثبيت Foundry Local** باستخدام التعليمات في قسم [المتطلبات المسبقة](#المتطلبات-المسبقة).
 
-1. **قم بتثبيت Foundry Local** باستخدام التعليمات في قسم [المتطلبات الأساسية](../../../../04-PracticalSamples/foundrylocal).
+2. **ابدأ الخدمة** (إذا لم تكن تعمل بالفعل):
+   ```bash
+   foundry service start
+   ```
 
-2. **تحقق من المنفذ المعين ديناميكيًا**. يقوم Foundry Local بتعيين منفذ تلقائيًا عند بدء التشغيل. يمكنك العثور على المنفذ باستخدام:
+3. **تحقق من حالة الخدمة** لتأكيد أنها تعمل وتدوين المنفذ:
    ```bash
    foundry service status
    ```
-   
-   **اختياري**: إذا كنت تفضل استخدام منفذ معين (مثل 5273)، يمكنك تكوينه يدويًا:
+
+4. **قم بتنزيل وتشغيل نموذج** (يتم التنزيل في التشغيل الأول، ويُخزن مؤقتًا للتشغيلات اللاحقة):
    ```bash
-   foundry service set --port 5273
+   foundry model run phi-4-mini
+   ```
+   يفتح هذا جلسة دردشة تفاعلية. يمكنك الخروج باستخدام `Ctrl+C`. يبقى النموذج محمّلًا في الخدمة.
+
+   > **نصيحة:** شغل `foundry model list` لرؤية جميع النماذج المتاحة. استبدل `phi-4-mini` بأي اسم مستعار من الكتالوج (مثلًا، `qwen2.5-0.5b` لنموذج أصغر/أسرع).
+
+5. **تحقق من تحميل النموذج:**
+   ```bash
+   foundry service ps
    ```
 
+6. **حدث `application.properties`** إذا لزم الأمر:
+   - عنوان الـ `base-url` الافتراضي (`http://localhost:5273/v1`) يتطابق مع منفذ CLI الافتراضي. حدّثه فقط إذا أظهر `foundry service status` منفذًا مختلفًا.
+   - يتم **الكشف التلقائي عن النموذج** عند بدء التشغيل — لا حاجة للتكوين.
 
-3. **قم بتنزيل نموذج الذكاء الاصطناعي** الذي تريد استخدامه، على سبيل المثال، `phi-3.5-mini`، باستخدام الأمر التالي:
-   ```bash
-   foundry model run phi-3.5-mini
-   ```
-
-
-4. **قم بتكوين ملف application.properties** ليتناسب مع إعدادات Foundry Local:
-   - قم بتحديث المنفذ في `base-url` (من الخطوة 2)، مع التأكد من أنه يتضمن `/v1` في النهاية
-   - قم بتحديث اسم النموذج ليشمل رقم الإصدار (تحقق باستخدام `foundry model list`)
-   
-   مثال:
    ```properties
    foundry.local.base-url=http://localhost:5273/v1
-   foundry.local.model=Phi-3.5-mini-instruct-cuda-gpu:1
+   # Model is auto-detected. Uncomment below to override:
+   # foundry.local.model=Phi-4-mini-instruct-cuda-gpu:5
    ```
-
 
 ## تشغيل التطبيق
 
-### الخطوة 1: بدء تشغيل Foundry Local
+### الخطوة 1: تأكد من تحميل نموذج في Foundry Local
 ```bash
-foundry model run phi-3.5-mini
+foundry service ps
+```
+إذا لم تُدرج نماذج، قم بتحميل واحد:
+```bash
+foundry model run phi-4-mini
 ```
 
+### الخطوة 2: بناء التطبيق وتشغيله
+في نافذة طرفية منفصلة:
+```bash
+cd 04-PracticalSamples/foundrylocal
+mvn spring-boot:run
+```
 
-### الخطوة 2: بناء وتشغيل التطبيق
+أو ابنِ وشغّل كملف JAR:
 ```bash
 mvn clean package
 java -jar target/foundry-local-spring-boot-0.0.1-SNAPSHOT.jar
 ```
 
-
-## المخرجات المتوقعة
+## الناتج المتوقع
 
 ```
 === Foundry Local Demo ===
 Calling Foundry Local service...
 Sending message: Hello! Can you tell me what you are and what model you're running?
 Response from Foundry Local:
-Hello! I'm Phi-3.5, a small language model created by Microsoft. I'm currently running 
-as the Phi-3.5-mini-instruct model, which is designed to be helpful, harmless, and honest 
-in my interactions. I can assist with a wide variety of tasks including answering 
-questions, helping with analysis, creative writing, coding, and general conversation. 
-Is there something specific you'd like help with today?
+Hello! I'm Phi, an AI developed by Microsoft. I can assist with a wide variety of 
+tasks including answering questions, helping with analysis, creative writing, coding, 
+and general conversation. How can I help you today?
 =========================
 ```
 
-
 ## الخطوات التالية
 
-للحصول على أمثلة إضافية، راجع [الفصل 04: أمثلة عملية](../README.md)
+لمزيد من الأمثلة، راجع [الفصل 04: عينات عملية](../README.md)
 
 ## استكشاف الأخطاء وإصلاحها
 
 ### المشاكل الشائعة
 
-**"Connection refused" أو "Service unavailable"**
-- تأكد من تشغيل Foundry Local: `foundry model list`
-- تحقق من المنفذ الفعلي الذي يستخدمه Foundry Local: `foundry service status`
-- قم بتحديث `application.properties` بالمنفذ الصحيح، مع التأكد من أن عنوان URL ينتهي بـ `/v1`
-- بدلاً من ذلك، قم بتعيين منفذ معين إذا كنت ترغب: `foundry service set --port 5273`
-- حاول إعادة تشغيل Foundry Local: `foundry model run phi-3.5-mini`
+**"الاتصال مرفوض" أو "الخدمة غير متوفرة"**
+- تحقق من الخدمة: `foundry service status`
+- أعد التشغيل إذا لزم الأمر: `foundry service restart`
+- تحقق أن المنفذ في `application.properties` يطابق مخرج `foundry service status`
+- تأكد من أن URL ينتهي بـ `/v1`: `http://localhost:5273/v1`
 
-**"Model not found" أو "404 Not Found"**
-- تحقق من النماذج المتاحة مع معرفاتها الدقيقة: `foundry model list`
-- قم بتحديث اسم النموذج في `application.properties` ليتطابق تمامًا، بما في ذلك رقم الإصدار (مثل `Phi-3.5-mini-instruct-cuda-gpu:1`)
-- تأكد من أن `base-url` يتضمن `/v1` في النهاية: `http://localhost:5273/v1`
-- قم بتنزيل النموذج إذا لزم الأمر: `foundry model run phi-3.5-mini`
+**"لم يتم العثور على نموذج" عند بدء التشغيل**
+- التطبيق يكتشف النموذج تلقائيًا. تأكد من تحميل نموذج واحد على الأقل: `foundry service ps`
+- إذا لم يتم تحميل أي نماذج: `foundry model run phi-4-mini`
+- إذا قمت بتعديل اسم النموذج في `application.properties`، تحقق من مطابقته للـ `foundry model list`
 
-**"400 Bad Request"**
-- تحقق من أن عنوان URL الأساسي يتضمن `/v1`: `http://localhost:5273/v1`
-- تأكد من أن معرف النموذج يتطابق تمامًا مع ما يظهر في `foundry model list`
-- تأكد من استخدام `maxCompletionTokens()` في الكود الخاص بك (وليس `maxTokens()` الذي تم إيقافه)
+**أخطاء "400 طلب سيئ"**
+- تحقق أن عنوان URL الأساسي يتضمن `/v1`: `http://localhost:5273/v1`
+- تأكد من استخدام `maxCompletionTokens()` بدلاً من `maxTokens()` (الطريقة المهجورة)
 
 **أخطاء تجميع Maven**
 - تأكد من وجود Java 21 أو أعلى: `java -version`
-- قم بتنظيف وإعادة البناء: `mvn clean compile`
-- تحقق من اتصال الإنترنت لتنزيل التبعيات
+- نظف وأعد البناء: `mvn clean compile`
+- تأكد من اتصال الإنترنت لتحميل الاعتماديات
 
-**التطبيق يبدأ ولكن لا توجد مخرجات**
-- تحقق من استجابة Foundry Local: تحقق من `http://localhost:5273/v1/models` أو قم بتشغيل `foundry service status`
-- تحقق من سجلات التطبيق للحصول على رسائل خطأ محددة
-- تأكد من أن النموذج قد تم تحميله بالكامل وجاهز
+**مشاكل اتصال الخدمة**
+- إذا ظهرت رسالة `Request to local service failed`، شغّل: `foundry service restart`
+- تحقق من النماذج المحملة: `foundry service ps`
+- عرض سجلات الخدمة: `foundry service diag`
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **إخلاء المسؤولية**:  
-تم ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الرسمي. للحصول على معلومات حاسمة، يُوصى بالترجمة البشرية الاحترافية. نحن غير مسؤولين عن أي سوء فهم أو تفسيرات خاطئة تنشأ عن استخدام هذه الترجمة.
+تمت ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى للدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر المعتمد. لأغراض المعلومات الحيوية، يُنصح بالترجمة الاحترافية البشرية. نحن غير مسؤولين عن أي سوء فهم أو تفسيرات خاطئة ناتجة عن استخدام هذه الترجمة.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

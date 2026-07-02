@@ -1,38 +1,42 @@
 # Core Generative AI Techniques Tutorial 
 
+[![Core Generative AI Techniques](https://img.youtube.com/vi/ZUgN6gTjlPE/0.jpg)](https://www.youtube.com/watch?v=ZUgN6gTjlPE "Core Generative AI Techniques")
+
+> **Video overview:** [Watch "Core Generative AI Techniques" on YouTube](https://www.youtube.com/watch?v=ZUgN6gTjlPE), or click the thumbnail above.
+
 ## Table of Contents
 
-- [Prerequisites](../../../03-CoreGenerativeAITechniques)
-- [Getting Started](../../../03-CoreGenerativeAITechniques)
-  - [Step 1: Set Your Environment Variable](../../../03-CoreGenerativeAITechniques)
-  - [Step 2: Navigate to the Examples Directory](../../../03-CoreGenerativeAITechniques)
-- [Model Selection Guide](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 1: LLM Completions and Chat](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 2: Function Calling](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 3: RAG (Retrieval-Augmented Generation)](../../../03-CoreGenerativeAITechniques)
-- [Tutorial 4: Responsible AI](../../../03-CoreGenerativeAITechniques)
-- [Common Patterns Across Examples](../../../03-CoreGenerativeAITechniques)
-- [Next Steps](../../../03-CoreGenerativeAITechniques)
-- [Troubleshooting](../../../03-CoreGenerativeAITechniques)
-  - [Common Issues](../../../03-CoreGenerativeAITechniques)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [Step 1: Set Your Environment Variable](#step-1-set-your-environment-variable)
+  - [Step 2: Navigate to the Examples Directory](#step-2-navigate-to-the-examples-directory)
+- [Model Selection Guide](#model-selection-guide)
+- [Tutorial 1: LLM Completions and Chat](#tutorial-1-llm-completions-and-chat)
+- [Tutorial 2: Function Calling](#tutorial-2-function-calling)
+- [Tutorial 3: RAG (Retrieval-Augmented Generation)](#tutorial-3-rag-retrieval-augmented-generation)
+- [Tutorial 4: Responsible AI](#tutorial-4-responsible-ai)
+- [Common Patterns Across Examples](#common-patterns-across-examples)
+- [Next Steps](#next-steps)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
 
 
 ## Overview
 
-This tutorial provides practical examples of key generative AI techniques using Java and GitHub Models. You'll learn how to interact with Large Language Models (LLMs), implement function calling, use retrieval-augmented generation (RAG), and apply responsible AI practices.
+This tutorial provides hands-on examples of core generative AI techniques using Java and GitHub Models. You will learn how to interact with Large Language Models (LLMs), implement function calling, use retrieval-augmented generation (RAG), and apply responsible AI practices.
 
 ## Prerequisites
 
-Before you begin, ensure you have:
+Before starting, make sure you have:
 - Java 21 or higher installed
-- Maven for managing dependencies
+- Maven for dependency management
 - A GitHub account with a personal access token (PAT)
 
 ## Getting Started
 
 ### Step 1: Set Your Environment Variable
 
-Start by setting your GitHub token as an environment variable. This token lets you access GitHub Models for free.
+First, you need to set your GitHub token as an environment variable. This token allows you to access GitHub Models for free.
 
 **Windows (Command Prompt):**
 ```cmd
@@ -57,22 +61,22 @@ cd 03-CoreGenerativeAITechniques/examples/
 
 ## Model Selection Guide
 
-These examples use different models tailored to specific use cases:
+These examples use different models optimized for their specific use cases:
 
 **GPT-4.1-nano** (Completions example):
-- Extremely fast and cost-effective
-- Great for basic text completion and chat
+- Ultra-fast and ultra-cheap
+- Perfect for basic text completion and chat
 - Ideal for learning fundamental LLM interaction patterns
 
 **GPT-4o-mini** (Functions, RAG, and Responsible AI examples):
-- A compact yet versatile "omni workhorse" model
-- Supports advanced features across vendors:
+- Small but fully-featured "omni workhorse" model
+- Reliably supports advanced capabilities across vendors:
   - Vision processing
   - JSON/structured outputs  
   - Tool/function calling
-- Offers more capabilities than nano, ensuring consistent results for advanced features
+- More capabilities than nano, ensuring examples work consistently
 
-> **Why this matters**: While "nano" models are excellent for speed and affordability, "mini" models are a safer choice when you need reliable access to advanced features like function calling, which may not be fully supported by all hosting providers for nano variants.
+> **Why this matters**: While "nano" models are great for speed and cost, "mini" models are the safer choice when you need reliable access to advanced features like function calling, which may not be fully exposed by all hosting providers for nano variants.
 
 ## Tutorial 1: LLM Completions and Chat
 
@@ -80,7 +84,7 @@ These examples use different models tailored to specific use cases:
 
 ### What This Example Teaches
 
-This example covers the basics of interacting with Large Language Models (LLMs) via the OpenAI API. You'll learn how to initialize the client with GitHub Models, structure system and user prompts, manage conversation history, and adjust parameters to control response length and creativity.
+This example demonstrates the core mechanics of Large Language Model (LLM) interaction through the OpenAI API, including client initialization with GitHub Models, message structure patterns for system and user prompts, conversation state management through message history accumulation, and parameter tuning for controlling response length and creativity levels.
 
 ### Key Code Concepts
 
@@ -93,7 +97,7 @@ OpenAIClient client = new OpenAIClientBuilder()
     .buildClient();
 ```
 
-This establishes a connection to GitHub Models using your token.
+This creates a connection to GitHub Models using your token.
 
 #### 2. Simple Completion
 ```java
@@ -117,7 +121,7 @@ messages.add(new ChatRequestAssistantMessage(aiResponse));
 messages.add(new ChatRequestUserMessage("Follow-up question"));
 ```
 
-The AI retains context only if you include previous messages in subsequent requests.
+The AI remembers previous messages only if you include them in subsequent requests.
 
 ### Run the Example
 ```bash
@@ -126,9 +130,9 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions
 
 ### What Happens When You Run It
 
-1. **Simple Completion**: The AI answers a Java-related question based on system prompt guidance.
-2. **Multi-turn Chat**: The AI maintains context across multiple questions.
-3. **Interactive Chat**: You can engage in a real conversation with the AI.
+1. **Simple Completion**: AI answers a Java question with system prompt guidance
+2. **Multi-turn Chat**: AI maintains context across multiple questions
+3. **Interactive Chat**: You can have a real conversation with the AI
 
 ## Tutorial 2: Function Calling
 
@@ -136,9 +140,9 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.completions
 
 ### What This Example Teaches
 
-Function calling allows AI models to request external tools and APIs through a structured protocol. The model interprets natural language requests, determines the necessary function calls with appropriate parameters using JSON Schema definitions, and processes the results to generate contextual responses. Developers retain control over function execution for security and reliability.
+Function calling enables AI models to request execution of external tools and APIs through a structured protocol where the model analyzes natural language requests, determines required function calls with appropriate parameters using JSON Schema definitions, and processes returned results to generate contextual responses, while the actual function execution remains under developer control for security and reliability.
 
-> **Note**: This example uses `gpt-4o-mini` because function calling requires dependable tool-calling capabilities that may not be fully supported in nano models across all hosting platforms.
+> **Note**: This example uses `gpt-4o-mini` because function calling requires reliable tool calling capabilities that may not be fully exposed in nano models on all hosting platforms.
 
 ### Key Code Concepts
 
@@ -163,7 +167,7 @@ weatherFunction.setParameters(BinaryData.fromString("""
     """));
 ```
 
-This defines the available functions and their usage.
+This tells the AI what functions are available and how to use them.
 
 #### 2. Function Execution Flow
 ```java
@@ -204,8 +208,8 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.F
 
 ### What Happens When You Run It
 
-1. **Weather Function**: The AI requests weather data for Seattle, you provide it, and the AI formats a response.
-2. **Calculator Function**: The AI requests a calculation (15% of 240), you compute it, and the AI explains the result.
+1. **Weather Function**: AI requests weather data for Seattle, you provide it, AI formats a response
+2. **Calculator Function**: AI requests a calculation (15% of 240), you compute it, AI explains the result
 
 ## Tutorial 3: RAG (Retrieval-Augmented Generation)
 
@@ -213,9 +217,9 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.functions.F
 
 ### What This Example Teaches
 
-Retrieval-Augmented Generation (RAG) combines information retrieval with language generation. It injects external document context into AI prompts, enabling the model to provide accurate answers based on specific knowledge sources rather than relying solely on its training data. This approach ensures clear boundaries between user queries and authoritative information sources through effective prompt engineering.
+Retrieval-Augmented Generation (RAG) combines information retrieval with language generation by injecting external document context into AI prompts, enabling models to provide accurate answers based on specific knowledge sources rather than potentially outdated or inaccurate training data, while maintaining clear boundaries between user queries and authoritative information sources through strategic prompt engineering.
 
-> **Note**: This example uses `gpt-4o-mini` to ensure reliable handling of structured prompts and consistent processing of document context, which is essential for effective RAG implementations.
+> **Note**: This example uses `gpt-4o-mini` to ensure reliable processing of structured prompts and consistent handling of document context, which is crucial for effective RAG implementations.
 
 ### Key Code Concepts
 
@@ -237,7 +241,7 @@ List<ChatRequestMessage> messages = List.of(
 );
 ```
 
-Triple quotes help the AI distinguish between context and the question.
+The triple quotes help AI distinguish between context and question.
 
 #### 3. Safe Response Handling
 ```java
@@ -249,7 +253,7 @@ if (response != null && response.getChoices() != null && !response.getChoices().
 }
 ```
 
-Always validate API responses to avoid crashes.
+Always validate API responses to prevent crashes.
 
 ### Run the Example
 ```bash
@@ -258,9 +262,9 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleR
 
 ### What Happens When You Run It
 
-1. The program loads `document.txt` (containing information about GitHub Models).
-2. You ask a question about the document.
-3. The AI answers based solely on the document content, not its general knowledge.
+1. The program loads `document.txt` (contains info about GitHub Models)
+2. You ask a question about the document
+3. AI answers based only on the document content, not its general knowledge
 
 Try asking: "What is GitHub Models?" vs "What is the weather like?"
 
@@ -270,9 +274,9 @@ Try asking: "What is GitHub Models?" vs "What is the weather like?"
 
 ### What This Example Teaches
 
-This example highlights the importance of safety measures in AI applications. It demonstrates how modern AI safety systems work through two mechanisms: hard blocks (HTTP 400 errors from safety filters) and soft refusals (polite "I can't assist with that" responses from the model). You'll learn how production AI applications should handle content policy violations gracefully through exception handling, refusal detection, user feedback mechanisms, and fallback response strategies.
+The Responsible AI example showcases the importance of implementing safety measures in AI applications. It demonstrates how modern AI safety systems work through two primary mechanisms: hard blocks (HTTP 400 errors from safety filters) and soft refusals (polite "I can't assist with that" responses from the model itself). This example shows how production AI applications should gracefully handle content policy violations through proper exception handling, refusal detection, user feedback mechanisms, and fallback response strategies.
 
-> **Note**: This example uses `gpt-4o-mini` because it provides consistent and reliable safety responses across various types of potentially harmful content, ensuring the safety mechanisms are properly demonstrated.
+> **Note**: This example uses `gpt-4o-mini` because it provides more consistent and reliable safety responses across different types of potentially harmful content, ensuring the safety mechanisms are properly demonstrated.
 
 ### Key Code Concepts
 
@@ -334,11 +338,11 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsible
 
 ### What Happens When You Run It
 
-The program tests various harmful prompts and demonstrates how the AI safety system works through two mechanisms:
+The program tests various harmful prompts and shows how the AI safety system works through two mechanisms:
 
-1. **Hard Blocks**: HTTP 400 errors when content is blocked by safety filters before reaching the model.
-2. **Soft Refusals**: The model responds with polite refusals like "I can't assist with that" (common with modern models).
-3. **Safe Content**: Legitimate requests are processed normally.
+1. **Hard Blocks**: HTTP 400 errors when content is blocked by safety filters before reaching the model
+2. **Soft Refusals**: The model responds with polite refusals like "I can't assist with that" (most common with modern models)
+3. **Safe Content**: Allows legitimate requests to be generated normally
 
 Expected output for harmful prompts:
 ```
@@ -349,7 +353,7 @@ Status: [REFUSED BY MODEL]
 ✓ This is GOOD - the AI refused to generate harmful content!
 ```
 
-This shows that **both hard blocks and soft refusals indicate the safety system is functioning correctly**.
+This demonstrates that **both hard blocks and soft refusals indicate the safety system is working correctly**.
 
 ## Common Patterns Across Examples
 
@@ -386,7 +390,7 @@ List<ChatRequestMessage> messages = List.of(
 
 ## Next Steps
 
-Ready to apply these techniques? Start building real applications!
+Ready to put these techniques to work? Let's build some real applications!
 
 [Chapter 04: Practical samples](../04-PracticalSamples/README.md)
 
@@ -395,19 +399,21 @@ Ready to apply these techniques? Start building real applications!
 ### Common Issues
 
 **"GITHUB_TOKEN not set"**
-- Ensure you set the environment variable.
-- Verify your token has `models:read` scope.
+- Make sure you set the environment variable
+- Verify your token has `models:read` scope
 
 **"No response from API"**
-- Check your internet connection.
-- Verify your token is valid.
-- Check if you've exceeded rate limits.
+- Check your internet connection
+- Verify your token is valid
+- Check if you've hit rate limits
 
 **Maven compilation errors**
-- Ensure you have Java 21 or higher.
-- Run `mvn clean compile` to refresh dependencies.
+- Ensure you have Java 21 or higher
+- Run `mvn clean compile` to refresh dependencies
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
