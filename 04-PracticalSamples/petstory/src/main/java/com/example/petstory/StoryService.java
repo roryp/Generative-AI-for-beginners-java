@@ -2,15 +2,19 @@ package com.example.petstory;
 
 import com.openai.client.OpenAIClient;
 import com.openai.client.okhttp.OpenAIOkHttpClient;
+import com.openai.credential.BearerTokenCredential;
 import com.openai.models.chat.completions.*;
+import com.azure.identity.AuthenticationUtil;
+import com.azure.identity.DefaultAzureCredential;
+import com.azure.identity.DefaultAzureCredentialBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Value;
 
 /**
- * Service class that handles story generation using GitHub Models via OpenAI SDK.
- * This service communicates with GitHub Models to generate creative,
+ * Service class that handles story generation using Azure AI Foundry via the OpenAI SDK.
+ * This service communicates with an Azure AI Foundry model to generate creative,
  * family-friendly pet stories based on user descriptions.
  */
 @Service
@@ -20,21 +24,32 @@ public class StoryService {
     private final OpenAIClient openAIClient;
     private final String modelName;
 
-    public StoryService(@Value("${github.models.endpoint:https://models.github.ai/inference}") String endpoint,
-                       @Value("${github.models.model:openai/gpt-4.1-nano}") String modelName) {
+    public StoryService(@Value("${azure.openai.endpoint:}") String endpoint,
+                       @Value("${azure.openai.deployment:gpt-4o-mini}") String modelName) {
         this.modelName = modelName;
-        
-        String githubToken = System.getenv("GITHUB_TOKEN");
-        if (githubToken == null || githubToken.isBlank()) {
-            throw new IllegalStateException("GITHUB_TOKEN environment variable must be set with models:read scope");
+
+        if (endpoint == null || endpoint.isBlank()) {
+            endpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
         }
-        
+        if (endpoint == null || endpoint.isBlank()) {
+            throw new IllegalStateException(
+                    "Set AZURE_OPENAI_ENDPOINT to your Azure AI Foundry endpoint. Provision it with 'azd up' "
+                            + "(see 02-SetupDevEnvironment) and sign in with 'az login' (keyless auth).");
+        }
+
+        // Foundry's OpenAI-compatible endpoint lives under /openai/v1/.
+        String baseUrl = (endpoint.endsWith("/") ? endpoint : endpoint + "/") + "openai/v1/";
+
+        // Keyless authentication with Microsoft Entra ID (no API key).
+        // DefaultAzureCredential uses your 'az login' session locally, or a managed identity in Azure.
+        DefaultAzureCredential credential = new DefaultAzureCredentialBuilder().build();
         this.openAIClient = OpenAIOkHttpClient.builder()
-                .baseUrl(endpoint)
-                .apiKey(githubToken)
+                .baseUrl(baseUrl)
+                .credential(BearerTokenCredential.create(
+                        AuthenticationUtil.getBearerTokenSupplier(credential, "https://ai.azure.com/.default")))
                 .build();
-        
-        logger.info("StoryService initialized with GitHub Models endpoint: {} and model: {}", endpoint, modelName);
+
+        logger.info("StoryService initialized with Azure AI Foundry endpoint: {} and deployment: {}", baseUrl, modelName);
     }
 
     public String generateStory(String description) {
@@ -64,19 +79,19 @@ public class StoryService {
                     .temperature(0.8)
                     .build();
 
-            logger.debug("Sending request to GitHub Models for story generation");
+            logger.debug("Sending request to Azure AI Foundry for story generation");
             ChatCompletion response = openAIClient.chat().completions().create(params);
             
             if (response.choices().isEmpty()) {
-                logger.error("Empty response received from GitHub Models");
-                throw new RuntimeException("Empty response from GitHub Models service");
+                logger.error("Empty response received from the model");
+                throw new RuntimeException("Empty response from the Azure AI Foundry model");
             }
             
             String result = response.choices().get(0).message().content().orElse("");
             
             if (result.trim().isEmpty()) {
-                logger.error("Empty content received from GitHub Models");
-                throw new RuntimeException("Empty content from GitHub Models service");
+                logger.error("Empty content received from the model");
+                throw new RuntimeException("Empty content from the Azure AI Foundry model");
             }
             
             logger.debug("Generated story of length: {}", result.length());

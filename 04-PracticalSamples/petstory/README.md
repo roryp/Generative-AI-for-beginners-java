@@ -20,7 +20,7 @@
 Before starting, make sure you have:
 - Java 21 or higher installed
 - Maven for dependency management
-- A GitHub account with a personal access token (PAT) with `models:read` scope
+- An Azure AI Foundry model deployment (provision it with `azd up` — see [Chapter 2](../../02-SetupDevEnvironment/getting-started-azure-openai.md)), signed in with `az login` (keyless auth)
 - Basic understanding of Java, Spring Boot, and web development
 
 ## Understanding the Project Structure
@@ -151,7 +151,7 @@ private String generateFallbackStory(String description) {
 
 **File:** `StoryService.java`
 
-This service communicates with GitHub Models to generate stories:
+This service communicates with Azure AI Foundry to generate stories using keyless authentication:
 
 ```java
 @Service
@@ -160,18 +160,22 @@ public class StoryService {
     private final OpenAIClient openAIClient;
     private final String modelName;
     
-    public StoryService(@Value("${github.models.endpoint}") String endpoint,
-                       @Value("${github.models.model}") String modelName) {
-        
-        String githubToken = System.getenv("GITHUB_TOKEN");
-        if (githubToken == null || githubToken.isBlank()) {
-            throw new IllegalStateException("GITHUB_TOKEN environment variable must be set");
+    public StoryService(@Value("${azure.openai.endpoint:}") String endpoint,
+                       @Value("${azure.openai.deployment:gpt-4o-mini}") String modelName) {
+        this.modelName = modelName;
+        if (endpoint == null || endpoint.isBlank()) {
+            endpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
         }
         
-        // Create OpenAI client configured for GitHub Models
+        // Foundry's OpenAI-compatible endpoint lives under /openai/v1/
+        String baseUrl = (endpoint.endsWith("/") ? endpoint : endpoint + "/") + "openai/v1/";
+        
+        // Keyless authentication with Microsoft Entra ID (no API key)
+        DefaultAzureCredential credential = new DefaultAzureCredentialBuilder().build();
         this.openAIClient = OpenAIOkHttpClient.builder()
-                .baseUrl(endpoint)
-                .apiKey(githubToken)
+                .baseUrl(baseUrl)
+                .credential(BearerTokenCredential.create(
+                        AuthenticationUtil.getBearerTokenSupplier(credential, "https://ai.azure.com/.default")))
                 .build();
     }
     
@@ -201,7 +205,7 @@ public class StoryService {
 
 **Key components:**
 
-1. **OpenAI Client**: Uses the official OpenAI Java SDK configured for GitHub Models
+1. **OpenAI Client**: Uses the official OpenAI Java SDK configured for Azure AI Foundry (keyless)
 2. **System Prompt**: Sets the AI's behavior to write family-friendly pet stories
 3. **User Prompt**: Tells the AI exactly what story to write based on the description
 4. **Parameters**: Controls story length and creativity level
@@ -316,43 +320,46 @@ spring.servlet.multipart.max-request-size=10MB
 # Logging configuration
 logging.level.com.example.petstory=INFO
 
-# GitHub Models configuration
-github.models.endpoint=https://models.github.ai/inference
-github.models.model=openai/gpt-4.1-nano
+# Azure AI Foundry (keyless) configuration
+azure.openai.endpoint=${AZURE_OPENAI_ENDPOINT:}
+azure.openai.deployment=${AZURE_OPENAI_DEPLOYMENT:gpt-4o-mini}
 ```
 
 **Configuration explained:**
 
 1. **File Upload**: Allows images up to 10MB
 2. **Logging**: Controls what information is logged during execution
-3. **GitHub Models**: Specifies which AI model and endpoint to use
+3. **Azure AI Foundry**: Specifies the endpoint and model deployment to use (keyless auth)
 4. **Security**: Error handling configuration to avoid exposing sensitive information
 
 ## Running the Application
 
-### Step 1: Set Your GitHub Token
+### Step 1: Sign In and Set Your Endpoint
 
-First, you need to set your GitHub token as an environment variable:
+Authentication is keyless (Microsoft Entra ID), so there's no API key. Sign in and set your Foundry endpoint:
 
 **Windows (Command Prompt):**
 ```cmd
-set GITHUB_TOKEN=your_github_token_here
+az login
+set AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 ```
 
 **Windows (PowerShell):**
 ```powershell
-$env:GITHUB_TOKEN="your_github_token_here"
+az login
+$env:AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
 ```
 
 **Linux/macOS:**
 ```bash
-export GITHUB_TOKEN=your_github_token_here
+az login
+export AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 ```
 
 **Why this is needed:**
-- GitHub Models requires authentication to access AI models
-- Using environment variables keeps sensitive tokens out of source code
-- The `models:read` scope provides access to AI inference
+- Azure AI Foundry uses Microsoft Entra ID to authenticate inference requests
+- Keyless auth means no secrets in your source code or environment
+- Your account needs the **Cognitive Services OpenAI User** role on the resource
 
 ### Step 2: Build and Run
 
@@ -388,7 +395,7 @@ Here's the complete flow when you generate a pet story:
 1. **User Input**: You describe your pet on the web form
 2. **Form Submission**: Browser sends POST request to `/generate-story`
 3. **Controller Processing**: `PetController` validates and sanitizes the input
-4. **AI Service Call**: `StoryService` sends request to GitHub Models API
+4. **AI Service Call**: `StoryService` sends request to the Azure AI Foundry model
 5. **Story Generation**: AI generates a creative story based on the description
 6. **Response Handling**: Controller receives the story and adds it to the model
 7. **Template Rendering**: Thymeleaf renders `result.html` with the story
@@ -403,14 +410,16 @@ If the AI service fails:
 
 ## Understanding the AI Integration
 
-### GitHub Models API
-The application uses GitHub Models, which provides free access to various AI models:
+### Azure AI Foundry (keyless)
+The application uses Azure AI Foundry with keyless authentication (Microsoft Entra ID):
 
 ```java
-// Authentication with GitHub token
+// Keyless authentication - no API key
+DefaultAzureCredential credential = new DefaultAzureCredentialBuilder().build();
 this.openAIClient = OpenAIOkHttpClient.builder()
-    .baseUrl("https://models.github.ai/inference")
-    .apiKey(githubToken)
+    .baseUrl(endpoint + "openai/v1/")
+    .credential(BearerTokenCredential.create(
+        AuthenticationUtil.getBearerTokenSupplier(credential, "https://ai.azure.com/.default")))
     .build();
 ```
 

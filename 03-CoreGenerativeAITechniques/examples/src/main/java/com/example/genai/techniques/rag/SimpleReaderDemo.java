@@ -3,14 +3,11 @@ package com.example.genai.techniques.rag;
 import com.azure.ai.openai.OpenAIClient;
 import com.azure.ai.openai.OpenAIClientBuilder;
 import com.azure.ai.openai.models.*;
-import com.azure.core.credential.AccessToken;
-import com.azure.core.credential.TokenCredential;
-import reactor.core.publisher.Mono;
+import com.azure.identity.DefaultAzureCredentialBuilder;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,14 +25,13 @@ import java.util.Scanner;
 public class SimpleReaderDemo {
 
     public static void main(String[] args) throws IOException {
-        // GitHub Models endpoint - provides free access to various AI models for learning
-        String endpoint = "https://models.inference.ai.azure.com";
-        // PAT = Personal Access Token - this authenticates us with GitHub Models
-        String apiKey = System.getenv("GITHUB_TOKEN");
-        
-        // Validate API key
-        if (apiKey == null || apiKey.trim().isEmpty()) {
-            System.err.println("Error: GITHUB_TOKEN environment variable is not set or is empty.");
+        // Azure AI Foundry endpoint (for example https://<resource>.openai.azure.com/)
+        String endpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
+
+        // Validate endpoint
+        if (endpoint == null || endpoint.trim().isEmpty()) {
+            System.err.println("Error: AZURE_OPENAI_ENDPOINT environment variable is not set or is empty.");
+            System.err.println("Provision it with 'azd up' (see 02-SetupDevEnvironment), then sign in with 'az login'.");
             System.exit(1);
         }
 
@@ -72,11 +68,10 @@ public class SimpleReaderDemo {
                 return;
             }
 
-            // Create the OpenAI client using Azure's SDK
-            TokenCredential credential = new StaticTokenCredential(apiKey);
+            // Create the Azure OpenAI client using keyless authentication (Microsoft Entra ID).
             OpenAIClient chatClient = new OpenAIClientBuilder()
                     .endpoint(endpoint)
-                    .credential(credential)
+                    .credential(new DefaultAzureCredentialBuilder().build())
                     .buildClient();
 
             // GENERATION STEP: Construct the prompt with both context and question
@@ -89,7 +84,7 @@ public class SimpleReaderDemo {
                     new ChatRequestUserMessage("CONTEXT:\n\"\"\"\n" + doc + "\n\"\"\"\n\nQUESTION:\n" + question)
             );
 
-            String modelId = "gpt-4o-mini";
+            String modelId = System.getenv().getOrDefault("AZURE_OPENAI_DEPLOYMENT", "gpt-4o-mini");
             ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
                     .setModel(modelId);
 
@@ -117,26 +112,6 @@ public class SimpleReaderDemo {
 
             // Force proper cleanup to avoid thread lingering warnings
             System.exit(0);
-        }
-    }
-
-    /**
-     * Custom implementation of TokenCredential for GitHub Models authentication.
-     * This is a simplified version that just wraps our GitHub token.
-     * In production RAG systems, you'd use more sophisticated credential management.
-     */
-    private static final class StaticTokenCredential implements TokenCredential {
-        private final String token;
-        
-        StaticTokenCredential(String token) { 
-            this.token = token; 
-        }
-        
-        @Override
-        public Mono<AccessToken> getToken(com.azure.core.credential.TokenRequestContext request) {
-            // Return our token wrapped in an AccessToken object
-            // Setting expiration to 1 year from now (for demo purposes)
-            return Mono.just(new AccessToken(token, OffsetDateTime.now().plusYears(1)));
         }
     }
 }

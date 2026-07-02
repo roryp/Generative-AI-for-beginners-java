@@ -1,14 +1,10 @@
 # Core Generative AI Techniques Tutorial 
 
-[![Core Generative AI Techniques](https://img.youtube.com/vi/ZUgN6gTjlPE/0.jpg)](https://www.youtube.com/watch?v=ZUgN6gTjlPE "Core Generative AI Techniques")
-
-> **Video overview:** [Watch "Core Generative AI Techniques" on YouTube](https://www.youtube.com/watch?v=ZUgN6gTjlPE), or click the thumbnail above.
-
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-  - [Step 1: Set Your Environment Variable](#step-1-set-your-environment-variable)
+  - [Step 1: Configure Your Foundry Endpoint](#step-1-configure-your-foundry-endpoint)
   - [Step 2: Navigate to the Examples Directory](#step-2-navigate-to-the-examples-directory)
 - [Model Selection Guide](#model-selection-guide)
 - [Tutorial 1: LLM Completions and Chat](#tutorial-1-llm-completions-and-chat)
@@ -23,35 +19,42 @@
 
 ## Overview
 
-This tutorial provides hands-on examples of core generative AI techniques using Java and GitHub Models. You will learn how to interact with Large Language Models (LLMs), implement function calling, use retrieval-augmented generation (RAG), and apply responsible AI practices.
+This tutorial provides hands-on examples of core generative AI techniques using Java and Azure AI Foundry. You will learn how to interact with Large Language Models (LLMs), implement function calling, use retrieval-augmented generation (RAG), and apply responsible AI practices.
 
 ## Prerequisites
 
 Before starting, make sure you have:
 - Java 21 or higher installed
 - Maven for dependency management
-- A GitHub account with a personal access token (PAT)
+- An Azure AI Foundry model deployment (provision it with `azd up` — see [Chapter 2](../02-SetupDevEnvironment/getting-started-azure-openai.md))
+- The [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli), signed in with `az login` (keyless auth)
 
 ## Getting Started
 
-### Step 1: Set Your Environment Variable
+> **Fastest way — run in VS Code (F5):** After `azd up` (Chapter 2) and `az login`, open **Run and Debug** (`Ctrl+Shift+D`), pick a config such as **Ch03: LLM Completions & Chat**, and press **F5**. The endpoint is loaded automatically from the `.env` that `azd up` created — so you can skip Step 1 below. For the interactive chat, type in the terminal and enter `exit` to quit. Run configs live in [`.vscode/launch.json`](../.vscode/launch.json).
+>
+> Prefer the command line? Follow Step 1 and Step 2 below.
 
-First, you need to set your GitHub token as an environment variable. This token allows you to access GitHub Models for free.
+### Step 1: Configure Your Foundry Endpoint
+
+These examples authenticate to Azure AI Foundry with **keyless authentication** (Microsoft Entra ID). Sign in with `az login`, then set your Foundry endpoint as an environment variable. If you provisioned with `azd up`, get the value with `azd env get-value AZURE_OPENAI_ENDPOINT`.
 
 **Windows (Command Prompt):**
 ```cmd
-set GITHUB_TOKEN=your_github_token_here
+set AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 ```
 
 **Windows (PowerShell):**
 ```powershell
-$env:GITHUB_TOKEN="your_github_token_here"
+$env:AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
 ```
 
 **Linux/macOS:**
 ```bash
-export GITHUB_TOKEN=your_github_token_here
+export AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 ```
+
+> The examples use the `gpt-4o-mini` deployment by default. Override it with the `AZURE_OPENAI_DEPLOYMENT` environment variable.
 
 ### Step 2: Navigate to the Examples Directory
 
@@ -61,22 +64,17 @@ cd 03-CoreGenerativeAITechniques/examples/
 
 ## Model Selection Guide
 
-These examples use different models optimized for their specific use cases:
+All of these examples use the **`gpt-4o-mini`** deployment provisioned in [Chapter 2](../02-SetupDevEnvironment/getting-started-azure-openai.md):
 
-**GPT-4.1-nano** (Completions example):
-- Ultra-fast and ultra-cheap
-- Perfect for basic text completion and chat
-- Ideal for learning fundamental LLM interaction patterns
-
-**GPT-4o-mini** (Functions, RAG, and Responsible AI examples):
+**GPT-4o-mini:**
 - Small but fully-featured "omni workhorse" model
-- Reliably supports advanced capabilities across vendors:
+- Reliably supports advanced capabilities:
   - Vision processing
-  - JSON/structured outputs  
+  - JSON/structured outputs
   - Tool/function calling
-- More capabilities than nano, ensuring examples work consistently
+- Fast and cost-effective, while still exposing the features these tutorials need
 
-> **Why this matters**: While "nano" models are great for speed and cost, "mini" models are the safer choice when you need reliable access to advanced features like function calling, which may not be fully exposed by all hosting providers for nano variants.
+> **Tip**: The deployment name is read from the `AZURE_OPENAI_DEPLOYMENT` environment variable (default `gpt-4o-mini`), so you can point the examples at a different deployment without changing code.
 
 ## Tutorial 1: LLM Completions and Chat
 
@@ -84,20 +82,20 @@ These examples use different models optimized for their specific use cases:
 
 ### What This Example Teaches
 
-This example demonstrates the core mechanics of Large Language Model (LLM) interaction through the OpenAI API, including client initialization with GitHub Models, message structure patterns for system and user prompts, conversation state management through message history accumulation, and parameter tuning for controlling response length and creativity levels.
+This example demonstrates the core mechanics of Large Language Model (LLM) interaction through the Azure OpenAI API, including keyless client initialization with Azure AI Foundry, message structure patterns for system and user prompts, conversation state management through message history accumulation, and parameter tuning for controlling response length and creativity levels.
 
 ### Key Code Concepts
 
 #### 1. Client Setup
 ```java
-// Create the AI client
+// Create the AI client using keyless auth (Microsoft Entra ID)
 OpenAIClient client = new OpenAIClientBuilder()
-    .endpoint("https://models.inference.ai.azure.com")
-    .credential(new StaticTokenCredential(pat))
+    .endpoint(System.getenv("AZURE_OPENAI_ENDPOINT"))
+    .credential(new DefaultAzureCredentialBuilder().build())
     .buildClient();
 ```
 
-This creates a connection to GitHub Models using your token.
+This creates a connection to Azure AI Foundry using your `az login` credentials — no API key required.
 
 #### 2. Simple Completion
 ```java
@@ -109,7 +107,7 @@ List<ChatRequestMessage> messages = List.of(
 );
 
 ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
-    .setModel("gpt-4.1-nano")  // Fast, cost-effective model for basic completions
+    .setModel("gpt-4o-mini")   // Your Foundry deployment name
     .setMaxTokens(200)         // Limit response length
     .setTemperature(0.7);      // Control creativity (0.0-1.0)
 ```
@@ -262,15 +260,15 @@ mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.rag.SimpleR
 
 ### What Happens When You Run It
 
-1. The program loads `document.txt` (contains info about GitHub Models)
+1. The program loads `document.txt` (contains info about Azure AI Foundry)
 2. You ask a question about the document
 3. AI answers based only on the document content, not its general knowledge
 
-Try asking: "What is GitHub Models?" vs "What is the weather like?"
+Try asking: "What is Azure AI Foundry?" vs "What is the weather like?"
 
 ## Tutorial 4: Responsible AI
 
-**File:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleGithubModels.java`
+**File:** `src/main/java/com/example/genai/techniques/responsibleai/ResponsibleAIDemo.java`
 
 ### What This Example Teaches
 
@@ -333,7 +331,7 @@ private boolean isRefusalResponse(String response) {
 
 ### Run the Example
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
+mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleAIDemo"
 ```
 
 ### What Happens When You Run It
@@ -358,14 +356,12 @@ This demonstrates that **both hard blocks and soft refusals indicate the safety 
 ## Common Patterns Across Examples
 
 ### Authentication Pattern
-All examples use this pattern to authenticate with GitHub Models:
+All examples use this keyless pattern to authenticate with Azure AI Foundry:
 
 ```java
-String pat = System.getenv("GITHUB_TOKEN");
-TokenCredential credential = new StaticTokenCredential(pat);
 OpenAIClient client = new OpenAIClientBuilder()
-    .endpoint("https://models.inference.ai.azure.com")
-    .credential(credential)
+    .endpoint(System.getenv("AZURE_OPENAI_ENDPOINT"))
+    .credential(new DefaultAzureCredentialBuilder().build())
     .buildClient();
 ```
 
@@ -398,14 +394,14 @@ Ready to put these techniques to work? Let's build some real applications!
 
 ### Common Issues
 
-**"GITHUB_TOKEN not set"**
+**"AZURE_OPENAI_ENDPOINT not set"**
 - Make sure you set the environment variable
-- Verify your token has `models:read` scope
+- Run `az login` — authentication is keyless (Microsoft Entra ID)
 
-**"No response from API"**
+**"No response from API" / 401 / 403**
 - Check your internet connection
-- Verify your token is valid
-- Check if you've hit rate limits
+- Verify you're signed in with `az login` and have the Cognitive Services OpenAI User role
+- Check if you've hit deployment quota limits
 
 **Maven compilation errors**
 - Ensure you have Java 21 or higher

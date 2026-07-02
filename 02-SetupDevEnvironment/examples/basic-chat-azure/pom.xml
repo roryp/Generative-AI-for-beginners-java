@@ -20,7 +20,7 @@
     
     <properties>
         <java.version>21</java.version>
-        <spring-ai.version>1.0.0-M3</spring-ai.version>
+        <spring-ai.version>1.0.1</spring-ai.version>
     </properties>
     
     <dependencies>
@@ -30,10 +30,10 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
         
-        <!-- Spring AI Azure OpenAI Integration -->
+        <!-- Spring AI Azure OpenAI Integration (keyless via Microsoft Entra ID) -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-azure-openai-spring-boot-starter</artifactId>
+            <artifactId>spring-ai-starter-model-azure-openai</artifactId>
         </dependency>
         
         <!-- Spring Boot Configuration Processor -->
@@ -78,15 +78,4 @@
             </plugin>
         </plugins>
     </build>
-    
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 </project>

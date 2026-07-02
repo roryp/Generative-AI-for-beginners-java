@@ -41,7 +41,9 @@ buildNumber.properties
 *.iws
 *.iml
 *.ipr
-.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/extensions.json
 .settings/
 .project
 .classpath
@@ -58,3 +60,4 @@ package-lock.json
 .Trashes
 ehthumbs.db
 Thumbs.db
+.playwright-mcp/

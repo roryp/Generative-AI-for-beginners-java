@@ -28,7 +28,8 @@ This tutorial explains how to build a calculator service using the Model Context
 Before starting, make sure you have:
 - Java 21 or higher installed
 - Maven for dependency management
-- A GitHub account with a personal access token (PAT)
+- An Azure AI Foundry model deployment (provision it with `azd up` — see [Chapter 2](../../02-SetupDevEnvironment/getting-started-azure-openai.md))
+- The [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli), signed in with `az login` (keyless auth)
 - Basic understanding of Java and Spring Boot
 
 ## Understanding the Project Structure
@@ -182,10 +183,15 @@ This client uses an AI model (GPT-4o-mini) that can automatically decide which c
 public class LangChain4jClient {
     
     public static void main(String[] args) throws Exception {
-        // Set up the AI model (using GitHub Models)
+        // Set up the AI model (Azure AI Foundry, keyless auth via Microsoft Entra ID)
+        String endpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
+        String baseUrl = (endpoint.endsWith("/") ? endpoint : endpoint + "/") + "openai/v1";
+        String token = new DefaultAzureCredentialBuilder().build()
+                .getToken(new TokenRequestContext().addScopes("https://ai.azure.com/.default"))
+                .block().getToken();
         ChatLanguageModel model = OpenAiOfficialChatModel.builder()
-                .isGitHubModels(true)
-                .apiKey(System.getenv("GITHUB_TOKEN"))
+                .baseUrl(baseUrl)
+                .apiKey(token)
                 .modelName("gpt-4o-mini")
                 .build();
 
@@ -237,16 +243,18 @@ public class LangChain4jClient {
 
 ### Step 1: Start the Calculator Server
 
-First, set your GitHub token (needed for the AI client):
+First, sign in and set your Azure AI Foundry endpoint (needed for the AI client — keyless auth, no API key):
 
 **Windows:**
 ```cmd
-set GITHUB_TOKEN=your_github_token_here
+az login
+set AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 ```
 
 **Linux/macOS:**
 ```bash
-export GITHUB_TOKEN=your_github_token_here
+az login
+export AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 ```
 
 Start the server:

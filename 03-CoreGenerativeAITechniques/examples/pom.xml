@@ -13,6 +13,7 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <azure-ai-openai.version>1.0.0-beta.16</azure-ai-openai.version>
+        <azure-identity.version>1.15.0</azure-identity.version>
     </properties>
 
     <dependencies>
@@ -21,5 +22,21 @@
             <artifactId>azure-ai-openai</artifactId>
             <version>${azure-ai-openai.version}</version>
         </dependency>
+        <!-- Microsoft Entra ID (keyless) authentication via DefaultAzureCredential -->
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-identity</artifactId>
+            <version>${azure-identity.version}</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -3,6 +3,8 @@ package com.microsoft.mcp.sample.client;
 import java.time.Duration;
 import java.util.List;
 
+import com.azure.core.credential.TokenRequestContext;
+import com.azure.identity.DefaultAzureCredentialBuilder;
 import dev.langchain4j.mcp.McpToolProvider;
 import dev.langchain4j.mcp.client.DefaultMcpClient;
 import dev.langchain4j.mcp.client.McpClient;
@@ -41,20 +43,32 @@ public class LangChain4jClient {
          * 
          * Prerequisites:
          * 1. Start the calculator MCP server: run McpServerApplication
-         * 2. Set GITHUB_TOKEN environment variable for GitHub Models access
+         * 2. Set AZURE_OPENAI_ENDPOINT and sign in with 'az login' (keyless auth)
          * 3. Ensure the server is running on localhost:8080
          * 
          * Watch the logs to see the AI model automatically calling calculator tools!
          */
         public static void main(String[] args) throws Exception {
 
-                // Configure AI model - using GitHub Models (free tier)
-                // You could also use OpenAI directly, Anthropic, or local models
+                // Configure AI model - using Azure AI Foundry with keyless auth (Microsoft Entra ID).
+                // DefaultAzureCredential uses your 'az login' session locally, or a managed identity in Azure.
+                String endpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
+                if (endpoint == null || endpoint.isBlank()) {
+                        throw new IllegalStateException(
+                                        "Set AZURE_OPENAI_ENDPOINT to your Azure AI Foundry endpoint. Provision it with "
+                                                        + "'azd up' (see 02-SetupDevEnvironment) and sign in with 'az login'.");
+                }
+                // Foundry's OpenAI-compatible endpoint lives under /openai/v1.
+                String baseUrl = (endpoint.endsWith("/") ? endpoint : endpoint + "/") + "openai/v1";
+                // Acquire a Microsoft Entra ID access token for the Foundry Models scope.
+                String token = new DefaultAzureCredentialBuilder().build()
+                                .getToken(new TokenRequestContext().addScopes("https://ai.azure.com/.default"))
+                                .block().getToken();
                 ChatLanguageModel model = OpenAiOfficialChatModel.builder()
-                                .isGitHubModels(true)                           // Use GitHub's free AI models
-                                .apiKey(System.getenv("GITHUB_TOKEN"))          // GitHub PAT for authentication
+                                .baseUrl(baseUrl)                               // Foundry OpenAI-compatible endpoint
+                                .apiKey(token)                                  // Microsoft Entra ID bearer token
                                 .timeout(Duration.ofSeconds(60))               // Allow time for complex calculations
-                                .modelName("gpt-4o-mini")                       // Efficient model good for tool use
+                                .modelName(System.getenv().getOrDefault("AZURE_OPENAI_DEPLOYMENT", "gpt-4o-mini"))
                                 .build();
 
                 // Configure MCP transport to connect to our calculator server

@@ -12,16 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
  * Test class for the StoryService component.
  * Tests story generation functionality with various input scenarios including
  * valid descriptions, empty inputs, and null values. Uses conditional testing
- * to only run integration tests when GitHub Models service is available and
- * GITHUB_TOKEN is properly configured.
- * 
- * Note: Requires GITHUB_TOKEN environment variable with models:read scope
+ * to only run integration tests when an Azure AI Foundry endpoint is configured
+ * and the user is signed in (keyless auth).
+ *
+ * Note: Requires the AZURE_OPENAI_ENDPOINT environment variable and 'az login'
  * for the AI-powered story generation tests to execute successfully.
  */
 @SpringBootTest
 @TestPropertySource(properties = {
-    "github.models.endpoint=https://models.github.ai/inference",
-    "github.models.model=openai/gpt-4.1-nano"
+    "azure.openai.deployment=gpt-4o-mini"
 })
 class StoryServiceTest {
 
@@ -29,7 +28,7 @@ class StoryServiceTest {
     private StoryService storyService;
 
     @Test
-    @EnabledIf("isGitHubModelsAvailable")
+    @EnabledIf("isFoundryAvailable")
     void testGenerateStory() {
         // Given
         String description = "A playful golden retriever named Max";
@@ -64,31 +63,15 @@ class StoryServiceTest {
     }
 
     /**
-     * Helper method to check if GitHub Models is available for conditional test execution
+     * Helper method to check if an Azure AI Foundry endpoint is configured for
+     * conditional test execution.
      */
-    static boolean isGitHubModelsAvailable() {
-        String githubToken = System.getenv("GITHUB_TOKEN");
-        if (githubToken == null || githubToken.isBlank()) {
-            System.out.println("GitHub Models not available for testing: GITHUB_TOKEN not set");
+    static boolean isFoundryAvailable() {
+        String endpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
+        if (endpoint == null || endpoint.isBlank()) {
+            System.out.println("Azure AI Foundry not available for testing: AZURE_OPENAI_ENDPOINT not set");
             return false;
         }
-        
-        try {
-            // Try to create a simple client to validate token and connectivity
-            java.net.http.HttpClient client = java.net.http.HttpClient.newHttpClient();
-            java.net.http.HttpRequest request = java.net.http.HttpRequest.newBuilder()
-                    .uri(java.net.URI.create("https://models.github.ai/inference"))
-                    .timeout(java.time.Duration.ofSeconds(10))
-                    .header("Authorization", "Bearer " + githubToken)
-                    .GET()
-                    .build();
-            
-            java.net.http.HttpResponse<String> response = client.send(request, 
-                    java.net.http.HttpResponse.BodyHandlers.ofString());
-            return response.statusCode() != 401 && response.statusCode() != 403;
-        } catch (Exception e) {
-            System.out.println("GitHub Models not available for testing: " + e.getMessage());
-            return false;
-        }
+        return true;
     }
 }

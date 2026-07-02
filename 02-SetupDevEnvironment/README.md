@@ -1,14 +1,12 @@
 # Setting Up the Development Environment for Generative AI for Java
 
-> **Quick Start**: Code in the Cloud in 2 minutes - Jump to [GitHub Codespaces Setup](#option-a-github-codespaces-recommended) - no local installation required and uses github models!
-
-> **Interested in Azure OpenAI?**, see our [Azure OpenAI Setup Guide](getting-started-azure-openai.md) with steps to create a new Azure OpenAI resource.
+> **Quick Start:** Provision your AI models on **Azure AI Foundry** as code with Bicep + `azd` in a few minutes — see the [Azure AI Foundry Setup Guide](getting-started-azure-openai.md). Authentication is **keyless** (Microsoft Entra ID), so there are no API keys to manage.
 
 ## What You'll Learn
 
 - Set up a Java development environment for AI applications
 - Choose and configure your preferred development environment (cloud-first with Codespaces, local dev container, or full local setup)
-- Test your setup by connecting to GitHub Models
+- Test your setup by connecting to an Azure AI Foundry model
 
 ## Table of Contents
 
@@ -18,32 +16,25 @@
   - [Option A: GitHub Codespaces (Recommended)](#option-a-github-codespaces-recommended)
   - [Option B: Local Dev Container](#option-b-local-dev-container)
   - [Option C: Use Your Existing Local Installation](#option-c-use-your-existing-local-installation)
-- [Step 2: Create GitHub Personal Access Token](#step-2-create-a-github-personal-access-token)
-- [Step 3: Test Your Setup](#step-3-test-your-setup-with-the-github-models-example)
+- [Step 2: Provision Azure AI Foundry](#step-2-provision-azure-ai-foundry)
+- [Step 3: Test Your Setup](#step-3-test-your-setup)
 - [Troubleshooting](#troubleshooting)
 - [Summary](#summary)
 - [Next Steps](#next-steps)
 
 ## Introduction
 
-This chapter will guide you through setting up a development environment. We'll use **GitHub Models** as our primary example because it's free, easy to set up with just a GitHub account, requires no credit card, and provides access to multiple models for experimentation.
+This chapter will guide you through setting up a development environment. We'll use **Azure AI Foundry** for the models throughout this course. You provision the models as code with Bicep and the Azure Developer CLI (`azd`), then connect with **keyless authentication** (Microsoft Entra ID) — no API keys to copy or leak.
 
-**No local setup required!** You can start coding immediately using GitHub Codespaces, which provides a full development environment in your browser.
+**No local setup required!** You can use GitHub Codespaces, which provides a full development environment in your browser, and provision Foundry from there.
 
-<img src="./images/models.webp" alt="Screenshot: GitHub Models" width="50%">
+We use **Azure AI Foundry** for this course because it's:
+- **Provisioned as code** — one `azd up` deploys the account and model deployments
+- **Keyless** — authenticate with your Azure sign-in or a managed identity
+- **Production-ready** — the same code runs locally and in Azure
+- **Flexible** — swap models by changing a deployment name, not your code
 
-We recommend using [**GitHub Models**](https://github.com/marketplace?type=models) for this course because it's:
-- **Free** to get started
-- **Easy** to set up with just a GitHub account
-- **No credit card** required
-- **Multiple models** available for experimentation
-
-> **Note**: The GitHub Models used in this training have these free limits:
-> - 15 requests per minute (150 per day)
-> - ~8,000 words in, ~4,000 words out per request
-> - 5 concurrent requests
-> 
-> For production use, upgrade to Azure AI Foundry Models with your Azure account. Your code doesn't need to change. See the [Azure AI Foundry documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/how-to/quickstart-github-models).
+> **Note**: Azure AI Foundry deployments are billed per token (pay-as-you-go). See the [Azure AI Foundry setup guide](getting-started-azure-openai.md) for provisioning, region, and cost details.
 
 
 ## Step 1: Set Up Your Development Environment
@@ -64,7 +55,7 @@ We've created a preconfigured development container to minimize setup time and e
 3. Use the defaults – this will select the **Dev container configuration**: **Generative AI Java Development Environment** custom devcontainer created for this course
 4. Click **Create codespace**
 5. Wait ~2 minutes for the environment to be ready
-6. Proceed to [Step 2: Create GitHub Token](#step-2-create-a-github-personal-access-token)
+6. Proceed to [Step 2: Provision Azure AI Foundry](#step-2-provision-azure-ai-foundry)
 
 <img src="./images/codespaces.png" alt="Screenshot: Codespaces submenu" width="50%">
 
@@ -91,7 +82,7 @@ We've created a preconfigured development container to minimize setup time and e
 4. Open the repository folder in VS Code
 5. When prompted, click **Reopen in Container** (or use `Ctrl+Shift+P` → "Dev Containers: Reopen in Container")
 6. Wait for the container to build and start
-7. Proceed to [Step 2: Create GitHub Token](#step-2-create-a-github-personal-access-token)
+7. Proceed to [Step 2: Provision Azure AI Foundry](#step-2-provision-azure-ai-foundry)
 
 <img src="./images/devcontainer.png" alt="Screenshot: Dev container setup" width="50%">
 
@@ -109,109 +100,88 @@ Prerequisites:
 Steps:
 1. Clone this repository to your local machine
 2. Open the project in your IDE
-3. Proceed to [Step 2: Create GitHub Token](#step-2-create-a-github-personal-access-token)
+3. Proceed to [Step 2: Provision Azure AI Foundry](#step-2-provision-azure-ai-foundry)
 
 > **Pro Tip**: If you have a low-spec machine but want VS Code locally, use GitHub Codespaces! You can connect your local VS Code to a cloud-hosted Codespace for the best of both worlds.
 
 <img src="./images/image-2.png" alt="Screenshot: created local devcontainer instance" width="50%">
 
 
-## Step 2: Create a GitHub Personal Access Token
+## Step 2: Provision Azure AI Foundry
 
-1. Navigate to [GitHub Settings](https://github.com/settings/profile) and select **Settings** from your profile menu.
-2. In the left sidebar, click **Developer settings** (usually at the bottom).
-3. Under **Personal access tokens**, click **Fine-grained tokens** (or follow this direct [link](https://github.com/settings/personal-access-tokens)).
-4. Click **Generate new token**.
-5. Under "Token name", provide a descriptive name (e.g., `GenAI-Java-Course-Token`).
-6. Set an expiration date (recommended: 7 days for security best practices).
-7. Under "Resource owner", select your user account.
-8. Under "Repository access", select the repositories you want to use with GitHub Models (or "All repositories" if needed).
-9. Under "Account permissions", find **Models** and set it to **Read-only**.
-10. Click **Generate token**.
-11. **Copy and save your token now** – you won't see it again!
+Deploy the course's AI models to Azure AI Foundry as code. From the repository root:
 
-> **Security Tip**: Use the minimum required scope and shortest practical expiration time for your access tokens.
+```bash
+cd 02-SetupDevEnvironment
+azd auth login
+az login
+azd up
+```
 
-## Step 3: Test Your Setup with the GitHub Models Example
+`azd` prompts for an environment name and region, provisions an Azure AI Foundry account with `gpt-4o-mini` and `text-embedding-3-small` deployments, and writes the endpoint into the example's `.env` — all with **keyless** authentication (no API keys).
 
-Once your development environment is ready, let's test the GitHub Models integration with our example application in [`02-SetupDevEnvironment/examples/github-models`](./examples/github-models/).
+> **Full walkthrough:** See the [Azure AI Foundry Setup Guide](getting-started-azure-openai.md) for prerequisites, a manual (portal) alternative, region guidance, and cost/cleanup notes.
+
+## Step 3: Test Your Setup
+
+Once your Foundry models are provisioned, test the connection with the example app in [`02-SetupDevEnvironment/examples/basic-chat-azure`](./examples/basic-chat-azure/).
 
 1. Open the terminal in your development environment.
-2. Navigate to the GitHub Models example:
+2. Navigate to the example:
    ```bash
-   cd 02-SetupDevEnvironment/examples/github-models
+   cd 02-SetupDevEnvironment/examples/basic-chat-azure
    ```
-3. Set your GitHub token as an environment variable:
+3. Make sure you're signed in (keyless auth needs a token):
    ```bash
-   # macOS/Linux
-   export GITHUB_TOKEN=your_token_here
-   
-   # Windows (Command Prompt)
-   set GITHUB_TOKEN=your_token_here
-   
-   # Windows (PowerShell)
-   $env:GITHUB_TOKEN="your_token_here"
+   az login
    ```
-
+   > If you ran `azd up`, the `.env` file with your endpoint was already written for you.
 4. Run the application:
    ```bash
-   mvn compile exec:java -Dexec.mainClass="com.example.githubmodels.App"
+   mvn clean spring-boot:run
    ```
 
-You should see output similar to:
-```text
-Using model: gpt-4.1-nano
-Sending request to GitHub Models...
-Response: Hello World!
-```
+You should see a response from the `gpt-4o-mini` model.
 
 ### Understanding the Example Code
 
-First, let's understand what we just ran. The example under `examples/github-models` uses the OpenAI Java SDK to connect to GitHub Models:
+The example under `examples/basic-chat-azure` is a Spring Boot app that uses **Spring AI** to connect to Azure AI Foundry with keyless authentication.
 
 **What this code does:**
-- **Connects** to GitHub Models using your personal access token
-- **Sends** a simple "Say Hello World!" message to the AI model
+- **Connects** to Azure AI Foundry using your Azure sign-in (Microsoft Entra ID) — no API key
+- **Sends** a prompt to the `gpt-4o-mini` model
 - **Receives** and displays the AI's response
 - **Validates** your setup is working correctly
 
 **Key Dependency** (in `pom.xml`):
 ```xml
 <dependency>
-    <groupId>com.openai</groupId>
-    <artifactId>openai-java</artifactId>
-    <version>2.12.0</version>
+    <groupId>org.springframework.ai</groupId>
+    <artifactId>spring-ai-starter-model-azure-openai</artifactId>
 </dependency>
 ```
 
-**Main Code** (`App.java`):
-```java
-// Connect to GitHub Models using OpenAI Java SDK
-OpenAIClient client = OpenAIOkHttpClient.builder()
-    .apiKey(pat)
-    .baseUrl("https://models.inference.ai.azure.com")
-    .build();
-
-// Create chat completion request
-ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-    .model(modelId)
-    .addSystemMessage("You are a concise assistant.")
-    .addUserMessage("Say Hello World!")
-    .build();
-
-// Get AI response
-ChatCompletion response = client.chat().completions().create(params);
-System.out.println("Response: " + response.choices().get(0).message().content().orElse("No response content"));
+**Configuration** (`application.yml`):
+```yaml
+spring:
+  ai:
+    azure:
+      openai:
+        # Endpoint only - no api-key. Spring AI uses DefaultAzureCredential (keyless).
+        endpoint: ${AZURE_OPENAI_ENDPOINT}
+        chat:
+          options:
+            deployment-name: ${AZURE_OPENAI_DEPLOYMENT:gpt-4o-mini}
 ```
 
 ## Summary
 
 Great! You now have everything set up:
 
-- Created a GitHub Personal Access Token with the right permissions for AI model access
+- Provisioned Azure AI Foundry models as code with Bicep + `azd`
 - Got your Java development environment running (whether that's Codespaces, dev containers, or local)
-- Connected to GitHub Models using the OpenAI Java SDK for free AI development
-- Tested it all works with a simple example that talks to AI models
+- Connected to Azure AI Foundry with keyless authentication (Microsoft Entra ID) — no API keys
+- Tested it all works with a simple example that talks to your model
 
 ## Next Steps
 
@@ -221,27 +191,27 @@ Great! You now have everything set up:
 
 Having issues? Here are common problems and solutions:
 
-- **Token not working?** 
-  - Ensure you copied the entire token without any extra spaces
-  - Verify the token is set correctly as an environment variable
-  - Check that your token has the correct permissions (Models: Read-only)
+- **Authentication failing (401/403)?** 
+  - Run `az login` — authentication is keyless, so you must be signed in
+  - Verify your account has the **Cognitive Services OpenAI User** role on the resource
+  - If you just provisioned, wait a minute for the role assignment to propagate
 
 - **Maven not found?** 
   - If using dev containers/Codespaces, Maven should be pre-installed
   - For local setup, ensure Java 21+ and Maven 3.9+ are installed
   - Try `mvn --version` to verify installation
 
-- **Connection issues?** 
-  - Check your internet connection
-  - Verify GitHub is accessible from your network
-  - Ensure you're not behind a firewall blocking the GitHub Models endpoint
+- **`azd` not found or provisioning fails?** 
+  - Install the [Azure Developer CLI](https://aka.ms/azure-dev/install) and run `azd auth login`
+  - Pick a region where `gpt-4o-mini` is available (e.g. `eastus2`)
+  - See the [Azure AI Foundry setup guide](getting-started-azure-openai.md) for details
 
 - **Dev container not starting?** 
   - Ensure Docker Desktop is running (for local development)
   - Try rebuilding the container: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
 
 - **Application compilation errors?**
-  - Ensure you're in the correct directory: `02-SetupDevEnvironment/examples/github-models`
+  - Ensure you're in the correct directory: `02-SetupDevEnvironment/examples/basic-chat-azure`
   - Try cleaning and rebuilding: `mvn clean compile`
 
 > **Need help?**: Still having issues? Open an issue in the repository and we'll help you out.

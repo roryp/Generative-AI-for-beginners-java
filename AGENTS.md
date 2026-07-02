@@ -10,7 +10,7 @@ This is an educational repository for learning Generative AI development with Ja
 - Spring AI 1.1.x
 - Maven
 - LangChain4j
-- GitHub Models, Azure OpenAI, and OpenAI SDKs
+- Azure AI Foundry, Azure OpenAI, and OpenAI SDKs
 
 **Architecture:**
 - Multiple standalone Spring Boot applications organized by chapters
@@ -22,8 +22,8 @@ This is an educational repository for learning Generative AI development with Ja
 ### Prerequisites
 - Java 21 or higher
 - Maven 3.x
-- GitHub personal access token (for GitHub Models)
-- Optional: Azure OpenAI credentials
+- Azure subscription with an Azure AI Foundry model deployment (provision with `azd up`)
+- Azure CLI (`az`) and Azure Developer CLI (`azd`), signed in for keyless auth
 
 ### Environment Setup
 
@@ -57,19 +57,22 @@ mvn -version
 
 ### Configuration
 
-**GitHub Token Setup:**
+**Azure AI Foundry Setup (keyless, recommended):**
 ```bash
-# Create a GitHub Personal Access Token
-# Set environment variable
-export GITHUB_TOKEN="your-token-here"
+# Provision the Foundry account + model deployments as code
+cd 02-SetupDevEnvironment
+azd auth login
+az login
+azd up
+# azd writes examples/basic-chat-azure/.env with your endpoint (no key)
 ```
 
-**Azure OpenAI Setup (Optional):**
+**Manual endpoint config:**
 ```bash
-# For examples using Azure OpenAI
+# If you didn't use azd, set the endpoint yourself (auth stays keyless via az login)
 cd 02-SetupDevEnvironment/examples/basic-chat-azure
 cp .env.example .env
-# Edit .env with your Azure OpenAI credentials
+# Edit .env: AZURE_OPENAI_ENDPOINT=https://<resource>.openai.azure.com/
 ```
 
 ## Development Workflow
@@ -118,7 +121,7 @@ cd 04-PracticalSamples/calculator
 # Direct MCP client
 mvn exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.SDKClient"
 
-# AI-powered client (requires GITHUB_TOKEN)
+# AI-powered client (requires AZURE_OPENAI_ENDPOINT + az login)
 mvn exec:java -Dexec.mainClass="com.microsoft.mcp.sample.client.LangChain4jClient"
 
 # Interactive bot
@@ -164,10 +167,10 @@ Many examples are interactive applications that require manual testing:
 2. Test endpoints or interact with the CLI
 3. Verify expected behavior matches documentation in each project's README.md
 
-### Testing with GitHub Models
-- Free tier limits: 15 requests/minute, 150/day
-- 5 concurrent requests maximum
-- Test content filtering with responsible AI examples
+### Testing with Azure AI Foundry
+- Sign in with `az login` before running examples (keyless auth)
+- Ensure your account has the Cognitive Services OpenAI User role on the resource
+- Test content filtering with the responsible AI example in Chapter 5
 
 ## Code Style Guidelines
 
@@ -247,18 +250,21 @@ mvn package
 
 **Development:**
 ```yaml
-# application.yml
+# application.yml (keyless - no api-key; auth via DefaultAzureCredential)
 spring:
   ai:
-    openai:
-      api-key: ${GITHUB_TOKEN}
-      base-url: https://models.inference.ai.azure.com
+    azure:
+      openai:
+        endpoint: ${AZURE_OPENAI_ENDPOINT}
+        chat:
+          options:
+            deployment-name: ${AZURE_OPENAI_DEPLOYMENT:gpt-4o-mini}
 ```
 
 **Production:**
-- Use Azure AI Foundry Models instead of GitHub Models
-- Update base-url to Azure OpenAI endpoint
-- Manage secrets via Azure Key Vault or environment variables
+- Use a managed identity instead of `az login` for keyless auth
+- Point `AZURE_OPENAI_ENDPOINT` at your production Foundry resource
+- Manage configuration via environment variables or Azure Key Vault
 
 ### Deployment Considerations
 - This is an educational repository with sample applications
@@ -268,10 +274,10 @@ spring:
 
 ## Additional Notes
 
-### GitHub Models vs Azure OpenAI
-- **GitHub Models:** Free tier for learning, no credit card required
-- **Azure OpenAI:** Production-ready, requires Azure subscription
-- Code is compatible between both - just change endpoint and API key
+### Azure AI Foundry
+- **Keyless auth:** connect with Microsoft Entra ID — no API keys to manage
+- **Provisioned as code:** Bicep + azd (`azd up`) create the account and model deployments
+- The same OpenAI-compatible code runs locally (`az login`) and in Azure (managed identity)
 
 ### Working with Multiple Projects
 Each sample project is standalone:
@@ -300,13 +306,14 @@ rm -rf ~/.m2/repository
 mvn clean install
 ```
 
-**GitHub Token Not Found:**
+**Endpoint or Sign-in Not Found:**
 ```bash
-# Set in current session
-export GITHUB_TOKEN="your-token-here"
+# Set the endpoint in the current session and sign in (keyless)
+export AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
+az login
 
-# Or use .env file in project directory
-echo "GITHUB_TOKEN=your-token-here" > .env
+# Or use a .env file in the project directory
+echo "AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/" > .env
 ```
 
 **Port Already in Use:**
@@ -339,13 +346,13 @@ The `.devcontainer/devcontainer.json` configures:
 - Azure CLI
 
 ### Performance Considerations
-- GitHub Models free tier has rate limits
+- Azure AI Foundry deployments have per-minute token/request quotas
 - Use appropriate batch sizes for embeddings
 - Consider caching for repeated API calls
 - Monitor token usage for cost optimization
 
 ### Security Notes
 - Never commit `.env` files (already in `.gitignore`)
-- Use environment variables for API keys
-- GitHub tokens should have minimal required scopes
+- Prefer keyless auth (Microsoft Entra ID) over API keys
+- Use managed identities in Azure; `az login` for local development
 - Follow responsible AI guidelines in Chapter 5
