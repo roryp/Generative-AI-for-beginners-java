@@ -18,6 +18,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<openai-java.version>2.12.0</openai-java.version>
+		<azure-identity.version>1.15.0</azure-identity.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -37,11 +38,18 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
-		<!-- OpenAI SDK for GitHub Models -->
+		<!-- OpenAI Java SDK -->
 		<dependency>
 			<groupId>com.openai</groupId>
 			<artifactId>openai-java</artifactId>
 			<version>${openai-java.version}</version>
+		</dependency>
+
+		<!-- Microsoft Entra ID (keyless) authentication -->
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-identity</artifactId>
+			<version>${azure-identity.version}</version>
 		</dependency>
 
 		<!-- Jackson for JSON processing (included with Spring Boot Web starter) -->

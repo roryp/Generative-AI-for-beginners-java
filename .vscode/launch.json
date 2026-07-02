@@ -1,0 +1,112 @@
+{
+  // Run/Debug configurations for the course examples.
+  //
+  // Authentication is KEYLESS (Microsoft Entra ID): run `az login` once before launching.
+  // Azure AI Foundry settings (AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_DEPLOYMENT) are loaded from
+  // the .env that `azd up` writes in 02-SetupDevEnvironment/examples/basic-chat-azure.
+  // If that file doesn't exist yet, provision first: `cd 02-SetupDevEnvironment && azd up`.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Ch02: Basic Chat (Spring Boot)",
+      "request": "launch",
+      "mainClass": "com.example.BasicChatApplication",
+      "projectName": "basic-chat-azure",
+      "cwd": "${workspaceFolder}/02-SetupDevEnvironment/examples/basic-chat-azure",
+      "envFile": "${workspaceFolder}/02-SetupDevEnvironment/examples/basic-chat-azure/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Ch03: LLM Completions & Chat",
+      "request": "launch",
+      "mainClass": "com.example.genai.techniques.completions.LLMCompletionsApp",
+      "projectName": "core-genai-techniques",
+      "cwd": "${workspaceFolder}/03-CoreGenerativeAITechniques/examples",
+      "envFile": "${workspaceFolder}/02-SetupDevEnvironment/examples/basic-chat-azure/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Ch03: Function Calling",
+      "request": "launch",
+      "mainClass": "com.example.genai.techniques.functions.FunctionsApp",
+      "projectName": "core-genai-techniques",
+      "cwd": "${workspaceFolder}/03-CoreGenerativeAITechniques/examples",
+      "envFile": "${workspaceFolder}/02-SetupDevEnvironment/examples/basic-chat-azure/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Ch03: RAG (SimpleReaderDemo)",
+      "request": "launch",
+      "mainClass": "com.example.genai.techniques.rag.SimpleReaderDemo",
+      "projectName": "core-genai-techniques",
+      "cwd": "${workspaceFolder}/03-CoreGenerativeAITechniques/examples",
+      "envFile": "${workspaceFolder}/02-SetupDevEnvironment/examples/basic-chat-azure/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Ch03: Responsible AI Demo",
+      "request": "launch",
+      "mainClass": "com.example.genai.techniques.responsibleai.ResponsibleAIDemo",
+      "projectName": "core-genai-techniques",
+      "cwd": "${workspaceFolder}/03-CoreGenerativeAITechniques/examples",
+      "envFile": "${workspaceFolder}/02-SetupDevEnvironment/examples/basic-chat-azure/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Ch04: Pet Story (Spring Boot web)",
+      "request": "launch",
+      "mainClass": "com.example.petstory.PetStoryApplication",
+      "projectName": "pet-story-app",
+      "cwd": "${workspaceFolder}/04-PracticalSamples/petstory",
+      "envFile": "${workspaceFolder}/02-SetupDevEnvironment/examples/basic-chat-azure/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Ch04: Calculator MCP Server (Spring Boot)",
+      "request": "launch",
+      "mainClass": "com.microsoft.mcp.sample.server.McpServerApplication",
+      "projectName": "calculator-server",
+      "cwd": "${workspaceFolder}/04-PracticalSamples/calculator",
+      "console": "integratedTerminal"
+    },
+    {
+      // Start "Ch04: Calculator MCP Server" first, then run this client.
+      "type": "java",
+      "name": "Ch04: Calculator - LangChain4j Client",
+      "request": "launch",
+      "mainClass": "com.microsoft.mcp.sample.client.LangChain4jClient",
+      "projectName": "calculator-server",
+      "cwd": "${workspaceFolder}/04-PracticalSamples/calculator",
+      "envFile": "${workspaceFolder}/02-SetupDevEnvironment/examples/basic-chat-azure/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      // Start "Ch04: Calculator MCP Server" first, then run this client.
+      "type": "java",
+      "name": "Ch04: Calculator - SDK Client",
+      "request": "launch",
+      "mainClass": "com.microsoft.mcp.sample.client.SDKClient",
+      "projectName": "calculator-server",
+      "cwd": "${workspaceFolder}/04-PracticalSamples/calculator",
+      "console": "integratedTerminal"
+    },
+    {
+      // Foundry Local runs a model on your machine - no Azure needed.
+      // Start the Foundry Local service first (see 04-PracticalSamples/foundrylocal/README.md).
+      "type": "java",
+      "name": "Ch04: Foundry Local",
+      "request": "launch",
+      "mainClass": "com.example.Application",
+      "projectName": "foundry-local-spring-boot",
+      "cwd": "${workspaceFolder}/04-PracticalSamples/foundrylocal",
+      "console": "integratedTerminal"
+    }
+  ]
+}

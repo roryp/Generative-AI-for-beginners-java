@@ -83,15 +83,15 @@ public class BasicChatApplication {
                 
             } catch (Exception e) {
                 // Handle common configuration and connection errors with helpful guidance
-                System.err.println("\nError connecting to Azure OpenAI:");
+                System.err.println("\nError connecting to Azure AI Foundry:");
                 System.err.println("Error: " + e.getMessage());
                 System.err.println("\nTroubleshooting tips:");
-                System.err.println("1. Check that AZURE_AI_KEY is set in your .env file or environment variables");
-                System.err.println("2. Verify AZURE_AI_ENDPOINT is set in your .env file or environment variables");
-                System.err.println("3. Ensure your model deployment name is correct in application.yml");
-                System.err.println("4. Confirm your Azure OpenAI resource is active and has quota available");
+                System.err.println("1. Run 'az login' - authentication is keyless (Microsoft Entra ID), so you must be signed in");
+                System.err.println("2. Verify AZURE_OPENAI_ENDPOINT is set in your .env file or environment variables");
+                System.err.println("3. Ensure your model deployment name (AZURE_OPENAI_DEPLOYMENT) matches Azure");
+                System.err.println("4. Confirm you have the 'Cognitive Services OpenAI User' role on the resource");
                 System.err.println("5. Check that your .env file is in the project root directory");
-                System.err.println("6. Verify your Azure OpenAI key hasn't expired");
+                System.err.println("6. Confirm your Foundry resource is active and has quota available");
             }
         };
     }
@@ -132,19 +132,21 @@ public class BasicChatApplication {
             
             // Show configuration status for debugging
             // This helps beginners see what's actually loaded
-            String endpoint = dotenv.get("AZURE_AI_ENDPOINT");
-            String apiKey = dotenv.get("AZURE_AI_KEY");
+            String endpoint = dotenv.get("AZURE_OPENAI_ENDPOINT");
+            String deployment = dotenv.get("AZURE_OPENAI_DEPLOYMENT");
             
             System.out.println("Endpoint: " + (endpoint != null ? endpoint : "NOT SET"));
-            System.out.println("API Key: " + (apiKey != null ? "SET (hidden for security)" : "NOT SET"));
+            System.out.println("Deployment: " + (deployment != null ? deployment : "gpt-4o-mini (default)"));
+            System.out.println("Auth: keyless (Microsoft Entra ID via DefaultAzureCredential)");
             
             // Warn if critical configuration is missing
-            if (endpoint == null || apiKey == null) {
-                System.err.println("WARNING: Missing required environment variables!");
-                System.err.println("   Please check your .env file has AZURE_AI_ENDPOINT and AZURE_AI_KEY");
+            if (endpoint == null) {
+                System.err.println("WARNING: Missing required environment variable AZURE_OPENAI_ENDPOINT!");
+                System.err.println("   Please check your .env file has AZURE_OPENAI_ENDPOINT");
                 System.err.println("   Example .env file:");
-                System.err.println("   AZURE_AI_ENDPOINT=https://your-resource.openai.azure.com/");
-                System.err.println("   AZURE_AI_KEY=your-api-key-here");
+                System.err.println("   AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/");
+                System.err.println("   AZURE_OPENAI_DEPLOYMENT=gpt-4o-mini");
+                System.err.println("   (No API key needed - sign in with 'az login')");
             }
             
         } catch (Exception e) {
@@ -153,17 +155,18 @@ public class BasicChatApplication {
             System.out.println("   Using system environment variables instead");
             
             // Check if system environment variables are available as backup
-            String sysEndpoint = System.getenv("AZURE_AI_ENDPOINT");
-            String sysApiKey = System.getenv("AZURE_AI_KEY");
+            String sysEndpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
+            String sysDeployment = System.getenv("AZURE_OPENAI_DEPLOYMENT");
             
             System.out.println("System Endpoint: " + (sysEndpoint != null ? sysEndpoint : "NOT SET"));
-            System.out.println("System API Key: " + (sysApiKey != null ? "SET (hidden for security)" : "NOT SET"));
+            System.out.println("System Deployment: " + (sysDeployment != null ? sysDeployment : "gpt-4o-mini (default)"));
             
-            if (sysEndpoint == null || sysApiKey == null) {
-                System.err.println("WARNING: No environment variables found in system either!");
+            if (sysEndpoint == null) {
+                System.err.println("WARNING: No AZURE_OPENAI_ENDPOINT found in system either!");
                 System.err.println("   You need to either:");
                 System.err.println("   1. Create a .env file in the project root, or");
-                System.err.println("   2. Set AZURE_AI_ENDPOINT and AZURE_AI_KEY as system environment variables");
+                System.err.println("   2. Set AZURE_OPENAI_ENDPOINT as a system environment variable");
+                System.err.println("   Then sign in with 'az login' (keyless auth - no API key required).");
             }
         }
     }

@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+# Azure Developer CLI (azd) project for provisioning the Azure AI Foundry models
+# used throughout this course. This project is infrastructure-only: `azd up`
+# provisions the Foundry account and model deployments (no app is deployed).
+name: generative-ai-for-beginners-java-foundry
+metadata:
+  template: generative-ai-for-beginners-java-foundry@1.0.0
+
+infra:
+  provider: bicep
+  path: infra
+  module: main
+
+# After provisioning, copy the model settings into the basic-chat-azure example
+# so it can run immediately. Auth is keyless, so no secret is written.
+hooks:
+  postprovision:
+    windows:
+      shell: pwsh
+      run: ./scripts/write-env.ps1
+      interactive: false
+      continueOnError: false
+    posix:
+      shell: sh
+      run: ./scripts/write-env.sh
+      interactive: false
+      continueOnError: false

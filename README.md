@@ -52,9 +52,9 @@
 - **[→ Start Chapter 1](./01-IntroToGenAI/README.md)**
 
 ### **Chapter 2: Development Environment Setup**
-- **Multi-Provider Configuration**: Set up GitHub Models, Azure OpenAI, and OpenAI Java SDK integrations
+- **Azure AI Foundry**: Provision model deployments as code with Bicep and the Azure Developer CLI (azd)
 - **Spring Boot + Spring AI**: Best practices for enterprise AI application development
-- **GitHub Models**: Free AI model access for prototyping and learning (no credit card required)
+- **Keyless Authentication**: Connect securely with Microsoft Entra ID — no API keys to manage
 - **Development Tools**: Docker containers, VS Code, and GitHub Codespaces configuration
 - **[→ Start Chapter 2](./02-SetupDevEnvironment/README.md)**
 
@@ -66,13 +66,13 @@
 - **[→ Start Chapter 3](./03-CoreGenerativeAITechniques/README.md)**
 
 ### **Chapter 4: Practical Applications & Projects**
-- **Pet Story Generator** (`petstory/`): Creative content generation with GitHub Models
+- **Pet Story Generator** (`petstory/`): Creative content generation with Azure AI Foundry
 - **Foundry Local Demo** (`foundrylocal/`): Local AI model integration with OpenAI Java SDK
 - **MCP Calculator Service** (`calculator/`): Basic Model Context Protocol implementation with Spring AI
 - **[→ Start Chapter 4](./04-PracticalSamples/README.md)**
 
 ### **Chapter 5: Responsible AI Development**
-- **GitHub Models Safety**: Test built-in content filtering and safety mechanisms (hard blocks and soft refusals)
+- **Azure AI Foundry Content Safety**: Test built-in content filtering and safety mechanisms (hard blocks and soft refusals)
 - **Responsible AI Demo**: Hands-on example showing how modern AI safety systems work in practice
 - **Best Practices**: Essential guidelines for ethical AI development and deployment
 - **[→ Start Chapter 5](./05-ResponsibleGenAI/README.md)**

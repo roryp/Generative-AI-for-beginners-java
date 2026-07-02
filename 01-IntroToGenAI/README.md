@@ -1,9 +1,5 @@
 # Introduction to Generative AI - Java Edition
 
-[![Introduction to Generative AI](https://img.youtube.com/vi/XH46tGp_eSw/0.jpg)](https://www.youtube.com/watch?v=XH46tGp_eSw "Introduction to Generative AI")
-
-> **Video**: [Watch the video overview for this lesson on YouTube.](https://www.youtube.com/watch?v=XH46tGp_eSw) You can also click the thumbnail image above.
-
 ## What You'll Learn
 
 - **Generative AI fundamentals** including LLMs, prompt engineering, tokens, embeddings, and vector databases
@@ -98,7 +94,6 @@ Here's a quick reference table showing which SDK is used in each chapter's examp
 
 | Chapter | Sample | SDK |
 |---------|--------|-----|
-| 02-SetupDevEnvironment | github-models | OpenAI Java SDK |
 | 02-SetupDevEnvironment | basic-chat-azure | Spring AI Azure OpenAI |
 | 03-CoreGenerativeAITechniques | examples | Azure OpenAI SDK |
 | 04-PracticalSamples | petstory | OpenAI Java SDK |
@@ -113,7 +108,7 @@ Here's a quick reference table showing which SDK is used in each chapter's examp
 
 #### OpenAI Java SDK
 
-The OpenAI SDK is the official Java library for the OpenAI API. It provides a simple and consistent interface for interacting with OpenAI's models, making it easy to integrate AI capabilities into Java applications. Chapter 2's GitHub Models example, Chapter 4's Pet Story application and Foundry Local example demonstrate the OpenAI SDK approach.
+The OpenAI SDK is the official Java library for the OpenAI API. It provides a simple and consistent interface for interacting with OpenAI's models, making it easy to integrate AI capabilities into Java applications. Chapter 4's Pet Story application and Foundry Local example demonstrate the OpenAI SDK approach with Azure AI Foundry.
 
 #### Spring AI
 

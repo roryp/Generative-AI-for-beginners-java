@@ -3,19 +3,16 @@ package com.example.genai.techniques.functions;
 import com.azure.ai.openai.OpenAIClient;
 import com.azure.ai.openai.OpenAIClientBuilder;
 import com.azure.ai.openai.models.*;
-import com.azure.core.credential.AccessToken;
-import com.azure.core.credential.TokenCredential;
 import com.azure.core.util.BinaryData;
-import reactor.core.publisher.Mono;
+import com.azure.identity.DefaultAzureCredentialBuilder;
 
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * GitHub Models Function Calling Example using Azure OpenAI SDK
+ * Function Calling Example using the Azure OpenAI SDK
  * 
- * This example demonstrates how to use function calling with GitHub Models
+ * This example demonstrates how to use function calling with Azure AI Foundry
  * using the Azure OpenAI SDK to create an AI assistant that can call external 
  * functions for weather information and mathematical calculations.
  * 
@@ -26,28 +23,26 @@ import java.util.List;
  * - Error handling
  */
 public class FunctionsApp {
-    // Using a model that supports function calling - not all AI models can call functions
-    // gpt-4o-mini is one of the models that supports this advanced feature
-    private static final String MODEL = "gpt-4o-mini";
+    // Using a model that supports function calling - not all AI models can call functions.
+    // Defaults to the gpt-4o-mini deployment; override with AZURE_OPENAI_DEPLOYMENT.
+    private static final String MODEL = System.getenv().getOrDefault("AZURE_OPENAI_DEPLOYMENT", "gpt-4o-mini");
     
     public static void main(String[] args) {
-        // GitHub Models endpoint - provides free access to various AI models for learning
-        String endpoint = "https://models.inference.ai.azure.com";
-        // PAT = Personal Access Token - this authenticates us with GitHub Models
-        String pat = System.getenv("GITHUB_TOKEN");
-        
-        if (pat == null || pat.isBlank()) {
-            System.err.println("Please set GITHUB_TOKEN environment variable");
-            System.err.println("Get your token from: https://github.com/settings/tokens");
+        // Azure AI Foundry endpoint (for example https://<resource>.openai.azure.com/)
+        String endpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
+
+        if (endpoint == null || endpoint.isBlank()) {
+            System.err.println("Please set the AZURE_OPENAI_ENDPOINT environment variable");
+            System.err.println("Provision it with 'azd up' (see 02-SetupDevEnvironment), then sign in with 'az login'.");
             System.exit(1);
         }
 
         try {
-            // Create the OpenAI client using Azure's SDK
-            // This client will handle all our communication with the AI model
+            // Create the Azure OpenAI client using keyless authentication (Microsoft Entra ID).
+            // DefaultAzureCredential uses your 'az login' session locally, or a managed identity in Azure.
             OpenAIClient client = new OpenAIClientBuilder()
                     .endpoint(endpoint)
-                    .credential(new StaticTokenCredential(pat)) // Custom credential class (defined below)
+                    .credential(new DefaultAzureCredentialBuilder().build())
                     .buildClient();
 
             // Example 1: Simple weather function
@@ -273,25 +268,5 @@ public class FunctionsApp {
         
         // For this example, we'll return a simple result for "15% of 240"
         return "36";
-    }
-    
-    /**
-     * Custom implementation of TokenCredential for GitHub Models authentication.
-     * This is a simplified version that just wraps our GitHub token.
-     * In production, you'd use more sophisticated credential management.
-     */
-    private static final class StaticTokenCredential implements TokenCredential {
-        private final String token;
-        
-        StaticTokenCredential(String token) {
-            this.token = token;
-        }
-
-        @Override
-        public Mono<AccessToken> getToken(com.azure.core.credential.TokenRequestContext tokenRequestContext) {
-            // Return our token wrapped in an AccessToken object
-            // Setting expiration to 1 year from now (for demo purposes)
-            return Mono.just(new AccessToken(token, OffsetDateTime.now().plusYears(1)));
-        }
     }
 }

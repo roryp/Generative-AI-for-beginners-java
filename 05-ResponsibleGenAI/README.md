@@ -1,21 +1,17 @@
 # Responsible Generative AI
 
-[![Responsible Generative AI](https://img.youtube.com/vi/rF-b2BTSMQ4/0.jpg)](https://www.youtube.com/watch?v=rF-b2BTSMQ4 "Responsible Generative AI")
-
-> **Video**: [Watch the video overview for this lesson](https://www.youtube.com/watch?v=rF-b2BTSMQ4).
-> You can also click the thumbnail image above to open the same video.
 
 ## What You'll Learn
 
 - Learn the ethical considerations and best practices that matter for AI development
 - Build content filtering and safety measures into your applications
-- Test and handle AI safety responses using GitHub Models' built-in protections
+- Test and handle AI safety responses using Azure AI Foundry's built-in content filtering
 - Apply responsible AI principles to create safe, ethical AI systems
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [GitHub Models Built-in Safety](#github-models-built-in-safety)
+- [Azure AI Foundry Content Safety](#azure-ai-foundry-content-safety)
 - [Practical Example: Responsible AI Safety Demo](#practical-example-responsible-ai-safety-demo)
   - [What the Demo Shows](#what-the-demo-shows)
   - [Setup Instructions](#setup-instructions)
@@ -31,25 +27,25 @@
 
 This final chapter focuses on the critical aspects of building responsible and ethical generative AI applications. You'll learn how to implement safety measures, handle content filtering, and apply best practices for responsible AI development using the tools and frameworks covered in previous chapters. Understanding these principles is essential for building AI systems that are not only technically impressive but also safe, ethical, and trustworthy.
 
-## GitHub Models Built-in Safety
+## Azure AI Foundry Content Safety
 
-GitHub Models comes with basic content filtering out of the box. It's like having a friendly bouncer at your AI club - not the most sophisticated, but gets the job done for basic scenarios.
+Azure AI Foundry models come with content filtering out of the box, powered by Azure AI Content Safety. Harmful prompts and responses are screened automatically across several categories before they ever reach — or leave — the model.
 
-**What GitHub Models Protects Against:**
-- **Harmful Content**: Blocks obvious violent, sexual, or dangerous content
-- **Basic Hate Speech**: Filters clear discriminatory language
-- **Simple Jailbreaks**: Resists basic attempts to bypass safety guardrails
+**What Azure AI Foundry Protects Against:**
+- **Harmful Content**: Blocks violent, sexual, self-harm, or dangerous content
+- **Hate Speech**: Filters discriminatory language
+- **Jailbreaks**: Detects prompt-injection and attempts to bypass safety guardrails
 
 ## Practical Example: Responsible AI Safety Demo
 
-This chapter includes a practical demonstration of how GitHub Models implements responsible AI safety measures by testing prompts that could potentially violate safety guidelines.
+This chapter includes a practical demonstration of how Azure AI Foundry implements responsible AI safety measures by testing prompts that could potentially violate safety guidelines.
 
 ### What the Demo Shows
 
-The `ResponsibleGithubModels` class follows this flow:
-1. Initialize GitHub Models client with authentication
+The `ResponsibleAIDemo` class follows this flow:
+1. Initialize the Azure AI Foundry client with keyless authentication (Microsoft Entra ID)
 2. Test harmful prompts (violence, hate speech, misinformation, illegal content)
-3. Send each prompt to GitHub Models API
+3. Send each prompt to the Azure AI Foundry model
 4. Handle responses: hard blocks (HTTP errors), soft refusals (polite "I can't assist" responses), or normal content generation
 5. Display results showing which content was blocked, refused, or allowed
 6. Test safe content for comparison
@@ -58,21 +54,21 @@ The `ResponsibleGithubModels` class follows this flow:
 
 ### Setup Instructions
 
-1. **Set your GitHub Personal Access Token:**
+1. **Sign in and set your Azure AI Foundry endpoint** (keyless auth — no API key). Run `az login` first, then:
    
    On Windows (Command Prompt):
    ```cmd
-   set GITHUB_TOKEN=your_github_token_here
+   set AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
    ```
    
    On Windows (PowerShell):
    ```powershell
-   $env:GITHUB_TOKEN="your_github_token_here"
+   $env:AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
    ```
    
    On Linux/macOS:
    ```bash
-   export GITHUB_TOKEN=your_github_token_here
+   export AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
    ```   
 
 ### Running the Demo
@@ -84,7 +80,7 @@ The `ResponsibleGithubModels` class follows this flow:
 
 2. **Compile and run the demo:**
    ```bash
-   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleGithubModels"
+   mvn compile exec:java -Dexec.mainClass="com.example.genai.techniques.responsibleai.ResponsibleAIDemo"
    ```
 
 ### Expected Output
@@ -149,7 +145,7 @@ This example uses intentionally problematic prompts for educational purposes onl
 
 - **Implemented AI safety measures** including content filtering and safety response handling
 - **Applied responsible AI principles** to build ethical and trustworthy AI systems
-- **Tested safety mechanisms** using GitHub Models' built-in protection capabilities
+- **Tested safety mechanisms** using Azure AI Foundry's built-in content safety capabilities
 - **Learned best practices** for responsible AI development and deployment
 
 **Responsible AI Resources:**
