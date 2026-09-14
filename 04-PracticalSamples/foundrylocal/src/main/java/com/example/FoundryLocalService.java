@@ -1,162 +1,137 @@
 package com.example;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openai.client.OpenAIClient;
 import com.openai.client.okhttp.OpenAIOkHttpClient;
-import com.openai.models.chat.completions.*;
+import com.openai.models.chat.completions.ChatCompletion;
+import com.openai.models.chat.completions.ChatCompletionCreateParams;
+import com.openai.models.models.Model;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import jakarta.annotation.PostConstruct;
 import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import java.time.Duration;
+import java.util.List;
 
 /**
- * Service for connecting to locally running AI models via Foundry Local.
- * 
- * This demonstrates how to connect to AI models running on your own machine
- * instead of cloud services. Benefits include:
- * - No API costs - runs on your hardware
- * - Complete privacy - data never leaves your machine
- * - No internet dependency - works offline
- * - Full control over the model and its configuration
- * 
- * Key Spring Concepts:
- * - @Service: Makes this a Spring-managed component (singleton by default)
- * - @Value: Injects configuration values from application.properties
- * - @PostConstruct: Method runs automatically after Spring creates this object
+ * Calls Foundry Local's OpenAI-compatible REST API on this machine.
  */
 @Service
-public class FoundryLocalService {
-    
-    // Configuration values injected from application.properties
-    // The ":value" part provides a default if the property isn't set
-    @Value("${foundry.local.base-url:http://localhost:5273/v1}")
-    private String baseUrl;  // Where your local AI server is running
-    
-    @Value("${foundry.local.model:}")
-    private String model;    // Which local AI model to use (auto-detected if empty)
-    
-    // OpenAI client configured to talk to local server instead of OpenAI's servers
-    private OpenAIClient openAIClient;
-    
+public class FoundryLocalService implements AutoCloseable {
+    private final String baseUrl;
+    private final OpenAIClient openAIClient;
+    private String model;
+
     /**
-     * Initialize the OpenAI client to connect to local AI server.
-     * 
-     * @PostConstruct runs automatically after Spring creates this service.
-     * This is better than constructor initialization because all @Value injections
-     * are guaranteed to be completed before this method runs.
+     * Creates a bounded, local-only client; no cloud credentials are needed.
+     */
+    public FoundryLocalService(
+            @Value("${foundry.local.base-url:http://127.0.0.1:5273/v1}") String baseUrl,
+            @Value("${foundry.local.model:}") String model) {
+        this.baseUrl = validateBaseUrl(baseUrl);
+        this.model = model == null ? "" : model.strip();
+        this.openAIClient = OpenAIOkHttpClient.builder()
+                .baseUrl(this.baseUrl)
+                .apiKey("not-needed")
+                .timeout(Duration.ofSeconds(120))
+                .maxRetries(0)
+                .build();
+    }
+
+    /**
+     * Selects the advertised model when no explicit model ID was configured.
      */
     @PostConstruct
     public void init() {
-        // Auto-detect the model from Foundry Local if not explicitly configured
-        if (model == null || model.isBlank()) {
-            model = detectModel();
-        }
-
-        System.out.println("Initializing Foundry Local client:");
-        System.out.println("  Base URL: " + baseUrl);
-        System.out.println("  Model: " + model);
-        
-        // Create OpenAI client but point it to local server instead of OpenAI
-        // This works because local AI servers often implement OpenAI-compatible APIs
-        this.openAIClient = OpenAIOkHttpClient.builder()
-                .baseUrl(baseUrl)                   // Local server endpoint with /v1 path for OpenAI API compatibility
-                .apiKey("not-needed")               // Local servers usually don't need real API keys
-                .build();
-        
-        System.out.println("Client initialized successfully");
-    }
-
-    /**
-     * Query the Foundry Local /v1/models endpoint and return the first available model ID.
-     * This makes the app work regardless of which model variant is loaded.
-     */
-    private String detectModel() {
         try {
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(baseUrl + "/models"))
-                    .GET()
-                    .build();
-            HttpResponse<String> response = HttpClient.newHttpClient()
-                    .send(request, HttpResponse.BodyHandlers.ofString());
-            JsonNode root = new ObjectMapper().readTree(response.body());
-            JsonNode data = root.get("data");
-            if (data != null && data.isArray() && !data.isEmpty()) {
-                String detected = data.get(0).get("id").asText();
-                System.out.println("Auto-detected model from Foundry Local: " + detected);
-                return detected;
+            if (model.isBlank()) {
+                model = detectModel();
             }
-        } catch (Exception e) {
-            System.err.println("Could not auto-detect model from " + baseUrl + "/models: " + e.getMessage());
+        } catch (RuntimeException failure) {
+            close();
+            throw failure;
         }
-        throw new RuntimeException(
-            "No model found. Make sure Foundry Local is running at " + baseUrl +
-            " with a model loaded, or set foundry.local.model in application.properties.");
+
+        System.out.println("Foundry Local endpoint: " + baseUrl);
+        System.out.println("Foundry Local model: " + model);
     }
-    
+
+    private static String validateBaseUrl(String baseUrl) {
+        URI endpoint = URI.create(baseUrl);
+        String host = endpoint.getHost();
+        boolean loopback = "127.0.0.1".equals(host)
+                || "localhost".equalsIgnoreCase(host) || "[::1]".equals(host);
+        if (!"http".equalsIgnoreCase(endpoint.getScheme()) || !loopback
+                || endpoint.getUserInfo() != null || endpoint.getQuery() != null
+                || endpoint.getFragment() != null
+                || !("/v1".equals(endpoint.getPath()) || "/v1/".equals(endpoint.getPath()))) {
+            throw new IllegalArgumentException(
+                    "foundry.local.base-url must be a loopback HTTP URL ending in /v1, "
+                    + "for example http://127.0.0.1:5273/v1. Cloud endpoints are not supported.");
+        }
+        return baseUrl.endsWith("/") ? baseUrl.substring(0, baseUrl.length() - 1) : baseUrl;
+    }
+
+    private String detectModel() {
+        List<Model> models;
+        try {
+            models = openAIClient.models().list().data();
+        } catch (RuntimeException failure) {
+            throw new IllegalStateException("Unable to list models at " + baseUrl
+                    + "/models. Start the Foundry Local server and load a small local model.", failure);
+        }
+        if (models.isEmpty()) {
+            throw new IllegalStateException("No model found at " + baseUrl
+                    + ". Load a small local model before running this sample.");
+        }
+        if (models.size() != 1) {
+            throw new IllegalStateException("More than one model is advertised at " + baseUrl
+                    + ". Set foundry.local.model to the exact ID of your loaded local model.");
+        }
+        String detected = models.getFirst().id();
+        if (detected.isBlank()) {
+            throw new IllegalStateException("Foundry Local returned a blank model ID.");
+        }
+        return detected;
+    }
+
     /**
-     * Send a message to the local AI model and get a response.
-     * 
-     * This method demonstrates the same patterns you'd use with cloud AI services,
-     * but everything runs locally on your machine.
+     * Sends one prompt and returns nonblank text, or fails with local endpoint context.
+     * Uses max_tokens because it is supported by Foundry Local's chat-completions API.
      */
     public String chat(String message) {
-        try {
-            System.out.println("Creating chat completion request...");
-            System.out.println("  Model: " + model);
-            System.out.println("  Message: " + message);
-            
-            // Build the chat completion request
-            // These parameters control how the AI responds
-            ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
-                    .model(model)                    // Which local model to use
-                    .addUserMessage(message)         // Your input message
-                    .maxCompletionTokens(150)        // Limit response length (saves processing time)
-                    .temperature(0.7)                // Creativity level: 0.0=focused, 1.0=creative
-                    .build();
-            
-            System.out.println("Sending request to Foundry Local...");
-            
-            // Send request to local AI server and wait for response
-            // This uses the same API structure as cloud services for consistency
-            ChatCompletion chatCompletion = openAIClient.chat().completions().create(params);
-            
-            System.out.println("Received response from Foundry Local");
-            
-            // Extract the AI's response from the API response structure
-            // Local servers return the same format as cloud services
-            if (chatCompletion.choices() != null && !chatCompletion.choices().isEmpty()) {
-                return chatCompletion.choices().get(0).message().content().orElse("No response content found");
-            }
-            
-            return "No response content found";
-        } catch (Exception e) {
-            // Common issues with local AI servers:
-            // - Server not running (connection refused)
-            // - Model not loaded (500 server error)
-            // - Out of memory (GPU/RAM insufficient)
-            // - Wrong model name (404 not found)
-            // - Wrong API endpoint path (400 bad request)
-            System.err.println("Detailed error information:");
-            System.err.println("  Base URL: " + baseUrl);
-            System.err.println("  Model: " + model);
-            System.err.println("  Error type: " + e.getClass().getName());
-            System.err.println("  Error message: " + e.getMessage());
-            if (e.getCause() != null) {
-                System.err.println("  Cause: " + e.getCause().getMessage());
-            }
-            throw new RuntimeException("Error calling local AI model: " + e.getMessage() + 
-                "\nCheck that your local AI server is running at: " + baseUrl +
-                "\nTroubleshooting checklist:" +
-                "\n1. Is Foundry Local running on " + baseUrl + "?" +
-                "\n2. Is the AI model loaded and ready?" +
-                "\n3. Check your application.properties for correct URL/model name" +
-                "\n4. Verify you have enough RAM/GPU memory for the model" +
-                "\n5. Look at the Foundry Local console for error messages", e);
+        if (message == null || message.isBlank()) {
+            throw new IllegalArgumentException("The prompt must not be blank.");
         }
+        ChatCompletionCreateParams params = ChatCompletionCreateParams.builder()
+                .model(model)
+                .addUserMessage(message)
+                .maxTokens(150)
+                .temperature(0.0)
+                .build();
+
+        ChatCompletion completion;
+        try {
+            completion = openAIClient.chat().completions().create(params);
+        } catch (RuntimeException failure) {
+            throw new IllegalStateException("Foundry Local request failed for model " + model
+                    + " at " + baseUrl + ". Check that the model is loaded and fits in memory.", failure);
+        }
+        if (completion.choices().isEmpty()) {
+            throw new IllegalStateException("Foundry Local returned no response choices.");
+        }
+        return completion.choices().getFirst().message().content()
+                .filter(content -> !content.isBlank())
+                .orElseThrow(() -> new IllegalStateException("Foundry Local returned no response text."));
+    }
+
+    /**
+     * Releases the HTTP client's resources when the application exits.
+     */
+    @Override
+    @PreDestroy
+    public void close() {
+        openAIClient.close();
     }
 }

@@ -10,17 +10,19 @@
     <description>Examples demonstrating core generative AI techniques including function calling and completions</description>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <azure-ai-openai.version>1.0.0-beta.16</azure-ai-openai.version>
-        <azure-identity.version>1.15.0</azure-identity.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <openai-java.version>4.63.1</openai-java.version>
+        <azure-identity.version>1.18.6</azure-identity.version>
+        <exp4j.version>0.4.8</exp4j.version>
+        <junit.version>6.1.3</junit.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.azure</groupId>
-            <artifactId>azure-ai-openai</artifactId>
-            <version>${azure-ai-openai.version}</version>
+            <groupId>com.openai</groupId>
+            <artifactId>openai-java</artifactId>
+            <version>${openai-java.version}</version>
         </dependency>
         <!-- Microsoft Entra ID (keyless) authentication via DefaultAzureCredential -->
         <dependency>
@@ -28,14 +30,35 @@
             <artifactId>azure-identity</artifactId>
             <version>${azure-identity.version}</version>
         </dependency>
+        <dependency>
+            <groupId>net.objecthunter</groupId>
+            <artifactId>exp4j</artifactId>
+            <version>${exp4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.16.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.6.0</version>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.6.4</version>
             </plugin>
         </plugins>
     </build>

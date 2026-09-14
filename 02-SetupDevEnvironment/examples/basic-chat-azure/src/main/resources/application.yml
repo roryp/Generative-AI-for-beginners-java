@@ -1,23 +1,13 @@
 # Azure AI Foundry (Azure OpenAI) Configuration - keyless via Microsoft Entra ID
 spring:
   ai:
-    azure:
-      openai:
-        # Endpoint of your Foundry (Azure OpenAI) resource.
-        # Provisioned by `azd up`; example: https://<resource>.openai.azure.com/
-        endpoint: ${AZURE_OPENAI_ENDPOINT}
-        # No api-key is set on purpose: when only the endpoint is provided, Spring AI
-        # authenticates with Microsoft Entra ID (DefaultAzureCredential). Sign in
-        # locally with `az login` before running - no TokenCredential bean needed.
-        chat:
-          options:
-            # Name of your model deployment in Azure (not the model name).
-            # Can be overridden with the AZURE_OPENAI_DEPLOYMENT environment variable.
-            deployment-name: ${AZURE_OPENAI_DEPLOYMENT:gpt-4o-mini}
-            # Temperature controls creativity (0.0 = deterministic, 1.0 = creative)
-            temperature: 0.7
-            # Maximum tokens in the response
-            max-tokens: 500
+    openai:
+      base-url: ${AZURE_OPENAI_ENDPOINT}
+      microsoft-foundry: true
+      chat:
+        model: ${AZURE_OPENAI_DEPLOYMENT:gpt-5.6-luna}
+        reasoning-effort: none
+        max-completion-tokens: 500
 
 # Spring Boot Configuration
 logging:

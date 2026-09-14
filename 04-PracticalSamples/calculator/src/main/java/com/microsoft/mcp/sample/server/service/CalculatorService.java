@@ -1,5 +1,7 @@
 package com.microsoft.mcp.sample.server.service;
 
+import java.util.Locale;
+
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Service;
 
@@ -118,7 +120,7 @@ public class CalculatorService {
         }
         double result = Math.sqrt(number);
         // Different formatting for single-operand functions
-        return String.format("√%.2f = %.2f", number, result);
+        return String.format(Locale.ROOT, "√%.2f = %.2f", number, result);
     }
 
     /**
@@ -131,7 +133,7 @@ public class CalculatorService {
      * Example: 5.00 + 3.00 = 8.00
      */
     private String formatResult(double a, String operator, double b, double result) {
-        return String.format("%.2f %s %.2f = %.2f", a, operator, b, result);
+        return String.format(Locale.ROOT, "%.2f %s %.2f = %.2f", a, operator, b, result);
     }
 
     /**
@@ -157,7 +159,7 @@ public class CalculatorService {
     @Tool(description = "Calculate the absolute value of a number")
     public String absolute(double number) {
         double result = Math.abs(number);
-        return String.format("|%.2f| = %.2f", number, result);
+        return String.format(Locale.ROOT, "|%.2f| = %.2f", number, result);
     }
 
     /**

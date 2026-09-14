@@ -17,6 +17,16 @@ package com.microsoft.mcp.sample.client;
 public interface Bot {
 
     /**
+     * Start an interactive calculator session; --prompt also supports a single smoke test.
+     *
+     * @param args Optional --prompt, --demo, or --interactive arguments
+     * @throws Exception If configuration, authentication, MCP, or model execution fails
+     */
+    static void main(String[] args) throws Exception {
+        LangChain4jClient.run(args, true);
+    }
+
+    /**
      * Send a prompt to the AI bot and get a response.
      * 
      * The AI implementation will:

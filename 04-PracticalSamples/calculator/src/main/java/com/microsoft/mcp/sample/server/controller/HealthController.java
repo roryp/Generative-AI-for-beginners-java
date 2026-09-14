@@ -1,5 +1,6 @@
 package com.microsoft.mcp.sample.server.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +29,9 @@ public class HealthController {
     
     // Dependency injection: Spring provides the CalculatorService instance
     private final CalculatorService calculatorService;
+
+    @Value("${spring.ai.mcp.server.streamable-http.mcp-endpoint:/mcp}")
+    private String mcpEndpoint;
     
     public HealthController(CalculatorService calculatorService) {
         this.calculatorService = calculatorService;
@@ -78,7 +82,7 @@ public class HealthController {
         Map<String, Object> response = new HashMap<>();
         response.put("service", "Basic Calculator MCP Service");
         response.put("version", "1.0.0");
-        response.put("endpoint", "/v1/tools");
+        response.put("endpoint", mcpEndpoint);
         
         // List all available tools with descriptions
         // This matches the @Tool annotations in CalculatorService

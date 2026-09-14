@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 
 /**
  * Configuration class that displays welcome and usage information at application startup.
@@ -34,7 +35,7 @@ public class StartupConfig {
      * This provides immediate feedback about the server's status and configuration.
      */
     @Bean
-    public CommandLineRunner startupInfo() {
+    public CommandLineRunner startupInfo(Environment environment) {
         return args -> {
             System.out.println("\n" + "=".repeat(80));
             System.out.println(welcomeMessage);
@@ -46,16 +47,19 @@ public class StartupConfig {
             }
             
             // Key information for beginners to connect their clients
+            String baseUrl = "http://localhost:" + environment.getProperty("local.server.port",
+                environment.getProperty("server.port", "8080"));
             System.out.println("\nMCP Server Endpoints:");
-            System.out.println("• Health Check: http://localhost:8080/health");
-            System.out.println("• Service Info:  http://localhost:8080/info");
-            System.out.println("• MCP Tools:     http://localhost:8080/v1/tools");
-            System.out.println("• SSE Endpoint:  http://localhost:8080/sse");
+            System.out.println("• Health Check: " + baseUrl + "/health");
+            System.out.println("• Service Info: " + baseUrl + "/info");
+            System.out.println("• MCP Streamable HTTP: " + baseUrl
+                + environment.getProperty("spring.ai.mcp.server.streamable-http.mcp-endpoint", "/mcp"));
             
             System.out.println("\nFor client examples, see:");
             System.out.println("• Direct MCP SDK: src/test/java/.../SDKClient.java");
             System.out.println("• LangChain4j:    src/test/java/.../LangChain4jClient.java");
-            System.out.println("• Documentation:  README.MD");
+            System.out.println("• Interactive:   src/test/java/.../Bot.java");
+            System.out.println("• Documentation: README.md");
             
             System.out.println("\nThe Calculator MCP service is now ready to accept tool calls!");
             System.out.println("=".repeat(80) + "\n");

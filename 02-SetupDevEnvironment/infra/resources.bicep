@@ -82,7 +82,7 @@ resource project 'Microsoft.CognitiveServices/accounts/projects@2025-06-01' = {
   }
 }
 
-// Chat model deployment (gpt-4o-mini).
+// Chat model deployment (gpt-5.6-luna).
 resource chatDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' = {
   parent: account
   name: chatModelName

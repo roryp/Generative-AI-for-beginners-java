@@ -1,272 +1,150 @@
 package com.example.genai.techniques.functions;
 
-import com.azure.ai.openai.OpenAIClient;
-import com.azure.ai.openai.OpenAIClientBuilder;
-import com.azure.ai.openai.models.*;
-import com.azure.core.util.BinaryData;
-import com.azure.identity.DefaultAzureCredentialBuilder;
+import com.example.genai.techniques.AzureOpenAIConfig;
+import com.example.genai.techniques.ChatResponses;
+import com.fasterxml.jackson.annotation.JsonClassDescription;
+import com.fasterxml.jackson.annotation.JsonPropertyDescription;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.openai.client.OpenAIClient;
+import com.openai.models.chat.completions.ChatCompletion;
+import com.openai.models.chat.completions.ChatCompletionToolChoiceOption;
+import com.openai.models.chat.completions.ChatCompletionToolMessageParam;
+import net.objecthunter.exp4j.ExpressionBuilder;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.PrintStream;
+import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.regex.Pattern;
 
-/**
- * Function Calling Example using the Azure OpenAI SDK
- * 
- * This example demonstrates how to use function calling with Azure AI Foundry
- * using the Azure OpenAI SDK to create an AI assistant that can call external 
- * functions for weather information and mathematical calculations.
- * 
- * Features:
- * - Function definition and registration
- * - Function calling with structured outputs
- * - Multi-turn conversation with function results
- * - Error handling
- */
+/** Function calling with typed arguments, simulated weather, and a real arithmetic parser. */
 public class FunctionsApp {
-    // Using a model that supports function calling - not all AI models can call functions.
-    // Defaults to the gpt-4o-mini deployment; override with AZURE_OPENAI_DEPLOYMENT.
-    private static final String MODEL = System.getenv().getOrDefault("AZURE_OPENAI_DEPLOYMENT", "gpt-4o-mini");
-    
+    private static final Pattern PERCENT_OF = Pattern.compile(
+            "^([+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+))\\s*%\\s*of\\s*([+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+))$",
+            Pattern.CASE_INSENSITIVE);
+        private static final Pattern PERCENT_LITERAL = Pattern.compile(
+            "(\\d+(?:\\.\\d*)?|\\.\\d+)\\s*%(?!\\s*[\\d.])");
+
+    /** Runs the weather and calculator demonstrations, each using two chat requests. */
     public static void main(String[] args) {
-        // Azure AI Foundry endpoint (for example https://<resource>.openai.azure.com/)
-        String endpoint = System.getenv("AZURE_OPENAI_ENDPOINT");
-
-        if (endpoint == null || endpoint.isBlank()) {
-            System.err.println("Please set the AZURE_OPENAI_ENDPOINT environment variable");
-            System.err.println("Provision it with 'azd up' (see 02-SetupDevEnvironment), then sign in with 'az login'.");
-            System.exit(1);
-        }
-
+        var config = AzureOpenAIConfig.fromEnvironment();
+        OpenAIClient client = config.createClient();
         try {
-            // Create the Azure OpenAI client using keyless authentication (Microsoft Entra ID).
-            // DefaultAzureCredential uses your 'az login' session locally, or a managed identity in Azure.
-            OpenAIClient client = new OpenAIClientBuilder()
-                    .endpoint(endpoint)
-                    .credential(new DefaultAzureCredentialBuilder().build())
-                    .buildClient();
-
-            // Example 1: Simple weather function
-            System.out.println("=== Weather Function Example ===");
-            weatherFunctionExample(client);
-            
-            System.out.println("\n" + "=".repeat(60) + "\n");
-            
-            // Example 2: Calculator function
-            System.out.println("=== Calculator Function Example ===");
-            calculatorFunctionExample(client);
-
-            // Force proper cleanup to avoid thread lingering warnings
-            System.exit(0);
-            
-        } catch (Exception e) {
-            System.err.println("Error: " + e.getMessage());
-            e.printStackTrace();
-            System.exit(1);
+            runExamples(client, config, System.out);
+        } finally {
+            client.close();
         }
     }
-    
-    /**
-     * Example demonstrating weather function calling.
-     * Function calling allows the AI to "call" external functions when it needs specific data.
-     * The AI doesn't actually execute the function - it just tells us what function to call and with what parameters.
-     */
-    private static void weatherFunctionExample(OpenAIClient client) {
-        // Step 1: Define what the function does and what parameters it accepts
-        // This is like creating a "function signature" that the AI can understand
-        ChatCompletionsFunctionToolDefinitionFunction weatherFunction = 
-            new ChatCompletionsFunctionToolDefinitionFunction("get_weather");
-        weatherFunction.setDescription("Get current weather information for a city");
-        
-        // Define the function parameters using JSON Schema format
-        // This tells the AI exactly what data it can request from our function
-        weatherFunction.setParameters(BinaryData.fromString("""
-            {
-                "type": "object",
-                "properties": {
-                    "city": {
-                        "type": "string",
-                        "description": "The city name"
-                    },
-                    "unit": {
-                        "type": "string",
-                        "enum": ["celsius", "fahrenheit"],
-                        "description": "Temperature unit",
-                        "default": "celsius"
-                    }
-                },
-                "required": ["city"]
-            }
-            """));
 
-        // Wrap the function definition in a tool definition
-        // Tools are the mechanism by which AI models can call functions
-        ChatCompletionsFunctionToolDefinition weatherTool = new ChatCompletionsFunctionToolDefinition(weatherFunction);
-        List<ChatCompletionsToolDefinition> tools = List.of(weatherTool);
+    static void runExamples(OpenAIClient client, AzureOpenAIConfig config, PrintStream output) {
+        output.println("=== Weather Function Example (simulated data) ===");
+        runFunctionExample(client, config, WeatherArguments.class, "get_weather",
+                "You are a weather assistant. Use get_weather, and clearly label its data as simulated, not live weather.",
+                "What's the weather like in Seattle? Use celsius.", output);
+        output.println("\n=== Calculator Function Example ===");
+        runFunctionExample(client, config, CalculationArguments.class, "calculate",
+                "You are a math assistant. Use calculate for mathematical operations.",
+                "What's 15% of 240?", output);
+    }
 
-        // Step 2: Set up the conversation like normal, but tell the AI about available functions
-        List<ChatRequestMessage> messages = new ArrayList<>();
-        messages.add(new ChatRequestSystemMessage(
-            "You are a helpful weather assistant. Use the get_weather function to provide current weather information."
-        ));
-        messages.add(new ChatRequestUserMessage("What's the weather like in Seattle?"));
-
-        // IMPORTANT: Add the tools to the options so the AI knows what functions it can call
-        ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
-            .setModel(MODEL)
-            .setTools(tools);   // This tells the AI about available functions
-
-        try {
-            ChatCompletions response = client.getChatCompletions(MODEL, options);
-            
-            // Step 3: Check if AI wants to call a function instead of giving a direct answer
-            // When AI needs external data, it will request a function call instead of guessing
-            ChatChoice choice = response.getChoices().get(0);
-            if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
-                // AI wants to call one or more functions
-                List<ChatCompletionsToolCall> toolCalls = choice.getMessage().getToolCalls();
-                
-                for (ChatCompletionsToolCall toolCall : toolCalls) {
-                    if (toolCall instanceof ChatCompletionsFunctionToolCall functionCall) {
-                        System.out.println("AI wants to call function: " + functionCall.getFunction().getName());
-                        System.out.println("Arguments: " + functionCall.getFunction().getArguments());
-                        
-                        // Step 4: Execute the function (this is where YOU run your actual code)
-                        // The AI doesn't execute anything - it just tells you what to run
-                        String functionResult = simulateWeatherFunction(functionCall.getFunction().getArguments());
-                        System.out.println("Function result: " + functionResult);
-                        
-                        // Step 5: Give the function result back to the AI so it can formulate a response
-                        // This is a 3-step process: User asks -> AI requests function -> You run function -> AI responds
-                        messages.add(new ChatRequestAssistantMessage(choice.getMessage().getContent()).setToolCalls(toolCalls));
-                        messages.add(new ChatRequestToolMessage(functionResult, toolCall.getId()));
-                        
-                        // Step 6: Get the AI's final response now that it has the function result
-                        ChatCompletionsOptions finalOptions = new ChatCompletionsOptions(messages).setModel(MODEL);
-                        ChatCompletions finalResponse = client.getChatCompletions(MODEL, finalOptions);
-                        System.out.println("AI: " + finalResponse.getChoices().get(0).getMessage().getContent());
-                    }
-                }
-            } else {
-                // AI gave a direct answer without needing to call any functions
-                System.out.println("AI: " + choice.getMessage().getContent());
-            }
-            
-        } catch (Exception e) {
-            System.err.println("Weather function example failed: " + e.getMessage());
-            e.printStackTrace();
+    static void runFunctionExample(OpenAIClient client, AzureOpenAIConfig config, Class<?> toolType,
+                                   String toolName, String systemPrompt, String question, PrintStream output) {
+        var request = config.chatOptions(300)
+                .addSystemMessage(systemPrompt)
+                .addUserMessage(question)
+                .addTool(toolType)
+                .toolChoice(ChatCompletionToolChoiceOption.Auto.REQUIRED)
+                .parallelToolCalls(false)
+                .build();
+        var response = client.chat().completions().create(request);
+        if (response.choices().isEmpty()) {
+            throw new IllegalStateException("The model returned no tool-call choice.");
         }
-    }
-    
-    /**
-     * Example demonstrating calculator function calling.
-     * This shows how AI can delegate mathematical operations to external functions.
-     */
-    private static void calculatorFunctionExample(OpenAIClient client) {
-        // Define calculator function - similar to weather function but for math operations
-        ChatCompletionsFunctionToolDefinitionFunction calcFunction = 
-            new ChatCompletionsFunctionToolDefinitionFunction("calculate");
-        calcFunction.setDescription("Perform mathematical calculations");
-        calcFunction.setParameters(BinaryData.fromString("""
-            {
-                "type": "object",
-                "properties": {
-                    "expression": {
-                        "type": "string",
-                        "description": "Mathematical expression to evaluate (e.g., '15% of 240' or '2 + 3 * 4')"
-                    }
-                },
-                "required": ["expression"]
-            }
-            """));
-
-        ChatCompletionsFunctionToolDefinition calcTool = new ChatCompletionsFunctionToolDefinition(calcFunction);
-
-        List<ChatCompletionsToolDefinition> tools = List.of(calcTool);
-
-        List<ChatRequestMessage> messages = new ArrayList<>();
-        messages.add(new ChatRequestSystemMessage(
-            "You are a helpful math assistant. Use the calculate function for mathematical operations."
-        ));
-        messages.add(new ChatRequestUserMessage("What's 15% of 240?"));
-
-        ChatCompletionsOptions options = new ChatCompletionsOptions(messages)
-            .setModel(MODEL)
-            .setTools(tools);
-
-        try {
-            ChatCompletions response = client.getChatCompletions(MODEL, options);
-            
-            ChatChoice choice = response.getChoices().get(0);
-            if (choice.getFinishReason() == CompletionsFinishReason.TOOL_CALLS) {
-                List<ChatCompletionsToolCall> toolCalls = choice.getMessage().getToolCalls();
-                
-                for (ChatCompletionsToolCall toolCall : toolCalls) {
-                    if (toolCall instanceof ChatCompletionsFunctionToolCall functionCall) {
-                        System.out.println("AI wants to calculate: " + functionCall.getFunction().getArguments());
-                        
-                        // Execute our calculator function with the AI's requested parameters
-                        String calculationResult = simulateCalculatorFunction(functionCall.getFunction().getArguments());
-                        System.out.println("Calculation result: " + calculationResult);
-                        
-                        // Same pattern: Add function result back to conversation for AI to process
-                        messages.add(new ChatRequestAssistantMessage(choice.getMessage().getContent()).setToolCalls(toolCalls));
-                        messages.add(new ChatRequestToolMessage(calculationResult, toolCall.getId()));
-                        
-                        // Get final response with the calculation result
-                        ChatCompletionsOptions finalOptions = new ChatCompletionsOptions(messages).setModel(MODEL);
-                        ChatCompletions finalResponse = client.getChatCompletions(MODEL, finalOptions);
-                        System.out.println("AI: " + finalResponse.getChoices().get(0).getMessage().getContent());
-                    }
-                }
-            } else {
-                System.out.println("AI: " + choice.getMessage().getContent());
-            }
-            
-        } catch (Exception e) {
-            System.err.println("Calculator function example failed: " + e.getMessage());
-            e.printStackTrace();
+        var choice = response.choices().getFirst();
+        if (!ChatCompletion.Choice.FinishReason.TOOL_CALLS.equals(choice.finishReason())) {
+            throw new IllegalStateException("Expected tool_calls, received " + choice.finishReason());
         }
-    }
-    
-    /**
-     * Simulate weather function (in real app, this would call a weather API).
-     * 
-     * IMPORTANT: The AI doesn't execute this function - it just tells us what function to call.
-     * We are responsible for parsing the arguments and actually executing the logic.
-     * This is a security feature - the AI can't run arbitrary code on your system.
-     */
-    private static String simulateWeatherFunction(String arguments) {
-        // In a real application, you would:
-        // 1. Parse the JSON arguments to extract city name and unit
-        // 2. Call a real weather API (like OpenWeatherMap)
-        // 3. Return the actual weather data
-        System.out.println("Calling weather API with arguments: " + arguments);
-        
-        // For this demo, we return mock weather data
-        return """
-            {
-                "city": "Seattle",
-                "temperature": "22",
-                "unit": "celsius",
-                "condition": "partly cloudy",
-                "humidity": "65%",
-                "wind": "light breeze from the west"
+        var toolCalls = choice.message().toolCalls()
+                .filter(calls -> !calls.isEmpty())
+                .orElseThrow(() -> new IllegalStateException("The model returned no tool calls."));
+        var followUp = config.chatOptions(300)
+                .messages(request.messages())
+                .addMessage(choice.message());
+        var callIds = new HashSet<String>();
+        for (var toolCall : toolCalls) {
+            if (!toolCall.isFunction()) {
+                throw new IllegalArgumentException("Only function tools are supported by this example.");
             }
-            """;
+            var functionCall = toolCall.asFunction();
+            if (functionCall.id().isBlank() || !callIds.add(functionCall.id())) {
+                throw new IllegalArgumentException("Tool calls must have unique, nonblank IDs.");
+            }
+            var function = functionCall.function();
+            if (!toolName.equals(function.name())) {
+                throw new IllegalArgumentException("Unexpected function: " + function.name());
+            }
+            Object result = switch (function.name()) {
+                case "get_weather" -> weather(function.arguments(WeatherArguments.class));
+                case "calculate" -> calculate(function.arguments(CalculationArguments.class));
+                default -> throw new IllegalArgumentException("Unknown function: " + function.name());
+            };
+            output.println("Function: " + function.name());
+            output.println("Function result: " + result);
+            followUp.addMessage(ChatCompletionToolMessageParam.builder()
+                    .toolCallId(functionCall.id())
+                    .contentAsJson(result)
+                    .build());
+        }
+        output.println("AI: " + ChatResponses.text(client.chat().completions().create(followUp.build())));
     }
-    
-    /**
-     * Simulate calculator function.
-     * In a real app, you'd parse the expression and perform actual calculations.
-     */
-    private static String simulateCalculatorFunction(String arguments) {
-        // In a real application, you would:
-        // 1. Parse the JSON arguments to extract the mathematical expression
-        // 2. Safely evaluate the expression (using a math library, not eval())
-        // 3. Return the calculated result
-        System.out.println("Performing calculation with arguments: " + arguments);
-        
-        // For this example, we'll return a simple result for "15% of 240"
-        return "36";
+
+    static WeatherResult weather(WeatherArguments arguments) {
+        if (arguments.city() == null || arguments.city().isBlank()) {
+            throw new IllegalArgumentException("A city is required.");
+        }
+        String unit = arguments.unit() == null ? "celsius" : arguments.unit().strip().toLowerCase(Locale.ROOT);
+        if (!unit.equals("celsius") && !unit.equals("fahrenheit")) {
+            throw new IllegalArgumentException("Weather unit must be celsius or fahrenheit.");
+        }
+        double temperature = unit.equals("fahrenheit") ? 22 * 9.0 / 5 + 32 : 22;
+        return new WeatherResult(arguments.city().strip(), temperature, unit, "partly cloudy", "simulated");
+    }
+
+    static BigDecimal calculate(CalculationArguments arguments) {
+        if (arguments.expression() == null || arguments.expression().isBlank()
+                || arguments.expression().length() > 200) {
+            throw new IllegalArgumentException("Provide an arithmetic expression of 1 to 200 characters.");
+        }
+        String expression = arguments.expression().strip();
+        var percentage = PERCENT_OF.matcher(expression);
+        if (percentage.matches()) {
+            expression = "(" + percentage.group(1) + ") / 100 * (" + percentage.group(2) + ")";
+        }
+        expression = PERCENT_LITERAL.matcher(expression).replaceAll("($1 / 100)");
+        double result = new ExpressionBuilder(expression).build().evaluate();
+        if (!Double.isFinite(result)) {
+            throw new IllegalArgumentException("The calculation must have a finite result.");
+        }
+        return BigDecimal.valueOf(result).stripTrailingZeros();
+    }
+
+    /** JSON arguments for the simulated weather tool. */
+    @JsonTypeName("get_weather")
+    @JsonClassDescription("Return simulated weather for a city. This is sample data, not a live weather API.")
+    public record WeatherArguments(
+            @JsonPropertyDescription("The city name") String city,
+            @JsonPropertyDescription("Temperature unit: celsius or fahrenheit") String unit) {
+    }
+
+    /** JSON arguments for a calculator supporting arithmetic and expressions such as 15% of 240. */
+    @JsonTypeName("calculate")
+    @JsonClassDescription("Evaluate arithmetic, such as 2 + 3 * 4 or 15% of 240. No code execution or variables.")
+    public record CalculationArguments(
+            @JsonPropertyDescription("An arithmetic expression, at most 200 characters. "
+                + "Write percentages as division by 100, for example (15 / 100) * 240.") String expression) {
+    }
+
+    /** Explicitly labeled simulated data returned to the model as JSON. */
+    public record WeatherResult(String city, double temperature, String unit, String condition, String source) {
     }
 }

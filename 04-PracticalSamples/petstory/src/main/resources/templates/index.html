@@ -144,34 +144,7 @@
     </div>
 </div>
 
-<script type="module">
-    import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0';
-    
-    // Disable local models to use CDN
-    env.allowLocalModels = false;
-    
-    let classifier = null;
-    
-    // Initialize the image classification pipeline
-    async function initializeModel() {
-        try {
-            showStatus('Loading AI model (this may take a moment)...', 'processing');
-            
-            // Use a more reliable model that's known to work well
-            classifier = await pipeline('image-classification', 'Xenova/vit-base-patch16-224', {
-                quantized: true, // Use quantized version for faster loading
-                device: 'cpu'    // Force CPU usage for compatibility
-            });
-            
-            showStatus('Model loaded successfully!', 'success');
-            return true;
-        } catch (error) {
-            console.error('Error loading model:', error);
-            showStatus('AI model unavailable - using fallback analysis', 'processing');
-            return false;
-        }
-    }
-    
+<script>
     window.analyzeImage = async function() {
         const imageInput = document.getElementById('imageInput');
         const file = imageInput.files[0];
@@ -181,148 +154,63 @@
             return;
         }
         
-        // Validate file type
         const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
         if (!allowedTypes.includes(file.type)) {
             showStatus('Please upload a valid image file (JPEG, PNG, GIF, WebP).', 'error');
             return;
         }
         
-        // Validate file size (10MB)
-        if (file.size > 10 * 1024 * 1024) {
-            showStatus('File size must be less than 10MB.', 'error');
+        if (file.size === 0 || file.size > 10 * 1024 * 1024) {
+            showStatus('Please upload a nonempty image no larger than 10MB.', 'error');
             return;
         }
         
-        // Show preview
         const reader = new FileReader();
-        reader.onload = function(e) {
+        reader.onload = function(event) {
             const preview = document.getElementById('previewImage');
-            preview.src = e.target.result;
+            preview.src = event.target.result;
             document.getElementById('previewContainer').classList.remove('hidden');
         };
         reader.readAsDataURL(file);
         
-        // Disable analyze button
         document.getElementById('analyzeBtn').disabled = true;
+        imageInput.disabled = true;
+        document.getElementById('descriptionInput').value = '';
+        document.getElementById('descriptionContainer').classList.add('hidden');
+        document.getElementById('generateBtn').classList.add('hidden');
+        showStatus('Analyzing your pet image...', 'processing');
         
         try {
-            // Initialize model if not already done
-            if (!classifier) {
-                const initialized = await initializeModel();
-                if (!initialized) {
-                    // Use fallback if model fails to load
-                    const fallbackDescription = generateFallbackDescription(file.name);
-                    document.getElementById('descriptionText').textContent = fallbackDescription;
-                    document.getElementById('descriptionInput').value = fallbackDescription;
-                    document.getElementById('descriptionContainer').classList.remove('hidden');
-                    document.getElementById('generateBtn').classList.remove('hidden');
-                    document.getElementById('analyzeBtn').disabled = false;
-                    return;
-                }
+            const formData = new FormData();
+            formData.append('image', file);
+            const csrfToken = document.querySelector('input[name="_csrf"]').value;
+            const response = await fetch('/analyze-image', {
+                method: 'POST',
+                credentials: 'same-origin',
+                headers: { 'X-CSRF-TOKEN': csrfToken },
+                body: formData
+            });
+            const result = await response.json();
+            if (!response.ok) {
+                throw new Error(result.error || 'Image analysis failed. Please try again.');
             }
-            
-            showStatus('Analyzing your pet image...', 'processing');
-            
-            try {
-                // Create a blob URL for the file
-                const imageUrl = URL.createObjectURL(file);
-                
-                // Use the blob URL with the classifier
-                const results = await classifier(imageUrl);
-                
-                // Clean up the blob URL
-                URL.revokeObjectURL(imageUrl);
-                
-                // Generate description from results
-                const description = generatePetDescription(results, file.name);
-                
-                // Show description
-                document.getElementById('descriptionText').textContent = description;
-                document.getElementById('descriptionInput').value = description;
-                document.getElementById('descriptionContainer').classList.remove('hidden');
-                document.getElementById('generateBtn').classList.remove('hidden');
-                
-                showStatus('Analysis complete! Now you can generate your story.', 'success');
-            } catch (error) {
-                console.error('Error during image analysis:', error);
-                
-                // Fallback: Generate a generic pet description
-                const fallbackDescription = generateFallbackDescription(file.name);
-                document.getElementById('descriptionText').textContent = fallbackDescription;
-                document.getElementById('descriptionInput').value = fallbackDescription;
-                document.getElementById('descriptionContainer').classList.remove('hidden');
-                document.getElementById('generateBtn').classList.remove('hidden');
-                
-                showStatus('Using fallback analysis - AI model temporarily unavailable.', 'processing');
-            } finally {
-                document.getElementById('analyzeBtn').disabled = false;
+            if (typeof result.description !== 'string' || !result.description.trim()) {
+                throw new Error('Image analysis returned an empty description. Please try again.');
             }
-            
+
+            const description = result.description.trim();
+            document.getElementById('descriptionText').textContent = description;
+            document.getElementById('descriptionInput').value = description;
+            document.getElementById('descriptionContainer').classList.remove('hidden');
+            document.getElementById('generateBtn').classList.remove('hidden');
+            showStatus('Analysis complete! Now you can generate your story.', 'success');
         } catch (error) {
-            console.error('Error:', error);
-            showStatus('An error occurred. Please try again.', 'error');
+            showStatus(error.message || 'Image analysis failed. Please try again.', 'error');
+        } finally {
             document.getElementById('analyzeBtn').disabled = false;
+            imageInput.disabled = false;
         }
     };
-    
-    function generatePetDescription(results, filename) {
-        // Filter for animal-related classifications
-        const animalKeywords = ['dog', 'cat', 'bird', 'rabbit', 'hamster', 'fish', 'turtle', 'snake', 'lizard', 'ferret', 'guinea pig', 'mouse', 'rat', 'chinchilla', 'hedgehog'];
-        
-        let petClassifications = results.filter(result => 
-            animalKeywords.some(keyword => result.label.toLowerCase().includes(keyword))
-        );
-        
-        // If no specific pet classifications found, use top results
-        if (petClassifications.length === 0) {
-            petClassifications = results.slice(0, 3);
-        }
-        
-        // Generate description
-        if (petClassifications.length > 0) {
-            const topResult = petClassifications[0];
-            const confidence = Math.round(topResult.score * 100);
-            
-            let description = `A beautiful ${topResult.label.toLowerCase()}`;
-            
-            // Add confidence if high
-            if (confidence > 70) {
-                description += ` with distinctive features`;
-            }
-            
-            // Add additional characteristics from other results
-            if (petClassifications.length > 1) {
-                const secondResult = petClassifications[1];
-                description += ` showing characteristics of ${secondResult.label.toLowerCase()}`;
-            }
-            
-            description += `. This lovely pet displays a gentle and friendly demeanor, captured in a beautiful photograph that showcases their unique personality and charm.`;
-            
-            return description;
-        } else {
-            // Fallback description
-            return "An adorable pet captured in a beautiful photograph, displaying their unique personality and gentle nature. This wonderful companion shows the loving characteristics that make them a perfect family member.";
-        }
-    }
-    
-    function generateFallbackDescription(filename) {
-        const fallbackDescriptions = [
-            "A beautiful pet captured in a lovely photograph, showing their unique personality and charm.",
-            "An adorable companion animal photographed in natural lighting, displaying their gentle nature.",
-            "A wonderful pet portrait showcasing their distinctive features and friendly demeanor.",
-            "A charming animal friend captured in a moment that highlights their loving character.",
-            "A delightful pet photograph that captures their essence and playful spirit beautifully."
-        ];
-        
-        // Use filename hash for consistent responses
-        const hash = filename.split('').reduce((a, b) => {
-            a = ((a << 5) - a) + b.charCodeAt(0);
-            return a & a;
-        }, 0);
-        const index = Math.abs(hash % fallbackDescriptions.length);
-        return fallbackDescriptions[index];
-    }
     
     function showStatus(message, type) {
         const statusDiv = document.getElementById('statusMessage');

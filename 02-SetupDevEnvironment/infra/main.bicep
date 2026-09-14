@@ -4,7 +4,7 @@
 // Provisions the Azure AI Foundry resources used by the "Generative AI for
 // Beginners - Java" course:
 //   * An Azure AI Foundry (AI Services) account + project
-//   * A chat model deployment        (gpt-4o-mini)
+//   * A chat model deployment        (gpt-5.6-luna)
 //   * An embedding model deployment  (text-embedding-3-small)
 //   * A keyless (Microsoft Entra ID) data-plane role assignment
 //
@@ -19,7 +19,7 @@ targetScope = 'subscription'
 param environmentName string
 
 @minLength(1)
-@description('Primary Azure region for all resources. Pick a region where gpt-4o-mini and text-embedding-3-small are available (for example: eastus2 or swedencentral).')
+@description('Primary Azure region for all resources. Verify gpt-5.6-luna and text-embedding-3-small availability and quota (for example: eastus2).')
 param location string
 
 @description('Object (principal) ID granted keyless data-plane access to the models. azd sets this to the signed-in user automatically.')
@@ -34,10 +34,10 @@ param principalType string = 'User'
 
 // --- Model deployment configuration (override via azd env set if needed) ------
 @description('Chat model to deploy.')
-param chatModelName string = 'gpt-4o-mini'
+param chatModelName string = 'gpt-5.6-luna'
 
 @description('Chat model version.')
-param chatModelVersion string = '2024-07-18'
+param chatModelVersion string = '2026-07-09'
 
 @description('Chat deployment capacity, in thousands of tokens per minute (TPM).')
 param chatDeploymentCapacity int = 10

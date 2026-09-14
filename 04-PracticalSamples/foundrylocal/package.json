@@ -1,0 +1,16 @@
+{
+  "name": "foundry-local-java-runtime",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Foundry Local REST runtime for the Java sample",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start:foundry": "node scripts/start-foundry.mjs"
+  },
+  "dependencies": {
+    "foundry-local-sdk": "2.0.1"
+  }
+}

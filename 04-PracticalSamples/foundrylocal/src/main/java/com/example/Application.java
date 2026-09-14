@@ -1,5 +1,6 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
@@ -27,7 +28,7 @@ public class Application {
         // NONE = console application (no web server, no HTTP ports)
         // This is perfect for AI demos that just run once and exit
         app.setWebApplicationType(WebApplicationType.NONE);
-        app.run(args);
+        app.run(args).close();
     }
 
     /**
@@ -39,36 +40,16 @@ public class Application {
      * This runs after Spring Boot finishes starting up.
      */
     @Bean
-    public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService) {
+    public CommandLineRunner foundryLocalRunner(FoundryLocalService foundryLocalService,
+            @Value("${foundry.local.prompt:In one sentence, explain one benefit of running a small language model locally.}")
+            String prompt) {
         return args -> {
             System.out.println("=== Foundry Local Demo ===");
-            System.out.println("Calling Foundry Local service...");
-
-            try {
-                // Send a test message that will help us identify which model is running
-                // This is a good diagnostic message for local AI setups
-                String testMessage = "Hello! Can you tell me what you are and what model you're running?";
-                System.out.println("Sending message: " + testMessage);
-
-                // Call our service, which connects to the local AI model
-                // This demonstrates the same pattern you'd use in a real application
-                String response = foundryLocalService.chat(testMessage);
-                
-                System.out.println("Response from Foundry Local:");
-                System.out.println(response);
-                System.out.println("=========================");
-                
-            } catch (Exception e) {
-                // Handle common issues when connecting to local AI servers
-                System.err.println("Error calling Foundry Local: " + e.getMessage());
-                System.err.println("Troubleshooting checklist:");
-                System.err.println("1. Is Foundry Local running on http://localhost:5273?");
-                System.err.println("2. Is the AI model loaded and ready?");
-                System.err.println("3. Check your application.properties for correct URL/model name");
-                System.err.println("4. Verify you have enough RAM/GPU memory for the model");
-                System.err.println("5. Look at the Foundry Local console for error messages");
-                e.printStackTrace();
-            }
+            System.out.println("Sending message: " + prompt);
+            String response = foundryLocalService.chat(prompt);
+            System.out.println("Response from Foundry Local:");
+            System.out.println(response);
+            System.out.println("=========================");
         };
     }
 }

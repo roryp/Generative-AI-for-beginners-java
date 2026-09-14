@@ -1,7 +1,18 @@
 package com.example;
 
+import com.azure.identity.AuthenticationUtil;
+import com.azure.identity.DefaultAzureCredentialBuilder;
+import com.openai.client.OpenAIClient;
+import com.openai.client.okhttp.OpenAIOkHttpClient;
+import com.openai.credential.BearerTokenCredential;
+import com.openai.credential.Credential;
 import io.github.cdimascio.dotenv.Dotenv;
+import java.net.URI;
+import java.time.Duration;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.model.openai.autoconfigure.OpenAiChatProperties;
+import org.springframework.ai.openai.OpenAiChatModel;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -37,7 +48,33 @@ public class BasicChatApplication {
         
         // Start the Spring Boot application
         // Spring will automatically configure Azure OpenAI based on application.yml and env variables
-        SpringApplication.run(BasicChatApplication.class, args);
+        SpringApplication.run(BasicChatApplication.class, args).close();
+    }
+
+    @Bean
+    Credential azureCredential() {
+        return BearerTokenCredential.create(AuthenticationUtil.getBearerTokenSupplier(
+                new DefaultAzureCredentialBuilder().build(), "https://ai.azure.com/.default"));
+    }
+
+    @Bean(destroyMethod = "close")
+    OpenAIClient azureOpenAiClient(Credential azureCredential,
+            @Value("${spring.ai.openai.base-url}") String endpoint) {
+        return OpenAIOkHttpClient.builder()
+                .baseUrl(URI.create(endpoint).resolve("/openai/v1").toString())
+                .credential(azureCredential)
+                .timeout(Duration.ofSeconds(60))
+                .maxRetries(0)
+                .build();
+    }
+
+    @Bean
+    OpenAiChatModel azureChatModel(OpenAiChatProperties properties, OpenAIClient azureOpenAiClient) {
+        return OpenAiChatModel.builder()
+                .openAiClient(azureOpenAiClient)
+                .openAiClientAsync(azureOpenAiClient.async())
+                .options(properties.toOptions())
+                .build();
     }
     
     /**
@@ -73,6 +110,10 @@ public class BasicChatApplication {
                     .user(prompt)
                     .call()
                     .content();
+
+                if (response == null || response.isBlank()) {
+                    throw new IllegalStateException("Azure OpenAI returned an empty response");
+                }
                 
                 // Display the response with clear formatting
                 System.out.println("\nAI Response:");
@@ -92,6 +133,7 @@ public class BasicChatApplication {
                 System.err.println("4. Confirm you have the 'Cognitive Services OpenAI User' role on the resource");
                 System.err.println("5. Check that your .env file is in the project root directory");
                 System.err.println("6. Confirm your Foundry resource is active and has quota available");
+                throw new IllegalStateException("Azure OpenAI connection failed", e);
             }
         };
     }
@@ -136,7 +178,7 @@ public class BasicChatApplication {
             String deployment = dotenv.get("AZURE_OPENAI_DEPLOYMENT");
             
             System.out.println("Endpoint: " + (endpoint != null ? endpoint : "NOT SET"));
-            System.out.println("Deployment: " + (deployment != null ? deployment : "gpt-4o-mini (default)"));
+            System.out.println("Deployment: " + (deployment != null ? deployment : "gpt-5.6-luna (default)"));
             System.out.println("Auth: keyless (Microsoft Entra ID via DefaultAzureCredential)");
             
             // Warn if critical configuration is missing
@@ -145,7 +187,7 @@ public class BasicChatApplication {
                 System.err.println("   Please check your .env file has AZURE_OPENAI_ENDPOINT");
                 System.err.println("   Example .env file:");
                 System.err.println("   AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/");
-                System.err.println("   AZURE_OPENAI_DEPLOYMENT=gpt-4o-mini");
+                System.err.println("   AZURE_OPENAI_DEPLOYMENT=gpt-5.6-luna");
                 System.err.println("   (No API key needed - sign in with 'az login')");
             }
             
@@ -159,7 +201,7 @@ public class BasicChatApplication {
             String sysDeployment = System.getenv("AZURE_OPENAI_DEPLOYMENT");
             
             System.out.println("System Endpoint: " + (sysEndpoint != null ? sysEndpoint : "NOT SET"));
-            System.out.println("System Deployment: " + (sysDeployment != null ? sysDeployment : "gpt-4o-mini (default)"));
+            System.out.println("System Deployment: " + (sysDeployment != null ? sysDeployment : "gpt-5.6-luna (default)"));
             
             if (sysEndpoint == null) {
                 System.err.println("WARNING: No AZURE_OPENAI_ENDPOINT found in system either!");
